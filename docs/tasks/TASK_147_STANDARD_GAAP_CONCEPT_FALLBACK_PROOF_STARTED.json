@@ -1,0 +1,17 @@
+{
+  "task_id": "TASK_147_STANDARD_GAAP_CONCEPT_FALLBACK_PROOF",
+  "status": "STARTED",
+  "started_at": "2026-08-05T18:27:05.180Z",
+  "objective": "Read-only proof of quarterly engine V5: adds a fixed, versioned standard US-GAAP concept allow-list fallback (tier 3, after primary presentation resolver and point-in-time concept reuse, before REVIEW_REQUIRED) for revenue and pretax_income only. Validate against the 4 remaining REVIEW_REQUIRED cases (CRWD/MU/PANWx2) and a 96-row regression control (MSFT/AMZN/ORCL FY2024 + NVDA FY2020). Does not write to production.",
+  "read_only": true,
+  "expected_outputs": [
+    "scripts/148_quarterly_engine_v5_standard_gaap_fallback.py",
+    "scripts/149_standard_gaap_fallback_validation.py",
+    "data/standard_gaap_fallback_validation.json",
+    "data/standard_gaap_fallback_validation.csv",
+    "docs/STANDARD_GAAP_FALLBACK_VALIDATION.md"
+  ],
+  "process_id": 7620,
+  "hostname": "shai-laptop",
+  "utility_version": "142_task_marker_guard-1.0.0"
+}

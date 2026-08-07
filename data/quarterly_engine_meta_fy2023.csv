@@ -1,0 +1,13 @@
+﻿ticker,fiscal_year,fiscal_quarter,metric_name,value,unit,period_start,period_end,filing_date,accession_number,concept_qname,context_id,extraction_basis,reconciliation_status
+META,FY2023,Q1,operating_income,7227000000.0,iso4217:USD,2023-01-01,2023-03-31,2023-04-27,0001326801-23-000067,us-gaap:OperatingIncomeLoss,id2a395bb649c42cabb32f2bc8268cb8b_D20230101-20230331,DIRECT_QUARTER,PASS
+META,FY2023,Q2,operating_income,9392000000.0,iso4217:USD,2023-04-01,2023-06-30,2023-07-27,0001326801-23-000093,us-gaap:OperatingIncomeLoss,c-10,DIRECT_QUARTER,PASS
+META,FY2023,Q3,operating_income,13748000000.0,iso4217:USD,2023-07-01,2023-09-30,2023-10-26,0001326801-23-000103,us-gaap:OperatingIncomeLoss,c-10,DIRECT_QUARTER,PASS
+META,FY2023,Q4,operating_income,16384000000.0,iso4217:USD,,2023-12-31,2024-02-02,0001326801-24-000012,us-gaap:OperatingIncomeLoss,c-1,DERIVED_Q4_FROM_10K_MINUS_9M,PASS
+META,FY2023,Q1,pretax_income,7307000000.0,iso4217:USD,2023-01-01,2023-03-31,2023-04-27,0001326801-23-000067,us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,id2a395bb649c42cabb32f2bc8268cb8b_D20230101-20230331,DIRECT_QUARTER,PASS_ROUNDING_TOLERANCE
+META,FY2023,Q2,pretax_income,9293000000.0,iso4217:USD,2023-04-01,2023-06-30,2023-07-27,0001326801-23-000093,us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,c-10,DIRECT_QUARTER,PASS_ROUNDING_TOLERANCE
+META,FY2023,Q3,pretax_income,14020000000.0,iso4217:USD,2023-07-01,2023-09-30,2023-10-26,0001326801-23-000103,us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,c-10,DIRECT_QUARTER,PASS_ROUNDING_TOLERANCE
+META,FY2023,Q4,pretax_income,16807000000.0,iso4217:USD,,2023-12-31,2024-02-02,0001326801-24-000012,us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,c-1,DERIVED_Q4_FROM_10K_MINUS_9M,PASS_ROUNDING_TOLERANCE
+META,FY2023,Q1,income_tax_expense,1598000000.0,iso4217:USD,2023-01-01,2023-03-31,2023-04-27,0001326801-23-000067,us-gaap:IncomeTaxExpenseBenefit,id2a395bb649c42cabb32f2bc8268cb8b_D20230101-20230331,DIRECT_QUARTER,PASS
+META,FY2023,Q2,income_tax_expense,1505000000.0,iso4217:USD,2023-04-01,2023-06-30,2023-07-27,0001326801-23-000093,us-gaap:IncomeTaxExpenseBenefit,c-10,DIRECT_QUARTER,PASS
+META,FY2023,Q3,income_tax_expense,2437000000.0,iso4217:USD,2023-07-01,2023-09-30,2023-10-26,0001326801-23-000103,us-gaap:IncomeTaxExpenseBenefit,c-10,DIRECT_QUARTER,PASS
+META,FY2023,Q4,income_tax_expense,2790000000.0,iso4217:USD,,2023-12-31,2024-02-02,0001326801-24-000012,us-gaap:IncomeTaxExpenseBenefit,c-1,DERIVED_Q4_FROM_10K_MINUS_9M,PASS

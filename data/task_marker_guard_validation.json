@@ -1,0 +1,129 @@
+{
+  "status": "PASS",
+  "total_tests": 12,
+  "passed": 12,
+  "failed": 0,
+  "results": [
+    {
+      "test_name": "1_normal_started_outputs_pass",
+      "expected_result": "PASS result written and self-validates",
+      "actual_result": "status=PASS validation_valid=True",
+      "failure_category": null,
+      "status": "PASS",
+      "evidence_paths": [
+        "C:\\Users\\shai\\AppData\\Local\\Temp\\claude\\c--AI-Stock-Agent\\bb0cbcf5-0be3-4efa-b2c0-fce0377906de\\scratchpad\\task143_tests\\test1_normal"
+      ]
+    },
+    {
+      "test_name": "2_duplicate_started_fails",
+      "expected_result": "STARTED_ALREADY_EXISTS raised",
+      "actual_result": "raised STARTED_ALREADY_EXISTS",
+      "failure_category": "STARTED_ALREADY_EXISTS",
+      "status": "PASS",
+      "evidence_paths": [
+        "C:\\Users\\shai\\AppData\\Local\\Temp\\claude\\c--AI-Stock-Agent\\bb0cbcf5-0be3-4efa-b2c0-fce0377906de\\scratchpad\\task143_tests\\test2_dup_started"
+      ]
+    },
+    {
+      "test_name": "3_result_without_started_fails",
+      "expected_result": "STARTED_MISSING raised",
+      "actual_result": "raised STARTED_MISSING",
+      "failure_category": "STARTED_MISSING",
+      "status": "PASS",
+      "evidence_paths": [
+        "C:\\Users\\shai\\AppData\\Local\\Temp\\claude\\c--AI-Stock-Agent\\bb0cbcf5-0be3-4efa-b2c0-fce0377906de\\scratchpad\\task143_tests\\test3_no_started"
+      ]
+    },
+    {
+      "test_name": "4_missing_output_prevents_pass",
+      "expected_result": "REQUIRED_OUTPUT_MISSING raised, no RESULT file written",
+      "actual_result": "raised REQUIRED_OUTPUT_MISSING; result_file_written=False",
+      "failure_category": "REQUIRED_OUTPUT_MISSING",
+      "status": "PASS",
+      "evidence_paths": [
+        "C:\\Users\\shai\\AppData\\Local\\Temp\\claude\\c--AI-Stock-Agent\\bb0cbcf5-0be3-4efa-b2c0-fce0377906de\\scratchpad\\task143_tests\\test4_missing_output"
+      ]
+    },
+    {
+      "test_name": "5_unreadable_output_prevents_pass",
+      "expected_result": "REQUIRED_OUTPUT_UNREADABLE raised",
+      "actual_result": "raised REQUIRED_OUTPUT_UNREADABLE",
+      "failure_category": "REQUIRED_OUTPUT_UNREADABLE",
+      "status": "PASS",
+      "evidence_paths": [
+        "C:\\Users\\shai\\AppData\\Local\\Temp\\claude\\c--AI-Stock-Agent\\bb0cbcf5-0be3-4efa-b2c0-fce0377906de\\scratchpad\\task143_tests\\test5_unreadable_output"
+      ]
+    },
+    {
+      "test_name": "6_hash_mismatch_detected",
+      "expected_result": "validate_task_evidence reports OUTPUT_HASH_MISMATCH",
+      "actual_result": "valid=False categories=['OUTPUT_HASH_MISMATCH']",
+      "failure_category": "OUTPUT_HASH_MISMATCH",
+      "status": "PASS",
+      "evidence_paths": [
+        "C:\\Users\\shai\\AppData\\Local\\Temp\\claude\\c--AI-Stock-Agent\\bb0cbcf5-0be3-4efa-b2c0-fce0377906de\\scratchpad\\task143_tests\\test6_hash_mismatch"
+      ]
+    },
+    {
+      "test_name": "7_task_id_mismatch_detected",
+      "expected_result": "TASK_ID_MISMATCH raised",
+      "actual_result": "raised TASK_ID_MISMATCH",
+      "failure_category": "TASK_ID_MISMATCH",
+      "status": "PASS",
+      "evidence_paths": [
+        "C:\\Users\\shai\\AppData\\Local\\Temp\\claude\\c--AI-Stock-Agent\\bb0cbcf5-0be3-4efa-b2c0-fce0377906de\\scratchpad\\task143_tests\\test7_task_id_mismatch"
+      ]
+    },
+    {
+      "test_name": "8_non_utc_timestamp_rejected",
+      "expected_result": "NON_UTC_TIMESTAMP raised",
+      "actual_result": "raised NON_UTC_TIMESTAMP",
+      "failure_category": "NON_UTC_TIMESTAMP",
+      "status": "PASS",
+      "evidence_paths": [
+        "C:\\Users\\shai\\AppData\\Local\\Temp\\claude\\c--AI-Stock-Agent\\bb0cbcf5-0be3-4efa-b2c0-fce0377906de\\scratchpad\\task143_tests\\test8_non_utc_timestamp"
+      ]
+    },
+    {
+      "test_name": "9_completion_before_start_rejected",
+      "expected_result": "COMPLETION_BEFORE_START raised",
+      "actual_result": "raised COMPLETION_BEFORE_START",
+      "failure_category": "COMPLETION_BEFORE_START",
+      "status": "PASS",
+      "evidence_paths": [
+        "C:\\Users\\shai\\AppData\\Local\\Temp\\claude\\c--AI-Stock-Agent\\bb0cbcf5-0be3-4efa-b2c0-fce0377906de\\scratchpad\\task143_tests\\test9_completion_before_start"
+      ]
+    },
+    {
+      "test_name": "10_existing_result_not_overwritten",
+      "expected_result": "RESULT_ALREADY_EXISTS raised, file unchanged",
+      "actual_result": "raised RESULT_ALREADY_EXISTS; file_unchanged=True",
+      "failure_category": "RESULT_ALREADY_EXISTS",
+      "status": "PASS",
+      "evidence_paths": [
+        "C:\\Users\\shai\\AppData\\Local\\Temp\\claude\\c--AI-Stock-Agent\\bb0cbcf5-0be3-4efa-b2c0-fce0377906de\\scratchpad\\task143_tests\\test10_no_overwrite"
+      ]
+    },
+    {
+      "test_name": "11_atomic_writes_no_temp_files_left",
+      "expected_result": "0 leftover *.tmp* files",
+      "actual_result": "0 leftover temp files: []",
+      "failure_category": null,
+      "status": "PASS",
+      "evidence_paths": [
+        "C:\\Users\\shai\\AppData\\Local\\Temp\\claude\\c--AI-Stock-Agent\\bb0cbcf5-0be3-4efa-b2c0-fce0377906de\\scratchpad\\task143_tests\\test11_atomic_no_temp"
+      ]
+    },
+    {
+      "test_name": "12_timestamps_monotonic_and_end_in_z",
+      "expected_result": "both end in Z and completed_at >= started_at",
+      "actual_result": "started_at=2026-08-05T11:45:50.847Z completed_at=2026-08-05T11:45:50.850Z ends_in_z=True monotonic=True",
+      "failure_category": null,
+      "status": "PASS",
+      "evidence_paths": [
+        "C:\\Users\\shai\\AppData\\Local\\Temp\\claude\\c--AI-Stock-Agent\\bb0cbcf5-0be3-4efa-b2c0-fce0377906de\\scratchpad\\task143_tests\\test12_monotonic_z"
+      ]
+    }
+  ],
+  "runtime_seconds": 0.071
+}

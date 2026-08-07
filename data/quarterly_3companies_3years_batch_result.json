@@ -1,0 +1,2554 @@
+{
+  "recovery_note": "Reconstructed directly from the completed, committed production database state after scripts/121_quarterly_batch_runner.py finished successfully (exit code 0). No rerun was performed; no rows were inserted/updated/deleted during this recovery.",
+  "target_company_years": 9,
+  "company_years_completed": 9,
+  "company_years_missing": [],
+  "company_year_records": [
+    {
+      "ticker": "MSFT",
+      "fiscal_year_end": "2022-06-30",
+      "status": "COMPLETE",
+      "run_id": "f098130b-89a8-4206-bc90-5d001e89ab9b",
+      "engine_version": "118_quarterly_extraction_engine_v1",
+      "schema_version": "quarterly_v1",
+      "q1_accession": "0001564590-21-051992",
+      "q2_accession": "0001564590-22-002324",
+      "q3_accession": "0001564590-22-015675",
+      "fy_accession": "0001564590-22-026876",
+      "source_json_path": "C:\\AI_Stock_Agent\\data\\quarterly_engine_msft_fy2022.json",
+      "run_status": "PASS",
+      "created_at": "2026-08-04T06:39:11.746621+00:00",
+      "completed_at": "2026-08-04T06:39:11.766136+00:00",
+      "row_count": 24,
+      "duplicate_natural_keys": [],
+      "metrics": {
+        "capex": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 5810000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-21-051992",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": "C_0000789019_20210701_20210930",
+              "availability_date": "2021-10-26",
+              "period_end": "2021-09-30"
+            },
+            "Q2": {
+              "value": 5865000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-002324",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": "C_0000789019_20211001_20211231",
+              "availability_date": "2022-01-25",
+              "period_end": "2021-12-31"
+            },
+            "Q3": {
+              "value": 5340000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-015675",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": "C_0000789019_20220101_20220331",
+              "availability_date": "2022-04-26",
+              "period_end": "2022-03-31"
+            },
+            "Q4": {
+              "value": 6871000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001564590-22-026876",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": "C_0000789019_20210701_20220331",
+              "availability_date": "2022-07-28",
+              "period_end": "2022-06-30"
+            }
+          }
+        },
+        "income_tax_expense": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 19000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-21-051992",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_0000789019_20210701_20210930",
+              "availability_date": "2021-10-26",
+              "period_end": "2021-09-30"
+            },
+            "Q2": {
+              "value": 3750000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-002324",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_0000789019_20211001_20211231",
+              "availability_date": "2022-01-25",
+              "period_end": "2021-12-31"
+            },
+            "Q3": {
+              "value": 3462000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-015675",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_0000789019_20220101_20220331",
+              "availability_date": "2022-04-26",
+              "period_end": "2022-03-31"
+            },
+            "Q4": {
+              "value": 3747000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001564590-22-026876",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_0000789019_20210701_20220331",
+              "availability_date": "2022-07-28",
+              "period_end": "2022-06-30"
+            }
+          }
+        },
+        "operating_cash_flow": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 24540000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-21-051992",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "C_0000789019_20210701_20210930",
+              "availability_date": "2021-10-26",
+              "period_end": "2021-09-30"
+            },
+            "Q2": {
+              "value": 14480000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-002324",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "C_0000789019_20211001_20211231",
+              "availability_date": "2022-01-25",
+              "period_end": "2021-12-31"
+            },
+            "Q3": {
+              "value": 25386000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-015675",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "C_0000789019_20220101_20220331",
+              "availability_date": "2022-04-26",
+              "period_end": "2022-03-31"
+            },
+            "Q4": {
+              "value": 24629000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001564590-22-026876",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "C_0000789019_20210701_20220331",
+              "availability_date": "2022-07-28",
+              "period_end": "2022-06-30"
+            }
+          }
+        },
+        "operating_income": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 20238000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-21-051992",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_0000789019_20210701_20210930",
+              "availability_date": "2021-10-26",
+              "period_end": "2021-09-30"
+            },
+            "Q2": {
+              "value": 22247000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-002324",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_0000789019_20211001_20211231",
+              "availability_date": "2022-01-25",
+              "period_end": "2021-12-31"
+            },
+            "Q3": {
+              "value": 20364000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-015675",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_0000789019_20220101_20220331",
+              "availability_date": "2022-04-26",
+              "period_end": "2022-03-31"
+            },
+            "Q4": {
+              "value": 20534000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001564590-22-026876",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_0000789019_20210701_20220331",
+              "availability_date": "2022-07-28",
+              "period_end": "2022-06-30"
+            }
+          }
+        },
+        "pretax_income": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 20524000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-21-051992",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "context_id": "C_0000789019_20210701_20210930",
+              "availability_date": "2021-10-26",
+              "period_end": "2021-09-30"
+            },
+            "Q2": {
+              "value": 22515000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-002324",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "context_id": "C_0000789019_20211001_20211231",
+              "availability_date": "2022-01-25",
+              "period_end": "2021-12-31"
+            },
+            "Q3": {
+              "value": 20190000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-015675",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "context_id": "C_0000789019_20220101_20220331",
+              "availability_date": "2022-04-26",
+              "period_end": "2022-03-31"
+            },
+            "Q4": {
+              "value": 20487000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001564590-22-026876",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "context_id": "C_0000789019_20210701_20220331",
+              "availability_date": "2022-07-28",
+              "period_end": "2022-06-30"
+            }
+          }
+        },
+        "revenue": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 45317000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-21-051992",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_0000789019_20210701_20210930",
+              "availability_date": "2021-10-26",
+              "period_end": "2021-09-30"
+            },
+            "Q2": {
+              "value": 51728000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-002324",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_0000789019_20211001_20211231",
+              "availability_date": "2022-01-25",
+              "period_end": "2021-12-31"
+            },
+            "Q3": {
+              "value": 49360000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-015675",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_0000789019_20220101_20220331",
+              "availability_date": "2022-04-26",
+              "period_end": "2022-03-31"
+            },
+            "Q4": {
+              "value": 51865000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001564590-22-026876",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_0000789019_20210701_20220331",
+              "availability_date": "2022-07-28",
+              "period_end": "2022-06-30"
+            }
+          }
+        }
+      }
+    },
+    {
+      "ticker": "MSFT",
+      "fiscal_year_end": "2023-06-30",
+      "status": "COMPLETE",
+      "run_id": "49990564-6c9c-462a-aeb7-d4c8d95c9744",
+      "engine_version": "118_quarterly_extraction_engine_v1",
+      "schema_version": "quarterly_v1",
+      "q1_accession": "0001564590-22-035087",
+      "q2_accession": "0001564590-23-000733",
+      "q3_accession": "0000950170-23-014423",
+      "fy_accession": "0000950170-23-035122",
+      "source_json_path": "C:\\AI_Stock_Agent\\data\\quarterly_engine_msft_fy2023.json",
+      "run_status": "PASS",
+      "created_at": "2026-08-04T06:39:23.131374+00:00",
+      "completed_at": "2026-08-04T06:39:23.148279+00:00",
+      "row_count": 24,
+      "duplicate_natural_keys": [],
+      "metrics": {
+        "capex": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 6283000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-035087",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": "C_0000789019_20220701_20220930",
+              "availability_date": "2022-10-25",
+              "period_end": "2022-09-30"
+            },
+            "Q2": {
+              "value": 6274000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-23-000733",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": "C_0000789019_20221001_20221231",
+              "availability_date": "2023-01-24",
+              "period_end": "2022-12-31"
+            },
+            "Q3": {
+              "value": 6607000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-014423",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": "C_f4c092f4-8a02-4406-8410-cb2ccbd948a7",
+              "availability_date": "2023-04-25",
+              "period_end": "2023-03-31"
+            },
+            "Q4": {
+              "value": 8943000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-23-035122",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": "C_e3cbe141-c492-42cf-ada1-7faa18cad7bd",
+              "availability_date": "2023-07-27",
+              "period_end": "2023-06-30"
+            }
+          }
+        },
+        "income_tax_expense": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 4016000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-035087",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_0000789019_20220701_20220930",
+              "availability_date": "2022-10-25",
+              "period_end": "2022-09-30"
+            },
+            "Q2": {
+              "value": 3914000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-23-000733",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_0000789019_20221001_20221231",
+              "availability_date": "2023-01-24",
+              "period_end": "2022-12-31"
+            },
+            "Q3": {
+              "value": 4374000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-014423",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_f4c092f4-8a02-4406-8410-cb2ccbd948a7",
+              "availability_date": "2023-04-25",
+              "period_end": "2023-03-31"
+            },
+            "Q4": {
+              "value": 4646000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-23-035122",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_e3cbe141-c492-42cf-ada1-7faa18cad7bd",
+              "availability_date": "2023-07-27",
+              "period_end": "2023-06-30"
+            }
+          }
+        },
+        "operating_cash_flow": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 23198000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-035087",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "C_0000789019_20220701_20220930",
+              "availability_date": "2022-10-25",
+              "period_end": "2022-09-30"
+            },
+            "Q2": {
+              "value": 11173000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-23-000733",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "C_0000789019_20221001_20221231",
+              "availability_date": "2023-01-24",
+              "period_end": "2022-12-31"
+            },
+            "Q3": {
+              "value": 24441000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-014423",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "C_f4c092f4-8a02-4406-8410-cb2ccbd948a7",
+              "availability_date": "2023-04-25",
+              "period_end": "2023-03-31"
+            },
+            "Q4": {
+              "value": 28770000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-23-035122",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "C_e3cbe141-c492-42cf-ada1-7faa18cad7bd",
+              "availability_date": "2023-07-27",
+              "period_end": "2023-06-30"
+            }
+          }
+        },
+        "operating_income": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 21518000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-035087",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_0000789019_20220701_20220930",
+              "availability_date": "2022-10-25",
+              "period_end": "2022-09-30"
+            },
+            "Q2": {
+              "value": 20399000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-23-000733",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_0000789019_20221001_20221231",
+              "availability_date": "2023-01-24",
+              "period_end": "2022-12-31"
+            },
+            "Q3": {
+              "value": 22352000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-014423",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_f4c092f4-8a02-4406-8410-cb2ccbd948a7",
+              "availability_date": "2023-04-25",
+              "period_end": "2023-03-31"
+            },
+            "Q4": {
+              "value": 24254000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-23-035122",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_e3cbe141-c492-42cf-ada1-7faa18cad7bd",
+              "availability_date": "2023-07-27",
+              "period_end": "2023-06-30"
+            }
+          }
+        },
+        "pretax_income": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 21572000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-035087",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "context_id": "C_0000789019_20220701_20220930",
+              "availability_date": "2022-10-25",
+              "period_end": "2022-09-30"
+            },
+            "Q2": {
+              "value": 20339000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-23-000733",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "context_id": "C_0000789019_20221001_20221231",
+              "availability_date": "2023-01-24",
+              "period_end": "2022-12-31"
+            },
+            "Q3": {
+              "value": 22673000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-014423",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "context_id": "C_f4c092f4-8a02-4406-8410-cb2ccbd948a7",
+              "availability_date": "2023-04-25",
+              "period_end": "2023-03-31"
+            },
+            "Q4": {
+              "value": 24727000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-23-035122",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "context_id": "C_e3cbe141-c492-42cf-ada1-7faa18cad7bd",
+              "availability_date": "2023-07-27",
+              "period_end": "2023-06-30"
+            }
+          }
+        },
+        "revenue": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 50122000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-035087",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_0000789019_20220701_20220930",
+              "availability_date": "2022-10-25",
+              "period_end": "2022-09-30"
+            },
+            "Q2": {
+              "value": 52747000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-23-000733",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_0000789019_20221001_20221231",
+              "availability_date": "2023-01-24",
+              "period_end": "2022-12-31"
+            },
+            "Q3": {
+              "value": 52857000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-014423",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_f4c092f4-8a02-4406-8410-cb2ccbd948a7",
+              "availability_date": "2023-04-25",
+              "period_end": "2023-03-31"
+            },
+            "Q4": {
+              "value": 56189000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-23-035122",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_e3cbe141-c492-42cf-ada1-7faa18cad7bd",
+              "availability_date": "2023-07-27",
+              "period_end": "2023-06-30"
+            }
+          }
+        }
+      }
+    },
+    {
+      "ticker": "MSFT",
+      "fiscal_year_end": "2024-06-30",
+      "status": "COMPLETE",
+      "run_id": "e9c306c0-351a-46fe-be93-4e8de1da1b1d",
+      "engine_version": "118_quarterly_extraction_engine_v1",
+      "schema_version": "quarterly_v1",
+      "q1_accession": "0000950170-23-054855",
+      "q2_accession": "0000950170-24-008814",
+      "q3_accession": "0000950170-24-048288",
+      "fy_accession": "0000950170-24-087843",
+      "source_json_path": "C:\\AI_Stock_Agent\\data\\quarterly_engine_msft_fy2024.json",
+      "run_status": "PASS",
+      "created_at": "2026-08-04T05:49:56.618706+00:00",
+      "completed_at": "2026-08-04T05:49:56.654487+00:00",
+      "row_count": 24,
+      "duplicate_natural_keys": [],
+      "metrics": {
+        "capex": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 9917000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-054855",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": "C_705576da-7be5-4d51-9ee4-7b08149476e9",
+              "availability_date": "2023-10-24",
+              "period_end": "2023-09-30"
+            },
+            "Q2": {
+              "value": 9735000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-24-008814",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": "C_59d0cdd1-a3a0-4a29-b4c3-2685aebdf33d",
+              "availability_date": "2024-01-30",
+              "period_end": "2023-12-31"
+            },
+            "Q3": {
+              "value": 10952000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-24-048288",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": "C_a2d4882c-16ef-4eef-8599-7bb7014adb07",
+              "availability_date": "2024-04-25",
+              "period_end": "2024-03-31"
+            },
+            "Q4": {
+              "value": 13873000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-24-087843",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": "C_b68e61d2-1a3b-4a7a-b8d1-ad74757a8678",
+              "availability_date": "2024-07-30",
+              "period_end": "2024-06-30"
+            }
+          }
+        },
+        "income_tax_expense": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 4993000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-054855",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_705576da-7be5-4d51-9ee4-7b08149476e9",
+              "availability_date": "2023-10-24",
+              "period_end": "2023-09-30"
+            },
+            "Q2": {
+              "value": 4656000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-24-008814",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_59d0cdd1-a3a0-4a29-b4c3-2685aebdf33d",
+              "availability_date": "2024-01-30",
+              "period_end": "2023-12-31"
+            },
+            "Q3": {
+              "value": 4788000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-24-048288",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_a2d4882c-16ef-4eef-8599-7bb7014adb07",
+              "availability_date": "2024-04-25",
+              "period_end": "2024-03-31"
+            },
+            "Q4": {
+              "value": 5214000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-24-087843",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_b68e61d2-1a3b-4a7a-b8d1-ad74757a8678",
+              "availability_date": "2024-07-30",
+              "period_end": "2024-06-30"
+            }
+          }
+        },
+        "operating_cash_flow": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 30583000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-054855",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "C_705576da-7be5-4d51-9ee4-7b08149476e9",
+              "availability_date": "2023-10-24",
+              "period_end": "2023-09-30"
+            },
+            "Q2": {
+              "value": 18853000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-24-008814",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "C_59d0cdd1-a3a0-4a29-b4c3-2685aebdf33d",
+              "availability_date": "2024-01-30",
+              "period_end": "2023-12-31"
+            },
+            "Q3": {
+              "value": 31917000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-24-048288",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "C_a2d4882c-16ef-4eef-8599-7bb7014adb07",
+              "availability_date": "2024-04-25",
+              "period_end": "2024-03-31"
+            },
+            "Q4": {
+              "value": 37195000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-24-087843",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "C_b68e61d2-1a3b-4a7a-b8d1-ad74757a8678",
+              "availability_date": "2024-07-30",
+              "period_end": "2024-06-30"
+            }
+          }
+        },
+        "operating_income": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 26895000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-054855",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_705576da-7be5-4d51-9ee4-7b08149476e9",
+              "availability_date": "2023-10-24",
+              "period_end": "2023-09-30"
+            },
+            "Q2": {
+              "value": 27032000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-24-008814",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_59d0cdd1-a3a0-4a29-b4c3-2685aebdf33d",
+              "availability_date": "2024-01-30",
+              "period_end": "2023-12-31"
+            },
+            "Q3": {
+              "value": 27581000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-24-048288",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_a2d4882c-16ef-4eef-8599-7bb7014adb07",
+              "availability_date": "2024-04-25",
+              "period_end": "2024-03-31"
+            },
+            "Q4": {
+              "value": 27925000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-24-087843",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_b68e61d2-1a3b-4a7a-b8d1-ad74757a8678",
+              "availability_date": "2024-07-30",
+              "period_end": "2024-06-30"
+            }
+          }
+        },
+        "pretax_income": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 27284000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-054855",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "context_id": "C_705576da-7be5-4d51-9ee4-7b08149476e9",
+              "availability_date": "2023-10-24",
+              "period_end": "2023-09-30"
+            },
+            "Q2": {
+              "value": 26526000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-24-008814",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "context_id": "C_59d0cdd1-a3a0-4a29-b4c3-2685aebdf33d",
+              "availability_date": "2024-01-30",
+              "period_end": "2023-12-31"
+            },
+            "Q3": {
+              "value": 26727000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-24-048288",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "context_id": "C_a2d4882c-16ef-4eef-8599-7bb7014adb07",
+              "availability_date": "2024-04-25",
+              "period_end": "2024-03-31"
+            },
+            "Q4": {
+              "value": 27250000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-24-087843",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "context_id": "C_b68e61d2-1a3b-4a7a-b8d1-ad74757a8678",
+              "availability_date": "2024-07-30",
+              "period_end": "2024-06-30"
+            }
+          }
+        },
+        "revenue": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 56517000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-054855",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_705576da-7be5-4d51-9ee4-7b08149476e9",
+              "availability_date": "2023-10-24",
+              "period_end": "2023-09-30"
+            },
+            "Q2": {
+              "value": 62020000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-24-008814",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_59d0cdd1-a3a0-4a29-b4c3-2685aebdf33d",
+              "availability_date": "2024-01-30",
+              "period_end": "2023-12-31"
+            },
+            "Q3": {
+              "value": 61858000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-24-048288",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_a2d4882c-16ef-4eef-8599-7bb7014adb07",
+              "availability_date": "2024-04-25",
+              "period_end": "2024-03-31"
+            },
+            "Q4": {
+              "value": 64727000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-24-087843",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_b68e61d2-1a3b-4a7a-b8d1-ad74757a8678",
+              "availability_date": "2024-07-30",
+              "period_end": "2024-06-30"
+            }
+          }
+        }
+      }
+    },
+    {
+      "ticker": "AMZN",
+      "fiscal_year_end": "2022-12-31",
+      "status": "COMPLETE",
+      "run_id": "9ed7dae9-9a7a-46d1-b662-b8b8bea6e292",
+      "engine_version": "118_quarterly_extraction_engine_v1",
+      "schema_version": "quarterly_v1",
+      "q1_accession": "0001018724-22-000013",
+      "q2_accession": "0001018724-22-000019",
+      "q3_accession": "0001018724-22-000023",
+      "fy_accession": "0001018724-23-000004",
+      "source_json_path": "C:\\AI_Stock_Agent\\data\\quarterly_engine_amzn_fy2022.json",
+      "run_status": "PASS",
+      "created_at": "2026-08-04T06:39:40.896992+00:00",
+      "completed_at": "2026-08-04T06:39:40.917853+00:00",
+      "row_count": 24,
+      "duplicate_natural_keys": [],
+      "metrics": {
+        "capex": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 14951000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-22-000013",
+              "concept_qname": "us-gaap:PaymentsToAcquireProductiveAssets",
+              "context_id": "iee090cd6862849ad8e3026c04d3a2165_D20220101-20220331",
+              "availability_date": "2022-04-29",
+              "period_end": "2022-03-31"
+            },
+            "Q2": {
+              "value": 15724000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-22-000019",
+              "concept_qname": "us-gaap:PaymentsToAcquireProductiveAssets",
+              "context_id": "if1c898010eef4246b9b88f9dfa8610f5_D20220401-20220630",
+              "availability_date": "2022-07-29",
+              "period_end": "2022-06-30"
+            },
+            "Q3": {
+              "value": 16378000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-22-000023",
+              "concept_qname": "us-gaap:PaymentsToAcquireProductiveAssets",
+              "context_id": "i6a7be016b1e14018ba8f205a6d0b0ff6_D20220701-20220930",
+              "availability_date": "2022-10-28",
+              "period_end": "2022-09-30"
+            },
+            "Q4": {
+              "value": 16592000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001018724-23-000004",
+              "concept_qname": "us-gaap:PaymentsToAcquireProductiveAssets",
+              "context_id": "if14ce84d45444e2d88827521cc1bcd02_D20220101-20220930",
+              "availability_date": "2023-02-03",
+              "period_end": "2022-12-31"
+            }
+          }
+        },
+        "income_tax_expense": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": -1422000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-22-000013",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "iee090cd6862849ad8e3026c04d3a2165_D20220101-20220331",
+              "availability_date": "2022-04-29",
+              "period_end": "2022-03-31"
+            },
+            "Q2": {
+              "value": -637000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-22-000019",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "if1c898010eef4246b9b88f9dfa8610f5_D20220401-20220630",
+              "availability_date": "2022-07-29",
+              "period_end": "2022-06-30"
+            },
+            "Q3": {
+              "value": 69000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-22-000023",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "i6a7be016b1e14018ba8f205a6d0b0ff6_D20220701-20220930",
+              "availability_date": "2022-10-28",
+              "period_end": "2022-09-30"
+            },
+            "Q4": {
+              "value": -1227000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001018724-23-000004",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "if14ce84d45444e2d88827521cc1bcd02_D20220101-20220930",
+              "availability_date": "2023-02-03",
+              "period_end": "2022-12-31"
+            }
+          }
+        },
+        "operating_cash_flow": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": -2790000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-22-000013",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "iee090cd6862849ad8e3026c04d3a2165_D20220101-20220331",
+              "availability_date": "2022-04-29",
+              "period_end": "2022-03-31"
+            },
+            "Q2": {
+              "value": 8965000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-22-000019",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "if1c898010eef4246b9b88f9dfa8610f5_D20220401-20220630",
+              "availability_date": "2022-07-29",
+              "period_end": "2022-06-30"
+            },
+            "Q3": {
+              "value": 11404000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-22-000023",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "i6a7be016b1e14018ba8f205a6d0b0ff6_D20220701-20220930",
+              "availability_date": "2022-10-28",
+              "period_end": "2022-09-30"
+            },
+            "Q4": {
+              "value": 29173000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001018724-23-000004",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "if14ce84d45444e2d88827521cc1bcd02_D20220101-20220930",
+              "availability_date": "2023-02-03",
+              "period_end": "2022-12-31"
+            }
+          }
+        },
+        "operating_income": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 3669000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-22-000013",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "iee090cd6862849ad8e3026c04d3a2165_D20220101-20220331",
+              "availability_date": "2022-04-29",
+              "period_end": "2022-03-31"
+            },
+            "Q2": {
+              "value": 3317000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-22-000019",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "if1c898010eef4246b9b88f9dfa8610f5_D20220401-20220630",
+              "availability_date": "2022-07-29",
+              "period_end": "2022-06-30"
+            },
+            "Q3": {
+              "value": 2525000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-22-000023",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "i6a7be016b1e14018ba8f205a6d0b0ff6_D20220701-20220930",
+              "availability_date": "2022-10-28",
+              "period_end": "2022-09-30"
+            },
+            "Q4": {
+              "value": 2737000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001018724-23-000004",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "if14ce84d45444e2d88827521cc1bcd02_D20220101-20220930",
+              "availability_date": "2023-02-03",
+              "period_end": "2022-12-31"
+            }
+          }
+        },
+        "pretax_income": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": -5265000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-22-000013",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "context_id": "iee090cd6862849ad8e3026c04d3a2165_D20220101-20220331",
+              "availability_date": "2022-04-29",
+              "period_end": "2022-03-31"
+            },
+            "Q2": {
+              "value": -2653000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-22-000019",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "context_id": "if1c898010eef4246b9b88f9dfa8610f5_D20220401-20220630",
+              "availability_date": "2022-07-29",
+              "period_end": "2022-06-30"
+            },
+            "Q3": {
+              "value": 2944000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-22-000023",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "context_id": "i6a7be016b1e14018ba8f205a6d0b0ff6_D20220701-20220930",
+              "availability_date": "2022-10-28",
+              "period_end": "2022-09-30"
+            },
+            "Q4": {
+              "value": -962000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001018724-23-000004",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "context_id": "if14ce84d45444e2d88827521cc1bcd02_D20220101-20220930",
+              "availability_date": "2023-02-03",
+              "period_end": "2022-12-31"
+            }
+          }
+        },
+        "revenue": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 116444000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-22-000013",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "iee090cd6862849ad8e3026c04d3a2165_D20220101-20220331",
+              "availability_date": "2022-04-29",
+              "period_end": "2022-03-31"
+            },
+            "Q2": {
+              "value": 121234000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-22-000019",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "if1c898010eef4246b9b88f9dfa8610f5_D20220401-20220630",
+              "availability_date": "2022-07-29",
+              "period_end": "2022-06-30"
+            },
+            "Q3": {
+              "value": 127101000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-22-000023",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "i6a7be016b1e14018ba8f205a6d0b0ff6_D20220701-20220930",
+              "availability_date": "2022-10-28",
+              "period_end": "2022-09-30"
+            },
+            "Q4": {
+              "value": 149204000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001018724-23-000004",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "if14ce84d45444e2d88827521cc1bcd02_D20220101-20220930",
+              "availability_date": "2023-02-03",
+              "period_end": "2022-12-31"
+            }
+          }
+        }
+      }
+    },
+    {
+      "ticker": "AMZN",
+      "fiscal_year_end": "2023-12-31",
+      "status": "COMPLETE",
+      "run_id": "b49c40b4-cb9e-4fb8-b196-531218a9afe9",
+      "engine_version": "118_quarterly_extraction_engine_v1",
+      "schema_version": "quarterly_v1",
+      "q1_accession": "0001018724-23-000008",
+      "q2_accession": "0001018724-23-000012",
+      "q3_accession": "0001018724-23-000018",
+      "fy_accession": "0001018724-24-000008",
+      "source_json_path": "C:\\AI_Stock_Agent\\data\\quarterly_engine_amzn_fy2023.json",
+      "run_status": "PASS",
+      "created_at": "2026-08-04T06:39:52.627717+00:00",
+      "completed_at": "2026-08-04T06:39:52.694003+00:00",
+      "row_count": 24,
+      "duplicate_natural_keys": [],
+      "metrics": {
+        "capex": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 14207000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-23-000008",
+              "concept_qname": "us-gaap:PaymentsToAcquireProductiveAssets",
+              "context_id": "id5a05ce5ce084612b9b02c88a7bcfc49_D20230101-20230331",
+              "availability_date": "2023-04-28",
+              "period_end": "2023-03-31"
+            },
+            "Q2": {
+              "value": 11455000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-23-000012",
+              "concept_qname": "us-gaap:PaymentsToAcquireProductiveAssets",
+              "context_id": "c-10",
+              "availability_date": "2023-08-04",
+              "period_end": "2023-06-30"
+            },
+            "Q3": {
+              "value": 12479000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-23-000018",
+              "concept_qname": "us-gaap:PaymentsToAcquireProductiveAssets",
+              "context_id": "c-10",
+              "availability_date": "2023-10-27",
+              "period_end": "2023-09-30"
+            },
+            "Q4": {
+              "value": 14588000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001018724-24-000008",
+              "concept_qname": "us-gaap:PaymentsToAcquireProductiveAssets",
+              "context_id": "c-1",
+              "availability_date": "2024-02-02",
+              "period_end": "2023-12-31"
+            }
+          }
+        },
+        "income_tax_expense": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 948000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-23-000008",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "id5a05ce5ce084612b9b02c88a7bcfc49_D20230101-20230331",
+              "availability_date": "2023-04-28",
+              "period_end": "2023-03-31"
+            },
+            "Q2": {
+              "value": 804000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-23-000012",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "c-10",
+              "availability_date": "2023-08-04",
+              "period_end": "2023-06-30"
+            },
+            "Q3": {
+              "value": 2306000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-23-000018",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "c-10",
+              "availability_date": "2023-10-27",
+              "period_end": "2023-09-30"
+            },
+            "Q4": {
+              "value": 3062000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001018724-24-000008",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "c-1",
+              "availability_date": "2024-02-02",
+              "period_end": "2023-12-31"
+            }
+          }
+        },
+        "operating_cash_flow": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 4788000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-23-000008",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "id5a05ce5ce084612b9b02c88a7bcfc49_D20230101-20230331",
+              "availability_date": "2023-04-28",
+              "period_end": "2023-03-31"
+            },
+            "Q2": {
+              "value": 16476000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-23-000012",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "c-10",
+              "availability_date": "2023-08-04",
+              "period_end": "2023-06-30"
+            },
+            "Q3": {
+              "value": 21217000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-23-000018",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "c-10",
+              "availability_date": "2023-10-27",
+              "period_end": "2023-09-30"
+            },
+            "Q4": {
+              "value": 42465000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001018724-24-000008",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "c-1",
+              "availability_date": "2024-02-02",
+              "period_end": "2023-12-31"
+            }
+          }
+        },
+        "operating_income": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 4774000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-23-000008",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "id5a05ce5ce084612b9b02c88a7bcfc49_D20230101-20230331",
+              "availability_date": "2023-04-28",
+              "period_end": "2023-03-31"
+            },
+            "Q2": {
+              "value": 7681000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-23-000012",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "c-10",
+              "availability_date": "2023-08-04",
+              "period_end": "2023-06-30"
+            },
+            "Q3": {
+              "value": 11188000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-23-000018",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "c-10",
+              "availability_date": "2023-10-27",
+              "period_end": "2023-09-30"
+            },
+            "Q4": {
+              "value": 13209000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001018724-24-000008",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "c-1",
+              "availability_date": "2024-02-02",
+              "period_end": "2023-12-31"
+            }
+          }
+        },
+        "pretax_income": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 4119000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-23-000008",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "context_id": "id5a05ce5ce084612b9b02c88a7bcfc49_D20230101-20230331",
+              "availability_date": "2023-04-28",
+              "period_end": "2023-03-31"
+            },
+            "Q2": {
+              "value": 7563000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-23-000012",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "context_id": "c-10",
+              "availability_date": "2023-08-04",
+              "period_end": "2023-06-30"
+            },
+            "Q3": {
+              "value": 12189000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-23-000018",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "context_id": "c-10",
+              "availability_date": "2023-10-27",
+              "period_end": "2023-09-30"
+            },
+            "Q4": {
+              "value": 13686000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001018724-24-000008",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "context_id": "c-1",
+              "availability_date": "2024-02-02",
+              "period_end": "2023-12-31"
+            }
+          }
+        },
+        "revenue": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 127358000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-23-000008",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "id5a05ce5ce084612b9b02c88a7bcfc49_D20230101-20230331",
+              "availability_date": "2023-04-28",
+              "period_end": "2023-03-31"
+            },
+            "Q2": {
+              "value": 134383000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-23-000012",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "c-10",
+              "availability_date": "2023-08-04",
+              "period_end": "2023-06-30"
+            },
+            "Q3": {
+              "value": 143083000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-23-000018",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "c-10",
+              "availability_date": "2023-10-27",
+              "period_end": "2023-09-30"
+            },
+            "Q4": {
+              "value": 169961000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001018724-24-000008",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "c-1",
+              "availability_date": "2024-02-02",
+              "period_end": "2023-12-31"
+            }
+          }
+        }
+      }
+    },
+    {
+      "ticker": "AMZN",
+      "fiscal_year_end": "2024-12-31",
+      "status": "COMPLETE",
+      "run_id": "ec5dcd3d-f57a-42a5-9d00-fdc3b90751b8",
+      "engine_version": "118_quarterly_extraction_engine_v1",
+      "schema_version": "quarterly_v1",
+      "q1_accession": "0001018724-24-000083",
+      "q2_accession": "0001018724-24-000130",
+      "q3_accession": "0001018724-24-000161",
+      "fy_accession": "0001018724-25-000004",
+      "source_json_path": "C:\\AI_Stock_Agent\\data\\quarterly_engine_amzn_fy2024.json",
+      "run_status": "PASS",
+      "created_at": "2026-08-04T05:49:56.662499+00:00",
+      "completed_at": "2026-08-04T05:49:56.685786+00:00",
+      "row_count": 24,
+      "duplicate_natural_keys": [],
+      "metrics": {
+        "capex": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 14925000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-24-000083",
+              "concept_qname": "us-gaap:PaymentsToAcquireProductiveAssets",
+              "context_id": "c-1",
+              "availability_date": "2024-05-01",
+              "period_end": "2024-03-31"
+            },
+            "Q2": {
+              "value": 17620000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-24-000130",
+              "concept_qname": "us-gaap:PaymentsToAcquireProductiveAssets",
+              "context_id": "c-10",
+              "availability_date": "2024-08-02",
+              "period_end": "2024-06-30"
+            },
+            "Q3": {
+              "value": 22620000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-24-000161",
+              "concept_qname": "us-gaap:PaymentsToAcquireProductiveAssets",
+              "context_id": "c-10",
+              "availability_date": "2024-11-01",
+              "period_end": "2024-09-30"
+            },
+            "Q4": {
+              "value": 27834000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001018724-25-000004",
+              "concept_qname": "us-gaap:PaymentsToAcquireProductiveAssets",
+              "context_id": "c-1",
+              "availability_date": "2025-02-07",
+              "period_end": "2024-12-31"
+            }
+          }
+        },
+        "income_tax_expense": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 2467000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-24-000083",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "c-1",
+              "availability_date": "2024-05-01",
+              "period_end": "2024-03-31"
+            },
+            "Q2": {
+              "value": 1767000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-24-000130",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "c-10",
+              "availability_date": "2024-08-02",
+              "period_end": "2024-06-30"
+            },
+            "Q3": {
+              "value": 2706000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-24-000161",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "c-10",
+              "availability_date": "2024-11-01",
+              "period_end": "2024-09-30"
+            },
+            "Q4": {
+              "value": 2325000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001018724-25-000004",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "c-1",
+              "availability_date": "2025-02-07",
+              "period_end": "2024-12-31"
+            }
+          }
+        },
+        "operating_cash_flow": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 18989000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-24-000083",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "c-1",
+              "availability_date": "2024-05-01",
+              "period_end": "2024-03-31"
+            },
+            "Q2": {
+              "value": 25281000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-24-000130",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "c-10",
+              "availability_date": "2024-08-02",
+              "period_end": "2024-06-30"
+            },
+            "Q3": {
+              "value": 25971000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-24-000161",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "c-10",
+              "availability_date": "2024-11-01",
+              "period_end": "2024-09-30"
+            },
+            "Q4": {
+              "value": 45636000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001018724-25-000004",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "c-1",
+              "availability_date": "2025-02-07",
+              "period_end": "2024-12-31"
+            }
+          }
+        },
+        "operating_income": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 15307000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-24-000083",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "c-1",
+              "availability_date": "2024-05-01",
+              "period_end": "2024-03-31"
+            },
+            "Q2": {
+              "value": 14672000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-24-000130",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "c-10",
+              "availability_date": "2024-08-02",
+              "period_end": "2024-06-30"
+            },
+            "Q3": {
+              "value": 17411000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-24-000161",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "c-10",
+              "availability_date": "2024-11-01",
+              "period_end": "2024-09-30"
+            },
+            "Q4": {
+              "value": 21203000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001018724-25-000004",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "c-1",
+              "availability_date": "2025-02-07",
+              "period_end": "2024-12-31"
+            }
+          }
+        },
+        "pretax_income": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 12983000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-24-000083",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "context_id": "c-1",
+              "availability_date": "2024-05-01",
+              "period_end": "2024-03-31"
+            },
+            "Q2": {
+              "value": 15245000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-24-000130",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "context_id": "c-10",
+              "availability_date": "2024-08-02",
+              "period_end": "2024-06-30"
+            },
+            "Q3": {
+              "value": 18037000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-24-000161",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "context_id": "c-10",
+              "availability_date": "2024-11-01",
+              "period_end": "2024-09-30"
+            },
+            "Q4": {
+              "value": 22349000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001018724-25-000004",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "context_id": "c-1",
+              "availability_date": "2025-02-07",
+              "period_end": "2024-12-31"
+            }
+          }
+        },
+        "revenue": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 143313000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-24-000083",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "c-1",
+              "availability_date": "2024-05-01",
+              "period_end": "2024-03-31"
+            },
+            "Q2": {
+              "value": 147977000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-24-000130",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "c-10",
+              "availability_date": "2024-08-02",
+              "period_end": "2024-06-30"
+            },
+            "Q3": {
+              "value": 158877000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001018724-24-000161",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "c-10",
+              "availability_date": "2024-11-01",
+              "period_end": "2024-09-30"
+            },
+            "Q4": {
+              "value": 187792000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001018724-25-000004",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "c-1",
+              "availability_date": "2025-02-07",
+              "period_end": "2024-12-31"
+            }
+          }
+        }
+      }
+    },
+    {
+      "ticker": "ORCL",
+      "fiscal_year_end": "2022-05-31",
+      "status": "COMPLETE",
+      "run_id": "908c6a1d-847a-473f-b0f4-29af2e348a1b",
+      "engine_version": "118_quarterly_extraction_engine_v1",
+      "schema_version": "quarterly_v1",
+      "q1_accession": "0001564590-21-047772",
+      "q2_accession": "0001564590-21-060022",
+      "q3_accession": "0001564590-22-009859",
+      "fy_accession": "0001564590-22-023675",
+      "source_json_path": "C:\\AI_Stock_Agent\\data\\quarterly_engine_orcl_fy2022.json",
+      "run_status": "PASS",
+      "created_at": "2026-08-04T06:40:19.322135+00:00",
+      "completed_at": "2026-08-04T06:40:19.378507+00:00",
+      "row_count": 24,
+      "duplicate_natural_keys": [],
+      "metrics": {
+        "capex": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 1062000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-21-047772",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": "C_0001341439_20210601_20210831",
+              "availability_date": "2021-09-13",
+              "period_end": "2021-08-31"
+            },
+            "Q2": {
+              "value": 925000000.0,
+              "extraction_basis": "DERIVED_FROM_YTD",
+              "accession_number": "0001564590-21-060022",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": null,
+              "availability_date": "2021-12-10",
+              "period_end": "2021-11-30"
+            },
+            "Q3": {
+              "value": 1101000000.0,
+              "extraction_basis": "DERIVED_FROM_YTD",
+              "accession_number": "0001564590-22-009859",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": null,
+              "availability_date": "2022-03-11",
+              "period_end": "2022-02-28"
+            },
+            "Q4": {
+              "value": 1423000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001564590-22-023675",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": "C_0001341439_20210601_20220228",
+              "availability_date": "2022-06-21",
+              "period_end": "2022-05-31"
+            }
+          }
+        },
+        "income_tax_expense": {
+          "reconciliation_status": "PASS_ROUNDING_TOLERANCE",
+          "reconciliation_difference": -1000000.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 224000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-21-047772",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_0001341439_20210601_20210831",
+              "availability_date": "2021-09-13",
+              "period_end": "2021-08-31"
+            },
+            "Q2": {
+              "value": -249000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-21-060022",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_0001341439_20210901_20211130",
+              "availability_date": "2021-12-10",
+              "period_end": "2021-11-30"
+            },
+            "Q3": {
+              "value": 521000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-009859",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_0001341439_20211201_20220228",
+              "availability_date": "2022-03-11",
+              "period_end": "2022-02-28"
+            },
+            "Q4": {
+              "value": 435000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001564590-22-023675",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_0001341439_20210601_20220228",
+              "availability_date": "2022-06-21",
+              "period_end": "2022-05-31"
+            }
+          }
+        },
+        "operating_cash_flow": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 5391000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-21-047772",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "C_0001341439_20210601_20210831",
+              "availability_date": "2021-09-13",
+              "period_end": "2021-08-31"
+            },
+            "Q2": {
+              "value": -3682000000.0,
+              "extraction_basis": "DERIVED_FROM_YTD",
+              "accession_number": "0001564590-21-060022",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": null,
+              "availability_date": "2021-12-10",
+              "period_end": "2021-11-30"
+            },
+            "Q3": {
+              "value": 3845000000.0,
+              "extraction_basis": "DERIVED_FROM_YTD",
+              "accession_number": "0001564590-22-009859",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": null,
+              "availability_date": "2022-03-11",
+              "period_end": "2022-02-28"
+            },
+            "Q4": {
+              "value": 3985000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001564590-22-023675",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "C_0001341439_20210601_20220228",
+              "availability_date": "2022-06-21",
+              "period_end": "2022-05-31"
+            }
+          }
+        },
+        "operating_income": {
+          "reconciliation_status": "PASS_ROUNDING_TOLERANCE",
+          "reconciliation_difference": 1000000.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 3427000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-21-047772",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_0001341439_20210601_20210831",
+              "availability_date": "2021-09-13",
+              "period_end": "2021-08-31"
+            },
+            "Q2": {
+              "value": -824000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-21-060022",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_0001341439_20210901_20211130",
+              "availability_date": "2021-12-10",
+              "period_end": "2021-11-30"
+            },
+            "Q3": {
+              "value": 3822000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-009859",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_0001341439_20211201_20220228",
+              "availability_date": "2022-03-11",
+              "period_end": "2022-02-28"
+            },
+            "Q4": {
+              "value": 4502000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001564590-22-023675",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_0001341439_20210601_20220228",
+              "availability_date": "2022-06-21",
+              "period_end": "2022-05-31"
+            }
+          }
+        },
+        "pretax_income": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 2681000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-21-047772",
+              "concept_qname": "orcl:IncomeLossFromContinuingOperationsIncludingNoncontrollingInterestBeforeIncomeTaxesExtraordinaryItems",
+              "context_id": "C_0001341439_20210601_20210831",
+              "availability_date": "2021-09-13",
+              "period_end": "2021-08-31"
+            },
+            "Q2": {
+              "value": -1496000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-21-060022",
+              "concept_qname": "orcl:IncomeLossFromContinuingOperationsIncludingNoncontrollingInterestBeforeIncomeTaxesExtraordinaryItems",
+              "context_id": "C_0001341439_20210901_20211130",
+              "availability_date": "2021-12-10",
+              "period_end": "2021-11-30"
+            },
+            "Q3": {
+              "value": 2840000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-009859",
+              "concept_qname": "orcl:IncomeLossFromContinuingOperationsIncludingNoncontrollingInterestBeforeIncomeTaxesExtraordinaryItems",
+              "context_id": "C_0001341439_20211201_20220228",
+              "availability_date": "2022-03-11",
+              "period_end": "2022-02-28"
+            },
+            "Q4": {
+              "value": 3624000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001564590-22-023675",
+              "concept_qname": "orcl:IncomeLossFromContinuingOperationsIncludingNoncontrollingInterestBeforeIncomeTaxesExtraordinaryItems",
+              "context_id": "C_0001341439_20210601_20220228",
+              "availability_date": "2022-06-21",
+              "period_end": "2022-05-31"
+            }
+          }
+        },
+        "revenue": {
+          "reconciliation_status": "PASS_ROUNDING_TOLERANCE",
+          "reconciliation_difference": 1000000.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 9728000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-21-047772",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_0001341439_20210601_20210831",
+              "availability_date": "2021-09-13",
+              "period_end": "2021-08-31"
+            },
+            "Q2": {
+              "value": 10360000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-21-060022",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_0001341439_20210901_20211130",
+              "availability_date": "2021-12-10",
+              "period_end": "2021-11-30"
+            },
+            "Q3": {
+              "value": 10513000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-009859",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_0001341439_20211201_20220228",
+              "availability_date": "2022-03-11",
+              "period_end": "2022-02-28"
+            },
+            "Q4": {
+              "value": 11840000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0001564590-22-023675",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_0001341439_20210601_20220228",
+              "availability_date": "2022-06-21",
+              "period_end": "2022-05-31"
+            }
+          }
+        }
+      }
+    },
+    {
+      "ticker": "ORCL",
+      "fiscal_year_end": "2023-05-31",
+      "status": "COMPLETE",
+      "run_id": "5e8eec45-4efa-4149-bb45-78c6315492e1",
+      "engine_version": "118_quarterly_extraction_engine_v1",
+      "schema_version": "quarterly_v1",
+      "q1_accession": "0001564590-22-031545",
+      "q2_accession": "0001564590-22-039278",
+      "q3_accession": "0001564590-23-003413",
+      "fy_accession": "0000950170-23-028914",
+      "source_json_path": "C:\\AI_Stock_Agent\\data\\quarterly_engine_orcl_fy2023.json",
+      "run_status": "PASS",
+      "created_at": "2026-08-04T06:40:42.290231+00:00",
+      "completed_at": "2026-08-04T06:40:42.327184+00:00",
+      "row_count": 24,
+      "duplicate_natural_keys": [],
+      "metrics": {
+        "capex": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 1719000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-031545",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": "C_0001341439_20220601_20220831",
+              "availability_date": "2022-09-13",
+              "period_end": "2022-08-31"
+            },
+            "Q2": {
+              "value": 2435000000.0,
+              "extraction_basis": "DERIVED_FROM_YTD",
+              "accession_number": "0001564590-22-039278",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": null,
+              "availability_date": "2022-12-13",
+              "period_end": "2022-11-30"
+            },
+            "Q3": {
+              "value": 2628000000.0,
+              "extraction_basis": "DERIVED_FROM_YTD",
+              "accession_number": "0001564590-23-003413",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": null,
+              "availability_date": "2023-03-10",
+              "period_end": "2023-02-28"
+            },
+            "Q4": {
+              "value": 1913000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-23-028914",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": "C_0001341439_20220601_20230228",
+              "availability_date": "2023-06-20",
+              "period_end": "2023-05-31"
+            }
+          }
+        },
+        "income_tax_expense": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 108000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-031545",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_0001341439_20220601_20220831",
+              "availability_date": "2022-09-13",
+              "period_end": "2022-08-31"
+            },
+            "Q2": {
+              "value": 403000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-039278",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_0001341439_20220901_20221130",
+              "availability_date": "2022-12-13",
+              "period_end": "2022-11-30"
+            },
+            "Q3": {
+              "value": 322000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-23-003413",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_0001341439_20221201_20230228",
+              "availability_date": "2023-03-10",
+              "period_end": "2023-02-28"
+            },
+            "Q4": {
+              "value": -210000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-23-028914",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_0001341439_20220601_20230228",
+              "availability_date": "2023-06-20",
+              "period_end": "2023-05-31"
+            }
+          }
+        },
+        "operating_cash_flow": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 6394000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-031545",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "C_0001341439_20220601_20220831",
+              "availability_date": "2022-09-13",
+              "period_end": "2022-08-31"
+            },
+            "Q2": {
+              "value": 849000000.0,
+              "extraction_basis": "DERIVED_FROM_YTD",
+              "accession_number": "0001564590-22-039278",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": null,
+              "availability_date": "2022-12-13",
+              "period_end": "2022-11-30"
+            },
+            "Q3": {
+              "value": 4275000000.0,
+              "extraction_basis": "DERIVED_FROM_YTD",
+              "accession_number": "0001564590-23-003413",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": null,
+              "availability_date": "2023-03-10",
+              "period_end": "2023-02-28"
+            },
+            "Q4": {
+              "value": 5647000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-23-028914",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "C_0001341439_20220601_20230228",
+              "availability_date": "2023-06-20",
+              "period_end": "2023-05-31"
+            }
+          }
+        },
+        "operating_income": {
+          "reconciliation_status": "PASS_ROUNDING_TOLERANCE",
+          "reconciliation_difference": 1000000.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 2623000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-031545",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_0001341439_20220601_20220831",
+              "availability_date": "2022-09-13",
+              "period_end": "2022-08-31"
+            },
+            "Q2": {
+              "value": 3071000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-039278",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_0001341439_20220901_20221130",
+              "availability_date": "2022-12-13",
+              "period_end": "2022-11-30"
+            },
+            "Q3": {
+              "value": 3260000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-23-003413",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_0001341439_20221201_20230228",
+              "availability_date": "2023-03-10",
+              "period_end": "2023-02-28"
+            },
+            "Q4": {
+              "value": 4140000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-23-028914",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_0001341439_20220601_20230228",
+              "availability_date": "2023-06-20",
+              "period_end": "2023-05-31"
+            }
+          }
+        },
+        "pretax_income": {
+          "reconciliation_status": "PASS_ROUNDING_TOLERANCE",
+          "reconciliation_difference": 1000000.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 1656000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-031545",
+              "concept_qname": "orcl:IncomeLossFromContinuingOperationsIncludingNoncontrollingInterestBeforeIncomeTaxesExtraordinaryItems",
+              "context_id": "C_0001341439_20220601_20220831",
+              "availability_date": "2022-09-13",
+              "period_end": "2022-08-31"
+            },
+            "Q2": {
+              "value": 2144000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-039278",
+              "concept_qname": "orcl:IncomeLossFromContinuingOperationsIncludingNoncontrollingInterestBeforeIncomeTaxesExtraordinaryItems",
+              "context_id": "C_0001341439_20220901_20221130",
+              "availability_date": "2022-12-13",
+              "period_end": "2022-11-30"
+            },
+            "Q3": {
+              "value": 2218000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-23-003413",
+              "concept_qname": "orcl:IncomeLossFromContinuingOperationsIncludingNoncontrollingInterestBeforeIncomeTaxesExtraordinaryItems",
+              "context_id": "C_0001341439_20221201_20230228",
+              "availability_date": "2023-03-10",
+              "period_end": "2023-02-28"
+            },
+            "Q4": {
+              "value": 3109000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-23-028914",
+              "concept_qname": "orcl:IncomeLossFromContinuingOperationsIncludingNoncontrollingInterestBeforeIncomeTaxesExtraordinaryItems",
+              "context_id": "C_0001341439_20220601_20230228",
+              "availability_date": "2023-06-20",
+              "period_end": "2023-05-31"
+            }
+          }
+        },
+        "revenue": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 11445000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-031545",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_0001341439_20220601_20220831",
+              "availability_date": "2022-09-13",
+              "period_end": "2022-08-31"
+            },
+            "Q2": {
+              "value": 12275000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-22-039278",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_0001341439_20220901_20221130",
+              "availability_date": "2022-12-13",
+              "period_end": "2022-11-30"
+            },
+            "Q3": {
+              "value": 12398000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0001564590-23-003413",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_0001341439_20221201_20230228",
+              "availability_date": "2023-03-10",
+              "period_end": "2023-02-28"
+            },
+            "Q4": {
+              "value": 13836000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-23-028914",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_0001341439_20220601_20230228",
+              "availability_date": "2023-06-20",
+              "period_end": "2023-05-31"
+            }
+          }
+        }
+      }
+    },
+    {
+      "ticker": "ORCL",
+      "fiscal_year_end": "2024-05-31",
+      "status": "COMPLETE",
+      "run_id": "56e4d43e-9ee3-4e82-8537-92d5b835632b",
+      "engine_version": "118_quarterly_extraction_engine_v1",
+      "schema_version": "quarterly_v1",
+      "q1_accession": "0000950170-23-047713",
+      "q2_accession": "0000950170-23-069682",
+      "q3_accession": "0000950170-24-029904",
+      "fy_accession": "0000950170-24-075605",
+      "source_json_path": "C:\\AI_Stock_Agent\\data\\quarterly_engine_orcl_fy2024.json",
+      "run_status": "PASS",
+      "created_at": "2026-08-04T05:49:56.690003+00:00",
+      "completed_at": "2026-08-04T05:49:56.712053+00:00",
+      "row_count": 24,
+      "duplicate_natural_keys": [],
+      "metrics": {
+        "capex": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 1314000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-047713",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": "C_ebd51344-8d4c-4ad3-a42f-ad896f666fe3",
+              "availability_date": "2023-09-12",
+              "period_end": "2023-08-31"
+            },
+            "Q2": {
+              "value": 1080000000.0,
+              "extraction_basis": "DERIVED_FROM_YTD",
+              "accession_number": "0000950170-23-069682",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": null,
+              "availability_date": "2023-12-12",
+              "period_end": "2023-11-30"
+            },
+            "Q3": {
+              "value": 1674000000.0,
+              "extraction_basis": "DERIVED_FROM_YTD",
+              "accession_number": "0000950170-24-029904",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": null,
+              "availability_date": "2024-03-12",
+              "period_end": "2024-02-29"
+            },
+            "Q4": {
+              "value": 2798000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-24-075605",
+              "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+              "context_id": "C_bd71b5ea-ba15-4ab1-baef-004d9a4c1dc5",
+              "availability_date": "2024-06-20",
+              "period_end": "2024-05-31"
+            }
+          }
+        },
+        "income_tax_expense": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": -45000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-047713",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_ebd51344-8d4c-4ad3-a42f-ad896f666fe3",
+              "availability_date": "2023-09-12",
+              "period_end": "2023-08-31"
+            },
+            "Q2": {
+              "value": 217000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-069682",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_9c2197f2-29d2-4e15-971f-13f393f48bf1",
+              "availability_date": "2023-12-12",
+              "period_end": "2023-11-30"
+            },
+            "Q3": {
+              "value": 464000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-24-029904",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_2d53ca18-b7da-476f-9212-00cd9b479736",
+              "availability_date": "2024-03-12",
+              "period_end": "2024-02-29"
+            },
+            "Q4": {
+              "value": 638000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-24-075605",
+              "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+              "context_id": "C_bd71b5ea-ba15-4ab1-baef-004d9a4c1dc5",
+              "availability_date": "2024-06-20",
+              "period_end": "2024-05-31"
+            }
+          }
+        },
+        "operating_cash_flow": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 6974000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-047713",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "C_ebd51344-8d4c-4ad3-a42f-ad896f666fe3",
+              "availability_date": "2023-09-12",
+              "period_end": "2023-08-31"
+            },
+            "Q2": {
+              "value": 143000000.0,
+              "extraction_basis": "DERIVED_FROM_YTD",
+              "accession_number": "0000950170-23-069682",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": null,
+              "availability_date": "2023-12-12",
+              "period_end": "2023-11-30"
+            },
+            "Q3": {
+              "value": 5475000000.0,
+              "extraction_basis": "DERIVED_FROM_YTD",
+              "accession_number": "0000950170-24-029904",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": null,
+              "availability_date": "2024-03-12",
+              "period_end": "2024-02-29"
+            },
+            "Q4": {
+              "value": 6081000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-24-075605",
+              "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+              "context_id": "C_bd71b5ea-ba15-4ab1-baef-004d9a4c1dc5",
+              "availability_date": "2024-06-20",
+              "period_end": "2024-05-31"
+            }
+          }
+        },
+        "operating_income": {
+          "reconciliation_status": "PASS_ROUNDING_TOLERANCE",
+          "reconciliation_difference": 1000000.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 3296000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-047713",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_ebd51344-8d4c-4ad3-a42f-ad896f666fe3",
+              "availability_date": "2023-09-12",
+              "period_end": "2023-08-31"
+            },
+            "Q2": {
+              "value": 3622000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-069682",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_9c2197f2-29d2-4e15-971f-13f393f48bf1",
+              "availability_date": "2023-12-12",
+              "period_end": "2023-11-30"
+            },
+            "Q3": {
+              "value": 3750000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-24-029904",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_2d53ca18-b7da-476f-9212-00cd9b479736",
+              "availability_date": "2024-03-12",
+              "period_end": "2024-02-29"
+            },
+            "Q4": {
+              "value": 4686000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-24-075605",
+              "concept_qname": "us-gaap:OperatingIncomeLoss",
+              "context_id": "C_bd71b5ea-ba15-4ab1-baef-004d9a4c1dc5",
+              "availability_date": "2024-06-20",
+              "period_end": "2024-05-31"
+            }
+          }
+        },
+        "pretax_income": {
+          "reconciliation_status": "PASS_ROUNDING_TOLERANCE",
+          "reconciliation_difference": 1000000.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 2375000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-047713",
+              "concept_qname": "orcl:IncomeLossFromContinuingOperationsIncludingNoncontrollingInterestBeforeIncomeTaxesExtraordinaryItems",
+              "context_id": "C_ebd51344-8d4c-4ad3-a42f-ad896f666fe3",
+              "availability_date": "2023-09-12",
+              "period_end": "2023-08-31"
+            },
+            "Q2": {
+              "value": 2720000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-069682",
+              "concept_qname": "orcl:IncomeLossFromContinuingOperationsIncludingNoncontrollingInterestBeforeIncomeTaxesExtraordinaryItems",
+              "context_id": "C_9c2197f2-29d2-4e15-971f-13f393f48bf1",
+              "availability_date": "2023-12-12",
+              "period_end": "2023-11-30"
+            },
+            "Q3": {
+              "value": 2865000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-24-029904",
+              "concept_qname": "orcl:IncomeLossFromContinuingOperationsIncludingNoncontrollingInterestBeforeIncomeTaxesExtraordinaryItems",
+              "context_id": "C_2d53ca18-b7da-476f-9212-00cd9b479736",
+              "availability_date": "2024-03-12",
+              "period_end": "2024-02-29"
+            },
+            "Q4": {
+              "value": 3782000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-24-075605",
+              "concept_qname": "orcl:IncomeLossFromContinuingOperationsIncludingNoncontrollingInterestBeforeIncomeTaxesExtraordinaryItems",
+              "context_id": "C_bd71b5ea-ba15-4ab1-baef-004d9a4c1dc5",
+              "availability_date": "2024-06-20",
+              "period_end": "2024-05-31"
+            }
+          }
+        },
+        "revenue": {
+          "reconciliation_status": "PASS",
+          "reconciliation_difference": 0.0,
+          "permitted_difference": 2000000.0,
+          "quarters": {
+            "Q1": {
+              "value": 12453000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-047713",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_ebd51344-8d4c-4ad3-a42f-ad896f666fe3",
+              "availability_date": "2023-09-12",
+              "period_end": "2023-08-31"
+            },
+            "Q2": {
+              "value": 12941000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-23-069682",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_9c2197f2-29d2-4e15-971f-13f393f48bf1",
+              "availability_date": "2023-12-12",
+              "period_end": "2023-11-30"
+            },
+            "Q3": {
+              "value": 13280000000.0,
+              "extraction_basis": "DIRECT_QUARTER",
+              "accession_number": "0000950170-24-029904",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_2d53ca18-b7da-476f-9212-00cd9b479736",
+              "availability_date": "2024-03-12",
+              "period_end": "2024-02-29"
+            },
+            "Q4": {
+              "value": 14287000000.0,
+              "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+              "accession_number": "0000950170-24-075605",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "context_id": "C_bd71b5ea-ba15-4ab1-baef-004d9a4c1dc5",
+              "availability_date": "2024-06-20",
+              "period_end": "2024-05-31"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "total_extraction_runs": 9,
+  "total_quarterly_metric_results": 216,
+  "extraction_basis_counts": {
+    "DIRECT_QUARTER": 150,
+    "DERIVED_FROM_YTD": 12,
+    "DERIVED_Q4_FROM_10K_MINUS_9M": 54
+  },
+  "reconciliation_status_counts_metric_year": {
+    "PASS": 47,
+    "PASS_ROUNDING_TOLERANCE": 7
+  },
+  "duplicate_natural_keys": [],
+  "null_field_check": {
+    "null_value": 0,
+    "null_accession_number": 0,
+    "null_concept_qname": 0,
+    "null_lineage_json": 0,
+    "null_context_id_legitimate_ytd_only": 12
+  },
+  "availability_date_mismatches": 0,
+  "review_required_cases": [],
+  "annual_v1_checksum_unchanged": true,
+  "annual_v1_checksum": "e655671e36298ce2297b8c86077a8f0559998b81245d1850004da36858e9f814",
+  "annual_financial_metric_results_status_breakdown": {
+    "PASS": 1209,
+    "REVIEW_REQUIRED": 557,
+    "PASS_MATURITY_BASIS": 58,
+    "PASS_DIRECT_AGGREGATE": 25,
+    "PASS_NORMALIZED_TAX": 33
+  },
+  "sec_filings_form_counts": {
+    "10-K": 50,
+    "10-Q": 27
+  },
+  "production_db_tables": [
+    "companies",
+    "extraction_runs",
+    "financial_metric_results",
+    "historical_review_items",
+    "quarterly_extraction_runs",
+    "quarterly_metric_results",
+    "sec_filings"
+  ],
+  "batch_runner_script": "scripts/121_quarterly_batch_runner.py"
+}

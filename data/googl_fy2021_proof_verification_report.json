@@ -1,0 +1,333 @@
+{
+  "backup": {
+    "path": "C:\\AI_Stock_Agent\\data\\database\\backups\\ai_stock_agent_pre_quarterly_nullable_fix_20260804T152035Z.duckdb",
+    "exists": true,
+    "checksum_now": "ed1a06f7ff78a73b55dc07efe20f10b6561d75a952e89f0c4f59fd3161dc501c",
+    "checksum_recorded": "ed1a06f7ff78a73b55dc07efe20f10b6561d75a952e89f0c4f59fd3161dc501c",
+    "checksums_match": true,
+    "pre_migration_counts": {
+      "financial_metric_results": 900,
+      "quarterly_extraction_runs": 18,
+      "quarterly_metric_results": 432
+    }
+  },
+  "schema": {
+    "before": "concept_qname/reconciliation_difference/permitted_difference were NOT NULL",
+    "after": {
+      "concept_qname": null,
+      "reconciliation_difference": null,
+      "permitted_difference": null
+    }
+  },
+  "googl_fy2021": {
+    "run": {
+      "run_id": "bdef3475-38d5-4497-919f-8b92014b184c",
+      "run_status": "PASS_WITH_REVIEW_REQUIRED",
+      "q1_accession": "0001652044-21-000020",
+      "q2_accession": "0001652044-21-000047",
+      "q3_accession": "0001652044-21-000057",
+      "fy_accession": "0001652044-22-000019",
+      "created_at": "2026-08-04T15:23:02.967751+00:00",
+      "completed_at": "2026-08-04T15:23:03.022500+00:00"
+    },
+    "row_count": 24,
+    "reconciliation_status_counts": {
+      "PASS": 12,
+      "REVIEW_REQUIRED": 12
+    },
+    "review_required_details": [
+      {
+        "metric_name": "capex",
+        "fiscal_quarter": "Q1",
+        "value": 5942000000.0,
+        "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+        "reason": null
+      },
+      {
+        "metric_name": "capex",
+        "fiscal_quarter": "Q2",
+        "value": NaN,
+        "concept_qname": NaN,
+        "reason": "Q2: neither a direct quarter value nor a 6-month YTD value resolved deterministically"
+      },
+      {
+        "metric_name": "capex",
+        "fiscal_quarter": "Q3",
+        "value": NaN,
+        "concept_qname": NaN,
+        "reason": "Q2: neither a direct quarter value nor a 6-month YTD value resolved deterministically"
+      },
+      {
+        "metric_name": "capex",
+        "fiscal_quarter": "Q4",
+        "value": NaN,
+        "concept_qname": NaN,
+        "reason": "Q2: neither a direct quarter value nor a 6-month YTD value resolved deterministically"
+      },
+      {
+        "metric_name": "operating_cash_flow",
+        "fiscal_quarter": "Q1",
+        "value": 19289000000.0,
+        "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+        "reason": null
+      },
+      {
+        "metric_name": "operating_cash_flow",
+        "fiscal_quarter": "Q2",
+        "value": NaN,
+        "concept_qname": NaN,
+        "reason": "Q2: neither a direct quarter value nor a 6-month YTD value resolved deterministically"
+      },
+      {
+        "metric_name": "operating_cash_flow",
+        "fiscal_quarter": "Q3",
+        "value": NaN,
+        "concept_qname": NaN,
+        "reason": "Q2: neither a direct quarter value nor a 6-month YTD value resolved deterministically"
+      },
+      {
+        "metric_name": "operating_cash_flow",
+        "fiscal_quarter": "Q4",
+        "value": NaN,
+        "concept_qname": NaN,
+        "reason": "Q2: neither a direct quarter value nor a 6-month YTD value resolved deterministically"
+      },
+      {
+        "metric_name": "pretax_income",
+        "fiscal_quarter": "Q1",
+        "value": NaN,
+        "concept_qname": NaN,
+        "reason": "FY: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+      },
+      {
+        "metric_name": "pretax_income",
+        "fiscal_quarter": "Q2",
+        "value": NaN,
+        "concept_qname": NaN,
+        "reason": "FY: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+      },
+      {
+        "metric_name": "pretax_income",
+        "fiscal_quarter": "Q3",
+        "value": NaN,
+        "concept_qname": NaN,
+        "reason": "FY: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+      },
+      {
+        "metric_name": "pretax_income",
+        "fiscal_quarter": "Q4",
+        "value": NaN,
+        "concept_qname": NaN,
+        "reason": "FY: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+      }
+    ],
+    "null_counts": {
+      "concept_qname": 10,
+      "reconciliation_difference": 12,
+      "permitted_difference": 12
+    },
+    "every_null_has_documented_reason": true,
+    "duplicate_keys": 0,
+    "missing_lineage": 0,
+    "availability_date_mismatches": 0
+  },
+  "overall_current_state": {
+    "quarterly_extraction_runs": 38,
+    "quarterly_metric_results": 912,
+    "financial_metric_results": 900,
+    "duplicate_natural_keys": [],
+    "annual_v1_checksum_unchanged": true,
+    "committed_company_years": [
+      {
+        "ticker": "AMZN",
+        "fiscal_year_end": "2021-12-31",
+        "status": "PASS"
+      },
+      {
+        "ticker": "AMZN",
+        "fiscal_year_end": "2022-12-31",
+        "status": "PASS"
+      },
+      {
+        "ticker": "AMZN",
+        "fiscal_year_end": "2023-12-31",
+        "status": "PASS"
+      },
+      {
+        "ticker": "AMZN",
+        "fiscal_year_end": "2024-12-31",
+        "status": "PASS"
+      },
+      {
+        "ticker": "AMZN",
+        "fiscal_year_end": "2025-12-31",
+        "status": "PASS"
+      },
+      {
+        "ticker": "CRWD",
+        "fiscal_year_end": "2023-01-31",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "CRWD",
+        "fiscal_year_end": "2024-01-31",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "CRWD",
+        "fiscal_year_end": "2025-01-31",
+        "status": "PASS"
+      },
+      {
+        "ticker": "CRWD",
+        "fiscal_year_end": "2026-01-31",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "GOOGL",
+        "fiscal_year_end": "2021-12-31",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "GOOGL",
+        "fiscal_year_end": "2022-12-31",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "GOOGL",
+        "fiscal_year_end": "2023-12-31",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "GOOGL",
+        "fiscal_year_end": "2024-12-31",
+        "status": "PASS"
+      },
+      {
+        "ticker": "GOOGL",
+        "fiscal_year_end": "2025-12-31",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "META",
+        "fiscal_year_end": "2020-12-31",
+        "status": "PASS"
+      },
+      {
+        "ticker": "META",
+        "fiscal_year_end": "2021-12-31",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "META",
+        "fiscal_year_end": "2022-12-31",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "META",
+        "fiscal_year_end": "2023-12-31",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "META",
+        "fiscal_year_end": "2024-12-31",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "MSFT",
+        "fiscal_year_end": "2020-06-30",
+        "status": "PASS"
+      },
+      {
+        "ticker": "MSFT",
+        "fiscal_year_end": "2021-06-30",
+        "status": "PASS"
+      },
+      {
+        "ticker": "MSFT",
+        "fiscal_year_end": "2022-06-30",
+        "status": "PASS"
+      },
+      {
+        "ticker": "MSFT",
+        "fiscal_year_end": "2023-06-30",
+        "status": "PASS"
+      },
+      {
+        "ticker": "MSFT",
+        "fiscal_year_end": "2024-06-30",
+        "status": "PASS"
+      },
+      {
+        "ticker": "MU",
+        "fiscal_year_end": "2021-09-02",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "MU",
+        "fiscal_year_end": "2022-09-01",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "MU",
+        "fiscal_year_end": "2023-08-31",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "MU",
+        "fiscal_year_end": "2024-08-29",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "MU",
+        "fiscal_year_end": "2025-08-28",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "NVDA",
+        "fiscal_year_end": "2020-01-26",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "NVDA",
+        "fiscal_year_end": "2021-01-31",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "NVDA",
+        "fiscal_year_end": "2022-01-30",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "NVDA",
+        "fiscal_year_end": "2023-01-29",
+        "status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      {
+        "ticker": "ORCL",
+        "fiscal_year_end": "2020-05-31",
+        "status": "PASS"
+      },
+      {
+        "ticker": "ORCL",
+        "fiscal_year_end": "2021-05-31",
+        "status": "PASS"
+      },
+      {
+        "ticker": "ORCL",
+        "fiscal_year_end": "2022-05-31",
+        "status": "PASS"
+      },
+      {
+        "ticker": "ORCL",
+        "fiscal_year_end": "2023-05-31",
+        "status": "PASS"
+      },
+      {
+        "ticker": "ORCL",
+        "fiscal_year_end": "2024-05-31",
+        "status": "PASS"
+      }
+    ]
+  }
+}

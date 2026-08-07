@@ -1,0 +1,52 @@
+{
+  "task_id": "TASK_147_STANDARD_GAAP_CONCEPT_FALLBACK_PROOF",
+  "status": "PASS",
+  "started_at": "2026-08-05T18:27:05.180Z",
+  "completed_at": "2026-08-06T03:15:40.666Z",
+  "elapsed_seconds": 31715.486,
+  "mandatory_outputs": [
+    "c:\\AI_Stock_Agent\\scripts\\148_quarterly_engine_v5_standard_gaap_fallback.py",
+    "c:\\AI_Stock_Agent\\scripts\\149_standard_gaap_fallback_validation.py",
+    "c:\\AI_Stock_Agent\\data\\standard_gaap_fallback_validation.json",
+    "c:\\AI_Stock_Agent\\data\\standard_gaap_fallback_validation.csv",
+    "c:\\AI_Stock_Agent\\docs\\STANDARD_GAAP_FALLBACK_VALIDATION.md"
+  ],
+  "outputs": {
+    "c:\\AI_Stock_Agent\\scripts\\148_quarterly_engine_v5_standard_gaap_fallback.py": {
+      "sha256": "ed0c10f133c55c0b8595cdeee21cd94783f6a6f08e3f0b59e8f53bede8659da9",
+      "size_bytes": 48063,
+      "modified_at_utc": "2026-08-05T19:11:27.564Z"
+    },
+    "c:\\AI_Stock_Agent\\scripts\\149_standard_gaap_fallback_validation.py": {
+      "sha256": "629f16edac407479270436004ff542f574584e0afcb0fc858acdce86eaf727e2",
+      "size_bytes": 27720,
+      "modified_at_utc": "2026-08-05T19:15:11.259Z"
+    },
+    "c:\\AI_Stock_Agent\\data\\standard_gaap_fallback_validation.json": {
+      "sha256": "af4fbf250106ae22204713bf0f1b83e1f89d9344dde0b49fc4f4a669b204f186",
+      "size_bytes": 59927,
+      "modified_at_utc": "2026-08-06T03:13:46.486Z"
+    },
+    "c:\\AI_Stock_Agent\\data\\standard_gaap_fallback_validation.csv": {
+      "sha256": "3eb1b99f0d70d828168ce88736ed8a2a17f4a61a7a992a1938c0eea8c9e83ac3",
+      "size_bytes": 11347,
+      "modified_at_utc": "2026-08-06T03:13:46.499Z"
+    },
+    "c:\\AI_Stock_Agent\\docs\\STANDARD_GAAP_FALLBACK_VALIDATION.md": {
+      "sha256": "df0d74adb928686164b2210fb243d618c422ddc511293ff3187474b4a22402fb",
+      "size_bytes": 13763,
+      "modified_at_utc": "2026-08-06T03:15:22.983Z"
+    }
+  },
+  "output_problems": [],
+  "utility_version": "142_task_marker_guard-1.0.0",
+  "proof_status": "PASS",
+  "resolved_count": 4,
+  "family_counts": {
+    "pretax_income": 3,
+    "revenue": 1
+  },
+  "controls_all_identical": true,
+  "all_safety_checks_passed": true,
+  "databases_unchanged": true
+}

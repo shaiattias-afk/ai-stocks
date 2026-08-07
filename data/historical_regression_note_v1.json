@@ -1,0 +1,69 @@
+{
+  "method": "קבצי שנת העוגן לא הורצו מחדש בסבב ההיסטורי הזה (רק 4 השנים הנוספות לכל חברה הורצו) — מאומת לפי חותמות הזמן של הקבצים, שקודמות לזמן הרצת הסבב הזה. משמעות הדבר: אין סיכון לרגרסיה מהקוד של הסבב הזה על שנות העוגן, כי הקובץ לא נגע בו כלל. הבדיקה כאן מאמתת שלמות (JSON תקין, זהות ticker/report_date נכונה, אין FAIL/TIMEOUT) ולא משווה ערכים כי אין מול מה להשוות — זהו אותו קובץ בדיוק.",
+  "anchors": [
+    {
+      "ticker": "ORCL",
+      "report_date": "2024-05-31",
+      "identity_confirmed": true,
+      "all_pass": true,
+      "any_fail_or_timeout": false
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2024-06-30",
+      "identity_confirmed": true,
+      "all_pass": true,
+      "any_fail_or_timeout": false
+    },
+    {
+      "ticker": "META",
+      "report_date": "2024-12-31",
+      "identity_confirmed": true,
+      "all_pass": false,
+      "any_fail_or_timeout": false
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2024-01-28",
+      "identity_confirmed": true,
+      "all_pass": true,
+      "any_fail_or_timeout": false
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2025-12-31",
+      "identity_confirmed": true,
+      "all_pass": false,
+      "any_fail_or_timeout": false
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2025-12-31",
+      "identity_confirmed": true,
+      "all_pass": false,
+      "any_fail_or_timeout": false
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2025-08-28",
+      "identity_confirmed": true,
+      "all_pass": true,
+      "any_fail_or_timeout": false
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2026-01-31",
+      "identity_confirmed": true,
+      "all_pass": false,
+      "any_fail_or_timeout": false
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2025-07-31",
+      "identity_confirmed": true,
+      "all_pass": false,
+      "any_fail_or_timeout": false
+    }
+  ],
+  "all_anchors_intact": true
+}

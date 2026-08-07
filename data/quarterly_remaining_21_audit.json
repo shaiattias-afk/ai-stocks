@@ -1,0 +1,2493 @@
+{
+  "status": "PASS",
+  "summary": {
+    "total_unique_cases": 21,
+    "by_ticker": {
+      "CRWD": 2,
+      "META": 3,
+      "MU": 3,
+      "NVDA": 6,
+      "PANW": 7
+    },
+    "by_metric": {
+      "pretax_income": 8,
+      "revenue": 9,
+      "capex": 1,
+      "income_tax_expense": 1,
+      "operating_cash_flow": 1,
+      "operating_income": 1
+    },
+    "by_root_cause_category": {
+      "CONCEPT_REUSE_CANDIDATE": 15,
+      "TRUE_SOURCE_DATA_ABSENCE": 6
+    },
+    "by_resolution_type": {
+      "GENERAL_RULE_FIX": 15,
+      "TRUE_SOURCE_DATA_ABSENCE": 6
+    },
+    "crwd_pretax_income_case_count": 2,
+    "revenue_case_count": 9,
+    "nvda_case_count": 6,
+    "concept_reuse_candidate_cases": [
+      "CRWD 2022-01-31 pretax_income",
+      "CRWD 2023-01-31 pretax_income",
+      "META 2022-12-31 revenue",
+      "META 2023-12-31 revenue",
+      "META 2024-12-31 revenue",
+      "MU 2021-09-02 pretax_income",
+      "MU 2022-09-01 pretax_income",
+      "MU 2023-08-31 pretax_income",
+      "PANW 2021-07-31 pretax_income",
+      "PANW 2021-07-31 revenue",
+      "PANW 2022-07-31 pretax_income",
+      "PANW 2022-07-31 revenue",
+      "PANW 2023-07-31 revenue",
+      "PANW 2024-07-31 revenue",
+      "PANW 2025-07-31 revenue"
+    ],
+    "single_standard_concept_cases": [],
+    "false_keyword_ambiguity_cases": [],
+    "multiple_genuine_candidate_cases": [],
+    "true_source_data_absence_cases": [
+      "NVDA 2020-01-26 capex",
+      "NVDA 2020-01-26 income_tax_expense",
+      "NVDA 2020-01-26 operating_cash_flow",
+      "NVDA 2020-01-26 operating_income",
+      "NVDA 2020-01-26 pretax_income",
+      "NVDA 2020-01-26 revenue"
+    ]
+  },
+  "cases": [
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2022-01-31",
+      "metric_name": "pretax_income",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0001535527-21-000013",
+      "annual_10k_accession": "0001535527-22-000006",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "PLAUSIBLE_FACT_STANDARD_CONCEPT",
+        "candidate_concepts": [
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+        ],
+        "has_dimensioned_candidates": false,
+        "facts_at_expected_period_end": [
+          {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+            "period_start": "2021-02-01",
+            "period_end": "2021-04-30",
+            "value_numeric": -32809000.0,
+            "decimals": "-3",
+            "context_id": "ied4d9fb6af6b44efa150d8d8031501dd_D20210201-20210430",
+            "duration_days": 88,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          }
+        ],
+        "distinct_matching_values_count": 1
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": "annual production result (status=PASS)"
+        },
+        "reusable_concept_found": true,
+        "reusable_concepts_present_in_blocking_accession": [
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+        ]
+      },
+      "root_cause_category": "CONCEPT_REUSE_CANDIDATE",
+      "resolution_type": "GENERAL_RULE_FIX",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001535527-21-000013",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001535527-21-000022",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001535527-21-000028",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001535527-22-000006",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        }
+      }
+    },
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2023-01-31",
+      "metric_name": "pretax_income",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0001535527-22-000012",
+      "annual_10k_accession": "0001535527-23-000008",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "PLAUSIBLE_FACT_STANDARD_CONCEPT",
+        "candidate_concepts": [
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+        ],
+        "has_dimensioned_candidates": false,
+        "facts_at_expected_period_end": [
+          {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+            "period_start": "2022-02-01",
+            "period_end": "2022-04-30",
+            "value_numeric": -26969000.0,
+            "decimals": "-3",
+            "context_id": "iac0c65d49b7941918bd5a4e7ffb20b08_D20220201-20220430",
+            "duration_days": 88,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          }
+        ],
+        "distinct_matching_values_count": 1
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": "annual production result (status=PASS)"
+        },
+        "reusable_concept_found": true,
+        "reusable_concepts_present_in_blocking_accession": [
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+        ]
+      },
+      "root_cause_category": "CONCEPT_REUSE_CANDIDATE",
+      "resolution_type": "GENERAL_RULE_FIX",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001535527-22-000012",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001535527-22-000018",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001535527-22-000025",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001535527-23-000008",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        }
+      }
+    },
+    {
+      "ticker": "META",
+      "fiscal_year_end": "2022-12-31",
+      "metric_name": "revenue",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+      "blocking_quarter": "Q3",
+      "blocking_10q_accession": "0001326801-22-000108",
+      "annual_10k_accession": "0001326801-23-000013",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q3",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q3",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "MULTIPLE_GENUINE_CANDIDATES",
+        "candidate_concepts": [
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        ],
+        "has_dimensioned_candidates": true,
+        "facts_at_expected_period_end": [
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2022-07-01",
+            "period_end": "2022-09-30",
+            "value_numeric": 27714000000.0,
+            "decimals": "-6",
+            "context_id": "ibfda7118c3264b3aa88700358e5dc23b_D20220701-20220930",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2022-01-01",
+            "period_end": "2022-09-30",
+            "value_numeric": 84444000000.0,
+            "decimals": "-6",
+            "context_id": "i6dea069bf23b41888942ebc399fe5564_D20220101-20220930",
+            "duration_days": 272,
+            "duration_bucket": "ytd_9m",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2022-07-01",
+            "period_end": "2022-09-30",
+            "value_numeric": 27714000000.0,
+            "decimals": "-6",
+            "context_id": "ibfda7118c3264b3aa88700358e5dc23b_D20220701-20220930",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2022-01-01",
+            "period_end": "2022-09-30",
+            "value_numeric": 84444000000.0,
+            "decimals": "-6",
+            "context_id": "i6dea069bf23b41888942ebc399fe5564_D20220101-20220930",
+            "duration_days": 272,
+            "duration_bucket": "ytd_9m",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2022-07-01",
+            "period_end": "2022-09-30",
+            "value_numeric": 27714000000.0,
+            "decimals": "-6",
+            "context_id": "ibfda7118c3264b3aa88700358e5dc23b_D20220701-20220930",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2022-01-01",
+            "period_end": "2022-09-30",
+            "value_numeric": 84444000000.0,
+            "decimals": "-6",
+            "context_id": "i6dea069bf23b41888942ebc399fe5564_D20220101-20220930",
+            "duration_days": 272,
+            "duration_bucket": "ytd_9m",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2022-07-01",
+            "period_end": "2022-09-30",
+            "value_numeric": 27714000000.0,
+            "decimals": "-6",
+            "context_id": "ibfda7118c3264b3aa88700358e5dc23b_D20220701-20220930",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2022-01-01",
+            "period_end": "2022-09-30",
+            "value_numeric": 84444000000.0,
+            "decimals": "-6",
+            "context_id": "i6dea069bf23b41888942ebc399fe5564_D20220101-20220930",
+            "duration_days": 272,
+            "duration_bucket": "ytd_9m",
+            "is_extension": false
+          }
+        ],
+        "distinct_matching_values_count": 2,
+        "broad_search_concepts": [
+          "CostOfRevenue",
+          "RevenueFromContractWithCustomerExcludingAssessedTax"
+        ],
+        "excluded_false_positive_concepts": [
+          "CostOfRevenue"
+        ],
+        "narrowing_removed_ambiguity": false
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": "annual production result (status=PASS)"
+        },
+        "reusable_concept_found": true,
+        "reusable_concepts_present_in_blocking_accession": [
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        ]
+      },
+      "root_cause_category": "CONCEPT_REUSE_CANDIDATE",
+      "resolution_type": "GENERAL_RULE_FIX",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001326801-22-000057",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001326801-22-000082",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001326801-22-000108",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001326801-23-000013",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        }
+      }
+    },
+    {
+      "ticker": "META",
+      "fiscal_year_end": "2023-12-31",
+      "metric_name": "revenue",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0001326801-23-000067",
+      "annual_10k_accession": "0001326801-24-000012",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "PLAUSIBLE_FACT_STANDARD_CONCEPT",
+        "candidate_concepts": [
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        ],
+        "has_dimensioned_candidates": true,
+        "facts_at_expected_period_end": [
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2023-01-01",
+            "period_end": "2023-03-31",
+            "value_numeric": 28645000000.0,
+            "decimals": "-6",
+            "context_id": "id2a395bb649c42cabb32f2bc8268cb8b_D20230101-20230331",
+            "duration_days": 89,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2023-01-01",
+            "period_end": "2023-03-31",
+            "value_numeric": 28645000000.0,
+            "decimals": "-6",
+            "context_id": "id2a395bb649c42cabb32f2bc8268cb8b_D20230101-20230331",
+            "duration_days": 89,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2023-01-01",
+            "period_end": "2023-03-31",
+            "value_numeric": 28645000000.0,
+            "decimals": "-6",
+            "context_id": "id2a395bb649c42cabb32f2bc8268cb8b_D20230101-20230331",
+            "duration_days": 89,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2023-01-01",
+            "period_end": "2023-03-31",
+            "value_numeric": 28645000000.0,
+            "decimals": "-6",
+            "context_id": "id2a395bb649c42cabb32f2bc8268cb8b_D20230101-20230331",
+            "duration_days": 89,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          }
+        ],
+        "distinct_matching_values_count": 1,
+        "broad_search_concepts": [
+          "CostOfRevenue",
+          "RevenueFromContractWithCustomerExcludingAssessedTax"
+        ],
+        "excluded_false_positive_concepts": [
+          "CostOfRevenue"
+        ],
+        "narrowing_removed_ambiguity": true
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": "annual production result (status=PASS)"
+        },
+        "reusable_concept_found": true,
+        "reusable_concepts_present_in_blocking_accession": [
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        ]
+      },
+      "root_cause_category": "CONCEPT_REUSE_CANDIDATE",
+      "resolution_type": "GENERAL_RULE_FIX",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001326801-23-000067",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001326801-23-000093",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001326801-23-000103",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001326801-24-000012",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        }
+      }
+    },
+    {
+      "ticker": "META",
+      "fiscal_year_end": "2024-12-31",
+      "metric_name": "revenue",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0001326801-24-000049",
+      "annual_10k_accession": "0001326801-25-000017",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "PLAUSIBLE_FACT_STANDARD_CONCEPT",
+        "candidate_concepts": [
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        ],
+        "has_dimensioned_candidates": true,
+        "facts_at_expected_period_end": [
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2024-01-01",
+            "period_end": "2024-03-31",
+            "value_numeric": 36455000000.0,
+            "decimals": "-6",
+            "context_id": "c-1",
+            "duration_days": 90,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2024-01-01",
+            "period_end": "2024-03-31",
+            "value_numeric": 36455000000.0,
+            "decimals": "-6",
+            "context_id": "c-1",
+            "duration_days": 90,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2024-01-01",
+            "period_end": "2024-03-31",
+            "value_numeric": 36455000000.0,
+            "decimals": "-6",
+            "context_id": "c-1",
+            "duration_days": 90,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2024-01-01",
+            "period_end": "2024-03-31",
+            "value_numeric": 36455000000.0,
+            "decimals": "-6",
+            "context_id": "c-1",
+            "duration_days": 90,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          }
+        ],
+        "distinct_matching_values_count": 1,
+        "broad_search_concepts": [
+          "CostOfRevenue",
+          "RevenueFromContractWithCustomerExcludingAssessedTax"
+        ],
+        "excluded_false_positive_concepts": [
+          "CostOfRevenue"
+        ],
+        "narrowing_removed_ambiguity": true
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": "annual production result (status=PASS)"
+        },
+        "reusable_concept_found": true,
+        "reusable_concepts_present_in_blocking_accession": [
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        ]
+      },
+      "root_cause_category": "CONCEPT_REUSE_CANDIDATE",
+      "resolution_type": "GENERAL_RULE_FIX",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001326801-24-000049",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001326801-24-000069",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001326801-24-000081",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001326801-25-000017",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        }
+      }
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2021-09-02",
+      "metric_name": "pretax_income",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0000723125-21-000012",
+      "annual_10k_accession": "0000723125-21-000065",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "PLAUSIBLE_FACT_STANDARD_CONCEPT",
+        "candidate_concepts": [
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+        ],
+        "has_dimensioned_candidates": false,
+        "facts_at_expected_period_end": [
+          {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "period_start": "2020-09-04",
+            "period_end": "2020-12-03",
+            "value_numeric": 841000000.0,
+            "decimals": "-6",
+            "context_id": "iae55af5618ac4cadadc5609c86420c40_D20200904-20201203",
+            "duration_days": 90,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "period_start": "2020-09-04",
+            "period_end": "2020-12-03",
+            "value_numeric": 841000000.0,
+            "decimals": "-6",
+            "context_id": "iae55af5618ac4cadadc5609c86420c40_D20200904-20201203",
+            "duration_days": 90,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          }
+        ],
+        "distinct_matching_values_count": 1
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments": "annual production result (status=PASS)"
+        },
+        "reusable_concept_found": true,
+        "reusable_concepts_present_in_blocking_accession": [
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+        ]
+      },
+      "root_cause_category": "CONCEPT_REUSE_CANDIDATE",
+      "resolution_type": "GENERAL_RULE_FIX",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0000723125-21-000012",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0)."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0000723125-21-000032",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0)."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0000723125-21-000052",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0)."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0000723125-21-000065",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0)."
+        }
+      }
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2022-09-01",
+      "metric_name": "pretax_income",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0000723125-22-000004",
+      "annual_10k_accession": "0000723125-22-000048",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "PLAUSIBLE_FACT_STANDARD_CONCEPT",
+        "candidate_concepts": [
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+        ],
+        "has_dimensioned_candidates": false,
+        "facts_at_expected_period_end": [
+          {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "period_start": "2021-09-03",
+            "period_end": "2021-12-02",
+            "value_numeric": 2521000000.0,
+            "decimals": "-6",
+            "context_id": "iea5ef246ffc147c399cefb55d2b9db30_D20210903-20211202",
+            "duration_days": 90,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "period_start": "2021-09-03",
+            "period_end": "2021-12-02",
+            "value_numeric": 2521000000.0,
+            "decimals": "-6",
+            "context_id": "iea5ef246ffc147c399cefb55d2b9db30_D20210903-20211202",
+            "duration_days": 90,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          }
+        ],
+        "distinct_matching_values_count": 1
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments": "annual production result (status=PASS)"
+        },
+        "reusable_concept_found": true,
+        "reusable_concepts_present_in_blocking_accession": [
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+        ]
+      },
+      "root_cause_category": "CONCEPT_REUSE_CANDIDATE",
+      "resolution_type": "GENERAL_RULE_FIX",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0000723125-22-000004",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0)."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0000723125-22-000016",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0)."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0000723125-22-000036",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0)."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0000723125-22-000048",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0)."
+        }
+      }
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2023-08-31",
+      "metric_name": "pretax_income",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0000723125-22-000072",
+      "annual_10k_accession": "0000723125-23-000054",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "PLAUSIBLE_FACT_STANDARD_CONCEPT",
+        "candidate_concepts": [
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+        ],
+        "has_dimensioned_candidates": false,
+        "facts_at_expected_period_end": [
+          {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "period_start": "2022-09-02",
+            "period_end": "2022-12-01",
+            "value_numeric": -176000000.0,
+            "decimals": "-6",
+            "context_id": "i189b81ba1a354626b0ab3d9d60be8ba0_D20220902-20221201",
+            "duration_days": 90,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "period_start": "2022-09-02",
+            "period_end": "2022-12-01",
+            "value_numeric": -176000000.0,
+            "decimals": "-6",
+            "context_id": "i189b81ba1a354626b0ab3d9d60be8ba0_D20220902-20221201",
+            "duration_days": 90,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          }
+        ],
+        "distinct_matching_values_count": 1
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments": "annual production result (status=PASS)"
+        },
+        "reusable_concept_found": true,
+        "reusable_concepts_present_in_blocking_accession": [
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+        ]
+      },
+      "root_cause_category": "CONCEPT_REUSE_CANDIDATE",
+      "resolution_type": "GENERAL_RULE_FIX",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0000723125-22-000072",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0)."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0000723125-23-000022",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0)."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0000723125-23-000041",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0)."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0000723125-23-000054",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0)."
+        }
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "fiscal_year_end": "2020-01-26",
+      "metric_name": "capex",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא נמצאה אף שורת 'capex' בתוך Statement role ראשי.",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0001045810-19-000079",
+      "annual_10k_accession": "0001045810-20-000010",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "NO_PLAUSIBLE_FACT_IN_FILING",
+        "candidate_concepts": [],
+        "has_dimensioned_candidates": false
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "nvda:PurchasesOfPropertyAndEquipmentAndIntangibleAssets": "annual production result (status=PASS)",
+          "us-gaap:PaymentsToAcquireProductiveAssets": "adjacent fiscal year, same ticker/metric",
+          "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment": "adjacent fiscal year, same ticker/metric"
+        },
+        "reusable_concept_found": false,
+        "reusable_concepts_present_in_blocking_accession": []
+      },
+      "root_cause_category": "TRUE_SOURCE_DATA_ABSENCE",
+      "resolution_type": "TRUE_SOURCE_DATA_ABSENCE",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-19-000079",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'capex' בתוך Statement role ראשי."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-19-000144",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'capex' בתוך Statement role ראשי."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-19-000170",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'capex' בתוך Statement role ראשי."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-20-000010",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'capex' בתוך Statement role ראשי."
+        }
+      },
+      "nvda_oldest_filing_investigation": {
+        "accession_number": "0001045810-19-000079",
+        "sec_filings_row": {
+          "ticker": "NVDA",
+          "form": "10-Q",
+          "report_date": "2019-04-28",
+          "filing_date": "2019-05-16"
+        },
+        "is_valid_10Q_per_sec_filings": true,
+        "warehouse_run_status": "PASS",
+        "fact_count": 0,
+        "numeric_fact_count": 0,
+        "context_count": 0,
+        "unit_count": 0,
+        "distinct_concept_count": 0,
+        "standard_concept_count": 0,
+        "extension_concept_count": 0,
+        "plausible_metric_related_concepts_broad_stem_search": [],
+        "sample_standard_concepts": [],
+        "sample_extension_concepts": []
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "fiscal_year_end": "2020-01-26",
+      "metric_name": "income_tax_expense",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא נמצאה אף שורת 'income_tax_expense' בתוך Statement role ראשי.",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0001045810-19-000079",
+      "annual_10k_accession": "0001045810-20-000010",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "NO_PLAUSIBLE_FACT_IN_FILING",
+        "candidate_concepts": [],
+        "has_dimensioned_candidates": false
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:IncomeTaxExpenseBenefit": "annual production result (status=PASS)"
+        },
+        "reusable_concept_found": false,
+        "reusable_concepts_present_in_blocking_accession": []
+      },
+      "root_cause_category": "TRUE_SOURCE_DATA_ABSENCE",
+      "resolution_type": "TRUE_SOURCE_DATA_ABSENCE",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-19-000079",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'income_tax_expense' בתוך Statement role ראשי."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-19-000144",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'income_tax_expense' בתוך Statement role ראשי."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-19-000170",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'income_tax_expense' בתוך Statement role ראשי."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-20-000010",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'income_tax_expense' בתוך Statement role ראשי."
+        }
+      },
+      "nvda_oldest_filing_investigation": {
+        "accession_number": "0001045810-19-000079",
+        "sec_filings_row": {
+          "ticker": "NVDA",
+          "form": "10-Q",
+          "report_date": "2019-04-28",
+          "filing_date": "2019-05-16"
+        },
+        "is_valid_10Q_per_sec_filings": true,
+        "warehouse_run_status": "PASS",
+        "fact_count": 0,
+        "numeric_fact_count": 0,
+        "context_count": 0,
+        "unit_count": 0,
+        "distinct_concept_count": 0,
+        "standard_concept_count": 0,
+        "extension_concept_count": 0,
+        "plausible_metric_related_concepts_broad_stem_search": [],
+        "sample_standard_concepts": [],
+        "sample_extension_concepts": []
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "fiscal_year_end": "2020-01-26",
+      "metric_name": "operating_cash_flow",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא נמצאה אף שורת 'operating_cash_flow' בתוך Statement role ראשי.",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0001045810-19-000079",
+      "annual_10k_accession": "0001045810-20-000010",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "NO_PLAUSIBLE_FACT_IN_FILING",
+        "candidate_concepts": [],
+        "has_dimensioned_candidates": false
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:NetCashProvidedByUsedInOperatingActivities": "annual production result (status=PASS)"
+        },
+        "reusable_concept_found": false,
+        "reusable_concepts_present_in_blocking_accession": []
+      },
+      "root_cause_category": "TRUE_SOURCE_DATA_ABSENCE",
+      "resolution_type": "TRUE_SOURCE_DATA_ABSENCE",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-19-000079",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'operating_cash_flow' בתוך Statement role ראשי."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-19-000144",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'operating_cash_flow' בתוך Statement role ראשי."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-19-000170",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'operating_cash_flow' בתוך Statement role ראשי."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-20-000010",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'operating_cash_flow' בתוך Statement role ראשי."
+        }
+      },
+      "nvda_oldest_filing_investigation": {
+        "accession_number": "0001045810-19-000079",
+        "sec_filings_row": {
+          "ticker": "NVDA",
+          "form": "10-Q",
+          "report_date": "2019-04-28",
+          "filing_date": "2019-05-16"
+        },
+        "is_valid_10Q_per_sec_filings": true,
+        "warehouse_run_status": "PASS",
+        "fact_count": 0,
+        "numeric_fact_count": 0,
+        "context_count": 0,
+        "unit_count": 0,
+        "distinct_concept_count": 0,
+        "standard_concept_count": 0,
+        "extension_concept_count": 0,
+        "plausible_metric_related_concepts_broad_stem_search": [],
+        "sample_standard_concepts": [],
+        "sample_extension_concepts": []
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "fiscal_year_end": "2020-01-26",
+      "metric_name": "operating_income",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא נמצאה אף שורת 'operating_income' בתוך Statement role ראשי.",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0001045810-19-000079",
+      "annual_10k_accession": "0001045810-20-000010",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "NO_PLAUSIBLE_FACT_IN_FILING",
+        "candidate_concepts": [],
+        "has_dimensioned_candidates": false
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:OperatingIncomeLoss": "annual production result (status=PASS)"
+        },
+        "reusable_concept_found": false,
+        "reusable_concepts_present_in_blocking_accession": []
+      },
+      "root_cause_category": "TRUE_SOURCE_DATA_ABSENCE",
+      "resolution_type": "TRUE_SOURCE_DATA_ABSENCE",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-19-000079",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'operating_income' בתוך Statement role ראשי."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-19-000144",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'operating_income' בתוך Statement role ראשי."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-19-000170",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'operating_income' בתוך Statement role ראשי."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-20-000010",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'operating_income' בתוך Statement role ראשי."
+        }
+      },
+      "nvda_oldest_filing_investigation": {
+        "accession_number": "0001045810-19-000079",
+        "sec_filings_row": {
+          "ticker": "NVDA",
+          "form": "10-Q",
+          "report_date": "2019-04-28",
+          "filing_date": "2019-05-16"
+        },
+        "is_valid_10Q_per_sec_filings": true,
+        "warehouse_run_status": "PASS",
+        "fact_count": 0,
+        "numeric_fact_count": 0,
+        "context_count": 0,
+        "unit_count": 0,
+        "distinct_concept_count": 0,
+        "standard_concept_count": 0,
+        "extension_concept_count": 0,
+        "plausible_metric_related_concepts_broad_stem_search": [],
+        "sample_standard_concepts": [],
+        "sample_extension_concepts": []
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "fiscal_year_end": "2020-01-26",
+      "metric_name": "pretax_income",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0001045810-19-000079",
+      "annual_10k_accession": "0001045810-20-000010",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "NO_PLAUSIBLE_FACT_IN_FILING",
+        "candidate_concepts": [],
+        "has_dimensioned_candidates": false
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments": "annual production result (status=PASS)",
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": "adjacent fiscal year, same ticker/metric"
+        },
+        "reusable_concept_found": false,
+        "reusable_concepts_present_in_blocking_accession": []
+      },
+      "root_cause_category": "TRUE_SOURCE_DATA_ABSENCE",
+      "resolution_type": "TRUE_SOURCE_DATA_ABSENCE",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-19-000079",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-19-000144",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-19-000170",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-20-000010",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        }
+      },
+      "nvda_oldest_filing_investigation": {
+        "accession_number": "0001045810-19-000079",
+        "sec_filings_row": {
+          "ticker": "NVDA",
+          "form": "10-Q",
+          "report_date": "2019-04-28",
+          "filing_date": "2019-05-16"
+        },
+        "is_valid_10Q_per_sec_filings": true,
+        "warehouse_run_status": "PASS",
+        "fact_count": 0,
+        "numeric_fact_count": 0,
+        "context_count": 0,
+        "unit_count": 0,
+        "distinct_concept_count": 0,
+        "standard_concept_count": 0,
+        "extension_concept_count": 0,
+        "plausible_metric_related_concepts_broad_stem_search": [],
+        "sample_standard_concepts": [],
+        "sample_extension_concepts": []
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "fiscal_year_end": "2020-01-26",
+      "metric_name": "revenue",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא נמצאה אף שורת 'revenue' בתוך Statement role ראשי.",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0001045810-19-000079",
+      "annual_10k_accession": "0001045810-20-000010",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "NO_PLAUSIBLE_FACT_IN_FILING",
+        "candidate_concepts": [],
+        "broad_search_concepts": [],
+        "excluded_false_positive_concepts": []
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": "annual production result (status=PASS)",
+          "us-gaap:Revenues": "adjacent fiscal year, same ticker/metric"
+        },
+        "reusable_concept_found": false,
+        "reusable_concepts_present_in_blocking_accession": []
+      },
+      "root_cause_category": "TRUE_SOURCE_DATA_ABSENCE",
+      "resolution_type": "TRUE_SOURCE_DATA_ABSENCE",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-19-000079",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'revenue' בתוך Statement role ראשי."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-19-000144",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'revenue' בתוך Statement role ראשי."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-19-000170",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'revenue' בתוך Statement role ראשי."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001045810-20-000010",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'revenue' בתוך Statement role ראשי."
+        }
+      },
+      "nvda_oldest_filing_investigation": {
+        "accession_number": "0001045810-19-000079",
+        "sec_filings_row": {
+          "ticker": "NVDA",
+          "form": "10-Q",
+          "report_date": "2019-04-28",
+          "filing_date": "2019-05-16"
+        },
+        "is_valid_10Q_per_sec_filings": true,
+        "warehouse_run_status": "PASS",
+        "fact_count": 0,
+        "numeric_fact_count": 0,
+        "context_count": 0,
+        "unit_count": 0,
+        "distinct_concept_count": 0,
+        "standard_concept_count": 0,
+        "extension_concept_count": 0,
+        "plausible_metric_related_concepts_broad_stem_search": [],
+        "sample_standard_concepts": [],
+        "sample_extension_concepts": []
+      }
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2021-07-31",
+      "metric_name": "pretax_income",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0001327567-20-000041",
+      "annual_10k_accession": "0001327567-21-000029",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "PLAUSIBLE_FACT_STANDARD_CONCEPT",
+        "candidate_concepts": [
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+        ],
+        "has_dimensioned_candidates": false,
+        "facts_at_expected_period_end": [
+          {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+            "period_start": "2020-08-01",
+            "period_end": "2020-10-31",
+            "value_numeric": -82300000.0,
+            "decimals": "-5",
+            "context_id": "i20182935611c44218c2bbab5f36795dc_D20200801-20201031",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          }
+        ],
+        "distinct_matching_values_count": 1
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": "annual production result (status=PASS)"
+        },
+        "reusable_concept_found": true,
+        "reusable_concepts_present_in_blocking_accession": [
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+        ]
+      },
+      "root_cause_category": "CONCEPT_REUSE_CANDIDATE",
+      "resolution_type": "GENERAL_RULE_FIX",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-20-000041",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-21-000004",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-21-000014",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-21-000029",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        }
+      }
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2021-07-31",
+      "metric_name": "revenue",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0001327567-20-000041",
+      "annual_10k_accession": "0001327567-21-000029",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "PLAUSIBLE_FACT_STANDARD_CONCEPT",
+        "candidate_concepts": [
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        ],
+        "has_dimensioned_candidates": true,
+        "facts_at_expected_period_end": [
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2020-08-01",
+            "period_end": "2020-10-31",
+            "value_numeric": 946000000.0,
+            "decimals": "-5",
+            "context_id": "i20182935611c44218c2bbab5f36795dc_D20200801-20201031",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2020-08-01",
+            "period_end": "2020-10-31",
+            "value_numeric": 946000000.0,
+            "decimals": "-5",
+            "context_id": "i20182935611c44218c2bbab5f36795dc_D20200801-20201031",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2020-08-01",
+            "period_end": "2020-10-31",
+            "value_numeric": 946000000.0,
+            "decimals": "-5",
+            "context_id": "i20182935611c44218c2bbab5f36795dc_D20200801-20201031",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          }
+        ],
+        "distinct_matching_values_count": 1,
+        "broad_search_concepts": [
+          "ContractWithCustomerLiabilityRevenueRecognized",
+          "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "RevenueRemainingPerformanceObligation"
+        ],
+        "excluded_false_positive_concepts": [
+          "ContractWithCustomerLiabilityRevenueRecognized",
+          "RevenueRemainingPerformanceObligation"
+        ],
+        "narrowing_removed_ambiguity": true
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": "annual production result (status=PASS)"
+        },
+        "reusable_concept_found": true,
+        "reusable_concepts_present_in_blocking_accession": [
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        ]
+      },
+      "root_cause_category": "CONCEPT_REUSE_CANDIDATE",
+      "resolution_type": "GENERAL_RULE_FIX",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-20-000041",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-21-000004",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-21-000014",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-21-000029",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        }
+      }
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2022-07-31",
+      "metric_name": "pretax_income",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0001327567-21-000040",
+      "annual_10k_accession": "0001327567-22-000028",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "PLAUSIBLE_FACT_STANDARD_CONCEPT",
+        "candidate_concepts": [
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+        ],
+        "has_dimensioned_candidates": false,
+        "facts_at_expected_period_end": [
+          {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+            "period_start": "2021-08-01",
+            "period_end": "2021-10-31",
+            "value_numeric": -91200000.0,
+            "decimals": "-5",
+            "context_id": "i90fb02ba00c242f2b3260add587594c7_D20210801-20211031",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          }
+        ],
+        "distinct_matching_values_count": 1
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest": "annual production result (status=PASS)"
+        },
+        "reusable_concept_found": true,
+        "reusable_concepts_present_in_blocking_accession": [
+          "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
+        ]
+      },
+      "root_cause_category": "CONCEPT_REUSE_CANDIDATE",
+      "resolution_type": "GENERAL_RULE_FIX",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-21-000040",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-22-000008",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-22-000016",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-22-000028",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+        }
+      }
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2022-07-31",
+      "metric_name": "revenue",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0001327567-21-000040",
+      "annual_10k_accession": "0001327567-22-000028",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "PLAUSIBLE_FACT_STANDARD_CONCEPT",
+        "candidate_concepts": [
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        ],
+        "has_dimensioned_candidates": true,
+        "facts_at_expected_period_end": [
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2021-08-01",
+            "period_end": "2021-10-31",
+            "value_numeric": 1247400000.0,
+            "decimals": "-5",
+            "context_id": "i90fb02ba00c242f2b3260add587594c7_D20210801-20211031",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2021-08-01",
+            "period_end": "2021-10-31",
+            "value_numeric": 1247400000.0,
+            "decimals": "-5",
+            "context_id": "i90fb02ba00c242f2b3260add587594c7_D20210801-20211031",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2021-08-01",
+            "period_end": "2021-10-31",
+            "value_numeric": 1247400000.0,
+            "decimals": "-5",
+            "context_id": "i90fb02ba00c242f2b3260add587594c7_D20210801-20211031",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          }
+        ],
+        "distinct_matching_values_count": 1,
+        "broad_search_concepts": [
+          "ContractWithCustomerLiabilityRevenueRecognized",
+          "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "RevenueRemainingPerformanceObligation"
+        ],
+        "excluded_false_positive_concepts": [
+          "ContractWithCustomerLiabilityRevenueRecognized",
+          "RevenueRemainingPerformanceObligation"
+        ],
+        "narrowing_removed_ambiguity": true
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": "annual production result (status=PASS)"
+        },
+        "reusable_concept_found": true,
+        "reusable_concepts_present_in_blocking_accession": [
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        ]
+      },
+      "root_cause_category": "CONCEPT_REUSE_CANDIDATE",
+      "resolution_type": "GENERAL_RULE_FIX",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-21-000040",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-22-000008",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-22-000016",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-22-000028",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        }
+      }
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2023-07-31",
+      "metric_name": "revenue",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0001327567-22-000038",
+      "annual_10k_accession": "0001327567-23-000024",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "PLAUSIBLE_FACT_STANDARD_CONCEPT",
+        "candidate_concepts": [
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        ],
+        "has_dimensioned_candidates": true,
+        "facts_at_expected_period_end": [
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2022-08-01",
+            "period_end": "2022-10-31",
+            "value_numeric": 1563400000.0,
+            "decimals": "-5",
+            "context_id": "ibe00171ef471443398ebb733b1d21566_D20220801-20221031",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2022-08-01",
+            "period_end": "2022-10-31",
+            "value_numeric": 1563400000.0,
+            "decimals": "-5",
+            "context_id": "ibe00171ef471443398ebb733b1d21566_D20220801-20221031",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2022-08-01",
+            "period_end": "2022-10-31",
+            "value_numeric": 1563400000.0,
+            "decimals": "-5",
+            "context_id": "ibe00171ef471443398ebb733b1d21566_D20220801-20221031",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          }
+        ],
+        "distinct_matching_values_count": 1,
+        "broad_search_concepts": [
+          "ContractWithCustomerLiabilityRevenueRecognized",
+          "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "RevenueRemainingPerformanceObligation"
+        ],
+        "excluded_false_positive_concepts": [
+          "ContractWithCustomerLiabilityRevenueRecognized",
+          "RevenueRemainingPerformanceObligation"
+        ],
+        "narrowing_removed_ambiguity": true
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": "annual production result (status=PASS)"
+        },
+        "reusable_concept_found": true,
+        "reusable_concepts_present_in_blocking_accession": [
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        ]
+      },
+      "root_cause_category": "CONCEPT_REUSE_CANDIDATE",
+      "resolution_type": "GENERAL_RULE_FIX",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-22-000038",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-23-000006",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-23-000014",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-23-000024",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        }
+      }
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2024-07-31",
+      "metric_name": "revenue",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0001327567-23-000032",
+      "annual_10k_accession": "0001327567-24-000029",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "PLAUSIBLE_FACT_STANDARD_CONCEPT",
+        "candidate_concepts": [
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        ],
+        "has_dimensioned_candidates": true,
+        "facts_at_expected_period_end": [
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2023-08-01",
+            "period_end": "2023-10-31",
+            "value_numeric": 1878100000.0,
+            "decimals": "-5",
+            "context_id": "c-1",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2023-08-01",
+            "period_end": "2023-10-31",
+            "value_numeric": 1878100000.0,
+            "decimals": "-5",
+            "context_id": "c-1",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2023-08-01",
+            "period_end": "2023-10-31",
+            "value_numeric": 1878100000.0,
+            "decimals": "-5",
+            "context_id": "c-1",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          }
+        ],
+        "distinct_matching_values_count": 1,
+        "broad_search_concepts": [
+          "ContractWithCustomerLiabilityRevenueRecognized",
+          "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "RevenueRemainingPerformanceObligation"
+        ],
+        "excluded_false_positive_concepts": [
+          "ContractWithCustomerLiabilityRevenueRecognized",
+          "RevenueRemainingPerformanceObligation"
+        ],
+        "narrowing_removed_ambiguity": true
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": "annual production result (status=PASS)"
+        },
+        "reusable_concept_found": true,
+        "reusable_concepts_present_in_blocking_accession": [
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        ]
+      },
+      "root_cause_category": "CONCEPT_REUSE_CANDIDATE",
+      "resolution_type": "GENERAL_RULE_FIX",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-23-000032",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-24-000005",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-24-000017",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-24-000029",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        }
+      }
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2025-07-31",
+      "metric_name": "revenue",
+      "affected_quarters": [
+        "Q1",
+        "Q2",
+        "Q3",
+        "Q4"
+      ],
+      "resolved_quarters": [],
+      "any_quarter_resolved": false,
+      "representative_error_text": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+      "blocking_quarter": "Q1",
+      "blocking_10q_accession": "0001327567-24-000040",
+      "annual_10k_accession": "0001327567-25-000027",
+      "concept_qname_resolved_elsewhere": null,
+      "extraction_path_attempted": "CONCEPT_NOT_RESOLVED_Q1",
+      "earliest_true_blocking_step": "CONCEPT_NOT_RESOLVED_Q1",
+      "warehouse_evidence": {
+        "checked": true,
+        "finding": "PLAUSIBLE_FACT_STANDARD_CONCEPT",
+        "candidate_concepts": [
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        ],
+        "has_dimensioned_candidates": true,
+        "facts_at_expected_period_end": [
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2024-08-01",
+            "period_end": "2024-10-31",
+            "value_numeric": 2138800000.0,
+            "decimals": "-5",
+            "context_id": "c-1",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2024-08-01",
+            "period_end": "2024-10-31",
+            "value_numeric": 2138800000.0,
+            "decimals": "-5",
+            "context_id": "c-1",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          },
+          {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "concept_local_name": "RevenueFromContractWithCustomerExcludingAssessedTax",
+            "period_start": "2024-08-01",
+            "period_end": "2024-10-31",
+            "value_numeric": 2138800000.0,
+            "decimals": "-5",
+            "context_id": "c-1",
+            "duration_days": 91,
+            "duration_bucket": "quarter",
+            "is_extension": false
+          }
+        ],
+        "distinct_matching_values_count": 1,
+        "broad_search_concepts": [
+          "ContractWithCustomerLiabilityRevenueRecognized",
+          "RevenueFromContractWithCustomerExcludingAssessedTax",
+          "RevenueRemainingPerformanceObligation"
+        ],
+        "excluded_false_positive_concepts": [
+          "ContractWithCustomerLiabilityRevenueRecognized",
+          "RevenueRemainingPerformanceObligation"
+        ],
+        "narrowing_removed_ambiguity": true
+      },
+      "concept_reuse_check": {
+        "checked": true,
+        "candidates_considered": {
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax": "annual production result (status=PASS)"
+        },
+        "reusable_concept_found": true,
+        "reusable_concepts_present_in_blocking_accession": [
+          "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
+        ]
+      },
+      "root_cause_category": "CONCEPT_REUSE_CANDIDATE",
+      "resolution_type": "GENERAL_RULE_FIX",
+      "quarter_details": {
+        "Q1": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-24-000040",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q2": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-25-000010",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q3": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-25-000017",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        },
+        "Q4": {
+          "value": null,
+          "extraction_basis": "UNRESOLVED",
+          "concept_qname": null,
+          "context_id": null,
+          "accession_number": "0001327567-25-000027",
+          "reconciliation_status": "REVIEW_REQUIRED",
+          "result_status": "REVIEW_REQUIRED",
+          "lineage_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0)."
+        }
+      }
+    }
+  ],
+  "runtime_seconds": 0.76
+}

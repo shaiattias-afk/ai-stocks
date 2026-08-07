@@ -1,0 +1,18 @@
+{
+  "task_id": "TASK_143_TASK_MARKER_FOUNDATION",
+  "status": "STARTED",
+  "started_at": "2026-08-05T11:39:24.056Z",
+  "objective": "Create and validate one reusable, fail-closed task-marker utility (scripts/142_task_marker_guard.py) that will be mandatory for every future TASK_NNN operation in this project, enforcing UTC-only timestamps, atomic writes, and PASS-requires-validated-outputs, per the process defects TASK_142 found in TASK_141.",
+  "read_only": true,
+  "expected_outputs": [
+    "scripts/142_task_marker_guard.py",
+    "scripts/143_task_marker_guard_validation.py",
+    "data/task_marker_guard_validation.json",
+    "data/task_marker_guard_validation.csv",
+    "docs/TASK_MARKER_STANDARD.md",
+    "docs/tasks/TASK_143_RESULT.md"
+  ],
+  "process_id": 28028,
+  "hostname": "shai-laptop",
+  "timezone_source": "PYTHON_DATETIME_TIMEZONE_UTC"
+}

@@ -1,0 +1,113 @@
+{
+  "note": "כל 9 החברות השיגו את יעד 5 שנות הפעילות שנבחר עבורן (0 שנים חסרות). כל חלון 5 השנים 'עוגן' על השנה שכבר אומתה קודם לכן עבור אותה חברה (ראו is_anchor_year ב-manifest), לא בהכרח על ה-10-K העדכני ביותר הקיים כרגע ב-EDGAR — למשל NVDA, GOOGL, AMZN, MU, CRWD ו-PANW כבר הגישו 10-K חדש יותר מהעוגן שנבחר כאן. הרחבה קדימה לשנה העדכנית ביותר בפועל היא צעד נפרד, טרם בוצע.",
+  "companies": {
+    "ORCL": {
+      "target_years_requested": 5,
+      "years_present": [
+        "2020-05-31",
+        "2021-05-31",
+        "2022-05-31",
+        "2023-05-31",
+        "2024-05-31"
+      ],
+      "years_missing": [],
+      "missing_reason": null
+    },
+    "MSFT": {
+      "target_years_requested": 5,
+      "years_present": [
+        "2020-06-30",
+        "2021-06-30",
+        "2022-06-30",
+        "2023-06-30",
+        "2024-06-30"
+      ],
+      "years_missing": [],
+      "missing_reason": null
+    },
+    "META": {
+      "target_years_requested": 5,
+      "years_present": [
+        "2020-12-31",
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31"
+      ],
+      "years_missing": [],
+      "missing_reason": null
+    },
+    "NVDA": {
+      "target_years_requested": 5,
+      "years_present": [
+        "2020-01-26",
+        "2021-01-31",
+        "2022-01-30",
+        "2023-01-29",
+        "2024-01-28"
+      ],
+      "years_missing": [],
+      "missing_reason": null
+    },
+    "GOOGL": {
+      "target_years_requested": 5,
+      "years_present": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "years_missing": [],
+      "missing_reason": null
+    },
+    "AMZN": {
+      "target_years_requested": 5,
+      "years_present": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "years_missing": [],
+      "missing_reason": null
+    },
+    "MU": {
+      "target_years_requested": 5,
+      "years_present": [
+        "2021-09-02",
+        "2022-09-01",
+        "2023-08-31",
+        "2024-08-29",
+        "2025-08-28"
+      ],
+      "years_missing": [],
+      "missing_reason": null
+    },
+    "CRWD": {
+      "target_years_requested": 5,
+      "years_present": [
+        "2022-01-31",
+        "2023-01-31",
+        "2024-01-31",
+        "2025-01-31",
+        "2026-01-31"
+      ],
+      "years_missing": [],
+      "missing_reason": null
+    },
+    "PANW": {
+      "target_years_requested": 5,
+      "years_present": [
+        "2021-07-31",
+        "2022-07-31",
+        "2023-07-31",
+        "2024-07-31",
+        "2025-07-31"
+      ],
+      "years_missing": [],
+      "missing_reason": null
+    }
+  }
+}

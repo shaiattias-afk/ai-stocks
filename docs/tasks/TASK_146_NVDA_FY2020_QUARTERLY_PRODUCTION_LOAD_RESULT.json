@@ -1,0 +1,59 @@
+{
+  "task_id": "TASK_146_NVDA_FY2020_QUARTERLY_PRODUCTION_LOAD",
+  "status": "PASS",
+  "started_at": "2026-08-05T16:10:03.839Z",
+  "completed_at": "2026-08-05T16:19:23.845Z",
+  "elapsed_seconds": 560.006,
+  "mandatory_outputs": [
+    "c:\\AI_Stock_Agent\\scripts\\147_nvda_fy2020_quarterly_production_load.py",
+    "c:\\AI_Stock_Agent\\data\\nvda_fy2020_quarterly_production_load_result.json",
+    "c:\\AI_Stock_Agent\\data\\nvda_fy2020_quarterly_production_load_result.csv",
+    "c:\\AI_Stock_Agent\\data\\archive\\nvda_fy2020_quarterly_production_load_manifest.json",
+    "c:\\AI_Stock_Agent\\docs\\NVDA_FY2020_QUARTERLY_PRODUCTION_LOAD.md"
+  ],
+  "outputs": {
+    "c:\\AI_Stock_Agent\\scripts\\147_nvda_fy2020_quarterly_production_load.py": {
+      "sha256": "bd6bf46c93ab35e2acaee0c7406b85bf2c990be56ef123ebd2932fc50c801f6b",
+      "size_bytes": 37283,
+      "modified_at_utc": "2026-08-05T16:12:39.348Z"
+    },
+    "c:\\AI_Stock_Agent\\data\\nvda_fy2020_quarterly_production_load_result.json": {
+      "sha256": "18b11d02d2ba5fabf36708c682e23cfa59f5fdf0e6f94bdc51a002be5b02af35",
+      "size_bytes": 33882,
+      "modified_at_utc": "2026-08-05T16:18:09.684Z"
+    },
+    "c:\\AI_Stock_Agent\\data\\nvda_fy2020_quarterly_production_load_result.csv": {
+      "sha256": "66a872dd58e7335ba323730eaa4202b71d9137e5f7a6da6096cd37cb6e0a9099",
+      "size_bytes": 1002,
+      "modified_at_utc": "2026-08-05T16:18:09.698Z"
+    },
+    "c:\\AI_Stock_Agent\\data\\archive\\nvda_fy2020_quarterly_production_load_manifest.json": {
+      "sha256": "e54b46537a2c078f4c74e33b0f7b0b691cfc77e310093b7333892fee0778c10c",
+      "size_bytes": 2064,
+      "modified_at_utc": "2026-08-05T16:18:09.470Z"
+    },
+    "c:\\AI_Stock_Agent\\docs\\NVDA_FY2020_QUARTERLY_PRODUCTION_LOAD.md": {
+      "sha256": "58d206f11f4c48fbd4262cd94f3e2e307eca75174c287a801a29664b63ee4028",
+      "size_bytes": 8251,
+      "modified_at_utc": "2026-08-05T16:18:47.456Z"
+    }
+  },
+  "output_problems": [],
+  "utility_version": "142_task_marker_guard-1.0.0",
+  "load_status": "PASS",
+  "old_run_id": "59b524e2-4639-4af8-82c3-390b2363c40d",
+  "new_run_id": "22c174be-d095-48da-8d68-8388805b9c7d",
+  "post_load_counts": {
+    "quarterly_extraction_runs": 45,
+    "quarterly_metric_results": 1080,
+    "financial_metric_results": 900,
+    "unique_review_required": 4
+  },
+  "resolved_case_count": 6,
+  "remaining_review_required_cases": [
+    "CRWD 2022-01-31 pretax_income",
+    "MU 2021-09-02 pretax_income",
+    "PANW 2021-07-31 pretax_income",
+    "PANW 2021-07-31 revenue"
+  ]
+}

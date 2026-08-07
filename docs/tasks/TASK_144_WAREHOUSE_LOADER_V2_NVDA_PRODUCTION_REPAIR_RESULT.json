@@ -1,0 +1,53 @@
+{
+  "task_id": "TASK_144_WAREHOUSE_LOADER_V2_NVDA_PRODUCTION_REPAIR",
+  "status": "PASS",
+  "started_at": "2026-08-05T14:58:47.281Z",
+  "completed_at": "2026-08-05T15:05:44.642Z",
+  "elapsed_seconds": 417.361,
+  "mandatory_outputs": [
+    "c:\\AI_Stock_Agent\\scripts\\144_warehouse_loader_v2_production.py",
+    "c:\\AI_Stock_Agent\\scripts\\145_nvda_2019q1_production_warehouse_repair.py",
+    "c:\\AI_Stock_Agent\\data\\nvda_2019q1_production_warehouse_repair_result.json",
+    "c:\\AI_Stock_Agent\\data\\nvda_2019q1_production_warehouse_repair_result.csv",
+    "c:\\AI_Stock_Agent\\data\\archive\\nvda_2019q1_production_warehouse_repair_manifest.json",
+    "c:\\AI_Stock_Agent\\docs\\NVDA_2019Q1_PRODUCTION_WAREHOUSE_REPAIR.md"
+  ],
+  "outputs": {
+    "c:\\AI_Stock_Agent\\scripts\\144_warehouse_loader_v2_production.py": {
+      "sha256": "46290b6111747c8eff6d2cd046be32da43a92c974edb6f83ec1620c7bb4967f7",
+      "size_bytes": 16351,
+      "modified_at_utc": "2026-08-05T15:00:50.692Z"
+    },
+    "c:\\AI_Stock_Agent\\scripts\\145_nvda_2019q1_production_warehouse_repair.py": {
+      "sha256": "675ebcc5f466d0ec67d911e403fe884c9fe98c09c02967e73551725d313138b4",
+      "size_bytes": 27151,
+      "modified_at_utc": "2026-08-05T15:03:53.623Z"
+    },
+    "c:\\AI_Stock_Agent\\data\\nvda_2019q1_production_warehouse_repair_result.json": {
+      "sha256": "ebb5be5a00b3f86bfed66971c408fc5b689949f69604b47be8ddfc24773c1993",
+      "size_bytes": 7740,
+      "modified_at_utc": "2026-08-05T15:04:30.039Z"
+    },
+    "c:\\AI_Stock_Agent\\data\\nvda_2019q1_production_warehouse_repair_result.csv": {
+      "sha256": "2b700933278c0b743c2cf6facbe2ef7193036269c5718760c623632135904c9f",
+      "size_bytes": 1185,
+      "modified_at_utc": "2026-08-05T15:04:30.041Z"
+    },
+    "c:\\AI_Stock_Agent\\data\\archive\\nvda_2019q1_production_warehouse_repair_manifest.json": {
+      "sha256": "a29f34baf45646acd9a9712696378b6df3c922670e65a4e5695a39035a4193b9",
+      "size_bytes": 4382,
+      "modified_at_utc": "2026-08-05T15:04:28.122Z"
+    },
+    "c:\\AI_Stock_Agent\\docs\\NVDA_2019Q1_PRODUCTION_WAREHOUSE_REPAIR.md": {
+      "sha256": "08bb1a9a7a14b089e6fdc12601ed6aa0b5e8e224fdfff6ae187f31e1188130dc",
+      "size_bytes": 10229,
+      "modified_at_utc": "2026-08-05T15:05:21.678Z"
+    }
+  },
+  "output_problems": [],
+  "utility_version": "142_task_marker_guard-1.0.0",
+  "repair_status": "PASS",
+  "corrected_warehouse_run_id": "0001045810-19-000079::144_warehouse_loader_v2_production.py::2026-08-05T15:04:28.319063+00:00",
+  "total_facts_before": 225126,
+  "total_facts_after": 225780
+}

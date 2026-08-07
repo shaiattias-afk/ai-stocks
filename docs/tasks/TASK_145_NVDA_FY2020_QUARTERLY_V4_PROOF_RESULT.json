@@ -1,0 +1,47 @@
+{
+  "task_id": "TASK_145_NVDA_FY2020_QUARTERLY_V4_PROOF",
+  "status": "PASS",
+  "started_at": "2026-08-05T15:10:30.262Z",
+  "completed_at": "2026-08-05T15:13:55.890Z",
+  "elapsed_seconds": 205.628,
+  "mandatory_outputs": [
+    "c:\\AI_Stock_Agent\\scripts\\146_nvda_fy2020_quarterly_v4_proof.py",
+    "c:\\AI_Stock_Agent\\data\\nvda_fy2020_quarterly_v4_proof.json",
+    "c:\\AI_Stock_Agent\\data\\nvda_fy2020_quarterly_v4_proof.csv",
+    "c:\\AI_Stock_Agent\\docs\\NVDA_FY2020_QUARTERLY_V4_PROOF.md"
+  ],
+  "outputs": {
+    "c:\\AI_Stock_Agent\\scripts\\146_nvda_fy2020_quarterly_v4_proof.py": {
+      "sha256": "ade9039d3a8475a26a8be16b31b4b30b6a5a5b21b5b00eff419a5833e2517de9",
+      "size_bytes": 24044,
+      "modified_at_utc": "2026-08-05T15:12:09.457Z"
+    },
+    "c:\\AI_Stock_Agent\\data\\nvda_fy2020_quarterly_v4_proof.json": {
+      "sha256": "98093981bcd41adefe84fcd0d28a2460f5df513f2dcb2cb8ec54ff5936cd5a7c",
+      "size_bytes": 45557,
+      "modified_at_utc": "2026-08-05T15:12:24.520Z"
+    },
+    "c:\\AI_Stock_Agent\\data\\nvda_fy2020_quarterly_v4_proof.csv": {
+      "sha256": "f873e5e49cc538ff3c1d5a4987767028934832ad9ab99d60ffaff3610a0e1355",
+      "size_bytes": 4979,
+      "modified_at_utc": "2026-08-05T15:12:24.538Z"
+    },
+    "c:\\AI_Stock_Agent\\docs\\NVDA_FY2020_QUARTERLY_V4_PROOF.md": {
+      "sha256": "7a971b81becf4b28f7661dd01f7ee02320aa7f6bf4fa350736ced61c789ca93c",
+      "size_bytes": 10217,
+      "modified_at_utc": "2026-08-05T15:13:34.050Z"
+    }
+  },
+  "output_problems": [],
+  "utility_version": "142_task_marker_guard-1.0.0",
+  "proof_status": "PASS",
+  "resolved_count": 6,
+  "metric_outcomes": {
+    "revenue": "PASS",
+    "operating_income": "PASS",
+    "pretax_income": "PASS",
+    "income_tax_expense": "PASS",
+    "operating_cash_flow": "PASS",
+    "capex": "PASS"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "task_id": "TASK_145_NVDA_FY2020_QUARTERLY_V4_PROOF",
+  "status": "STARTED",
+  "started_at": "2026-08-05T15:10:30.262Z",
+  "objective": "Read-only quarterly engine V4 proof for exactly NVDA fiscal-year-end 2020-01-26, to determine whether its 6 REVIEW_REQUIRED quarterly metric-year cases now resolve after accession 0001045810-19-000079 was correctly populated in the production warehouse by TASK_144. Does not write to quarterly production or modify either production database; does not load the result into production.",
+  "read_only": true,
+  "expected_outputs": [
+    "scripts/146_nvda_fy2020_quarterly_v4_proof.py",
+    "data/nvda_fy2020_quarterly_v4_proof.json",
+    "data/nvda_fy2020_quarterly_v4_proof.csv",
+    "docs/NVDA_FY2020_QUARTERLY_V4_PROOF.md"
+  ],
+  "process_id": 8664,
+  "hostname": "shai-laptop",
+  "utility_version": "142_task_marker_guard-1.0.0"
+}

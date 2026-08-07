@@ -1,0 +1,6 @@
+﻿as_of_date,balance_sheet_date,filing_date,short_term_investments_usd,short_term_investments_usd_billions,selected_tag,date_rule_passed
+2021-04-01,2020-12-31,2021-01-26,117536000000,117.536,ShortTermInvestments,True
+2022-04-01,2021-12-31,2022-01-25,104765000000,104.765,ShortTermInvestments,True
+2023-04-01,2022-12-31,2023-01-24,83862000000,83.862,ShortTermInvestments,True
+2024-04-01,2023-12-31,2024-01-30,63712000000,63.712,ShortTermInvestments,True
+2025-04-01,2024-12-31,2025-01-29,54073000000,54.073,ShortTermInvestments,True

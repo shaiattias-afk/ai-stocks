@@ -1,0 +1,689 @@
+﻿namespace,tag,label,period_start,period_end,filing_date,value_usd,value_usd_billions,form,fiscal_year,accession_number
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2008-06-01,2009-05-31,2011-06-28,1341000000,1.341,10-K,2011,0001193125-11-174819
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2009-06-01,2010-05-31,2011-06-28,1307000000,1.307,10-K,2011,0001193125-11-174819
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2009-06-01,2010-05-31,2012-06-26,1307000000,1.307,10-K,2012,0001193125-12-284007
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2010-06-01,2011-05-31,2011-06-28,1817000000,1.817,10-K,2011,0001193125-11-174819
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2010-06-01,2011-05-31,2012-06-26,1817000000,1.817,10-K,2012,0001193125-12-284007
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2010-06-01,2011-05-31,2013-06-26,1817000000,1.817,10-K,2013,0001193125-13-272832
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2011-06-01,2012-05-31,2012-06-26,1611000000,1.611,10-K,2012,0001193125-12-284007
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2011-06-01,2012-05-31,2013-06-26,1611000000,1.611,10-K,2013,0001193125-13-272832
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2011-06-01,2012-05-31,2014-06-26,1611000000,1.611,10-K,2014,0001193125-14-251351
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2012-06-01,2013-05-31,2013-06-26,1720000000,1.72,10-K,2013,0001193125-13-272832
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2012-06-01,2013-05-31,2014-06-26,1720000000,1.72,10-K,2014,0001193125-14-251351
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2012-06-01,2013-05-31,2015-06-25,1720000000,1.72,10-K,2015,0001193125-15-235239
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2013-06-01,2014-05-31,2014-06-26,1613000000,1.613,10-K,2014,0001193125-14-251351
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2013-06-01,2014-05-31,2015-06-25,1613000000,1.613,10-K,2015,0001193125-15-235239
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2013-06-01,2014-05-31,2016-06-22,1613000000,1.613,10-K,2016,0001193125-16-628942
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2014-06-01,2015-05-31,2015-06-25,2153000000,2.153,10-K,2015,0001193125-15-235239
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2014-06-01,2015-05-31,2016-06-22,2153000000,2.153,10-K,2016,0001193125-16-628942
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2014-06-01,2015-05-31,2017-06-27,2153000000,2.153,10-K,2017,0001193125-17-214833
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2015-06-01,2016-05-31,2016-06-22,1301000000,1.301,10-K,2016,0001193125-16-628942
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2015-06-01,2016-05-31,2017-06-27,1301000000,1.301,10-K,2017,0001193125-17-214833
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2015-06-01,2016-05-31,2018-06-22,1301000000,1.301,10-K,2018,0001193125-18-201034
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2016-06-01,2017-05-31,2017-06-27,936000000,0.936,10-K,2017,0001193125-17-214833
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2016-06-01,2017-05-31,2018-06-22,936000000,0.936,10-K,2018,0001193125-18-201034
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2016-06-01,2017-05-31,2019-06-21,936000000,0.936,10-K,2019,0001564590-19-023119
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2017-06-01,2018-05-31,2018-06-22,8329000000,8.329,10-K,2018,0001193125-18-201034
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2017-06-01,2018-05-31,2019-06-21,8320000000,8.32,10-K,2019,0001564590-19-023119
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2017-06-01,2018-05-31,2020-06-22,8320000000,8.32,10-K,2020,0001564590-20-030125
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2018-06-01,2019-05-31,2019-06-21,979000000,0.979,10-K,2019,0001564590-19-023119
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2018-06-01,2019-05-31,2020-06-22,979000000,0.979,10-K,2020,0001564590-20-030125
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2018-06-01,2019-05-31,2021-06-21,979000000,0.979,10-K,2021,0001564590-21-033616
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2019-06-01,2020-05-31,2020-06-22,1616000000,1.616,10-K,2020,0001564590-20-030125
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2019-06-01,2020-05-31,2021-06-21,1616000000,1.616,10-K,2021,0001564590-21-033616
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2019-06-01,2020-05-31,2022-06-21,1616000000,1.616,10-K,2022,0001564590-22-023675
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2020-06-01,2021-05-31,2021-06-21,516000000,0.516,10-K,2021,0001564590-21-033616
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2020-06-01,2021-05-31,2022-06-21,516000000,0.516,10-K,2022,0001564590-22-023675
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2020-06-01,2021-05-31,2023-06-20,516000000,0.516,10-K,2023,0000950170-23-028914
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2021-06-01,2022-05-31,2022-06-21,709000000,0.709,10-K,2022,0001564590-22-023675
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2021-06-01,2022-05-31,2023-06-20,709000000,0.709,10-K,2023,0000950170-23-028914
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2021-06-01,2022-05-31,2024-06-20,-709000000,-0.709,10-K,2024,0000950170-24-075605
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2022-06-01,2023-05-31,2023-06-20,625000000,0.625,10-K,2023,0000950170-23-028914
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2022-06-01,2023-05-31,2024-06-20,-625000000,-0.625,10-K,2024,0000950170-24-075605
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2022-06-01,2023-05-31,2025-06-18,625000000,0.625,10-K,2025,0000950170-25-087926
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2023-06-01,2024-05-31,2024-06-20,-999000000,-0.999,10-K,2024,0000950170-24-075605
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2023-06-01,2024-05-31,2025-06-18,999000000,0.999,10-K,2025,0000950170-25-087926
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2023-06-01,2024-05-31,2026-06-22,999000000,0.999,10-K,2026,0001193125-26-277521
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2024-06-01,2025-05-31,2025-06-18,1172000000,1.172,10-K,2025,0000950170-25-087926
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2024-06-01,2025-05-31,2026-06-22,1172000000,1.172,10-K,2026,0001193125-26-277521
+us-gaap,CurrentFederalTaxExpenseBenefit,Current Federal Tax Expense (Benefit),2025-06-01,2026-05-31,2026-06-22,1072000000,1.072,10-K,2026,0001193125-26-277521
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2008-06-01,2009-05-31,2011-06-28,934000000,0.934,10-K,2011,0001193125-11-174819
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2009-06-01,2010-05-31,2011-06-28,1013000000,1.013,10-K,2011,0001193125-11-174819
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2009-06-01,2010-05-31,2012-06-26,1013000000,1.013,10-K,2012,0001193125-12-284007
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2010-06-01,2011-05-31,2011-06-28,1037000000,1.037,10-K,2011,0001193125-11-174819
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2010-06-01,2011-05-31,2012-06-26,1037000000,1.037,10-K,2012,0001193125-12-284007
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2010-06-01,2011-05-31,2013-06-26,1037000000,1.037,10-K,2013,0001193125-13-272832
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2011-06-01,2012-05-31,2012-06-26,1104000000,1.104,10-K,2012,0001193125-12-284007
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2011-06-01,2012-05-31,2013-06-26,1104000000,1.104,10-K,2013,0001193125-13-272832
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2011-06-01,2012-05-31,2014-06-26,1104000000,1.104,10-K,2014,0001193125-14-251351
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2012-06-01,2013-05-31,2013-06-26,1116000000,1.116,10-K,2013,0001193125-13-272832
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2012-06-01,2013-05-31,2014-06-26,1116000000,1.116,10-K,2014,0001193125-14-251351
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2012-06-01,2013-05-31,2015-06-25,1116000000,1.116,10-K,2015,0001193125-15-235239
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2013-06-01,2014-05-31,2014-06-26,1047000000,1.047,10-K,2014,0001193125-14-251351
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2013-06-01,2014-05-31,2015-06-25,1047000000,1.047,10-K,2015,0001193125-15-235239
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2013-06-01,2014-05-31,2016-06-22,1047000000,1.047,10-K,2016,0001193125-16-628942
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2014-06-01,2015-05-31,2015-06-25,981000000,0.981,10-K,2015,0001193125-15-235239
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2014-06-01,2015-05-31,2016-06-22,981000000,0.981,10-K,2016,0001193125-16-628942
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2014-06-01,2015-05-31,2017-06-27,981000000,0.981,10-K,2017,0001193125-17-214833
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2015-06-01,2016-05-31,2016-06-22,1074000000,1.074,10-K,2016,0001193125-16-628942
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2015-06-01,2016-05-31,2017-06-27,1074000000,1.074,10-K,2017,0001193125-17-214833
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2015-06-01,2016-05-31,2018-06-22,1074000000,1.074,10-K,2018,0001193125-18-201034
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2016-06-01,2017-05-31,2017-06-27,1475000000,1.475,10-K,2017,0001193125-17-214833
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2016-06-01,2017-05-31,2018-06-22,1475000000,1.475,10-K,2018,0001193125-18-201034
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2016-06-01,2017-05-31,2019-06-21,1475000000,1.475,10-K,2019,0001564590-19-023119
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2017-06-01,2018-05-31,2018-06-22,1084000000,1.084,10-K,2018,0001193125-18-201034
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2017-06-01,2018-05-31,2019-06-21,1100000000,1.1,10-K,2019,0001564590-19-023119
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2017-06-01,2018-05-31,2020-06-22,1100000000,1.1,10-K,2020,0001564590-20-030125
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2018-06-01,2019-05-31,2019-06-21,1097000000,1.097,10-K,2019,0001564590-19-023119
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2018-06-01,2019-05-31,2020-06-22,1097000000,1.097,10-K,2020,0001564590-20-030125
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2018-06-01,2019-05-31,2021-06-21,1097000000,1.097,10-K,2021,0001564590-21-033616
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2019-06-01,2020-05-31,2020-06-22,1144000000,1.144,10-K,2020,0001564590-20-030125
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2019-06-01,2020-05-31,2021-06-21,1144000000,1.144,10-K,2021,0001564590-21-033616
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2019-06-01,2020-05-31,2022-06-21,1144000000,1.144,10-K,2022,0001564590-22-023675
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2020-06-01,2021-05-31,2021-06-21,929000000,0.929,10-K,2021,0001564590-21-033616
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2020-06-01,2021-05-31,2022-06-21,929000000,0.929,10-K,2022,0001564590-22-023675
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2020-06-01,2021-05-31,2023-06-20,929000000,0.929,10-K,2023,0000950170-23-028914
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2021-06-01,2022-05-31,2022-06-21,1183000000,1.183,10-K,2022,0001564590-22-023675
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2021-06-01,2022-05-31,2023-06-20,1183000000,1.183,10-K,2023,0000950170-23-028914
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2021-06-01,2022-05-31,2024-06-20,-1183000000,-1.183,10-K,2024,0000950170-24-075605
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2022-06-01,2023-05-31,2023-06-20,1767000000,1.767,10-K,2023,0000950170-23-028914
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2022-06-01,2023-05-31,2024-06-20,-1767000000,-1.767,10-K,2024,0000950170-24-075605
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2022-06-01,2023-05-31,2025-06-18,1767000000,1.767,10-K,2025,0000950170-25-087926
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2023-06-01,2024-05-31,2024-06-20,-1994000000,-1.994,10-K,2024,0000950170-24-075605
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2023-06-01,2024-05-31,2025-06-18,1994000000,1.994,10-K,2025,0000950170-25-087926
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2023-06-01,2024-05-31,2026-06-22,1994000000,1.994,10-K,2026,0001193125-26-277521
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2024-06-01,2025-05-31,2025-06-18,1986000000,1.986,10-K,2025,0000950170-25-087926
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2024-06-01,2025-05-31,2026-06-22,1986000000,1.986,10-K,2026,0001193125-26-277521
+us-gaap,CurrentForeignTaxExpenseBenefit,Current Foreign Tax Expense (Benefit),2025-06-01,2026-05-31,2026-06-22,2005000000,2.005,10-K,2026,0001193125-26-277521
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2008-06-01,2009-05-31,2011-06-28,2636000000,2.636,10-K,2011,0001193125-11-174819
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2009-06-01,2010-05-31,2011-06-28,2619000000,2.619,10-K,2011,0001193125-11-174819
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2009-06-01,2010-05-31,2012-06-26,2619000000,2.619,10-K,2012,0001193125-12-284007
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2010-06-01,2011-05-31,2011-06-28,3117000000,3.117,10-K,2011,0001193125-11-174819
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2010-06-01,2011-05-31,2012-06-26,3117000000,3.117,10-K,2012,0001193125-12-284007
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2010-06-01,2011-05-31,2013-06-26,3117000000,3.117,10-K,2013,0001193125-13-272832
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2011-06-01,2012-05-31,2012-06-26,2972000000,2.972,10-K,2012,0001193125-12-284007
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2011-06-01,2012-05-31,2013-06-26,2972000000,2.972,10-K,2013,0001193125-13-272832
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2011-06-01,2012-05-31,2014-06-26,2972000000,2.972,10-K,2014,0001193125-14-251351
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2012-06-01,2013-05-31,2013-06-26,3090000000,3.09,10-K,2013,0001193125-13-272832
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2012-06-01,2013-05-31,2014-06-26,3090000000,3.09,10-K,2014,0001193125-14-251351
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2012-06-01,2013-05-31,2015-06-25,3090000000,3.09,10-K,2015,0001193125-15-235239
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2013-06-01,2014-05-31,2014-06-26,2997000000,2.997,10-K,2014,0001193125-14-251351
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2013-06-01,2014-05-31,2015-06-25,2997000000,2.997,10-K,2015,0001193125-15-235239
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2013-06-01,2014-05-31,2016-06-22,2997000000,2.997,10-K,2016,0001193125-16-628942
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2014-06-01,2015-05-31,2015-06-25,3444000000,3.444,10-K,2015,0001193125-15-235239
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2014-06-01,2015-05-31,2016-06-22,3444000000,3.444,10-K,2016,0001193125-16-628942
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2014-06-01,2015-05-31,2017-06-27,3444000000,3.444,10-K,2017,0001193125-17-214833
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2015-06-01,2016-05-31,2016-06-22,2646000000,2.646,10-K,2016,0001193125-16-628942
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2015-06-01,2016-05-31,2017-06-27,2646000000,2.646,10-K,2017,0001193125-17-214833
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2015-06-01,2016-05-31,2018-06-22,2646000000,2.646,10-K,2018,0001193125-18-201034
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2016-06-01,2017-05-31,2017-06-27,2668000000,2.668,10-K,2017,0001193125-17-214833
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2016-06-01,2017-05-31,2018-06-22,2668000000,2.668,10-K,2018,0001193125-18-201034
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2016-06-01,2017-05-31,2019-06-21,2668000000,2.668,10-K,2019,0001564590-19-023119
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2017-06-01,2018-05-31,2018-06-22,9677000000,9.677,10-K,2018,0001193125-18-201034
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2017-06-01,2018-05-31,2019-06-21,9684000000,9.684,10-K,2019,0001564590-19-023119
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2017-06-01,2018-05-31,2020-06-22,9684000000,9.684,10-K,2020,0001564590-20-030125
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2018-06-01,2019-05-31,2019-06-21,2376000000,2.376,10-K,2019,0001564590-19-023119
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2018-06-01,2019-05-31,2020-06-22,2376000000,2.376,10-K,2020,0001564590-20-030125
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2018-06-01,2019-05-31,2021-06-21,2376000000,2.376,10-K,2021,0001564590-21-033616
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2019-06-01,2020-05-31,2020-06-22,2779000000,2.779,10-K,2020,0001564590-20-030125
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2019-06-01,2020-05-31,2021-06-21,2779000000,2.779,10-K,2021,0001564590-21-033616
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2019-06-01,2020-05-31,2022-06-21,2779000000,2.779,10-K,2022,0001564590-22-023675
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2020-06-01,2021-05-31,2021-06-21,1678000000,1.678,10-K,2021,0001564590-21-033616
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2020-06-01,2021-05-31,2022-06-21,1678000000,1.678,10-K,2022,0001564590-22-023675
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2020-06-01,2021-05-31,2023-06-20,1678000000,1.678,10-K,2023,0000950170-23-028914
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2021-06-01,2022-05-31,2022-06-21,2078000000,2.078,10-K,2022,0001564590-22-023675
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2021-06-01,2022-05-31,2023-06-20,2078000000,2.078,10-K,2023,0000950170-23-028914
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2021-06-01,2022-05-31,2024-06-20,-2078000000,-2.078,10-K,2024,0000950170-24-075605
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2022-06-01,2023-05-31,2023-06-20,2790000000,2.79,10-K,2023,0000950170-23-028914
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2022-06-01,2023-05-31,2024-06-20,-2790000000,-2.79,10-K,2024,0000950170-24-075605
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2022-06-01,2023-05-31,2025-06-18,2790000000,2.79,10-K,2025,0000950170-25-087926
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2023-06-01,2024-05-31,2024-06-20,-3413000000,-3.413,10-K,2024,0000950170-24-075605
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2023-06-01,2024-05-31,2025-06-18,3413000000,3.413,10-K,2025,0000950170-25-087926
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2023-06-01,2024-05-31,2026-06-22,3413000000,3.413,10-K,2026,0001193125-26-277521
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2024-06-01,2025-05-31,2025-06-18,3354000000,3.354,10-K,2025,0000950170-25-087926
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2024-06-01,2025-05-31,2026-06-22,3354000000,3.354,10-K,2026,0001193125-26-277521
+us-gaap,CurrentIncomeTaxExpenseBenefit,Current Income Tax Expense (Benefit),2025-06-01,2026-05-31,2026-06-22,3384000000,3.384,10-K,2026,0001193125-26-277521
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2008-06-01,2009-05-31,2011-06-28,361000000,0.361,10-K,2011,0001193125-11-174819
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2009-06-01,2010-05-31,2011-06-28,299000000,0.299,10-K,2011,0001193125-11-174819
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2009-06-01,2010-05-31,2012-06-26,299000000,0.299,10-K,2012,0001193125-12-284007
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2010-06-01,2011-05-31,2011-06-28,263000000,0.263,10-K,2011,0001193125-11-174819
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2010-06-01,2011-05-31,2012-06-26,263000000,0.263,10-K,2012,0001193125-12-284007
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2010-06-01,2011-05-31,2013-06-26,263000000,0.263,10-K,2013,0001193125-13-272832
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2011-06-01,2012-05-31,2012-06-26,257000000,0.257,10-K,2012,0001193125-12-284007
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2011-06-01,2012-05-31,2013-06-26,257000000,0.257,10-K,2013,0001193125-13-272832
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2011-06-01,2012-05-31,2014-06-26,257000000,0.257,10-K,2014,0001193125-14-251351
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2012-06-01,2013-05-31,2013-06-26,254000000,0.254,10-K,2013,0001193125-13-272832
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2012-06-01,2013-05-31,2014-06-26,254000000,0.254,10-K,2014,0001193125-14-251351
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2012-06-01,2013-05-31,2015-06-25,254000000,0.254,10-K,2015,0001193125-15-235239
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2013-06-01,2014-05-31,2014-06-26,337000000,0.337,10-K,2014,0001193125-14-251351
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2013-06-01,2014-05-31,2015-06-25,337000000,0.337,10-K,2015,0001193125-15-235239
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2013-06-01,2014-05-31,2016-06-22,337000000,0.337,10-K,2016,0001193125-16-628942
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2014-06-01,2015-05-31,2015-06-25,310000000,0.31,10-K,2015,0001193125-15-235239
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2014-06-01,2015-05-31,2016-06-22,310000000,0.31,10-K,2016,0001193125-16-628942
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2014-06-01,2015-05-31,2017-06-27,310000000,0.31,10-K,2017,0001193125-17-214833
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2015-06-01,2016-05-31,2016-06-22,271000000,0.271,10-K,2016,0001193125-16-628942
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2015-06-01,2016-05-31,2017-06-27,271000000,0.271,10-K,2017,0001193125-17-214833
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2015-06-01,2016-05-31,2018-06-22,271000000,0.271,10-K,2018,0001193125-18-201034
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2016-06-01,2017-05-31,2017-06-27,257000000,0.257,10-K,2017,0001193125-17-214833
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2016-06-01,2017-05-31,2018-06-22,257000000,0.257,10-K,2018,0001193125-18-201034
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2016-06-01,2017-05-31,2019-06-21,257000000,0.257,10-K,2019,0001564590-19-023119
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2017-06-01,2018-05-31,2018-06-22,264000000,0.264,10-K,2018,0001193125-18-201034
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2017-06-01,2018-05-31,2019-06-21,264000000,0.264,10-K,2019,0001564590-19-023119
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2017-06-01,2018-05-31,2020-06-22,264000000,0.264,10-K,2020,0001564590-20-030125
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2018-06-01,2019-05-31,2019-06-21,300000000,0.3,10-K,2019,0001564590-19-023119
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2018-06-01,2019-05-31,2020-06-22,300000000,0.3,10-K,2020,0001564590-20-030125
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2018-06-01,2019-05-31,2021-06-21,300000000,0.3,10-K,2021,0001564590-21-033616
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2019-06-01,2020-05-31,2020-06-22,19000000,0.019,10-K,2020,0001564590-20-030125
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2019-06-01,2020-05-31,2021-06-21,19000000,0.019,10-K,2021,0001564590-21-033616
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2019-06-01,2020-05-31,2022-06-21,19000000,0.019,10-K,2022,0001564590-22-023675
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2020-06-01,2021-05-31,2021-06-21,233000000,0.233,10-K,2021,0001564590-21-033616
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2020-06-01,2021-05-31,2022-06-21,233000000,0.233,10-K,2022,0001564590-22-023675
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2020-06-01,2021-05-31,2023-06-20,233000000,0.233,10-K,2023,0000950170-23-028914
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2021-06-01,2022-05-31,2022-06-21,186000000,0.186,10-K,2022,0001564590-22-023675
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2021-06-01,2022-05-31,2023-06-20,186000000,0.186,10-K,2023,0000950170-23-028914
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2021-06-01,2022-05-31,2024-06-20,-186000000,-0.186,10-K,2024,0000950170-24-075605
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2022-06-01,2023-05-31,2023-06-20,398000000,0.398,10-K,2023,0000950170-23-028914
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2022-06-01,2023-05-31,2024-06-20,-398000000,-0.398,10-K,2024,0000950170-24-075605
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2022-06-01,2023-05-31,2025-06-18,398000000,0.398,10-K,2025,0000950170-25-087926
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2023-06-01,2024-05-31,2024-06-20,-420000000,-0.42,10-K,2024,0000950170-24-075605
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2023-06-01,2024-05-31,2025-06-18,420000000,0.42,10-K,2025,0000950170-25-087926
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2023-06-01,2024-05-31,2026-06-22,420000000,0.42,10-K,2026,0001193125-26-277521
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2024-06-01,2025-05-31,2025-06-18,196000000,0.196,10-K,2025,0000950170-25-087926
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2024-06-01,2025-05-31,2026-06-22,196000000,0.196,10-K,2026,0001193125-26-277521
+us-gaap,CurrentStateAndLocalTaxExpenseBenefit,Current State and Local Tax Expense (Benefit),2025-06-01,2026-05-31,2026-06-22,307000000,0.307,10-K,2026,0001193125-26-277521
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2008-06-01,2009-05-31,2011-06-28,-177000000,-0.177,10-K,2011,0001193125-11-174819
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2009-06-01,2010-05-31,2011-06-28,-380000000,-0.38,10-K,2011,0001193125-11-174819
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2009-06-01,2010-05-31,2012-06-26,-380000000,-0.38,10-K,2012,0001193125-12-284007
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2010-06-01,2011-05-31,2011-06-28,-179000000,-0.179,10-K,2011,0001193125-11-174819
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2010-06-01,2011-05-31,2012-06-26,-179000000,-0.179,10-K,2012,0001193125-12-284007
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2010-06-01,2011-05-31,2013-06-26,-179000000,-0.179,10-K,2013,0001193125-13-272832
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2011-06-01,2012-05-31,2012-06-26,267000000,0.267,10-K,2012,0001193125-12-284007
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2011-06-01,2012-05-31,2013-06-26,267000000,0.267,10-K,2013,0001193125-13-272832
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2011-06-01,2012-05-31,2014-06-26,267000000,0.267,10-K,2014,0001193125-14-251351
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2012-06-01,2013-05-31,2013-06-26,-179000000,-0.179,10-K,2013,0001193125-13-272832
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2012-06-01,2013-05-31,2014-06-26,-179000000,-0.179,10-K,2014,0001193125-14-251351
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2012-06-01,2013-05-31,2015-06-25,-179000000,-0.179,10-K,2015,0001193125-15-235239
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2013-06-01,2014-05-31,2014-06-26,-68000000,-0.068,10-K,2014,0001193125-14-251351
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2013-06-01,2014-05-31,2015-06-25,-68000000,-0.068,10-K,2015,0001193125-15-235239
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2013-06-01,2014-05-31,2016-06-22,-68000000,-0.068,10-K,2016,0001193125-16-628942
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2014-06-01,2015-05-31,2015-06-25,-408000000,-0.408,10-K,2015,0001193125-15-235239
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2014-06-01,2015-05-31,2016-06-22,-408000000,-0.408,10-K,2016,0001193125-16-628942
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2014-06-01,2015-05-31,2017-06-27,-408000000,-0.408,10-K,2017,0001193125-17-214833
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2015-06-01,2016-05-31,2016-06-22,-123000000,-0.123,10-K,2016,0001193125-16-628942
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2015-06-01,2016-05-31,2017-06-27,-123000000,-0.123,10-K,2017,0001193125-17-214833
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2015-06-01,2016-05-31,2018-06-22,-123000000,-0.123,10-K,2018,0001193125-18-201034
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2016-06-01,2017-05-31,2017-06-27,-201000000,-0.201,10-K,2017,0001193125-17-214833
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2016-06-01,2017-05-31,2018-06-22,-201000000,-0.201,10-K,2018,0001193125-18-201034
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2016-06-01,2017-05-31,2019-06-21,-158000000,-0.158,10-K,2019,0001564590-19-023119
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2017-06-01,2018-05-31,2018-06-22,-614000000,-0.614,10-K,2018,0001193125-18-201034
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2017-06-01,2018-05-31,2019-06-21,-827000000,-0.827,10-K,2019,0001564590-19-023119
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2017-06-01,2018-05-31,2020-06-22,-827000000,-0.827,10-K,2020,0001564590-20-030125
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2018-06-01,2019-05-31,2019-06-21,483000000,0.483,10-K,2019,0001564590-19-023119
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2018-06-01,2019-05-31,2020-06-22,483000000,0.483,10-K,2020,0001564590-20-030125
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2018-06-01,2019-05-31,2021-06-21,483000000,0.483,10-K,2021,0001564590-21-033616
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2019-06-01,2020-05-31,2020-06-22,-983000000,-0.983,10-K,2020,0001564590-20-030125
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2019-06-01,2020-05-31,2021-06-21,-983000000,-0.983,10-K,2021,0001564590-21-033616
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2019-06-01,2020-05-31,2022-06-21,-983000000,-0.983,10-K,2022,0001564590-22-023675
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2020-06-01,2021-05-31,2021-06-21,8631000000,8.631,10-K,2021,0001564590-21-033616
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2020-06-01,2021-05-31,2022-06-21,8631000000,8.631,10-K,2022,0001564590-22-023675
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2020-06-01,2021-05-31,2023-06-20,8631000000,8.631,10-K,2023,0000950170-23-028914
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2021-06-01,2022-05-31,2022-06-21,-1661000000,-1.661,10-K,2022,0001564590-22-023675
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2021-06-01,2022-05-31,2023-06-20,-1661000000,-1.661,10-K,2023,0000950170-23-028914
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2021-06-01,2022-05-31,2024-06-20,1661000000,1.661,10-K,2024,0000950170-24-075605
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2022-06-01,2023-05-31,2023-06-20,-2193000000,-2.193,10-K,2023,0000950170-23-028914
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2022-06-01,2023-05-31,2024-06-20,2193000000,2.193,10-K,2024,0000950170-24-075605
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2022-06-01,2023-05-31,2025-06-18,-2193000000,-2.193,10-K,2025,0000950170-25-087926
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2023-06-01,2024-05-31,2024-06-20,2020000000,2.02,10-K,2024,0000950170-24-075605
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2023-06-01,2024-05-31,2025-06-18,-2020000000,-2.02,10-K,2025,0000950170-25-087926
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2023-06-01,2024-05-31,2026-06-22,-2020000000,-2.02,10-K,2026,0001193125-26-277521
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2024-06-01,2025-05-31,2025-06-18,-2208000000,-2.208,10-K,2025,0000950170-25-087926
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2024-06-01,2025-05-31,2026-06-22,-2208000000,-2.208,10-K,2026,0001193125-26-277521
+us-gaap,DeferredFederalIncomeTaxExpenseBenefit,Deferred Federal Income Tax Expense (Benefit),2025-06-01,2026-05-31,2026-06-22,-1783000000,-1.783,10-K,2026,0001193125-26-277521
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2008-06-01,2009-05-31,2011-06-28,-166000000,-0.166,10-K,2011,0001193125-11-174819
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2009-06-01,2010-05-31,2011-06-28,-55000000,-0.055,10-K,2011,0001193125-11-174819
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2009-06-01,2010-05-31,2012-06-26,-55000000,-0.055,10-K,2012,0001193125-12-284007
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2010-06-01,2011-05-31,2011-06-28,-88000000,-0.088,10-K,2011,0001193125-11-174819
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2010-06-01,2011-05-31,2012-06-26,-88000000,-0.088,10-K,2012,0001193125-12-284007
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2010-06-01,2011-05-31,2013-06-26,-88000000,-0.088,10-K,2013,0001193125-13-272832
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2011-06-01,2012-05-31,2012-06-26,-272000000,-0.272,10-K,2012,0001193125-12-284007
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2011-06-01,2012-05-31,2013-06-26,-272000000,-0.272,10-K,2013,0001193125-13-272832
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2011-06-01,2012-05-31,2014-06-26,-272000000,-0.272,10-K,2014,0001193125-14-251351
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2012-06-01,2013-05-31,2013-06-26,-20000000,-0.02,10-K,2013,0001193125-13-272832
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2012-06-01,2013-05-31,2014-06-26,-20000000,-0.02,10-K,2014,0001193125-14-251351
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2012-06-01,2013-05-31,2015-06-25,-20000000,-0.02,10-K,2015,0001193125-15-235239
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2013-06-01,2014-05-31,2014-06-26,-80000000,-0.08,10-K,2014,0001193125-14-251351
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2013-06-01,2014-05-31,2015-06-25,-80000000,-0.08,10-K,2015,0001193125-15-235239
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2013-06-01,2014-05-31,2016-06-22,-80000000,-0.08,10-K,2016,0001193125-16-628942
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2014-06-01,2015-05-31,2015-06-25,-94000000,-0.094,10-K,2015,0001193125-15-235239
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2014-06-01,2015-05-31,2016-06-22,-94000000,-0.094,10-K,2016,0001193125-16-628942
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2014-06-01,2015-05-31,2017-06-27,-94000000,-0.094,10-K,2017,0001193125-17-214833
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2015-06-01,2016-05-31,2016-06-22,39000000,0.039,10-K,2016,0001193125-16-628942
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2015-06-01,2016-05-31,2017-06-27,39000000,0.039,10-K,2017,0001193125-17-214833
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2015-06-01,2016-05-31,2018-06-22,39000000,0.039,10-K,2018,0001193125-18-201034
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2016-06-01,2017-05-31,2017-06-27,-249000000,-0.249,10-K,2017,0001193125-17-214833
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2016-06-01,2017-05-31,2018-06-22,-249000000,-0.249,10-K,2018,0001193125-18-201034
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2016-06-01,2017-05-31,2019-06-21,-253000000,-0.253,10-K,2019,0001564590-19-023119
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2017-06-01,2018-05-31,2018-06-22,16000000,0.016,10-K,2018,0001193125-18-201034
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2017-06-01,2018-05-31,2019-06-21,6000000,0.006,10-K,2019,0001564590-19-023119
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2017-06-01,2018-05-31,2020-06-22,6000000,0.006,10-K,2020,0001564590-20-030125
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2018-06-01,2019-05-31,2019-06-21,-1646000000,-1.646,10-K,2019,0001564590-19-023119
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2018-06-01,2019-05-31,2020-06-22,-1646000000,-1.646,10-K,2020,0001564590-20-030125
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2018-06-01,2019-05-31,2021-06-21,-1646000000,-1.646,10-K,2021,0001564590-21-033616
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2019-06-01,2020-05-31,2020-06-22,82000000,0.082,10-K,2020,0001564590-20-030125
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2019-06-01,2020-05-31,2021-06-21,82000000,0.082,10-K,2021,0001564590-21-033616
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2019-06-01,2020-05-31,2022-06-21,82000000,0.082,10-K,2022,0001564590-22-023675
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2020-06-01,2021-05-31,2021-06-21,-10979000000,-10.979,10-K,2021,0001564590-21-033616
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2020-06-01,2021-05-31,2022-06-21,-10979000000,-10.979,10-K,2022,0001564590-22-023675
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2020-06-01,2021-05-31,2023-06-20,-10979000000,-10.979,10-K,2023,0000950170-23-028914
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2021-06-01,2022-05-31,2022-06-21,654000000,0.654,10-K,2022,0001564590-22-023675
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2021-06-01,2022-05-31,2023-06-20,654000000,0.654,10-K,2023,0000950170-23-028914
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2021-06-01,2022-05-31,2024-06-20,-654000000,-0.654,10-K,2024,0000950170-24-075605
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2022-06-01,2023-05-31,2023-06-20,424000000,0.424,10-K,2023,0000950170-23-028914
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2022-06-01,2023-05-31,2024-06-20,-424000000,-0.424,10-K,2024,0000950170-24-075605
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2022-06-01,2023-05-31,2025-06-18,424000000,0.424,10-K,2025,0000950170-25-087926
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2023-06-01,2024-05-31,2024-06-20,-161000000,-0.161,10-K,2024,0000950170-24-075605
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2023-06-01,2024-05-31,2025-06-18,161000000,0.161,10-K,2025,0000950170-25-087926
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2023-06-01,2024-05-31,2026-06-22,161000000,0.161,10-K,2026,0001193125-26-277521
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2024-06-01,2025-05-31,2025-06-18,773000000,0.773,10-K,2025,0000950170-25-087926
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2024-06-01,2025-05-31,2026-06-22,773000000,0.773,10-K,2026,0001193125-26-277521
+us-gaap,DeferredForeignIncomeTaxExpenseBenefit,Deferred Foreign Income Tax Expense (Benefit),2025-06-01,2026-05-31,2026-06-22,1018000000,1.018,10-K,2026,0001193125-26-277521
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2007-06-01,2008-05-31,2010-07-01,-135000000,-0.135,10-K,2010,0001193125-10-151896
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2008-06-01,2009-05-31,2010-07-01,-395000000,-0.395,10-K,2010,0001193125-10-151896
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2008-06-01,2009-05-31,2011-06-28,395000000,0.395,10-K,2011,0001193125-11-174819
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2009-06-01,2010-05-31,2010-07-01,-511000000,-0.511,10-K,2010,0001193125-10-151896
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2009-06-01,2010-05-31,2011-06-28,511000000,0.511,10-K,2011,0001193125-11-174819
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2009-06-01,2010-05-31,2012-06-26,-511000000,-0.511,10-K,2012,0001193125-12-284007
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2010-06-01,2011-05-31,2011-06-28,253000000,0.253,10-K,2011,0001193125-11-174819
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2010-06-01,2011-05-31,2012-06-26,-253000000,-0.253,10-K,2012,0001193125-12-284007
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2010-06-01,2011-05-31,2013-06-26,-253000000,-0.253,10-K,2013,0001193125-13-272832
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2011-06-01,2012-05-31,2012-06-26,9000000,0.009,10-K,2012,0001193125-12-284007
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2011-06-01,2012-05-31,2013-06-26,9000000,0.009,10-K,2013,0001193125-13-272832
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2011-06-01,2012-05-31,2014-06-26,9000000,0.009,10-K,2014,0001193125-14-251351
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2012-06-01,2013-05-31,2013-06-26,-117000000,-0.117,10-K,2013,0001193125-13-272832
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2012-06-01,2013-05-31,2014-06-26,-117000000,-0.117,10-K,2014,0001193125-14-251351
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2012-06-01,2013-05-31,2015-06-25,-117000000,-0.117,10-K,2015,0001193125-15-235239
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2013-06-01,2014-05-31,2014-06-26,-248000000,-0.248,10-K,2014,0001193125-14-251351
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2013-06-01,2014-05-31,2015-06-25,-248000000,-0.248,10-K,2015,0001193125-15-235239
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2013-06-01,2014-05-31,2016-06-22,-248000000,-0.248,10-K,2016,0001193125-16-628942
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2014-06-01,2015-05-31,2015-06-25,-548000000,-0.548,10-K,2015,0001193125-15-235239
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2014-06-01,2015-05-31,2016-06-22,-548000000,-0.548,10-K,2016,0001193125-16-628942
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2014-06-01,2015-05-31,2017-06-27,-548000000,-0.548,10-K,2017,0001193125-17-214833
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2015-06-01,2016-05-31,2016-06-22,-105000000,-0.105,10-K,2016,0001193125-16-628942
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2015-06-01,2016-05-31,2017-06-27,-105000000,-0.105,10-K,2017,0001193125-17-214833
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2015-06-01,2016-05-31,2018-06-22,-105000000,-0.105,10-K,2018,0001193125-18-201034
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2016-06-01,2017-05-31,2017-06-27,-486000000,-0.486,10-K,2017,0001193125-17-214833
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2016-06-01,2017-05-31,2018-06-22,-486000000,-0.486,10-K,2018,0001193125-18-201034
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2016-06-01,2017-05-31,2019-06-21,-440000000,-0.44,10-K,2019,0001564590-19-023119
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2017-06-01,2018-05-31,2018-06-22,-611000000,-0.611,10-K,2018,0001193125-18-201034
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2017-06-01,2018-05-31,2019-06-21,-847000000,-0.847,10-K,2019,0001564590-19-023119
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2017-06-01,2018-05-31,2020-06-22,-847000000,-0.847,10-K,2020,0001564590-20-030125
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2018-06-01,2019-05-31,2019-06-21,-1191000000,-1.191,10-K,2019,0001564590-19-023119
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2018-06-01,2019-05-31,2020-06-22,-1191000000,-1.191,10-K,2020,0001564590-20-030125
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2018-06-01,2019-05-31,2021-06-21,-1191000000,-1.191,10-K,2021,0001564590-21-033616
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2019-06-01,2020-05-31,2020-06-22,-851000000,-0.851,10-K,2020,0001564590-20-030125
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2019-06-01,2020-05-31,2021-06-21,-851000000,-0.851,10-K,2021,0001564590-21-033616
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2019-06-01,2020-05-31,2022-06-21,-851000000,-0.851,10-K,2022,0001564590-22-023675
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2020-06-01,2021-05-31,2021-06-21,-2425000000,-2.425,10-K,2021,0001564590-21-033616
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2020-06-01,2021-05-31,2022-06-21,-2425000000,-2.425,10-K,2022,0001564590-22-023675
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2020-06-01,2021-05-31,2023-06-20,-2425000000,-2.425,10-K,2023,0000950170-23-028914
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2021-06-01,2022-05-31,2022-06-21,-1146000000,-1.146,10-K,2022,0001564590-22-023675
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2021-06-01,2022-05-31,2023-06-20,-1146000000,-1.146,10-K,2023,0000950170-23-028914
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2021-06-01,2022-05-31,2024-06-20,-1146000000,-1.146,10-K,2024,0000950170-24-075605
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2022-06-01,2023-05-31,2023-06-20,-2167000000,-2.167,10-K,2023,0000950170-23-028914
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2022-06-01,2023-05-31,2024-06-20,-2167000000,-2.167,10-K,2024,0000950170-24-075605
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2022-06-01,2023-05-31,2025-06-18,-2167000000,-2.167,10-K,2025,0000950170-25-087926
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2023-06-01,2024-05-31,2024-06-20,-2139000000,-2.139,10-K,2024,0000950170-24-075605
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2023-06-01,2024-05-31,2025-06-18,-2139000000,-2.139,10-K,2025,0000950170-25-087926
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2023-06-01,2024-05-31,2026-06-22,-2139000000,-2.139,10-K,2026,0001193125-26-277521
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2024-06-01,2025-05-31,2025-06-18,-1637000000,-1.637,10-K,2025,0000950170-25-087926
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2024-06-01,2025-05-31,2026-06-22,-1637000000,-1.637,10-K,2026,0001193125-26-277521
+us-gaap,DeferredIncomeTaxExpenseBenefit,Deferred Income Tax Expense (Benefit),2025-06-01,2026-05-31,2026-06-22,-917000000,-0.917,10-K,2026,0001193125-26-277521
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2008-06-01,2009-05-31,2011-06-28,-52000000,-0.052,10-K,2011,0001193125-11-174819
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2009-06-01,2010-05-31,2011-06-28,-76000000,-0.076,10-K,2011,0001193125-11-174819
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2009-06-01,2010-05-31,2012-06-26,-76000000,-0.076,10-K,2012,0001193125-12-284007
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2010-06-01,2011-05-31,2011-06-28,14000000,0.014,10-K,2011,0001193125-11-174819
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2010-06-01,2011-05-31,2012-06-26,14000000,0.014,10-K,2012,0001193125-12-284007
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2010-06-01,2011-05-31,2013-06-26,14000000,0.014,10-K,2013,0001193125-13-272832
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2011-06-01,2012-05-31,2012-06-26,14000000,0.014,10-K,2012,0001193125-12-284007
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2011-06-01,2012-05-31,2013-06-26,14000000,0.014,10-K,2013,0001193125-13-272832
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2011-06-01,2012-05-31,2014-06-26,14000000,0.014,10-K,2014,0001193125-14-251351
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2012-06-01,2013-05-31,2013-06-26,82000000,0.082,10-K,2013,0001193125-13-272832
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2012-06-01,2013-05-31,2014-06-26,82000000,0.082,10-K,2014,0001193125-14-251351
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2012-06-01,2013-05-31,2015-06-25,82000000,0.082,10-K,2015,0001193125-15-235239
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2013-06-01,2014-05-31,2014-06-26,-100000000,-0.1,10-K,2014,0001193125-14-251351
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2013-06-01,2014-05-31,2015-06-25,-100000000,-0.1,10-K,2015,0001193125-15-235239
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2013-06-01,2014-05-31,2016-06-22,-100000000,-0.1,10-K,2016,0001193125-16-628942
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2014-06-01,2015-05-31,2015-06-25,-46000000,-0.046,10-K,2015,0001193125-15-235239
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2014-06-01,2015-05-31,2016-06-22,-46000000,-0.046,10-K,2016,0001193125-16-628942
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2014-06-01,2015-05-31,2017-06-27,-46000000,-0.046,10-K,2017,0001193125-17-214833
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2015-06-01,2016-05-31,2016-06-22,-21000000,-0.021,10-K,2016,0001193125-16-628942
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2015-06-01,2016-05-31,2017-06-27,-21000000,-0.021,10-K,2017,0001193125-17-214833
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2015-06-01,2016-05-31,2018-06-22,-21000000,-0.021,10-K,2018,0001193125-18-201034
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2016-06-01,2017-05-31,2017-06-27,-36000000,-0.036,10-K,2017,0001193125-17-214833
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2016-06-01,2017-05-31,2018-06-22,-36000000,-0.036,10-K,2018,0001193125-18-201034
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2016-06-01,2017-05-31,2019-06-21,-29000000,-0.029,10-K,2019,0001564590-19-023119
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2017-06-01,2018-05-31,2018-06-22,-13000000,-0.013,10-K,2018,0001193125-18-201034
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2017-06-01,2018-05-31,2019-06-21,-26000000,-0.026,10-K,2019,0001564590-19-023119
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2017-06-01,2018-05-31,2020-06-22,-26000000,-0.026,10-K,2020,0001564590-20-030125
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2018-06-01,2019-05-31,2019-06-21,-28000000,-0.028,10-K,2019,0001564590-19-023119
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2018-06-01,2019-05-31,2020-06-22,-28000000,-0.028,10-K,2020,0001564590-20-030125
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2018-06-01,2019-05-31,2021-06-21,-28000000,-0.028,10-K,2021,0001564590-21-033616
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2019-06-01,2020-05-31,2020-06-22,50000000,0.05,10-K,2020,0001564590-20-030125
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2019-06-01,2020-05-31,2021-06-21,50000000,0.05,10-K,2021,0001564590-21-033616
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2019-06-01,2020-05-31,2022-06-21,50000000,0.05,10-K,2022,0001564590-22-023675
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2020-06-01,2021-05-31,2021-06-21,-77000000,-0.077,10-K,2021,0001564590-21-033616
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2020-06-01,2021-05-31,2022-06-21,-77000000,-0.077,10-K,2022,0001564590-22-023675
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2020-06-01,2021-05-31,2023-06-20,-77000000,-0.077,10-K,2023,0000950170-23-028914
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2021-06-01,2022-05-31,2022-06-21,-139000000,-0.139,10-K,2022,0001564590-22-023675
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2021-06-01,2022-05-31,2023-06-20,-139000000,-0.139,10-K,2023,0000950170-23-028914
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2021-06-01,2022-05-31,2024-06-20,139000000,0.139,10-K,2024,0000950170-24-075605
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2022-06-01,2023-05-31,2023-06-20,-398000000,-0.398,10-K,2023,0000950170-23-028914
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2022-06-01,2023-05-31,2024-06-20,398000000,0.398,10-K,2024,0000950170-24-075605
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2022-06-01,2023-05-31,2025-06-18,-398000000,-0.398,10-K,2025,0000950170-25-087926
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2023-06-01,2024-05-31,2024-06-20,280000000,0.28,10-K,2024,0000950170-24-075605
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2023-06-01,2024-05-31,2025-06-18,-280000000,-0.28,10-K,2025,0000950170-25-087926
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2023-06-01,2024-05-31,2026-06-22,-280000000,-0.28,10-K,2026,0001193125-26-277521
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2024-06-01,2025-05-31,2025-06-18,-202000000,-0.202,10-K,2025,0000950170-25-087926
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2024-06-01,2025-05-31,2026-06-22,-202000000,-0.202,10-K,2026,0001193125-26-277521
+us-gaap,DeferredStateAndLocalIncomeTaxExpenseBenefit,Deferred State and Local Income Tax Expense (Benefit),2025-06-01,2026-05-31,2026-06-22,-152000000,-0.152,10-K,2026,0001193125-26-277521
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2011-06-01,2012-05-31,2014-06-26,182000000,0.182,10-K,2014,0001193125-14-251351
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2012-06-01,2013-05-31,2014-06-26,410000000,0.41,10-K,2014,0001193125-14-251351
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2012-06-01,2013-05-31,2015-06-25,410000000,0.41,10-K,2015,0001193125-15-235239
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2013-06-01,2014-05-31,2014-06-26,480000000,0.48,10-K,2014,0001193125-14-251351
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2013-06-01,2014-05-31,2015-06-25,480000000,0.48,10-K,2015,0001193125-15-235239
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2013-06-01,2014-05-31,2016-06-22,480000000,0.48,10-K,2016,0001193125-16-628942
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2014-06-01,2015-05-31,2015-06-25,396000000,0.396,10-K,2015,0001193125-15-235239
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2014-06-01,2015-05-31,2016-06-22,396000000,0.396,10-K,2016,0001193125-16-628942
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2014-06-01,2015-05-31,2017-06-27,396000000,0.396,10-K,2017,0001193125-17-214833
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2015-06-01,2016-05-31,2016-06-22,311000000,0.311,10-K,2016,0001193125-16-628942
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2015-06-01,2016-05-31,2017-06-27,311000000,0.311,10-K,2017,0001193125-17-214833
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2015-06-01,2016-05-31,2018-06-22,311000000,0.311,10-K,2018,0001193125-18-201034
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2016-06-01,2017-05-31,2017-06-27,614000000,0.614,10-K,2017,0001193125-17-214833
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2016-06-01,2017-05-31,2018-06-22,614000000,0.614,10-K,2018,0001193125-18-201034
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2016-06-01,2017-05-31,2019-06-21,614000000,0.614,10-K,2019,0001564590-19-023119
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2017-06-01,2018-05-31,2018-06-22,860000000,0.86,10-K,2018,0001193125-18-201034
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2017-06-01,2018-05-31,2019-06-21,860000000,0.86,10-K,2019,0001564590-19-023119
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2017-06-01,2018-05-31,2020-06-22,860000000,0.86,10-K,2020,0001564590-20-030125
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2018-06-01,2019-05-31,2019-06-21,692000000,0.692,10-K,2019,0001564590-19-023119
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2018-06-01,2019-05-31,2020-06-22,692000000,0.692,10-K,2020,0001564590-20-030125
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2018-06-01,2019-05-31,2021-06-21,692000000,0.692,10-K,2021,0001564590-21-033616
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2019-06-01,2020-05-31,2020-06-22,638000000,0.638,10-K,2020,0001564590-20-030125
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2019-06-01,2020-05-31,2021-06-21,638000000,0.638,10-K,2021,0001564590-21-033616
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2019-06-01,2020-05-31,2022-06-21,638000000,0.638,10-K,2022,0001564590-22-023675
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2020-06-01,2021-05-31,2021-06-21,842000000,0.842,10-K,2021,0001564590-21-033616
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2020-06-01,2021-05-31,2022-06-21,842000000,0.842,10-K,2022,0001564590-22-023675
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2020-06-01,2021-05-31,2023-06-20,842000000,0.842,10-K,2023,0000950170-23-028914
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2021-06-01,2022-05-31,2022-06-21,843000000,0.843,10-K,2022,0001564590-22-023675
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2021-06-01,2022-05-31,2023-06-20,843000000,0.843,10-K,2023,0000950170-23-028914
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2021-06-01,2022-05-31,2024-06-20,843000000,0.843,10-K,2024,0000950170-24-075605
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2022-06-01,2023-05-31,2023-06-20,1200000000,1.2,10-K,2023,0000950170-23-028914
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2022-06-01,2023-05-31,2024-06-20,1200000000,1.2,10-K,2024,0000950170-24-075605
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2022-06-01,2023-05-31,2025-06-18,1200000,0.0012,10-K,2025,0000950170-25-087926
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2023-06-01,2024-05-31,2024-06-20,1700000000,1.7,10-K,2024,0000950170-24-075605
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2023-06-01,2024-05-31,2025-06-18,1700000000,1.7,10-K,2025,0000950170-25-087926
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2023-06-01,2024-05-31,2026-06-22,1700000000,1.7,10-K,2026,0001193125-26-277521
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2024-06-01,2025-05-31,2025-06-18,2100000000,2.1,10-K,2025,0000950170-25-087926
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2024-06-01,2025-05-31,2026-06-22,2100000000,2.1,10-K,2026,0001193125-26-277521
+us-gaap,DeferredTaxExpenseFromStockOptionsExercised,Deferred Tax Expense from Stock Options Exercised,2025-06-01,2026-05-31,2026-06-22,4000000000,4.0,10-K,2026,0001193125-26-277521
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2008-06-01,2009-05-31,2011-06-28,-55000000,-0.055,10-K,2011,0001193125-11-174819
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2009-06-01,2010-05-31,2011-06-28,-148000000,-0.148,10-K,2011,0001193125-11-174819
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2009-06-01,2010-05-31,2012-06-26,-148000000,-0.148,10-K,2012,0001193125-12-284007
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2010-06-01,2011-05-31,2011-06-28,11000000,0.011,10-K,2011,0001193125-11-174819
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2010-06-01,2011-05-31,2012-06-26,11000000,0.011,10-K,2012,0001193125-12-284007
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2010-06-01,2011-05-31,2013-06-26,11000000,0.011,10-K,2013,0001193125-13-272832
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2011-06-01,2012-05-31,2012-06-26,-105000000,-0.105,10-K,2012,0001193125-12-284007
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2011-06-01,2012-05-31,2013-06-26,-105000000,-0.105,10-K,2013,0001193125-13-272832
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2011-06-01,2012-05-31,2014-06-26,-105000000,-0.105,10-K,2014,0001193125-14-251351
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2012-06-01,2013-05-31,2013-06-26,-162000000,-0.162,10-K,2013,0001193125-13-272832
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2012-06-01,2013-05-31,2014-06-26,-162000000,-0.162,10-K,2014,0001193125-14-251351
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2012-06-01,2013-05-31,2015-06-25,-162000000,-0.162,10-K,2015,0001193125-15-235239
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2013-06-01,2014-05-31,2014-06-26,-375000000,-0.375,10-K,2014,0001193125-14-251351
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2013-06-01,2014-05-31,2015-06-25,-375000000,-0.375,10-K,2015,0001193125-15-235239
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2013-06-01,2014-05-31,2016-06-22,-375000000,-0.375,10-K,2016,0001193125-16-628942
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2014-06-01,2015-05-31,2015-06-25,-157000000,-0.157,10-K,2015,0001193125-15-235239
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2014-06-01,2015-05-31,2016-06-22,-157000000,-0.157,10-K,2016,0001193125-16-628942
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2014-06-01,2015-05-31,2017-06-27,-157000000,-0.157,10-K,2017,0001193125-17-214833
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2015-06-01,2016-05-31,2016-06-22,-110000000,-0.11,10-K,2016,0001193125-16-628942
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2015-06-01,2016-05-31,2017-06-27,-110000000,-0.11,10-K,2017,0001193125-17-214833
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2015-06-01,2016-05-31,2018-06-22,-110000000,-0.11,10-K,2018,0001193125-18-201034
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2016-06-01,2017-05-31,2017-06-27,-152000000,-0.152,10-K,2017,0001193125-17-214833
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2016-06-01,2017-05-31,2018-06-22,-152000000,-0.152,10-K,2018,0001193125-18-201034
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2016-06-01,2017-05-31,2019-06-21,-152000000,-0.152,10-K,2019,0001564590-19-023119
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2017-06-01,2018-05-31,2018-06-22,-74000000,-0.074,10-K,2018,0001193125-18-201034
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2017-06-01,2018-05-31,2019-06-21,-74000000,-0.074,10-K,2019,0001564590-19-023119
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2017-06-01,2018-05-31,2020-06-22,-74000000,-0.074,10-K,2020,0001564590-20-030125
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2018-06-01,2019-05-31,2019-06-21,-111000000,-0.111,10-K,2019,0001564590-19-023119
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2018-06-01,2019-05-31,2020-06-22,-111000000,-0.111,10-K,2020,0001564590-20-030125
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2018-06-01,2019-05-31,2021-06-21,-111000000,-0.111,10-K,2021,0001564590-21-033616
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2019-06-01,2020-05-31,2020-06-22,-185000000,-0.185,10-K,2020,0001564590-20-030125
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2019-06-01,2020-05-31,2021-06-21,-185000000,-0.185,10-K,2021,0001564590-21-033616
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2019-06-01,2020-05-31,2022-06-21,-185000000,-0.185,10-K,2022,0001564590-22-023675
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2020-06-01,2021-05-31,2021-06-21,-112000000,-0.112,10-K,2021,0001564590-21-033616
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2020-06-01,2021-05-31,2022-06-21,-112000000,-0.112,10-K,2022,0001564590-22-023675
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2020-06-01,2021-05-31,2023-06-20,-112000000,-0.112,10-K,2023,0000950170-23-028914
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2021-06-01,2022-05-31,2022-06-21,-199000000,-0.199,10-K,2022,0001564590-22-023675
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2021-06-01,2022-05-31,2023-06-20,-199000000,-0.199,10-K,2023,0000950170-23-028914
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2021-06-01,2022-05-31,2024-06-20,-199000000,-0.199,10-K,2024,0000950170-24-075605
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2022-06-01,2023-05-31,2023-06-20,-249000000,-0.249,10-K,2023,0000950170-23-028914
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2022-06-01,2023-05-31,2024-06-20,-249000000,-0.249,10-K,2024,0000950170-24-075605
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2022-06-01,2023-05-31,2025-06-18,-249000000,-0.249,10-K,2025,0000950170-25-087926
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2023-06-01,2024-05-31,2024-06-20,-228000000,-0.228,10-K,2024,0000950170-24-075605
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2023-06-01,2024-05-31,2025-06-18,-228000000,-0.228,10-K,2025,0000950170-25-087926
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2023-06-01,2024-05-31,2026-06-22,-228000000,-0.228,10-K,2026,0001193125-26-277521
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2024-06-01,2025-05-31,2025-06-18,-147000000,-0.147,10-K,2025,0000950170-25-087926
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2024-06-01,2025-05-31,2026-06-22,-147000000,-0.147,10-K,2026,0001193125-26-277521
+us-gaap,ForeignCurrencyTransactionGainLossBeforeTax,"Foreign Currency Transaction Gain (Loss), before Tax",2025-06-01,2026-05-31,2026-06-22,-131000000,-0.131,10-K,2026,0001193125-26-277521
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2008-06-01,2009-05-31,2011-06-28,3745000000,3.745,10-K,2011,0001193125-11-174819
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2009-06-01,2010-05-31,2011-06-28,4282000000,4.282,10-K,2011,0001193125-11-174819
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2009-06-01,2010-05-31,2012-06-26,4282000000,4.282,10-K,2012,0001193125-12-284007
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2010-06-01,2011-05-31,2011-06-28,6378000000,6.378,10-K,2011,0001193125-11-174819
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2010-06-01,2011-05-31,2012-06-26,6378000000,6.378,10-K,2012,0001193125-12-284007
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2010-06-01,2011-05-31,2013-06-26,6378000000,6.378,10-K,2013,0001193125-13-272832
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2011-06-01,2012-05-31,2012-06-26,6284000000,6.284,10-K,2012,0001193125-12-284007
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2011-06-01,2012-05-31,2013-06-26,6284000000,6.284,10-K,2013,0001193125-13-272832
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2011-06-01,2012-05-31,2014-06-26,6284000000,6.284,10-K,2014,0001193125-14-251351
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2012-06-01,2013-05-31,2013-06-26,6614000000,6.614,10-K,2013,0001193125-13-272832
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2012-06-01,2013-05-31,2014-06-26,6614000000,6.614,10-K,2014,0001193125-14-251351
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2012-06-01,2013-05-31,2015-06-25,6614000000,6.614,10-K,2015,0001193125-15-235239
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2013-06-01,2014-05-31,2014-06-26,5397000000,5.397,10-K,2014,0001193125-14-251351
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2013-06-01,2014-05-31,2015-06-25,5397000000,5.397,10-K,2015,0001193125-15-235239
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2013-06-01,2014-05-31,2016-06-22,5397000000,5.397,10-K,2016,0001193125-16-628942
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2014-06-01,2015-05-31,2015-06-25,5136000000,5.136,10-K,2015,0001193125-15-235239
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2014-06-01,2015-05-31,2016-06-22,5136000000,5.136,10-K,2016,0001193125-16-628942
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2014-06-01,2015-05-31,2017-06-27,5136000000,5.136,10-K,2017,0001193125-17-214833
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2015-06-01,2016-05-31,2016-06-22,4033000000,4.033,10-K,2016,0001193125-16-628942
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2015-06-01,2016-05-31,2017-06-27,4033000000,4.033,10-K,2017,0001193125-17-214833
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2015-06-01,2016-05-31,2018-06-22,4033000000,4.033,10-K,2018,0001193125-18-201034
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2016-06-01,2017-05-31,2017-06-27,3533000000,3.533,10-K,2017,0001193125-17-214833
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2016-06-01,2017-05-31,2018-06-22,3533000000,3.533,10-K,2018,0001193125-18-201034
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2016-06-01,2017-05-31,2019-06-21,3674000000,3.674,10-K,2019,0001564590-19-023119
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2017-06-01,2018-05-31,2018-06-22,3816000000,3.816,10-K,2018,0001193125-18-201034
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2017-06-01,2018-05-31,2019-06-21,3366000000,3.366,10-K,2019,0001564590-19-023119
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2017-06-01,2018-05-31,2020-06-22,3366000000,3.366,10-K,2020,0001564590-20-030125
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2018-06-01,2019-05-31,2019-06-21,3774000000,3.774,10-K,2019,0001564590-19-023119
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2018-06-01,2019-05-31,2020-06-22,3774000000,3.774,10-K,2020,0001564590-20-030125
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2018-06-01,2019-05-31,2021-06-21,3774000000,3.774,10-K,2021,0001564590-21-033616
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2019-06-01,2020-05-31,2020-06-22,3890000000,3.89,10-K,2020,0001564590-20-030125
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2019-06-01,2020-05-31,2021-06-21,3890000000,3.89,10-K,2021,0001564590-21-033616
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2019-06-01,2020-05-31,2022-06-21,3890000000,3.89,10-K,2022,0001564590-22-023675
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2020-06-01,2021-05-31,2021-06-21,4375000000,4.375,10-K,2021,0001564590-21-033616
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2020-06-01,2021-05-31,2022-06-21,4375000000,4.375,10-K,2022,0001564590-22-023675
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2020-06-01,2021-05-31,2023-06-20,4375000000,4.375,10-K,2023,0000950170-23-028914
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2021-06-01,2022-05-31,2022-06-21,-629000000,-0.629,10-K,2022,0001564590-22-023675
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2021-06-01,2022-05-31,2023-06-20,-629000000,-0.629,10-K,2023,0000950170-23-028914
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2021-06-01,2022-05-31,2024-06-20,-629000000,-0.629,10-K,2024,0000950170-24-075605
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2022-06-01,2023-05-31,2023-06-20,1492000000,1.492,10-K,2023,0000950170-23-028914
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2022-06-01,2023-05-31,2024-06-20,1492000000,1.492,10-K,2024,0000950170-24-075605
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2022-06-01,2023-05-31,2025-06-18,1492000000,1.492,10-K,2025,0000950170-25-087926
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2023-06-01,2024-05-31,2024-06-20,3023000000,3.023,10-K,2024,0000950170-24-075605
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2023-06-01,2024-05-31,2025-06-18,3023000000,3.023,10-K,2025,0000950170-25-087926
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2023-06-01,2024-05-31,2026-06-22,3023000000,3.023,10-K,2026,0001193125-26-277521
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2024-06-01,2025-05-31,2025-06-18,4376000000,4.376,10-K,2025,0000950170-25-087926
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2024-06-01,2025-05-31,2026-06-22,4376000000,4.376,10-K,2026,0001193125-26-277521
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesDomestic,"Income (Loss) from Continuing Operations before Income Taxes, Domestic",2025-06-01,2026-05-31,2026-06-22,8693000000,8.693,10-K,2026,0001193125-26-277521
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,"Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest",2010-06-01,2011-05-31,2013-06-26,11411000000,11.411,10-K,2013,0001193125-13-272832
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,"Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest",2011-06-01,2012-05-31,2013-06-26,12962000000,12.962,10-K,2013,0001193125-13-272832
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,"Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest",2011-06-01,2012-05-31,2014-06-26,12962000000,12.962,10-K,2014,0001193125-14-251351
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,"Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest",2012-06-01,2013-05-31,2013-06-26,13898000000,13.898,10-K,2013,0001193125-13-272832
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,"Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest",2012-06-01,2013-05-31,2014-06-26,13898000000,13.898,10-K,2014,0001193125-14-251351
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,"Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest",2012-06-01,2013-05-31,2015-06-25,13898000000,13.898,10-K,2015,0001193125-15-235239
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,"Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest",2013-06-01,2014-05-31,2014-06-26,13704000000,13.704,10-K,2014,0001193125-14-251351
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,"Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest",2013-06-01,2014-05-31,2015-06-25,13704000000,13.704,10-K,2015,0001193125-15-235239
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,"Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest",2013-06-01,2014-05-31,2016-06-22,13704000000,13.704,10-K,2016,0001193125-16-628942
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,"Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest",2014-06-01,2015-05-31,2015-06-25,12834000000,12.834,10-K,2015,0001193125-15-235239
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,"Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest",2014-06-01,2015-05-31,2016-06-22,12834000000,12.834,10-K,2016,0001193125-16-628942
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,"Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest",2014-06-01,2015-05-31,2017-06-27,12834000000,12.834,10-K,2017,0001193125-17-214833
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,"Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest",2015-06-01,2016-05-31,2016-06-22,11442000000,11.442,10-K,2016,0001193125-16-628942
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,"Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest",2015-06-01,2016-05-31,2017-06-27,11442000000,11.442,10-K,2017,0001193125-17-214833
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,"Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest",2015-06-01,2016-05-31,2018-06-22,11442000000,11.442,10-K,2018,0001193125-18-201034
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,"Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest",2016-06-01,2017-05-31,2017-06-27,11517000000,11.517,10-K,2017,0001193125-17-214833
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,"Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest",2016-06-01,2017-05-31,2018-06-22,11517000000,11.517,10-K,2018,0001193125-18-201034
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest,"Income (Loss) from Continuing Operations before Income Taxes, Noncontrolling Interest",2017-06-01,2018-05-31,2018-06-22,12891000000,12.891,10-K,2018,0001193125-18-201034
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2008-06-01,2009-05-31,2011-06-28,4089000000,4.089,10-K,2011,0001193125-11-174819
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2009-06-01,2010-05-31,2011-06-28,3961000000,3.961,10-K,2011,0001193125-11-174819
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2009-06-01,2010-05-31,2012-06-26,3961000000,3.961,10-K,2012,0001193125-12-284007
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2010-06-01,2011-05-31,2011-06-28,5033000000,5.033,10-K,2011,0001193125-11-174819
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2010-06-01,2011-05-31,2012-06-26,5033000000,5.033,10-K,2012,0001193125-12-284007
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2010-06-01,2011-05-31,2013-06-26,5033000000,5.033,10-K,2013,0001193125-13-272832
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2011-06-01,2012-05-31,2012-06-26,6678000000,6.678,10-K,2012,0001193125-12-284007
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2011-06-01,2012-05-31,2013-06-26,6678000000,6.678,10-K,2013,0001193125-13-272832
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2011-06-01,2012-05-31,2014-06-26,6678000000,6.678,10-K,2014,0001193125-14-251351
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2012-06-01,2013-05-31,2013-06-26,7284000000,7.284,10-K,2013,0001193125-13-272832
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2012-06-01,2013-05-31,2014-06-26,7284000000,7.284,10-K,2014,0001193125-14-251351
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2012-06-01,2013-05-31,2015-06-25,7284000000,7.284,10-K,2015,0001193125-15-235239
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2013-06-01,2014-05-31,2014-06-26,8307000000,8.307,10-K,2014,0001193125-14-251351
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2013-06-01,2014-05-31,2015-06-25,8307000000,8.307,10-K,2015,0001193125-15-235239
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2013-06-01,2014-05-31,2016-06-22,8307000000,8.307,10-K,2016,0001193125-16-628942
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2014-06-01,2015-05-31,2015-06-25,7698000000,7.698,10-K,2015,0001193125-15-235239
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2014-06-01,2015-05-31,2016-06-22,7698000000,7.698,10-K,2016,0001193125-16-628942
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2014-06-01,2015-05-31,2017-06-27,7698000000,7.698,10-K,2017,0001193125-17-214833
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2015-06-01,2016-05-31,2016-06-22,7409000000,7.409,10-K,2016,0001193125-16-628942
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2015-06-01,2016-05-31,2017-06-27,7409000000,7.409,10-K,2017,0001193125-17-214833
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2015-06-01,2016-05-31,2018-06-22,7409000000,7.409,10-K,2018,0001193125-18-201034
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2016-06-01,2017-05-31,2017-06-27,7984000000,7.984,10-K,2017,0001193125-17-214833
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2016-06-01,2017-05-31,2018-06-22,7984000000,7.984,10-K,2018,0001193125-18-201034
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2016-06-01,2017-05-31,2019-06-21,8006000000,8.006,10-K,2019,0001564590-19-023119
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2017-06-01,2018-05-31,2018-06-22,9075000000,9.075,10-K,2018,0001193125-18-201034
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2017-06-01,2018-05-31,2019-06-21,9058000000,9.058,10-K,2019,0001564590-19-023119
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2017-06-01,2018-05-31,2020-06-22,9058000000,9.058,10-K,2020,0001564590-20-030125
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2018-06-01,2019-05-31,2019-06-21,8494000000,8.494,10-K,2019,0001564590-19-023119
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2018-06-01,2019-05-31,2020-06-22,8494000000,8.494,10-K,2020,0001564590-20-030125
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2018-06-01,2019-05-31,2021-06-21,8494000000,8.494,10-K,2021,0001564590-21-033616
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2019-06-01,2020-05-31,2020-06-22,8173000000,8.173,10-K,2020,0001564590-20-030125
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2019-06-01,2020-05-31,2021-06-21,8173000000,8.173,10-K,2021,0001564590-21-033616
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2019-06-01,2020-05-31,2022-06-21,8173000000,8.173,10-K,2022,0001564590-22-023675
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2020-06-01,2021-05-31,2021-06-21,8624000000,8.624,10-K,2021,0001564590-21-033616
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2020-06-01,2021-05-31,2022-06-21,8624000000,8.624,10-K,2022,0001564590-22-023675
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2020-06-01,2021-05-31,2023-06-20,8624000000,8.624,10-K,2023,0000950170-23-028914
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2021-06-01,2022-05-31,2022-06-21,8278000000,8.278,10-K,2022,0001564590-22-023675
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2021-06-01,2022-05-31,2023-06-20,8278000000,8.278,10-K,2023,0000950170-23-028914
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2021-06-01,2022-05-31,2024-06-20,8278000000,8.278,10-K,2024,0000950170-24-075605
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2022-06-01,2023-05-31,2023-06-20,7634000000,7.634,10-K,2023,0000950170-23-028914
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2022-06-01,2023-05-31,2024-06-20,7634000000,7.634,10-K,2024,0000950170-24-075605
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2022-06-01,2023-05-31,2025-06-18,7634000000,7.634,10-K,2025,0000950170-25-087926
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2023-06-01,2024-05-31,2024-06-20,8718000000,8.718,10-K,2024,0000950170-24-075605
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2023-06-01,2024-05-31,2025-06-18,8718000000,8.718,10-K,2025,0000950170-25-087926
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2023-06-01,2024-05-31,2026-06-22,8718000000,8.718,10-K,2026,0001193125-26-277521
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2024-06-01,2025-05-31,2025-06-18,9784000000,9.784,10-K,2025,0000950170-25-087926
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2024-06-01,2025-05-31,2026-06-22,9784000000,9.784,10-K,2026,0001193125-26-277521
+us-gaap,IncomeLossFromContinuingOperationsBeforeIncomeTaxesForeign,"Income (Loss) from Continuing Operations before Income Taxes, Foreign",2025-06-01,2026-05-31,2026-06-22,10861000000,10.861,10-K,2026,0001193125-26-277521
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2007-06-01,2008-05-31,2010-07-01,2313000000,2.313,10-K,2010,0001193125-10-151896
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2008-06-01,2009-05-31,2010-07-01,2241000000,2.241,10-K,2010,0001193125-10-151896
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2008-06-01,2009-05-31,2011-06-28,2241000000,2.241,10-K,2011,0001193125-11-174819
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2009-06-01,2010-05-31,2010-07-01,2108000000,2.108,10-K,2010,0001193125-10-151896
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2009-06-01,2010-05-31,2011-06-28,2108000000,2.108,10-K,2011,0001193125-11-174819
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2010-06-01,2011-05-31,2011-06-28,2864000000,2.864,10-K,2011,0001193125-11-174819
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2011-06-01,2012-05-31,2014-06-26,2981000000,2.981,10-K,2014,0001193125-14-251351
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2012-06-01,2013-05-31,2014-06-26,2973000000,2.973,10-K,2014,0001193125-14-251351
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2012-06-01,2013-05-31,2015-06-25,2973000000,2.973,10-K,2015,0001193125-15-235239
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2013-06-01,2014-05-31,2014-06-26,2749000000,2.749,10-K,2014,0001193125-14-251351
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2013-06-01,2014-05-31,2015-06-25,2749000000,2.749,10-K,2015,0001193125-15-235239
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2013-06-01,2014-05-31,2016-06-22,2749000000,2.749,10-K,2016,0001193125-16-628942
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2014-06-01,2015-05-31,2015-06-25,2896000000,2.896,10-K,2015,0001193125-15-235239
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2014-06-01,2015-05-31,2016-06-22,2896000000,2.896,10-K,2016,0001193125-16-628942
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2014-06-01,2015-05-31,2017-06-27,2896000000,2.896,10-K,2017,0001193125-17-214833
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2015-06-01,2016-05-31,2016-06-22,2541000000,2.541,10-K,2016,0001193125-16-628942
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2015-06-01,2016-05-31,2017-06-27,2541000000,2.541,10-K,2017,0001193125-17-214833
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2015-06-01,2016-05-31,2018-06-22,2541000000,2.541,10-K,2018,0001193125-18-201034
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2016-06-01,2017-05-31,2017-06-27,2182000000,2.182,10-K,2017,0001193125-17-214833
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2016-06-01,2017-05-31,2018-06-22,2182000000,2.182,10-K,2018,0001193125-18-201034
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2016-06-01,2017-05-31,2019-06-21,2228000000,2.228,10-K,2019,0001564590-19-023119
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2017-06-01,2018-05-31,2018-06-22,9066000000,9.066,10-K,2018,0001193125-18-201034
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2017-06-01,2018-05-31,2019-06-21,8837000000,8.837,10-K,2019,0001564590-19-023119
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2017-06-01,2018-05-31,2020-06-22,8837000000,8.837,10-K,2020,0001564590-20-030125
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2018-06-01,2019-05-31,2019-06-21,1185000000,1.185,10-K,2019,0001564590-19-023119
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2018-06-01,2019-05-31,2020-06-22,1185000000,1.185,10-K,2020,0001564590-20-030125
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2018-06-01,2019-05-31,2021-06-21,1185000000,1.185,10-K,2021,0001564590-21-033616
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2019-06-01,2020-05-31,2020-06-22,1928000000,1.928,10-K,2020,0001564590-20-030125
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2019-06-01,2020-05-31,2021-06-21,1928000000,1.928,10-K,2021,0001564590-21-033616
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2019-06-01,2020-05-31,2022-06-21,1928000000,1.928,10-K,2022,0001564590-22-023675
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2020-06-01,2021-05-31,2021-06-21,-747000000,-0.747,10-K,2021,0001564590-21-033616
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2020-06-01,2021-05-31,2022-06-21,-747000000,-0.747,10-K,2022,0001564590-22-023675
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2020-06-01,2021-05-31,2023-06-20,-747000000,-0.747,10-K,2023,0000950170-23-028914
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2021-06-01,2022-05-31,2022-06-21,932000000,0.932,10-K,2022,0001564590-22-023675
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2021-06-01,2022-05-31,2023-06-20,932000000,0.932,10-K,2023,0000950170-23-028914
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2021-06-01,2022-05-31,2024-06-20,932000000,0.932,10-K,2024,0000950170-24-075605
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2022-06-01,2023-05-31,2023-06-20,623000000,0.623,10-K,2023,0000950170-23-028914
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2022-06-01,2023-05-31,2024-06-20,623000000,0.623,10-K,2024,0000950170-24-075605
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2022-06-01,2023-05-31,2025-06-18,623000000,0.623,10-K,2025,0000950170-25-087926
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2023-06-01,2024-05-31,2024-06-20,1274000000,1.274,10-K,2024,0000950170-24-075605
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2023-06-01,2024-05-31,2025-06-18,1274000000,1.274,10-K,2025,0000950170-25-087926
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2023-06-01,2024-05-31,2026-06-22,1274000000,1.274,10-K,2026,0001193125-26-277521
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2024-06-01,2025-05-31,2025-06-18,1717000000,1.717,10-K,2025,0000950170-25-087926
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2024-06-01,2025-05-31,2026-06-22,1717000000,1.717,10-K,2026,0001193125-26-277521
+us-gaap,IncomeTaxExpenseBenefit,Income Tax Expense (Benefit),2025-06-01,2026-05-31,2026-06-22,2467000000,2.467,10-K,2026,0001193125-26-277521
+us-gaap,IncomeTaxExpenseBenefitContinuingOperations,"Income Tax Expense (Benefit), Continuing Operations (Deprecated 2013-01-31)",2009-06-01,2010-05-31,2012-06-26,2108000000,2.108,10-K,2012,0001193125-12-284007
+us-gaap,IncomeTaxExpenseBenefitContinuingOperations,"Income Tax Expense (Benefit), Continuing Operations (Deprecated 2013-01-31)",2010-06-01,2011-05-31,2012-06-26,2864000000,2.864,10-K,2012,0001193125-12-284007
+us-gaap,IncomeTaxExpenseBenefitContinuingOperations,"Income Tax Expense (Benefit), Continuing Operations (Deprecated 2013-01-31)",2010-06-01,2011-05-31,2013-06-26,2864000000,2.864,10-K,2013,0001193125-13-272832
+us-gaap,IncomeTaxExpenseBenefitContinuingOperations,"Income Tax Expense (Benefit), Continuing Operations (Deprecated 2013-01-31)",2011-06-01,2012-05-31,2012-06-26,2981000000,2.981,10-K,2012,0001193125-12-284007
+us-gaap,IncomeTaxExpenseBenefitContinuingOperations,"Income Tax Expense (Benefit), Continuing Operations (Deprecated 2013-01-31)",2011-06-01,2012-05-31,2013-06-26,2981000000,2.981,10-K,2013,0001193125-13-272832
+us-gaap,IncomeTaxExpenseBenefitContinuingOperations,"Income Tax Expense (Benefit), Continuing Operations (Deprecated 2013-01-31)",2012-06-01,2013-05-31,2013-06-26,2973000000,2.973,10-K,2013,0001193125-13-272832
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2008-06-01,2009-05-31,2011-06-28,2742000000,2.742,10-K,2011,0001193125-11-174819
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2009-06-01,2010-05-31,2011-06-28,2885000000,2.885,10-K,2011,0001193125-11-174819
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2009-06-01,2010-05-31,2012-06-26,2885000000,2.885,10-K,2012,0001193125-12-284007
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2010-06-01,2011-05-31,2011-06-28,3994000000,3.994,10-K,2011,0001193125-11-174819
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2010-06-01,2011-05-31,2012-06-26,3994000000,3.994,10-K,2012,0001193125-12-284007
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2010-06-01,2011-05-31,2013-06-26,3994000000,3.994,10-K,2013,0001193125-13-272832
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2011-06-01,2012-05-31,2012-06-26,4537000000,4.537,10-K,2012,0001193125-12-284007
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2011-06-01,2012-05-31,2013-06-26,4537000000,4.537,10-K,2013,0001193125-13-272832
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2011-06-01,2012-05-31,2014-06-26,4537000000,4.537,10-K,2014,0001193125-14-251351
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2012-06-01,2013-05-31,2013-06-26,4865000000,4.865,10-K,2013,0001193125-13-272832
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2012-06-01,2013-05-31,2014-06-26,4865000000,4.865,10-K,2014,0001193125-14-251351
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2012-06-01,2013-05-31,2015-06-25,4865000000,4.865,10-K,2015,0001193125-15-235239
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2013-06-01,2014-05-31,2014-06-26,4796000000,4.796,10-K,2014,0001193125-14-251351
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2013-06-01,2014-05-31,2015-06-25,4796000000,4.796,10-K,2015,0001193125-15-235239
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2013-06-01,2014-05-31,2016-06-22,4796000000,4.796,10-K,2016,0001193125-16-628942
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2014-06-01,2015-05-31,2015-06-25,4492000000,4.492,10-K,2015,0001193125-15-235239
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2014-06-01,2015-05-31,2016-06-22,4492000000,4.492,10-K,2016,0001193125-16-628942
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2014-06-01,2015-05-31,2017-06-27,4492000000,4.492,10-K,2017,0001193125-17-214833
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2015-06-01,2016-05-31,2016-06-22,4005000000,4.005,10-K,2016,0001193125-16-628942
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2015-06-01,2016-05-31,2017-06-27,4005000000,4.005,10-K,2017,0001193125-17-214833
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2015-06-01,2016-05-31,2018-06-22,4005000000,4.005,10-K,2018,0001193125-18-201034
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2016-06-01,2017-05-31,2017-06-27,4031000000,4.031,10-K,2017,0001193125-17-214833
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2016-06-01,2017-05-31,2018-06-22,4031000000,4.031,10-K,2018,0001193125-18-201034
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2016-06-01,2017-05-31,2019-06-21,4088000000,4.088,10-K,2019,0001564590-19-023119
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2017-06-01,2018-05-31,2018-06-22,3765000000,3.765,10-K,2018,0001193125-18-201034
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2017-06-01,2018-05-31,2019-06-21,3629000000,3.629,10-K,2019,0001564590-19-023119
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2017-06-01,2018-05-31,2020-06-22,3629000000,3.629,10-K,2020,0001564590-20-030125
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2018-06-01,2019-05-31,2019-06-21,2576000000,2.576,10-K,2019,0001564590-19-023119
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2018-06-01,2019-05-31,2020-06-22,2576000000,2.576,10-K,2020,0001564590-20-030125
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2018-06-01,2019-05-31,2021-06-21,2576000000,2.576,10-K,2021,0001564590-21-033616
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2019-06-01,2020-05-31,2020-06-22,2533000000,2.533,10-K,2020,0001564590-20-030125
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2019-06-01,2020-05-31,2021-06-21,2533000000,2.533,10-K,2021,0001564590-21-033616
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2019-06-01,2020-05-31,2022-06-21,2533000000,2.533,10-K,2022,0001564590-22-023675
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2020-06-01,2021-05-31,2021-06-21,2730000000,2.73,10-K,2021,0001564590-21-033616
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2020-06-01,2021-05-31,2022-06-21,2730000000,2.73,10-K,2022,0001564590-22-023675
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2020-06-01,2021-05-31,2023-06-20,2730000000,2.73,10-K,2023,0000950170-23-028914
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2021-06-01,2022-05-31,2022-06-21,1606000000,1.606,10-K,2022,0001564590-22-023675
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2021-06-01,2022-05-31,2023-06-20,1606000000,1.606,10-K,2023,0000950170-23-028914
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2021-06-01,2022-05-31,2024-06-20,-1606000000,-1.606,10-K,2024,0000950170-24-075605
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2022-06-01,2023-05-31,2023-06-20,1917000000,1.917,10-K,2023,0000950170-23-028914
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2022-06-01,2023-05-31,2024-06-20,-1917000000,-1.917,10-K,2024,0000950170-24-075605
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2022-06-01,2023-05-31,2025-06-18,1917000000,1.917,10-K,2025,0000950170-25-087926
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2023-06-01,2024-05-31,2024-06-20,-2466000000,-2.466,10-K,2024,0000950170-24-075605
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2023-06-01,2024-05-31,2025-06-18,2466000000,2.466,10-K,2025,0000950170-25-087926
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2023-06-01,2024-05-31,2026-06-22,2466000000,2.466,10-K,2026,0001193125-26-277521
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2024-06-01,2025-05-31,2025-06-18,2974000000,2.974,10-K,2025,0000950170-25-087926
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2024-06-01,2025-05-31,2026-06-22,2974000000,2.974,10-K,2026,0001193125-26-277521
+us-gaap,IncomeTaxReconciliationIncomeTaxExpenseBenefitAtFederalStatutoryIncomeTaxRate,"Effective Income Tax Rate Reconciliation at Federal Statutory Income Tax Rate, Amount",2025-06-01,2026-05-31,2026-06-22,4106000000,4.106,10-K,2026,0001193125-26-277521
+us-gaap,OtherTaxExpenseBenefit,Other Tax Expense (Benefit),2025-06-01,2026-05-31,2026-06-22,933000000,0.933,10-K,2026,0001193125-26-277521

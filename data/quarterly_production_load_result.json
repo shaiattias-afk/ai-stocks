@@ -1,0 +1,53 @@
+{
+  "overall_status": "PASS",
+  "company_results": {
+    "MSFT": {
+      "ticker": "MSFT",
+      "status": "COMMITTED",
+      "run_id": "e9c306c0-351a-46fe-be93-4e8de1da1b1d",
+      "rows_committed": 24,
+      "extraction_basis_counts": {
+        "DIRECT_QUARTER": 18,
+        "DERIVED_Q4_FROM_10K_MINUS_9M": 6
+      }
+    },
+    "AMZN": {
+      "ticker": "AMZN",
+      "status": "COMMITTED",
+      "run_id": "ec5dcd3d-f57a-42a5-9d00-fdc3b90751b8",
+      "rows_committed": 24,
+      "extraction_basis_counts": {
+        "DIRECT_QUARTER": 18,
+        "DERIVED_Q4_FROM_10K_MINUS_9M": 6
+      }
+    },
+    "ORCL": {
+      "ticker": "ORCL",
+      "status": "COMMITTED",
+      "run_id": "56e4d43e-9ee3-4e82-8537-92d5b835632b",
+      "rows_committed": 24,
+      "extraction_basis_counts": {
+        "DIRECT_QUARTER": 14,
+        "DERIVED_Q4_FROM_10K_MINUS_9M": 6,
+        "DERIVED_FROM_YTD": 4
+      }
+    }
+  },
+  "total_extraction_runs": 3,
+  "total_quarterly_metric_results": 72,
+  "extraction_basis_counts": {
+    "DERIVED_Q4_FROM_10K_MINUS_9M": 18,
+    "DERIVED_FROM_YTD": 4,
+    "DIRECT_QUARTER": 50
+  },
+  "reconciliation_status_counts_metric_year": {
+    "PASS": 16,
+    "PASS_ROUNDING_TOLERANCE": 2
+  },
+  "rows_per_company": {
+    "MSFT": 24,
+    "AMZN": 24,
+    "ORCL": 24
+  },
+  "duplicate_natural_keys": []
+}

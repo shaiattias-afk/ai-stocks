@@ -1,0 +1,124 @@
+{
+  "company": "CRWD",
+  "fiscal_year": "FY2022",
+  "fiscal_year_end": "2022-01-31",
+  "filings": {
+    "Q1": {
+      "ticker": "CRWD",
+      "form": "10-Q",
+      "report_date": "2021-04-30",
+      "filing_date": "2021-06-04",
+      "accession_number": "0001535527-21-000013"
+    },
+    "Q2": {
+      "ticker": "CRWD",
+      "form": "10-Q",
+      "report_date": "2021-07-31",
+      "filing_date": "2021-09-01",
+      "accession_number": "0001535527-21-000022"
+    },
+    "Q3": {
+      "ticker": "CRWD",
+      "form": "10-Q",
+      "report_date": "2021-10-31",
+      "filing_date": "2021-12-02",
+      "accession_number": "0001535527-21-000028"
+    },
+    "FY": {
+      "ticker": "CRWD",
+      "form": "10-K",
+      "report_date": "2022-01-31",
+      "filing_date": "2022-03-16",
+      "accession_number": "0001535527-22-000006"
+    }
+  },
+  "metrics": {
+    "revenue": {
+      "quarters": {},
+      "annual_value": 1451594000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+        "accession_number": "0001535527-22-000006",
+        "context_id": "i404921b3424c4df8b62dbd112e21c953_D20210201-20220131",
+        "unit_id": "usd",
+        "period_start": "2021-02-01",
+        "period_end": "2022-01-31",
+        "filing_date": "2022-03-16",
+        "decimals": "-3"
+      },
+      "status": "REVIEW_REQUIRED",
+      "error": "Q1 quarter-duration value did not resolve to a single deterministic fact"
+    },
+    "operating_income": {
+      "quarters": {},
+      "annual_value": -142548000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:OperatingIncomeLoss",
+        "accession_number": "0001535527-22-000006",
+        "context_id": "i404921b3424c4df8b62dbd112e21c953_D20210201-20220131",
+        "unit_id": "usd",
+        "period_start": "2021-02-01",
+        "period_end": "2022-01-31",
+        "filing_date": "2022-03-16",
+        "decimals": "-3"
+      },
+      "status": "REVIEW_REQUIRED",
+      "error": "Q1 quarter-duration value did not resolve to a single deterministic fact"
+    },
+    "pretax_income": {
+      "quarters": {},
+      "status": "REVIEW_REQUIRED",
+      "error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי."
+    },
+    "income_tax_expense": {
+      "quarters": {},
+      "annual_value": 72355000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+        "accession_number": "0001535527-22-000006",
+        "context_id": "i404921b3424c4df8b62dbd112e21c953_D20210201-20220131",
+        "unit_id": "usd",
+        "period_start": "2021-02-01",
+        "period_end": "2022-01-31",
+        "filing_date": "2022-03-16",
+        "decimals": "-3"
+      },
+      "status": "REVIEW_REQUIRED",
+      "error": "Q1 quarter-duration value did not resolve to a single deterministic fact"
+    },
+    "operating_cash_flow": {
+      "quarters": {},
+      "annual_value": 574784000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+        "accession_number": "0001535527-22-000006",
+        "context_id": "i404921b3424c4df8b62dbd112e21c953_D20210201-20220131",
+        "unit_id": "usd",
+        "period_start": "2021-02-01",
+        "period_end": "2022-01-31",
+        "filing_date": "2022-03-16",
+        "decimals": "-3"
+      },
+      "status": "REVIEW_REQUIRED",
+      "error": "Q1 quarter-duration value did not resolve to a single deterministic fact"
+    },
+    "capex": {
+      "quarters": {},
+      "annual_value": 112143000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+        "accession_number": "0001535527-22-000006",
+        "context_id": "i404921b3424c4df8b62dbd112e21c953_D20210201-20220131",
+        "unit_id": "usd",
+        "period_start": "2021-02-01",
+        "period_end": "2022-01-31",
+        "filing_date": "2022-03-16",
+        "decimals": "-3"
+      },
+      "status": "REVIEW_REQUIRED",
+      "error": "Q1 quarter-duration value did not resolve to a single deterministic fact"
+    }
+  },
+  "reconciliation_policy": "XBRL_DECIMALS_ROUNDING_TOLERANCE",
+  "engine_script": "118_quarterly_extraction_engine.py"
+}

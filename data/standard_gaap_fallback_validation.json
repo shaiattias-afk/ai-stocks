@@ -1,0 +1,1269 @@
+{
+  "status": "PASS",
+  "allow_list_version": "STANDARD_GAAP_ALLOW_LIST_V1",
+  "allow_list": {
+    "revenue": [
+      "us-gaap:Revenues",
+      "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+      "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+      "us-gaap:SalesRevenueNet",
+      "us-gaap:SalesRevenueGoodsNet",
+      "us-gaap:SalesRevenueServicesNet"
+    ],
+    "pretax_income": [
+      "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+      "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+    ]
+  },
+  "global_counts_before": {
+    "quarterly_extraction_runs": 45,
+    "quarterly_metric_results": 1080,
+    "financial_metric_results": 900,
+    "unique_review_required": 4
+  },
+  "global_counts_after": {
+    "quarterly_extraction_runs": 45,
+    "quarterly_metric_results": 1080,
+    "financial_metric_results": 900,
+    "unique_review_required": 4
+  },
+  "warehouse_facts_before": 225780,
+  "warehouse_facts_after": 225780,
+  "databases_unchanged": true,
+  "target_company_years": [
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2022-01-31",
+      "target_metrics": [
+        "pretax_income"
+      ],
+      "point_in_time_check": {
+        "passed": true,
+        "violations": []
+      },
+      "no_comparative_no_extension_check": {
+        "passed": true,
+        "violations": []
+      }
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2021-09-02",
+      "target_metrics": [
+        "pretax_income"
+      ],
+      "point_in_time_check": {
+        "passed": true,
+        "violations": []
+      },
+      "no_comparative_no_extension_check": {
+        "passed": true,
+        "violations": []
+      }
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2021-07-31",
+      "target_metrics": [
+        "pretax_income",
+        "revenue"
+      ],
+      "point_in_time_check": {
+        "passed": true,
+        "violations": []
+      },
+      "no_comparative_no_extension_check": {
+        "passed": true,
+        "violations": []
+      }
+    }
+  ],
+  "target_cases": [
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2022-01-31",
+      "metric_name": "pretax_income",
+      "old_status": "REVIEW_REQUIRED",
+      "old_run_id": "f5a8de2c-539d-499d-99df-bf60c61176ea",
+      "old_engine_version": "QUARTERLY_ENGINE_V3_DURATION_TOLERANCE",
+      "v4_isolation_status": "REVIEW_REQUIRED",
+      "new_status_v5": "PASS",
+      "resolved": true,
+      "standard_gaap_fallback_activated": true,
+      "fallback_activations": [
+        {
+          "ticker": "CRWD",
+          "fiscal_year_end": "2022-01-31",
+          "metric_name": "pretax_income",
+          "fiscal_quarter": "Q1",
+          "source": "STANDARD_GAAP_ALLOW_LIST",
+          "fallback_type": "STANDARD_GAAP_ALLOW_LIST",
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "blocking_accession": "0001535527-21-000013",
+          "filing_date": "2021-06-04",
+          "primary_resolver_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+          "point_in_time_reuse_error": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+          "allow_list_version": "STANDARD_GAAP_ALLOW_LIST_V1",
+          "candidates_considered": [
+            "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+            "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+          ],
+          "rejected_candidates": [
+            {
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+            }
+          ],
+          "other_agreeing_concepts": [],
+          "matched_duration_classes": [
+            "quarter"
+          ]
+        }
+      ],
+      "q1_accession": "0001535527-21-000013",
+      "q2_accession": "0001535527-21-000022",
+      "q3_accession": "0001535527-21-000028",
+      "fy_accession": "0001535527-22-000006",
+      "quarters": {
+        "Q1": {
+          "value": -32809000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2021-06-04",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+            "accession_number": "0001535527-21-000013",
+            "context_id": "ied4d9fb6af6b44efa150d8d8031501dd_D20210201-20210430",
+            "unit_id": "usd",
+            "period_start": "2021-02-01",
+            "period_end": "2021-04-30",
+            "duration_days": 88,
+            "decimals": "-3",
+            "concept_source": {
+              "source": "STANDARD_GAAP_ALLOW_LIST",
+              "fallback_type": "STANDARD_GAAP_ALLOW_LIST",
+              "metric_name": "pretax_income",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "blocking_accession": "0001535527-21-000013",
+              "filing_date": "2021-06-04",
+              "primary_resolver_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+              "point_in_time_reuse_error": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+              "allow_list_version": "STANDARD_GAAP_ALLOW_LIST_V1",
+              "candidates_considered": [
+                "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+                "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+              ],
+              "rejected_candidates": [
+                {
+                  "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+                  "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+                }
+              ],
+              "other_agreeing_concepts": [],
+              "matched_duration_classes": [
+                "quarter"
+              ]
+            }
+          }
+        },
+        "Q2": {
+          "value": -53080000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2021-09-01",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+            "accession_number": "0001535527-21-000022",
+            "context_id": "i1f2cfd16b64c486ba6f46324dba967b8_D20210501-20210731",
+            "unit_id": "usd",
+            "period_start": "2021-05-01",
+            "period_end": "2021-07-31",
+            "duration_days": 91,
+            "decimals": "-3",
+            "concept_source": {
+              "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+              "primary_resolver_error": "Q2: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+              "source_quarter": "Q1",
+              "source_accession": "0001535527-21-000013",
+              "source_form": "10-Q",
+              "source_filing_date": "2021-06-04",
+              "blocking_filing_date": "2021-09-01",
+              "point_in_time_safe": true
+            },
+            "cross_check_derived_from_ytd": -53080000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q3": {
+          "value": -45977000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2021-12-02",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+            "accession_number": "0001535527-21-000028",
+            "context_id": "i9ecccd3c939f4f3f8f49e2fd7fb3162c_D20210801-20211031",
+            "unit_id": "usd",
+            "period_start": "2021-08-01",
+            "period_end": "2021-10-31",
+            "duration_days": 91,
+            "decimals": "-3",
+            "concept_source": {
+              "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+              "primary_resolver_error": "Q3: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+              "source_quarter": "Q1",
+              "source_accession": "0001535527-21-000013",
+              "source_form": "10-Q",
+              "source_filing_date": "2021-06-04",
+              "blocking_filing_date": "2021-12-02",
+              "point_in_time_safe": true
+            },
+            "cross_check_derived_from_ytd": -45977000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q4": {
+          "value": -28157000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2022-03-16",
+          "lineage": {
+            "annual_value": -160023000.0,
+            "annual_concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+            "annual_accession_number": "0001535527-22-000006",
+            "annual_decimals": "-3",
+            "nine_month_ytd_value": -131866000.0,
+            "nine_month_ytd_context_id": "iee2e48b3460849c991b7fe87de348265_D20210201-20211031",
+            "nine_month_ytd_accession_number": "0001535527-21-000028",
+            "nine_month_ytd_decimals": "-3",
+            "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+            "annual_anchor_accession": "0001535527-22-000006",
+            "annual_anchor_metric": "pretax_income",
+            "annual_anchor_status": "PASS",
+            "annual_anchor_extraction_run_id": "0001535527-22-000006::v15 (scripts/69_xbrl_metric_engine.py)"
+          }
+        }
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": -160023000.0,
+        "annual_value": -160023000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-3",
+              "rounding_unit": 1000,
+              "uncertainty": 500.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-3",
+              "rounding_unit": 1000,
+              "uncertainty": 500.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-3",
+              "rounding_unit": 1000,
+              "uncertainty": 500.0
+            },
+            "Annual": {
+              "decimals": "-3",
+              "rounding_unit": 1000,
+              "uncertainty": 500.0
+            }
+          },
+          "permitted_difference": 2000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "STANDARD_GAAP_ALLOW_LIST",
+          "fallback_type": "STANDARD_GAAP_ALLOW_LIST",
+          "metric_name": "pretax_income",
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "blocking_accession": "0001535527-21-000013",
+          "filing_date": "2021-06-04",
+          "primary_resolver_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+          "point_in_time_reuse_error": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+          "allow_list_version": "STANDARD_GAAP_ALLOW_LIST_V1",
+          "candidates_considered": [
+            "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+            "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+          ],
+          "rejected_candidates": [
+            {
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+            }
+          ],
+          "other_agreeing_concepts": [],
+          "matched_duration_classes": [
+            "quarter"
+          ]
+        },
+        "Q2": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q2: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+          "source_quarter": "Q1",
+          "source_accession": "0001535527-21-000013",
+          "source_form": "10-Q",
+          "source_filing_date": "2021-06-04",
+          "blocking_filing_date": "2021-09-01",
+          "point_in_time_safe": true
+        },
+        "Q3": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q3: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+          "source_quarter": "Q1",
+          "source_accession": "0001535527-21-000013",
+          "source_form": "10-Q",
+          "source_filing_date": "2021-06-04",
+          "blocking_filing_date": "2021-12-02",
+          "point_in_time_safe": true
+        }
+      },
+      "error_if_unresolved": null
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2021-09-02",
+      "metric_name": "pretax_income",
+      "old_status": "REVIEW_REQUIRED",
+      "old_run_id": "dae1c3f9-e709-4499-ac0e-2c885254b9ff",
+      "old_engine_version": "QUARTERLY_ENGINE_V2_ANNUAL_PRODUCTION_ANCHOR",
+      "v4_isolation_status": "REVIEW_REQUIRED",
+      "new_status_v5": "PASS",
+      "resolved": true,
+      "standard_gaap_fallback_activated": true,
+      "fallback_activations": [
+        {
+          "ticker": "MU",
+          "fiscal_year_end": "2021-09-02",
+          "metric_name": "pretax_income",
+          "fiscal_quarter": "Q1",
+          "source": "STANDARD_GAAP_ALLOW_LIST",
+          "fallback_type": "STANDARD_GAAP_ALLOW_LIST",
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+          "blocking_accession": "0000723125-21-000012",
+          "filing_date": "2021-01-08",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+          "point_in_time_reuse_error": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+          "allow_list_version": "STANDARD_GAAP_ALLOW_LIST_V1",
+          "candidates_considered": [
+            "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+            "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+          ],
+          "rejected_candidates": [
+            {
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+            }
+          ],
+          "other_agreeing_concepts": [],
+          "matched_duration_classes": [
+            "quarter"
+          ]
+        }
+      ],
+      "q1_accession": "0000723125-21-000012",
+      "q2_accession": "0000723125-21-000032",
+      "q3_accession": "0000723125-21-000052",
+      "fy_accession": "0000723125-21-000065",
+      "quarters": {
+        "Q1": {
+          "value": 841000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2021-01-08",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "accession_number": "0000723125-21-000012",
+            "context_id": "iae55af5618ac4cadadc5609c86420c40_D20200904-20201203",
+            "unit_id": "usd",
+            "period_start": "2020-09-04",
+            "period_end": "2020-12-03",
+            "duration_days": 90,
+            "decimals": "-6",
+            "concept_source": {
+              "source": "STANDARD_GAAP_ALLOW_LIST",
+              "fallback_type": "STANDARD_GAAP_ALLOW_LIST",
+              "metric_name": "pretax_income",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "blocking_accession": "0000723125-21-000012",
+              "filing_date": "2021-01-08",
+              "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+              "point_in_time_reuse_error": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+              "allow_list_version": "STANDARD_GAAP_ALLOW_LIST_V1",
+              "candidates_considered": [
+                "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+                "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+              ],
+              "rejected_candidates": [
+                {
+                  "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+                  "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+                }
+              ],
+              "other_agreeing_concepts": [],
+              "matched_duration_classes": [
+                "quarter"
+              ]
+            }
+          }
+        },
+        "Q2": {
+          "value": 635000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2021-04-01",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "accession_number": "0000723125-21-000032",
+            "context_id": "i51a6755a77e949089d9dd61f6d93426c_D20201204-20210304",
+            "unit_id": "usd",
+            "period_start": "2020-12-04",
+            "period_end": "2021-03-04",
+            "duration_days": 90,
+            "decimals": "-6",
+            "concept_source": {
+              "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+              "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+              "source_quarter": "Q1",
+              "source_accession": "0000723125-21-000012",
+              "source_form": "10-Q",
+              "source_filing_date": "2021-01-08",
+              "blocking_filing_date": "2021-04-01",
+              "point_in_time_safe": true
+            },
+            "cross_check_derived_from_ytd": 635000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q3": {
+          "value": 1806000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2021-07-01",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "accession_number": "0000723125-21-000052",
+            "context_id": "i43cc9116fa444770bfb366232e75399b_D20210305-20210603",
+            "unit_id": "usd",
+            "period_start": "2021-03-05",
+            "period_end": "2021-06-03",
+            "duration_days": 90,
+            "decimals": "-6",
+            "concept_source": {
+              "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+              "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+              "source_quarter": "Q1",
+              "source_accession": "0000723125-21-000012",
+              "source_form": "10-Q",
+              "source_filing_date": "2021-01-08",
+              "blocking_filing_date": "2021-07-01",
+              "point_in_time_safe": true
+            },
+            "cross_check_derived_from_ytd": 1806000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q4": {
+          "value": 2936000000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2021-10-08",
+          "lineage": {
+            "annual_value": 6218000000.0,
+            "annual_concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "annual_accession_number": "0000723125-21-000065",
+            "annual_decimals": "-6",
+            "nine_month_ytd_value": 3282000000.0,
+            "nine_month_ytd_context_id": "ic85ec128b1454bca98820d5e8f642edb_D20200904-20210603",
+            "nine_month_ytd_accession_number": "0000723125-21-000052",
+            "nine_month_ytd_decimals": "-6",
+            "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+            "annual_anchor_accession": "0000723125-21-000065",
+            "annual_anchor_metric": "pretax_income",
+            "annual_anchor_status": "PASS",
+            "annual_anchor_extraction_run_id": "0000723125-21-000065::v15 (scripts/69_xbrl_metric_engine.py)"
+          }
+        }
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 6218000000.0,
+        "annual_value": 6218000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Annual": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            }
+          },
+          "permitted_difference": 2000000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "STANDARD_GAAP_ALLOW_LIST",
+          "fallback_type": "STANDARD_GAAP_ALLOW_LIST",
+          "metric_name": "pretax_income",
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+          "blocking_accession": "0000723125-21-000012",
+          "filing_date": "2021-01-08",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+          "point_in_time_reuse_error": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+          "allow_list_version": "STANDARD_GAAP_ALLOW_LIST_V1",
+          "candidates_considered": [
+            "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+            "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+          ],
+          "rejected_candidates": [
+            {
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+            }
+          ],
+          "other_agreeing_concepts": [],
+          "matched_duration_classes": [
+            "quarter"
+          ]
+        },
+        "Q2": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0000723125-21-000012",
+          "source_form": "10-Q",
+          "source_filing_date": "2021-01-08",
+          "blocking_filing_date": "2021-04-01",
+          "point_in_time_safe": true
+        },
+        "Q3": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0000723125-21-000012",
+          "source_form": "10-Q",
+          "source_filing_date": "2021-01-08",
+          "blocking_filing_date": "2021-07-01",
+          "point_in_time_safe": true
+        }
+      },
+      "error_if_unresolved": null
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2021-07-31",
+      "metric_name": "pretax_income",
+      "old_status": "REVIEW_REQUIRED",
+      "old_run_id": "f72f4da0-8815-4450-a540-0162024685c3",
+      "old_engine_version": "QUARTERLY_ENGINE_V3_DURATION_TOLERANCE",
+      "v4_isolation_status": "REVIEW_REQUIRED",
+      "new_status_v5": "PASS",
+      "resolved": true,
+      "standard_gaap_fallback_activated": true,
+      "fallback_activations": [
+        {
+          "ticker": "PANW",
+          "fiscal_year_end": "2021-07-31",
+          "metric_name": "pretax_income",
+          "fiscal_quarter": "Q1",
+          "source": "STANDARD_GAAP_ALLOW_LIST",
+          "fallback_type": "STANDARD_GAAP_ALLOW_LIST",
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "blocking_accession": "0001327567-20-000041",
+          "filing_date": "2020-11-19",
+          "primary_resolver_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+          "point_in_time_reuse_error": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+          "allow_list_version": "STANDARD_GAAP_ALLOW_LIST_V1",
+          "candidates_considered": [
+            "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+            "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+          ],
+          "rejected_candidates": [
+            {
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+            }
+          ],
+          "other_agreeing_concepts": [],
+          "matched_duration_classes": [
+            "quarter"
+          ]
+        }
+      ],
+      "q1_accession": "0001327567-20-000041",
+      "q2_accession": "0001327567-21-000004",
+      "q3_accession": "0001327567-21-000014",
+      "fy_accession": "0001327567-21-000029",
+      "quarters": {
+        "Q1": {
+          "value": -82300000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2020-11-19",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+            "accession_number": "0001327567-20-000041",
+            "context_id": "i20182935611c44218c2bbab5f36795dc_D20200801-20201031",
+            "unit_id": "usd",
+            "period_start": "2020-08-01",
+            "period_end": "2020-10-31",
+            "duration_days": 91,
+            "decimals": "-5",
+            "concept_source": {
+              "source": "STANDARD_GAAP_ALLOW_LIST",
+              "fallback_type": "STANDARD_GAAP_ALLOW_LIST",
+              "metric_name": "pretax_income",
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "blocking_accession": "0001327567-20-000041",
+              "filing_date": "2020-11-19",
+              "primary_resolver_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+              "point_in_time_reuse_error": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+              "allow_list_version": "STANDARD_GAAP_ALLOW_LIST_V1",
+              "candidates_considered": [
+                "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+                "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+              ],
+              "rejected_candidates": [
+                {
+                  "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+                  "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+                }
+              ],
+              "other_agreeing_concepts": [],
+              "matched_duration_classes": [
+                "quarter"
+              ]
+            }
+          }
+        },
+        "Q2": {
+          "value": -130000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2021-02-23",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+            "accession_number": "0001327567-21-000004",
+            "context_id": "i076fcb4b544f47b799803b739ba1cd4d_D20201101-20210131",
+            "unit_id": "usd",
+            "period_start": "2020-11-01",
+            "period_end": "2021-01-31",
+            "duration_days": 91,
+            "decimals": "-5",
+            "concept_source": {
+              "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+              "primary_resolver_error": "Q2: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+              "source_quarter": "Q1",
+              "source_accession": "0001327567-20-000041",
+              "source_form": "10-Q",
+              "source_filing_date": "2020-11-19",
+              "blocking_filing_date": "2021-02-23",
+              "point_in_time_safe": true
+            },
+            "cross_check_derived_from_ytd": -130000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q3": {
+          "value": -150400000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2021-05-21",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+            "accession_number": "0001327567-21-000014",
+            "context_id": "i06da0b4b674e4737bbc0ac3a41c1f4ec_D20210201-20210430",
+            "unit_id": "usd",
+            "period_start": "2021-02-01",
+            "period_end": "2021-04-30",
+            "duration_days": 88,
+            "decimals": "-5",
+            "concept_source": {
+              "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+              "primary_resolver_error": "Q3: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+              "source_quarter": "Q1",
+              "source_accession": "0001327567-20-000041",
+              "source_form": "10-Q",
+              "source_filing_date": "2020-11-19",
+              "blocking_filing_date": "2021-05-21",
+              "point_in_time_safe": true
+            },
+            "cross_check_derived_from_ytd": -150400000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q4": {
+          "value": -102300000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2021-09-03",
+          "lineage": {
+            "annual_value": -465000000.0,
+            "annual_concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+            "annual_accession_number": "0001327567-21-000029",
+            "annual_decimals": "-5",
+            "nine_month_ytd_value": -362700000.0,
+            "nine_month_ytd_context_id": "if02d50f1392b48e7adc89ea096ca7153_D20200801-20210430",
+            "nine_month_ytd_accession_number": "0001327567-21-000014",
+            "nine_month_ytd_decimals": "-5",
+            "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+            "annual_anchor_accession": "0001327567-21-000029",
+            "annual_anchor_metric": "pretax_income",
+            "annual_anchor_status": "PASS",
+            "annual_anchor_extraction_run_id": "0001327567-21-000029::v15 (scripts/69_xbrl_metric_engine.py)"
+          }
+        }
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": -465000000.0,
+        "annual_value": -465000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-5",
+              "rounding_unit": 100000,
+              "uncertainty": 50000.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-5",
+              "rounding_unit": 100000,
+              "uncertainty": 50000.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-5",
+              "rounding_unit": 100000,
+              "uncertainty": 50000.0
+            },
+            "Annual": {
+              "decimals": "-5",
+              "rounding_unit": 100000,
+              "uncertainty": 50000.0
+            }
+          },
+          "permitted_difference": 200000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "STANDARD_GAAP_ALLOW_LIST",
+          "fallback_type": "STANDARD_GAAP_ALLOW_LIST",
+          "metric_name": "pretax_income",
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "blocking_accession": "0001327567-20-000041",
+          "filing_date": "2020-11-19",
+          "primary_resolver_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+          "point_in_time_reuse_error": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+          "allow_list_version": "STANDARD_GAAP_ALLOW_LIST_V1",
+          "candidates_considered": [
+            "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+            "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
+          ],
+          "rejected_candidates": [
+            {
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+            }
+          ],
+          "other_agreeing_concepts": [],
+          "matched_duration_classes": [
+            "quarter"
+          ]
+        },
+        "Q2": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q2: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+          "source_quarter": "Q1",
+          "source_accession": "0001327567-20-000041",
+          "source_form": "10-Q",
+          "source_filing_date": "2020-11-19",
+          "blocking_filing_date": "2021-02-23",
+          "point_in_time_safe": true
+        },
+        "Q3": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q3: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+          "source_quarter": "Q1",
+          "source_accession": "0001327567-20-000041",
+          "source_form": "10-Q",
+          "source_filing_date": "2020-11-19",
+          "blocking_filing_date": "2021-05-21",
+          "point_in_time_safe": true
+        }
+      },
+      "error_if_unresolved": null
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2021-07-31",
+      "metric_name": "revenue",
+      "old_status": "REVIEW_REQUIRED",
+      "old_run_id": "f72f4da0-8815-4450-a540-0162024685c3",
+      "old_engine_version": "QUARTERLY_ENGINE_V3_DURATION_TOLERANCE",
+      "v4_isolation_status": "REVIEW_REQUIRED",
+      "new_status_v5": "PASS",
+      "resolved": true,
+      "standard_gaap_fallback_activated": true,
+      "fallback_activations": [
+        {
+          "ticker": "PANW",
+          "fiscal_year_end": "2021-07-31",
+          "metric_name": "revenue",
+          "fiscal_quarter": "Q1",
+          "source": "STANDARD_GAAP_ALLOW_LIST",
+          "fallback_type": "STANDARD_GAAP_ALLOW_LIST",
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "blocking_accession": "0001327567-20-000041",
+          "filing_date": "2020-11-19",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "point_in_time_reuse_error": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+          "allow_list_version": "STANDARD_GAAP_ALLOW_LIST_V1",
+          "candidates_considered": [
+            "us-gaap:Revenues",
+            "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+            "us-gaap:SalesRevenueNet",
+            "us-gaap:SalesRevenueGoodsNet",
+            "us-gaap:SalesRevenueServicesNet"
+          ],
+          "rejected_candidates": [
+            {
+              "concept_qname": "us-gaap:Revenues",
+              "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+            },
+            {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+              "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+            },
+            {
+              "concept_qname": "us-gaap:SalesRevenueNet",
+              "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+            },
+            {
+              "concept_qname": "us-gaap:SalesRevenueGoodsNet",
+              "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+            },
+            {
+              "concept_qname": "us-gaap:SalesRevenueServicesNet",
+              "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+            }
+          ],
+          "other_agreeing_concepts": [],
+          "matched_duration_classes": [
+            "quarter"
+          ]
+        }
+      ],
+      "q1_accession": "0001327567-20-000041",
+      "q2_accession": "0001327567-21-000004",
+      "q3_accession": "0001327567-21-000014",
+      "fy_accession": "0001327567-21-000029",
+      "quarters": {
+        "Q1": {
+          "value": 946000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2020-11-19",
+          "lineage": {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "accession_number": "0001327567-20-000041",
+            "context_id": "i20182935611c44218c2bbab5f36795dc_D20200801-20201031",
+            "unit_id": "usd",
+            "period_start": "2020-08-01",
+            "period_end": "2020-10-31",
+            "duration_days": 91,
+            "decimals": "-5",
+            "concept_source": {
+              "source": "STANDARD_GAAP_ALLOW_LIST",
+              "fallback_type": "STANDARD_GAAP_ALLOW_LIST",
+              "metric_name": "revenue",
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "blocking_accession": "0001327567-20-000041",
+              "filing_date": "2020-11-19",
+              "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+              "point_in_time_reuse_error": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+              "allow_list_version": "STANDARD_GAAP_ALLOW_LIST_V1",
+              "candidates_considered": [
+                "us-gaap:Revenues",
+                "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+                "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+                "us-gaap:SalesRevenueNet",
+                "us-gaap:SalesRevenueGoodsNet",
+                "us-gaap:SalesRevenueServicesNet"
+              ],
+              "rejected_candidates": [
+                {
+                  "concept_qname": "us-gaap:Revenues",
+                  "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+                },
+                {
+                  "concept_qname": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+                  "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+                },
+                {
+                  "concept_qname": "us-gaap:SalesRevenueNet",
+                  "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+                },
+                {
+                  "concept_qname": "us-gaap:SalesRevenueGoodsNet",
+                  "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+                },
+                {
+                  "concept_qname": "us-gaap:SalesRevenueServicesNet",
+                  "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+                }
+              ],
+              "other_agreeing_concepts": [],
+              "matched_duration_classes": [
+                "quarter"
+              ]
+            }
+          }
+        },
+        "Q2": {
+          "value": 1016900000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2021-02-23",
+          "lineage": {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "accession_number": "0001327567-21-000004",
+            "context_id": "i076fcb4b544f47b799803b739ba1cd4d_D20201101-20210131",
+            "unit_id": "usd",
+            "period_start": "2020-11-01",
+            "period_end": "2021-01-31",
+            "duration_days": 91,
+            "decimals": "-5",
+            "concept_source": {
+              "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+              "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+              "source_quarter": "Q1",
+              "source_accession": "0001327567-20-000041",
+              "source_form": "10-Q",
+              "source_filing_date": "2020-11-19",
+              "blocking_filing_date": "2021-02-23",
+              "point_in_time_safe": true
+            },
+            "cross_check_derived_from_ytd": 1016900000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q3": {
+          "value": 1073900000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2021-05-21",
+          "lineage": {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "accession_number": "0001327567-21-000014",
+            "context_id": "i06da0b4b674e4737bbc0ac3a41c1f4ec_D20210201-20210430",
+            "unit_id": "usd",
+            "period_start": "2021-02-01",
+            "period_end": "2021-04-30",
+            "duration_days": 88,
+            "decimals": "-5",
+            "concept_source": {
+              "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+              "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+              "source_quarter": "Q1",
+              "source_accession": "0001327567-20-000041",
+              "source_form": "10-Q",
+              "source_filing_date": "2020-11-19",
+              "blocking_filing_date": "2021-05-21",
+              "point_in_time_safe": true
+            },
+            "cross_check_derived_from_ytd": 1073900000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q4": {
+          "value": 1219300000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2021-09-03",
+          "lineage": {
+            "annual_value": 4256100000.0,
+            "annual_concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "annual_accession_number": "0001327567-21-000029",
+            "annual_decimals": "-5",
+            "nine_month_ytd_value": 3036800000.0,
+            "nine_month_ytd_context_id": "if02d50f1392b48e7adc89ea096ca7153_D20200801-20210430",
+            "nine_month_ytd_accession_number": "0001327567-21-000014",
+            "nine_month_ytd_decimals": "-5",
+            "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+            "annual_anchor_accession": "0001327567-21-000029",
+            "annual_anchor_metric": "revenue",
+            "annual_anchor_status": "PASS",
+            "annual_anchor_extraction_run_id": "0001327567-21-000029::v15 (scripts/69_xbrl_metric_engine.py)"
+          }
+        }
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 4256100000.0,
+        "annual_value": 4256100000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-5",
+              "rounding_unit": 100000,
+              "uncertainty": 50000.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-5",
+              "rounding_unit": 100000,
+              "uncertainty": 50000.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-5",
+              "rounding_unit": 100000,
+              "uncertainty": 50000.0
+            },
+            "Annual": {
+              "decimals": "-5",
+              "rounding_unit": 100000,
+              "uncertainty": 50000.0
+            }
+          },
+          "permitted_difference": 200000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "STANDARD_GAAP_ALLOW_LIST",
+          "fallback_type": "STANDARD_GAAP_ALLOW_LIST",
+          "metric_name": "revenue",
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "blocking_accession": "0001327567-20-000041",
+          "filing_date": "2020-11-19",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "point_in_time_reuse_error": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+          "allow_list_version": "STANDARD_GAAP_ALLOW_LIST_V1",
+          "candidates_considered": [
+            "us-gaap:Revenues",
+            "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+            "us-gaap:SalesRevenueNet",
+            "us-gaap:SalesRevenueGoodsNet",
+            "us-gaap:SalesRevenueServicesNet"
+          ],
+          "rejected_candidates": [
+            {
+              "concept_qname": "us-gaap:Revenues",
+              "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+            },
+            {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+              "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+            },
+            {
+              "concept_qname": "us-gaap:SalesRevenueNet",
+              "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+            },
+            {
+              "concept_qname": "us-gaap:SalesRevenueGoodsNet",
+              "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+            },
+            {
+              "concept_qname": "us-gaap:SalesRevenueServicesNet",
+              "reason": "no dimensionless, non-nil, numeric fact found for this concept in the blocking accession"
+            }
+          ],
+          "other_agreeing_concepts": [],
+          "matched_duration_classes": [
+            "quarter"
+          ]
+        },
+        "Q2": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0001327567-20-000041",
+          "source_form": "10-Q",
+          "source_filing_date": "2020-11-19",
+          "blocking_filing_date": "2021-02-23",
+          "point_in_time_safe": true
+        },
+        "Q3": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0001327567-20-000041",
+          "source_form": "10-Q",
+          "source_filing_date": "2020-11-19",
+          "blocking_filing_date": "2021-05-21",
+          "point_in_time_safe": true
+        }
+      },
+      "error_if_unresolved": null
+    }
+  ],
+  "family_counts": {
+    "pretax_income": 3,
+    "revenue": 1
+  },
+  "resolved_count": 4,
+  "still_unresolved": [],
+  "safety_checks": [
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2022-01-31",
+      "metric_name": "pretax_income",
+      "resolved": true,
+      "value_from_blocking_10q": true,
+      "exactly_one_allowed_concept": true,
+      "no_extension_concept": true,
+      "full_year_reconciles": true,
+      "reconciliation_status": "PASS",
+      "reconciliation_difference": 0.0
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2021-09-02",
+      "metric_name": "pretax_income",
+      "resolved": true,
+      "value_from_blocking_10q": true,
+      "exactly_one_allowed_concept": true,
+      "no_extension_concept": true,
+      "full_year_reconciles": true,
+      "reconciliation_status": "PASS",
+      "reconciliation_difference": 0.0
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2021-07-31",
+      "metric_name": "pretax_income",
+      "resolved": true,
+      "value_from_blocking_10q": true,
+      "exactly_one_allowed_concept": true,
+      "no_extension_concept": true,
+      "full_year_reconciles": true,
+      "reconciliation_status": "PASS",
+      "reconciliation_difference": 0.0
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2021-07-31",
+      "metric_name": "revenue",
+      "resolved": true,
+      "value_from_blocking_10q": true,
+      "exactly_one_allowed_concept": true,
+      "no_extension_concept": true,
+      "full_year_reconciles": true,
+      "reconciliation_status": "PASS",
+      "reconciliation_difference": 0.0
+    }
+  ],
+  "all_safety_checks_passed": true,
+  "control_company_years": [
+    {
+      "ticker": "AMZN",
+      "fiscal_year_end": "2024-12-31",
+      "old_run_id": "ec5dcd3d-f57a-42a5-9d00-fdc3b90751b8",
+      "old_engine_version": "118_quarterly_extraction_engine_v1"
+    },
+    {
+      "ticker": "MSFT",
+      "fiscal_year_end": "2024-06-30",
+      "old_run_id": "e9c306c0-351a-46fe-be93-4e8de1da1b1d",
+      "old_engine_version": "118_quarterly_extraction_engine_v1"
+    },
+    {
+      "ticker": "NVDA",
+      "fiscal_year_end": "2020-01-26",
+      "old_run_id": "22c174be-d095-48da-8d68-8388805b9c7d",
+      "old_engine_version": "QUARTERLY_ENGINE_V4_POINT_IN_TIME_CONCEPT_REUSE"
+    },
+    {
+      "ticker": "ORCL",
+      "fiscal_year_end": "2024-05-31",
+      "old_run_id": "56e4d43e-9ee3-4e82-8537-92d5b835632b",
+      "old_engine_version": "118_quarterly_extraction_engine_v1"
+    }
+  ],
+  "control_results": [
+    {
+      "ticker": "AMZN",
+      "fiscal_year_end": "2024-12-31",
+      "old_run_id": "ec5dcd3d-f57a-42a5-9d00-fdc3b90751b8",
+      "old_engine_version": "118_quarterly_extraction_engine_v1",
+      "v4_row_count": 24,
+      "v5_row_count": 24,
+      "identical": true,
+      "differences": [],
+      "standard_gaap_fallback_activations": []
+    },
+    {
+      "ticker": "MSFT",
+      "fiscal_year_end": "2024-06-30",
+      "old_run_id": "e9c306c0-351a-46fe-be93-4e8de1da1b1d",
+      "old_engine_version": "118_quarterly_extraction_engine_v1",
+      "v4_row_count": 24,
+      "v5_row_count": 24,
+      "identical": true,
+      "differences": [],
+      "standard_gaap_fallback_activations": []
+    },
+    {
+      "ticker": "NVDA",
+      "fiscal_year_end": "2020-01-26",
+      "old_run_id": "22c174be-d095-48da-8d68-8388805b9c7d",
+      "old_engine_version": "QUARTERLY_ENGINE_V4_POINT_IN_TIME_CONCEPT_REUSE",
+      "v4_row_count": 24,
+      "v5_row_count": 24,
+      "identical": true,
+      "differences": [],
+      "standard_gaap_fallback_activations": []
+    },
+    {
+      "ticker": "ORCL",
+      "fiscal_year_end": "2024-05-31",
+      "old_run_id": "56e4d43e-9ee3-4e82-8537-92d5b835632b",
+      "old_engine_version": "118_quarterly_extraction_engine_v1",
+      "v4_row_count": 24,
+      "v5_row_count": 24,
+      "identical": true,
+      "differences": [],
+      "standard_gaap_fallback_activations": []
+    }
+  ],
+  "control_total_comparison": {
+    "identical": true,
+    "differences": [],
+    "v4_row_count": 96,
+    "v5_row_count": 96
+  },
+  "control_fallback_activations": [],
+  "controls_all_identical": true,
+  "runtime_seconds": 28702.34
+}

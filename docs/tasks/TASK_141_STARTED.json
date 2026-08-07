@@ -1,0 +1,20 @@
+{
+  "task_id": "TASK_141_GLOBAL_WAREHOUSE_INTEGRITY_AUDIT",
+  "status": "STARTED",
+  "start_timestamp": "2026-08-05T09:25:00Z",
+  "objective": "Perform a complete read-only integrity audit of every registered and locked 10-K and 10-Q accession currently known to the project, classifying each by detected filing format and warehouse-ingestion anomaly category. No warehouse loader created or modified, no Arelle run, no filing re-warehoused, no write to either production database.",
+  "read_only": true,
+  "production_databases_to_read": [
+    "data/database/xbrl_warehouse_proof.duckdb",
+    "data/database/ai_stock_agent.duckdb"
+  ],
+  "expected_output_files": [
+    "scripts/141_global_warehouse_integrity_audit.py",
+    "data/warehouse_global_integrity_audit.json",
+    "data/warehouse_global_integrity_audit.csv",
+    "docs/tasks/TASK_141_RESULT.json",
+    "docs/tasks/TASK_141_RESULT.md",
+    "docs/LAST_CLAUDE_REPORT.md",
+    "docs/CURRENT_STATE.md"
+  ]
+}

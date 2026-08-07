@@ -1,0 +1,98 @@
+{
+  "reproduction_check": {
+    "total_results": 72,
+    "expected_total_results": 72,
+    "total_results_matches_expected": true,
+    "total_differences": 0,
+    "differences": [],
+    "per_company": {
+      "MSFT": {
+        "result_count": 24,
+        "statuses": {
+          "revenue": "PASS",
+          "operating_income": "PASS",
+          "pretax_income": "PASS",
+          "income_tax_expense": "PASS",
+          "operating_cash_flow": "PASS",
+          "capex": "PASS"
+        },
+        "differences_vs_original": []
+      },
+      "AMZN": {
+        "result_count": 24,
+        "statuses": {
+          "revenue": "PASS",
+          "operating_income": "PASS",
+          "pretax_income": "PASS",
+          "income_tax_expense": "PASS",
+          "operating_cash_flow": "PASS",
+          "capex": "PASS"
+        },
+        "differences_vs_original": []
+      },
+      "ORCL": {
+        "result_count": 24,
+        "statuses": {
+          "revenue": "PASS",
+          "operating_income": "PASS_ROUNDING_TOLERANCE",
+          "pretax_income": "PASS_ROUNDING_TOLERANCE",
+          "income_tax_expense": "PASS",
+          "operating_cash_flow": "PASS",
+          "capex": "PASS"
+        },
+        "differences_vs_original": []
+      }
+    }
+  },
+  "fail_closed_synthetic_test": {
+    "test_name": "fail_closed_synthetic_test",
+    "synthetic_inputs": {
+      "q1_value": 1000000000.0,
+      "q2_value": 1000000000.0,
+      "q3_value": 1000000000.0,
+      "q4_value": 1000000000.0,
+      "annual_value": 4005000000.0,
+      "all_decimals": "-6"
+    },
+    "engine_result": {
+      "sum_q1_to_q4": 4000000000.0,
+      "annual_value": 4005000000.0,
+      "difference": -5000000.0,
+      "exact_equality_status": "FAIL",
+      "precision_calculation": {
+        "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+        "source_facts": {
+          "Q1": {
+            "decimals": "-6",
+            "rounding_unit": 1000000,
+            "uncertainty": 500000.0
+          },
+          "Q2": {
+            "basis": "DIRECT_QUARTER",
+            "decimals": "-6",
+            "rounding_unit": 1000000,
+            "uncertainty": 500000.0
+          },
+          "Q3": {
+            "basis": "DIRECT_QUARTER",
+            "decimals": "-6",
+            "rounding_unit": 1000000,
+            "uncertainty": 500000.0
+          },
+          "Annual": {
+            "decimals": "-6",
+            "rounding_unit": 1000000,
+            "uncertainty": 500000.0
+          }
+        },
+        "permitted_difference": 2000000.0,
+        "actual_difference": -5000000.0,
+        "within_tolerance": false
+      },
+      "status": "REVIEW_REQUIRED"
+    },
+    "test_passed": true,
+    "note": "No database access. No company processed. Nothing written to either database."
+  },
+  "overall_pass": true
+}

@@ -1,0 +1,210 @@
+{
+  "status": "PASS",
+  "accession_number": "0001045810-19-000079",
+  "ticker": "NVDA",
+  "report_date": "2019-04-28",
+  "pre_load_counts": {
+    "xbrl_facts": 0,
+    "xbrl_contexts": 0,
+    "xbrl_units": 0,
+    "xbrl_concepts": 0,
+    "xbrl_labels": 0,
+    "xbrl_presentation_relationships": 0,
+    "xbrl_calculation_relationships": 0,
+    "xbrl_definition_relationships": 0,
+    "xbrl_roles": 0
+  },
+  "post_load_counts": {
+    "xbrl_facts": 654,
+    "xbrl_contexts": 134,
+    "xbrl_units": 5,
+    "xbrl_concepts": 711,
+    "xbrl_labels": 942,
+    "xbrl_presentation_relationships": 498,
+    "xbrl_calculation_relationships": 134,
+    "xbrl_definition_relationships": 517,
+    "xbrl_roles": 92
+  },
+  "database_deltas": {
+    "total_facts_before": 225126,
+    "total_facts_after": 225780,
+    "delta": 654
+  },
+  "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\xbrl_warehouse_proof_pre_nvda_2019q1_repair_20260805T150426Z.duckdb",
+  "backup_checksum": "2211db4304944289b20723b491059c3b1fcfda848ef5d1289772c4d825c38101",
+  "archive_paths_and_counts": {
+    "xbrl_facts": {
+      "path": "C:\\AI_Stock_Agent\\data\\archive\\nvda_2019q1_repair_pre_xbrl_facts_20260805T150426Z.parquet",
+      "rows": 0
+    },
+    "xbrl_contexts": {
+      "path": "C:\\AI_Stock_Agent\\data\\archive\\nvda_2019q1_repair_pre_xbrl_contexts_20260805T150426Z.parquet",
+      "rows": 0
+    },
+    "xbrl_units": {
+      "path": "C:\\AI_Stock_Agent\\data\\archive\\nvda_2019q1_repair_pre_xbrl_units_20260805T150426Z.parquet",
+      "rows": 0
+    },
+    "xbrl_concepts": {
+      "path": "C:\\AI_Stock_Agent\\data\\archive\\nvda_2019q1_repair_pre_xbrl_concepts_20260805T150426Z.parquet",
+      "rows": 0
+    },
+    "xbrl_labels": {
+      "path": "C:\\AI_Stock_Agent\\data\\archive\\nvda_2019q1_repair_pre_xbrl_labels_20260805T150426Z.parquet",
+      "rows": 0
+    },
+    "xbrl_presentation_relationships": {
+      "path": "C:\\AI_Stock_Agent\\data\\archive\\nvda_2019q1_repair_pre_xbrl_presentation_relationships_20260805T150426Z.parquet",
+      "rows": 0
+    },
+    "xbrl_calculation_relationships": {
+      "path": "C:\\AI_Stock_Agent\\data\\archive\\nvda_2019q1_repair_pre_xbrl_calculation_relationships_20260805T150426Z.parquet",
+      "rows": 0
+    },
+    "xbrl_definition_relationships": {
+      "path": "C:\\AI_Stock_Agent\\data\\archive\\nvda_2019q1_repair_pre_xbrl_definition_relationships_20260805T150426Z.parquet",
+      "rows": 0
+    },
+    "xbrl_roles": {
+      "path": "C:\\AI_Stock_Agent\\data\\archive\\nvda_2019q1_repair_pre_xbrl_roles_20260805T150426Z.parquet",
+      "rows": 0
+    },
+    "warehouse_runs": {
+      "path": "C:\\AI_Stock_Agent\\data\\archive\\nvda_2019q1_repair_pre_warehouse_runs_20260805T150426Z.parquet",
+      "rows": 2
+    }
+  },
+  "manifest_path": "C:\\AI_Stock_Agent\\data\\archive\\nvda_2019q1_production_warehouse_repair_manifest.json",
+  "selected_entry_point": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\NVDA\\000104581019000079\\nvda-20190428.xml",
+  "detected_format": "TRADITIONAL_XBRL_SEPARATE_INSTANCE",
+  "lineage": {
+    "accession_number": "0001045810-19-000079",
+    "ticker": "NVDA",
+    "form": "10-Q",
+    "report_date": "2019-04-28",
+    "locked_dir": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\NVDA\\000104581019000079",
+    "primary_document": "nvda2020q110q.htm",
+    "primary_document_checksum": "4494134f0dcbc36adfbdaaef493ed3f3d6111cfbc44c11b47d08d8f83eea32c0",
+    "selected_entry_point": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\NVDA\\000104581019000079\\nvda-20190428.xml",
+    "selected_entry_point_name": "nvda-20190428.xml",
+    "selected_entry_point_checksum": "2ff9fdf0280b17af64125cd326999fd0c6abbf24c38a7e8b299b71aa3d10b1d6",
+    "detected_format": "TRADITIONAL_XBRL_SEPARATE_INSTANCE"
+  },
+  "corrected_warehouse_run_id": "0001045810-19-000079::144_warehouse_loader_v2_production.py::2026-08-05T15:04:28.319063+00:00",
+  "preserved_historical_run_ids": [
+    "0001045810-19-000079::123_quarterly_batch_runner_45_company_years.py::2026-08-04T09:31:49.458225+00:00",
+    "0001045810-19-000079::124_quarterly_schema_nullable_fix_and_resume.py::2026-08-04T15:28:11.929007+00:00"
+  ],
+  "transaction_result": "COMMITTED",
+  "integrity_checks": {
+    "nine_accession_counts_match_expected": true,
+    "total_facts_increased_correctly": true,
+    "all_six_target_metrics_have_current_period_facts": true,
+    "current_q1_period_correct": true,
+    "comparative_contexts_distinguishable_from_current": true,
+    "historical_runs_unchanged": true,
+    "exactly_one_corrected_pass_run": true,
+    "known_baseline_accession_unchanged": true,
+    "database_structure_unchanged": true,
+    "ai_stock_agent_db_unchanged": true
+  },
+  "integrity_check_detail": {
+    "post_load_counts": {
+      "xbrl_facts": 654,
+      "xbrl_contexts": 134,
+      "xbrl_units": 5,
+      "xbrl_concepts": 711,
+      "xbrl_labels": 942,
+      "xbrl_presentation_relationships": 498,
+      "xbrl_calculation_relationships": 134,
+      "xbrl_definition_relationships": 517,
+      "xbrl_roles": 92
+    },
+    "total_facts_after": 225780,
+    "target_metric_facts": {
+      "revenue": [
+        {
+          "period_start": "2019-01-28",
+          "period_end": "2019-04-28",
+          "value": 2220000000.0,
+          "context_id": "FD2020Q1YTD"
+        }
+      ],
+      "operating_income": [
+        {
+          "period_start": "2019-01-28",
+          "period_end": "2019-04-28",
+          "value": 358000000.0,
+          "context_id": "FD2020Q1YTD"
+        }
+      ],
+      "pretax_income": [
+        {
+          "period_start": "2019-01-28",
+          "period_end": "2019-04-28",
+          "value": 389000000.0,
+          "context_id": "FD2020Q1YTD"
+        }
+      ],
+      "income_tax_expense": [
+        {
+          "period_start": "2019-01-28",
+          "period_end": "2019-04-28",
+          "value": -5000000.0,
+          "context_id": "FD2020Q1YTD"
+        }
+      ],
+      "operating_cash_flow": [
+        {
+          "period_start": "2019-01-28",
+          "period_end": "2019-04-28",
+          "value": 720000000.0,
+          "context_id": "FD2020Q1YTD"
+        }
+      ],
+      "capex": [
+        {
+          "period_start": "2019-01-28",
+          "period_end": "2019-04-28",
+          "value": 128000000.0,
+          "context_id": "FD2020Q1YTD"
+        }
+      ]
+    },
+    "distinct_current_periods_found": [
+      [
+        "2019-01-28",
+        "2019-04-28"
+      ]
+    ],
+    "comparative_context_sample": [
+      [
+        "FD2019Q1QTD",
+        "2018-01-29",
+        "2018-04-29"
+      ]
+    ],
+    "historical_runs_after": [
+      {
+        "warehouse_run_id": "0001045810-19-000079::123_quarterly_batch_runner_45_company_years.py::2026-08-04T09:31:49.458225+00:00",
+        "status": "PASS",
+        "script_name": "123_quarterly_batch_runner_45_company_years.py"
+      },
+      {
+        "warehouse_run_id": "0001045810-19-000079::124_quarterly_schema_nullable_fix_and_resume.py::2026-08-04T15:28:11.929007+00:00",
+        "status": "PASS",
+        "script_name": "124_quarterly_schema_nullable_fix_and_resume.py"
+      }
+    ],
+    "corrected_run": "0001045810-19-000079::144_warehouse_loader_v2_production.py::2026-08-05T15:04:28.319063+00:00",
+    "distinct_accessions_with_facts_after": 185,
+    "baseline_accession_facts_after": 920,
+    "ai_stock_agent_db_counts_after": {
+      "quarterly_extraction_runs": 45,
+      "quarterly_metric_results": 1080,
+      "financial_metric_results": 900,
+      "unique_review_required": 10
+    }
+  },
+  "runtime_seconds": 3.27
+}

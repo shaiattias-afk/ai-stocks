@@ -1,0 +1,213 @@
+{
+  "last_updated_utc": "2026-08-05T04:20:18.988446+00:00",
+  "target_company_years": 15,
+  "completed_count": 15,
+  "company_year_results": {
+    "CRWD|2022-01-31": {
+      "status": "COMMITTED",
+      "old_run_id": "bcd26d2c-1f81-47ed-862a-c3fb36071e0e",
+      "new_run_id": "f5a8de2c-539d-499d-99df-bf60c61176ea",
+      "rows_replaced": 24,
+      "run_status": "PASS_WITH_REVIEW_REQUIRED",
+      "reconciliation_status_counts": {
+        "PASS": 20,
+        "REVIEW_REQUIRED": 4
+      },
+      "elapsed_seconds": 0.08,
+      "resolved_case_count": 36,
+      "basis_only_change_count": 10
+    },
+    "CRWD|2023-01-31": {
+      "status": "COMMITTED",
+      "old_run_id": "e04dd9a7-3780-47e2-9478-559e3794fcee",
+      "new_run_id": "201f961e-915d-4939-8dc3-6f69ce688b84",
+      "rows_replaced": 24,
+      "run_status": "PASS_WITH_REVIEW_REQUIRED",
+      "reconciliation_status_counts": {
+        "PASS": 20,
+        "REVIEW_REQUIRED": 4
+      },
+      "elapsed_seconds": 0.08,
+      "resolved_case_count": 36,
+      "basis_only_change_count": 10
+    },
+    "CRWD|2024-01-31": {
+      "status": "COMMITTED",
+      "old_run_id": "7bba294d-77cb-4548-a1a9-e46454f97041",
+      "new_run_id": "1336517e-e116-45d3-b978-29c0b5fa37b1",
+      "rows_replaced": 24,
+      "run_status": "PASS",
+      "reconciliation_status_counts": {
+        "PASS": 24
+      },
+      "elapsed_seconds": 0.06,
+      "resolved_case_count": 36,
+      "basis_only_change_count": 10
+    },
+    "CRWD|2026-01-31": {
+      "status": "COMMITTED",
+      "old_run_id": "3cc4f962-c921-4bf8-986c-3ddd290a9fb3",
+      "new_run_id": "0e52d831-3713-4d5b-aee2-3162771af0a4",
+      "rows_replaced": 24,
+      "run_status": "PASS",
+      "reconciliation_status_counts": {
+        "PASS": 24
+      },
+      "elapsed_seconds": 0.06,
+      "resolved_case_count": 36,
+      "basis_only_change_count": 10
+    },
+    "GOOGL|2021-12-31": {
+      "status": "COMMITTED",
+      "old_run_id": "52648309-0be4-45f7-9672-8175b5f5ed91",
+      "new_run_id": "dab86858-79e7-41c8-8392-c1d5a11d2918",
+      "rows_replaced": 24,
+      "run_status": "PASS",
+      "reconciliation_status_counts": {
+        "PASS": 24
+      },
+      "elapsed_seconds": 0.07,
+      "resolved_case_count": 36,
+      "basis_only_change_count": 10
+    },
+    "GOOGL|2022-12-31": {
+      "status": "COMMITTED",
+      "old_run_id": "0824233c-d701-45a2-a0bd-35ea88dd71d6",
+      "new_run_id": "91692993-b7cb-41f9-9bf1-62fc4bbc33a9",
+      "rows_replaced": 24,
+      "run_status": "PASS",
+      "reconciliation_status_counts": {
+        "PASS": 24
+      },
+      "elapsed_seconds": 0.05,
+      "resolved_case_count": 36,
+      "basis_only_change_count": 10
+    },
+    "GOOGL|2023-12-31": {
+      "status": "COMMITTED",
+      "old_run_id": "eae9c440-5d35-4cc1-937f-2dc8e20047ae",
+      "new_run_id": "3d3741ad-544f-42f8-98ec-99396a441655",
+      "rows_replaced": 24,
+      "run_status": "PASS",
+      "reconciliation_status_counts": {
+        "PASS": 24
+      },
+      "elapsed_seconds": 0.06,
+      "resolved_case_count": 36,
+      "basis_only_change_count": 10
+    },
+    "GOOGL|2025-12-31": {
+      "status": "COMMITTED",
+      "old_run_id": "8179afcf-b78b-4232-8092-a0645bfd6ef5",
+      "new_run_id": "efe3f96c-3fc1-4c20-979d-dec0c1308aff",
+      "rows_replaced": 24,
+      "run_status": "PASS",
+      "reconciliation_status_counts": {
+        "PASS": 20,
+        "PASS_ROUNDING_TOLERANCE": 4
+      },
+      "elapsed_seconds": 0.06,
+      "resolved_case_count": 36,
+      "basis_only_change_count": 10
+    },
+    "META|2021-12-31": {
+      "status": "COMMITTED",
+      "old_run_id": "4cbc61fe-efbe-47bc-8284-e4e904210d46",
+      "new_run_id": "99d6462b-a53a-42cc-9bc3-fe60202d1ed5",
+      "rows_replaced": 24,
+      "run_status": "PASS",
+      "reconciliation_status_counts": {
+        "PASS": 24
+      },
+      "elapsed_seconds": 0.08,
+      "resolved_case_count": 36,
+      "basis_only_change_count": 10
+    },
+    "META|2022-12-31": {
+      "status": "COMMITTED",
+      "old_run_id": "1af9e554-0359-4257-a95f-753378da9d3c",
+      "new_run_id": "bdd0fc6e-edf6-42fd-9582-3aaf55ffb59a",
+      "rows_replaced": 24,
+      "run_status": "PASS_WITH_REVIEW_REQUIRED",
+      "reconciliation_status_counts": {
+        "PASS": 16,
+        "REVIEW_REQUIRED": 4,
+        "PASS_ROUNDING_TOLERANCE": 4
+      },
+      "elapsed_seconds": 0.06,
+      "resolved_case_count": 36,
+      "basis_only_change_count": 10
+    },
+    "META|2023-12-31": {
+      "status": "COMMITTED",
+      "old_run_id": "f5fa8017-f335-4e7f-be70-a5b90ce76484",
+      "new_run_id": "18557692-5d7d-48f1-8887-8da7ce93f530",
+      "rows_replaced": 24,
+      "run_status": "PASS_WITH_REVIEW_REQUIRED",
+      "reconciliation_status_counts": {
+        "PASS": 16,
+        "REVIEW_REQUIRED": 4,
+        "PASS_ROUNDING_TOLERANCE": 4
+      },
+      "elapsed_seconds": 0.07,
+      "resolved_case_count": 36,
+      "basis_only_change_count": 10
+    },
+    "PANW|2021-07-31": {
+      "status": "COMMITTED",
+      "old_run_id": "d28c896a-dfff-4a8b-8d61-c2512a2f6aca",
+      "new_run_id": "f72f4da0-8815-4450-a540-0162024685c3",
+      "rows_replaced": 24,
+      "run_status": "PASS_WITH_REVIEW_REQUIRED",
+      "reconciliation_status_counts": {
+        "PASS": 16,
+        "REVIEW_REQUIRED": 8
+      },
+      "elapsed_seconds": 0.08,
+      "resolved_case_count": 36,
+      "basis_only_change_count": 10
+    },
+    "PANW|2022-07-31": {
+      "status": "COMMITTED",
+      "old_run_id": "954a4ae6-cadd-4af7-a257-a0086248dd18",
+      "new_run_id": "d3a5278a-ede5-479c-b521-00730139cdcf",
+      "rows_replaced": 24,
+      "run_status": "PASS_WITH_REVIEW_REQUIRED",
+      "reconciliation_status_counts": {
+        "PASS": 16,
+        "REVIEW_REQUIRED": 8
+      },
+      "elapsed_seconds": 0.07,
+      "resolved_case_count": 36,
+      "basis_only_change_count": 10
+    },
+    "PANW|2023-07-31": {
+      "status": "COMMITTED",
+      "old_run_id": "6979a845-a40e-4a66-903d-43183a5565f6",
+      "new_run_id": "d3a4c8da-9f77-4fb8-9837-24ea6d74abe5",
+      "rows_replaced": 24,
+      "run_status": "PASS_WITH_REVIEW_REQUIRED",
+      "reconciliation_status_counts": {
+        "PASS": 20,
+        "REVIEW_REQUIRED": 4
+      },
+      "elapsed_seconds": 0.06,
+      "resolved_case_count": 36,
+      "basis_only_change_count": 10
+    },
+    "PANW|2025-07-31": {
+      "status": "COMMITTED",
+      "old_run_id": "a6e50be7-cbe8-4c16-b0e9-5e49e8ed559a",
+      "new_run_id": "35fdb67b-c5dc-4571-8731-b935562b2dc9",
+      "rows_replaced": 24,
+      "run_status": "PASS_WITH_REVIEW_REQUIRED",
+      "reconciliation_status_counts": {
+        "PASS": 20,
+        "REVIEW_REQUIRED": 4
+      },
+      "elapsed_seconds": 0.07,
+      "resolved_case_count": 36,
+      "basis_only_change_count": 10
+    }
+  }
+}

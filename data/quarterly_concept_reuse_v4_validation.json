@@ -1,0 +1,3052 @@
+{
+  "status": "PASS",
+  "point_in_time_policy": {
+    "priority_1": "earlier 10-Q, same fiscal year, same metric, already resolved earlier in the run",
+    "priority_2_3": "walk back through progressively older 10-Ks for the same company, most recent first, using the first whose authoritative annual production result for the metric is resolved",
+    "forbidden": [
+      "same fiscal year's own 10-K",
+      "a later quarter in the same fiscal year",
+      "a later fiscal year",
+      "any filing with filing_date after the blocking filing_date"
+    ]
+  },
+  "validation_1": {
+    "expected_row_count": 72,
+    "actual_row_count": 72,
+    "row_count_ok": true,
+    "zero_differences": true,
+    "differences": [],
+    "fallback_activated_on_baseline": [],
+    "fallback_correctly_inactive": true,
+    "status": "PASS"
+  },
+  "validation_2": {
+    "target_case_count": 15,
+    "unique_target_company_years": 13,
+    "outcome_counts": {
+      "PASS": 9,
+      "PASS_ROUNDING_TOLERANCE": 2,
+      "REVIEW_REQUIRED": 4
+    },
+    "still_review_required_detail": [
+      {
+        "case": "CRWD 2022-01-31 pretax_income",
+        "reason": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+        "concept_reuse_attempted": {
+          "resolved": false,
+          "reason": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+          "candidates_checked": [
+            {
+              "source_report_date": "2021-01-31",
+              "source_filing_date": "2021-03-18",
+              "source_accession": "0001535527-21-000007",
+              "point_in_time_safe": true,
+              "annual_status": null,
+              "annual_concept": null
+            }
+          ]
+        }
+      },
+      {
+        "case": "MU 2021-09-02 pretax_income",
+        "reason": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+        "concept_reuse_attempted": {
+          "resolved": false,
+          "reason": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+          "candidates_checked": []
+        }
+      },
+      {
+        "case": "PANW 2021-07-31 revenue",
+        "reason": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+        "concept_reuse_attempted": {
+          "resolved": false,
+          "reason": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+          "candidates_checked": []
+        }
+      },
+      {
+        "case": "PANW 2021-07-31 pretax_income",
+        "reason": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+        "concept_reuse_attempted": {
+          "resolved": false,
+          "reason": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+          "candidates_checked": []
+        }
+      }
+    ],
+    "regressions_found": 0,
+    "regression_findings": [],
+    "unexpected_findings_count": 0,
+    "unexpected_findings": [],
+    "future_data_violations_found": 0,
+    "future_data_violations": [],
+    "success_requirements_met": true
+  },
+  "case_results": [
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2022-01-31",
+      "metric_name": "pretax_income",
+      "blocking_quarter": "Q1",
+      "old_status_v3": "REVIEW_REQUIRED",
+      "new_status_v4": "REVIEW_REQUIRED",
+      "reconciliation_difference": null,
+      "permitted_difference": null,
+      "concept_source_lineage": {
+        "Q1": {},
+        "Q2": {},
+        "Q3": {}
+      },
+      "fact_selected_from_blocking_accession": {
+        "resolved": false,
+        "value": null,
+        "extraction_basis": null,
+        "availability_date": null,
+        "accession_number": null,
+        "concept_qname": null
+      },
+      "future_data_violation": false,
+      "complete_v4_metric_result": {
+        "quarters": {},
+        "concept_source_lineage": {},
+        "annual_value": -160023000.0,
+        "annual_lineage": {
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "accession_number": "0001535527-22-000006",
+          "context_id": "i404921b3424c4df8b62dbd112e21c953_D20210201-20220131",
+          "unit_id": "iso4217:USD",
+          "period_start": "2021-02-01",
+          "period_end": "2022-01-31",
+          "filing_date": "2022-03-16",
+          "decimals": "-3",
+          "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+          "annual_anchor_accession": "0001535527-22-000006",
+          "annual_anchor_metric": "pretax_income",
+          "annual_anchor_status": "PASS",
+          "annual_anchor_extraction_run_id": "0001535527-22-000006::v15 (scripts/69_xbrl_metric_engine.py)"
+        },
+        "status": "REVIEW_REQUIRED",
+        "error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+        "concept_reuse_attempted": {
+          "resolved": false,
+          "reason": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+          "candidates_checked": [
+            {
+              "source_report_date": "2021-01-31",
+              "source_filing_date": "2021-03-18",
+              "source_accession": "0001535527-21-000007",
+              "point_in_time_safe": true,
+              "annual_status": null,
+              "annual_concept": null
+            }
+          ]
+        }
+      }
+    },
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2023-01-31",
+      "metric_name": "pretax_income",
+      "blocking_quarter": "Q1",
+      "old_status_v3": "REVIEW_REQUIRED",
+      "new_status_v4": "PASS",
+      "reconciliation_difference": 0.0,
+      "permitted_difference": 2000.0,
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+          "source_accession": "0001535527-22-000006",
+          "source_form": "10-K",
+          "source_report_date": "2022-01-31",
+          "source_filing_date": "2022-03-16",
+          "source_status": "PASS",
+          "blocking_filing_date": "2022-06-03",
+          "point_in_time_safe": true
+        },
+        "Q2": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q2: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+          "source_quarter": "Q1",
+          "source_accession": "0001535527-22-000012",
+          "source_form": "10-Q",
+          "source_filing_date": "2022-06-03",
+          "blocking_filing_date": "2022-08-31",
+          "point_in_time_safe": true
+        },
+        "Q3": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q3: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+          "source_quarter": "Q1",
+          "source_accession": "0001535527-22-000012",
+          "source_form": "10-Q",
+          "source_filing_date": "2022-06-03",
+          "blocking_filing_date": "2022-11-30",
+          "point_in_time_safe": true
+        }
+      },
+      "fact_selected_from_blocking_accession": {
+        "resolved": true,
+        "value": -26969000.0,
+        "extraction_basis": "DIRECT_QUARTER",
+        "availability_date": "2022-06-03",
+        "accession_number": "0001535527-22-000012",
+        "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "context_id": "iac0c65d49b7941918bd5a4e7ffb20b08_D20220201-20220430",
+        "period_start": "2022-02-01",
+        "period_end": "2022-04-30",
+        "duration_days": 88,
+        "concept_source": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+          "source_accession": "0001535527-22-000006",
+          "source_form": "10-K",
+          "source_report_date": "2022-01-31",
+          "source_filing_date": "2022-03-16",
+          "source_status": "PASS",
+          "blocking_filing_date": "2022-06-03",
+          "point_in_time_safe": true
+        }
+      },
+      "future_data_violation": false,
+      "complete_v4_metric_result": {
+        "quarters": {
+          "Q1": {
+            "value": -26969000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2022-06-03",
+            "lineage": {
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "accession_number": "0001535527-22-000012",
+              "context_id": "iac0c65d49b7941918bd5a4e7ffb20b08_D20220201-20220430",
+              "unit_id": "usd",
+              "period_start": "2022-02-01",
+              "period_end": "2022-04-30",
+              "duration_days": 88,
+              "decimals": "-3",
+              "concept_source": {
+                "source": "PRIOR_FISCAL_YEAR_10K",
+                "primary_resolver_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+                "source_accession": "0001535527-22-000006",
+                "source_form": "10-K",
+                "source_report_date": "2022-01-31",
+                "source_filing_date": "2022-03-16",
+                "source_status": "PASS",
+                "blocking_filing_date": "2022-06-03",
+                "point_in_time_safe": true
+              }
+            }
+          },
+          "Q2": {
+            "value": -43535000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2022-08-31",
+            "lineage": {
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "accession_number": "0001535527-22-000018",
+              "context_id": "ia1ce326e86bd481eaabd17692e0deaa5_D20220501-20220731",
+              "unit_id": "usd",
+              "period_start": "2022-05-01",
+              "period_end": "2022-07-31",
+              "duration_days": 91,
+              "decimals": "-3",
+              "concept_source": {
+                "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+                "primary_resolver_error": "Q2: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+                "source_quarter": "Q1",
+                "source_accession": "0001535527-22-000012",
+                "source_form": "10-Q",
+                "source_filing_date": "2022-06-03",
+                "blocking_filing_date": "2022-08-31",
+                "point_in_time_safe": true
+              },
+              "cross_check_derived_from_ytd": -43535000.0,
+              "cross_check_matches_direct": true
+            }
+          },
+          "Q3": {
+            "value": -45761000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2022-11-30",
+            "lineage": {
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "accession_number": "0001535527-22-000025",
+              "context_id": "id1275ffadf9f4169b807673df8b51393_D20220801-20221031",
+              "unit_id": "usd",
+              "period_start": "2022-08-01",
+              "period_end": "2022-10-31",
+              "duration_days": 91,
+              "decimals": "-3",
+              "concept_source": {
+                "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+                "primary_resolver_error": "Q3: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+                "source_quarter": "Q1",
+                "source_accession": "0001535527-22-000012",
+                "source_form": "10-Q",
+                "source_filing_date": "2022-06-03",
+                "blocking_filing_date": "2022-11-30",
+                "point_in_time_safe": true
+              },
+              "cross_check_derived_from_ytd": -45761000.0,
+              "cross_check_matches_direct": true
+            }
+          },
+          "Q4": {
+            "value": -43618000.0,
+            "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+            "availability_date": "2023-03-09",
+            "lineage": {
+              "annual_value": -159883000.0,
+              "annual_concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "annual_accession_number": "0001535527-23-000008",
+              "annual_decimals": "-3",
+              "nine_month_ytd_value": -116265000.0,
+              "nine_month_ytd_context_id": "i927db57238df43c7a1ddf62c258ce0e7_D20220201-20221031",
+              "nine_month_ytd_accession_number": "0001535527-22-000025",
+              "nine_month_ytd_decimals": "-3",
+              "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+              "annual_anchor_accession": "0001535527-23-000008",
+              "annual_anchor_metric": "pretax_income",
+              "annual_anchor_status": "PASS",
+              "annual_anchor_extraction_run_id": "0001535527-23-000008::v15 (scripts/69_xbrl_metric_engine.py)"
+            }
+          }
+        },
+        "concept_source_lineage": {
+          "Q1": {
+            "source": "PRIOR_FISCAL_YEAR_10K",
+            "primary_resolver_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+            "source_accession": "0001535527-22-000006",
+            "source_form": "10-K",
+            "source_report_date": "2022-01-31",
+            "source_filing_date": "2022-03-16",
+            "source_status": "PASS",
+            "blocking_filing_date": "2022-06-03",
+            "point_in_time_safe": true
+          },
+          "Q2": {
+            "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+            "primary_resolver_error": "Q2: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+            "source_quarter": "Q1",
+            "source_accession": "0001535527-22-000012",
+            "source_form": "10-Q",
+            "source_filing_date": "2022-06-03",
+            "blocking_filing_date": "2022-08-31",
+            "point_in_time_safe": true
+          },
+          "Q3": {
+            "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+            "primary_resolver_error": "Q3: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+            "source_quarter": "Q1",
+            "source_accession": "0001535527-22-000012",
+            "source_form": "10-Q",
+            "source_filing_date": "2022-06-03",
+            "blocking_filing_date": "2022-11-30",
+            "point_in_time_safe": true
+          }
+        },
+        "annual_value": -159883000.0,
+        "annual_lineage": {
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "accession_number": "0001535527-23-000008",
+          "context_id": "i30bbfaa06e7f4e20922c7f2a9d8e0a9b_D20220201-20230131",
+          "unit_id": "iso4217:USD",
+          "period_start": "2022-02-01",
+          "period_end": "2023-01-31",
+          "filing_date": "2023-03-09",
+          "decimals": "-3",
+          "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+          "annual_anchor_accession": "0001535527-23-000008",
+          "annual_anchor_metric": "pretax_income",
+          "annual_anchor_status": "PASS",
+          "annual_anchor_extraction_run_id": "0001535527-23-000008::v15 (scripts/69_xbrl_metric_engine.py)"
+        },
+        "reconciliation": {
+          "sum_q1_to_q4": -159883000.0,
+          "annual_value": -159883000.0,
+          "difference": 0.0,
+          "exact_equality_status": "PASS",
+          "precision_calculation": {
+            "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+            "source_facts": {
+              "Q1": {
+                "decimals": "-3",
+                "rounding_unit": 1000,
+                "uncertainty": 500.0
+              },
+              "Q2": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-3",
+                "rounding_unit": 1000,
+                "uncertainty": 500.0
+              },
+              "Q3": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-3",
+                "rounding_unit": 1000,
+                "uncertainty": 500.0
+              },
+              "Annual": {
+                "decimals": "-3",
+                "rounding_unit": 1000,
+                "uncertainty": 500.0
+              }
+            },
+            "permitted_difference": 2000.0,
+            "actual_difference": 0.0,
+            "within_tolerance": true
+          },
+          "status": "PASS"
+        },
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": "META",
+      "fiscal_year_end": "2022-12-31",
+      "metric_name": "revenue",
+      "blocking_quarter": "Q3",
+      "old_status_v3": "REVIEW_REQUIRED",
+      "new_status_v4": "PASS",
+      "reconciliation_difference": 0.0,
+      "permitted_difference": 2000000.0,
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "PRIMARY_PRESENTATION_RESOLVER"
+        },
+        "Q2": {
+          "source": "PRIMARY_PRESENTATION_RESOLVER"
+        },
+        "Q3": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0001326801-22-000057",
+          "source_form": "10-Q",
+          "source_filing_date": "2022-04-28",
+          "blocking_filing_date": "2022-10-27",
+          "point_in_time_safe": true
+        }
+      },
+      "fact_selected_from_blocking_accession": {
+        "resolved": true,
+        "value": 27714000000.0,
+        "extraction_basis": "DIRECT_QUARTER",
+        "availability_date": "2022-10-27",
+        "accession_number": "0001326801-22-000108",
+        "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "context_id": "ibfda7118c3264b3aa88700358e5dc23b_D20220701-20220930",
+        "period_start": "2022-07-01",
+        "period_end": "2022-09-30",
+        "duration_days": 91,
+        "concept_source": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0001326801-22-000057",
+          "source_form": "10-Q",
+          "source_filing_date": "2022-04-28",
+          "blocking_filing_date": "2022-10-27",
+          "point_in_time_safe": true
+        }
+      },
+      "future_data_violation": false,
+      "complete_v4_metric_result": {
+        "quarters": {
+          "Q1": {
+            "value": 27908000000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2022-04-28",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001326801-22-000057",
+              "context_id": "ieecb77d53c28492e8730fe6ba04ccc57_D20220101-20220331",
+              "unit_id": "usd",
+              "period_start": "2022-01-01",
+              "period_end": "2022-03-31",
+              "duration_days": 89,
+              "decimals": "-6",
+              "concept_source": {
+                "source": "PRIMARY_PRESENTATION_RESOLVER"
+              }
+            }
+          },
+          "Q2": {
+            "value": 28822000000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2022-07-28",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001326801-22-000082",
+              "context_id": "ifc7a788e4dde480a838fca96212c8868_D20220401-20220630",
+              "unit_id": "usd",
+              "period_start": "2022-04-01",
+              "period_end": "2022-06-30",
+              "duration_days": 90,
+              "decimals": "-6",
+              "concept_source": {
+                "source": "PRIMARY_PRESENTATION_RESOLVER"
+              },
+              "cross_check_derived_from_ytd": 28821000000.0,
+              "cross_check_matches_direct": false
+            }
+          },
+          "Q3": {
+            "value": 27714000000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2022-10-27",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001326801-22-000108",
+              "context_id": "ibfda7118c3264b3aa88700358e5dc23b_D20220701-20220930",
+              "unit_id": "usd",
+              "period_start": "2022-07-01",
+              "period_end": "2022-09-30",
+              "duration_days": 91,
+              "decimals": "-6",
+              "concept_source": {
+                "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+                "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+                "source_quarter": "Q1",
+                "source_accession": "0001326801-22-000057",
+                "source_form": "10-Q",
+                "source_filing_date": "2022-04-28",
+                "blocking_filing_date": "2022-10-27",
+                "point_in_time_safe": true
+              },
+              "cross_check_derived_from_ytd": 27715000000.0,
+              "cross_check_matches_direct": false
+            }
+          },
+          "Q4": {
+            "value": 32165000000.0,
+            "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+            "availability_date": "2023-02-02",
+            "lineage": {
+              "annual_value": 116609000000.0,
+              "annual_concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "annual_accession_number": "0001326801-23-000013",
+              "annual_decimals": "-6",
+              "nine_month_ytd_value": 84444000000.0,
+              "nine_month_ytd_context_id": "i6dea069bf23b41888942ebc399fe5564_D20220101-20220930",
+              "nine_month_ytd_accession_number": "0001326801-22-000108",
+              "nine_month_ytd_decimals": "-6",
+              "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+              "annual_anchor_accession": "0001326801-23-000013",
+              "annual_anchor_metric": "revenue",
+              "annual_anchor_status": "PASS",
+              "annual_anchor_extraction_run_id": "0001326801-23-000013::v14 (scripts/60_xbrl_metric_engine.py)"
+            }
+          }
+        },
+        "concept_source_lineage": {
+          "Q1": {
+            "source": "PRIMARY_PRESENTATION_RESOLVER"
+          },
+          "Q2": {
+            "source": "PRIMARY_PRESENTATION_RESOLVER"
+          },
+          "Q3": {
+            "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+            "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+            "source_quarter": "Q1",
+            "source_accession": "0001326801-22-000057",
+            "source_form": "10-Q",
+            "source_filing_date": "2022-04-28",
+            "blocking_filing_date": "2022-10-27",
+            "point_in_time_safe": true
+          }
+        },
+        "annual_value": 116609000000.0,
+        "annual_lineage": {
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "accession_number": "0001326801-23-000013",
+          "context_id": "ibd1882f348764f108a3caaa3a66c21ea_D20220101-20221231",
+          "unit_id": "iso4217:USD",
+          "period_start": "2022-01-01",
+          "period_end": "2022-12-31",
+          "filing_date": "2023-02-02",
+          "decimals": "-6",
+          "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+          "annual_anchor_accession": "0001326801-23-000013",
+          "annual_anchor_metric": "revenue",
+          "annual_anchor_status": "PASS",
+          "annual_anchor_extraction_run_id": "0001326801-23-000013::v14 (scripts/60_xbrl_metric_engine.py)"
+        },
+        "reconciliation": {
+          "sum_q1_to_q4": 116609000000.0,
+          "annual_value": 116609000000.0,
+          "difference": 0.0,
+          "exact_equality_status": "PASS",
+          "precision_calculation": {
+            "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+            "source_facts": {
+              "Q1": {
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              },
+              "Q2": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              },
+              "Q3": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              },
+              "Annual": {
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              }
+            },
+            "permitted_difference": 2000000.0,
+            "actual_difference": 0.0,
+            "within_tolerance": true
+          },
+          "status": "PASS"
+        },
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": "META",
+      "fiscal_year_end": "2023-12-31",
+      "metric_name": "revenue",
+      "blocking_quarter": "Q1",
+      "old_status_v3": "REVIEW_REQUIRED",
+      "new_status_v4": "PASS_ROUNDING_TOLERANCE",
+      "reconciliation_difference": -1000000.0,
+      "permitted_difference": 2000000.0,
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_accession": "0001326801-23-000013",
+          "source_form": "10-K",
+          "source_report_date": "2022-12-31",
+          "source_filing_date": "2023-02-02",
+          "source_status": "PASS",
+          "blocking_filing_date": "2023-04-27",
+          "point_in_time_safe": true
+        },
+        "Q2": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0001326801-23-000067",
+          "source_form": "10-Q",
+          "source_filing_date": "2023-04-27",
+          "blocking_filing_date": "2023-07-27",
+          "point_in_time_safe": true
+        },
+        "Q3": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0001326801-23-000067",
+          "source_form": "10-Q",
+          "source_filing_date": "2023-04-27",
+          "blocking_filing_date": "2023-10-26",
+          "point_in_time_safe": true
+        }
+      },
+      "fact_selected_from_blocking_accession": {
+        "resolved": true,
+        "value": 28645000000.0,
+        "extraction_basis": "DIRECT_QUARTER",
+        "availability_date": "2023-04-27",
+        "accession_number": "0001326801-23-000067",
+        "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "context_id": "id2a395bb649c42cabb32f2bc8268cb8b_D20230101-20230331",
+        "period_start": "2023-01-01",
+        "period_end": "2023-03-31",
+        "duration_days": 89,
+        "concept_source": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_accession": "0001326801-23-000013",
+          "source_form": "10-K",
+          "source_report_date": "2022-12-31",
+          "source_filing_date": "2023-02-02",
+          "source_status": "PASS",
+          "blocking_filing_date": "2023-04-27",
+          "point_in_time_safe": true
+        }
+      },
+      "future_data_violation": false,
+      "complete_v4_metric_result": {
+        "quarters": {
+          "Q1": {
+            "value": 28645000000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2023-04-27",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001326801-23-000067",
+              "context_id": "id2a395bb649c42cabb32f2bc8268cb8b_D20230101-20230331",
+              "unit_id": "usd",
+              "period_start": "2023-01-01",
+              "period_end": "2023-03-31",
+              "duration_days": 89,
+              "decimals": "-6",
+              "concept_source": {
+                "source": "PRIOR_FISCAL_YEAR_10K",
+                "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+                "source_accession": "0001326801-23-000013",
+                "source_form": "10-K",
+                "source_report_date": "2022-12-31",
+                "source_filing_date": "2023-02-02",
+                "source_status": "PASS",
+                "blocking_filing_date": "2023-04-27",
+                "point_in_time_safe": true
+              }
+            }
+          },
+          "Q2": {
+            "value": 31999000000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2023-07-27",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001326801-23-000093",
+              "context_id": "c-10",
+              "unit_id": "usd",
+              "period_start": "2023-04-01",
+              "period_end": "2023-06-30",
+              "duration_days": 90,
+              "decimals": "-6",
+              "concept_source": {
+                "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+                "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+                "source_quarter": "Q1",
+                "source_accession": "0001326801-23-000067",
+                "source_form": "10-Q",
+                "source_filing_date": "2023-04-27",
+                "blocking_filing_date": "2023-07-27",
+                "point_in_time_safe": true
+              },
+              "cross_check_derived_from_ytd": 32000000000.0,
+              "cross_check_matches_direct": false
+            }
+          },
+          "Q3": {
+            "value": 34146000000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2023-10-26",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001326801-23-000103",
+              "context_id": "c-10",
+              "unit_id": "usd",
+              "period_start": "2023-07-01",
+              "period_end": "2023-09-30",
+              "duration_days": 91,
+              "decimals": "-6",
+              "concept_source": {
+                "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+                "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+                "source_quarter": "Q1",
+                "source_accession": "0001326801-23-000067",
+                "source_form": "10-Q",
+                "source_filing_date": "2023-04-27",
+                "blocking_filing_date": "2023-10-26",
+                "point_in_time_safe": true
+              },
+              "cross_check_derived_from_ytd": 34146000000.0,
+              "cross_check_matches_direct": true
+            }
+          },
+          "Q4": {
+            "value": 40111000000.0,
+            "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+            "availability_date": "2024-02-02",
+            "lineage": {
+              "annual_value": 134902000000.0,
+              "annual_concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "annual_accession_number": "0001326801-24-000012",
+              "annual_decimals": "-6",
+              "nine_month_ytd_value": 94791000000.0,
+              "nine_month_ytd_context_id": "c-1",
+              "nine_month_ytd_accession_number": "0001326801-23-000103",
+              "nine_month_ytd_decimals": "-6",
+              "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+              "annual_anchor_accession": "0001326801-24-000012",
+              "annual_anchor_metric": "revenue",
+              "annual_anchor_status": "PASS",
+              "annual_anchor_extraction_run_id": "0001326801-24-000012::v14 (scripts/60_xbrl_metric_engine.py)"
+            }
+          }
+        },
+        "concept_source_lineage": {
+          "Q1": {
+            "source": "PRIOR_FISCAL_YEAR_10K",
+            "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+            "source_accession": "0001326801-23-000013",
+            "source_form": "10-K",
+            "source_report_date": "2022-12-31",
+            "source_filing_date": "2023-02-02",
+            "source_status": "PASS",
+            "blocking_filing_date": "2023-04-27",
+            "point_in_time_safe": true
+          },
+          "Q2": {
+            "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+            "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+            "source_quarter": "Q1",
+            "source_accession": "0001326801-23-000067",
+            "source_form": "10-Q",
+            "source_filing_date": "2023-04-27",
+            "blocking_filing_date": "2023-07-27",
+            "point_in_time_safe": true
+          },
+          "Q3": {
+            "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+            "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+            "source_quarter": "Q1",
+            "source_accession": "0001326801-23-000067",
+            "source_form": "10-Q",
+            "source_filing_date": "2023-04-27",
+            "blocking_filing_date": "2023-10-26",
+            "point_in_time_safe": true
+          }
+        },
+        "annual_value": 134902000000.0,
+        "annual_lineage": {
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "accession_number": "0001326801-24-000012",
+          "context_id": "c-1",
+          "unit_id": "iso4217:USD",
+          "period_start": "2023-01-01",
+          "period_end": "2023-12-31",
+          "filing_date": "2024-02-02",
+          "decimals": "-6",
+          "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+          "annual_anchor_accession": "0001326801-24-000012",
+          "annual_anchor_metric": "revenue",
+          "annual_anchor_status": "PASS",
+          "annual_anchor_extraction_run_id": "0001326801-24-000012::v14 (scripts/60_xbrl_metric_engine.py)"
+        },
+        "reconciliation": {
+          "sum_q1_to_q4": 134901000000.0,
+          "annual_value": 134902000000.0,
+          "difference": -1000000.0,
+          "exact_equality_status": "FAIL",
+          "precision_calculation": {
+            "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+            "source_facts": {
+              "Q1": {
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              },
+              "Q2": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              },
+              "Q3": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              },
+              "Annual": {
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              }
+            },
+            "permitted_difference": 2000000.0,
+            "actual_difference": -1000000.0,
+            "within_tolerance": true
+          },
+          "status": "PASS_ROUNDING_TOLERANCE"
+        },
+        "status": "PASS_ROUNDING_TOLERANCE"
+      }
+    },
+    {
+      "ticker": "META",
+      "fiscal_year_end": "2024-12-31",
+      "metric_name": "revenue",
+      "blocking_quarter": "Q1",
+      "old_status_v3": "REVIEW_REQUIRED",
+      "new_status_v4": "PASS_ROUNDING_TOLERANCE",
+      "reconciliation_difference": -1000000.0,
+      "permitted_difference": 2000000.0,
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_accession": "0001326801-24-000012",
+          "source_form": "10-K",
+          "source_report_date": "2023-12-31",
+          "source_filing_date": "2024-02-02",
+          "source_status": "PASS",
+          "blocking_filing_date": "2024-04-25",
+          "point_in_time_safe": true
+        },
+        "Q2": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0001326801-24-000049",
+          "source_form": "10-Q",
+          "source_filing_date": "2024-04-25",
+          "blocking_filing_date": "2024-08-01",
+          "point_in_time_safe": true
+        },
+        "Q3": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0001326801-24-000049",
+          "source_form": "10-Q",
+          "source_filing_date": "2024-04-25",
+          "blocking_filing_date": "2024-10-31",
+          "point_in_time_safe": true
+        }
+      },
+      "fact_selected_from_blocking_accession": {
+        "resolved": true,
+        "value": 36455000000.0,
+        "extraction_basis": "DIRECT_QUARTER",
+        "availability_date": "2024-04-25",
+        "accession_number": "0001326801-24-000049",
+        "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "context_id": "c-1",
+        "period_start": "2024-01-01",
+        "period_end": "2024-03-31",
+        "duration_days": 90,
+        "concept_source": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_accession": "0001326801-24-000012",
+          "source_form": "10-K",
+          "source_report_date": "2023-12-31",
+          "source_filing_date": "2024-02-02",
+          "source_status": "PASS",
+          "blocking_filing_date": "2024-04-25",
+          "point_in_time_safe": true
+        }
+      },
+      "future_data_violation": false,
+      "complete_v4_metric_result": {
+        "quarters": {
+          "Q1": {
+            "value": 36455000000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2024-04-25",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001326801-24-000049",
+              "context_id": "c-1",
+              "unit_id": "usd",
+              "period_start": "2024-01-01",
+              "period_end": "2024-03-31",
+              "duration_days": 90,
+              "decimals": "-6",
+              "concept_source": {
+                "source": "PRIOR_FISCAL_YEAR_10K",
+                "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+                "source_accession": "0001326801-24-000012",
+                "source_form": "10-K",
+                "source_report_date": "2023-12-31",
+                "source_filing_date": "2024-02-02",
+                "source_status": "PASS",
+                "blocking_filing_date": "2024-04-25",
+                "point_in_time_safe": true
+              }
+            }
+          },
+          "Q2": {
+            "value": 39071000000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2024-08-01",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001326801-24-000069",
+              "context_id": "c-10",
+              "unit_id": "usd",
+              "period_start": "2024-04-01",
+              "period_end": "2024-06-30",
+              "duration_days": 90,
+              "decimals": "-6",
+              "concept_source": {
+                "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+                "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+                "source_quarter": "Q1",
+                "source_accession": "0001326801-24-000049",
+                "source_form": "10-Q",
+                "source_filing_date": "2024-04-25",
+                "blocking_filing_date": "2024-08-01",
+                "point_in_time_safe": true
+              },
+              "cross_check_derived_from_ytd": 39072000000.0,
+              "cross_check_matches_direct": false
+            }
+          },
+          "Q3": {
+            "value": 40589000000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2024-10-31",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001326801-24-000081",
+              "context_id": "c-10",
+              "unit_id": "usd",
+              "period_start": "2024-07-01",
+              "period_end": "2024-09-30",
+              "duration_days": 91,
+              "decimals": "-6",
+              "concept_source": {
+                "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+                "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+                "source_quarter": "Q1",
+                "source_accession": "0001326801-24-000049",
+                "source_form": "10-Q",
+                "source_filing_date": "2024-04-25",
+                "blocking_filing_date": "2024-10-31",
+                "point_in_time_safe": true
+              },
+              "cross_check_derived_from_ytd": 40589000000.0,
+              "cross_check_matches_direct": true
+            }
+          },
+          "Q4": {
+            "value": 48385000000.0,
+            "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+            "availability_date": "2025-01-30",
+            "lineage": {
+              "annual_value": 164501000000.0,
+              "annual_concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "annual_accession_number": "0001326801-25-000017",
+              "annual_decimals": "-6",
+              "nine_month_ytd_value": 116116000000.0,
+              "nine_month_ytd_context_id": "c-1",
+              "nine_month_ytd_accession_number": "0001326801-24-000081",
+              "nine_month_ytd_decimals": "-6",
+              "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+              "annual_anchor_accession": "0001326801-25-000017",
+              "annual_anchor_metric": "revenue",
+              "annual_anchor_status": "PASS",
+              "annual_anchor_extraction_run_id": "0001326801-25-000017::v14 (scripts/60_xbrl_metric_engine.py)"
+            }
+          }
+        },
+        "concept_source_lineage": {
+          "Q1": {
+            "source": "PRIOR_FISCAL_YEAR_10K",
+            "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+            "source_accession": "0001326801-24-000012",
+            "source_form": "10-K",
+            "source_report_date": "2023-12-31",
+            "source_filing_date": "2024-02-02",
+            "source_status": "PASS",
+            "blocking_filing_date": "2024-04-25",
+            "point_in_time_safe": true
+          },
+          "Q2": {
+            "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+            "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+            "source_quarter": "Q1",
+            "source_accession": "0001326801-24-000049",
+            "source_form": "10-Q",
+            "source_filing_date": "2024-04-25",
+            "blocking_filing_date": "2024-08-01",
+            "point_in_time_safe": true
+          },
+          "Q3": {
+            "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+            "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+            "source_quarter": "Q1",
+            "source_accession": "0001326801-24-000049",
+            "source_form": "10-Q",
+            "source_filing_date": "2024-04-25",
+            "blocking_filing_date": "2024-10-31",
+            "point_in_time_safe": true
+          }
+        },
+        "annual_value": 164501000000.0,
+        "annual_lineage": {
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "accession_number": "0001326801-25-000017",
+          "context_id": "c-1",
+          "unit_id": "iso4217:USD",
+          "period_start": "2024-01-01",
+          "period_end": "2024-12-31",
+          "filing_date": "2025-01-30",
+          "decimals": "-6",
+          "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+          "annual_anchor_accession": "0001326801-25-000017",
+          "annual_anchor_metric": "revenue",
+          "annual_anchor_status": "PASS",
+          "annual_anchor_extraction_run_id": "0001326801-25-000017::v14 (scripts/60_xbrl_metric_engine.py)"
+        },
+        "reconciliation": {
+          "sum_q1_to_q4": 164500000000.0,
+          "annual_value": 164501000000.0,
+          "difference": -1000000.0,
+          "exact_equality_status": "FAIL",
+          "precision_calculation": {
+            "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+            "source_facts": {
+              "Q1": {
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              },
+              "Q2": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              },
+              "Q3": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              },
+              "Annual": {
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              }
+            },
+            "permitted_difference": 2000000.0,
+            "actual_difference": -1000000.0,
+            "within_tolerance": true
+          },
+          "status": "PASS_ROUNDING_TOLERANCE"
+        },
+        "status": "PASS_ROUNDING_TOLERANCE"
+      }
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2021-09-02",
+      "metric_name": "pretax_income",
+      "blocking_quarter": "Q1",
+      "old_status_v3": "REVIEW_REQUIRED",
+      "new_status_v4": "REVIEW_REQUIRED",
+      "reconciliation_difference": null,
+      "permitted_difference": null,
+      "concept_source_lineage": {
+        "Q1": {},
+        "Q2": {},
+        "Q3": {}
+      },
+      "fact_selected_from_blocking_accession": {
+        "resolved": false,
+        "value": null,
+        "extraction_basis": null,
+        "availability_date": null,
+        "accession_number": null,
+        "concept_qname": null
+      },
+      "future_data_violation": false,
+      "complete_v4_metric_result": {
+        "quarters": {},
+        "concept_source_lineage": {},
+        "annual_value": 6218000000.0,
+        "annual_lineage": {
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+          "accession_number": "0000723125-21-000065",
+          "context_id": "ia65dcf70ebd947dca856d07f56cad915_D20200904-20210902",
+          "unit_id": "iso4217:USD",
+          "period_start": "2020-09-04",
+          "period_end": "2021-09-02",
+          "filing_date": "2021-10-08",
+          "decimals": "-6",
+          "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+          "annual_anchor_accession": "0000723125-21-000065",
+          "annual_anchor_metric": "pretax_income",
+          "annual_anchor_status": "PASS",
+          "annual_anchor_extraction_run_id": "0000723125-21-000065::v15 (scripts/69_xbrl_metric_engine.py)"
+        },
+        "status": "REVIEW_REQUIRED",
+        "error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+        "concept_reuse_attempted": {
+          "resolved": false,
+          "reason": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+          "candidates_checked": []
+        }
+      }
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2022-09-01",
+      "metric_name": "pretax_income",
+      "blocking_quarter": "Q1",
+      "old_status_v3": "REVIEW_REQUIRED",
+      "new_status_v4": "PASS",
+      "reconciliation_difference": 0.0,
+      "permitted_difference": 2000000.0,
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+          "source_accession": "0000723125-21-000065",
+          "source_form": "10-K",
+          "source_report_date": "2021-09-02",
+          "source_filing_date": "2021-10-08",
+          "source_status": "PASS",
+          "blocking_filing_date": "2022-01-06",
+          "point_in_time_safe": true
+        },
+        "Q2": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0000723125-22-000004",
+          "source_form": "10-Q",
+          "source_filing_date": "2022-01-06",
+          "blocking_filing_date": "2022-03-30",
+          "point_in_time_safe": true
+        },
+        "Q3": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0000723125-22-000004",
+          "source_form": "10-Q",
+          "source_filing_date": "2022-01-06",
+          "blocking_filing_date": "2022-07-01",
+          "point_in_time_safe": true
+        }
+      },
+      "fact_selected_from_blocking_accession": {
+        "resolved": true,
+        "value": 2521000000.0,
+        "extraction_basis": "DIRECT_QUARTER",
+        "availability_date": "2022-01-06",
+        "accession_number": "0000723125-22-000004",
+        "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "context_id": "iea5ef246ffc147c399cefb55d2b9db30_D20210903-20211202",
+        "period_start": "2021-09-03",
+        "period_end": "2021-12-02",
+        "duration_days": 90,
+        "concept_source": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+          "source_accession": "0000723125-21-000065",
+          "source_form": "10-K",
+          "source_report_date": "2021-09-02",
+          "source_filing_date": "2021-10-08",
+          "source_status": "PASS",
+          "blocking_filing_date": "2022-01-06",
+          "point_in_time_safe": true
+        }
+      },
+      "future_data_violation": false,
+      "complete_v4_metric_result": {
+        "quarters": {
+          "Q1": {
+            "value": 2521000000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2022-01-06",
+            "lineage": {
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "accession_number": "0000723125-22-000004",
+              "context_id": "iea5ef246ffc147c399cefb55d2b9db30_D20210903-20211202",
+              "unit_id": "usd",
+              "period_start": "2021-09-03",
+              "period_end": "2021-12-02",
+              "duration_days": 90,
+              "decimals": "-6",
+              "concept_source": {
+                "source": "PRIOR_FISCAL_YEAR_10K",
+                "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+                "source_accession": "0000723125-21-000065",
+                "source_form": "10-K",
+                "source_report_date": "2021-09-02",
+                "source_filing_date": "2021-10-08",
+                "source_status": "PASS",
+                "blocking_filing_date": "2022-01-06",
+                "point_in_time_safe": true
+              }
+            }
+          },
+          "Q2": {
+            "value": 2509000000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2022-03-30",
+            "lineage": {
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "accession_number": "0000723125-22-000016",
+              "context_id": "i7b9c9d77ba2c4aaf8a7850fc291e99f9_D20211203-20220303",
+              "unit_id": "usd",
+              "period_start": "2021-12-03",
+              "period_end": "2022-03-03",
+              "duration_days": 90,
+              "decimals": "-6",
+              "concept_source": {
+                "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+                "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+                "source_quarter": "Q1",
+                "source_accession": "0000723125-22-000004",
+                "source_form": "10-Q",
+                "source_filing_date": "2022-01-06",
+                "blocking_filing_date": "2022-03-30",
+                "point_in_time_safe": true
+              },
+              "cross_check_derived_from_ytd": 2509000000.0,
+              "cross_check_matches_direct": true
+            }
+          },
+          "Q3": {
+            "value": 2988000000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2022-07-01",
+            "lineage": {
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "accession_number": "0000723125-22-000036",
+              "context_id": "ia126b43f56f143d0a24335a4d7bcea87_D20220304-20220602",
+              "unit_id": "usd",
+              "period_start": "2022-03-04",
+              "period_end": "2022-06-02",
+              "duration_days": 90,
+              "decimals": "-6",
+              "concept_source": {
+                "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+                "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+                "source_quarter": "Q1",
+                "source_accession": "0000723125-22-000004",
+                "source_form": "10-Q",
+                "source_filing_date": "2022-01-06",
+                "blocking_filing_date": "2022-07-01",
+                "point_in_time_safe": true
+              },
+              "cross_check_derived_from_ytd": 2988000000.0,
+              "cross_check_matches_direct": true
+            }
+          },
+          "Q4": {
+            "value": 1553000000.0,
+            "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+            "availability_date": "2022-10-07",
+            "lineage": {
+              "annual_value": 9571000000.0,
+              "annual_concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "annual_accession_number": "0000723125-22-000048",
+              "annual_decimals": "-6",
+              "nine_month_ytd_value": 8018000000.0,
+              "nine_month_ytd_context_id": "icfabd28584f3477a93d38b9f872df42b_D20210903-20220602",
+              "nine_month_ytd_accession_number": "0000723125-22-000036",
+              "nine_month_ytd_decimals": "-6",
+              "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+              "annual_anchor_accession": "0000723125-22-000048",
+              "annual_anchor_metric": "pretax_income",
+              "annual_anchor_status": "PASS",
+              "annual_anchor_extraction_run_id": "0000723125-22-000048::v15 (scripts/69_xbrl_metric_engine.py)"
+            }
+          }
+        },
+        "concept_source_lineage": {
+          "Q1": {
+            "source": "PRIOR_FISCAL_YEAR_10K",
+            "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+            "source_accession": "0000723125-21-000065",
+            "source_form": "10-K",
+            "source_report_date": "2021-09-02",
+            "source_filing_date": "2021-10-08",
+            "source_status": "PASS",
+            "blocking_filing_date": "2022-01-06",
+            "point_in_time_safe": true
+          },
+          "Q2": {
+            "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+            "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+            "source_quarter": "Q1",
+            "source_accession": "0000723125-22-000004",
+            "source_form": "10-Q",
+            "source_filing_date": "2022-01-06",
+            "blocking_filing_date": "2022-03-30",
+            "point_in_time_safe": true
+          },
+          "Q3": {
+            "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+            "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+            "source_quarter": "Q1",
+            "source_accession": "0000723125-22-000004",
+            "source_form": "10-Q",
+            "source_filing_date": "2022-01-06",
+            "blocking_filing_date": "2022-07-01",
+            "point_in_time_safe": true
+          }
+        },
+        "annual_value": 9571000000.0,
+        "annual_lineage": {
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+          "accession_number": "0000723125-22-000048",
+          "context_id": "i551f4662d9aa47d7a3434539f81f4e96_D20210903-20220901",
+          "unit_id": "iso4217:USD",
+          "period_start": "2021-09-03",
+          "period_end": "2022-09-01",
+          "filing_date": "2022-10-07",
+          "decimals": "-6",
+          "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+          "annual_anchor_accession": "0000723125-22-000048",
+          "annual_anchor_metric": "pretax_income",
+          "annual_anchor_status": "PASS",
+          "annual_anchor_extraction_run_id": "0000723125-22-000048::v15 (scripts/69_xbrl_metric_engine.py)"
+        },
+        "reconciliation": {
+          "sum_q1_to_q4": 9571000000.0,
+          "annual_value": 9571000000.0,
+          "difference": 0.0,
+          "exact_equality_status": "PASS",
+          "precision_calculation": {
+            "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+            "source_facts": {
+              "Q1": {
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              },
+              "Q2": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              },
+              "Q3": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              },
+              "Annual": {
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              }
+            },
+            "permitted_difference": 2000000.0,
+            "actual_difference": 0.0,
+            "within_tolerance": true
+          },
+          "status": "PASS"
+        },
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2023-08-31",
+      "metric_name": "pretax_income",
+      "blocking_quarter": "Q1",
+      "old_status_v3": "REVIEW_REQUIRED",
+      "new_status_v4": "PASS",
+      "reconciliation_difference": 0.0,
+      "permitted_difference": 2000000.0,
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+          "source_accession": "0000723125-22-000048",
+          "source_form": "10-K",
+          "source_report_date": "2022-09-01",
+          "source_filing_date": "2022-10-07",
+          "source_status": "PASS",
+          "blocking_filing_date": "2022-12-22",
+          "point_in_time_safe": true
+        },
+        "Q2": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0000723125-22-000072",
+          "source_form": "10-Q",
+          "source_filing_date": "2022-12-22",
+          "blocking_filing_date": "2023-03-29",
+          "point_in_time_safe": true
+        },
+        "Q3": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0000723125-22-000072",
+          "source_form": "10-Q",
+          "source_filing_date": "2022-12-22",
+          "blocking_filing_date": "2023-06-29",
+          "point_in_time_safe": true
+        }
+      },
+      "fact_selected_from_blocking_accession": {
+        "resolved": true,
+        "value": -176000000.0,
+        "extraction_basis": "DIRECT_QUARTER",
+        "availability_date": "2022-12-22",
+        "accession_number": "0000723125-22-000072",
+        "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "context_id": "i189b81ba1a354626b0ab3d9d60be8ba0_D20220902-20221201",
+        "period_start": "2022-09-02",
+        "period_end": "2022-12-01",
+        "duration_days": 90,
+        "concept_source": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+          "source_accession": "0000723125-22-000048",
+          "source_form": "10-K",
+          "source_report_date": "2022-09-01",
+          "source_filing_date": "2022-10-07",
+          "source_status": "PASS",
+          "blocking_filing_date": "2022-12-22",
+          "point_in_time_safe": true
+        }
+      },
+      "future_data_violation": false,
+      "complete_v4_metric_result": {
+        "quarters": {
+          "Q1": {
+            "value": -176000000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2022-12-22",
+            "lineage": {
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "accession_number": "0000723125-22-000072",
+              "context_id": "i189b81ba1a354626b0ab3d9d60be8ba0_D20220902-20221201",
+              "unit_id": "usd",
+              "period_start": "2022-09-02",
+              "period_end": "2022-12-01",
+              "duration_days": 90,
+              "decimals": "-6",
+              "concept_source": {
+                "source": "PRIOR_FISCAL_YEAR_10K",
+                "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+                "source_accession": "0000723125-22-000048",
+                "source_form": "10-K",
+                "source_report_date": "2022-09-01",
+                "source_filing_date": "2022-10-07",
+                "source_status": "PASS",
+                "blocking_filing_date": "2022-12-22",
+                "point_in_time_safe": true
+              }
+            }
+          },
+          "Q2": {
+            "value": -2271000000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2023-03-29",
+            "lineage": {
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "accession_number": "0000723125-23-000022",
+              "context_id": "id3b5f46d200a41968daa7aab2a06b0a2_D20221202-20230302",
+              "unit_id": "usd",
+              "period_start": "2022-12-02",
+              "period_end": "2023-03-02",
+              "duration_days": 90,
+              "decimals": "-6",
+              "concept_source": {
+                "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+                "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+                "source_quarter": "Q1",
+                "source_accession": "0000723125-22-000072",
+                "source_form": "10-Q",
+                "source_filing_date": "2022-12-22",
+                "blocking_filing_date": "2023-03-29",
+                "point_in_time_safe": true
+              },
+              "cross_check_derived_from_ytd": -2271000000.0,
+              "cross_check_matches_direct": true
+            }
+          },
+          "Q3": {
+            "value": -1753000000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2023-06-29",
+            "lineage": {
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "accession_number": "0000723125-23-000041",
+              "context_id": "i8cb702eba0ea45129852d6620fbd08fb_D20230303-20230601",
+              "unit_id": "usd",
+              "period_start": "2023-03-03",
+              "period_end": "2023-06-01",
+              "duration_days": 90,
+              "decimals": "-6",
+              "concept_source": {
+                "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+                "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+                "source_quarter": "Q1",
+                "source_accession": "0000723125-22-000072",
+                "source_form": "10-Q",
+                "source_filing_date": "2022-12-22",
+                "blocking_filing_date": "2023-06-29",
+                "point_in_time_safe": true
+              },
+              "cross_check_derived_from_ytd": -1753000000.0,
+              "cross_check_matches_direct": true
+            }
+          },
+          "Q4": {
+            "value": -1458000000.0,
+            "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+            "availability_date": "2023-10-06",
+            "lineage": {
+              "annual_value": -5658000000.0,
+              "annual_concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+              "annual_accession_number": "0000723125-23-000054",
+              "annual_decimals": "-6",
+              "nine_month_ytd_value": -4200000000.0,
+              "nine_month_ytd_context_id": "i85c87029224348bf99eabbaf7bd318a8_D20220902-20230601",
+              "nine_month_ytd_accession_number": "0000723125-23-000041",
+              "nine_month_ytd_decimals": "-6",
+              "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+              "annual_anchor_accession": "0000723125-23-000054",
+              "annual_anchor_metric": "pretax_income",
+              "annual_anchor_status": "PASS",
+              "annual_anchor_extraction_run_id": "0000723125-23-000054::v14 (scripts/60_xbrl_metric_engine.py)"
+            }
+          }
+        },
+        "concept_source_lineage": {
+          "Q1": {
+            "source": "PRIOR_FISCAL_YEAR_10K",
+            "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+            "source_accession": "0000723125-22-000048",
+            "source_form": "10-K",
+            "source_report_date": "2022-09-01",
+            "source_filing_date": "2022-10-07",
+            "source_status": "PASS",
+            "blocking_filing_date": "2022-12-22",
+            "point_in_time_safe": true
+          },
+          "Q2": {
+            "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+            "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+            "source_quarter": "Q1",
+            "source_accession": "0000723125-22-000072",
+            "source_form": "10-Q",
+            "source_filing_date": "2022-12-22",
+            "blocking_filing_date": "2023-03-29",
+            "point_in_time_safe": true
+          },
+          "Q3": {
+            "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+            "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+            "source_quarter": "Q1",
+            "source_accession": "0000723125-22-000072",
+            "source_form": "10-Q",
+            "source_filing_date": "2022-12-22",
+            "blocking_filing_date": "2023-06-29",
+            "point_in_time_safe": true
+          }
+        },
+        "annual_value": -5658000000.0,
+        "annual_lineage": {
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+          "accession_number": "0000723125-23-000054",
+          "context_id": "c-1",
+          "unit_id": "iso4217:USD",
+          "period_start": "2022-09-02",
+          "period_end": "2023-08-31",
+          "filing_date": "2023-10-06",
+          "decimals": "-6",
+          "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+          "annual_anchor_accession": "0000723125-23-000054",
+          "annual_anchor_metric": "pretax_income",
+          "annual_anchor_status": "PASS",
+          "annual_anchor_extraction_run_id": "0000723125-23-000054::v14 (scripts/60_xbrl_metric_engine.py)"
+        },
+        "reconciliation": {
+          "sum_q1_to_q4": -5658000000.0,
+          "annual_value": -5658000000.0,
+          "difference": 0.0,
+          "exact_equality_status": "PASS",
+          "precision_calculation": {
+            "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+            "source_facts": {
+              "Q1": {
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              },
+              "Q2": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              },
+              "Q3": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              },
+              "Annual": {
+                "decimals": "-6",
+                "rounding_unit": 1000000,
+                "uncertainty": 500000.0
+              }
+            },
+            "permitted_difference": 2000000.0,
+            "actual_difference": 0.0,
+            "within_tolerance": true
+          },
+          "status": "PASS"
+        },
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2021-07-31",
+      "metric_name": "revenue",
+      "blocking_quarter": "Q1",
+      "old_status_v3": "REVIEW_REQUIRED",
+      "new_status_v4": "REVIEW_REQUIRED",
+      "reconciliation_difference": null,
+      "permitted_difference": null,
+      "concept_source_lineage": {
+        "Q1": {},
+        "Q2": {},
+        "Q3": {}
+      },
+      "fact_selected_from_blocking_accession": {
+        "resolved": false,
+        "value": null,
+        "extraction_basis": null,
+        "availability_date": null,
+        "accession_number": null,
+        "concept_qname": null
+      },
+      "future_data_violation": false,
+      "complete_v4_metric_result": {
+        "quarters": {},
+        "concept_source_lineage": {},
+        "annual_value": 4256100000.0,
+        "annual_lineage": {
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "accession_number": "0001327567-21-000029",
+          "context_id": "i4e4213f1ec5c4aebac41f4cd3442f7c5_D20200801-20210731",
+          "unit_id": "iso4217:USD",
+          "period_start": "2020-08-01",
+          "period_end": "2021-07-31",
+          "filing_date": "2021-09-03",
+          "decimals": "-5",
+          "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+          "annual_anchor_accession": "0001327567-21-000029",
+          "annual_anchor_metric": "revenue",
+          "annual_anchor_status": "PASS",
+          "annual_anchor_extraction_run_id": "0001327567-21-000029::v15 (scripts/69_xbrl_metric_engine.py)"
+        },
+        "status": "REVIEW_REQUIRED",
+        "error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+        "concept_reuse_attempted": {
+          "resolved": false,
+          "reason": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+          "candidates_checked": []
+        }
+      }
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2021-07-31",
+      "metric_name": "pretax_income",
+      "blocking_quarter": "Q1",
+      "old_status_v3": "REVIEW_REQUIRED",
+      "new_status_v4": "REVIEW_REQUIRED",
+      "reconciliation_difference": null,
+      "permitted_difference": null,
+      "concept_source_lineage": {
+        "Q1": {},
+        "Q2": {},
+        "Q3": {}
+      },
+      "fact_selected_from_blocking_accession": {
+        "resolved": false,
+        "value": null,
+        "extraction_basis": null,
+        "availability_date": null,
+        "accession_number": null,
+        "concept_qname": null
+      },
+      "future_data_violation": false,
+      "complete_v4_metric_result": {
+        "quarters": {},
+        "concept_source_lineage": {},
+        "annual_value": -465000000.0,
+        "annual_lineage": {
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "accession_number": "0001327567-21-000029",
+          "context_id": "i4e4213f1ec5c4aebac41f4cd3442f7c5_D20200801-20210731",
+          "unit_id": "iso4217:USD",
+          "period_start": "2020-08-01",
+          "period_end": "2021-07-31",
+          "filing_date": "2021-09-03",
+          "decimals": "-5",
+          "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+          "annual_anchor_accession": "0001327567-21-000029",
+          "annual_anchor_metric": "pretax_income",
+          "annual_anchor_status": "PASS",
+          "annual_anchor_extraction_run_id": "0001327567-21-000029::v15 (scripts/69_xbrl_metric_engine.py)"
+        },
+        "status": "REVIEW_REQUIRED",
+        "error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+        "concept_reuse_attempted": {
+          "resolved": false,
+          "reason": "no point-in-time-safe concept source found: no earlier same-fiscal-year quarter had already resolved, and no earlier fiscal year's 10-K (filed on or before the blocking quarter's own filing_date) has a resolved authoritative annual result for this metric",
+          "candidates_checked": []
+        }
+      }
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2022-07-31",
+      "metric_name": "revenue",
+      "blocking_quarter": "Q1",
+      "old_status_v3": "REVIEW_REQUIRED",
+      "new_status_v4": "PASS",
+      "reconciliation_difference": 0.0,
+      "permitted_difference": 200000.0,
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_accession": "0001327567-21-000029",
+          "source_form": "10-K",
+          "source_report_date": "2021-07-31",
+          "source_filing_date": "2021-09-03",
+          "source_status": "PASS",
+          "blocking_filing_date": "2021-11-19",
+          "point_in_time_safe": true
+        },
+        "Q2": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0001327567-21-000040",
+          "source_form": "10-Q",
+          "source_filing_date": "2021-11-19",
+          "blocking_filing_date": "2022-02-23",
+          "point_in_time_safe": true
+        },
+        "Q3": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0001327567-21-000040",
+          "source_form": "10-Q",
+          "source_filing_date": "2021-11-19",
+          "blocking_filing_date": "2022-05-20",
+          "point_in_time_safe": true
+        }
+      },
+      "fact_selected_from_blocking_accession": {
+        "resolved": true,
+        "value": 1247400000.0,
+        "extraction_basis": "DIRECT_QUARTER",
+        "availability_date": "2021-11-19",
+        "accession_number": "0001327567-21-000040",
+        "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "context_id": "i90fb02ba00c242f2b3260add587594c7_D20210801-20211031",
+        "period_start": "2021-08-01",
+        "period_end": "2021-10-31",
+        "duration_days": 91,
+        "concept_source": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_accession": "0001327567-21-000029",
+          "source_form": "10-K",
+          "source_report_date": "2021-07-31",
+          "source_filing_date": "2021-09-03",
+          "source_status": "PASS",
+          "blocking_filing_date": "2021-11-19",
+          "point_in_time_safe": true
+        }
+      },
+      "future_data_violation": false,
+      "complete_v4_metric_result": {
+        "quarters": {
+          "Q1": {
+            "value": 1247400000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2021-11-19",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001327567-21-000040",
+              "context_id": "i90fb02ba00c242f2b3260add587594c7_D20210801-20211031",
+              "unit_id": "usd",
+              "period_start": "2021-08-01",
+              "period_end": "2021-10-31",
+              "duration_days": 91,
+              "decimals": "-5",
+              "concept_source": {
+                "source": "PRIOR_FISCAL_YEAR_10K",
+                "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+                "source_accession": "0001327567-21-000029",
+                "source_form": "10-K",
+                "source_report_date": "2021-07-31",
+                "source_filing_date": "2021-09-03",
+                "source_status": "PASS",
+                "blocking_filing_date": "2021-11-19",
+                "point_in_time_safe": true
+              }
+            }
+          },
+          "Q2": {
+            "value": 1316900000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2022-02-23",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001327567-22-000008",
+              "context_id": "i2a936accba08449eb7c739cd82ec5afe_D20211101-20220131",
+              "unit_id": "usd",
+              "period_start": "2021-11-01",
+              "period_end": "2022-01-31",
+              "duration_days": 91,
+              "decimals": "-5",
+              "concept_source": {
+                "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+                "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+                "source_quarter": "Q1",
+                "source_accession": "0001327567-21-000040",
+                "source_form": "10-Q",
+                "source_filing_date": "2021-11-19",
+                "blocking_filing_date": "2022-02-23",
+                "point_in_time_safe": true
+              },
+              "cross_check_derived_from_ytd": 1316900000.0,
+              "cross_check_matches_direct": true
+            }
+          },
+          "Q3": {
+            "value": 1386700000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2022-05-20",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001327567-22-000016",
+              "context_id": "i877a32a2c4f646d08566bb92811443f3_D20220201-20220430",
+              "unit_id": "usd",
+              "period_start": "2022-02-01",
+              "period_end": "2022-04-30",
+              "duration_days": 88,
+              "decimals": "-5",
+              "concept_source": {
+                "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+                "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+                "source_quarter": "Q1",
+                "source_accession": "0001327567-21-000040",
+                "source_form": "10-Q",
+                "source_filing_date": "2021-11-19",
+                "blocking_filing_date": "2022-05-20",
+                "point_in_time_safe": true
+              },
+              "cross_check_derived_from_ytd": 1386700000.0,
+              "cross_check_matches_direct": true
+            }
+          },
+          "Q4": {
+            "value": 1550500000.0,
+            "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+            "availability_date": "2022-09-06",
+            "lineage": {
+              "annual_value": 5501500000.0,
+              "annual_concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "annual_accession_number": "0001327567-22-000028",
+              "annual_decimals": "-5",
+              "nine_month_ytd_value": 3951000000.0,
+              "nine_month_ytd_context_id": "ie2eb569f920e4069a4fc8e539410f4eb_D20210801-20220430",
+              "nine_month_ytd_accession_number": "0001327567-22-000016",
+              "nine_month_ytd_decimals": "-5",
+              "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+              "annual_anchor_accession": "0001327567-22-000028",
+              "annual_anchor_metric": "revenue",
+              "annual_anchor_status": "PASS",
+              "annual_anchor_extraction_run_id": "0001327567-22-000028::v15 (scripts/69_xbrl_metric_engine.py)"
+            }
+          }
+        },
+        "concept_source_lineage": {
+          "Q1": {
+            "source": "PRIOR_FISCAL_YEAR_10K",
+            "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+            "source_accession": "0001327567-21-000029",
+            "source_form": "10-K",
+            "source_report_date": "2021-07-31",
+            "source_filing_date": "2021-09-03",
+            "source_status": "PASS",
+            "blocking_filing_date": "2021-11-19",
+            "point_in_time_safe": true
+          },
+          "Q2": {
+            "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+            "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+            "source_quarter": "Q1",
+            "source_accession": "0001327567-21-000040",
+            "source_form": "10-Q",
+            "source_filing_date": "2021-11-19",
+            "blocking_filing_date": "2022-02-23",
+            "point_in_time_safe": true
+          },
+          "Q3": {
+            "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+            "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+            "source_quarter": "Q1",
+            "source_accession": "0001327567-21-000040",
+            "source_form": "10-Q",
+            "source_filing_date": "2021-11-19",
+            "blocking_filing_date": "2022-05-20",
+            "point_in_time_safe": true
+          }
+        },
+        "annual_value": 5501500000.0,
+        "annual_lineage": {
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "accession_number": "0001327567-22-000028",
+          "context_id": "i2a8f4b76af2c43cf9f2e797666ce3c0f_D20210801-20220731",
+          "unit_id": "iso4217:USD",
+          "period_start": "2021-08-01",
+          "period_end": "2022-07-31",
+          "filing_date": "2022-09-06",
+          "decimals": "-5",
+          "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+          "annual_anchor_accession": "0001327567-22-000028",
+          "annual_anchor_metric": "revenue",
+          "annual_anchor_status": "PASS",
+          "annual_anchor_extraction_run_id": "0001327567-22-000028::v15 (scripts/69_xbrl_metric_engine.py)"
+        },
+        "reconciliation": {
+          "sum_q1_to_q4": 5501500000.0,
+          "annual_value": 5501500000.0,
+          "difference": 0.0,
+          "exact_equality_status": "PASS",
+          "precision_calculation": {
+            "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+            "source_facts": {
+              "Q1": {
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              },
+              "Q2": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              },
+              "Q3": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              },
+              "Annual": {
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              }
+            },
+            "permitted_difference": 200000.0,
+            "actual_difference": 0.0,
+            "within_tolerance": true
+          },
+          "status": "PASS"
+        },
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2022-07-31",
+      "metric_name": "pretax_income",
+      "blocking_quarter": "Q1",
+      "old_status_v3": "REVIEW_REQUIRED",
+      "new_status_v4": "PASS",
+      "reconciliation_difference": 0.0,
+      "permitted_difference": 200000.0,
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+          "source_accession": "0001327567-21-000029",
+          "source_form": "10-K",
+          "source_report_date": "2021-07-31",
+          "source_filing_date": "2021-09-03",
+          "source_status": "PASS",
+          "blocking_filing_date": "2021-11-19",
+          "point_in_time_safe": true
+        },
+        "Q2": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q2: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+          "source_quarter": "Q1",
+          "source_accession": "0001327567-21-000040",
+          "source_form": "10-Q",
+          "source_filing_date": "2021-11-19",
+          "blocking_filing_date": "2022-02-23",
+          "point_in_time_safe": true
+        },
+        "Q3": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q3: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+          "source_quarter": "Q1",
+          "source_accession": "0001327567-21-000040",
+          "source_form": "10-Q",
+          "source_filing_date": "2021-11-19",
+          "blocking_filing_date": "2022-05-20",
+          "point_in_time_safe": true
+        }
+      },
+      "fact_selected_from_blocking_accession": {
+        "resolved": true,
+        "value": -91200000.0,
+        "extraction_basis": "DIRECT_QUARTER",
+        "availability_date": "2021-11-19",
+        "accession_number": "0001327567-21-000040",
+        "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "context_id": "i90fb02ba00c242f2b3260add587594c7_D20210801-20211031",
+        "period_start": "2021-08-01",
+        "period_end": "2021-10-31",
+        "duration_days": 91,
+        "concept_source": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+          "source_accession": "0001327567-21-000029",
+          "source_form": "10-K",
+          "source_report_date": "2021-07-31",
+          "source_filing_date": "2021-09-03",
+          "source_status": "PASS",
+          "blocking_filing_date": "2021-11-19",
+          "point_in_time_safe": true
+        }
+      },
+      "future_data_violation": false,
+      "complete_v4_metric_result": {
+        "quarters": {
+          "Q1": {
+            "value": -91200000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2021-11-19",
+            "lineage": {
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "accession_number": "0001327567-21-000040",
+              "context_id": "i90fb02ba00c242f2b3260add587594c7_D20210801-20211031",
+              "unit_id": "usd",
+              "period_start": "2021-08-01",
+              "period_end": "2021-10-31",
+              "duration_days": 91,
+              "decimals": "-5",
+              "concept_source": {
+                "source": "PRIOR_FISCAL_YEAR_10K",
+                "primary_resolver_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+                "source_accession": "0001327567-21-000029",
+                "source_form": "10-K",
+                "source_report_date": "2021-07-31",
+                "source_filing_date": "2021-09-03",
+                "source_status": "PASS",
+                "blocking_filing_date": "2021-11-19",
+                "point_in_time_safe": true
+              }
+            }
+          },
+          "Q2": {
+            "value": -80800000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2022-02-23",
+            "lineage": {
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "accession_number": "0001327567-22-000008",
+              "context_id": "i2a936accba08449eb7c739cd82ec5afe_D20211101-20220131",
+              "unit_id": "usd",
+              "period_start": "2021-11-01",
+              "period_end": "2022-01-31",
+              "duration_days": 91,
+              "decimals": "-5",
+              "concept_source": {
+                "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+                "primary_resolver_error": "Q2: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+                "source_quarter": "Q1",
+                "source_accession": "0001327567-21-000040",
+                "source_form": "10-Q",
+                "source_filing_date": "2021-11-19",
+                "blocking_filing_date": "2022-02-23",
+                "point_in_time_safe": true
+              },
+              "cross_check_derived_from_ytd": -80800000.0,
+              "cross_check_matches_direct": true
+            }
+          },
+          "Q3": {
+            "value": -52500000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2022-05-20",
+            "lineage": {
+              "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "accession_number": "0001327567-22-000016",
+              "context_id": "i877a32a2c4f646d08566bb92811443f3_D20220201-20220430",
+              "unit_id": "usd",
+              "period_start": "2022-02-01",
+              "period_end": "2022-04-30",
+              "duration_days": 88,
+              "decimals": "-5",
+              "concept_source": {
+                "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+                "primary_resolver_error": "Q3: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+                "source_quarter": "Q1",
+                "source_accession": "0001327567-21-000040",
+                "source_form": "10-Q",
+                "source_filing_date": "2021-11-19",
+                "blocking_filing_date": "2022-05-20",
+                "point_in_time_safe": true
+              },
+              "cross_check_derived_from_ytd": -52500000.0,
+              "cross_check_matches_direct": true
+            }
+          },
+          "Q4": {
+            "value": 17300000.0,
+            "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+            "availability_date": "2022-09-06",
+            "lineage": {
+              "annual_value": -207200000.0,
+              "annual_concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+              "annual_accession_number": "0001327567-22-000028",
+              "annual_decimals": "-5",
+              "nine_month_ytd_value": -224500000.0,
+              "nine_month_ytd_context_id": "ie2eb569f920e4069a4fc8e539410f4eb_D20210801-20220430",
+              "nine_month_ytd_accession_number": "0001327567-22-000016",
+              "nine_month_ytd_decimals": "-5",
+              "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+              "annual_anchor_accession": "0001327567-22-000028",
+              "annual_anchor_metric": "pretax_income",
+              "annual_anchor_status": "PASS",
+              "annual_anchor_extraction_run_id": "0001327567-22-000028::v15 (scripts/69_xbrl_metric_engine.py)"
+            }
+          }
+        },
+        "concept_source_lineage": {
+          "Q1": {
+            "source": "PRIOR_FISCAL_YEAR_10K",
+            "primary_resolver_error": "Q1: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+            "source_accession": "0001327567-21-000029",
+            "source_form": "10-K",
+            "source_report_date": "2021-07-31",
+            "source_filing_date": "2021-09-03",
+            "source_status": "PASS",
+            "blocking_filing_date": "2021-11-19",
+            "point_in_time_safe": true
+          },
+          "Q2": {
+            "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+            "primary_resolver_error": "Q2: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+            "source_quarter": "Q1",
+            "source_accession": "0001327567-21-000040",
+            "source_form": "10-Q",
+            "source_filing_date": "2021-11-19",
+            "blocking_filing_date": "2022-02-23",
+            "point_in_time_safe": true
+          },
+          "Q3": {
+            "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+            "primary_resolver_error": "Q3: row not found — לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי.",
+            "source_quarter": "Q1",
+            "source_accession": "0001327567-21-000040",
+            "source_form": "10-Q",
+            "source_filing_date": "2021-11-19",
+            "blocking_filing_date": "2022-05-20",
+            "point_in_time_safe": true
+          }
+        },
+        "annual_value": -207200000.0,
+        "annual_lineage": {
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+          "accession_number": "0001327567-22-000028",
+          "context_id": "i2a8f4b76af2c43cf9f2e797666ce3c0f_D20210801-20220731",
+          "unit_id": "iso4217:USD",
+          "period_start": "2021-08-01",
+          "period_end": "2022-07-31",
+          "filing_date": "2022-09-06",
+          "decimals": "-5",
+          "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+          "annual_anchor_accession": "0001327567-22-000028",
+          "annual_anchor_metric": "pretax_income",
+          "annual_anchor_status": "PASS",
+          "annual_anchor_extraction_run_id": "0001327567-22-000028::v15 (scripts/69_xbrl_metric_engine.py)"
+        },
+        "reconciliation": {
+          "sum_q1_to_q4": -207200000.0,
+          "annual_value": -207200000.0,
+          "difference": 0.0,
+          "exact_equality_status": "PASS",
+          "precision_calculation": {
+            "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+            "source_facts": {
+              "Q1": {
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              },
+              "Q2": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              },
+              "Q3": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              },
+              "Annual": {
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              }
+            },
+            "permitted_difference": 200000.0,
+            "actual_difference": 0.0,
+            "within_tolerance": true
+          },
+          "status": "PASS"
+        },
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2023-07-31",
+      "metric_name": "revenue",
+      "blocking_quarter": "Q1",
+      "old_status_v3": "REVIEW_REQUIRED",
+      "new_status_v4": "PASS",
+      "reconciliation_difference": 0.0,
+      "permitted_difference": 200000.0,
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_accession": "0001327567-22-000028",
+          "source_form": "10-K",
+          "source_report_date": "2022-07-31",
+          "source_filing_date": "2022-09-06",
+          "source_status": "PASS",
+          "blocking_filing_date": "2022-11-18",
+          "point_in_time_safe": true
+        },
+        "Q2": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0001327567-22-000038",
+          "source_form": "10-Q",
+          "source_filing_date": "2022-11-18",
+          "blocking_filing_date": "2023-02-22",
+          "point_in_time_safe": true
+        },
+        "Q3": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0001327567-22-000038",
+          "source_form": "10-Q",
+          "source_filing_date": "2022-11-18",
+          "blocking_filing_date": "2023-05-24",
+          "point_in_time_safe": true
+        }
+      },
+      "fact_selected_from_blocking_accession": {
+        "resolved": true,
+        "value": 1563400000.0,
+        "extraction_basis": "DIRECT_QUARTER",
+        "availability_date": "2022-11-18",
+        "accession_number": "0001327567-22-000038",
+        "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "context_id": "ibe00171ef471443398ebb733b1d21566_D20220801-20221031",
+        "period_start": "2022-08-01",
+        "period_end": "2022-10-31",
+        "duration_days": 91,
+        "concept_source": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_accession": "0001327567-22-000028",
+          "source_form": "10-K",
+          "source_report_date": "2022-07-31",
+          "source_filing_date": "2022-09-06",
+          "source_status": "PASS",
+          "blocking_filing_date": "2022-11-18",
+          "point_in_time_safe": true
+        }
+      },
+      "future_data_violation": false,
+      "complete_v4_metric_result": {
+        "quarters": {
+          "Q1": {
+            "value": 1563400000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2022-11-18",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001327567-22-000038",
+              "context_id": "ibe00171ef471443398ebb733b1d21566_D20220801-20221031",
+              "unit_id": "usd",
+              "period_start": "2022-08-01",
+              "period_end": "2022-10-31",
+              "duration_days": 91,
+              "decimals": "-5",
+              "concept_source": {
+                "source": "PRIOR_FISCAL_YEAR_10K",
+                "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+                "source_accession": "0001327567-22-000028",
+                "source_form": "10-K",
+                "source_report_date": "2022-07-31",
+                "source_filing_date": "2022-09-06",
+                "source_status": "PASS",
+                "blocking_filing_date": "2022-11-18",
+                "point_in_time_safe": true
+              }
+            }
+          },
+          "Q2": {
+            "value": 1655100000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2023-02-22",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001327567-23-000006",
+              "context_id": "ic447d4b3ec1347048ef1d2a1d8658390_D20221101-20230131",
+              "unit_id": "usd",
+              "period_start": "2022-11-01",
+              "period_end": "2023-01-31",
+              "duration_days": 91,
+              "decimals": "-5",
+              "concept_source": {
+                "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+                "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+                "source_quarter": "Q1",
+                "source_accession": "0001327567-22-000038",
+                "source_form": "10-Q",
+                "source_filing_date": "2022-11-18",
+                "blocking_filing_date": "2023-02-22",
+                "point_in_time_safe": true
+              },
+              "cross_check_derived_from_ytd": 1655100000.0,
+              "cross_check_matches_direct": true
+            }
+          },
+          "Q3": {
+            "value": 1720900000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2023-05-24",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001327567-23-000014",
+              "context_id": "i1a35314fe00d4d378363d166af47cb78_D20230201-20230430",
+              "unit_id": "usd",
+              "period_start": "2023-02-01",
+              "period_end": "2023-04-30",
+              "duration_days": 88,
+              "decimals": "-5",
+              "concept_source": {
+                "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+                "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+                "source_quarter": "Q1",
+                "source_accession": "0001327567-22-000038",
+                "source_form": "10-Q",
+                "source_filing_date": "2022-11-18",
+                "blocking_filing_date": "2023-05-24",
+                "point_in_time_safe": true
+              },
+              "cross_check_derived_from_ytd": 1720900000.0,
+              "cross_check_matches_direct": true
+            }
+          },
+          "Q4": {
+            "value": 1953300000.0,
+            "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+            "availability_date": "2023-09-01",
+            "lineage": {
+              "annual_value": 6892700000.0,
+              "annual_concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "annual_accession_number": "0001327567-23-000024",
+              "annual_decimals": "-5",
+              "nine_month_ytd_value": 4939400000.0,
+              "nine_month_ytd_context_id": "ia4f597aa7941473389d8173e8572a229_D20220801-20230430",
+              "nine_month_ytd_accession_number": "0001327567-23-000014",
+              "nine_month_ytd_decimals": "-5",
+              "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+              "annual_anchor_accession": "0001327567-23-000024",
+              "annual_anchor_metric": "revenue",
+              "annual_anchor_status": "PASS",
+              "annual_anchor_extraction_run_id": "0001327567-23-000024::v14 (scripts/60_xbrl_metric_engine.py)"
+            }
+          }
+        },
+        "concept_source_lineage": {
+          "Q1": {
+            "source": "PRIOR_FISCAL_YEAR_10K",
+            "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+            "source_accession": "0001327567-22-000028",
+            "source_form": "10-K",
+            "source_report_date": "2022-07-31",
+            "source_filing_date": "2022-09-06",
+            "source_status": "PASS",
+            "blocking_filing_date": "2022-11-18",
+            "point_in_time_safe": true
+          },
+          "Q2": {
+            "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+            "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+            "source_quarter": "Q1",
+            "source_accession": "0001327567-22-000038",
+            "source_form": "10-Q",
+            "source_filing_date": "2022-11-18",
+            "blocking_filing_date": "2023-02-22",
+            "point_in_time_safe": true
+          },
+          "Q3": {
+            "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+            "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+            "source_quarter": "Q1",
+            "source_accession": "0001327567-22-000038",
+            "source_form": "10-Q",
+            "source_filing_date": "2022-11-18",
+            "blocking_filing_date": "2023-05-24",
+            "point_in_time_safe": true
+          }
+        },
+        "annual_value": 6892700000.0,
+        "annual_lineage": {
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "accession_number": "0001327567-23-000024",
+          "context_id": "c-1",
+          "unit_id": "iso4217:USD",
+          "period_start": "2022-08-01",
+          "period_end": "2023-07-31",
+          "filing_date": "2023-09-01",
+          "decimals": "-5",
+          "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+          "annual_anchor_accession": "0001327567-23-000024",
+          "annual_anchor_metric": "revenue",
+          "annual_anchor_status": "PASS",
+          "annual_anchor_extraction_run_id": "0001327567-23-000024::v14 (scripts/60_xbrl_metric_engine.py)"
+        },
+        "reconciliation": {
+          "sum_q1_to_q4": 6892700000.0,
+          "annual_value": 6892700000.0,
+          "difference": 0.0,
+          "exact_equality_status": "PASS",
+          "precision_calculation": {
+            "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+            "source_facts": {
+              "Q1": {
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              },
+              "Q2": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              },
+              "Q3": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              },
+              "Annual": {
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              }
+            },
+            "permitted_difference": 200000.0,
+            "actual_difference": 0.0,
+            "within_tolerance": true
+          },
+          "status": "PASS"
+        },
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2024-07-31",
+      "metric_name": "revenue",
+      "blocking_quarter": "Q1",
+      "old_status_v3": "REVIEW_REQUIRED",
+      "new_status_v4": "PASS",
+      "reconciliation_difference": 0.0,
+      "permitted_difference": 200000.0,
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_accession": "0001327567-23-000024",
+          "source_form": "10-K",
+          "source_report_date": "2023-07-31",
+          "source_filing_date": "2023-09-01",
+          "source_status": "PASS",
+          "blocking_filing_date": "2023-11-17",
+          "point_in_time_safe": true
+        },
+        "Q2": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0001327567-23-000032",
+          "source_form": "10-Q",
+          "source_filing_date": "2023-11-17",
+          "blocking_filing_date": "2024-02-21",
+          "point_in_time_safe": true
+        },
+        "Q3": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0001327567-23-000032",
+          "source_form": "10-Q",
+          "source_filing_date": "2023-11-17",
+          "blocking_filing_date": "2024-05-21",
+          "point_in_time_safe": true
+        }
+      },
+      "fact_selected_from_blocking_accession": {
+        "resolved": true,
+        "value": 1878100000.0,
+        "extraction_basis": "DIRECT_QUARTER",
+        "availability_date": "2023-11-17",
+        "accession_number": "0001327567-23-000032",
+        "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "context_id": "c-1",
+        "period_start": "2023-08-01",
+        "period_end": "2023-10-31",
+        "duration_days": 91,
+        "concept_source": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_accession": "0001327567-23-000024",
+          "source_form": "10-K",
+          "source_report_date": "2023-07-31",
+          "source_filing_date": "2023-09-01",
+          "source_status": "PASS",
+          "blocking_filing_date": "2023-11-17",
+          "point_in_time_safe": true
+        }
+      },
+      "future_data_violation": false,
+      "complete_v4_metric_result": {
+        "quarters": {
+          "Q1": {
+            "value": 1878100000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2023-11-17",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001327567-23-000032",
+              "context_id": "c-1",
+              "unit_id": "usd",
+              "period_start": "2023-08-01",
+              "period_end": "2023-10-31",
+              "duration_days": 91,
+              "decimals": "-5",
+              "concept_source": {
+                "source": "PRIOR_FISCAL_YEAR_10K",
+                "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+                "source_accession": "0001327567-23-000024",
+                "source_form": "10-K",
+                "source_report_date": "2023-07-31",
+                "source_filing_date": "2023-09-01",
+                "source_status": "PASS",
+                "blocking_filing_date": "2023-11-17",
+                "point_in_time_safe": true
+              }
+            }
+          },
+          "Q2": {
+            "value": 1975100000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2024-02-21",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001327567-24-000005",
+              "context_id": "c-13",
+              "unit_id": "usd",
+              "period_start": "2023-11-01",
+              "period_end": "2024-01-31",
+              "duration_days": 91,
+              "decimals": "-5",
+              "concept_source": {
+                "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+                "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+                "source_quarter": "Q1",
+                "source_accession": "0001327567-23-000032",
+                "source_form": "10-Q",
+                "source_filing_date": "2023-11-17",
+                "blocking_filing_date": "2024-02-21",
+                "point_in_time_safe": true
+              },
+              "cross_check_derived_from_ytd": 1975100000.0,
+              "cross_check_matches_direct": true
+            }
+          },
+          "Q3": {
+            "value": 1984800000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2024-05-21",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001327567-24-000017",
+              "context_id": "c-13",
+              "unit_id": "usd",
+              "period_start": "2024-02-01",
+              "period_end": "2024-04-30",
+              "duration_days": 89,
+              "decimals": "-5",
+              "concept_source": {
+                "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+                "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+                "source_quarter": "Q1",
+                "source_accession": "0001327567-23-000032",
+                "source_form": "10-Q",
+                "source_filing_date": "2023-11-17",
+                "blocking_filing_date": "2024-05-21",
+                "point_in_time_safe": true
+              },
+              "cross_check_derived_from_ytd": 1984800000.0,
+              "cross_check_matches_direct": true
+            }
+          },
+          "Q4": {
+            "value": 2189500000.0,
+            "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+            "availability_date": "2024-09-06",
+            "lineage": {
+              "annual_value": 8027500000.0,
+              "annual_concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "annual_accession_number": "0001327567-24-000029",
+              "annual_decimals": "-5",
+              "nine_month_ytd_value": 5838000000.0,
+              "nine_month_ytd_context_id": "c-1",
+              "nine_month_ytd_accession_number": "0001327567-24-000017",
+              "nine_month_ytd_decimals": "-5",
+              "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+              "annual_anchor_accession": "0001327567-24-000029",
+              "annual_anchor_metric": "revenue",
+              "annual_anchor_status": "PASS",
+              "annual_anchor_extraction_run_id": "0001327567-24-000029::v14 (scripts/60_xbrl_metric_engine.py)"
+            }
+          }
+        },
+        "concept_source_lineage": {
+          "Q1": {
+            "source": "PRIOR_FISCAL_YEAR_10K",
+            "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+            "source_accession": "0001327567-23-000024",
+            "source_form": "10-K",
+            "source_report_date": "2023-07-31",
+            "source_filing_date": "2023-09-01",
+            "source_status": "PASS",
+            "blocking_filing_date": "2023-11-17",
+            "point_in_time_safe": true
+          },
+          "Q2": {
+            "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+            "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+            "source_quarter": "Q1",
+            "source_accession": "0001327567-23-000032",
+            "source_form": "10-Q",
+            "source_filing_date": "2023-11-17",
+            "blocking_filing_date": "2024-02-21",
+            "point_in_time_safe": true
+          },
+          "Q3": {
+            "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+            "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+            "source_quarter": "Q1",
+            "source_accession": "0001327567-23-000032",
+            "source_form": "10-Q",
+            "source_filing_date": "2023-11-17",
+            "blocking_filing_date": "2024-05-21",
+            "point_in_time_safe": true
+          }
+        },
+        "annual_value": 8027500000.0,
+        "annual_lineage": {
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "accession_number": "0001327567-24-000029",
+          "context_id": "c-1",
+          "unit_id": "iso4217:USD",
+          "period_start": "2023-08-01",
+          "period_end": "2024-07-31",
+          "filing_date": "2024-09-06",
+          "decimals": "-5",
+          "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+          "annual_anchor_accession": "0001327567-24-000029",
+          "annual_anchor_metric": "revenue",
+          "annual_anchor_status": "PASS",
+          "annual_anchor_extraction_run_id": "0001327567-24-000029::v14 (scripts/60_xbrl_metric_engine.py)"
+        },
+        "reconciliation": {
+          "sum_q1_to_q4": 8027500000.0,
+          "annual_value": 8027500000.0,
+          "difference": 0.0,
+          "exact_equality_status": "PASS",
+          "precision_calculation": {
+            "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+            "source_facts": {
+              "Q1": {
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              },
+              "Q2": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              },
+              "Q3": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              },
+              "Annual": {
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              }
+            },
+            "permitted_difference": 200000.0,
+            "actual_difference": 0.0,
+            "within_tolerance": true
+          },
+          "status": "PASS"
+        },
+        "status": "PASS"
+      }
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2025-07-31",
+      "metric_name": "revenue",
+      "blocking_quarter": "Q1",
+      "old_status_v3": "REVIEW_REQUIRED",
+      "new_status_v4": "PASS",
+      "reconciliation_difference": 0.0,
+      "permitted_difference": 200000.0,
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_accession": "0001327567-24-000029",
+          "source_form": "10-K",
+          "source_report_date": "2024-07-31",
+          "source_filing_date": "2024-09-06",
+          "source_status": "PASS",
+          "blocking_filing_date": "2024-11-21",
+          "point_in_time_safe": true
+        },
+        "Q2": {
+          "source": "PRIMARY_PRESENTATION_RESOLVER"
+        },
+        "Q3": {
+          "source": "PRIMARY_PRESENTATION_RESOLVER"
+        }
+      },
+      "fact_selected_from_blocking_accession": {
+        "resolved": true,
+        "value": 2138800000.0,
+        "extraction_basis": "DIRECT_QUARTER",
+        "availability_date": "2024-11-21",
+        "accession_number": "0001327567-24-000040",
+        "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "context_id": "c-1",
+        "period_start": "2024-08-01",
+        "period_end": "2024-10-31",
+        "duration_days": 91,
+        "concept_source": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+          "source_accession": "0001327567-24-000029",
+          "source_form": "10-K",
+          "source_report_date": "2024-07-31",
+          "source_filing_date": "2024-09-06",
+          "source_status": "PASS",
+          "blocking_filing_date": "2024-11-21",
+          "point_in_time_safe": true
+        }
+      },
+      "future_data_violation": false,
+      "complete_v4_metric_result": {
+        "quarters": {
+          "Q1": {
+            "value": 2138800000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2024-11-21",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001327567-24-000040",
+              "context_id": "c-1",
+              "unit_id": "usd",
+              "period_start": "2024-08-01",
+              "period_end": "2024-10-31",
+              "duration_days": 91,
+              "decimals": "-5",
+              "concept_source": {
+                "source": "PRIOR_FISCAL_YEAR_10K",
+                "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+                "source_accession": "0001327567-24-000029",
+                "source_form": "10-K",
+                "source_report_date": "2024-07-31",
+                "source_filing_date": "2024-09-06",
+                "source_status": "PASS",
+                "blocking_filing_date": "2024-11-21",
+                "point_in_time_safe": true
+              }
+            }
+          },
+          "Q2": {
+            "value": 2257400000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2025-02-14",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001327567-25-000010",
+              "context_id": "c-13",
+              "unit_id": "usd",
+              "period_start": "2024-11-01",
+              "period_end": "2025-01-31",
+              "duration_days": 91,
+              "decimals": "-5",
+              "concept_source": {
+                "source": "PRIMARY_PRESENTATION_RESOLVER"
+              },
+              "cross_check_derived_from_ytd": 2257400000.0,
+              "cross_check_matches_direct": true
+            }
+          },
+          "Q3": {
+            "value": 2289000000.0,
+            "extraction_basis": "DIRECT_QUARTER",
+            "availability_date": "2025-05-21",
+            "lineage": {
+              "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "accession_number": "0001327567-25-000017",
+              "context_id": "c-13",
+              "unit_id": "usd",
+              "period_start": "2025-02-01",
+              "period_end": "2025-04-30",
+              "duration_days": 88,
+              "decimals": "-5",
+              "concept_source": {
+                "source": "PRIMARY_PRESENTATION_RESOLVER"
+              },
+              "cross_check_derived_from_ytd": 2289000000.0,
+              "cross_check_matches_direct": true
+            }
+          },
+          "Q4": {
+            "value": 2536300000.0,
+            "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+            "availability_date": "2025-08-29",
+            "lineage": {
+              "annual_value": 9221500000.0,
+              "annual_concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+              "annual_accession_number": "0001327567-25-000027",
+              "annual_decimals": "-5",
+              "nine_month_ytd_value": 6685200000.0,
+              "nine_month_ytd_context_id": "c-1",
+              "nine_month_ytd_accession_number": "0001327567-25-000017",
+              "nine_month_ytd_decimals": "-5",
+              "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+              "annual_anchor_accession": "0001327567-25-000027",
+              "annual_anchor_metric": "revenue",
+              "annual_anchor_status": "PASS",
+              "annual_anchor_extraction_run_id": "0001327567-25-000027::v14 (scripts/60_xbrl_metric_engine.py)"
+            }
+          }
+        },
+        "concept_source_lineage": {
+          "Q1": {
+            "source": "PRIOR_FISCAL_YEAR_10K",
+            "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'revenue' יחידה וחד-משמעית (מועמדים: 2, tier-B: 0).",
+            "source_accession": "0001327567-24-000029",
+            "source_form": "10-K",
+            "source_report_date": "2024-07-31",
+            "source_filing_date": "2024-09-06",
+            "source_status": "PASS",
+            "blocking_filing_date": "2024-11-21",
+            "point_in_time_safe": true
+          },
+          "Q2": {
+            "source": "PRIMARY_PRESENTATION_RESOLVER"
+          },
+          "Q3": {
+            "source": "PRIMARY_PRESENTATION_RESOLVER"
+          }
+        },
+        "annual_value": 9221500000.0,
+        "annual_lineage": {
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+          "accession_number": "0001327567-25-000027",
+          "context_id": "c-1",
+          "unit_id": "iso4217:USD",
+          "period_start": "2024-08-01",
+          "period_end": "2025-07-31",
+          "filing_date": "2025-08-29",
+          "decimals": "-5",
+          "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+          "annual_anchor_accession": "0001327567-25-000027",
+          "annual_anchor_metric": "revenue",
+          "annual_anchor_status": "PASS",
+          "annual_anchor_extraction_run_id": "0001327567-25-000027::v14 (scripts/60_xbrl_metric_engine.py)"
+        },
+        "reconciliation": {
+          "sum_q1_to_q4": 9221500000.0,
+          "annual_value": 9221500000.0,
+          "difference": 0.0,
+          "exact_equality_status": "PASS",
+          "precision_calculation": {
+            "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+            "source_facts": {
+              "Q1": {
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              },
+              "Q2": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              },
+              "Q3": {
+                "basis": "DIRECT_QUARTER",
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              },
+              "Annual": {
+                "decimals": "-5",
+                "rounding_unit": 100000,
+                "uncertainty": 50000.0
+              }
+            },
+            "permitted_difference": 200000.0,
+            "actual_difference": 0.0,
+            "within_tolerance": true
+          },
+          "status": "PASS"
+        },
+        "status": "PASS"
+      }
+    }
+  ],
+  "runtime_seconds": 238.33
+}

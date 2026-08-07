@@ -1,0 +1,952 @@
+{
+  "company": "MU",
+  "fiscal_year": "FY2022",
+  "fiscal_year_end": "2022-09-01",
+  "filings": {
+    "Q1": {
+      "ticker": "MU",
+      "form": "10-Q",
+      "report_date": "2021-12-02",
+      "filing_date": "2022-01-06",
+      "accession_number": "0000723125-22-000004"
+    },
+    "Q2": {
+      "ticker": "MU",
+      "form": "10-Q",
+      "report_date": "2022-03-03",
+      "filing_date": "2022-03-30",
+      "accession_number": "0000723125-22-000016"
+    },
+    "Q3": {
+      "ticker": "MU",
+      "form": "10-Q",
+      "report_date": "2022-06-02",
+      "filing_date": "2022-07-01",
+      "accession_number": "0000723125-22-000036"
+    },
+    "FY": {
+      "ticker": "MU",
+      "form": "10-K",
+      "report_date": "2022-09-01",
+      "filing_date": "2022-10-07",
+      "accession_number": "0000723125-22-000048"
+    }
+  },
+  "metrics": {
+    "revenue": {
+      "quarters": {
+        "Q1": {
+          "value": 7687000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2022-01-06",
+          "lineage": {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "accession_number": "0000723125-22-000004",
+            "context_id": "iea5ef246ffc147c399cefb55d2b9db30_D20210903-20211202",
+            "unit_id": "usd",
+            "period_start": "2021-09-03",
+            "period_end": "2021-12-02",
+            "duration_days": 90,
+            "decimals": "-6",
+            "concept_source": {
+              "source": "PRIMARY_PRESENTATION_RESOLVER"
+            }
+          }
+        },
+        "Q2": {
+          "value": 7786000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2022-03-30",
+          "lineage": {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "accession_number": "0000723125-22-000016",
+            "context_id": "i7b9c9d77ba2c4aaf8a7850fc291e99f9_D20211203-20220303",
+            "unit_id": "usd",
+            "period_start": "2021-12-03",
+            "period_end": "2022-03-03",
+            "duration_days": 90,
+            "decimals": "-6",
+            "concept_source": {
+              "source": "PRIMARY_PRESENTATION_RESOLVER"
+            },
+            "cross_check_derived_from_ytd": 7786000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q3": {
+          "value": 8642000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2022-07-01",
+          "lineage": {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "accession_number": "0000723125-22-000036",
+            "context_id": "ia126b43f56f143d0a24335a4d7bcea87_D20220304-20220602",
+            "unit_id": "usd",
+            "period_start": "2022-03-04",
+            "period_end": "2022-06-02",
+            "duration_days": 90,
+            "decimals": "-6",
+            "concept_source": {
+              "source": "PRIMARY_PRESENTATION_RESOLVER"
+            },
+            "cross_check_derived_from_ytd": 8642000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q4": {
+          "value": 6643000000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2022-10-07",
+          "lineage": {
+            "annual_value": 30758000000.0,
+            "annual_concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "annual_accession_number": "0000723125-22-000048",
+            "annual_decimals": "-6",
+            "nine_month_ytd_value": 24115000000.0,
+            "nine_month_ytd_context_id": "icfabd28584f3477a93d38b9f872df42b_D20210903-20220602",
+            "nine_month_ytd_accession_number": "0000723125-22-000036",
+            "nine_month_ytd_decimals": "-6",
+            "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+            "annual_anchor_accession": "0000723125-22-000048",
+            "annual_anchor_metric": "revenue",
+            "annual_anchor_status": "PASS",
+            "annual_anchor_extraction_run_id": "0000723125-22-000048::v15 (scripts/69_xbrl_metric_engine.py)"
+          }
+        }
+      },
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "PRIMARY_PRESENTATION_RESOLVER"
+        },
+        "Q2": {
+          "source": "PRIMARY_PRESENTATION_RESOLVER"
+        },
+        "Q3": {
+          "source": "PRIMARY_PRESENTATION_RESOLVER"
+        }
+      },
+      "annual_value": 30758000000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "accession_number": "0000723125-22-000048",
+        "context_id": "i551f4662d9aa47d7a3434539f81f4e96_D20210903-20220901",
+        "unit_id": "iso4217:USD",
+        "period_start": "2021-09-03",
+        "period_end": "2022-09-01",
+        "filing_date": "2022-10-07",
+        "decimals": "-6",
+        "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+        "annual_anchor_accession": "0000723125-22-000048",
+        "annual_anchor_metric": "revenue",
+        "annual_anchor_status": "PASS",
+        "annual_anchor_extraction_run_id": "0000723125-22-000048::v15 (scripts/69_xbrl_metric_engine.py)"
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 30758000000.0,
+        "annual_value": 30758000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Annual": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            }
+          },
+          "permitted_difference": 2000000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    "operating_income": {
+      "quarters": {
+        "Q1": {
+          "value": 2631000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2022-01-06",
+          "lineage": {
+            "concept_qname": "us-gaap:OperatingIncomeLoss",
+            "accession_number": "0000723125-22-000004",
+            "context_id": "iea5ef246ffc147c399cefb55d2b9db30_D20210903-20211202",
+            "unit_id": "usd",
+            "period_start": "2021-09-03",
+            "period_end": "2021-12-02",
+            "duration_days": 90,
+            "decimals": "-6",
+            "concept_source": {
+              "source": "PRIMARY_PRESENTATION_RESOLVER"
+            }
+          }
+        },
+        "Q2": {
+          "value": 2546000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2022-03-30",
+          "lineage": {
+            "concept_qname": "us-gaap:OperatingIncomeLoss",
+            "accession_number": "0000723125-22-000016",
+            "context_id": "i7b9c9d77ba2c4aaf8a7850fc291e99f9_D20211203-20220303",
+            "unit_id": "usd",
+            "period_start": "2021-12-03",
+            "period_end": "2022-03-03",
+            "duration_days": 90,
+            "decimals": "-6",
+            "concept_source": {
+              "source": "PRIMARY_PRESENTATION_RESOLVER"
+            },
+            "cross_check_derived_from_ytd": 2546000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q3": {
+          "value": 3004000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2022-07-01",
+          "lineage": {
+            "concept_qname": "us-gaap:OperatingIncomeLoss",
+            "accession_number": "0000723125-22-000036",
+            "context_id": "ia126b43f56f143d0a24335a4d7bcea87_D20220304-20220602",
+            "unit_id": "usd",
+            "period_start": "2022-03-04",
+            "period_end": "2022-06-02",
+            "duration_days": 90,
+            "decimals": "-6",
+            "concept_source": {
+              "source": "PRIMARY_PRESENTATION_RESOLVER"
+            },
+            "cross_check_derived_from_ytd": 3004000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q4": {
+          "value": 1521000000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2022-10-07",
+          "lineage": {
+            "annual_value": 9702000000.0,
+            "annual_concept_qname": "us-gaap:OperatingIncomeLoss",
+            "annual_accession_number": "0000723125-22-000048",
+            "annual_decimals": "-6",
+            "nine_month_ytd_value": 8181000000.0,
+            "nine_month_ytd_context_id": "icfabd28584f3477a93d38b9f872df42b_D20210903-20220602",
+            "nine_month_ytd_accession_number": "0000723125-22-000036",
+            "nine_month_ytd_decimals": "-6",
+            "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+            "annual_anchor_accession": "0000723125-22-000048",
+            "annual_anchor_metric": "operating_income",
+            "annual_anchor_status": "PASS",
+            "annual_anchor_extraction_run_id": "0000723125-22-000048::v15 (scripts/69_xbrl_metric_engine.py)"
+          }
+        }
+      },
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "PRIMARY_PRESENTATION_RESOLVER"
+        },
+        "Q2": {
+          "source": "PRIMARY_PRESENTATION_RESOLVER"
+        },
+        "Q3": {
+          "source": "PRIMARY_PRESENTATION_RESOLVER"
+        }
+      },
+      "annual_value": 9702000000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:OperatingIncomeLoss",
+        "accession_number": "0000723125-22-000048",
+        "context_id": "i551f4662d9aa47d7a3434539f81f4e96_D20210903-20220901",
+        "unit_id": "iso4217:USD",
+        "period_start": "2021-09-03",
+        "period_end": "2022-09-01",
+        "filing_date": "2022-10-07",
+        "decimals": "-6",
+        "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+        "annual_anchor_accession": "0000723125-22-000048",
+        "annual_anchor_metric": "operating_income",
+        "annual_anchor_status": "PASS",
+        "annual_anchor_extraction_run_id": "0000723125-22-000048::v15 (scripts/69_xbrl_metric_engine.py)"
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 9702000000.0,
+        "annual_value": 9702000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Annual": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            }
+          },
+          "permitted_difference": 2000000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    "pretax_income": {
+      "quarters": {
+        "Q1": {
+          "value": 2521000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2022-01-06",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "accession_number": "0000723125-22-000004",
+            "context_id": "iea5ef246ffc147c399cefb55d2b9db30_D20210903-20211202",
+            "unit_id": "usd",
+            "period_start": "2021-09-03",
+            "period_end": "2021-12-02",
+            "duration_days": 90,
+            "decimals": "-6",
+            "concept_source": {
+              "source": "PRIOR_FISCAL_YEAR_10K",
+              "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+              "source_accession": "0000723125-21-000065",
+              "source_form": "10-K",
+              "source_report_date": "2021-09-02",
+              "source_filing_date": "2021-10-08",
+              "source_status": "PASS",
+              "blocking_filing_date": "2022-01-06",
+              "point_in_time_safe": true
+            }
+          }
+        },
+        "Q2": {
+          "value": 2509000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2022-03-30",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "accession_number": "0000723125-22-000016",
+            "context_id": "i7b9c9d77ba2c4aaf8a7850fc291e99f9_D20211203-20220303",
+            "unit_id": "usd",
+            "period_start": "2021-12-03",
+            "period_end": "2022-03-03",
+            "duration_days": 90,
+            "decimals": "-6",
+            "concept_source": {
+              "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+              "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+              "source_quarter": "Q1",
+              "source_accession": "0000723125-22-000004",
+              "source_form": "10-Q",
+              "source_filing_date": "2022-01-06",
+              "blocking_filing_date": "2022-03-30",
+              "point_in_time_safe": true
+            },
+            "cross_check_derived_from_ytd": 2509000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q3": {
+          "value": 2988000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2022-07-01",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "accession_number": "0000723125-22-000036",
+            "context_id": "ia126b43f56f143d0a24335a4d7bcea87_D20220304-20220602",
+            "unit_id": "usd",
+            "period_start": "2022-03-04",
+            "period_end": "2022-06-02",
+            "duration_days": 90,
+            "decimals": "-6",
+            "concept_source": {
+              "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+              "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+              "source_quarter": "Q1",
+              "source_accession": "0000723125-22-000004",
+              "source_form": "10-Q",
+              "source_filing_date": "2022-01-06",
+              "blocking_filing_date": "2022-07-01",
+              "point_in_time_safe": true
+            },
+            "cross_check_derived_from_ytd": 2988000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q4": {
+          "value": 1553000000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2022-10-07",
+          "lineage": {
+            "annual_value": 9571000000.0,
+            "annual_concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "annual_accession_number": "0000723125-22-000048",
+            "annual_decimals": "-6",
+            "nine_month_ytd_value": 8018000000.0,
+            "nine_month_ytd_context_id": "icfabd28584f3477a93d38b9f872df42b_D20210903-20220602",
+            "nine_month_ytd_accession_number": "0000723125-22-000036",
+            "nine_month_ytd_decimals": "-6",
+            "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+            "annual_anchor_accession": "0000723125-22-000048",
+            "annual_anchor_metric": "pretax_income",
+            "annual_anchor_status": "PASS",
+            "annual_anchor_extraction_run_id": "0000723125-22-000048::v15 (scripts/69_xbrl_metric_engine.py)"
+          }
+        }
+      },
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "PRIOR_FISCAL_YEAR_10K",
+          "primary_resolver_error": "Q1: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+          "source_accession": "0000723125-21-000065",
+          "source_form": "10-K",
+          "source_report_date": "2021-09-02",
+          "source_filing_date": "2021-10-08",
+          "source_status": "PASS",
+          "blocking_filing_date": "2022-01-06",
+          "point_in_time_safe": true
+        },
+        "Q2": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q2: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0000723125-22-000004",
+          "source_form": "10-Q",
+          "source_filing_date": "2022-01-06",
+          "blocking_filing_date": "2022-03-30",
+          "point_in_time_safe": true
+        },
+        "Q3": {
+          "source": "EARLIER_SAME_FISCAL_YEAR_QUARTER",
+          "primary_resolver_error": "Q3: row not found — לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית (מועמדים: 1, tier-B: 0).",
+          "source_quarter": "Q1",
+          "source_accession": "0000723125-22-000004",
+          "source_form": "10-Q",
+          "source_filing_date": "2022-01-06",
+          "blocking_filing_date": "2022-07-01",
+          "point_in_time_safe": true
+        }
+      },
+      "annual_value": 9571000000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "accession_number": "0000723125-22-000048",
+        "context_id": "i551f4662d9aa47d7a3434539f81f4e96_D20210903-20220901",
+        "unit_id": "iso4217:USD",
+        "period_start": "2021-09-03",
+        "period_end": "2022-09-01",
+        "filing_date": "2022-10-07",
+        "decimals": "-6",
+        "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+        "annual_anchor_accession": "0000723125-22-000048",
+        "annual_anchor_metric": "pretax_income",
+        "annual_anchor_status": "PASS",
+        "annual_anchor_extraction_run_id": "0000723125-22-000048::v15 (scripts/69_xbrl_metric_engine.py)"
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 9571000000.0,
+        "annual_value": 9571000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Annual": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            }
+          },
+          "permitted_difference": 2000000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    "income_tax_expense": {
+      "quarters": {
+        "Q1": {
+          "value": 219000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2022-01-06",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+            "accession_number": "0000723125-22-000004",
+            "context_id": "iea5ef246ffc147c399cefb55d2b9db30_D20210903-20211202",
+            "unit_id": "usd",
+            "period_start": "2021-09-03",
+            "period_end": "2021-12-02",
+            "duration_days": 90,
+            "decimals": "-6",
+            "concept_source": {
+              "source": "PRIMARY_PRESENTATION_RESOLVER"
+            }
+          }
+        },
+        "Q2": {
+          "value": 255000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2022-03-30",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+            "accession_number": "0000723125-22-000016",
+            "context_id": "i7b9c9d77ba2c4aaf8a7850fc291e99f9_D20211203-20220303",
+            "unit_id": "usd",
+            "period_start": "2021-12-03",
+            "period_end": "2022-03-03",
+            "duration_days": 90,
+            "decimals": "-6",
+            "concept_source": {
+              "source": "PRIMARY_PRESENTATION_RESOLVER"
+            },
+            "cross_check_derived_from_ytd": 255000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q3": {
+          "value": 358000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2022-07-01",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+            "accession_number": "0000723125-22-000036",
+            "context_id": "ia126b43f56f143d0a24335a4d7bcea87_D20220304-20220602",
+            "unit_id": "usd",
+            "period_start": "2022-03-04",
+            "period_end": "2022-06-02",
+            "duration_days": 90,
+            "decimals": "-6",
+            "concept_source": {
+              "source": "PRIMARY_PRESENTATION_RESOLVER"
+            },
+            "cross_check_derived_from_ytd": 358000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q4": {
+          "value": 56000000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2022-10-07",
+          "lineage": {
+            "annual_value": 888000000.0,
+            "annual_concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+            "annual_accession_number": "0000723125-22-000048",
+            "annual_decimals": "-6",
+            "nine_month_ytd_value": 832000000.0,
+            "nine_month_ytd_context_id": "icfabd28584f3477a93d38b9f872df42b_D20210903-20220602",
+            "nine_month_ytd_accession_number": "0000723125-22-000036",
+            "nine_month_ytd_decimals": "-6",
+            "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+            "annual_anchor_accession": "0000723125-22-000048",
+            "annual_anchor_metric": "income_tax_expense",
+            "annual_anchor_status": "PASS",
+            "annual_anchor_extraction_run_id": "0000723125-22-000048::v15 (scripts/69_xbrl_metric_engine.py)"
+          }
+        }
+      },
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "PRIMARY_PRESENTATION_RESOLVER"
+        },
+        "Q2": {
+          "source": "PRIMARY_PRESENTATION_RESOLVER"
+        },
+        "Q3": {
+          "source": "PRIMARY_PRESENTATION_RESOLVER"
+        }
+      },
+      "annual_value": 888000000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+        "accession_number": "0000723125-22-000048",
+        "context_id": "i551f4662d9aa47d7a3434539f81f4e96_D20210903-20220901",
+        "unit_id": "iso4217:USD",
+        "period_start": "2021-09-03",
+        "period_end": "2022-09-01",
+        "filing_date": "2022-10-07",
+        "decimals": "-6",
+        "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+        "annual_anchor_accession": "0000723125-22-000048",
+        "annual_anchor_metric": "income_tax_expense",
+        "annual_anchor_status": "PASS",
+        "annual_anchor_extraction_run_id": "0000723125-22-000048::v15 (scripts/69_xbrl_metric_engine.py)"
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 888000000.0,
+        "annual_value": 888000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Annual": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            }
+          },
+          "permitted_difference": 2000000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    "operating_cash_flow": {
+      "quarters": {
+        "Q1": {
+          "value": 3938000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2022-01-06",
+          "lineage": {
+            "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "accession_number": "0000723125-22-000004",
+            "context_id": "iea5ef246ffc147c399cefb55d2b9db30_D20210903-20211202",
+            "unit_id": "usd",
+            "period_start": "2021-09-03",
+            "period_end": "2021-12-02",
+            "duration_days": 90,
+            "decimals": "-6",
+            "concept_source": {
+              "source": "PRIMARY_PRESENTATION_RESOLVER"
+            }
+          }
+        },
+        "Q2": {
+          "value": 3628000000.0,
+          "extraction_basis": "DERIVED_FROM_YTD",
+          "availability_date": "2022-03-30",
+          "lineage": {
+            "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "accession_number": "0000723125-22-000016",
+            "ytd_6m_value": 7566000000.0,
+            "ytd_6m_context_id": "if2995dd1d16143b9894886ea11f16728_D20210903-20220303",
+            "ytd_6m_decimals": "-6",
+            "q1_value_subtracted": 3938000000.0,
+            "concept_source": {
+              "source": "PRIMARY_PRESENTATION_RESOLVER"
+            }
+          }
+        },
+        "Q3": {
+          "value": 3838000000.0,
+          "extraction_basis": "DERIVED_FROM_YTD",
+          "availability_date": "2022-07-01",
+          "lineage": {
+            "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "accession_number": "0000723125-22-000036",
+            "ytd_9m_value": 11404000000.0,
+            "ytd_9m_context_id": "icfabd28584f3477a93d38b9f872df42b_D20210903-20220602",
+            "ytd_9m_decimals": "-6",
+            "q2_ytd_6m_value_subtracted": 7566000000.0,
+            "concept_source": {
+              "source": "PRIMARY_PRESENTATION_RESOLVER"
+            }
+          }
+        },
+        "Q4": {
+          "value": 3777000000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2022-10-07",
+          "lineage": {
+            "annual_value": 15181000000.0,
+            "annual_concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "annual_accession_number": "0000723125-22-000048",
+            "annual_decimals": "-6",
+            "nine_month_ytd_value": 11404000000.0,
+            "nine_month_ytd_context_id": "icfabd28584f3477a93d38b9f872df42b_D20210903-20220602",
+            "nine_month_ytd_accession_number": "0000723125-22-000036",
+            "nine_month_ytd_decimals": "-6",
+            "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+            "annual_anchor_accession": "0000723125-22-000048",
+            "annual_anchor_metric": "operating_cash_flow",
+            "annual_anchor_status": "PASS",
+            "annual_anchor_extraction_run_id": "0000723125-22-000048::v15 (scripts/69_xbrl_metric_engine.py)"
+          }
+        }
+      },
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "PRIMARY_PRESENTATION_RESOLVER"
+        },
+        "Q2": {
+          "source": "PRIMARY_PRESENTATION_RESOLVER"
+        },
+        "Q3": {
+          "source": "PRIMARY_PRESENTATION_RESOLVER"
+        }
+      },
+      "annual_value": 15181000000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+        "accession_number": "0000723125-22-000048",
+        "context_id": "i551f4662d9aa47d7a3434539f81f4e96_D20210903-20220901",
+        "unit_id": "iso4217:USD",
+        "period_start": "2021-09-03",
+        "period_end": "2022-09-01",
+        "filing_date": "2022-10-07",
+        "decimals": "-6",
+        "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+        "annual_anchor_accession": "0000723125-22-000048",
+        "annual_anchor_metric": "operating_cash_flow",
+        "annual_anchor_status": "PASS",
+        "annual_anchor_extraction_run_id": "0000723125-22-000048::v15 (scripts/69_xbrl_metric_engine.py)"
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 15181000000.0,
+        "annual_value": 15181000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q2": {
+              "basis": "DERIVED_FROM_YTD",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q3": {
+              "basis": "DERIVED_FROM_YTD",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Annual": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            }
+          },
+          "permitted_difference": 2000000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    "capex": {
+      "quarters": {
+        "Q1": {
+          "value": 3265000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2022-01-06",
+          "lineage": {
+            "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "accession_number": "0000723125-22-000004",
+            "context_id": "iea5ef246ffc147c399cefb55d2b9db30_D20210903-20211202",
+            "unit_id": "usd",
+            "period_start": "2021-09-03",
+            "period_end": "2021-12-02",
+            "duration_days": 90,
+            "decimals": "-6",
+            "concept_source": {
+              "source": "PRIMARY_PRESENTATION_RESOLVER"
+            }
+          }
+        },
+        "Q2": {
+          "value": 2611000000.0,
+          "extraction_basis": "DERIVED_FROM_YTD",
+          "availability_date": "2022-03-30",
+          "lineage": {
+            "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "accession_number": "0000723125-22-000016",
+            "ytd_6m_value": 5876000000.0,
+            "ytd_6m_context_id": "if2995dd1d16143b9894886ea11f16728_D20210903-20220303",
+            "ytd_6m_decimals": "-6",
+            "q1_value_subtracted": 3265000000.0,
+            "concept_source": {
+              "source": "PRIMARY_PRESENTATION_RESOLVER"
+            }
+          }
+        },
+        "Q3": {
+          "value": 2578000000.0,
+          "extraction_basis": "DERIVED_FROM_YTD",
+          "availability_date": "2022-07-01",
+          "lineage": {
+            "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "accession_number": "0000723125-22-000036",
+            "ytd_9m_value": 8454000000.0,
+            "ytd_9m_context_id": "icfabd28584f3477a93d38b9f872df42b_D20210903-20220602",
+            "ytd_9m_decimals": "-6",
+            "q2_ytd_6m_value_subtracted": 5876000000.0,
+            "concept_source": {
+              "source": "PRIMARY_PRESENTATION_RESOLVER"
+            }
+          }
+        },
+        "Q4": {
+          "value": 3613000000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2022-10-07",
+          "lineage": {
+            "annual_value": 12067000000.0,
+            "annual_concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "annual_accession_number": "0000723125-22-000048",
+            "annual_decimals": "-6",
+            "nine_month_ytd_value": 8454000000.0,
+            "nine_month_ytd_context_id": "icfabd28584f3477a93d38b9f872df42b_D20210903-20220602",
+            "nine_month_ytd_accession_number": "0000723125-22-000036",
+            "nine_month_ytd_decimals": "-6",
+            "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+            "annual_anchor_accession": "0000723125-22-000048",
+            "annual_anchor_metric": "capex",
+            "annual_anchor_status": "PASS",
+            "annual_anchor_extraction_run_id": "0000723125-22-000048::v15 (scripts/69_xbrl_metric_engine.py)"
+          }
+        }
+      },
+      "concept_source_lineage": {
+        "Q1": {
+          "source": "PRIMARY_PRESENTATION_RESOLVER"
+        },
+        "Q2": {
+          "source": "PRIMARY_PRESENTATION_RESOLVER"
+        },
+        "Q3": {
+          "source": "PRIMARY_PRESENTATION_RESOLVER"
+        }
+      },
+      "annual_value": 12067000000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+        "accession_number": "0000723125-22-000048",
+        "context_id": "i551f4662d9aa47d7a3434539f81f4e96_D20210903-20220901",
+        "unit_id": "iso4217:USD",
+        "period_start": "2021-09-03",
+        "period_end": "2022-09-01",
+        "filing_date": "2022-10-07",
+        "decimals": "-6",
+        "annual_anchor_source": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+        "annual_anchor_accession": "0000723125-22-000048",
+        "annual_anchor_metric": "capex",
+        "annual_anchor_status": "PASS",
+        "annual_anchor_extraction_run_id": "0000723125-22-000048::v15 (scripts/69_xbrl_metric_engine.py)"
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 12067000000.0,
+        "annual_value": 12067000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q2": {
+              "basis": "DERIVED_FROM_YTD",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q3": {
+              "basis": "DERIVED_FROM_YTD",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Annual": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            }
+          },
+          "permitted_difference": 2000000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "status": "PASS"
+    }
+  },
+  "reconciliation_policy": "XBRL_DECIMALS_ROUNDING_TOLERANCE",
+  "annual_anchor_policy": "AUTHORITATIVE_ANNUAL_PRODUCTION_RESULT",
+  "duration_tolerance_policy": "QUARTER_MIN=88_YTD_6M_MIN=180",
+  "concept_reuse_policy": "POINT_IN_TIME_SAFE_EARLIER_QUARTER_OR_PRIOR_FISCAL_YEAR_10K",
+  "engine_script": "136_quarterly_extraction_engine_v4_point_in_time_concept_reuse.py"
+}

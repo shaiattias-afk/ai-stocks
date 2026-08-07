@@ -1,0 +1,3 @@
+﻿label,ticker,report_date,accession_number,status,failure_category,xbrl_facts,xbrl_contexts,xbrl_units,xbrl_concepts,entry_point_format,elapsed_seconds
+BROKEN,NVDA,2019-04-28,0001045810-19-000079,PASS,,654,134,5,711,TRADITIONAL_XBRL_SEPARATE_INSTANCE,1.079
+GOOD_BASELINE,NVDA,2019-07-28,0001045810-19-000144,PASS,,920,186,5,875,INLINE_XBRL,4.434

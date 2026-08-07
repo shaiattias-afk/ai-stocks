@@ -1,0 +1,912 @@
+{
+  "MU_2025-08-28": {
+    "ticker": "MU",
+    "report_date": "2025-08-28",
+    "accession_number": "0000723125-25-000028",
+    "prior_report_date_requested": "2024-08-28",
+    "current_debt": {
+      "status": "PASS",
+      "value": 560000000.0,
+      "concept_qname": "us-gaap:DebtCurrent",
+      "selection_tier": "sum_of_sibling_components",
+      "component_rows": [
+        {
+          "role_uri": "http://www.micron.com/role/CONSOLIDATEDBALANCESHEETS",
+          "role_definition": "9952153 - Statement - CONSOLIDATED BALANCE SHEETS",
+          "concept_qname": "us-gaap:DebtCurrent",
+          "label": "Current debt",
+          "period_type": "instant",
+          "selection_tier": "sum_of_sibling_components"
+        }
+      ]
+    },
+    "long_term_debt": {
+      "status": "PASS",
+      "error": null,
+      "value": 14017000000.0,
+      "concept_qname": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2025-08-28",
+        "matched_date": "2025-08-28",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "total_debt": {
+      "status": "PASS",
+      "value": 14577000000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "cash_and_equivalents": {
+      "status": "PASS",
+      "error": null,
+      "value": 9642000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2025-08-28",
+        "matched_date": "2025-08-28",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "short_term_investments": {
+      "status": "PASS",
+      "error": null,
+      "value": 665000000.0,
+      "concept_qname": "us-gaap:AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2025-08-28",
+        "matched_date": "2025-08-28",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "stockholders_equity": {
+      "status": "PASS",
+      "error": null,
+      "value": 54165000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2025-08-28",
+        "matched_date": "2025-08-28",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "adjusted_net_debt": {
+      "status": "PASS",
+      "value": 4270000000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "invested_capital": {
+      "status": "PASS",
+      "value": 58435000000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "current_debt_prior": {
+      "status": "PASS",
+      "value": 431000000.0,
+      "concept_qname": "us-gaap:DebtCurrent",
+      "selection_tier": "sum_of_sibling_components",
+      "component_rows": [
+        {
+          "role_uri": "http://www.micron.com/role/CONSOLIDATEDBALANCESHEETS",
+          "role_definition": "9952153 - Statement - CONSOLIDATED BALANCE SHEETS",
+          "concept_qname": "us-gaap:DebtCurrent",
+          "label": "Current debt",
+          "period_type": "instant",
+          "selection_tier": "sum_of_sibling_components"
+        }
+      ]
+    },
+    "long_term_debt_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 12966000000.0,
+      "concept_qname": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2024-08-28",
+        "matched_date": "2024-08-29",
+        "matched_dates": null,
+        "date_diff_days": 1,
+        "date_tolerance_days": 10
+      }
+    },
+    "cash_and_equivalents_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 7041000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2024-08-28",
+        "matched_date": "2024-08-29",
+        "matched_dates": null,
+        "date_diff_days": 1,
+        "date_tolerance_days": 10
+      }
+    },
+    "short_term_investments_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 1065000000.0,
+      "concept_qname": "us-gaap:AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2024-08-28",
+        "matched_date": "2024-08-29",
+        "matched_dates": null,
+        "date_diff_days": 1,
+        "date_tolerance_days": 10
+      }
+    },
+    "stockholders_equity_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 45131000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2024-08-28",
+        "matched_date": "2024-08-29",
+        "matched_dates": null,
+        "date_diff_days": 1,
+        "date_tolerance_days": 10
+      }
+    },
+    "total_debt_prior": {
+      "status": "PASS",
+      "value": 13397000000.0
+    },
+    "invested_capital_prior": {
+      "status": "PASS",
+      "value": 50422000000.0
+    },
+    "average_invested_capital": {
+      "status": "PASS",
+      "value": 54428500000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "roic": {
+      "status": "PASS",
+      "value": 0.15860246567294037
+    }
+  },
+  "MU_2021-09-02": {
+    "ticker": "MU",
+    "report_date": "2021-09-02",
+    "accession_number": "0000723125-21-000065",
+    "prior_report_date_requested": "2020-09-02",
+    "current_debt": {
+      "status": "PASS",
+      "value": 155000000.0,
+      "concept_qname": "us-gaap:DebtCurrent",
+      "selection_tier": "sum_of_sibling_components",
+      "component_rows": [
+        {
+          "role_uri": "http://www.micron.com/role/CONSOLIDATEDBALANCESHEETS",
+          "role_definition": "100030004 - Statement - CONSOLIDATED BALANCE SHEETS",
+          "concept_qname": "us-gaap:DebtCurrent",
+          "label": "Current debt",
+          "period_type": "instant",
+          "selection_tier": "sum_of_sibling_components"
+        }
+      ]
+    },
+    "long_term_debt": {
+      "status": "PASS",
+      "error": null,
+      "value": 6621000000.0,
+      "concept_qname": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2021-09-02",
+        "matched_date": "2021-09-02",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "total_debt": {
+      "status": "PASS",
+      "value": 6776000000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "cash_and_equivalents": {
+      "status": "PASS",
+      "error": null,
+      "value": 7763000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2021-09-02",
+        "matched_date": "2021-09-02",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "short_term_investments": {
+      "status": "PASS",
+      "error": null,
+      "value": 870000000.0,
+      "concept_qname": "us-gaap:AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2021-09-02",
+        "matched_date": "2021-09-02",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "stockholders_equity": {
+      "status": "PASS",
+      "error": null,
+      "value": 43933000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2021-09-02",
+        "matched_date": "2021-09-02",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "adjusted_net_debt": {
+      "status": "PASS",
+      "value": -1857000000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "invested_capital": {
+      "status": "PASS",
+      "value": 42076000000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "current_debt_prior": {
+      "status": "PASS",
+      "value": 270000000.0,
+      "concept_qname": "us-gaap:DebtCurrent",
+      "selection_tier": "sum_of_sibling_components",
+      "component_rows": [
+        {
+          "role_uri": "http://www.micron.com/role/CONSOLIDATEDBALANCESHEETS",
+          "role_definition": "100030004 - Statement - CONSOLIDATED BALANCE SHEETS",
+          "concept_qname": "us-gaap:DebtCurrent",
+          "label": "Current debt",
+          "period_type": "instant",
+          "selection_tier": "sum_of_sibling_components"
+        }
+      ]
+    },
+    "long_term_debt_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 6373000000.0,
+      "concept_qname": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2020-09-02",
+        "matched_date": "2020-09-03",
+        "matched_dates": null,
+        "date_diff_days": 1,
+        "date_tolerance_days": 10
+      }
+    },
+    "cash_and_equivalents_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 7624000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2020-09-02",
+        "matched_date": "2020-09-03",
+        "matched_dates": null,
+        "date_diff_days": 1,
+        "date_tolerance_days": 10
+      }
+    },
+    "short_term_investments_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 518000000.0,
+      "concept_qname": "us-gaap:AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2020-09-02",
+        "matched_date": "2020-09-03",
+        "matched_dates": null,
+        "date_diff_days": 1,
+        "date_tolerance_days": 10
+      }
+    },
+    "stockholders_equity_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 38996000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2020-09-02",
+        "matched_date": "2020-09-03",
+        "matched_dates": null,
+        "date_diff_days": 1,
+        "date_tolerance_days": 10
+      }
+    },
+    "total_debt_prior": {
+      "status": "PASS",
+      "value": 6643000000.0
+    },
+    "invested_capital_prior": {
+      "status": "PASS",
+      "value": 37497000000.0
+    },
+    "average_invested_capital": {
+      "status": "PASS",
+      "value": 39786500000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "roic": {
+      "status": "PASS",
+      "value": 0.1479115104952452
+    }
+  },
+  "MU_2022-09-01": {
+    "ticker": "MU",
+    "report_date": "2022-09-01",
+    "accession_number": "0000723125-22-000048",
+    "prior_report_date_requested": "2021-09-01",
+    "current_debt": {
+      "status": "PASS",
+      "value": 103000000.0,
+      "concept_qname": "us-gaap:DebtCurrent",
+      "selection_tier": "sum_of_sibling_components",
+      "component_rows": [
+        {
+          "role_uri": "http://www.micron.com/role/CONSOLIDATEDBALANCESHEETS",
+          "role_definition": "1003005 - Statement - CONSOLIDATED BALANCE SHEETS",
+          "concept_qname": "us-gaap:DebtCurrent",
+          "label": "Current debt",
+          "period_type": "instant",
+          "selection_tier": "sum_of_sibling_components"
+        }
+      ]
+    },
+    "long_term_debt": {
+      "status": "PASS",
+      "error": null,
+      "value": 6803000000.0,
+      "concept_qname": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2022-09-01",
+        "matched_date": "2022-09-01",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "total_debt": {
+      "status": "PASS",
+      "value": 6906000000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "cash_and_equivalents": {
+      "status": "PASS",
+      "error": null,
+      "value": 8262000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2022-09-01",
+        "matched_date": "2022-09-01",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "short_term_investments": {
+      "status": "PASS",
+      "error": null,
+      "value": 1069000000.0,
+      "concept_qname": "us-gaap:AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2022-09-01",
+        "matched_date": "2022-09-01",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "stockholders_equity": {
+      "status": "PASS",
+      "error": null,
+      "value": 49907000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2022-09-01",
+        "matched_date": "2022-09-01",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "adjusted_net_debt": {
+      "status": "PASS",
+      "value": -2425000000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "invested_capital": {
+      "status": "PASS",
+      "value": 47482000000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "current_debt_prior": {
+      "status": "PASS",
+      "value": 155000000.0,
+      "concept_qname": "us-gaap:DebtCurrent",
+      "selection_tier": "sum_of_sibling_components",
+      "component_rows": [
+        {
+          "role_uri": "http://www.micron.com/role/CONSOLIDATEDBALANCESHEETS",
+          "role_definition": "1003005 - Statement - CONSOLIDATED BALANCE SHEETS",
+          "concept_qname": "us-gaap:DebtCurrent",
+          "label": "Current debt",
+          "period_type": "instant",
+          "selection_tier": "sum_of_sibling_components"
+        }
+      ]
+    },
+    "long_term_debt_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 6621000000.0,
+      "concept_qname": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2021-09-01",
+        "matched_date": "2021-09-02",
+        "matched_dates": null,
+        "date_diff_days": 1,
+        "date_tolerance_days": 10
+      }
+    },
+    "cash_and_equivalents_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 7763000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2021-09-01",
+        "matched_date": "2021-09-02",
+        "matched_dates": null,
+        "date_diff_days": 1,
+        "date_tolerance_days": 10
+      }
+    },
+    "short_term_investments_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 870000000.0,
+      "concept_qname": "us-gaap:AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2021-09-01",
+        "matched_date": "2021-09-02",
+        "matched_dates": null,
+        "date_diff_days": 1,
+        "date_tolerance_days": 10
+      }
+    },
+    "stockholders_equity_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 43933000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2021-09-01",
+        "matched_date": "2021-09-02",
+        "matched_dates": null,
+        "date_diff_days": 1,
+        "date_tolerance_days": 10
+      }
+    },
+    "total_debt_prior": {
+      "status": "PASS",
+      "value": 6776000000.0
+    },
+    "invested_capital_prior": {
+      "status": "PASS",
+      "value": 42076000000.0
+    },
+    "average_invested_capital": {
+      "status": "PASS",
+      "value": 44779000000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "roic": {
+      "status": "PASS",
+      "value": 0.19656191036288415
+    }
+  },
+  "MU_2023-08-31": {
+    "ticker": "MU",
+    "report_date": "2023-08-31",
+    "accession_number": "0000723125-23-000054",
+    "prior_report_date_requested": "2022-08-31",
+    "current_debt": {
+      "status": "PASS",
+      "value": 278000000.0,
+      "concept_qname": "us-gaap:DebtCurrent",
+      "selection_tier": "sum_of_sibling_components",
+      "component_rows": [
+        {
+          "role_uri": "http://www.micron.com/role/CONSOLIDATEDBALANCESHEETS",
+          "role_definition": "0000005 - Statement - CONSOLIDATED BALANCE SHEETS",
+          "concept_qname": "us-gaap:DebtCurrent",
+          "label": "Current debt",
+          "period_type": "instant",
+          "selection_tier": "sum_of_sibling_components"
+        }
+      ]
+    },
+    "long_term_debt": {
+      "status": "PASS",
+      "error": null,
+      "value": 13052000000.0,
+      "concept_qname": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2023-08-31",
+        "matched_date": "2023-08-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "total_debt": {
+      "status": "PASS",
+      "value": 13330000000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "cash_and_equivalents": {
+      "status": "PASS",
+      "error": null,
+      "value": 8577000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2023-08-31",
+        "matched_date": "2023-08-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "short_term_investments": {
+      "status": "PASS",
+      "error": null,
+      "value": 1017000000.0,
+      "concept_qname": "us-gaap:AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2023-08-31",
+        "matched_date": "2023-08-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "stockholders_equity": {
+      "status": "PASS",
+      "error": null,
+      "value": 44120000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2023-08-31",
+        "matched_date": "2023-08-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "adjusted_net_debt": {
+      "status": "PASS",
+      "value": 3736000000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "invested_capital": {
+      "status": "PASS",
+      "value": 47856000000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "current_debt_prior": {
+      "status": "PASS",
+      "value": 103000000.0,
+      "concept_qname": "us-gaap:DebtCurrent",
+      "selection_tier": "sum_of_sibling_components",
+      "component_rows": [
+        {
+          "role_uri": "http://www.micron.com/role/CONSOLIDATEDBALANCESHEETS",
+          "role_definition": "0000005 - Statement - CONSOLIDATED BALANCE SHEETS",
+          "concept_qname": "us-gaap:DebtCurrent",
+          "label": "Current debt",
+          "period_type": "instant",
+          "selection_tier": "sum_of_sibling_components"
+        }
+      ]
+    },
+    "long_term_debt_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 6803000000.0,
+      "concept_qname": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2022-08-31",
+        "matched_date": "2022-09-01",
+        "matched_dates": null,
+        "date_diff_days": 1,
+        "date_tolerance_days": 10
+      }
+    },
+    "cash_and_equivalents_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 8262000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2022-08-31",
+        "matched_date": "2022-09-01",
+        "matched_dates": null,
+        "date_diff_days": 1,
+        "date_tolerance_days": 10
+      }
+    },
+    "short_term_investments_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 1069000000.0,
+      "concept_qname": "us-gaap:AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2022-08-31",
+        "matched_date": "2022-09-01",
+        "matched_dates": null,
+        "date_diff_days": 1,
+        "date_tolerance_days": 10
+      }
+    },
+    "stockholders_equity_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 49907000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2022-08-31",
+        "matched_date": "2022-09-01",
+        "matched_dates": null,
+        "date_diff_days": 1,
+        "date_tolerance_days": 10
+      }
+    },
+    "total_debt_prior": {
+      "status": "PASS",
+      "value": 6906000000.0
+    },
+    "invested_capital_prior": {
+      "status": "PASS",
+      "value": 47482000000.0
+    },
+    "average_invested_capital": {
+      "status": "PASS",
+      "value": 47669000000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "roic": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    }
+  },
+  "MU_2024-08-29": {
+    "ticker": "MU",
+    "report_date": "2024-08-29",
+    "accession_number": "0000723125-24-000027",
+    "prior_report_date_requested": "2023-08-29",
+    "current_debt": {
+      "status": "PASS",
+      "value": 431000000.0,
+      "concept_qname": "us-gaap:DebtCurrent",
+      "selection_tier": "sum_of_sibling_components",
+      "component_rows": [
+        {
+          "role_uri": "http://www.micron.com/role/CONSOLIDATEDBALANCESHEETS",
+          "role_definition": "9952153 - Statement - CONSOLIDATED BALANCE SHEETS",
+          "concept_qname": "us-gaap:DebtCurrent",
+          "label": "Current debt",
+          "period_type": "instant",
+          "selection_tier": "sum_of_sibling_components"
+        }
+      ]
+    },
+    "long_term_debt": {
+      "status": "PASS",
+      "error": null,
+      "value": 12966000000.0,
+      "concept_qname": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2024-08-29",
+        "matched_date": "2024-08-29",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "total_debt": {
+      "status": "PASS",
+      "value": 13397000000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "cash_and_equivalents": {
+      "status": "PASS",
+      "error": null,
+      "value": 7041000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2024-08-29",
+        "matched_date": "2024-08-29",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "short_term_investments": {
+      "status": "PASS",
+      "error": null,
+      "value": 1065000000.0,
+      "concept_qname": "us-gaap:AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2024-08-29",
+        "matched_date": "2024-08-29",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "stockholders_equity": {
+      "status": "PASS",
+      "error": null,
+      "value": 45131000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2024-08-29",
+        "matched_date": "2024-08-29",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "adjusted_net_debt": {
+      "status": "PASS",
+      "value": 5291000000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "invested_capital": {
+      "status": "PASS",
+      "value": 50422000000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "current_debt_prior": {
+      "status": "PASS",
+      "value": 278000000.0,
+      "concept_qname": "us-gaap:DebtCurrent",
+      "selection_tier": "sum_of_sibling_components",
+      "component_rows": [
+        {
+          "role_uri": "http://www.micron.com/role/CONSOLIDATEDBALANCESHEETS",
+          "role_definition": "9952153 - Statement - CONSOLIDATED BALANCE SHEETS",
+          "concept_qname": "us-gaap:DebtCurrent",
+          "label": "Current debt",
+          "period_type": "instant",
+          "selection_tier": "sum_of_sibling_components"
+        }
+      ]
+    },
+    "long_term_debt_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 13052000000.0,
+      "concept_qname": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2023-08-29",
+        "matched_date": "2023-08-31",
+        "matched_dates": null,
+        "date_diff_days": 2,
+        "date_tolerance_days": 10
+      }
+    },
+    "cash_and_equivalents_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 8577000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2023-08-29",
+        "matched_date": "2023-08-31",
+        "matched_dates": null,
+        "date_diff_days": 2,
+        "date_tolerance_days": 10
+      }
+    },
+    "short_term_investments_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 1017000000.0,
+      "concept_qname": "us-gaap:AvailableForSaleSecuritiesDebtSecuritiesCurrent",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2023-08-29",
+        "matched_date": "2023-08-31",
+        "matched_dates": null,
+        "date_diff_days": 2,
+        "date_tolerance_days": 10
+      }
+    },
+    "stockholders_equity_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 44120000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2023-08-29",
+        "matched_date": "2023-08-31",
+        "matched_dates": null,
+        "date_diff_days": 2,
+        "date_tolerance_days": 10
+      }
+    },
+    "total_debt_prior": {
+      "status": "PASS",
+      "value": 13330000000.0
+    },
+    "invested_capital_prior": {
+      "status": "PASS",
+      "value": 47856000000.0
+    },
+    "average_invested_capital": {
+      "status": "PASS",
+      "value": 49139000000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "roic": {
+      "status": "PASS",
+      "value": 0.016885215015469614
+    }
+  }
+}

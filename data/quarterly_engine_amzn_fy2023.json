@@ -1,0 +1,717 @@
+{
+  "company": "AMZN",
+  "fiscal_year": "FY2023",
+  "fiscal_year_end": "2023-12-31",
+  "filings": {
+    "Q1": {
+      "ticker": "AMZN",
+      "form": "10-Q",
+      "report_date": "2023-03-31",
+      "filing_date": "2023-04-28",
+      "accession_number": "0001018724-23-000008"
+    },
+    "Q2": {
+      "ticker": "AMZN",
+      "form": "10-Q",
+      "report_date": "2023-06-30",
+      "filing_date": "2023-08-04",
+      "accession_number": "0001018724-23-000012"
+    },
+    "Q3": {
+      "ticker": "AMZN",
+      "form": "10-Q",
+      "report_date": "2023-09-30",
+      "filing_date": "2023-10-27",
+      "accession_number": "0001018724-23-000018"
+    },
+    "FY": {
+      "ticker": "AMZN",
+      "form": "10-K",
+      "report_date": "2023-12-31",
+      "filing_date": "2024-02-02",
+      "accession_number": "0001018724-24-000008"
+    }
+  },
+  "metrics": {
+    "revenue": {
+      "quarters": {
+        "Q1": {
+          "value": 127358000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2023-04-28",
+          "lineage": {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "accession_number": "0001018724-23-000008",
+            "context_id": "id5a05ce5ce084612b9b02c88a7bcfc49_D20230101-20230331",
+            "unit_id": "usd",
+            "period_start": "2023-01-01",
+            "period_end": "2023-03-31",
+            "duration_days": 89,
+            "decimals": "-6"
+          }
+        },
+        "Q2": {
+          "value": 134383000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2023-08-04",
+          "lineage": {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "accession_number": "0001018724-23-000012",
+            "context_id": "c-10",
+            "unit_id": "usd",
+            "period_start": "2023-04-01",
+            "period_end": "2023-06-30",
+            "duration_days": 90,
+            "decimals": "-6"
+          }
+        },
+        "Q3": {
+          "value": 143083000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2023-10-27",
+          "lineage": {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "accession_number": "0001018724-23-000018",
+            "context_id": "c-10",
+            "unit_id": "usd",
+            "period_start": "2023-07-01",
+            "period_end": "2023-09-30",
+            "duration_days": 91,
+            "decimals": "-6"
+          }
+        },
+        "Q4": {
+          "value": 169961000000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2024-02-02",
+          "lineage": {
+            "annual_value": 574785000000.0,
+            "annual_concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "annual_accession_number": "0001018724-24-000008",
+            "annual_decimals": "-6",
+            "nine_month_ytd_value": 404824000000.0,
+            "nine_month_ytd_context_id": "c-1",
+            "nine_month_ytd_accession_number": "0001018724-23-000018",
+            "nine_month_ytd_decimals": "-6"
+          }
+        }
+      },
+      "annual_value": 574785000000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "accession_number": "0001018724-24-000008",
+        "context_id": "c-1",
+        "unit_id": "usd",
+        "period_start": "2023-01-01",
+        "period_end": "2023-12-31",
+        "filing_date": "2024-02-02",
+        "decimals": "-6"
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 574785000000.0,
+        "annual_value": 574785000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Annual": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            }
+          },
+          "permitted_difference": 2000000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    "operating_income": {
+      "quarters": {
+        "Q1": {
+          "value": 4774000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2023-04-28",
+          "lineage": {
+            "concept_qname": "us-gaap:OperatingIncomeLoss",
+            "accession_number": "0001018724-23-000008",
+            "context_id": "id5a05ce5ce084612b9b02c88a7bcfc49_D20230101-20230331",
+            "unit_id": "usd",
+            "period_start": "2023-01-01",
+            "period_end": "2023-03-31",
+            "duration_days": 89,
+            "decimals": "-6"
+          }
+        },
+        "Q2": {
+          "value": 7681000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2023-08-04",
+          "lineage": {
+            "concept_qname": "us-gaap:OperatingIncomeLoss",
+            "accession_number": "0001018724-23-000012",
+            "context_id": "c-10",
+            "unit_id": "usd",
+            "period_start": "2023-04-01",
+            "period_end": "2023-06-30",
+            "duration_days": 90,
+            "decimals": "-6"
+          }
+        },
+        "Q3": {
+          "value": 11188000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2023-10-27",
+          "lineage": {
+            "concept_qname": "us-gaap:OperatingIncomeLoss",
+            "accession_number": "0001018724-23-000018",
+            "context_id": "c-10",
+            "unit_id": "usd",
+            "period_start": "2023-07-01",
+            "period_end": "2023-09-30",
+            "duration_days": 91,
+            "decimals": "-6"
+          }
+        },
+        "Q4": {
+          "value": 13209000000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2024-02-02",
+          "lineage": {
+            "annual_value": 36852000000.0,
+            "annual_concept_qname": "us-gaap:OperatingIncomeLoss",
+            "annual_accession_number": "0001018724-24-000008",
+            "annual_decimals": "-6",
+            "nine_month_ytd_value": 23643000000.0,
+            "nine_month_ytd_context_id": "c-1",
+            "nine_month_ytd_accession_number": "0001018724-23-000018",
+            "nine_month_ytd_decimals": "-6"
+          }
+        }
+      },
+      "annual_value": 36852000000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:OperatingIncomeLoss",
+        "accession_number": "0001018724-24-000008",
+        "context_id": "c-1",
+        "unit_id": "usd",
+        "period_start": "2023-01-01",
+        "period_end": "2023-12-31",
+        "filing_date": "2024-02-02",
+        "decimals": "-6"
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 36852000000.0,
+        "annual_value": 36852000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Annual": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            }
+          },
+          "permitted_difference": 2000000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    "pretax_income": {
+      "quarters": {
+        "Q1": {
+          "value": 4119000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2023-04-28",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "accession_number": "0001018724-23-000008",
+            "context_id": "id5a05ce5ce084612b9b02c88a7bcfc49_D20230101-20230331",
+            "unit_id": "usd",
+            "period_start": "2023-01-01",
+            "period_end": "2023-03-31",
+            "duration_days": 89,
+            "decimals": "-6"
+          }
+        },
+        "Q2": {
+          "value": 7563000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2023-08-04",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "accession_number": "0001018724-23-000012",
+            "context_id": "c-10",
+            "unit_id": "usd",
+            "period_start": "2023-04-01",
+            "period_end": "2023-06-30",
+            "duration_days": 90,
+            "decimals": "-6"
+          }
+        },
+        "Q3": {
+          "value": 12189000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2023-10-27",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "accession_number": "0001018724-23-000018",
+            "context_id": "c-10",
+            "unit_id": "usd",
+            "period_start": "2023-07-01",
+            "period_end": "2023-09-30",
+            "duration_days": 91,
+            "decimals": "-6"
+          }
+        },
+        "Q4": {
+          "value": 13686000000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2024-02-02",
+          "lineage": {
+            "annual_value": 37557000000.0,
+            "annual_concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "annual_accession_number": "0001018724-24-000008",
+            "annual_decimals": "-6",
+            "nine_month_ytd_value": 23871000000.0,
+            "nine_month_ytd_context_id": "c-1",
+            "nine_month_ytd_accession_number": "0001018724-23-000018",
+            "nine_month_ytd_decimals": "-6"
+          }
+        }
+      },
+      "annual_value": 37557000000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "accession_number": "0001018724-24-000008",
+        "context_id": "c-1",
+        "unit_id": "usd",
+        "period_start": "2023-01-01",
+        "period_end": "2023-12-31",
+        "filing_date": "2024-02-02",
+        "decimals": "-6"
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 37557000000.0,
+        "annual_value": 37557000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Annual": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            }
+          },
+          "permitted_difference": 2000000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    "income_tax_expense": {
+      "quarters": {
+        "Q1": {
+          "value": 948000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2023-04-28",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+            "accession_number": "0001018724-23-000008",
+            "context_id": "id5a05ce5ce084612b9b02c88a7bcfc49_D20230101-20230331",
+            "unit_id": "usd",
+            "period_start": "2023-01-01",
+            "period_end": "2023-03-31",
+            "duration_days": 89,
+            "decimals": "-6"
+          }
+        },
+        "Q2": {
+          "value": 804000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2023-08-04",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+            "accession_number": "0001018724-23-000012",
+            "context_id": "c-10",
+            "unit_id": "usd",
+            "period_start": "2023-04-01",
+            "period_end": "2023-06-30",
+            "duration_days": 90,
+            "decimals": "-6"
+          }
+        },
+        "Q3": {
+          "value": 2306000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2023-10-27",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+            "accession_number": "0001018724-23-000018",
+            "context_id": "c-10",
+            "unit_id": "usd",
+            "period_start": "2023-07-01",
+            "period_end": "2023-09-30",
+            "duration_days": 91,
+            "decimals": "-6"
+          }
+        },
+        "Q4": {
+          "value": 3062000000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2024-02-02",
+          "lineage": {
+            "annual_value": 7120000000.0,
+            "annual_concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+            "annual_accession_number": "0001018724-24-000008",
+            "annual_decimals": "-6",
+            "nine_month_ytd_value": 4058000000.0,
+            "nine_month_ytd_context_id": "c-1",
+            "nine_month_ytd_accession_number": "0001018724-23-000018",
+            "nine_month_ytd_decimals": "-6"
+          }
+        }
+      },
+      "annual_value": 7120000000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+        "accession_number": "0001018724-24-000008",
+        "context_id": "c-1",
+        "unit_id": "usd",
+        "period_start": "2023-01-01",
+        "period_end": "2023-12-31",
+        "filing_date": "2024-02-02",
+        "decimals": "-6"
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 7120000000.0,
+        "annual_value": 7120000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Annual": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            }
+          },
+          "permitted_difference": 2000000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    "operating_cash_flow": {
+      "quarters": {
+        "Q1": {
+          "value": 4788000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2023-04-28",
+          "lineage": {
+            "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "accession_number": "0001018724-23-000008",
+            "context_id": "id5a05ce5ce084612b9b02c88a7bcfc49_D20230101-20230331",
+            "unit_id": "usd",
+            "period_start": "2023-01-01",
+            "period_end": "2023-03-31",
+            "duration_days": 89,
+            "decimals": "-6"
+          }
+        },
+        "Q2": {
+          "value": 16476000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2023-08-04",
+          "lineage": {
+            "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "accession_number": "0001018724-23-000012",
+            "context_id": "c-10",
+            "unit_id": "usd",
+            "period_start": "2023-04-01",
+            "period_end": "2023-06-30",
+            "duration_days": 90,
+            "decimals": "-6"
+          }
+        },
+        "Q3": {
+          "value": 21217000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2023-10-27",
+          "lineage": {
+            "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "accession_number": "0001018724-23-000018",
+            "context_id": "c-10",
+            "unit_id": "usd",
+            "period_start": "2023-07-01",
+            "period_end": "2023-09-30",
+            "duration_days": 91,
+            "decimals": "-6"
+          }
+        },
+        "Q4": {
+          "value": 42465000000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2024-02-02",
+          "lineage": {
+            "annual_value": 84946000000.0,
+            "annual_concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "annual_accession_number": "0001018724-24-000008",
+            "annual_decimals": "-6",
+            "nine_month_ytd_value": 42481000000.0,
+            "nine_month_ytd_context_id": "c-1",
+            "nine_month_ytd_accession_number": "0001018724-23-000018",
+            "nine_month_ytd_decimals": "-6"
+          }
+        }
+      },
+      "annual_value": 84946000000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+        "accession_number": "0001018724-24-000008",
+        "context_id": "c-1",
+        "unit_id": "usd",
+        "period_start": "2023-01-01",
+        "period_end": "2023-12-31",
+        "filing_date": "2024-02-02",
+        "decimals": "-6"
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 84946000000.0,
+        "annual_value": 84946000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Annual": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            }
+          },
+          "permitted_difference": 2000000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    "capex": {
+      "quarters": {
+        "Q1": {
+          "value": 14207000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2023-04-28",
+          "lineage": {
+            "concept_qname": "us-gaap:PaymentsToAcquireProductiveAssets",
+            "accession_number": "0001018724-23-000008",
+            "context_id": "id5a05ce5ce084612b9b02c88a7bcfc49_D20230101-20230331",
+            "unit_id": "usd",
+            "period_start": "2023-01-01",
+            "period_end": "2023-03-31",
+            "duration_days": 89,
+            "decimals": "-6"
+          }
+        },
+        "Q2": {
+          "value": 11455000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2023-08-04",
+          "lineage": {
+            "concept_qname": "us-gaap:PaymentsToAcquireProductiveAssets",
+            "accession_number": "0001018724-23-000012",
+            "context_id": "c-10",
+            "unit_id": "usd",
+            "period_start": "2023-04-01",
+            "period_end": "2023-06-30",
+            "duration_days": 90,
+            "decimals": "-6"
+          }
+        },
+        "Q3": {
+          "value": 12479000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2023-10-27",
+          "lineage": {
+            "concept_qname": "us-gaap:PaymentsToAcquireProductiveAssets",
+            "accession_number": "0001018724-23-000018",
+            "context_id": "c-10",
+            "unit_id": "usd",
+            "period_start": "2023-07-01",
+            "period_end": "2023-09-30",
+            "duration_days": 91,
+            "decimals": "-6"
+          }
+        },
+        "Q4": {
+          "value": 14588000000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2024-02-02",
+          "lineage": {
+            "annual_value": 52729000000.0,
+            "annual_concept_qname": "us-gaap:PaymentsToAcquireProductiveAssets",
+            "annual_accession_number": "0001018724-24-000008",
+            "annual_decimals": "-6",
+            "nine_month_ytd_value": 38141000000.0,
+            "nine_month_ytd_context_id": "c-1",
+            "nine_month_ytd_accession_number": "0001018724-23-000018",
+            "nine_month_ytd_decimals": "-6"
+          }
+        }
+      },
+      "annual_value": 52729000000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:PaymentsToAcquireProductiveAssets",
+        "accession_number": "0001018724-24-000008",
+        "context_id": "c-1",
+        "unit_id": "usd",
+        "period_start": "2023-01-01",
+        "period_end": "2023-12-31",
+        "filing_date": "2024-02-02",
+        "decimals": "-6"
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 52729000000.0,
+        "annual_value": 52729000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Annual": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            }
+          },
+          "permitted_difference": 2000000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "status": "PASS"
+    }
+  },
+  "reconciliation_policy": "XBRL_DECIMALS_ROUNDING_TOLERANCE",
+  "engine_script": "118_quarterly_extraction_engine.py"
+}

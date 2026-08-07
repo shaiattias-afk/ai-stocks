@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "target_company_years": [
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2022-01-31",
+      "old_run_id": "f5a8de2c-539d-499d-99df-bf60c61176ea",
+      "new_run_id": "f610bc3a-1c58-4d26-be9b-674126766023"
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2021-09-02",
+      "old_run_id": "dae1c3f9-e709-4499-ac0e-2c885254b9ff",
+      "new_run_id": "082ec4d1-5617-459c-8c7c-d0fcdb60edda"
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2021-07-31",
+      "old_run_id": "f72f4da0-8815-4450-a540-0162024685c3",
+      "new_run_id": "ab9b7e8e-bec0-484a-8638-7ec9249b0a74"
+    }
+  ],
+  "post_counts": {
+    "quarterly_extraction_runs": 45,
+    "quarterly_metric_results": 1080,
+    "financial_metric_results": 900,
+    "unique_review_required": 0
+  },
+  "post_checks": {
+    "quarterly_extraction_runs_45": true,
+    "quarterly_metric_results_1080": true,
+    "financial_metric_results_900": true,
+    "unique_review_required_0": true,
+    "every_company_year_24_rows": true,
+    "duplicate_keys_zero": true,
+    "missing_lineage_zero": true,
+    "availability_mismatches_zero": true,
+    "annual_v1_checksum_unchanged": true,
+    "warehouse_facts_unchanged": true
+  },
+  "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\ai_stock_agent_pre_v5_production_load_20260806T080759Z.duckdb",
+  "manifest_path": "C:\\AI_Stock_Agent\\data\\archive\\v5_production_load_manifest.json",
+  "changed_rows": 16,
+  "unchanged_rows": 56,
+  "completed_at": "2026-08-06T08:08:35.172Z"
+}

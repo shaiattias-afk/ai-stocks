@@ -1,0 +1,7 @@
+﻿metric,fiscal_year,selected_concept,selected_value,preferred_candidate_count,preferred_unique_value_count,alternative_concepts,alternative_values,status
+net_income,2022,us-gaap:NetIncomeLoss,6717000000.0,1,1,us-gaap:ProfitLoss,"6,901,000,000",PASS
+net_income,2023,us-gaap:NetIncomeLoss,8503000000.0,1,1,us-gaap:ProfitLoss,"8,668,000,000",PASS
+operating_income,2022,us-gaap:OperatingIncomeLoss,10926000000.0,1,1,,,PASS
+operating_income,2023,us-gaap:OperatingIncomeLoss,13093000000.0,1,1,,,PASS
+revenue,2022,us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,42440000000.0,1,1,us-gaap:Revenues,"42,440,000,000",PASS
+revenue,2023,us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,49954000000.0,1,1,us-gaap:Revenues,"49,954,000,000",PASS

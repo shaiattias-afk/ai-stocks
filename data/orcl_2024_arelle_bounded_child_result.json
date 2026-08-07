@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "error": null,
+  "presentation_row_count": 1257,
+  "revenue_candidate_count": 82,
+  "unique_role_count": 87,
+  "output_csv": "C:\\AI_Stock_Agent\\data\\orcl_2024_arelle_bounded_presentation.csv"
+}

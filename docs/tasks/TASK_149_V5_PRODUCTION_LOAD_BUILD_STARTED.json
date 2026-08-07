@@ -1,0 +1,15 @@
+{
+  "task_id": "TASK_149_V5_PRODUCTION_LOAD_BUILD",
+  "status": "STARTED",
+  "started_at": "2026-08-06T04:48:47.594Z",
+  "objective": "Build (not run) the production-load script for quarterly engine V5: scripts/151_v5_quarterly_production_load.py, supporting --check-only (read-only precondition/derivation validation) and --execute (full backup/archive/atomic-transaction production load of the 3 target company-years / 72 rows, 16 changed + 56 unchanged). This task only runs --check-only; --execute is never invoked. Ends by returning the exact manual PowerShell command for the user to run --execute later.",
+  "read_only": true,
+  "expected_outputs": [
+    "scripts/151_v5_quarterly_production_load.py",
+    "data/v5_production_load_build_validation.json",
+    "docs/V5_PRODUCTION_LOAD_BUILD.md"
+  ],
+  "process_id": 4856,
+  "hostname": "shai-laptop",
+  "utility_version": "142_task_marker_guard-1.0.0"
+}

@@ -1,0 +1,1108 @@
+{
+  "expected_count": 50,
+  "classification_counts": {
+    "COMPLETE": 50
+  },
+  "records": [
+    {
+      "accession_number": "0001018724-21-000004",
+      "ticker": "AMZN",
+      "form": "10-K",
+      "report_date": "2020-12-31",
+      "filing_date": "2021-02-03",
+      "role": "supplementary_prior_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\AMZN\\000101872421000004\\amzn-20201231.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1404,
+      "context_count": 311,
+      "unit_count": 7,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "97_build_xbrl_warehouse_prior_year_gap.py",
+          "completed_at_utc": "2026-08-03T10:18:00.409119+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001018724-22-000005",
+      "ticker": "AMZN",
+      "form": "10-K",
+      "report_date": "2021-12-31",
+      "filing_date": "2022-02-04",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\AMZN\\000101872422000005\\amzn-20211231.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1394,
+      "context_count": 320,
+      "unit_count": 7,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "78_build_xbrl_warehouse_amzn_googl_debt.py",
+          "completed_at_utc": "2026-08-03T04:35:13.045926+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001018724-23-000004",
+      "ticker": "AMZN",
+      "form": "10-K",
+      "report_date": "2022-12-31",
+      "filing_date": "2023-02-03",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\AMZN\\000101872423000004\\amzn-20221231.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1457,
+      "context_count": 339,
+      "unit_count": 7,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "78_build_xbrl_warehouse_amzn_googl_debt.py",
+          "completed_at_utc": "2026-08-03T04:35:14.815661+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001018724-24-000008",
+      "ticker": "AMZN",
+      "form": "10-K",
+      "report_date": "2023-12-31",
+      "filing_date": "2024-02-02",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\AMZN\\000101872424000008\\amzn-20231231.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1502,
+      "context_count": 362,
+      "unit_count": 7,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "78_build_xbrl_warehouse_amzn_googl_debt.py",
+          "completed_at_utc": "2026-08-03T04:35:19.655889+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001018724-25-000004",
+      "ticker": "AMZN",
+      "form": "10-K",
+      "report_date": "2024-12-31",
+      "filing_date": "2025-02-07",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\AMZN\\000101872425000004\\amzn-20241231.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1499,
+      "context_count": 357,
+      "unit_count": 7,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "73_build_xbrl_warehouse_proof.py",
+          "completed_at_utc": "2026-08-02T18:30:06.358872+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001018724-26-000004",
+      "ticker": "AMZN",
+      "form": "10-K",
+      "report_date": "2025-12-31",
+      "filing_date": "2026-02-06",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\AMZN\\000101872426000004\\amzn-20251231.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1637,
+      "context_count": 373,
+      "unit_count": 10,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "78_build_xbrl_warehouse_amzn_googl_debt.py",
+          "completed_at_utc": "2026-08-03T04:35:24.743608+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001535527-21-000007",
+      "ticker": "CRWD",
+      "form": "10-K",
+      "report_date": "2021-01-31",
+      "filing_date": "2021-03-18",
+      "role": "supplementary_prior_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\CRWD\\000153552721000007\\crwd-20210131.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1426,
+      "context_count": 344,
+      "unit_count": 11,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "100_build_xbrl_warehouse_crwd_first_year_gap.py",
+          "completed_at_utc": "2026-08-03T10:39:41.154152+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001535527-22-000006",
+      "ticker": "CRWD",
+      "form": "10-K",
+      "report_date": "2022-01-31",
+      "filing_date": "2022-03-16",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\CRWD\\000153552722000006\\crwd-20220131.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1414,
+      "context_count": 323,
+      "unit_count": 12,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "91_build_xbrl_warehouse_groups_1_3_4.py",
+          "completed_at_utc": "2026-08-03T09:42:34.784689+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001535527-23-000008",
+      "ticker": "CRWD",
+      "form": "10-K",
+      "report_date": "2023-01-31",
+      "filing_date": "2023-03-09",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\CRWD\\000153552723000008\\crwd-20230131.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1313,
+      "context_count": 295,
+      "unit_count": 12,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "91_build_xbrl_warehouse_groups_1_3_4.py",
+          "completed_at_utc": "2026-08-03T09:42:38.643575+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001535527-24-000007",
+      "ticker": "CRWD",
+      "form": "10-K",
+      "report_date": "2024-01-31",
+      "filing_date": "2024-03-07",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\CRWD\\000153552724000007\\crwd-20240131.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1324,
+      "context_count": 294,
+      "unit_count": 12,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "91_build_xbrl_warehouse_groups_1_3_4.py",
+          "completed_at_utc": "2026-08-03T09:42:42.738826+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001535527-25-000009",
+      "ticker": "CRWD",
+      "form": "10-K",
+      "report_date": "2025-01-31",
+      "filing_date": "2025-03-10",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\CRWD\\000153552725000009\\crwd-20250131.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1386,
+      "context_count": 296,
+      "unit_count": 11,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "91_build_xbrl_warehouse_groups_1_3_4.py",
+          "completed_at_utc": "2026-08-03T09:42:46.775312+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001535527-26-000010",
+      "ticker": "CRWD",
+      "form": "10-K",
+      "report_date": "2026-01-31",
+      "filing_date": "2026-03-05",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\CRWD\\000153552726000010\\crwd-20260131.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1628,
+      "context_count": 348,
+      "unit_count": 12,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "91_build_xbrl_warehouse_groups_1_3_4.py",
+          "completed_at_utc": "2026-08-03T09:42:51.562496+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001652044-21-000010",
+      "ticker": "GOOGL",
+      "form": "10-K",
+      "report_date": "2020-12-31",
+      "filing_date": "2021-02-03",
+      "role": "supplementary_prior_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\GOOGL\\000165204421000010\\goog-20201231.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1599,
+      "context_count": 386,
+      "unit_count": 10,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "97_build_xbrl_warehouse_prior_year_gap.py",
+          "completed_at_utc": "2026-08-03T10:18:02.217534+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001652044-22-000019",
+      "ticker": "GOOGL",
+      "form": "10-K",
+      "report_date": "2021-12-31",
+      "filing_date": "2022-02-02",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\GOOGL\\000165204422000019\\goog-20211231.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1597,
+      "context_count": 366,
+      "unit_count": 10,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "78_build_xbrl_warehouse_amzn_googl_debt.py",
+          "completed_at_utc": "2026-08-03T04:32:02.274352+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001652044-23-000016",
+      "ticker": "GOOGL",
+      "form": "10-K",
+      "report_date": "2022-12-31",
+      "filing_date": "2023-02-03",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\GOOGL\\000165204423000016\\goog-20221231.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1608,
+      "context_count": 347,
+      "unit_count": 9,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "78_build_xbrl_warehouse_amzn_googl_debt.py",
+          "completed_at_utc": "2026-08-03T04:35:29.752060+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001652044-24-000022",
+      "ticker": "GOOGL",
+      "form": "10-K",
+      "report_date": "2023-12-31",
+      "filing_date": "2024-01-31",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\GOOGL\\000165204424000022\\goog-20231231.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1588,
+      "context_count": 347,
+      "unit_count": 8,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "78_build_xbrl_warehouse_amzn_googl_debt.py",
+          "completed_at_utc": "2026-08-03T04:35:34.961287+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001652044-25-000014",
+      "ticker": "GOOGL",
+      "form": "10-K",
+      "report_date": "2024-12-31",
+      "filing_date": "2025-02-05",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\GOOGL\\000165204425000014\\goog-20241231.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1721,
+      "context_count": 344,
+      "unit_count": 9,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "78_build_xbrl_warehouse_amzn_googl_debt.py",
+          "completed_at_utc": "2026-08-03T04:35:40.480932+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001652044-26-000018",
+      "ticker": "GOOGL",
+      "form": "10-K",
+      "report_date": "2025-12-31",
+      "filing_date": "2026-02-05",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\GOOGL\\000165204426000018\\goog-20251231.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1861,
+      "context_count": 444,
+      "unit_count": 8,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "78_build_xbrl_warehouse_amzn_googl_debt.py",
+          "completed_at_utc": "2026-08-03T04:35:46.046273+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001326801-20-000013",
+      "ticker": "META",
+      "form": "10-K",
+      "report_date": "2019-12-31",
+      "filing_date": "2020-01-30",
+      "role": "supplementary_prior_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\META\\000132680120000013\\fb-12312019x10k.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1061,
+      "context_count": 233,
+      "unit_count": 8,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "97_build_xbrl_warehouse_prior_year_gap.py",
+          "completed_at_utc": "2026-08-03T10:18:04.546832+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001326801-21-000014",
+      "ticker": "META",
+      "form": "10-K",
+      "report_date": "2020-12-31",
+      "filing_date": "2021-01-28",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\META\\000132680121000014\\fb-20201231.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1055,
+      "context_count": 234,
+      "unit_count": 8,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "91_build_xbrl_warehouse_groups_1_3_4.py",
+          "completed_at_utc": "2026-08-03T09:42:55.643123+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001326801-22-000018",
+      "ticker": "META",
+      "form": "10-K",
+      "report_date": "2021-12-31",
+      "filing_date": "2022-02-03",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\META\\000132680122000018\\fb-20211231.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1071,
+      "context_count": 215,
+      "unit_count": 10,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "91_build_xbrl_warehouse_groups_1_3_4.py",
+          "completed_at_utc": "2026-08-03T09:42:59.602181+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001326801-23-000013",
+      "ticker": "META",
+      "form": "10-K",
+      "report_date": "2022-12-31",
+      "filing_date": "2023-02-02",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\META\\000132680123000013\\meta-20221231.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1247,
+      "context_count": 279,
+      "unit_count": 12,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "91_build_xbrl_warehouse_groups_1_3_4.py",
+          "completed_at_utc": "2026-08-03T09:43:03.651907+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001326801-24-000012",
+      "ticker": "META",
+      "form": "10-K",
+      "report_date": "2023-12-31",
+      "filing_date": "2024-02-02",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\META\\000132680124000012\\meta-20231231.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1287,
+      "context_count": 320,
+      "unit_count": 12,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "91_build_xbrl_warehouse_groups_1_3_4.py",
+          "completed_at_utc": "2026-08-03T09:43:07.895309+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001326801-25-000017",
+      "ticker": "META",
+      "form": "10-K",
+      "report_date": "2024-12-31",
+      "filing_date": "2025-01-30",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\META\\000132680125000017\\meta-20241231.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1269,
+      "context_count": 305,
+      "unit_count": 14,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "75_build_xbrl_warehouse_multi_proof.py",
+          "completed_at_utc": "2026-08-03T04:00:13.658228+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001564590-20-034944",
+      "ticker": "MSFT",
+      "form": "10-K",
+      "report_date": "2020-06-30",
+      "filing_date": "2020-07-30",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\MSFT\\000156459020034944\\msft-10k_20200630.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1913,
+      "context_count": 479,
+      "unit_count": 6,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "115_annual_warehouse_load_missing.py",
+          "completed_at_utc": "2026-08-03T18:20:33.916538+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001564590-21-039151",
+      "ticker": "MSFT",
+      "form": "10-K",
+      "report_date": "2021-06-30",
+      "filing_date": "2021-07-29",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\MSFT\\000156459021039151\\msft-10k_20210630.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1864,
+      "context_count": 483,
+      "unit_count": 5,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "115_annual_warehouse_load_missing.py",
+          "completed_at_utc": "2026-08-03T18:20:39.179787+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001564590-22-026876",
+      "ticker": "MSFT",
+      "form": "10-K",
+      "report_date": "2022-06-30",
+      "filing_date": "2022-07-28",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\MSFT\\000156459022026876\\msft-10k_20220630.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1819,
+      "context_count": 466,
+      "unit_count": 5,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "115_annual_warehouse_load_missing.py",
+          "completed_at_utc": "2026-08-03T18:20:47.703332+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0000950170-23-035122",
+      "ticker": "MSFT",
+      "form": "10-K",
+      "report_date": "2023-06-30",
+      "filing_date": "2023-07-27",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\MSFT\\000095017023035122\\msft-20230630.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1839,
+      "context_count": 469,
+      "unit_count": 6,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "115_annual_warehouse_load_missing.py",
+          "completed_at_utc": "2026-08-03T18:20:52.190237+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0000950170-24-087843",
+      "ticker": "MSFT",
+      "form": "10-K",
+      "report_date": "2024-06-30",
+      "filing_date": "2024-07-30",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\MSFT\\000095017024087843\\msft-20240630.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1856,
+      "context_count": 465,
+      "unit_count": 5,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "75_build_xbrl_warehouse_multi_proof.py",
+          "completed_at_utc": "2026-08-03T04:00:09.870209+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0000723125-21-000065",
+      "ticker": "MU",
+      "form": "10-K",
+      "report_date": "2021-09-02",
+      "filing_date": "2021-10-08",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\MU\\000072312521000065\\mu-20210902.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1649,
+      "context_count": 433,
+      "unit_count": 9,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "81_build_xbrl_warehouse_mu_cash.py",
+          "completed_at_utc": "2026-08-03T05:19:47.985891+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0000723125-22-000048",
+      "ticker": "MU",
+      "form": "10-K",
+      "report_date": "2022-09-01",
+      "filing_date": "2022-10-07",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\MU\\000072312522000048\\mu-20220901.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1628,
+      "context_count": 405,
+      "unit_count": 8,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "81_build_xbrl_warehouse_mu_cash.py",
+          "completed_at_utc": "2026-08-03T05:19:49.623783+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0000723125-23-000054",
+      "ticker": "MU",
+      "form": "10-K",
+      "report_date": "2023-08-31",
+      "filing_date": "2023-10-06",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\MU\\000072312523000054\\mu-20230831.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1705,
+      "context_count": 434,
+      "unit_count": 9,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "81_build_xbrl_warehouse_mu_cash.py",
+          "completed_at_utc": "2026-08-03T05:19:51.341558+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0000723125-24-000027",
+      "ticker": "MU",
+      "form": "10-K",
+      "report_date": "2024-08-29",
+      "filing_date": "2024-10-04",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\MU\\000072312524000027\\mu-20240829.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1646,
+      "context_count": 421,
+      "unit_count": 9,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "81_build_xbrl_warehouse_mu_cash.py",
+          "completed_at_utc": "2026-08-03T05:16:52.984828+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0000723125-25-000028",
+      "ticker": "MU",
+      "form": "10-K",
+      "report_date": "2025-08-28",
+      "filing_date": "2025-10-03",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\MU\\000072312525000028\\mu-20250828.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1851,
+      "context_count": 401,
+      "unit_count": 8,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "81_build_xbrl_warehouse_mu_cash.py",
+          "completed_at_utc": "2026-08-03T05:16:54.740919+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001045810-19-000023",
+      "ticker": "NVDA",
+      "form": "10-K",
+      "report_date": "2019-01-27",
+      "filing_date": "2019-02-21",
+      "role": "supplementary_prior_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\NVDA\\000104581019000023\\nvda-2019x10k.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1211,
+      "context_count": 267,
+      "unit_count": 7,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "104_build_xbrl_warehouse_nvda_first_year_gap.py",
+          "completed_at_utc": "2026-08-03T11:02:27.875369+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001045810-20-000010",
+      "ticker": "NVDA",
+      "form": "10-K",
+      "report_date": "2020-01-26",
+      "filing_date": "2020-02-20",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\NVDA\\000104581020000010\\nvda-2020x10k.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1271,
+      "context_count": 260,
+      "unit_count": 6,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "91_build_xbrl_warehouse_groups_1_3_4.py",
+          "completed_at_utc": "2026-08-03T09:43:13.717461+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001045810-21-000010",
+      "ticker": "NVDA",
+      "form": "10-K",
+      "report_date": "2021-01-31",
+      "filing_date": "2021-02-26",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\NVDA\\000104581021000010\\nvda-20210131.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1309,
+      "context_count": 296,
+      "unit_count": 6,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "115_annual_warehouse_load_missing.py",
+          "completed_at_utc": "2026-08-03T18:20:55.522365+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001045810-22-000036",
+      "ticker": "NVDA",
+      "form": "10-K",
+      "report_date": "2022-01-30",
+      "filing_date": "2022-03-18",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\NVDA\\000104581022000036\\nvda-20220130.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1307,
+      "context_count": 293,
+      "unit_count": 6,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "115_annual_warehouse_load_missing.py",
+          "completed_at_utc": "2026-08-03T18:20:58.622950+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001045810-23-000017",
+      "ticker": "NVDA",
+      "form": "10-K",
+      "report_date": "2023-01-29",
+      "filing_date": "2023-02-24",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\NVDA\\000104581023000017\\nvda-20230129.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1397,
+      "context_count": 294,
+      "unit_count": 6,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "115_annual_warehouse_load_missing.py",
+          "completed_at_utc": "2026-08-03T18:21:01.838060+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001045810-24-000029",
+      "ticker": "NVDA",
+      "form": "10-K",
+      "report_date": "2024-01-28",
+      "filing_date": "2024-02-21",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\NVDA\\000104581024000029\\nvda-20240128.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1387,
+      "context_count": 280,
+      "unit_count": 6,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "75_build_xbrl_warehouse_multi_proof.py",
+          "completed_at_utc": "2026-08-03T04:00:17.478939+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001564590-20-030125",
+      "ticker": "ORCL",
+      "form": "10-K",
+      "report_date": "2020-05-31",
+      "filing_date": "2020-06-22",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\ORCL\\000156459020030125\\orcl-10k_20200531.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 2012,
+      "context_count": 488,
+      "unit_count": 9,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "115_annual_warehouse_load_missing.py",
+          "completed_at_utc": "2026-08-03T18:21:05.723295+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001564590-21-033616",
+      "ticker": "ORCL",
+      "form": "10-K",
+      "report_date": "2021-05-31",
+      "filing_date": "2021-06-21",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\ORCL\\000156459021033616\\orcl-10k_20210531.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1989,
+      "context_count": 492,
+      "unit_count": 8,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "115_annual_warehouse_load_missing.py",
+          "completed_at_utc": "2026-08-03T18:21:09.689721+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001564590-22-023675",
+      "ticker": "ORCL",
+      "form": "10-K",
+      "report_date": "2022-05-31",
+      "filing_date": "2022-06-21",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\ORCL\\000156459022023675\\orcl-10k_20220531.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1896,
+      "context_count": 459,
+      "unit_count": 8,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "115_annual_warehouse_load_missing.py",
+          "completed_at_utc": "2026-08-03T18:21:13.450957+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0000950170-23-028914",
+      "ticker": "ORCL",
+      "form": "10-K",
+      "report_date": "2023-05-31",
+      "filing_date": "2023-06-20",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\ORCL\\000095017023028914\\orcl-20230531.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 2020,
+      "context_count": 510,
+      "unit_count": 9,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "115_annual_warehouse_load_missing.py",
+          "completed_at_utc": "2026-08-03T18:21:17.361740+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0000950170-24-075605",
+      "ticker": "ORCL",
+      "form": "10-K",
+      "report_date": "2024-05-31",
+      "filing_date": "2024-06-20",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\ORCL\\000095017024075605\\orcl-20240531.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 2017,
+      "context_count": 514,
+      "unit_count": 9,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "115_annual_warehouse_load_missing.py",
+          "completed_at_utc": "2026-08-03T18:21:21.391952+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001327567-21-000029",
+      "ticker": "PANW",
+      "form": "10-K",
+      "report_date": "2021-07-31",
+      "filing_date": "2021-09-03",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\PANW\\000132756721000029\\panw-20210731.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1826,
+      "context_count": 473,
+      "unit_count": 10,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "86_build_xbrl_warehouse_panw_cash.py",
+          "completed_at_utc": "2026-08-03T07:13:22.467300+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001327567-22-000028",
+      "ticker": "PANW",
+      "form": "10-K",
+      "report_date": "2022-07-31",
+      "filing_date": "2022-09-06",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\PANW\\000132756722000028\\panw-20220731.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1768,
+      "context_count": 456,
+      "unit_count": 10,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "86_build_xbrl_warehouse_panw_cash.py",
+          "completed_at_utc": "2026-08-03T07:13:24.352328+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001327567-23-000024",
+      "ticker": "PANW",
+      "form": "10-K",
+      "report_date": "2023-07-31",
+      "filing_date": "2023-09-01",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\PANW\\000132756723000024\\panw-20230731.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1753,
+      "context_count": 445,
+      "unit_count": 10,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "86_build_xbrl_warehouse_panw_cash.py",
+          "completed_at_utc": "2026-08-03T07:09:13.355158+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001327567-24-000029",
+      "ticker": "PANW",
+      "form": "10-K",
+      "report_date": "2024-07-31",
+      "filing_date": "2024-09-06",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\PANW\\000132756724000029\\panw-20240731.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1731,
+      "context_count": 496,
+      "unit_count": 9,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "86_build_xbrl_warehouse_panw_cash.py",
+          "completed_at_utc": "2026-08-03T07:09:15.209307+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    },
+    {
+      "accession_number": "0001327567-25-000027",
+      "ticker": "PANW",
+      "form": "10-K",
+      "report_date": "2025-07-31",
+      "filing_date": "2025-08-29",
+      "role": "target_company_year",
+      "locked": true,
+      "primary_document_path": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\PANW\\000132756725000027\\panw-20250731.htm",
+      "warehouse_run_count": 1,
+      "fact_count": 1742,
+      "context_count": 475,
+      "unit_count": 9,
+      "warehouse_runs": [
+        {
+          "status": "PASS",
+          "script_name": "91_build_xbrl_warehouse_groups_1_3_4.py",
+          "completed_at_utc": "2026-08-03T09:42:31.439322+00:00"
+        }
+      ],
+      "classification": "COMPLETE"
+    }
+  ]
+}

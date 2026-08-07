@@ -1,0 +1,1403 @@
+{
+  "phase": "remaining_7_batch",
+  "target_company_years_total": 45,
+  "completed_count": 27,
+  "last_updated_utc": "2026-08-04T15:58:05.342587+00:00",
+  "company_year_records": [
+    {
+      "ticker": "GOOGL",
+      "fiscal_year_end": "2021-12-31",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1070,
+          "context_count": 277,
+          "unit_count": 6,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1441,
+          "context_count": 387,
+          "unit_count": 6,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1443,
+          "context_count": 388,
+          "unit_count": 6,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "PASS",
+        "operating_income": "PASS",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "PASS",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 14,
+      "load_result": {
+        "ticker": "GOOGL",
+        "status": "COMMITTED",
+        "run_id": "bdef3475-38d5-4497-919f-8b92014b184c",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 29.73,
+      "row_count": 24
+    },
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2023-01-31",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 813,
+          "context_count": 225,
+          "unit_count": 9,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1050,
+          "context_count": 275,
+          "unit_count": 10,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1084,
+          "context_count": 285,
+          "unit_count": 10,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "REVIEW_REQUIRED",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "REVIEW_REQUIRED",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 0,
+      "load_result": {
+        "ticker": "CRWD",
+        "status": "COMMITTED",
+        "run_id": "e04dd9a7-3780-47e2-9478-559e3794fcee",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 22.68,
+      "row_count": 24
+    },
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2024-01-31",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 786,
+          "context_count": 211,
+          "unit_count": 11,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1052,
+          "context_count": 275,
+          "unit_count": 11,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1077,
+          "context_count": 274,
+          "unit_count": 11,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "REVIEW_REQUIRED",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "REVIEW_REQUIRED",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 0,
+      "load_result": {
+        "ticker": "CRWD",
+        "status": "COMMITTED",
+        "run_id": "7bba294d-77cb-4548-a1a9-e46454f97041",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 24.44,
+      "row_count": 24
+    },
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2026-01-31",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 903,
+          "context_count": 266,
+          "unit_count": 11,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1239,
+          "context_count": 335,
+          "unit_count": 12,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1250,
+          "context_count": 334,
+          "unit_count": 12,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "REVIEW_REQUIRED",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "REVIEW_REQUIRED",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 0,
+      "load_result": {
+        "ticker": "CRWD",
+        "status": "COMMITTED",
+        "run_id": "3cc4f962-c921-4bf8-986c-3ddd290a9fb3",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 30.79,
+      "row_count": 24
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year_end": "2022-12-31",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1076,
+          "context_count": 273,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1446,
+          "context_count": 383,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1454,
+          "context_count": 391,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "PASS",
+        "operating_income": "PASS",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "PASS",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 14,
+      "load_result": {
+        "ticker": "GOOGL",
+        "status": "COMMITTED",
+        "run_id": "329d7059-11da-491d-aed3-2d24a746893b",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 22.64,
+      "row_count": 24
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year_end": "2023-12-31",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1135,
+          "context_count": 278,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1541,
+          "context_count": 408,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1531,
+          "context_count": 403,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "PASS",
+        "operating_income": "PASS",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "PASS",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 14,
+      "load_result": {
+        "ticker": "GOOGL",
+        "status": "COMMITTED",
+        "run_id": "2d1c7a42-baa7-4b76-9fc4-b3cd580783c8",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 18.15,
+      "row_count": 24
+    },
+    {
+      "ticker": "GOOGL",
+      "fiscal_year_end": "2025-12-31",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1220,
+          "context_count": 260,
+          "unit_count": 6,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1734,
+          "context_count": 417,
+          "unit_count": 7,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1732,
+          "context_count": 418,
+          "unit_count": 7,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "PASS_ROUNDING_TOLERANCE",
+        "operating_income": "PASS",
+        "pretax_income": "PASS",
+        "income_tax_expense": "PASS",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 18,
+      "load_result": {
+        "ticker": "GOOGL",
+        "status": "COMMITTED",
+        "run_id": "8179afcf-b78b-4232-8092-a0645bfd6ef5",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 27.26,
+      "row_count": 24
+    },
+    {
+      "ticker": "META",
+      "fiscal_year_end": "2021-12-31",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 637,
+          "context_count": 162,
+          "unit_count": 7,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 825,
+          "context_count": 210,
+          "unit_count": 7,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 837,
+          "context_count": 215,
+          "unit_count": 9,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "PASS",
+        "operating_income": "PASS",
+        "pretax_income": "PASS",
+        "income_tax_expense": "PASS",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 18,
+      "load_result": {
+        "ticker": "META",
+        "status": "COMMITTED",
+        "run_id": "4cbc61fe-efbe-47bc-8284-e4e904210d46",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 21.18,
+      "row_count": 24
+    },
+    {
+      "ticker": "META",
+      "fiscal_year_end": "2022-12-31",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 730,
+          "context_count": 175,
+          "unit_count": 8,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 989,
+          "context_count": 256,
+          "unit_count": 9,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1027,
+          "context_count": 257,
+          "unit_count": 9,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "PASS_ROUNDING_TOLERANCE",
+        "pretax_income": "PASS",
+        "income_tax_expense": "PASS",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 14,
+      "load_result": {
+        "ticker": "META",
+        "status": "COMMITTED",
+        "run_id": "1af9e554-0359-4257-a95f-753378da9d3c",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 17.77,
+      "row_count": 24
+    },
+    {
+      "ticker": "META",
+      "fiscal_year_end": "2023-12-31",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 903,
+          "context_count": 262,
+          "unit_count": 10,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1152,
+          "context_count": 339,
+          "unit_count": 10,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1172,
+          "context_count": 349,
+          "unit_count": 9,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "PASS",
+        "pretax_income": "PASS_ROUNDING_TOLERANCE",
+        "income_tax_expense": "PASS",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 14,
+      "load_result": {
+        "ticker": "META",
+        "status": "COMMITTED",
+        "run_id": "f5fa8017-f335-4e7f-be70-a5b90ce76484",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 22.81,
+      "row_count": 24
+    },
+    {
+      "ticker": "META",
+      "fiscal_year_end": "2024-12-31",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 764,
+          "context_count": 247,
+          "unit_count": 8,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 987,
+          "context_count": 330,
+          "unit_count": 8,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1009,
+          "context_count": 330,
+          "unit_count": 11,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "PASS_ROUNDING_TOLERANCE",
+        "pretax_income": "PASS",
+        "income_tax_expense": "PASS",
+        "operating_cash_flow": "PASS",
+        "capex": "PASS"
+      },
+      "engine_row_count": 20,
+      "load_result": {
+        "ticker": "META",
+        "status": "COMMITTED",
+        "run_id": "987edaec-18df-40f8-9097-b87c4a72a217",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 19.55,
+      "row_count": 24
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2021-09-02",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 829,
+          "context_count": 209,
+          "unit_count": 10,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1119,
+          "context_count": 294,
+          "unit_count": 10,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1253,
+          "context_count": 359,
+          "unit_count": 10,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "REVIEW_REQUIRED",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "REVIEW_REQUIRED",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 0,
+      "load_result": {
+        "ticker": "MU",
+        "status": "COMMITTED",
+        "run_id": "90abfd71-3580-4956-bf7f-1f265c4c8c41",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 26.96,
+      "row_count": 24
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2022-09-01",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 881,
+          "context_count": 215,
+          "unit_count": 9,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1123,
+          "context_count": 294,
+          "unit_count": 8,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1195,
+          "context_count": 326,
+          "unit_count": 8,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "REVIEW_REQUIRED",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "REVIEW_REQUIRED",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 0,
+      "load_result": {
+        "ticker": "MU",
+        "status": "COMMITTED",
+        "run_id": "e3bfd7e4-2561-4ceb-99c0-12d660df19ca",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 14.19,
+      "row_count": 24
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2023-08-31",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 896,
+          "context_count": 224,
+          "unit_count": 9,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1171,
+          "context_count": 313,
+          "unit_count": 9,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1286,
+          "context_count": 352,
+          "unit_count": 9,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "REVIEW_REQUIRED",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "REVIEW_REQUIRED",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 0,
+      "load_result": {
+        "ticker": "MU",
+        "status": "COMMITTED",
+        "run_id": "d8be8f1c-66de-4f91-a6f5-ff02abe315ed",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 9.61,
+      "row_count": 24
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2024-08-29",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 886,
+          "context_count": 212,
+          "unit_count": 9,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1173,
+          "context_count": 296,
+          "unit_count": 9,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1236,
+          "context_count": 320,
+          "unit_count": 7,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "REVIEW_REQUIRED",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "REVIEW_REQUIRED",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 0,
+      "load_result": {
+        "ticker": "MU",
+        "status": "COMMITTED",
+        "run_id": "7396a5f6-82a6-4d43-9839-a1cf09bc8459",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 12.05,
+      "row_count": 24
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2025-08-28",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 904,
+          "context_count": 220,
+          "unit_count": 7,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1154,
+          "context_count": 298,
+          "unit_count": 7,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1258,
+          "context_count": 341,
+          "unit_count": 7,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "REVIEW_REQUIRED",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "REVIEW_REQUIRED",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 0,
+      "load_result": {
+        "ticker": "MU",
+        "status": "COMMITTED",
+        "run_id": "cc258883-5f38-482d-a8c0-209c7ca1278a",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 13.35,
+      "row_count": 24
+    },
+    {
+      "ticker": "NVDA",
+      "fiscal_year_end": "2020-01-26",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "PASS",
+          "xbrl_facts": 0,
+          "xbrl_contexts": 0,
+          "xbrl_units": 0,
+          "xbrl_concepts": 0,
+          "xbrl_labels": 0,
+          "xbrl_presentation_relationships": 0,
+          "xbrl_calculation_relationships": 0,
+          "xbrl_definition_relationships": 0,
+          "xbrl_roles": 0,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 920,
+          "context_count": 186,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 919,
+          "context_count": 194,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "REVIEW_REQUIRED",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "REVIEW_REQUIRED",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 0,
+      "load_result": {
+        "ticker": "NVDA",
+        "status": "COMMITTED",
+        "run_id": "59b524e2-4639-4af8-82c3-390b2363c40d",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 5.14,
+      "row_count": 24
+    },
+    {
+      "ticker": "NVDA",
+      "fiscal_year_end": "2021-01-31",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 680,
+          "context_count": 156,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 962,
+          "context_count": 232,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 993,
+          "context_count": 241,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "REVIEW_REQUIRED",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "REVIEW_REQUIRED",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 0,
+      "load_result": {
+        "ticker": "NVDA",
+        "status": "COMMITTED",
+        "run_id": "1b5fd9f4-143d-4781-bef7-28962862d351",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 8.22,
+      "row_count": 24
+    },
+    {
+      "ticker": "NVDA",
+      "fiscal_year_end": "2022-01-30",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 773,
+          "context_count": 165,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1006,
+          "context_count": 251,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1013,
+          "context_count": 255,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "REVIEW_REQUIRED",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "REVIEW_REQUIRED",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 0,
+      "load_result": {
+        "ticker": "NVDA",
+        "status": "COMMITTED",
+        "run_id": "b5f710b2-b070-47db-b0a9-4ab920f50e7f",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 8.78,
+      "row_count": 24
+    },
+    {
+      "ticker": "NVDA",
+      "fiscal_year_end": "2023-01-29",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 764,
+          "context_count": 159,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1015,
+          "context_count": 210,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1028,
+          "context_count": 212,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "REVIEW_REQUIRED",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "REVIEW_REQUIRED",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 0,
+      "load_result": {
+        "ticker": "NVDA",
+        "status": "COMMITTED",
+        "run_id": "9462e0bc-e04b-4717-8663-70221cef8da4",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 8.45,
+      "row_count": 24
+    },
+    {
+      "ticker": "NVDA",
+      "fiscal_year_end": "2024-01-28",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 797,
+          "context_count": 161,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1066,
+          "context_count": 220,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1070,
+          "context_count": 236,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "REVIEW_REQUIRED",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "REVIEW_REQUIRED",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 0,
+      "load_result": {
+        "ticker": "NVDA",
+        "status": "COMMITTED",
+        "run_id": "0d22ae4a-430b-4b4c-987e-a8ffd50f488f",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 11.71,
+      "row_count": 24
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2021-07-31",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 843,
+          "context_count": 225,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1139,
+          "context_count": 302,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1182,
+          "context_count": 316,
+          "unit_count": 5,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "PASS",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "PASS",
+        "operating_cash_flow": "PASS",
+        "capex": "PASS"
+      },
+      "engine_row_count": 16,
+      "load_result": {
+        "ticker": "PANW",
+        "status": "COMMITTED",
+        "run_id": "d28c896a-dfff-4a8b-8d61-c2512a2f6aca",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 10.21,
+      "row_count": 24
+    },
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2022-01-31",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 853,
+          "context_count": 212,
+          "unit_count": 10,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED_PARTIAL_SUFFICIENT",
+          "warehouse_result": "PASS",
+          "xbrl_facts": 1140,
+          "xbrl_contexts": 283,
+          "xbrl_units": 10,
+          "xbrl_concepts": 1114,
+          "xbrl_labels": 1302,
+          "xbrl_presentation_relationships": 690,
+          "xbrl_calculation_relationships": 135,
+          "xbrl_definition_relationships": 1056,
+          "xbrl_roles": 109,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "NEWLY_LOCKED_AFTER_RETRY_2",
+          "warehouse_result": "PASS",
+          "xbrl_facts": 1177,
+          "xbrl_contexts": 290,
+          "xbrl_units": 9,
+          "xbrl_concepts": 1147,
+          "xbrl_labels": 1384,
+          "xbrl_presentation_relationships": 729,
+          "xbrl_calculation_relationships": 143,
+          "xbrl_definition_relationships": 1080,
+          "xbrl_roles": 113,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "REVIEW_REQUIRED",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "REVIEW_REQUIRED",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 0,
+      "load_result": {
+        "ticker": "CRWD",
+        "status": "COMMITTED",
+        "run_id": "bcd26d2c-1f81-47ed-862a-c3fb36071e0e",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 227.67,
+      "row_count": 24
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2022-07-31",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED_PARTIAL_SUFFICIENT",
+          "warehouse_result": "PASS",
+          "xbrl_facts": 952,
+          "xbrl_contexts": 250,
+          "xbrl_units": 6,
+          "xbrl_concepts": 1051,
+          "xbrl_labels": 1142,
+          "xbrl_presentation_relationships": 620,
+          "xbrl_calculation_relationships": 112,
+          "xbrl_definition_relationships": 963,
+          "xbrl_roles": 111,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "NEWLY_LOCKED",
+          "warehouse_result": "PASS",
+          "xbrl_facts": 1164,
+          "xbrl_contexts": 333,
+          "xbrl_units": 6,
+          "xbrl_concepts": 1049,
+          "xbrl_labels": 1134,
+          "xbrl_presentation_relationships": 618,
+          "xbrl_calculation_relationships": 113,
+          "xbrl_definition_relationships": 960,
+          "xbrl_roles": 114,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "NEWLY_LOCKED_AFTER_RETRY_2",
+          "warehouse_result": "PASS",
+          "xbrl_facts": 1200,
+          "xbrl_contexts": 336,
+          "xbrl_units": 6,
+          "xbrl_concepts": 1060,
+          "xbrl_labels": 1143,
+          "xbrl_presentation_relationships": 622,
+          "xbrl_calculation_relationships": 115,
+          "xbrl_definition_relationships": 962,
+          "xbrl_roles": 114,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "PASS",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "PASS",
+        "operating_cash_flow": "PASS",
+        "capex": "PASS"
+      },
+      "engine_row_count": 16,
+      "load_result": {
+        "ticker": "PANW",
+        "status": "COMMITTED",
+        "run_id": "954a4ae6-cadd-4af7-a257-a0086248dd18",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 252.69,
+      "row_count": 24
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2023-07-31",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1024,
+          "context_count": 272,
+          "unit_count": 5,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED_PARTIAL_SUFFICIENT",
+          "warehouse_result": "PASS",
+          "xbrl_facts": 1252,
+          "xbrl_contexts": 329,
+          "xbrl_units": 5,
+          "xbrl_concepts": 1064,
+          "xbrl_labels": 1173,
+          "xbrl_presentation_relationships": 663,
+          "xbrl_calculation_relationships": 136,
+          "xbrl_definition_relationships": 973,
+          "xbrl_roles": 126,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "NEWLY_LOCKED_AFTER_RETRY_2",
+          "warehouse_result": "PASS",
+          "xbrl_facts": 1277,
+          "xbrl_contexts": 335,
+          "xbrl_units": 5,
+          "xbrl_concepts": 1067,
+          "xbrl_labels": 1176,
+          "xbrl_presentation_relationships": 671,
+          "xbrl_calculation_relationships": 138,
+          "xbrl_definition_relationships": 979,
+          "xbrl_roles": 128,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "PASS",
+        "pretax_income": "PASS",
+        "income_tax_expense": "PASS",
+        "operating_cash_flow": "PASS",
+        "capex": "PASS"
+      },
+      "engine_row_count": 20,
+      "load_result": {
+        "ticker": "PANW",
+        "status": "COMMITTED",
+        "run_id": "6979a845-a40e-4a66-903d-43183a5565f6",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 214.76,
+      "row_count": 24
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2024-07-31",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 989,
+          "context_count": 305,
+          "unit_count": 5,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED_PARTIAL_SUFFICIENT",
+          "warehouse_result": "PASS",
+          "xbrl_facts": 1271,
+          "xbrl_contexts": 389,
+          "xbrl_units": 6,
+          "xbrl_concepts": 1278,
+          "xbrl_labels": 1389,
+          "xbrl_presentation_relationships": 787,
+          "xbrl_calculation_relationships": 143,
+          "xbrl_definition_relationships": 1206,
+          "xbrl_roles": 154,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "NEWLY_LOCKED_AFTER_RETRY_2",
+          "warehouse_result": "PASS",
+          "xbrl_facts": 1220,
+          "xbrl_contexts": 353,
+          "xbrl_units": 6,
+          "xbrl_concepts": 1277,
+          "xbrl_labels": 1385,
+          "xbrl_presentation_relationships": 773,
+          "xbrl_calculation_relationships": 146,
+          "xbrl_definition_relationships": 1189,
+          "xbrl_roles": 150,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "PASS",
+        "pretax_income": "PASS",
+        "income_tax_expense": "PASS",
+        "operating_cash_flow": "PASS",
+        "capex": "PASS"
+      },
+      "engine_row_count": 20,
+      "load_result": {
+        "ticker": "PANW",
+        "status": "COMMITTED",
+        "run_id": "c9eab7dd-ba4e-411c-8df0-b40be08d60f1",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 221.13,
+      "row_count": 24
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2025-07-31",
+      "status": "COMMITTED_WITH_REVIEW_REQUIRED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1106,
+          "context_count": 335,
+          "unit_count": 6,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED_PARTIAL_SUFFICIENT",
+          "warehouse_result": "PASS",
+          "xbrl_facts": 1327,
+          "xbrl_contexts": 393,
+          "xbrl_units": 6,
+          "xbrl_concepts": 1454,
+          "xbrl_labels": 1480,
+          "xbrl_presentation_relationships": 811,
+          "xbrl_calculation_relationships": 147,
+          "xbrl_definition_relationships": 1360,
+          "xbrl_roles": 152,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "NEWLY_LOCKED_AFTER_RETRY_2",
+          "warehouse_result": "PASS",
+          "xbrl_facts": 1293,
+          "xbrl_contexts": 389,
+          "xbrl_units": 6,
+          "xbrl_concepts": 1445,
+          "xbrl_labels": 1464,
+          "xbrl_presentation_relationships": 809,
+          "xbrl_calculation_relationships": 146,
+          "xbrl_definition_relationships": 1357,
+          "xbrl_roles": 152,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "REVIEW_REQUIRED",
+        "operating_income": "PASS",
+        "pretax_income": "PASS",
+        "income_tax_expense": "PASS",
+        "operating_cash_flow": "PASS",
+        "capex": "PASS"
+      },
+      "engine_row_count": 20,
+      "load_result": {
+        "ticker": "PANW",
+        "status": "COMMITTED",
+        "run_id": "a6e50be7-cbe8-4c16-b0e9-5e49e8ed559a",
+        "rows_committed": 24,
+        "run_status": "PASS_WITH_REVIEW_REQUIRED"
+      },
+      "elapsed_seconds": 168.25,
+      "row_count": 24
+    }
+  ]
+}

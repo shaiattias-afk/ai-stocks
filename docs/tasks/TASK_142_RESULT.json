@@ -1,0 +1,73 @@
+{
+  "task_id": "TASK_142_RECONCILE_TASK_141_EVIDENCE",
+  "started_file": "docs/tasks/TASK_142_STARTED.json",
+  "started_timestamp_utc": "2026-08-05T06:28:17.248Z",
+  "completed_timestamp_utc": "2026-08-05T06:30:07.865Z",
+  "completed_at_gte_started_at": true,
+  "classification": "VERIFIED_RESULTS_TIMESTAMP_DEFECT",
+  "task_141_timestamp_inconsistency": {
+    "embedded_started_timestamp": "2026-08-05T09:25:00Z",
+    "embedded_completed_timestamp": "2026-08-05T09:23:40Z",
+    "embedded_gap_seconds": -80,
+    "impossible": true
+  },
+  "root_cause": {
+    "proven": true,
+    "cause_1_started_timestamp_fabricated": "docs/tasks/TASK_141_STARTED.json's start_timestamp (2026-08-05T09:25:00Z) was hand-typed directly into the Write call with no preceding system-clock read of any kind in that task's tool-call sequence -- it is an invented placeholder, not derived from any clock.",
+    "cause_2_result_timestamp_utc_local_conversion_error": "docs/tasks/TASK_141_RESULT.json's completion_timestamp (2026-08-05T09:23:40Z) closely matches a real clock read taken during TASK_141 ('Get-Date -Format yyyy-MM-ddTHH:mm:ssZ' -> '2026-08-05T09:23:13Z'), which returns LOCAL time with a literal 'Z' (UTC designator) incorrectly appended. A second call made moments later in the same task ('(Get-Date).ToUniversalTime()...') returned the TRUE UTC value '2026-08-05T06:23:22Z', a full 3 hours earlier -- proving the machine's local-time offset is UTC+3 and that the completion_timestamp used the mislabeled local-time value instead.",
+    "coincidental_collision": "Because the fabricated start (~09:25:00) and the mislabeled-local completion (~09:23:40) both happened to fall in the same 'local-time-mislabeled-as-UTC' numeric range, and the fabricated start was invented slightly later in clock-face value than the true (accidental) completion snapshot, the two independently-wrong numbers produced an impossible ordering when compared to each other.",
+    "cause_not_applicable": ["stale STARTED file reused from a different run", "stale RESULT file reused from a different run", "system clock malfunction -- the OS clock itself is correct, confirmed by filesystem timestamps below"]
+  },
+  "filesystem_evidence": {
+    "note": "OS-recorded CreationTime/LastWriteTime (converted to true UTC) for every TASK_141 file, in write order -- independent, non-fabricatable ground truth showing the REAL execution was correctly ordered and monotonic throughout",
+    "files": [
+      {"path": "docs/tasks/TASK_141_STARTED.json", "size_bytes": 964, "creation_time_utc": "2026-08-05T06:20:25Z", "last_write_time_utc": "2026-08-05T06:20:25Z", "sha256": "B2B0E03BF5E9A941A18C611715F10CC46F1F55DDBBAD4727492500205A5327DA"},
+      {"path": "scripts/141_global_warehouse_integrity_audit.py", "size_bytes": 19332, "creation_time_utc": "2026-08-05T06:22:34Z", "last_write_time_utc": "2026-08-05T06:22:34Z", "sha256": "5D228F54661426C9835D00948D16EF3F0E5154AE4A017217A2C09CD3826E0F17"},
+      {"path": "data/warehouse_global_integrity_audit.json", "size_bytes": 572943, "creation_time_utc": "2026-08-05T06:22:49Z", "last_write_time_utc": "2026-08-05T06:22:49Z", "sha256": "FA54E6694FEDAB1504078C789D0EE2168623B689FE16C2435DFAA56F6487919D"},
+      {"path": "data/warehouse_global_integrity_audit.csv", "size_bytes": 102835, "creation_time_utc": "2026-08-05T06:22:49Z", "last_write_time_utc": "2026-08-05T06:22:49Z", "sha256": "F6DA21B6208FA9D5BC2C68C1D502BE7114F31E517E5C8A9C7B070A158DA1F851"},
+      {"path": "docs/tasks/TASK_141_RESULT.json", "size_bytes": 2745, "creation_time_utc": "2026-08-05T06:23:42Z", "last_write_time_utc": "2026-08-05T06:23:42Z", "sha256": "30C3BD4E4FF66E59FF96B3E569B6863E4F79D448569C4A7D3D7B745FC58263BD"},
+      {"path": "docs/tasks/TASK_141_RESULT.md", "size_bytes": 4891, "creation_time_utc": "2026-08-05T06:24:05Z", "last_write_time_utc": "2026-08-05T06:24:05Z", "sha256": "493BADD65FE8AF283E5FAAC4ECFA380E26D8052AADC4B2F61D019B3EE71298A8"},
+      {"path": "docs/LAST_CLAUDE_REPORT.md", "size_bytes": 5076, "creation_time_utc": "2026-08-05T06:24:35Z", "last_write_time_utc": "2026-08-05T06:24:35Z", "sha256": "4784BA85600D77DBFD14C374455F904704F96216D9C58F454EC9659BA4D763E9"}
+    ],
+    "real_elapsed_seconds_started_to_result_md": 220,
+    "order_is_monotonic_and_correct": true
+  },
+  "independent_json_validation_without_rerunning_audit": {
+    "total_records": 185, "expected": 185, "match": true,
+    "duplicate_accessions": 0, "expected": 0, "match": true,
+    "counts_by_form": {"10-K": 50, "10-Q": 135}, "expected": {"10-K": 50, "10-Q": 135}, "match": true,
+    "counts_by_detected_format": {"INLINE_XBRL": 183, "TRADITIONAL_XBRL_SEPARATE_INSTANCE": 2}, "match": true,
+    "counts_by_category": {"VALID_INLINE_XBRL": 183, "VALID_TRADITIONAL_XBRL": 1, "FALSE_PASS_ZERO_CONTENT": 1}, "match": true,
+    "only_anomalous_accession": "0001045810-19-000079", "expected": "0001045810-19-000079", "match": true,
+    "other_traditional_xbrl_accession": "0001045810-19-000023", "its_category": "VALID_TRADITIONAL_XBRL", "expected_valid": true, "match": true,
+    "declared_status_in_file": "PASS", "declared_fail_reasons": []
+  },
+  "database_reverification_read_only": {
+    "quarterly_extraction_runs": 45, "expected": 45, "match": true,
+    "quarterly_metric_results": 1080, "expected": 1080, "match": true,
+    "financial_metric_results": 900, "expected": 900, "match": true,
+    "total_production_xbrl_facts": 225126, "expected": 225126, "match": true,
+    "broken_nvda_accession_facts": 0, "expected": 0, "match": true,
+    "all_match_task_141_saved_json": true
+  },
+  "script_141_read_only_review": {
+    "both_databases_opened_read_only_true": true,
+    "insert_update_delete_alter_statements_found": 0,
+    "one_record_produced_per_accession": true,
+    "classification_deterministic": true,
+    "confirmed_by": "direct grep of scripts/141_global_warehouse_integrity_audit.py: 4 duckdb.connect() calls all with read_only=True; 0 matches for INSERT/UPDATE/DELETE/ALTER/CREATE TABLE anywhere in the file; audit_one_accession() is a pure function of manifest + database read state with no randomness"
+  },
+  "task_141_data_results_accepted": true,
+  "task_141_data_results_acceptance_reason": "Every substantive finding (185 accessions, 0 duplicates, 183 INLINE_XBRL, 2 TRADITIONAL_XBRL_SEPARATE_INSTANCE, 1 FALSE_PASS_ZERO_CONTENT = NVDA 0001045810-19-000079 only, 0001045810-19-000023 = VALID_TRADITIONAL_XBRL, both production databases unchanged) was independently re-derived from the saved JSON and from fresh read-only database queries and matches exactly. Only the two embedded timestamp fields are defective; no other field, count, classification, or database check is affected.",
+  "required_future_task_marker_invariant": {
+    "rule_1": "Use exactly one UTC clock source for every task-marker timestamp (e.g. datetime.now(timezone.utc) in Python, or (Get-Date).ToUniversalTime() in PowerShell -- never Get-Date/datetime.now() without an explicit UTC conversion).",
+    "rule_2": "Write the STARTED file's timestamp by reading that same clock source at the moment of writing -- never a hand-typed or estimated value.",
+    "rule_3": "Write the RESULT file only after all output files for the task are finalized, reading the same clock source at that moment.",
+    "rule_4": "Require completed_at >= started_at as a hard precondition before writing any RESULT file.",
+    "rule_5": "If completed_at < started_at, the task marker validation itself must fail (write status=FAIL, do not report the task's substantive result as accepted) -- exactly the check this task (TASK_142) was invoked to perform."
+  },
+  "production_database_unchanged": true,
+  "actual_runtime_seconds": 110,
+  "result": "PASS",
+  "next_step": "Adopt the required_future_task_marker_invariant above as the standing procedure for every subsequent TASK_NNN marker pair in this project (STARTED/RESULT), so this defect class cannot recur. No correction to TASK_141's evidence files themselves is needed or was made -- they are preserved unedited as the audit trail; their substantive findings stand accepted."
+}

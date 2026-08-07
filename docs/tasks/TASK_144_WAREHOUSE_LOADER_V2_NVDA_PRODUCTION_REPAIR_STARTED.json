@@ -1,0 +1,18 @@
+{
+  "task_id": "TASK_144_WAREHOUSE_LOADER_V2_NVDA_PRODUCTION_REPAIR",
+  "status": "STARTED",
+  "started_at": "2026-08-05T14:58:47.281Z",
+  "objective": "Promote the already-proven general XBRL entry-point and fail-closed loading logic (scripts/139/140) into a production warehouse loader module, then use it to repair exactly one defective production accession, NVDA 0001045810-19-000079, in data/database/xbrl_warehouse_proof.duckdb -- a false-PASS-zero-content accession identified by the TASK_141 global integrity audit and independently proven fixable in a scratch database by scripts/139/140. Only this one accession is touched; no other accession, no annual or quarterly production table, is modified.",
+  "read_only": false,
+  "expected_outputs": [
+    "scripts/144_warehouse_loader_v2_production.py",
+    "scripts/145_nvda_2019q1_production_warehouse_repair.py",
+    "data/nvda_2019q1_production_warehouse_repair_result.json",
+    "data/nvda_2019q1_production_warehouse_repair_result.csv",
+    "data/archive/nvda_2019q1_production_warehouse_repair_manifest.json",
+    "docs/NVDA_2019Q1_PRODUCTION_WAREHOUSE_REPAIR.md"
+  ],
+  "process_id": 10732,
+  "hostname": "shai-laptop",
+  "utility_version": "142_task_marker_guard-1.0.0"
+}

@@ -1,0 +1,151 @@
+{
+  "task_status": "COMPLETED",
+  "status_checked_utc": "2026-08-04T17:57:45.063334+00:00",
+  "note": "Re-verified against a live no-active-process check and a fresh read-only DB query: no Python/PowerShell process for this task is running, all 12/12 company-years are COMMITTED, and post-load integrity checks (row counts, duplicates, lineage, availability dates, financial_metric_results=900, Annual V1 checksum) all pass. Nothing further to resume.",
+  "last_updated_utc": "2026-08-04T17:57:45.063334+00:00",
+  "target_company_years": 12,
+  "completed_count": 12,
+  "company_year_results": {
+    "GOOGL|2021-12-31": {
+      "status": "COMMITTED",
+      "old_run_id": "bdef3475-38d5-4497-919f-8b92014b184c",
+      "new_run_id": "52648309-0be4-45f7-9672-8175b5f5ed91",
+      "rows_replaced": 24,
+      "run_status": "PASS_WITH_REVIEW_REQUIRED",
+      "reconciliation_status_counts": {
+        "PASS": 16,
+        "REVIEW_REQUIRED": 8
+      },
+      "elapsed_seconds": 0.04
+    },
+    "GOOGL|2022-12-31": {
+      "status": "COMMITTED",
+      "old_run_id": "329d7059-11da-491d-aed3-2d24a746893b",
+      "new_run_id": "0824233c-d701-45a2-a0bd-35ea88dd71d6",
+      "rows_replaced": 24,
+      "run_status": "PASS_WITH_REVIEW_REQUIRED",
+      "reconciliation_status_counts": {
+        "PASS": 16,
+        "REVIEW_REQUIRED": 8
+      },
+      "elapsed_seconds": 0.03
+    },
+    "GOOGL|2023-12-31": {
+      "status": "COMMITTED",
+      "old_run_id": "2d1c7a42-baa7-4b76-9fc4-b3cd580783c8",
+      "new_run_id": "eae9c440-5d35-4cc1-937f-2dc8e20047ae",
+      "rows_replaced": 24,
+      "run_status": "PASS_WITH_REVIEW_REQUIRED",
+      "reconciliation_status_counts": {
+        "PASS": 16,
+        "REVIEW_REQUIRED": 8
+      },
+      "elapsed_seconds": 0.03
+    },
+    "MU|2021-09-02": {
+      "status": "COMMITTED",
+      "old_run_id": "90abfd71-3580-4956-bf7f-1f265c4c8c41",
+      "new_run_id": "dae1c3f9-e709-4499-ac0e-2c885254b9ff",
+      "rows_replaced": 24,
+      "run_status": "PASS_WITH_REVIEW_REQUIRED",
+      "reconciliation_status_counts": {
+        "PASS": 20,
+        "REVIEW_REQUIRED": 4
+      },
+      "elapsed_seconds": 0.02
+    },
+    "MU|2022-09-01": {
+      "status": "COMMITTED",
+      "old_run_id": "e3bfd7e4-2561-4ceb-99c0-12d660df19ca",
+      "new_run_id": "3f14fd54-a1ed-47ee-b73c-5c040fbe89b2",
+      "rows_replaced": 24,
+      "run_status": "PASS_WITH_REVIEW_REQUIRED",
+      "reconciliation_status_counts": {
+        "PASS": 20,
+        "REVIEW_REQUIRED": 4
+      },
+      "elapsed_seconds": 0.03
+    },
+    "MU|2023-08-31": {
+      "status": "COMMITTED",
+      "old_run_id": "d8be8f1c-66de-4f91-a6f5-ff02abe315ed",
+      "new_run_id": "1cccf1f3-2524-4845-ad6b-82400e29d5ea",
+      "rows_replaced": 24,
+      "run_status": "PASS_WITH_REVIEW_REQUIRED",
+      "reconciliation_status_counts": {
+        "PASS": 20,
+        "REVIEW_REQUIRED": 4
+      },
+      "elapsed_seconds": 0.03
+    },
+    "MU|2024-08-29": {
+      "status": "COMMITTED",
+      "old_run_id": "7396a5f6-82a6-4d43-9839-a1cf09bc8459",
+      "new_run_id": "ef22e354-4232-4227-9d3e-751473f50b97",
+      "rows_replaced": 24,
+      "run_status": "PASS",
+      "reconciliation_status_counts": {
+        "PASS": 24
+      },
+      "elapsed_seconds": 0.03
+    },
+    "MU|2025-08-28": {
+      "status": "COMMITTED",
+      "old_run_id": "cc258883-5f38-482d-a8c0-209c7ca1278a",
+      "new_run_id": "e6fc4bcc-a5de-4643-bd15-5b9c9f606836",
+      "rows_replaced": 24,
+      "run_status": "PASS",
+      "reconciliation_status_counts": {
+        "PASS": 24
+      },
+      "elapsed_seconds": 0.03
+    },
+    "NVDA|2021-01-31": {
+      "status": "COMMITTED",
+      "old_run_id": "1b5fd9f4-143d-4781-bef7-28962862d351",
+      "new_run_id": "e030d61c-b3f1-4b78-8a01-11d8937a32fa",
+      "rows_replaced": 24,
+      "run_status": "PASS",
+      "reconciliation_status_counts": {
+        "PASS": 16,
+        "PASS_ROUNDING_TOLERANCE": 8
+      },
+      "elapsed_seconds": 0.03
+    },
+    "NVDA|2022-01-30": {
+      "status": "COMMITTED",
+      "old_run_id": "b5f710b2-b070-47db-b0a9-4ab920f50e7f",
+      "new_run_id": "97f64ee3-f1a5-490e-9201-d38525fa8d0d",
+      "rows_replaced": 24,
+      "run_status": "PASS",
+      "reconciliation_status_counts": {
+        "PASS": 20,
+        "PASS_ROUNDING_TOLERANCE": 4
+      },
+      "elapsed_seconds": 0.03
+    },
+    "NVDA|2023-01-29": {
+      "status": "COMMITTED",
+      "old_run_id": "9462e0bc-e04b-4717-8663-70221cef8da4",
+      "new_run_id": "0788c8bd-d7db-46e0-abb3-9a46335d0d95",
+      "rows_replaced": 24,
+      "run_status": "PASS",
+      "reconciliation_status_counts": {
+        "PASS": 24
+      },
+      "elapsed_seconds": 0.02
+    },
+    "NVDA|2024-01-28": {
+      "status": "COMMITTED",
+      "old_run_id": "0d22ae4a-430b-4b4c-987e-a8ffd50f488f",
+      "new_run_id": "002d6d52-450a-46ea-97d1-6f5fc39a67d2",
+      "rows_replaced": 24,
+      "run_status": "PASS",
+      "reconciliation_status_counts": {
+        "PASS": 16,
+        "PASS_ROUNDING_TOLERANCE": 8
+      },
+      "elapsed_seconds": 0.02
+    }
+  }
+}

@@ -1,0 +1,291 @@
+{
+  "mode": "check-only",
+  "status": "PASS",
+  "checks": {
+    "engine_and_regression_scripts_import": true,
+    "regression_artifacts_valid": true,
+    "target_derivation_matches_expected": true,
+    "replacement_scope_verified": true,
+    "execution_preconditions_met": true,
+    "paths_constructible": true,
+    "no_live_pid_lock": true
+  },
+  "detail": {
+    "regression": {
+      "regression_status": "PASS",
+      "global_checks": {
+        "all_45_company_years_complete": true,
+        "exactly_1080_v5_rows_produced": true,
+        "all_company_years_24_rows": true,
+        "duplicate_keys_zero": true,
+        "missing_lineage_zero": true,
+        "availability_mismatches_zero": true,
+        "future_data_violations_zero": true,
+        "all_four_target_cases_resolve": true,
+        "no_other_production_row_changes": true,
+        "expected_review_required_after_future_load_is_zero": true,
+        "databases_unchanged": true,
+        "engine_invocations_exactly_45": true,
+        "v4_never_rerun": true
+      },
+      "artifact_hashes": {
+        "json": "983d511458353a45dc562feafa65f512ee3bfd7bc716436ff5d9224d8e02d4a9",
+        "csv": "f41e69124e5db582984779495fce2d9a2138efaf720ca786681cc76723d5863e",
+        "md": "5c2f79ff1b799eee425807bdadc923351c7b2e73bc43e2d2fcf8e91614f24968"
+      }
+    },
+    "derivation": {
+      "derived_cases": [
+        [
+          "CRWD",
+          "2022-01-31",
+          "pretax_income"
+        ],
+        [
+          "MU",
+          "2021-09-02",
+          "pretax_income"
+        ],
+        [
+          "PANW",
+          "2021-07-31",
+          "pretax_income"
+        ],
+        [
+          "PANW",
+          "2021-07-31",
+          "revenue"
+        ]
+      ],
+      "derived_company_year_keys": [
+        [
+          "CRWD",
+          "2022-01-31"
+        ],
+        [
+          "MU",
+          "2021-09-02"
+        ],
+        [
+          "PANW",
+          "2021-07-31"
+        ]
+      ],
+      "expected_cases": [
+        [
+          "CRWD",
+          "2022-01-31",
+          "pretax_income"
+        ],
+        [
+          "MU",
+          "2021-09-02",
+          "pretax_income"
+        ],
+        [
+          "PANW",
+          "2021-07-31",
+          "pretax_income"
+        ],
+        [
+          "PANW",
+          "2021-07-31",
+          "revenue"
+        ]
+      ],
+      "expected_company_year_keys": [
+        [
+          "CRWD",
+          "2022-01-31"
+        ],
+        [
+          "MU",
+          "2021-09-02"
+        ],
+        [
+          "PANW",
+          "2021-07-31"
+        ]
+      ],
+      "cross_check_passed": true
+    },
+    "replacement_scope": {
+      "total_rows": 72,
+      "total_changed": 16,
+      "total_unchanged": 56,
+      "expected_total_rows": 72,
+      "expected_changed": 16,
+      "expected_unchanged": 56,
+      "per_company_year_24_rows": true,
+      "no_unexpected_differences_in_regression": true,
+      "all_target_company_years_pass": true
+    },
+    "execution_preconditions": {
+      "checks": {
+        "quarterly_extraction_runs_45": true,
+        "quarterly_metric_results_1080": true,
+        "financial_metric_results_900": true,
+        "unique_review_required_4": true,
+        "exact_four_cases_review_required": true,
+        "one_active_run_per_target_company_year": true,
+        "24_active_rows_per_target_company_year": true,
+        "no_existing_v5_run_for_any_target": true,
+        "warehouse_facts_unchanged": true,
+        "regression_artifacts_valid": true,
+        "no_other_production_write_process_active": true
+      },
+      "detail": {
+        "global_counts": {
+          "quarterly_extraction_runs": 45,
+          "quarterly_metric_results": 1080,
+          "financial_metric_results": 900,
+          "unique_review_required": 4
+        },
+        "actual_review_required_cases": [
+          [
+            "CRWD",
+            "2022-01-31",
+            "pretax_income"
+          ],
+          [
+            "MU",
+            "2021-09-02",
+            "pretax_income"
+          ],
+          [
+            "PANW",
+            "2021-07-31",
+            "pretax_income"
+          ],
+          [
+            "PANW",
+            "2021-07-31",
+            "revenue"
+          ]
+        ],
+        "per_company_year": [
+          {
+            "ticker": "CRWD",
+            "fiscal_year_end": "2022-01-31",
+            "run_count": 1,
+            "row_count": 24,
+            "has_v5_run": false
+          },
+          {
+            "ticker": "MU",
+            "fiscal_year_end": "2021-09-02",
+            "run_count": 1,
+            "row_count": 24,
+            "has_v5_run": false
+          },
+          {
+            "ticker": "PANW",
+            "fiscal_year_end": "2021-07-31",
+            "run_count": 1,
+            "row_count": 24,
+            "has_v5_run": false
+          }
+        ],
+        "warehouse_facts": 225780,
+        "pid_lock_status": {
+          "is_free": true,
+          "existing_pid": null,
+          "pid_active": null,
+          "is_own_lock": false,
+          "is_stale": false
+        }
+      }
+    },
+    "paths": {
+      "backups_dir": {
+        "path": "C:\\AI_Stock_Agent\\data\\database\\backups",
+        "parent_exists_or_creatable": true
+      },
+      "archive_dir": {
+        "path": "C:\\AI_Stock_Agent\\data\\archive",
+        "parent_exists_or_creatable": true
+      },
+      "scratch_dir": {
+        "path": "C:\\AI_Stock_Agent\\data\\_scratch_v5_production_load",
+        "parent_exists_or_creatable": true
+      },
+      "logs_dir": {
+        "path": "C:\\AI_Stock_Agent\\logs",
+        "parent_exists_or_creatable": true
+      },
+      "manifest_path": {
+        "path": "C:\\AI_Stock_Agent\\data\\archive\\v5_production_load_manifest.json",
+        "parent_exists_or_creatable": true
+      },
+      "pid_lock_path": {
+        "path": "C:\\AI_Stock_Agent\\data\\v5_production_load.pid",
+        "parent_exists_or_creatable": true
+      },
+      "checkpoint_path": {
+        "path": "C:\\AI_Stock_Agent\\data\\v5_production_load_checkpoint.json",
+        "parent_exists_or_creatable": true
+      },
+      "result_json_path": {
+        "path": "C:\\AI_Stock_Agent\\data\\v5_production_load_result.json",
+        "parent_exists_or_creatable": true
+      },
+      "result_csv_path": {
+        "path": "C:\\AI_Stock_Agent\\data\\v5_production_load_result.csv",
+        "parent_exists_or_creatable": true
+      },
+      "log_path": {
+        "path": "C:\\AI_Stock_Agent\\logs\\v5_production_load.log",
+        "parent_exists_or_creatable": true
+      }
+    },
+    "pid_lock_status": {
+      "is_free": true,
+      "existing_pid": null,
+      "pid_active": null,
+      "is_own_lock": false,
+      "is_stale": false
+    }
+  },
+  "target_company_years": [
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2022-01-31"
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2021-09-02"
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2021-07-31"
+    }
+  ],
+  "target_metric_year_cases": [
+    [
+      "CRWD",
+      "2022-01-31",
+      "pretax_income"
+    ],
+    [
+      "MU",
+      "2021-09-02",
+      "pretax_income"
+    ],
+    [
+      "PANW",
+      "2021-07-31",
+      "pretax_income"
+    ],
+    [
+      "PANW",
+      "2021-07-31",
+      "revenue"
+    ]
+  ],
+  "engine_invoked": false,
+  "backup_performed": false,
+  "database_written": false,
+  "archive_written": false,
+  "runtime_seconds": 0.045,
+  "checked_at": "2026-08-06T08:01:41.659Z"
+}

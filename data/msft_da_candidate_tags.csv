@@ -1,0 +1,7 @@
+﻿namespace,tag,label,annual_rows,latest_period_start,latest_period_end,latest_filing_date,latest_value_usd,latest_value_usd_billions
+us-gaap,AmortizationOfIntangibleAssets,Amortization of Intangible Assets,45,2024-07-01,2025-06-30,2025-07-30,6000000000,6.0
+us-gaap,CapitalizedComputerSoftwareAmortization,"Capitalized Computer Software, Amortization (Deprecated 2016-01-31)",15,2014-07-01,2015-06-30,2015-07-31,79000000,0.079
+us-gaap,CapitalizedComputerSoftwareAmortization1,"Capitalized Computer Software, Amortization",9,2017-07-01,2018-06-30,2018-08-03,54000000,0.054
+us-gaap,Depreciation,Depreciation,48,2024-07-01,2025-06-30,2025-07-30,22000000000,22.0
+us-gaap,FinanceLeaseRightOfUseAssetAmortization,"Finance Lease, Right-of-Use Asset, Amortization",24,2024-07-01,2025-06-30,2025-07-30,3408000000,3.408
+us-gaap,FiniteLivedIntangibleAssetsAmortizationExpense,"Finite-Lived Intangible Assets, Amortization Expense (Deprecated 2012-01-31)",3,2010-07-01,2011-06-30,2011-07-28,537000000,0.537

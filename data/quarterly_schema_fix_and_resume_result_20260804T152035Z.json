@@ -1,0 +1,442 @@
+{
+  "proof_passed": false,
+  "phase1": {
+    "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\ai_stock_agent_pre_quarterly_nullable_fix_20260804T152035Z.duckdb",
+    "source_checksum": "ed1a06f7ff78a73b55dc07efe20f10b6561d75a952e89f0c4f59fd3161dc501c",
+    "backup_checksum": "ed1a06f7ff78a73b55dc07efe20f10b6561d75a952e89f0c4f59fd3161dc501c",
+    "schema_before": [
+      [
+        "run_id",
+        "VARCHAR",
+        "NO",
+        "PRI",
+        null,
+        null
+      ],
+      [
+        "ticker",
+        "VARCHAR",
+        "NO",
+        null,
+        null,
+        null
+      ],
+      [
+        "fiscal_year_end",
+        "VARCHAR",
+        "NO",
+        null,
+        null,
+        null
+      ],
+      [
+        "fiscal_quarter",
+        "VARCHAR",
+        "NO",
+        "PRI",
+        null,
+        null
+      ],
+      [
+        "metric_name",
+        "VARCHAR",
+        "NO",
+        "PRI",
+        null,
+        null
+      ],
+      [
+        "value",
+        "DOUBLE",
+        "YES",
+        null,
+        null,
+        null
+      ],
+      [
+        "unit",
+        "VARCHAR",
+        "YES",
+        null,
+        null,
+        null
+      ],
+      [
+        "result_status",
+        "VARCHAR",
+        "NO",
+        null,
+        null,
+        null
+      ],
+      [
+        "extraction_basis",
+        "VARCHAR",
+        "NO",
+        null,
+        null,
+        null
+      ],
+      [
+        "period_start",
+        "VARCHAR",
+        "YES",
+        null,
+        null,
+        null
+      ],
+      [
+        "period_end",
+        "VARCHAR",
+        "YES",
+        null,
+        null,
+        null
+      ],
+      [
+        "availability_date",
+        "VARCHAR",
+        "YES",
+        null,
+        null,
+        null
+      ],
+      [
+        "accession_number",
+        "VARCHAR",
+        "NO",
+        null,
+        null,
+        null
+      ],
+      [
+        "concept_qname",
+        "VARCHAR",
+        "NO",
+        null,
+        null,
+        null
+      ],
+      [
+        "context_id",
+        "VARCHAR",
+        "YES",
+        null,
+        null,
+        null
+      ],
+      [
+        "dimensions_json",
+        "VARCHAR",
+        "NO",
+        null,
+        null,
+        null
+      ],
+      [
+        "lineage_json",
+        "VARCHAR",
+        "NO",
+        null,
+        null,
+        null
+      ],
+      [
+        "reconciliation_status",
+        "VARCHAR",
+        "NO",
+        null,
+        null,
+        null
+      ],
+      [
+        "reconciliation_difference",
+        "DOUBLE",
+        "NO",
+        null,
+        null,
+        null
+      ],
+      [
+        "permitted_difference",
+        "DOUBLE",
+        "NO",
+        null,
+        null,
+        null
+      ],
+      [
+        "created_at",
+        "VARCHAR",
+        "NO",
+        null,
+        null,
+        null
+      ]
+    ],
+    "schema_after": [
+      [
+        "run_id",
+        "VARCHAR",
+        "NO",
+        "PRI",
+        null,
+        null
+      ],
+      [
+        "ticker",
+        "VARCHAR",
+        "NO",
+        null,
+        null,
+        null
+      ],
+      [
+        "fiscal_year_end",
+        "VARCHAR",
+        "NO",
+        null,
+        null,
+        null
+      ],
+      [
+        "fiscal_quarter",
+        "VARCHAR",
+        "NO",
+        "PRI",
+        null,
+        null
+      ],
+      [
+        "metric_name",
+        "VARCHAR",
+        "NO",
+        "PRI",
+        null,
+        null
+      ],
+      [
+        "value",
+        "DOUBLE",
+        "YES",
+        null,
+        null,
+        null
+      ],
+      [
+        "unit",
+        "VARCHAR",
+        "YES",
+        null,
+        null,
+        null
+      ],
+      [
+        "result_status",
+        "VARCHAR",
+        "NO",
+        null,
+        null,
+        null
+      ],
+      [
+        "extraction_basis",
+        "VARCHAR",
+        "NO",
+        null,
+        null,
+        null
+      ],
+      [
+        "period_start",
+        "VARCHAR",
+        "YES",
+        null,
+        null,
+        null
+      ],
+      [
+        "period_end",
+        "VARCHAR",
+        "YES",
+        null,
+        null,
+        null
+      ],
+      [
+        "availability_date",
+        "VARCHAR",
+        "YES",
+        null,
+        null,
+        null
+      ],
+      [
+        "accession_number",
+        "VARCHAR",
+        "NO",
+        null,
+        null,
+        null
+      ],
+      [
+        "concept_qname",
+        "VARCHAR",
+        "YES",
+        null,
+        null,
+        null
+      ],
+      [
+        "context_id",
+        "VARCHAR",
+        "YES",
+        null,
+        null,
+        null
+      ],
+      [
+        "dimensions_json",
+        "VARCHAR",
+        "NO",
+        null,
+        null,
+        null
+      ],
+      [
+        "lineage_json",
+        "VARCHAR",
+        "NO",
+        null,
+        null,
+        null
+      ],
+      [
+        "reconciliation_status",
+        "VARCHAR",
+        "NO",
+        null,
+        null,
+        null
+      ],
+      [
+        "reconciliation_difference",
+        "DOUBLE",
+        "YES",
+        null,
+        null,
+        null
+      ],
+      [
+        "permitted_difference",
+        "DOUBLE",
+        "YES",
+        null,
+        null,
+        null
+      ],
+      [
+        "created_at",
+        "VARCHAR",
+        "NO",
+        null,
+        null,
+        null
+      ]
+    ],
+    "pre_counts": {
+      "financial_metric_results": 900,
+      "quarterly_extraction_runs": 18,
+      "quarterly_metric_results": 432
+    },
+    "post_counts": {
+      "financial_metric_results": 900,
+      "quarterly_metric_results": 432
+    },
+    "annual_v1_checksum_unchanged": true
+  },
+  "company_year_results": {
+    "GOOGL|2021-12-31": {
+      "ticker": "GOOGL",
+      "fiscal_year_end": "2021-12-31",
+      "status": "LOAD_FAILED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1070,
+          "context_count": 277,
+          "unit_count": 6,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1441,
+          "context_count": 387,
+          "unit_count": 6,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1443,
+          "context_count": 388,
+          "unit_count": 6,
+          "sec_filings_registration": "ALREADY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "PASS",
+        "operating_income": "PASS",
+        "pretax_income": "REVIEW_REQUIRED",
+        "income_tax_expense": "PASS",
+        "operating_cash_flow": "REVIEW_REQUIRED",
+        "capex": "REVIEW_REQUIRED"
+      },
+      "engine_row_count": 14,
+      "load_result": {
+        "ticker": "GOOGL",
+        "status": "ROLLED_BACK",
+        "run_id": "5fa53149-450d-4051-9089-2ce64c2ff7dc",
+        "validation_errors": [
+          "pretax_income/Q1: unresolved row must be NULL/REVIEW_REQUIRED",
+          "pretax_income/Q2: unresolved row must be NULL/REVIEW_REQUIRED",
+          "pretax_income/Q3: unresolved row must be NULL/REVIEW_REQUIRED",
+          "pretax_income/Q4: unresolved row must be NULL/REVIEW_REQUIRED",
+          "operating_cash_flow/Q2: unresolved row must be NULL/REVIEW_REQUIRED",
+          "operating_cash_flow/Q3: unresolved row must be NULL/REVIEW_REQUIRED",
+          "operating_cash_flow/Q4: unresolved row must be NULL/REVIEW_REQUIRED",
+          "capex/Q2: unresolved row must be NULL/REVIEW_REQUIRED",
+          "capex/Q3: unresolved row must be NULL/REVIEW_REQUIRED",
+          "capex/Q4: unresolved row must be NULL/REVIEW_REQUIRED"
+        ]
+      },
+      "elapsed_seconds": 23.84,
+      "row_count": 0
+    }
+  },
+  "total_extraction_runs": 18,
+  "total_quarterly_metric_results": 432,
+  "extraction_basis_counts": {
+    "DERIVED_FROM_YTD": 32,
+    "DIRECT_QUARTER": 292,
+    "DERIVED_Q4_FROM_10K_MINUS_9M": 108
+  },
+  "reconciliation_status_counts": {
+    "PASS": 96,
+    "PASS_ROUNDING_TOLERANCE": 12
+  },
+  "duplicate_natural_keys": [],
+  "null_counts": {
+    "concept_qname": 0,
+    "reconciliation_difference": 0,
+    "permitted_difference": 0
+  },
+  "review_required_count": 0,
+  "missing_lineage_count": 0,
+  "availability_date_mismatches": 0,
+  "financial_metric_results_count": 900,
+  "annual_v1_checksum_unchanged": true,
+  "batch_elapsed_seconds": 24.01
+}

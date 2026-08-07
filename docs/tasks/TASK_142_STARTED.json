@@ -1,0 +1,28 @@
+{
+  "task_id": "TASK_142_RECONCILE_TASK_141_EVIDENCE",
+  "status": "STARTED",
+  "start_timestamp_utc": "2026-08-05T06:28:17.248Z",
+  "start_timestamp_source": "(Get-Date).ToUniversalTime() via PowerShell, read from the system clock at the moment of writing this file, before any inspection began",
+  "objective": "Verify the integrity of TASK_141's saved evidence and explain the impossible task timestamps (completed_at earlier than started_at). Read-only against both production databases; no audit rerun, no Arelle, no warehouse loader created or modified, no accession re-warehoused.",
+  "read_only": true,
+  "production_databases_to_read": [
+    "data/database/xbrl_warehouse_proof.duckdb",
+    "data/database/ai_stock_agent.duckdb"
+  ],
+  "authoritative_files_to_inspect": [
+    "docs/tasks/TASK_141_STARTED.json",
+    "docs/tasks/TASK_141_RESULT.json",
+    "docs/tasks/TASK_141_RESULT.md",
+    "docs/LAST_CLAUDE_REPORT.md",
+    "data/warehouse_global_integrity_audit.json",
+    "data/warehouse_global_integrity_audit.csv",
+    "scripts/141_global_warehouse_integrity_audit.py"
+  ],
+  "expected_output_files": [
+    "docs/tasks/TASK_142_STARTED.json",
+    "docs/tasks/TASK_142_RESULT.json",
+    "docs/tasks/TASK_142_RESULT.md",
+    "docs/LAST_CLAUDE_REPORT.md",
+    "docs/CURRENT_STATE.md"
+  ]
+}

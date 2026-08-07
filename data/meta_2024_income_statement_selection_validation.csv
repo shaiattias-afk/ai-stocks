@@ -1,0 +1,10 @@
+﻿table_number,metric,value_count,values_text,source_file
+7,revenue,3,"164,501.000 | 134,902.000 | 116,609.000",C:\AI_Stock_Agent\data\meta_2024_income_statement_candidates\table_0007.csv
+7,income from operations,6,"69,380.000 | 69,380.000 | 46,751.000 | 46,751.000 | 28,944.000 | 28,944.000",C:\AI_Stock_Agent\data\meta_2024_income_statement_candidates\table_0007.csv
+7,net income,3,"62,360.000 | 39,098.000 | 23,200.000",C:\AI_Stock_Agent\data\meta_2024_income_statement_candidates\table_0007.csv
+8,revenue,6,100.000 | 100.000 | 100.000 | 100.000 | 100.000 | 100.000,C:\AI_Stock_Agent\data\meta_2024_income_statement_candidates\table_0008.csv
+8,income from operations,6,42.000 | 42.000 | 35.000 | 35.000 | 25.000 | 25.000,C:\AI_Stock_Agent\data\meta_2024_income_statement_candidates\table_0008.csv
+8,net income,6,38.000 | 38.000 | 29.000 | 29.000 | 20.000 | 20.000,C:\AI_Stock_Agent\data\meta_2024_income_statement_candidates\table_0008.csv
+23,revenue,3,"164,501.000 | 134,902.000 | 116,609.000",C:\AI_Stock_Agent\data\meta_2024_income_statement_candidates\table_0023.csv
+23,income from operations,6,"69,380.000 | 69,380.000 | 46,751.000 | 46,751.000 | 28,944.000 | 28,944.000",C:\AI_Stock_Agent\data\meta_2024_income_statement_candidates\table_0023.csv
+23,net income,3,"62,360.000 | 39,098.000 | 23,200.000",C:\AI_Stock_Agent\data\meta_2024_income_statement_candidates\table_0023.csv

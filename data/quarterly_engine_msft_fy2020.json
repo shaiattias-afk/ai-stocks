@@ -1,0 +1,741 @@
+{
+  "company": "MSFT",
+  "fiscal_year": "FY2020",
+  "fiscal_year_end": "2020-06-30",
+  "filings": {
+    "Q1": {
+      "ticker": "MSFT",
+      "form": "10-Q",
+      "report_date": "2019-09-30",
+      "filing_date": "2019-10-23",
+      "accession_number": "0001564590-19-037549"
+    },
+    "Q2": {
+      "ticker": "MSFT",
+      "form": "10-Q",
+      "report_date": "2019-12-31",
+      "filing_date": "2020-01-29",
+      "accession_number": "0001564590-20-002450"
+    },
+    "Q3": {
+      "ticker": "MSFT",
+      "form": "10-Q",
+      "report_date": "2020-03-31",
+      "filing_date": "2020-04-29",
+      "accession_number": "0001564590-20-019706"
+    },
+    "FY": {
+      "ticker": "MSFT",
+      "form": "10-K",
+      "report_date": "2020-06-30",
+      "filing_date": "2020-07-30",
+      "accession_number": "0001564590-20-034944"
+    }
+  },
+  "metrics": {
+    "revenue": {
+      "quarters": {
+        "Q1": {
+          "value": 33055000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2019-10-23",
+          "lineage": {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "accession_number": "0001564590-19-037549",
+            "context_id": "C_0000789019_20190701_20190930",
+            "unit_id": "U_iso4217USD",
+            "period_start": "2019-07-01",
+            "period_end": "2019-09-30",
+            "duration_days": 91,
+            "decimals": "-6"
+          }
+        },
+        "Q2": {
+          "value": 36906000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2020-01-29",
+          "lineage": {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "accession_number": "0001564590-20-002450",
+            "context_id": "C_0000789019_20191001_20191231",
+            "unit_id": "U_iso4217USD",
+            "period_start": "2019-10-01",
+            "period_end": "2019-12-31",
+            "duration_days": 91,
+            "decimals": "-6",
+            "cross_check_derived_from_ytd": 36906000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q3": {
+          "value": 35021000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2020-04-29",
+          "lineage": {
+            "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "accession_number": "0001564590-20-019706",
+            "context_id": "C_0000789019_20200101_20200331",
+            "unit_id": "U_iso4217USD",
+            "period_start": "2020-01-01",
+            "period_end": "2020-03-31",
+            "duration_days": 90,
+            "decimals": "-6",
+            "cross_check_derived_from_ytd": 35021000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q4": {
+          "value": 38033000000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2020-07-30",
+          "lineage": {
+            "annual_value": 143015000000.0,
+            "annual_concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+            "annual_accession_number": "0001564590-20-034944",
+            "annual_decimals": "-6",
+            "nine_month_ytd_value": 104982000000.0,
+            "nine_month_ytd_context_id": "C_0000789019_20190701_20200331",
+            "nine_month_ytd_accession_number": "0001564590-20-019706",
+            "nine_month_ytd_decimals": "-6"
+          }
+        }
+      },
+      "annual_value": 143015000000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax",
+        "accession_number": "0001564590-20-034944",
+        "context_id": "C_0000789019_20190701_20200630",
+        "unit_id": "U_iso4217USD",
+        "period_start": "2019-07-01",
+        "period_end": "2020-06-30",
+        "filing_date": "2020-07-30",
+        "decimals": "-6"
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 143015000000.0,
+        "annual_value": 143015000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Annual": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            }
+          },
+          "permitted_difference": 2000000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    "operating_income": {
+      "quarters": {
+        "Q1": {
+          "value": 12686000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2019-10-23",
+          "lineage": {
+            "concept_qname": "us-gaap:OperatingIncomeLoss",
+            "accession_number": "0001564590-19-037549",
+            "context_id": "C_0000789019_20190701_20190930",
+            "unit_id": "U_iso4217USD",
+            "period_start": "2019-07-01",
+            "period_end": "2019-09-30",
+            "duration_days": 91,
+            "decimals": "-6"
+          }
+        },
+        "Q2": {
+          "value": 13891000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2020-01-29",
+          "lineage": {
+            "concept_qname": "us-gaap:OperatingIncomeLoss",
+            "accession_number": "0001564590-20-002450",
+            "context_id": "C_0000789019_20191001_20191231",
+            "unit_id": "U_iso4217USD",
+            "period_start": "2019-10-01",
+            "period_end": "2019-12-31",
+            "duration_days": 91,
+            "decimals": "-6",
+            "cross_check_derived_from_ytd": 13891000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q3": {
+          "value": 12975000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2020-04-29",
+          "lineage": {
+            "concept_qname": "us-gaap:OperatingIncomeLoss",
+            "accession_number": "0001564590-20-019706",
+            "context_id": "C_0000789019_20200101_20200331",
+            "unit_id": "U_iso4217USD",
+            "period_start": "2020-01-01",
+            "period_end": "2020-03-31",
+            "duration_days": 90,
+            "decimals": "-6",
+            "cross_check_derived_from_ytd": 12975000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q4": {
+          "value": 13407000000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2020-07-30",
+          "lineage": {
+            "annual_value": 52959000000.0,
+            "annual_concept_qname": "us-gaap:OperatingIncomeLoss",
+            "annual_accession_number": "0001564590-20-034944",
+            "annual_decimals": "-6",
+            "nine_month_ytd_value": 39552000000.0,
+            "nine_month_ytd_context_id": "C_0000789019_20190701_20200331",
+            "nine_month_ytd_accession_number": "0001564590-20-019706",
+            "nine_month_ytd_decimals": "-6"
+          }
+        }
+      },
+      "annual_value": 52959000000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:OperatingIncomeLoss",
+        "accession_number": "0001564590-20-034944",
+        "context_id": "C_0000789019_20190701_20200630",
+        "unit_id": "U_iso4217USD",
+        "period_start": "2019-07-01",
+        "period_end": "2020-06-30",
+        "filing_date": "2020-07-30",
+        "decimals": "-6"
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 52959000000.0,
+        "annual_value": 52959000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Annual": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            }
+          },
+          "permitted_difference": 2000000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    "pretax_income": {
+      "quarters": {
+        "Q1": {
+          "value": 12686000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2019-10-23",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "accession_number": "0001564590-19-037549",
+            "context_id": "C_0000789019_20190701_20190930",
+            "unit_id": "U_iso4217USD",
+            "period_start": "2019-07-01",
+            "period_end": "2019-09-30",
+            "duration_days": 91,
+            "decimals": "-6"
+          }
+        },
+        "Q2": {
+          "value": 14085000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2020-01-29",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "accession_number": "0001564590-20-002450",
+            "context_id": "C_0000789019_20191001_20191231",
+            "unit_id": "U_iso4217USD",
+            "period_start": "2019-10-01",
+            "period_end": "2019-12-31",
+            "duration_days": 91,
+            "decimals": "-6",
+            "cross_check_derived_from_ytd": 14085000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q3": {
+          "value": 12843000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2020-04-29",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "accession_number": "0001564590-20-019706",
+            "context_id": "C_0000789019_20200101_20200331",
+            "unit_id": "U_iso4217USD",
+            "period_start": "2020-01-01",
+            "period_end": "2020-03-31",
+            "duration_days": 90,
+            "decimals": "-6",
+            "cross_check_derived_from_ytd": 12843000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q4": {
+          "value": 13422000000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2020-07-30",
+          "lineage": {
+            "annual_value": 53036000000.0,
+            "annual_concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+            "annual_accession_number": "0001564590-20-034944",
+            "annual_decimals": "-6",
+            "nine_month_ytd_value": 39614000000.0,
+            "nine_month_ytd_context_id": "C_0000789019_20190701_20200331",
+            "nine_month_ytd_accession_number": "0001564590-20-019706",
+            "nine_month_ytd_decimals": "-6"
+          }
+        }
+      },
+      "annual_value": 53036000000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+        "accession_number": "0001564590-20-034944",
+        "context_id": "C_0000789019_20190701_20200630",
+        "unit_id": "U_iso4217USD",
+        "period_start": "2019-07-01",
+        "period_end": "2020-06-30",
+        "filing_date": "2020-07-30",
+        "decimals": "-6"
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 53036000000.0,
+        "annual_value": 53036000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Annual": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            }
+          },
+          "permitted_difference": 2000000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    "income_tax_expense": {
+      "quarters": {
+        "Q1": {
+          "value": 2008000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2019-10-23",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+            "accession_number": "0001564590-19-037549",
+            "context_id": "C_0000789019_20190701_20190930",
+            "unit_id": "U_iso4217USD",
+            "period_start": "2019-07-01",
+            "period_end": "2019-09-30",
+            "duration_days": 91,
+            "decimals": "-6"
+          }
+        },
+        "Q2": {
+          "value": 2436000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2020-01-29",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+            "accession_number": "0001564590-20-002450",
+            "context_id": "C_0000789019_20191001_20191231",
+            "unit_id": "U_iso4217USD",
+            "period_start": "2019-10-01",
+            "period_end": "2019-12-31",
+            "duration_days": 91,
+            "decimals": "-6",
+            "cross_check_derived_from_ytd": 2436000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q3": {
+          "value": 2091000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2020-04-29",
+          "lineage": {
+            "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+            "accession_number": "0001564590-20-019706",
+            "context_id": "C_0000789019_20200101_20200331",
+            "unit_id": "U_iso4217USD",
+            "period_start": "2020-01-01",
+            "period_end": "2020-03-31",
+            "duration_days": 90,
+            "decimals": "-6",
+            "cross_check_derived_from_ytd": 2091000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q4": {
+          "value": 2220000000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2020-07-30",
+          "lineage": {
+            "annual_value": 8755000000.0,
+            "annual_concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+            "annual_accession_number": "0001564590-20-034944",
+            "annual_decimals": "-6",
+            "nine_month_ytd_value": 6535000000.0,
+            "nine_month_ytd_context_id": "C_0000789019_20190701_20200331",
+            "nine_month_ytd_accession_number": "0001564590-20-019706",
+            "nine_month_ytd_decimals": "-6"
+          }
+        }
+      },
+      "annual_value": 8755000000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+        "accession_number": "0001564590-20-034944",
+        "context_id": "C_0000789019_20190701_20200630",
+        "unit_id": "U_iso4217USD",
+        "period_start": "2019-07-01",
+        "period_end": "2020-06-30",
+        "filing_date": "2020-07-30",
+        "decimals": "-6"
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 8755000000.0,
+        "annual_value": 8755000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Annual": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            }
+          },
+          "permitted_difference": 2000000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    "operating_cash_flow": {
+      "quarters": {
+        "Q1": {
+          "value": 13818000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2019-10-23",
+          "lineage": {
+            "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "accession_number": "0001564590-19-037549",
+            "context_id": "C_0000789019_20190701_20190930",
+            "unit_id": "U_iso4217USD",
+            "period_start": "2019-07-01",
+            "period_end": "2019-09-30",
+            "duration_days": 91,
+            "decimals": "-6"
+          }
+        },
+        "Q2": {
+          "value": 10680000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2020-01-29",
+          "lineage": {
+            "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "accession_number": "0001564590-20-002450",
+            "context_id": "C_0000789019_20191001_20191231",
+            "unit_id": "U_iso4217USD",
+            "period_start": "2019-10-01",
+            "period_end": "2019-12-31",
+            "duration_days": 91,
+            "decimals": "-6",
+            "cross_check_derived_from_ytd": 10680000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q3": {
+          "value": 17504000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2020-04-29",
+          "lineage": {
+            "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "accession_number": "0001564590-20-019706",
+            "context_id": "C_0000789019_20200101_20200331",
+            "unit_id": "U_iso4217USD",
+            "period_start": "2020-01-01",
+            "period_end": "2020-03-31",
+            "duration_days": 90,
+            "decimals": "-6",
+            "cross_check_derived_from_ytd": 17504000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q4": {
+          "value": 18673000000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2020-07-30",
+          "lineage": {
+            "annual_value": 60675000000.0,
+            "annual_concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+            "annual_accession_number": "0001564590-20-034944",
+            "annual_decimals": "-6",
+            "nine_month_ytd_value": 42002000000.0,
+            "nine_month_ytd_context_id": "C_0000789019_20190701_20200331",
+            "nine_month_ytd_accession_number": "0001564590-20-019706",
+            "nine_month_ytd_decimals": "-6"
+          }
+        }
+      },
+      "annual_value": 60675000000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+        "accession_number": "0001564590-20-034944",
+        "context_id": "C_0000789019_20190701_20200630",
+        "unit_id": "U_iso4217USD",
+        "period_start": "2019-07-01",
+        "period_end": "2020-06-30",
+        "filing_date": "2020-07-30",
+        "decimals": "-6"
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 60675000000.0,
+        "annual_value": 60675000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Annual": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            }
+          },
+          "permitted_difference": 2000000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "status": "PASS"
+    },
+    "capex": {
+      "quarters": {
+        "Q1": {
+          "value": 3385000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2019-10-23",
+          "lineage": {
+            "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "accession_number": "0001564590-19-037549",
+            "context_id": "C_0000789019_20190701_20190930",
+            "unit_id": "U_iso4217USD",
+            "period_start": "2019-07-01",
+            "period_end": "2019-09-30",
+            "duration_days": 91,
+            "decimals": "-6"
+          }
+        },
+        "Q2": {
+          "value": 3545000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2020-01-29",
+          "lineage": {
+            "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "accession_number": "0001564590-20-002450",
+            "context_id": "C_0000789019_20191001_20191231",
+            "unit_id": "U_iso4217USD",
+            "period_start": "2019-10-01",
+            "period_end": "2019-12-31",
+            "duration_days": 91,
+            "decimals": "-6",
+            "cross_check_derived_from_ytd": 3545000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q3": {
+          "value": 3767000000.0,
+          "extraction_basis": "DIRECT_QUARTER",
+          "availability_date": "2020-04-29",
+          "lineage": {
+            "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "accession_number": "0001564590-20-019706",
+            "context_id": "C_0000789019_20200101_20200331",
+            "unit_id": "U_iso4217USD",
+            "period_start": "2020-01-01",
+            "period_end": "2020-03-31",
+            "duration_days": 90,
+            "decimals": "-6",
+            "cross_check_derived_from_ytd": 3767000000.0,
+            "cross_check_matches_direct": true
+          }
+        },
+        "Q4": {
+          "value": 4744000000.0,
+          "extraction_basis": "DERIVED_Q4_FROM_10K_MINUS_9M",
+          "availability_date": "2020-07-30",
+          "lineage": {
+            "annual_value": 15441000000.0,
+            "annual_concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+            "annual_accession_number": "0001564590-20-034944",
+            "annual_decimals": "-6",
+            "nine_month_ytd_value": 10697000000.0,
+            "nine_month_ytd_context_id": "C_0000789019_20190701_20200331",
+            "nine_month_ytd_accession_number": "0001564590-20-019706",
+            "nine_month_ytd_decimals": "-6"
+          }
+        }
+      },
+      "annual_value": 15441000000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+        "accession_number": "0001564590-20-034944",
+        "context_id": "C_0000789019_20190701_20200630",
+        "unit_id": "U_iso4217USD",
+        "period_start": "2019-07-01",
+        "period_end": "2020-06-30",
+        "filing_date": "2020-07-30",
+        "decimals": "-6"
+      },
+      "reconciliation": {
+        "sum_q1_to_q4": 15441000000.0,
+        "annual_value": 15441000000.0,
+        "difference": 0.0,
+        "exact_equality_status": "PASS",
+        "precision_calculation": {
+          "equation": "Q1 + Q2 + Q3 + Q4 vs. Annual (Q4 derived as Annual - Q3_9mYTD; Q4's own uncertainty is already represented by the Annual and Q3-source terms below, so it is not counted a second time)",
+          "source_facts": {
+            "Q1": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q2": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Q3": {
+              "basis": "DIRECT_QUARTER",
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            },
+            "Annual": {
+              "decimals": "-6",
+              "rounding_unit": 1000000,
+              "uncertainty": 500000.0
+            }
+          },
+          "permitted_difference": 2000000.0,
+          "actual_difference": 0.0,
+          "within_tolerance": true
+        },
+        "status": "PASS"
+      },
+      "status": "PASS"
+    }
+  },
+  "reconciliation_policy": "XBRL_DECIMALS_ROUNDING_TOLERANCE",
+  "engine_script": "118_quarterly_extraction_engine.py"
+}

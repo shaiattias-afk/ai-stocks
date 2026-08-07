@@ -1,0 +1,16 @@
+{
+  "task_id": "TASK_148_V5_FINAL_RELEASE_REGRESSION",
+  "status": "STARTED",
+  "started_at": "2026-08-06T04:06:26.432Z",
+  "objective": "Final release regression for quarterly engine V5 across all 45 authoritative company-years: run V5 exactly once per company-year (subprocess, 45s hard timeout each), compare every row directly against current active production rows. Only the 4 known target metric-year cases (CRWD/MU/PANW) may change from REVIEW_REQUIRED to PASS; any other production row must match exactly. Read-only against both databases; does not load anything into production.",
+  "read_only": true,
+  "expected_outputs": [
+    "scripts/150_v5_final_release_regression.py",
+    "data/v5_final_release_regression.json",
+    "data/v5_final_release_regression.csv",
+    "docs/V5_FINAL_RELEASE_REGRESSION.md"
+  ],
+  "process_id": 23712,
+  "hostname": "shai-laptop",
+  "utility_version": "142_task_marker_guard-1.0.0"
+}

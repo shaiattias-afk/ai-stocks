@@ -1,0 +1,962 @@
+{
+  "AMZN_2021-12-31": {
+    "ticker": "AMZN",
+    "report_date": "2021-12-31",
+    "accession_number": "0001018724-22-000005",
+    "current_debt": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket is nonzero (34750000000.0)",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt": {
+      "status": "PASS",
+      "error": null,
+      "value": 48744000000.0,
+      "concept_qname": "us-gaap:LongTermDebtNoncurrent",
+      "selection_tier": "plain"
+    },
+    "total_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 50553000000.0,
+      "basis": "MATURITY_PRINCIPAL",
+      "source_current_debt_maturity": 1493000000.0,
+      "source_long_term_debt_maturity": 49060000000.0,
+      "reported_total": 50553000000.0,
+      "reconciliation_gap": 0.0,
+      "maturity_role_uri": "http://www.amazon.com/role/DebtFuturePrincipalPaymentforDebtDetails",
+      "carrying_value_current_debt": null,
+      "carrying_value_current_debt_status": "REVIEW_REQUIRED",
+      "carrying_value_long_term_debt": 48744000000.0,
+      "carrying_value_long_term_debt_status": "PASS"
+    },
+    "cash_and_equivalents": {
+      "status": "PASS",
+      "error": null,
+      "value": 36220000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain"
+    },
+    "short_term_investments": {
+      "status": "PASS",
+      "error": null,
+      "value": 59829000000.0,
+      "concept_qname": "us-gaap:MarketableSecuritiesCurrent",
+      "selection_tier": "plain"
+    },
+    "stockholders_equity": {
+      "status": "PASS",
+      "error": null,
+      "value": 138245000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain"
+    },
+    "adjusted_net_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": -45496000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "invested_capital": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 92749000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "current_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket value not reliably resolvable",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 31816000000.0,
+      "concept_qname": "us-gaap:LongTermDebtNoncurrent",
+      "selection_tier": "plain"
+    },
+    "total_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "error": "no carrying-value total for the prior period, and the debt-maturity schedule has no prior-period comparative bucket in this same filing (structurally unavailable, not merely unresolved)"
+    },
+    "invested_capital_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "average_invested_capital": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "roic": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "ground_truth_engine_version": "v16",
+    "elapsed_seconds": 0.2912230999208987
+  },
+  "AMZN_2022-12-31": {
+    "ticker": "AMZN",
+    "report_date": "2022-12-31",
+    "accession_number": "0001018724-23-000004",
+    "current_debt": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket is nonzero (41500000000.0)",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt": {
+      "status": "PASS",
+      "error": null,
+      "value": 67150000000.0,
+      "concept_qname": "us-gaap:LongTermDebtNoncurrent",
+      "selection_tier": "plain"
+    },
+    "total_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 70542000000.0,
+      "basis": "MATURITY_PRINCIPAL",
+      "source_current_debt_maturity": 3000000000.0,
+      "source_long_term_debt_maturity": 67542000000.0,
+      "reported_total": 70542000000.0,
+      "reconciliation_gap": 0.0,
+      "maturity_role_uri": "http://www.amazon.com/role/DebtFuturePrincipalPaymentforDebtDetails",
+      "carrying_value_current_debt": null,
+      "carrying_value_current_debt_status": "REVIEW_REQUIRED",
+      "carrying_value_long_term_debt": 67150000000.0,
+      "carrying_value_long_term_debt_status": "PASS"
+    },
+    "cash_and_equivalents": {
+      "status": "PASS",
+      "error": null,
+      "value": 53888000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain"
+    },
+    "short_term_investments": {
+      "status": "PASS",
+      "error": null,
+      "value": 16138000000.0,
+      "concept_qname": "us-gaap:MarketableSecuritiesCurrent",
+      "selection_tier": "plain"
+    },
+    "stockholders_equity": {
+      "status": "PASS",
+      "error": null,
+      "value": 146043000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain"
+    },
+    "adjusted_net_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 516000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "invested_capital": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 146559000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "current_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket value not reliably resolvable",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 48744000000.0,
+      "concept_qname": "us-gaap:LongTermDebtNoncurrent",
+      "selection_tier": "plain"
+    },
+    "total_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "error": "no carrying-value total for the prior period, and the debt-maturity schedule has no prior-period comparative bucket in this same filing (structurally unavailable, not merely unresolved)"
+    },
+    "invested_capital_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "average_invested_capital": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "roic": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "ground_truth_engine_version": "v14",
+    "elapsed_seconds": 0.2605663000140339
+  },
+  "AMZN_2023-12-31": {
+    "ticker": "AMZN",
+    "report_date": "2023-12-31",
+    "accession_number": "0001018724-24-000008",
+    "current_debt": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket is nonzero (39250000000.0)",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt": {
+      "status": "PASS",
+      "error": null,
+      "value": 58314000000.0,
+      "concept_qname": "us-gaap:LongTermDebtNoncurrent",
+      "selection_tier": "plain"
+    },
+    "total_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 67182000000.0,
+      "basis": "MATURITY_PRINCIPAL",
+      "source_current_debt_maturity": 8500000000.0,
+      "source_long_term_debt_maturity": 58682000000.0,
+      "reported_total": 67182000000.0,
+      "reconciliation_gap": 0.0,
+      "maturity_role_uri": "http://www.amazon.com/role/DebtFuturePrincipalPaymentforDebtDetails",
+      "carrying_value_current_debt": null,
+      "carrying_value_current_debt_status": "REVIEW_REQUIRED",
+      "carrying_value_long_term_debt": 58314000000.0,
+      "carrying_value_long_term_debt_status": "PASS"
+    },
+    "cash_and_equivalents": {
+      "status": "PASS",
+      "error": null,
+      "value": 73387000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain"
+    },
+    "short_term_investments": {
+      "status": "PASS",
+      "error": null,
+      "value": 13393000000.0,
+      "concept_qname": "us-gaap:MarketableSecuritiesCurrent",
+      "selection_tier": "plain"
+    },
+    "stockholders_equity": {
+      "status": "PASS",
+      "error": null,
+      "value": 201875000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain"
+    },
+    "adjusted_net_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": -19598000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "invested_capital": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 182277000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "current_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket value not reliably resolvable",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 67150000000.0,
+      "concept_qname": "us-gaap:LongTermDebtNoncurrent",
+      "selection_tier": "plain"
+    },
+    "total_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "error": "no carrying-value total for the prior period, and the debt-maturity schedule has no prior-period comparative bucket in this same filing (structurally unavailable, not merely unresolved)"
+    },
+    "invested_capital_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "average_invested_capital": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "roic": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "ground_truth_engine_version": "v14",
+    "elapsed_seconds": 0.25056009995751083
+  },
+  "AMZN_2024-12-31": {
+    "ticker": "AMZN",
+    "report_date": "2024-12-31",
+    "accession_number": "0001018724-25-000004",
+    "current_debt": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket is nonzero (36250000000.0)",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt": {
+      "status": "PASS",
+      "error": null,
+      "value": 52623000000.0,
+      "concept_qname": "us-gaap:LongTermDebtNoncurrent",
+      "selection_tier": "plain"
+    },
+    "total_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 58000000000.0,
+      "basis": "MATURITY_PRINCIPAL",
+      "source_current_debt_maturity": 5000000000.0,
+      "source_long_term_debt_maturity": 53000000000.0,
+      "reported_total": 58000000000.0,
+      "reconciliation_gap": 0.0,
+      "maturity_role_uri": "http://www.amazon.com/role/DebtFuturePrincipalPaymentforDebtDetails",
+      "carrying_value_current_debt": null,
+      "carrying_value_current_debt_status": "REVIEW_REQUIRED",
+      "carrying_value_long_term_debt": 52623000000.0,
+      "carrying_value_long_term_debt_status": "PASS"
+    },
+    "cash_and_equivalents": {
+      "status": "PASS",
+      "error": null,
+      "value": 78779000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain"
+    },
+    "short_term_investments": {
+      "status": "PASS",
+      "error": null,
+      "value": 22423000000.0,
+      "concept_qname": "us-gaap:MarketableSecuritiesCurrent",
+      "selection_tier": "plain"
+    },
+    "stockholders_equity": {
+      "status": "PASS",
+      "error": null,
+      "value": 285970000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain"
+    },
+    "adjusted_net_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": -43202000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "invested_capital": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 242768000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "current_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket value not reliably resolvable",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 58314000000.0,
+      "concept_qname": "us-gaap:LongTermDebtNoncurrent",
+      "selection_tier": "plain"
+    },
+    "total_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "error": "no carrying-value total for the prior period, and the debt-maturity schedule has no prior-period comparative bucket in this same filing (structurally unavailable, not merely unresolved)"
+    },
+    "invested_capital_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "average_invested_capital": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "roic": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "ground_truth_engine_version": "v14",
+    "elapsed_seconds": 0.26142569992225617
+  },
+  "AMZN_2025-12-31": {
+    "ticker": "AMZN",
+    "report_date": "2025-12-31",
+    "accession_number": "0001018724-26-000004",
+    "current_debt": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket is nonzero (45000000000.0)",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt": {
+      "status": "PASS",
+      "error": null,
+      "value": 65648000000.0,
+      "concept_qname": "us-gaap:LongTermDebtNoncurrent",
+      "selection_tier": "plain"
+    },
+    "total_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 68836000000.0,
+      "basis": "MATURITY_PRINCIPAL",
+      "source_current_debt_maturity": 2752000000.0,
+      "source_long_term_debt_maturity": 66084000000.0,
+      "reported_total": 68836000000.0,
+      "reconciliation_gap": 0.0,
+      "maturity_role_uri": "http://www.amazon.com/role/DebtFuturePrincipalPaymentforDebtDetails",
+      "carrying_value_current_debt": null,
+      "carrying_value_current_debt_status": "REVIEW_REQUIRED",
+      "carrying_value_long_term_debt": 65648000000.0,
+      "carrying_value_long_term_debt_status": "PASS"
+    },
+    "cash_and_equivalents": {
+      "status": "PASS",
+      "error": null,
+      "value": 86810000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain"
+    },
+    "short_term_investments": {
+      "status": "PASS",
+      "error": null,
+      "value": 36219000000.0,
+      "concept_qname": "us-gaap:MarketableSecuritiesCurrent",
+      "selection_tier": "plain"
+    },
+    "stockholders_equity": {
+      "status": "PASS",
+      "error": null,
+      "value": 411065000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain"
+    },
+    "adjusted_net_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": -54193000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "invested_capital": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 356872000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "current_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket value not reliably resolvable",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 52623000000.0,
+      "concept_qname": "us-gaap:LongTermDebtNoncurrent",
+      "selection_tier": "plain"
+    },
+    "total_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "error": "no carrying-value total for the prior period, and the debt-maturity schedule has no prior-period comparative bucket in this same filing (structurally unavailable, not merely unresolved)"
+    },
+    "invested_capital_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "average_invested_capital": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "roic": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "ground_truth_engine_version": "v16",
+    "elapsed_seconds": 0.259971100022085
+  },
+  "GOOGL_2021-12-31": {
+    "ticker": "GOOGL",
+    "report_date": "2021-12-31",
+    "accession_number": "0001652044-22-000019",
+    "current_debt": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket is nonzero (10621000000.0)",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt": {
+      "status": "PASS",
+      "error": null,
+      "value": 14817000000.0,
+      "concept_qname": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+      "selection_tier": "plain"
+    },
+    "total_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 15440000000.0,
+      "basis": "MATURITY_PRINCIPAL",
+      "source_current_debt_maturity": 187000000.0,
+      "source_long_term_debt_maturity": 15253000000.0,
+      "reported_total": 15440000000.0,
+      "reconciliation_gap": 0.0,
+      "maturity_role_uri": "http://www.google.com/role/DebtFuturePrincipalPaymentsforBorrowingsDetails",
+      "carrying_value_current_debt": null,
+      "carrying_value_current_debt_status": "REVIEW_REQUIRED",
+      "carrying_value_long_term_debt": 14817000000.0,
+      "carrying_value_long_term_debt_status": "PASS"
+    },
+    "cash_and_equivalents": {
+      "status": "PASS",
+      "error": null,
+      "value": 20945000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain"
+    },
+    "short_term_investments": {
+      "status": "PASS",
+      "error": null,
+      "value": 118704000000.0,
+      "concept_qname": "us-gaap:MarketableSecuritiesCurrent",
+      "selection_tier": "plain"
+    },
+    "stockholders_equity": {
+      "status": "PASS",
+      "error": null,
+      "value": 251635000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain"
+    },
+    "adjusted_net_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": -124209000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "invested_capital": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 127426000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "current_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket value not reliably resolvable",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 13932000000.0,
+      "concept_qname": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+      "selection_tier": "plain"
+    },
+    "total_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "error": "no carrying-value total for the prior period, and the debt-maturity schedule has no prior-period comparative bucket in this same filing (structurally unavailable, not merely unresolved)"
+    },
+    "invested_capital_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "average_invested_capital": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "roic": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "ground_truth_engine_version": "v16",
+    "elapsed_seconds": 0.22899810003582388
+  },
+  "GOOGL_2022-12-31": {
+    "ticker": "GOOGL",
+    "report_date": "2022-12-31",
+    "accession_number": "0001652044-23-000016",
+    "current_debt": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket is nonzero (9447000000.0)",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt": {
+      "status": "PASS",
+      "error": null,
+      "value": 14701000000.0,
+      "concept_qname": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+      "selection_tier": "plain"
+    },
+    "total_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 15312000000.0,
+      "basis": "MATURITY_PRINCIPAL",
+      "source_current_debt_maturity": 221000000.0,
+      "source_long_term_debt_maturity": 15091000000.0,
+      "reported_total": 15312000000.0,
+      "reconciliation_gap": 0.0,
+      "maturity_role_uri": "http://www.google.com/role/DebtFuturePrincipalPaymentsforBorrowingsDetails",
+      "carrying_value_current_debt": null,
+      "carrying_value_current_debt_status": "REVIEW_REQUIRED",
+      "carrying_value_long_term_debt": 14701000000.0,
+      "carrying_value_long_term_debt_status": "PASS"
+    },
+    "cash_and_equivalents": {
+      "status": "PASS",
+      "error": null,
+      "value": 21879000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain"
+    },
+    "short_term_investments": {
+      "status": "PASS",
+      "error": null,
+      "value": 91883000000.0,
+      "concept_qname": "us-gaap:MarketableSecuritiesCurrent",
+      "selection_tier": "plain"
+    },
+    "stockholders_equity": {
+      "status": "PASS",
+      "error": null,
+      "value": 256144000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain"
+    },
+    "adjusted_net_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": -98450000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "invested_capital": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 157694000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "current_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket value not reliably resolvable",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 14817000000.0,
+      "concept_qname": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+      "selection_tier": "plain"
+    },
+    "total_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "error": "no carrying-value total for the prior period, and the debt-maturity schedule has no prior-period comparative bucket in this same filing (structurally unavailable, not merely unresolved)"
+    },
+    "invested_capital_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "average_invested_capital": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "roic": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "ground_truth_engine_version": "v15",
+    "elapsed_seconds": 0.23810360010247678
+  },
+  "GOOGL_2023-12-31": {
+    "ticker": "GOOGL",
+    "report_date": "2023-12-31",
+    "accession_number": "0001652044-24-000022",
+    "current_debt": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket is nonzero (8960000000.0)",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt": {
+      "status": "PASS",
+      "error": null,
+      "value": 13253000000.0,
+      "concept_qname": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+      "selection_tier": "plain"
+    },
+    "total_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 14862000000.0,
+      "basis": "MATURITY_PRINCIPAL",
+      "source_current_debt_maturity": 1299000000.0,
+      "source_long_term_debt_maturity": 13563000000.0,
+      "reported_total": 14862000000.0,
+      "reconciliation_gap": 0.0,
+      "maturity_role_uri": "http://www.google.com/role/DebtFuturePrincipalPaymentsforBorrowingsDetails",
+      "carrying_value_current_debt": null,
+      "carrying_value_current_debt_status": "REVIEW_REQUIRED",
+      "carrying_value_long_term_debt": 13253000000.0,
+      "carrying_value_long_term_debt_status": "PASS"
+    },
+    "cash_and_equivalents": {
+      "status": "PASS",
+      "error": null,
+      "value": 24048000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain"
+    },
+    "short_term_investments": {
+      "status": "PASS",
+      "error": null,
+      "value": 86868000000.0,
+      "concept_qname": "us-gaap:MarketableSecuritiesCurrent",
+      "selection_tier": "plain"
+    },
+    "stockholders_equity": {
+      "status": "PASS",
+      "error": null,
+      "value": 283379000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain"
+    },
+    "adjusted_net_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": -96054000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "invested_capital": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 187325000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "current_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket value not reliably resolvable",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 14701000000.0,
+      "concept_qname": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+      "selection_tier": "plain"
+    },
+    "total_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "error": "no carrying-value total for the prior period, and the debt-maturity schedule has no prior-period comparative bucket in this same filing (structurally unavailable, not merely unresolved)"
+    },
+    "invested_capital_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "average_invested_capital": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "roic": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "ground_truth_engine_version": "v15",
+    "elapsed_seconds": 0.2344461000757292
+  },
+  "GOOGL_2024-12-31": {
+    "ticker": "GOOGL",
+    "report_date": "2024-12-31",
+    "accession_number": "0001652044-25-000014",
+    "current_debt": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket is nonzero (8000000000.0)",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt": {
+      "status": "PASS",
+      "error": null,
+      "value": 10883000000.0,
+      "concept_qname": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+      "selection_tier": "plain"
+    },
+    "total_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 12000000000.0,
+      "basis": "MATURITY_PRINCIPAL",
+      "source_current_debt_maturity": 1000000000.0,
+      "source_long_term_debt_maturity": 11000000000.0,
+      "reported_total": 12000000000.0,
+      "reconciliation_gap": 0.0,
+      "maturity_role_uri": "http://www.google.com/role/DebtFuturePrincipalPaymentsforBorrowingsDetails",
+      "carrying_value_current_debt": null,
+      "carrying_value_current_debt_status": "REVIEW_REQUIRED",
+      "carrying_value_long_term_debt": 10883000000.0,
+      "carrying_value_long_term_debt_status": "PASS"
+    },
+    "cash_and_equivalents": {
+      "status": "PASS",
+      "error": null,
+      "value": 23466000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain"
+    },
+    "short_term_investments": {
+      "status": "PASS",
+      "error": null,
+      "value": 72191000000.0,
+      "concept_qname": "us-gaap:MarketableSecuritiesCurrent",
+      "selection_tier": "plain"
+    },
+    "stockholders_equity": {
+      "status": "PASS",
+      "error": null,
+      "value": 325084000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain"
+    },
+    "adjusted_net_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": -83657000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "invested_capital": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 241427000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "current_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket value not reliably resolvable",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 11870000000.0,
+      "concept_qname": "us-gaap:LongTermDebtAndCapitalLeaseObligations",
+      "selection_tier": "plain"
+    },
+    "total_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "error": "no carrying-value total for the prior period, and the debt-maturity schedule has no prior-period comparative bucket in this same filing (structurally unavailable, not merely unresolved)"
+    },
+    "invested_capital_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "average_invested_capital": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "roic": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "ground_truth_engine_version": "v14",
+    "elapsed_seconds": 0.2513552000746131
+  },
+  "GOOGL_2025-12-31": {
+    "ticker": "GOOGL",
+    "report_date": "2025-12-31",
+    "accession_number": "0001652044-26-000018",
+    "current_debt": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket is nonzero (36145000000.0)",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt": {
+      "status": "PASS",
+      "error": null,
+      "value": 46547000000.0,
+      "concept_qname": "us-gaap:LongTermDebtNoncurrent",
+      "selection_tier": "plain"
+    },
+    "total_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 49085000000.0,
+      "basis": "MATURITY_PRINCIPAL",
+      "source_current_debt_maturity": 2000000000.0,
+      "source_long_term_debt_maturity": 47085000000.0,
+      "reported_total": 49085000000.0,
+      "reconciliation_gap": 0.0,
+      "maturity_role_uri": "http://www.google.com/role/DebtFuturePrincipalPaymentsforBorrowingsDetails",
+      "carrying_value_current_debt": null,
+      "carrying_value_current_debt_status": "REVIEW_REQUIRED",
+      "carrying_value_long_term_debt": 46547000000.0,
+      "carrying_value_long_term_debt_status": "PASS"
+    },
+    "cash_and_equivalents": {
+      "status": "PASS",
+      "error": null,
+      "value": 30708000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain"
+    },
+    "short_term_investments": {
+      "status": "PASS",
+      "error": null,
+      "value": 96135000000.0,
+      "concept_qname": "us-gaap:MarketableSecuritiesCurrent",
+      "selection_tier": "plain"
+    },
+    "stockholders_equity": {
+      "status": "PASS",
+      "error": null,
+      "value": 415265000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain"
+    },
+    "adjusted_net_debt": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": -77758000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "invested_capital": {
+      "status": "PASS_MATURITY_BASIS",
+      "value": 337507000000.0,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "current_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "error": "condition 2 not proven: earliest bucket value not reliably resolvable",
+      "value": null,
+      "component_rows": []
+    },
+    "long_term_debt_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 10883000000.0,
+      "concept_qname": "us-gaap:LongTermDebtNoncurrent",
+      "selection_tier": "plain"
+    },
+    "total_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "error": "no carrying-value total for the prior period, and the debt-maturity schedule has no prior-period comparative bucket in this same filing (structurally unavailable, not merely unresolved)"
+    },
+    "invested_capital_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "average_invested_capital": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "basis": "MATURITY_PRINCIPAL"
+    },
+    "roic": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "ground_truth_engine_version": "v16",
+    "elapsed_seconds": 0.9732022000243887
+  }
+}

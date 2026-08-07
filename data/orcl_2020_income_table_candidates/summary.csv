@@ -1,0 +1,16 @@
+﻿table_index,matched_terms,row_count,column_count,output_file
+140,operating income,13,21,C:\AI_Stock_Agent\data\orcl_2020_income_table_candidates\table_0140.csv
+166,income before provision for income taxes | provision for income taxes,1,2,C:\AI_Stock_Agent\data\orcl_2020_income_table_candidates\table_0166.csv
+183,operating income,8,13,C:\AI_Stock_Agent\data\orcl_2020_income_table_candidates\table_0183.csv
+184,provision for income taxes,5,13,C:\AI_Stock_Agent\data\orcl_2020_income_table_candidates\table_0184.csv
+202,operating income,8,17,C:\AI_Stock_Agent\data\orcl_2020_income_table_candidates\table_0202.csv
+203,operating income,8,17,C:\AI_Stock_Agent\data\orcl_2020_income_table_candidates\table_0203.csv
+221,operating income | income before provision for income taxes | provision for income taxes,31,13,C:\AI_Stock_Agent\data\orcl_2020_income_table_candidates\table_0221.csv
+236,operating income,7,13,C:\AI_Stock_Agent\data\orcl_2020_income_table_candidates\table_0236.csv
+278,operating income,14,25,C:\AI_Stock_Agent\data\orcl_2020_income_table_candidates\table_0278.csv
+295,provision for income taxes,12,13,C:\AI_Stock_Agent\data\orcl_2020_income_table_candidates\table_0295.csv
+297,income before provision for income taxes | provision for income taxes,5,13,C:\AI_Stock_Agent\data\orcl_2020_income_table_candidates\table_0297.csv
+298,provision for income taxes,14,13,C:\AI_Stock_Agent\data\orcl_2020_income_table_candidates\table_0298.csv
+299,provision for income taxes,16,13,C:\AI_Stock_Agent\data\orcl_2020_income_table_candidates\table_0299.csv
+305,operating income | income before provision for income taxes | provision for income taxes,1,2,C:\AI_Stock_Agent\data\orcl_2020_income_table_candidates\table_0305.csv
+307,operating income | income before provision for income taxes | provision for income taxes,12,13,C:\AI_Stock_Agent\data\orcl_2020_income_table_candidates\table_0307.csv

@@ -1,0 +1,698 @@
+{
+  "PANW_2024-07-31": {
+    "ticker": "PANW",
+    "report_date": "2024-07-31",
+    "accession_number": "0001327567-24-000029",
+    "prior_report_date_requested": "2023-07-31",
+    "current_debt": {
+      "status": "PASS",
+      "value": 963900000.0,
+      "concept_qname": "us-gaap:ConvertibleDebtCurrent",
+      "selection_tier": "ancestry_classified",
+      "component_rows": [
+        {
+          "role_uri": "http://www.paloaltonetworks.com/role/CONSOLIDATEDBALANCESHEETS",
+          "role_definition": "9952151 - Statement - CONSOLIDATED BALANCE SHEETS",
+          "concept_qname": "us-gaap:ConvertibleDebtCurrent",
+          "label": "Convertible senior notes, net",
+          "period_type": "instant",
+          "selection_tier": "ancestry_classified"
+        }
+      ]
+    },
+    "long_term_debt": {
+      "status": "REVIEW_REQUIRED",
+      "error": "no unique long_term_debt row (label or ancestry)",
+      "value": null
+    },
+    "total_debt": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "basis": null,
+      "error": "no reliable carrying-value total (current_debt=PASS, long_term_debt=REVIEW_REQUIRED) and no maturity-basis fallback available either (no unique maturity schedule, or a bucket did not resolve to a single value)"
+    },
+    "cash_and_equivalents": {
+      "status": "PASS",
+      "error": null,
+      "value": 1535200000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2024-07-31",
+        "matched_date": "2024-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "short_term_investments": {
+      "status": "PASS",
+      "error": null,
+      "value": 1043600000.0,
+      "concept_qname": "us-gaap:ShortTermInvestments",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2024-07-31",
+        "matched_date": "2024-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "stockholders_equity": {
+      "status": "PASS",
+      "error": null,
+      "value": 5169700000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2024-07-31",
+        "matched_date": "2024-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "adjusted_net_debt": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "basis": null
+    },
+    "invested_capital": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "basis": null
+    },
+    "current_debt_prior": {
+      "status": "PASS",
+      "value": 1991500000.0,
+      "concept_qname": "us-gaap:ConvertibleDebtCurrent",
+      "selection_tier": "ancestry_classified",
+      "component_rows": [
+        {
+          "role_uri": "http://www.paloaltonetworks.com/role/CONSOLIDATEDBALANCESHEETS",
+          "role_definition": "9952151 - Statement - CONSOLIDATED BALANCE SHEETS",
+          "concept_qname": "us-gaap:ConvertibleDebtCurrent",
+          "label": "Convertible senior notes, net",
+          "period_type": "instant",
+          "selection_tier": "ancestry_classified"
+        }
+      ]
+    },
+    "long_term_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "error": "no unique long_term_debt row (label or ancestry)",
+      "value": null
+    },
+    "cash_and_equivalents_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 1135300000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2023-07-31",
+        "matched_date": "2023-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 10
+      }
+    },
+    "short_term_investments_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 1254700000.0,
+      "concept_qname": "us-gaap:ShortTermInvestments",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2023-07-31",
+        "matched_date": "2023-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 10
+      }
+    },
+    "stockholders_equity_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 1748400000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2023-07-31",
+        "matched_date": "2023-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 10
+      }
+    },
+    "total_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "error": "no carrying-value total for the prior period, and the debt-maturity schedule has no prior-period comparative bucket in this same filing (structurally unavailable, not merely unresolved)"
+    },
+    "invested_capital_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "average_invested_capital": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "basis": null
+    },
+    "roic": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    }
+  },
+  "PANW_2021-07-31": {
+    "ticker": "PANW",
+    "report_date": "2021-07-31",
+    "accession_number": "0001327567-21-000029",
+    "prior_report_date_requested": "2020-07-31",
+    "current_debt": {
+      "status": "PASS",
+      "value": 1557900000.0,
+      "concept_qname": "us-gaap:ConvertibleDebtCurrent",
+      "selection_tier": "ancestry_classified",
+      "component_rows": [
+        {
+          "role_uri": "http://www.paloaltonetworks.com/role/CONSOLIDATEDBALANCESHEETSStatement",
+          "role_definition": "100010002 - Statement - CONSOLIDATED BALANCE SHEETS Statement",
+          "concept_qname": "us-gaap:ConvertibleDebtCurrent",
+          "label": "Convertible senior notes, net",
+          "period_type": "instant",
+          "selection_tier": "ancestry_classified"
+        }
+      ]
+    },
+    "long_term_debt": {
+      "status": "PASS",
+      "error": null,
+      "value": 1668100000.0,
+      "concept_qname": "us-gaap:ConvertibleDebtNoncurrent",
+      "selection_tier": "ancestry_classified",
+      "date_evidence": {
+        "requested_date": "2021-07-31",
+        "matched_date": "2021-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "total_debt": {
+      "status": "PASS",
+      "value": 3226000000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "cash_and_equivalents": {
+      "status": "PASS",
+      "error": null,
+      "value": 1874200000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2021-07-31",
+        "matched_date": "2021-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "short_term_investments": {
+      "status": "PASS",
+      "error": null,
+      "value": 1026900000.0,
+      "concept_qname": "us-gaap:ShortTermInvestments",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2021-07-31",
+        "matched_date": "2021-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "stockholders_equity": {
+      "status": "PASS",
+      "error": null,
+      "value": 634500000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2021-07-31",
+        "matched_date": "2021-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "adjusted_net_debt": {
+      "status": "PASS",
+      "value": 324900000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "invested_capital": {
+      "status": "PASS",
+      "value": 959400000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "current_debt_prior": {
+      "status": "PASS",
+      "value": 0.0,
+      "concept_qname": "us-gaap:ConvertibleDebtCurrent",
+      "selection_tier": "ancestry_classified",
+      "component_rows": [
+        {
+          "role_uri": "http://www.paloaltonetworks.com/role/CONSOLIDATEDBALANCESHEETSStatement",
+          "role_definition": "100010002 - Statement - CONSOLIDATED BALANCE SHEETS Statement",
+          "concept_qname": "us-gaap:ConvertibleDebtCurrent",
+          "label": "Convertible senior notes, net",
+          "period_type": "instant",
+          "selection_tier": "ancestry_classified"
+        }
+      ]
+    },
+    "long_term_debt_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 3084100000.0,
+      "concept_qname": "us-gaap:ConvertibleDebtNoncurrent",
+      "selection_tier": "ancestry_classified",
+      "date_evidence": {
+        "requested_date": "2020-07-31",
+        "matched_date": "2020-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 10
+      }
+    },
+    "cash_and_equivalents_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 2958000000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2020-07-31",
+        "matched_date": "2020-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 10
+      }
+    },
+    "short_term_investments_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 789800000.0,
+      "concept_qname": "us-gaap:ShortTermInvestments",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2020-07-31",
+        "matched_date": "2020-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 10
+      }
+    },
+    "stockholders_equity_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 1101800000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2020-07-31",
+        "matched_date": "2020-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 10
+      }
+    },
+    "total_debt_prior": {
+      "status": "PASS",
+      "value": 3084100000.0
+    },
+    "invested_capital_prior": {
+      "status": "PASS",
+      "value": 438100000.0
+    },
+    "average_invested_capital": {
+      "status": "PASS",
+      "value": 698750000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "roic": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    }
+  },
+  "PANW_2022-07-31": {
+    "ticker": "PANW",
+    "report_date": "2022-07-31",
+    "accession_number": "0001327567-22-000028",
+    "prior_report_date_requested": "2021-07-31",
+    "current_debt": {
+      "status": "PASS",
+      "value": 3676800000.0,
+      "concept_qname": "us-gaap:ConvertibleDebtCurrent",
+      "selection_tier": "ancestry_classified",
+      "component_rows": [
+        {
+          "role_uri": "http://www.paloaltonetworks.com/role/CONSOLIDATEDBALANCESHEETS",
+          "role_definition": "1001003 - Statement - CONSOLIDATED BALANCE SHEETS",
+          "concept_qname": "us-gaap:ConvertibleDebtCurrent",
+          "label": "Convertible senior notes, net",
+          "period_type": "instant",
+          "selection_tier": "ancestry_classified"
+        }
+      ]
+    },
+    "long_term_debt": {
+      "status": "PASS",
+      "error": null,
+      "value": 0.0,
+      "concept_qname": "us-gaap:ConvertibleDebtNoncurrent",
+      "selection_tier": "ancestry_classified",
+      "date_evidence": {
+        "requested_date": "2022-07-31",
+        "matched_date": "2022-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "total_debt": {
+      "status": "PASS",
+      "value": 3676800000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "cash_and_equivalents": {
+      "status": "PASS",
+      "error": null,
+      "value": 2118500000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2022-07-31",
+        "matched_date": "2022-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "short_term_investments": {
+      "status": "PASS",
+      "error": null,
+      "value": 1516000000.0,
+      "concept_qname": "us-gaap:ShortTermInvestments",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2022-07-31",
+        "matched_date": "2022-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "stockholders_equity": {
+      "status": "PASS",
+      "error": null,
+      "value": 210000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2022-07-31",
+        "matched_date": "2022-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "adjusted_net_debt": {
+      "status": "PASS",
+      "value": 42300000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "invested_capital": {
+      "status": "PASS",
+      "value": 252300000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "current_debt_prior": {
+      "status": "PASS",
+      "value": 1557900000.0,
+      "concept_qname": "us-gaap:ConvertibleDebtCurrent",
+      "selection_tier": "ancestry_classified",
+      "component_rows": [
+        {
+          "role_uri": "http://www.paloaltonetworks.com/role/CONSOLIDATEDBALANCESHEETS",
+          "role_definition": "1001003 - Statement - CONSOLIDATED BALANCE SHEETS",
+          "concept_qname": "us-gaap:ConvertibleDebtCurrent",
+          "label": "Convertible senior notes, net",
+          "period_type": "instant",
+          "selection_tier": "ancestry_classified"
+        }
+      ]
+    },
+    "long_term_debt_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 1668100000.0,
+      "concept_qname": "us-gaap:ConvertibleDebtNoncurrent",
+      "selection_tier": "ancestry_classified",
+      "date_evidence": {
+        "requested_date": "2021-07-31",
+        "matched_date": "2021-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 10
+      }
+    },
+    "cash_and_equivalents_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 1874200000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2021-07-31",
+        "matched_date": "2021-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 10
+      }
+    },
+    "short_term_investments_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 1026900000.0,
+      "concept_qname": "us-gaap:ShortTermInvestments",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2021-07-31",
+        "matched_date": "2021-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 10
+      }
+    },
+    "stockholders_equity_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 634500000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2021-07-31",
+        "matched_date": "2021-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 10
+      }
+    },
+    "total_debt_prior": {
+      "status": "PASS",
+      "value": 3226000000.0
+    },
+    "invested_capital_prior": {
+      "status": "PASS",
+      "value": 959400000.0
+    },
+    "average_invested_capital": {
+      "status": "PASS",
+      "value": 605850000.0,
+      "basis": "GAAP_CARRYING_VALUE"
+    },
+    "roic": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    }
+  },
+  "PANW_2023-07-31": {
+    "ticker": "PANW",
+    "report_date": "2023-07-31",
+    "accession_number": "0001327567-23-000024",
+    "prior_report_date_requested": "2022-07-31",
+    "current_debt": {
+      "status": "PASS",
+      "value": 1991500000.0,
+      "concept_qname": "us-gaap:ConvertibleDebtCurrent",
+      "selection_tier": "ancestry_classified",
+      "component_rows": [
+        {
+          "role_uri": "http://www.paloaltonetworks.com/role/CONSOLIDATEDBALANCESHEETS",
+          "role_definition": "0000003 - Statement - CONSOLIDATED BALANCE SHEETS",
+          "concept_qname": "us-gaap:ConvertibleDebtCurrent",
+          "label": "Convertible senior notes, net",
+          "period_type": "instant",
+          "selection_tier": "ancestry_classified"
+        }
+      ]
+    },
+    "long_term_debt": {
+      "status": "REVIEW_REQUIRED",
+      "error": "no unique long_term_debt row (label or ancestry)",
+      "value": null
+    },
+    "total_debt": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "basis": null,
+      "error": "no reliable carrying-value total (current_debt=PASS, long_term_debt=REVIEW_REQUIRED) and no maturity-basis fallback available either (no unique maturity schedule, or a bucket did not resolve to a single value)"
+    },
+    "cash_and_equivalents": {
+      "status": "PASS",
+      "error": null,
+      "value": 1135300000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2023-07-31",
+        "matched_date": "2023-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "short_term_investments": {
+      "status": "PASS",
+      "error": null,
+      "value": 1254700000.0,
+      "concept_qname": "us-gaap:ShortTermInvestments",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2023-07-31",
+        "matched_date": "2023-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "stockholders_equity": {
+      "status": "PASS",
+      "error": null,
+      "value": 1748400000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2023-07-31",
+        "matched_date": "2023-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 0
+      }
+    },
+    "adjusted_net_debt": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "basis": null
+    },
+    "invested_capital": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "basis": null
+    },
+    "current_debt_prior": {
+      "status": "PASS",
+      "value": 3676800000.0,
+      "concept_qname": "us-gaap:ConvertibleDebtCurrent",
+      "selection_tier": "ancestry_classified",
+      "component_rows": [
+        {
+          "role_uri": "http://www.paloaltonetworks.com/role/CONSOLIDATEDBALANCESHEETS",
+          "role_definition": "0000003 - Statement - CONSOLIDATED BALANCE SHEETS",
+          "concept_qname": "us-gaap:ConvertibleDebtCurrent",
+          "label": "Convertible senior notes, net",
+          "period_type": "instant",
+          "selection_tier": "ancestry_classified"
+        }
+      ]
+    },
+    "long_term_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "error": "no unique long_term_debt row (label or ancestry)",
+      "value": null
+    },
+    "cash_and_equivalents_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 2118500000.0,
+      "concept_qname": "us-gaap:CashAndCashEquivalentsAtCarryingValue",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2022-07-31",
+        "matched_date": "2022-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 10
+      }
+    },
+    "short_term_investments_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 1516000000.0,
+      "concept_qname": "us-gaap:ShortTermInvestments",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2022-07-31",
+        "matched_date": "2022-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 10
+      }
+    },
+    "stockholders_equity_prior": {
+      "status": "PASS",
+      "error": null,
+      "value": 210000000.0,
+      "concept_qname": "us-gaap:StockholdersEquity",
+      "selection_tier": "plain",
+      "date_evidence": {
+        "requested_date": "2022-07-31",
+        "matched_date": "2022-07-31",
+        "matched_dates": null,
+        "date_diff_days": 0,
+        "date_tolerance_days": 10
+      }
+    },
+    "total_debt_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "error": "no carrying-value total for the prior period, and the debt-maturity schedule has no prior-period comparative bucket in this same filing (structurally unavailable, not merely unresolved)"
+    },
+    "invested_capital_prior": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    },
+    "average_invested_capital": {
+      "status": "REVIEW_REQUIRED",
+      "value": null,
+      "basis": null
+    },
+    "roic": {
+      "status": "REVIEW_REQUIRED",
+      "value": null
+    }
+  }
+}

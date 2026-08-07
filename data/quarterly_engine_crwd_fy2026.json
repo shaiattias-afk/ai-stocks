@@ -1,0 +1,135 @@
+{
+  "company": "CRWD",
+  "fiscal_year": "FY2026",
+  "fiscal_year_end": "2026-01-31",
+  "filings": {
+    "Q1": {
+      "ticker": "CRWD",
+      "form": "10-Q",
+      "report_date": "2025-04-30",
+      "filing_date": "2025-06-04",
+      "accession_number": "0001535527-25-000019"
+    },
+    "Q2": {
+      "ticker": "CRWD",
+      "form": "10-Q",
+      "report_date": "2025-07-31",
+      "filing_date": "2025-08-28",
+      "accession_number": "0001535527-25-000025"
+    },
+    "Q3": {
+      "ticker": "CRWD",
+      "form": "10-Q",
+      "report_date": "2025-10-31",
+      "filing_date": "2025-12-03",
+      "accession_number": "0001535527-25-000033"
+    },
+    "FY": {
+      "ticker": "CRWD",
+      "form": "10-K",
+      "report_date": "2026-01-31",
+      "filing_date": "2026-03-05",
+      "accession_number": "0001535527-26-000010"
+    }
+  },
+  "metrics": {
+    "revenue": {
+      "quarters": {},
+      "annual_value": 4812005000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:RevenueFromContractWithCustomerIncludingAssessedTax",
+        "accession_number": "0001535527-26-000010",
+        "context_id": "c-1",
+        "unit_id": "usd",
+        "period_start": "2025-02-01",
+        "period_end": "2026-01-31",
+        "filing_date": "2026-03-05",
+        "decimals": "-3"
+      },
+      "status": "REVIEW_REQUIRED",
+      "error": "Q1 quarter-duration value did not resolve to a single deterministic fact"
+    },
+    "operating_income": {
+      "quarters": {},
+      "annual_value": -293292000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:OperatingIncomeLoss",
+        "accession_number": "0001535527-26-000010",
+        "context_id": "c-1",
+        "unit_id": "usd",
+        "period_start": "2025-02-01",
+        "period_end": "2026-01-31",
+        "filing_date": "2026-03-05",
+        "decimals": "-3"
+      },
+      "status": "REVIEW_REQUIRED",
+      "error": "Q1 quarter-duration value did not resolve to a single deterministic fact"
+    },
+    "pretax_income": {
+      "quarters": {},
+      "annual_value": -126989000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest",
+        "accession_number": "0001535527-26-000010",
+        "context_id": "c-1",
+        "unit_id": "usd",
+        "period_start": "2025-02-01",
+        "period_end": "2026-01-31",
+        "filing_date": "2026-03-05",
+        "decimals": "-3"
+      },
+      "status": "REVIEW_REQUIRED",
+      "error": "Q1 quarter-duration value did not resolve to a single deterministic fact"
+    },
+    "income_tax_expense": {
+      "quarters": {},
+      "annual_value": 34176000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+        "accession_number": "0001535527-26-000010",
+        "context_id": "c-1",
+        "unit_id": "usd",
+        "period_start": "2025-02-01",
+        "period_end": "2026-01-31",
+        "filing_date": "2026-03-05",
+        "decimals": "-3"
+      },
+      "status": "REVIEW_REQUIRED",
+      "error": "Q1 quarter-duration value did not resolve to a single deterministic fact"
+    },
+    "operating_cash_flow": {
+      "quarters": {},
+      "annual_value": 1612349000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+        "accession_number": "0001535527-26-000010",
+        "context_id": "c-1",
+        "unit_id": "usd",
+        "period_start": "2025-02-01",
+        "period_end": "2026-01-31",
+        "filing_date": "2026-03-05",
+        "decimals": "-3"
+      },
+      "status": "REVIEW_REQUIRED",
+      "error": "Q1 quarter-duration value did not resolve to a single deterministic fact"
+    },
+    "capex": {
+      "quarters": {},
+      "annual_value": 302108000.0,
+      "annual_lineage": {
+        "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+        "accession_number": "0001535527-26-000010",
+        "context_id": "c-1",
+        "unit_id": "usd",
+        "period_start": "2025-02-01",
+        "period_end": "2026-01-31",
+        "filing_date": "2026-03-05",
+        "decimals": "-3"
+      },
+      "status": "REVIEW_REQUIRED",
+      "error": "Q1 quarter-duration value did not resolve to a single deterministic fact"
+    }
+  },
+  "reconciliation_policy": "XBRL_DECIMALS_ROUNDING_TOLERANCE",
+  "engine_script": "118_quarterly_extraction_engine.py"
+}

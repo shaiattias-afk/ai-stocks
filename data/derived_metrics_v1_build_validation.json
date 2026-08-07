@@ -1,0 +1,548 @@
+{
+  "mode": "check-only",
+  "status": "PASS",
+  "tickers_processed": [
+    "AMZN",
+    "CRWD",
+    "GOOGL",
+    "META",
+    "MSFT",
+    "MU",
+    "NVDA",
+    "ORCL",
+    "PANW"
+  ],
+  "per_ticker": {
+    "ORCL": {
+      "annual_periods": 5,
+      "annual_rows": 10,
+      "quarterly_periods": 20,
+      "quarterly_rows": 40,
+      "observation_count": 45,
+      "unresolved_count": 5,
+      "observations_by_metric": {
+        "annual_operating_margin": 5,
+        "annual_revenue_yoy_growth": 4,
+        "quarterly_operating_margin": 20,
+        "quarterly_revenue_yoy_growth": 16
+      }
+    },
+    "MSFT": {
+      "annual_periods": 5,
+      "annual_rows": 10,
+      "quarterly_periods": 20,
+      "quarterly_rows": 40,
+      "observation_count": 45,
+      "unresolved_count": 5,
+      "observations_by_metric": {
+        "annual_operating_margin": 5,
+        "annual_revenue_yoy_growth": 4,
+        "quarterly_operating_margin": 20,
+        "quarterly_revenue_yoy_growth": 16
+      }
+    },
+    "META": {
+      "annual_periods": 5,
+      "annual_rows": 10,
+      "quarterly_periods": 20,
+      "quarterly_rows": 40,
+      "observation_count": 45,
+      "unresolved_count": 5,
+      "observations_by_metric": {
+        "annual_operating_margin": 5,
+        "annual_revenue_yoy_growth": 4,
+        "quarterly_operating_margin": 20,
+        "quarterly_revenue_yoy_growth": 16
+      }
+    },
+    "NVDA": {
+      "annual_periods": 5,
+      "annual_rows": 10,
+      "quarterly_periods": 20,
+      "quarterly_rows": 40,
+      "observation_count": 45,
+      "unresolved_count": 5,
+      "observations_by_metric": {
+        "annual_operating_margin": 5,
+        "annual_revenue_yoy_growth": 4,
+        "quarterly_operating_margin": 20,
+        "quarterly_revenue_yoy_growth": 16
+      }
+    },
+    "GOOGL": {
+      "annual_periods": 5,
+      "annual_rows": 10,
+      "quarterly_periods": 20,
+      "quarterly_rows": 40,
+      "observation_count": 45,
+      "unresolved_count": 5,
+      "observations_by_metric": {
+        "annual_operating_margin": 5,
+        "annual_revenue_yoy_growth": 4,
+        "quarterly_operating_margin": 20,
+        "quarterly_revenue_yoy_growth": 16
+      }
+    },
+    "AMZN": {
+      "annual_periods": 5,
+      "annual_rows": 10,
+      "quarterly_periods": 20,
+      "quarterly_rows": 40,
+      "observation_count": 45,
+      "unresolved_count": 5,
+      "observations_by_metric": {
+        "annual_operating_margin": 5,
+        "annual_revenue_yoy_growth": 4,
+        "quarterly_operating_margin": 20,
+        "quarterly_revenue_yoy_growth": 16
+      }
+    },
+    "MU": {
+      "annual_periods": 5,
+      "annual_rows": 10,
+      "quarterly_periods": 20,
+      "quarterly_rows": 40,
+      "observation_count": 45,
+      "unresolved_count": 5,
+      "observations_by_metric": {
+        "annual_operating_margin": 5,
+        "annual_revenue_yoy_growth": 4,
+        "quarterly_operating_margin": 20,
+        "quarterly_revenue_yoy_growth": 16
+      }
+    },
+    "CRWD": {
+      "annual_periods": 5,
+      "annual_rows": 10,
+      "quarterly_periods": 20,
+      "quarterly_rows": 40,
+      "observation_count": 45,
+      "unresolved_count": 5,
+      "observations_by_metric": {
+        "annual_operating_margin": 5,
+        "annual_revenue_yoy_growth": 4,
+        "quarterly_operating_margin": 20,
+        "quarterly_revenue_yoy_growth": 16
+      }
+    },
+    "PANW": {
+      "annual_periods": 5,
+      "annual_rows": 10,
+      "quarterly_periods": 20,
+      "quarterly_rows": 40,
+      "observation_count": 45,
+      "unresolved_count": 5,
+      "observations_by_metric": {
+        "annual_operating_margin": 5,
+        "annual_revenue_yoy_growth": 4,
+        "quarterly_operating_margin": 20,
+        "quarterly_revenue_yoy_growth": 16
+      }
+    }
+  },
+  "total_observations": 405,
+  "total_unresolved": 45,
+  "unresolved": [
+    {
+      "ticker": "ORCL",
+      "frequency": "annual",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-05-31",
+      "fiscal_quarter": null,
+      "reason": "no prior fiscal year revenue available in Annual Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "ORCL",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-05-31",
+      "fiscal_quarter": "Q1",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "ORCL",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-05-31",
+      "fiscal_quarter": "Q2",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "ORCL",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-05-31",
+      "fiscal_quarter": "Q3",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "ORCL",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-05-31",
+      "fiscal_quarter": "Q4",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "MSFT",
+      "frequency": "annual",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-06-30",
+      "fiscal_quarter": null,
+      "reason": "no prior fiscal year revenue available in Annual Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "MSFT",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-06-30",
+      "fiscal_quarter": "Q1",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "MSFT",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-06-30",
+      "fiscal_quarter": "Q2",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "MSFT",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-06-30",
+      "fiscal_quarter": "Q3",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "MSFT",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-06-30",
+      "fiscal_quarter": "Q4",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "META",
+      "frequency": "annual",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-12-31",
+      "fiscal_quarter": null,
+      "reason": "no prior fiscal year revenue available in Annual Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "META",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-12-31",
+      "fiscal_quarter": "Q1",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "META",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-12-31",
+      "fiscal_quarter": "Q2",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "META",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-12-31",
+      "fiscal_quarter": "Q3",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "META",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-12-31",
+      "fiscal_quarter": "Q4",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "NVDA",
+      "frequency": "annual",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-01-26",
+      "fiscal_quarter": null,
+      "reason": "no prior fiscal year revenue available in Annual Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "NVDA",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-01-26",
+      "fiscal_quarter": "Q1",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "NVDA",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-01-26",
+      "fiscal_quarter": "Q2",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "NVDA",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-01-26",
+      "fiscal_quarter": "Q3",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "NVDA",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2020-01-26",
+      "fiscal_quarter": "Q4",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "GOOGL",
+      "frequency": "annual",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-12-31",
+      "fiscal_quarter": null,
+      "reason": "no prior fiscal year revenue available in Annual Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "GOOGL",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-12-31",
+      "fiscal_quarter": "Q1",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "GOOGL",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-12-31",
+      "fiscal_quarter": "Q2",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "GOOGL",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-12-31",
+      "fiscal_quarter": "Q3",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "GOOGL",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-12-31",
+      "fiscal_quarter": "Q4",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "AMZN",
+      "frequency": "annual",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-12-31",
+      "fiscal_quarter": null,
+      "reason": "no prior fiscal year revenue available in Annual Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "AMZN",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-12-31",
+      "fiscal_quarter": "Q1",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "AMZN",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-12-31",
+      "fiscal_quarter": "Q2",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "AMZN",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-12-31",
+      "fiscal_quarter": "Q3",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "AMZN",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-12-31",
+      "fiscal_quarter": "Q4",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "MU",
+      "frequency": "annual",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-09-02",
+      "fiscal_quarter": null,
+      "reason": "no prior fiscal year revenue available in Annual Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "MU",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-09-02",
+      "fiscal_quarter": "Q1",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "MU",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-09-02",
+      "fiscal_quarter": "Q2",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "MU",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-09-02",
+      "fiscal_quarter": "Q3",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "MU",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-09-02",
+      "fiscal_quarter": "Q4",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "CRWD",
+      "frequency": "annual",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2022-01-31",
+      "fiscal_quarter": null,
+      "reason": "no prior fiscal year revenue available in Annual Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "CRWD",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2022-01-31",
+      "fiscal_quarter": "Q1",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "CRWD",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2022-01-31",
+      "fiscal_quarter": "Q2",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "CRWD",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2022-01-31",
+      "fiscal_quarter": "Q3",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "CRWD",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2022-01-31",
+      "fiscal_quarter": "Q4",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "PANW",
+      "frequency": "annual",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-07-31",
+      "fiscal_quarter": null,
+      "reason": "no prior fiscal year revenue available in Annual Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "PANW",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-07-31",
+      "fiscal_quarter": "Q1",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "PANW",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-07-31",
+      "fiscal_quarter": "Q2",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "PANW",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-07-31",
+      "fiscal_quarter": "Q3",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "ticker": "PANW",
+      "frequency": "quarterly",
+      "derived_metric": "revenue_yoy_growth",
+      "fiscal_year_end": "2021-07-31",
+      "fiscal_quarter": "Q4",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    }
+  ],
+  "global_checks": {
+    "exactly_9_tickers_processed": true,
+    "no_duplicate_source_rows": true,
+    "no_duplicate_derived_keys": true,
+    "no_missing_lineage": true,
+    "no_future_data_violations": true,
+    "no_ambiguous_prior_period_matching": true,
+    "all_source_run_ids_and_accessions_exist": true,
+    "sql_and_python_results_match": true,
+    "msft_matches_proof_exactly": true,
+    "annual_v1_checksum_unchanged": true,
+    "quarterly_v1_counts_unchanged": true,
+    "database_unchanged": true
+  },
+  "msft_proof_comparison": {
+    "passed": true,
+    "proof_observation_count": 45,
+    "new_msft_observation_count": 45,
+    "mismatches": []
+  },
+  "expected_production_table_ddl": "CREATE TABLE derived_metric_results (\n    ticker                  VARCHAR NOT NULL,\n    frequency               VARCHAR NOT NULL,\n    fiscal_year_end         DATE NOT NULL,\n    fiscal_year             INTEGER NOT NULL,\n    fiscal_quarter          TINYINT,\n    derived_metric          VARCHAR NOT NULL,\n    value                   DECIMAL(38,18) NOT NULL,\n    availability_date       DATE NOT NULL,\n    formula                 VARCHAR NOT NULL,\n    source_periods          JSON NOT NULL,\n    source_run_ids          JSON NOT NULL,\n    source_accessions       JSON NOT NULL,\n    reconciliation_status   VARCHAR NOT NULL,\n    engine_version          VARCHAR NOT NULL,\n    created_at              TIMESTAMP NOT NULL,\n    PRIMARY KEY (ticker, frequency, fiscal_year_end, fiscal_quarter, derived_metric)\n)",
+  "database_sha256_before": "2a37d47b2257a34545196a9b4435f493cb88611215afb3f35a766d21fa325773",
+  "database_sha256_after": "2a37d47b2257a34545196a9b4435f493cb88611215afb3f35a766d21fa325773",
+  "annual_v1_sha256_before": "e655671e36298ce2297b8c86077a8f0559998b81245d1850004da36858e9f814",
+  "annual_v1_sha256_after": "e655671e36298ce2297b8c86077a8f0559998b81245d1850004da36858e9f814",
+  "pre_counts": {
+    "quarterly_extraction_runs": 45,
+    "quarterly_metric_results": 1080,
+    "financial_metric_results": 900
+  },
+  "post_counts": {
+    "quarterly_extraction_runs": 45,
+    "quarterly_metric_results": 1080,
+    "financial_metric_results": 900
+  },
+  "table_created": false,
+  "backup_performed": false,
+  "archive_created": false,
+  "pid_lock_acquired": false,
+  "runtime_seconds": 0.66,
+  "checked_at": "2026-08-06T13:30:14.056Z"
+}

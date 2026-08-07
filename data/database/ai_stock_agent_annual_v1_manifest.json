@@ -1,0 +1,27 @@
+{
+  "snapshot_name": "Annual V1",
+  "snapshot_created_at_utc": "2026-08-03T12:44:38.202535+00:00",
+  "source_database_path": "C:\\AI_Stock_Agent\\data\\database\\ai_stock_agent.duckdb",
+  "snapshot_database_path": "C:\\AI_Stock_Agent\\data\\database\\ai_stock_agent_annual_v1.duckdb",
+  "sha256_checksum": "e655671e36298ce2297b8c86077a8f0559998b81245d1850004da36858e9f814",
+  "target_company_years": 45,
+  "primary_metrics_per_company_year": 20,
+  "total_primary_metric_results": 900,
+  "status_breakdown": {
+    "PASS_NORMALIZED_TAX": 33,
+    "PASS_DIRECT_AGGREGATE": 19,
+    "PASS_MATURITY_BASIS": 58,
+    "PASS": 790
+  },
+  "review_required_count": 0,
+  "supplementary_prior_year_filings": [
+    "0001018724-21-000004",
+    "0001652044-21-000010",
+    "0001326801-20-000013",
+    "0001535527-21-000007",
+    "0001045810-19-000023"
+  ],
+  "supplementary_prior_year_filings_note": "These 5 accessions were locked/warehoused/computed ONLY to supply a prior-fiscal-year invested_capital value for the first year of each company's 45-company-year window (D-029, D-031, D-034) — they are NOT part of the 45 target company-years and are excluded from all counts above.",
+  "latest_completed_milestone": "D-034",
+  "immutability_note": "This snapshot must not be modified after creation. Any future correction to the annual dataset must produce a new, separately-versioned snapshot (e.g. Annual V2), never an in-place edit of this file."
+}

@@ -1,0 +1,69 @@
+{
+  "company": "NVDA",
+  "fiscal_year": "FY2024",
+  "fiscal_year_end": "2024-01-28",
+  "filings": {
+    "Q1": {
+      "ticker": "NVDA",
+      "form": "10-Q",
+      "report_date": "2023-04-30",
+      "filing_date": "2023-05-26",
+      "accession_number": "0001045810-23-000093"
+    },
+    "Q2": {
+      "ticker": "NVDA",
+      "form": "10-Q",
+      "report_date": "2023-07-30",
+      "filing_date": "2023-08-28",
+      "accession_number": "0001045810-23-000175"
+    },
+    "Q3": {
+      "ticker": "NVDA",
+      "form": "10-Q",
+      "report_date": "2023-10-29",
+      "filing_date": "2023-11-21",
+      "accession_number": "0001045810-23-000227"
+    },
+    "FY": {
+      "ticker": "NVDA",
+      "form": "10-K",
+      "report_date": "2024-01-28",
+      "filing_date": "2024-02-21",
+      "accession_number": "0001045810-24-000029"
+    }
+  },
+  "metrics": {
+    "revenue": {
+      "quarters": {},
+      "status": "REVIEW_REQUIRED",
+      "error": "annual (FY) 12-month value did not resolve to a single deterministic fact"
+    },
+    "operating_income": {
+      "quarters": {},
+      "status": "REVIEW_REQUIRED",
+      "error": "annual (FY) 12-month value did not resolve to a single deterministic fact"
+    },
+    "pretax_income": {
+      "quarters": {},
+      "status": "REVIEW_REQUIRED",
+      "error": "annual (FY) 12-month value did not resolve to a single deterministic fact"
+    },
+    "income_tax_expense": {
+      "quarters": {},
+      "status": "REVIEW_REQUIRED",
+      "error": "annual (FY) 12-month value did not resolve to a single deterministic fact"
+    },
+    "operating_cash_flow": {
+      "quarters": {},
+      "status": "REVIEW_REQUIRED",
+      "error": "annual (FY) 12-month value did not resolve to a single deterministic fact"
+    },
+    "capex": {
+      "quarters": {},
+      "status": "REVIEW_REQUIRED",
+      "error": "annual (FY) 12-month value did not resolve to a single deterministic fact"
+    }
+  },
+  "reconciliation_policy": "XBRL_DECIMALS_ROUNDING_TOLERANCE",
+  "engine_script": "118_quarterly_extraction_engine.py"
+}

@@ -1,0 +1,4 @@
+﻿field_name,validated_value_usd,matched_fact_name,matched_value_usd,period_start,period_end,unit_definition,source_file,match_count,mapping_status,approved_for_use
+operating_income,15353000000,us-gaap:OperatingIncomeLoss,15353000000.0,2023-06-01,2024-05-31,iso4217:USD,C:\AI_Stock_Agent\data\sec_filings\ORCL\000095017024075605\orcl-20240531.htm,1,EXACT_MATCH,True
+pretax_income,11741000000,,,,,,,0,NO_EXACT_MATCH,False
+tax_expense,1274000000,us-gaap:IncomeTaxExpenseBenefit,1274000000.0,2023-06-01,2024-05-31,iso4217:USD,C:\AI_Stock_Agent\data\sec_filings\ORCL\000095017024075605\orcl-20240531.htm,1,EXACT_MATCH,True

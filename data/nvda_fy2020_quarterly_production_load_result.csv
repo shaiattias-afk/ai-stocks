@@ -1,0 +1,24 @@
+﻿field,value
+status,PASS
+old_run_id,59b524e2-4639-4af8-82c3-390b2363c40d
+new_run_id,22c174be-d095-48da-8d68-8388805b9c7d
+post_quarterly_extraction_runs,45
+post_quarterly_metric_results,1080
+post_financial_metric_results,900
+post_unique_review_required,4
+remaining_review_required_cases,CRWD 2022-01-31 pretax_income;MU 2021-09-02 pretax_income;PANW 2021-07-31 pretax_income;PANW 2021-07-31 revenue
+check_quarterly_extraction_runs_45,True
+check_quarterly_metric_results_1080,True
+check_financial_metric_results_900,True
+check_every_company_year_24_rows,True
+check_duplicate_natural_keys_zero,True
+check_missing_lineage_zero,True
+check_availability_mismatches_zero,True
+check_no_future_data_violations_nvda,True
+check_nvda_24_pass_rows,True
+check_nvda_zero_review_required,True
+check_project_wide_review_required_reported,True
+check_remaining_cases_match_expected_four,True
+check_annual_v1_checksum_unchanged,True
+check_warehouse_total_facts_unchanged,True
+runtime_seconds,0.87

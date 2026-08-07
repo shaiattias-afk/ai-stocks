@@ -1,0 +1,74 @@
+{
+  "release": "QUARTERLY_DATA_V1",
+  "status": "FROZEN",
+  "frozen_at_utc": "2026-08-06T08:08:35.172Z",
+  "authoritative_quarterly_engine": "QUARTERLY_ENGINE_V5_STANDARD_GAAP_ALLOW_LIST",
+  "engine_script": "scripts/148_quarterly_engine_v5_standard_gaap_fallback.py",
+  "production_load_script": "scripts/151_v5_quarterly_production_load.py",
+  "verification_sources_read_only": {
+    "v5_production_load_result": "data/v5_production_load_result.json",
+    "v5_production_load_checkpoint": "data/v5_production_load_checkpoint.json",
+    "v5_production_load_manifest": "data/archive/v5_production_load_manifest.json",
+    "v5_production_load_log": "logs/v5_production_load.log",
+    "production_db": "data/database/ai_stock_agent.duckdb",
+    "warehouse_db": "data/database/xbrl_warehouse_proof.duckdb"
+  },
+  "production_load": {
+    "status": "PASS",
+    "atomic_transaction_committed": true,
+    "target_company_years": [
+      {"ticker": "CRWD", "fiscal_year_end": "2022-01-31", "old_run_id": "f5a8de2c-539d-499d-99df-bf60c61176ea", "new_run_id": "f610bc3a-1c58-4d26-be9b-674126766023"},
+      {"ticker": "MU", "fiscal_year_end": "2021-09-02", "old_run_id": "dae1c3f9-e709-4499-ac0e-2c885254b9ff", "new_run_id": "082ec4d1-5617-459c-8c7c-d0fcdb60edda"},
+      {"ticker": "PANW", "fiscal_year_end": "2021-07-31", "old_run_id": "f72f4da0-8815-4450-a540-0162024685c3", "new_run_id": "ab9b7e8e-bec0-484a-8638-7ec9249b0a74"}
+    ],
+    "changed_rows": 16,
+    "unchanged_rows": 56,
+    "backup_path": "data/database/backups/ai_stock_agent_pre_v5_production_load_20260806T080759Z.duckdb",
+    "backup_checksum_sha256": "79a57d28743e0d12df82dfb41a0c041662ece0d729e9414980f94e460604655f"
+  },
+  "freeze_verification_checks": {
+    "production_load_status_pass": true,
+    "atomic_transaction_committed": true,
+    "quarterly_extraction_runs_45": true,
+    "quarterly_metric_results_1080": true,
+    "financial_metric_results_900": true,
+    "unique_review_required_0": true,
+    "every_company_year_24_rows": true,
+    "duplicate_quarterly_keys_zero": true,
+    "missing_lineage_zero": true,
+    "availability_mismatches_zero": true,
+    "future_data_violations_zero": true,
+    "annual_v1_checksum_unchanged": true,
+    "warehouse_facts_225780": true,
+    "target_company_years_engine_version_v5": true
+  },
+  "measured_values": {
+    "quarterly_extraction_runs": 45,
+    "quarterly_metric_results": 1080,
+    "financial_metric_results": 900,
+    "unique_review_required": 0,
+    "warehouse_facts": 225780,
+    "annual_v1_checksum_sha256": "e655671e36298ce2297b8c86077a8f0559998b81245d1850004da36858e9f814",
+    "standard_gaap_allow_list_activations": 4,
+    "point_in_time_reuse_activations": 8,
+    "fallback_lineage_violations_found": 0
+  },
+  "resolved_metric_year_families": [
+    "CRWD 2022-01-31 pretax_income",
+    "MU 2021-09-02 pretax_income",
+    "PANW 2021-07-31 pretax_income",
+    "PANW 2021-07-31 revenue"
+  ],
+  "standing_declarations": {
+    "quarterly_data_v1_frozen": true,
+    "authoritative_quarterly_engine": "QUARTERLY_ENGINE_V5_STANDARD_GAAP_ALLOW_LIST",
+    "approved_inputs_for_next_project_stage": [
+      "Annual Data V1 (data/database/ai_stock_agent_annual_v1.duckdb)",
+      "Quarterly Data V1 (data/database/ai_stock_agent.duckdb, quarterly_extraction_runs + quarterly_metric_results)"
+    ],
+    "further_data_engine_changes_require": "a new engine version and a full regression, per this project's established discipline (see docs/DECISIONS_LOG.md D-042)"
+  },
+  "verification_method": "read-only re-derivation directly from ai_stock_agent.duckdb and xbrl_warehouse_proof.duckdb, independent of the load script's own self-reported result",
+  "no_extraction_engine_run": true,
+  "no_database_modified_by_this_verification": true
+}

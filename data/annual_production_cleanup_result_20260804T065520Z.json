@@ -1,0 +1,53 @@
+{
+  "phase1_audit": {
+    "v1_authoritative_rows": 900,
+    "v1_company_years": 45,
+    "v1_status_breakdown": {
+      "PASS": 790,
+      "PASS_MATURITY_BASIS": 58,
+      "PASS_NORMALIZED_TAX": 33,
+      "PASS_DIRECT_AGGREGATE": 19
+    },
+    "v1_review_required": 0,
+    "production_total_rows_before_cleanup": 1882,
+    "rows_matching_annual_v1": 900,
+    "historical_obsolete_rows_outside_v1": 982,
+    "missing_authoritative_rows": [],
+    "ambiguous_mappings": [],
+    "schema_identical": true,
+    "schema_diff": []
+  },
+  "phase2_backup": {
+    "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\ai_stock_agent_pre_annual_cleanup_20260804T065520Z.duckdb",
+    "backup_checksum": "24f590043ba46af2dc3c83e2fd33bc13c98356c921318aebce15ee1de28b471e",
+    "source_checksum": "24f590043ba46af2dc3c83e2fd33bc13c98356c921318aebce15ee1de28b471e",
+    "pre_cleanup_parquet": "C:\\AI_Stock_Agent\\data\\archive\\financial_metric_results_pre_cleanup_20260804T065520Z.parquet",
+    "removed_parquet": "C:\\AI_Stock_Agent\\data\\archive\\financial_metric_results_removed_20260804T065520Z.parquet",
+    "manifest_path": "C:\\AI_Stock_Agent\\data\\archive\\annual_production_cleanup_manifest_20260804T065520Z.json",
+    "rows_removed": 982,
+    "rows_retained": 900,
+    "pre_cleanup_total": 1882
+  },
+  "phase3_cleanup": {
+    "status": "COMMITTED",
+    "row_count": 900
+  },
+  "post_cleanup_validation": {
+    "financial_metric_results_count": 900,
+    "company_years": 45,
+    "metrics_per_company_year_all_20": true,
+    "review_required_count": 0,
+    "duplicate_natural_keys": [],
+    "quarterly_extraction_runs_count": 9,
+    "quarterly_metric_results_count": 216,
+    "quarterly_duplicate_natural_keys": [],
+    "quarterly_missing_lineage_count": 0,
+    "quarterly_availability_date_mismatches": 0,
+    "sec_filings_form_counts": {
+      "10-K": 50,
+      "10-Q": 27
+    },
+    "annual_10k_warehouse_pass_count": 50,
+    "annual_v1_checksum_unchanged": true
+  }
+}

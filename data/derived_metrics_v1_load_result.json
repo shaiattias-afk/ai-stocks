@@ -1,0 +1,5 @@
+{
+  "status": "FAIL",
+  "error": "Constraint Error: NOT NULL constraint failed: derived_metric_results.fiscal_quarter",
+  "failed_at": "2026-08-06T13:37:33.619Z"
+}

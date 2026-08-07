@@ -1,0 +1,2 @@
+﻿ticker,report_year,operating_income_usd_millions,pretax_income_usd_millions,tax_expense_usd_millions,effective_tax_rate,effective_tax_rate_percent,nopat_usd_millions,nopat_usd,source,validation_passed
+ORCL,2024,15353.0,11741.0,1274.0,0.10850864491951281,10.850864491951281,13687.06677455072,13687066774.55072,Oracle 2024 full 10-K validated income statement,True

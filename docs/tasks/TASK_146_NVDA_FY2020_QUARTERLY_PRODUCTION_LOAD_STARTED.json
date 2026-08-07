@@ -1,0 +1,17 @@
+{
+  "task_id": "TASK_146_NVDA_FY2020_QUARTERLY_PRODUCTION_LOAD",
+  "status": "STARTED",
+  "started_at": "2026-08-05T16:10:03.839Z",
+  "objective": "Load the already-validated 24-row NVDA FY2020 (fiscal-year-end 2020-01-26) quarterly V4 proof (data/nvda_fy2020_quarterly_v4_proof.json, from TASK_145) into quarterly production (data/database/ai_stock_agent.duckdb) for exactly this one company-year. Does not rerun the quarterly engine, does not touch the warehouse or annual production, does not process any other company-year.",
+  "read_only": false,
+  "expected_outputs": [
+    "scripts/147_nvda_fy2020_quarterly_production_load.py",
+    "data/nvda_fy2020_quarterly_production_load_result.json",
+    "data/nvda_fy2020_quarterly_production_load_result.csv",
+    "data/archive/nvda_fy2020_quarterly_production_load_manifest.json",
+    "docs/NVDA_FY2020_QUARTERLY_PRODUCTION_LOAD.md"
+  ],
+  "process_id": 7672,
+  "hostname": "shai-laptop",
+  "utility_version": "142_task_marker_guard-1.0.0"
+}

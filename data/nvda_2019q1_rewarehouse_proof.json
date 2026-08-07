@@ -1,0 +1,709 @@
+{
+  "status": "PASS",
+  "broken_accession": {
+    "ticker": "NVDA",
+    "report_date": "2019-04-28",
+    "accession_number": "0001045810-19-000079"
+  },
+  "known_good_baseline_accession": {
+    "report_date": "2019-07-28",
+    "filing_date": "2019-08-15",
+    "accession_number": "0001045810-19-000144",
+    "existing_fact_count_in_production_warehouse": 920
+  },
+  "phase1_locked_package_inspection": {
+    "locked_dir": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\NVDA\\000104581019000079",
+    "file_count": 76,
+    "files": [
+      {
+        "name": "0001045810-19-000079-index-headers.html",
+        "size_bytes": 18346,
+        "sha256": "795cff0e9baa1de80ed7ecf3fc54e67e6ff70160d215f348312b18078ba37a7c"
+      },
+      {
+        "name": "0001045810-19-000079-index.html",
+        "size_bytes": 11798,
+        "sha256": "0efa44a171dde1dff16000045f4f25d51a6a235a10b8e610902d0704ca67b27b"
+      },
+      {
+        "name": "0001045810-19-000079.txt",
+        "size_bytes": 6278349,
+        "sha256": null
+      },
+      {
+        "name": "downloaded_files_manifest.csv",
+        "size_bytes": 14751,
+        "sha256": "221f946bdd125e8288acaac8236b0143536d053b5d2078a92ce8c0da0d5f687e"
+      },
+      {
+        "name": "FilingSummary.xml",
+        "size_bytes": 35095,
+        "sha256": "e7cf84776acfea3db8a26c681df4ed66ebde047dc703779be1403983bd0890e0"
+      },
+      {
+        "name": "locked_filing_manifest.json",
+        "size_bytes": 650,
+        "sha256": "668e5b81a3e2d0332f6b135c8cdf83faf7b5c97ba2be887d1bb6c29cdf539c8e"
+      },
+      {
+        "name": "nvda-20190428.xml",
+        "size_bytes": 1418368,
+        "sha256": "2ff9fdf0280b17af64125cd326999fd0c6abbf24c38a7e8b299b71aa3d10b1d6"
+      },
+      {
+        "name": "nvda-20190428.xsd",
+        "size_bytes": 43343,
+        "sha256": "732627174e2bc3bf5161b47c304de08d8da34aff768aa5df2a891b6571236dc3"
+      },
+      {
+        "name": "nvda-20190428_cal.xml",
+        "size_bytes": 102829,
+        "sha256": "33095e39c7bb104f86f2b9c153a11a8904d346102aa1bc9d2d352039c555bfca"
+      },
+      {
+        "name": "nvda-20190428_def.xml",
+        "size_bytes": 161442,
+        "sha256": "584eee68d193c2d7ac72540d3c2f89253bcb7b02c24abbe916126aec837c1c8a"
+      },
+      {
+        "name": "nvda-20190428_lab.xml",
+        "size_bytes": 610880,
+        "sha256": "38c85f8ad1cb6ac92f1060636c0d1f11ffc36535218d324b4bb2b5db58911472"
+      },
+      {
+        "name": "nvda-20190428_pre.xml",
+        "size_bytes": 346457,
+        "sha256": "8501500058af3961f23838a80f5ccbec6879d9485d9bdfa4ef58d187148f650a"
+      },
+      {
+        "name": "nvda2020q110q.htm",
+        "size_bytes": 1096454,
+        "sha256": "4494134f0dcbc36adfbdaaef493ed3f3d6111cfbc44c11b47d08d8f83eea32c0"
+      },
+      {
+        "name": "nvda2020q1ex311.htm",
+        "size_bytes": 9952,
+        "sha256": "c2c7ef254c41f03e56213f25f6819dbf3468cdf35382bc482e87a7b0c9800a62"
+      },
+      {
+        "name": "nvda2020q1ex312.htm",
+        "size_bytes": 10038,
+        "sha256": "aa47a41dc0bc32aaf6c37b4ff35e78890b20edc9fbae257ee6a0d714c12e1a25"
+      },
+      {
+        "name": "nvda2020q1ex321.htm",
+        "size_bytes": 6396,
+        "sha256": "75809748b547e33edcb2cc27b25610a00aaad61239759f22d70d76465a629edd"
+      },
+      {
+        "name": "nvda2020q1ex322.htm",
+        "size_bytes": 6551,
+        "sha256": "8999c9f19e2cf6335763265a2cd5e8abf1805ee8501808a9d3504511f6042f5e"
+      },
+      {
+        "name": "R1.htm",
+        "size_bytes": 24095,
+        "sha256": "ff81d42cba22f1519c79d9db987ca541e4ce59ca5ee7bb72f52182ac8232d23d"
+      },
+      {
+        "name": "R10.htm",
+        "size_bytes": 37412,
+        "sha256": "5ea983f5de439ef326d2a2d7f173e7e30ae0973f3ec2f464eb031a10d421f532"
+      },
+      {
+        "name": "R11.htm",
+        "size_bytes": 34263,
+        "sha256": "39ff9795b8e1c4c3344258ffa29e7687bc88d530ff99cf1d8325eb1a26b35c03"
+      },
+      {
+        "name": "R12.htm",
+        "size_bytes": 29311,
+        "sha256": "7b9f2d2c23120728ba897422c4b04f60c869bed1be7c7a1a03d2692708a223fe"
+      },
+      {
+        "name": "R13.htm",
+        "size_bytes": 10738,
+        "sha256": "e650d7fd6e72152a29231e430b936b66eeb215278edbf2819745dd46b0345a51"
+      },
+      {
+        "name": "R14.htm",
+        "size_bytes": 156063,
+        "sha256": "cc603133dfc50afceb782fff690a26f933e748f1141c8acbfc5352599ff3e467"
+      },
+      {
+        "name": "R15.htm",
+        "size_bytes": 43843,
+        "sha256": "0e0741500202e478aaca7842cd57fe7169de2b96245b78db4118f98fa7b81ba5"
+      },
+      {
+        "name": "R16.htm",
+        "size_bytes": 35238,
+        "sha256": "4af5545fddbf5b556c100b85bcfbcb1d5940a960c2c0a775a8be756c866b514c"
+      },
+      {
+        "name": "R17.htm",
+        "size_bytes": 73458,
+        "sha256": "4d659914f8530e49f1fbe4648a68d562afc6d1ef3e7e10015fa62d2c09c2caef"
+      },
+      {
+        "name": "R18.htm",
+        "size_bytes": 16125,
+        "sha256": "f5885890918536899d6f9644c3fae7950f3633803044f171693f71f93c77a0ff"
+      },
+      {
+        "name": "R19.htm",
+        "size_bytes": 29464,
+        "sha256": "975ef71d2abf67d82a588270f5c207ca68712f38702deb0d8fb3ff48aaf51075"
+      },
+      {
+        "name": "R2.htm",
+        "size_bytes": 53663,
+        "sha256": "a098e6a13183882ec701f983c8918e5cc94435679a4cc45b09b0998c14ecc186"
+      },
+      {
+        "name": "R20.htm",
+        "size_bytes": 23488,
+        "sha256": "5ac65d7b211ccc85865474fecef6ea24e1041257c906bb4aca2b26423558a4e1"
+      },
+      {
+        "name": "R21.htm",
+        "size_bytes": 9332,
+        "sha256": "0767affd08aa6a2f61f39dd3a9217893605ea804a891dd73a0f41587123fbc1b"
+      },
+      {
+        "name": "R22.htm",
+        "size_bytes": 95206,
+        "sha256": "5284df4fb723668e6d9942fcecf12bd0a877f888a1e47d6397fbaf9179e9074e"
+      },
+      {
+        "name": "R23.htm",
+        "size_bytes": 29908,
+        "sha256": "2526ffee7349c0cc913798533779fccc49bfbe75d3b5a23a37c5be1e87494156"
+      },
+      {
+        "name": "R24.htm",
+        "size_bytes": 36390,
+        "sha256": "4307a086ffd8ac825ee1f5dbab03482faadad4551b591a655cfe412cdb3c2b56"
+      },
+      {
+        "name": "R25.htm",
+        "size_bytes": 34938,
+        "sha256": "420db3eae169cc0eaa6346003edbf9894000f1bf8667b49c0c83020125380f35"
+      },
+      {
+        "name": "R26.htm",
+        "size_bytes": 29439,
+        "sha256": "82c4956d920983cd52851ff31b963936a12b7e3374cf5ccab4f1c6a78229a59f"
+      },
+      {
+        "name": "R27.htm",
+        "size_bytes": 153688,
+        "sha256": "cb6c85a1a42614a2baead42f816a959780b79b1d0acacf523d5105c25b941ae3"
+      },
+      {
+        "name": "R28.htm",
+        "size_bytes": 42678,
+        "sha256": "b4fe4364e1125c642dff5d57aaf83543d11d6d7ee9fc414879ff2bfa319226b6"
+      },
+      {
+        "name": "R29.htm",
+        "size_bytes": 31682,
+        "sha256": "9ba9080a605a1ace7a36b142d003f38ad97c1c3ae4c1a18e106d6bde3edbc7f2"
+      },
+      {
+        "name": "R3.htm",
+        "size_bytes": 26344,
+        "sha256": "10e5b778f14855525a67512881cedaa80db0a9456cbc796d95eb0a5a02bd9aaf"
+      },
+      {
+        "name": "R30.htm",
+        "size_bytes": 79504,
+        "sha256": "34461b5df0db6505b2113431c8e62ab15a34634293e9b3e856110c3e2117b7c8"
+      },
+      {
+        "name": "R31.htm",
+        "size_bytes": 11834,
+        "sha256": "bf7093040920e5560ab2dbf9a57cb547c0fb0602fff629b6eaf1b611dbac8fc9"
+      },
+      {
+        "name": "R32.htm",
+        "size_bytes": 26054,
+        "sha256": "8d9bb9efc9f34f2359ae8b16a4a10e2036d0a699416417efa72c1cd55862b263"
+      },
+      {
+        "name": "R33.htm",
+        "size_bytes": 95462,
+        "sha256": "f2ce7e2ae383d2b549a4208b58526324fbba1da36e55a2f75d2efa25c051c17a"
+      },
+      {
+        "name": "R34.htm",
+        "size_bytes": 9795,
+        "sha256": "a441cc65b0901b5b5b1008772fe7c4d2111af03a20099ba89deb9bb274cd76ec"
+      },
+      {
+        "name": "R35.htm",
+        "size_bytes": 24687,
+        "sha256": "dc9213b8f9dd89520fcffde381171e0e97079f3bcb71b1c095bed29482887274"
+      },
+      {
+        "name": "R36.htm",
+        "size_bytes": 11327,
+        "sha256": "6e90fad3e0c3c9d10bdfaf6dabfe7be1c5e194beee661f1433dd947542d9350f"
+      },
+      {
+        "name": "R37.htm",
+        "size_bytes": 19253,
+        "sha256": "36fa4b37f7cf51716374b1f346adaea4e229a36d819097e0e1d79d29c575519c"
+      },
+      {
+        "name": "R38.htm",
+        "size_bytes": 11429,
+        "sha256": "561afdbdf55929ededa8c9cf6b4328040feb257e3367929c775ca67ba710c35a"
+      },
+      {
+        "name": "R39.htm",
+        "size_bytes": 11217,
+        "sha256": "072fbed08b4bacea1e4c4c50e9e788ded8adfaee082e6ca0d0ded17be0d15c9a"
+      },
+      {
+        "name": "R4.htm",
+        "size_bytes": 76648,
+        "sha256": "4fa44233ede7239c62b1c804446ebe1afa8acceaabc3cb7ff876efabe308d149"
+      },
+      {
+        "name": "R40.htm",
+        "size_bytes": 32500,
+        "sha256": "7e1b6ac4b4c1334ad9deb752b554b04ba91b985462f47c78eea08e1216566faa"
+      },
+      {
+        "name": "R41.htm",
+        "size_bytes": 11332,
+        "sha256": "8ca093fbcc96f9d736edaa1b33ff9d251c3493202dff1742d2b8564be686dca5"
+      },
+      {
+        "name": "R42.htm",
+        "size_bytes": 35563,
+        "sha256": "d98410468ebb366876e7d386bff89de47a050231fb73f830150fe5f3cc6e1361"
+      },
+      {
+        "name": "R43.htm",
+        "size_bytes": 7579,
+        "sha256": "f2a49f9bd2ebd8e99d17be372c3a39e6af908cc636ee46814f0d0d421334263c"
+      },
+      {
+        "name": "R44.htm",
+        "size_bytes": 45355,
+        "sha256": "9d2bac453f0c67d66916e6073ea25541e96c1f9a033a95e65690cccaee69378e"
+      },
+      {
+        "name": "R45.htm",
+        "size_bytes": 4711,
+        "sha256": "a106be66d546472ebc124824af980030b2ca618c63ec46608d001749d311d10f"
+      },
+      {
+        "name": "R46.htm",
+        "size_bytes": 28533,
+        "sha256": "42f55d5e9815b98271c20aabf51a1af035b1ecbab0e05bb15c5190c166e7e132"
+      },
+      {
+        "name": "R47.htm",
+        "size_bytes": 23300,
+        "sha256": "9826eb804c3d6b1c934cc29758822874c86fd1a479f033b377f73c58da654582"
+      },
+      {
+        "name": "R48.htm",
+        "size_bytes": 39309,
+        "sha256": "8eb5ed7e16b8cca974e28b2226057565c3fd473951b65c4dee137a2293b9c4d0"
+      },
+      {
+        "name": "R49.htm",
+        "size_bytes": 32570,
+        "sha256": "a6e99abddd7bdb555093957c3cab86b90a49b3a2f36ab31b0c8df137ee92c901"
+      },
+      {
+        "name": "R5.htm",
+        "size_bytes": 49568,
+        "sha256": "a0341a091251ed377b827f850447eb1dcd124722f7d2abc598a9dadb74f53479"
+      },
+      {
+        "name": "R50.htm",
+        "size_bytes": 73613,
+        "sha256": "88f4a5b190401cde054d575226e33823465a1de8772aebd41f64d7e1ce2ecc28"
+      },
+      {
+        "name": "R51.htm",
+        "size_bytes": 6020,
+        "sha256": "d43bb47df8ab5620f92bc908a397a83e74a6144cc57d9b876dbec1284b9c74b7"
+      },
+      {
+        "name": "R52.htm",
+        "size_bytes": 8210,
+        "sha256": "486a2234ea9494984f480e95a3cfa4711f5ac555d655dd8352961065d5a16591"
+      },
+      {
+        "name": "R53.htm",
+        "size_bytes": 27451,
+        "sha256": "361b8f0cd3f4f929f8ee852960cf573a7a3836993ab415cc21ce3f3c6e4a9595"
+      },
+      {
+        "name": "R54.htm",
+        "size_bytes": 19205,
+        "sha256": "78c7e1b58ed1c177d62738316d6a8e0f702b1568c65b6f242c1e0199caa3f5a2"
+      },
+      {
+        "name": "R55.htm",
+        "size_bytes": 12418,
+        "sha256": "a687b725a96f9c04bec1e1790dd851bfe2e815fd77ed28229d64b3f5ddd8e5f8"
+      },
+      {
+        "name": "R56.htm",
+        "size_bytes": 15783,
+        "sha256": "9383a0ee976a515910713f612fa37756ed4a36e4c22c99a49243e4b2829d7c2f"
+      },
+      {
+        "name": "R57.htm",
+        "size_bytes": 43002,
+        "sha256": "d87d517a573f579b2149a94804de8d8766552321b912364e50f41bb5531c691b"
+      },
+      {
+        "name": "R58.htm",
+        "size_bytes": 17342,
+        "sha256": "05660b5486465241b35f47c6570435d2fa83baa27069dbcf1dc5a2ba974cdc0b"
+      },
+      {
+        "name": "R59.htm",
+        "size_bytes": 12331,
+        "sha256": "9dc7ca8b4317e18d9763b633d20313a28711acedd7a1d4dc68ceb8c40ed7ef4b"
+      },
+      {
+        "name": "R6.htm",
+        "size_bytes": 4519,
+        "sha256": "7e9848dda32f769bb24e4804c95dbaa70a11d43b6de7a7cfdef53783bf63b2b9"
+      },
+      {
+        "name": "R7.htm",
+        "size_bytes": 70081,
+        "sha256": "5e2a2bb02c8ab4a2ad7ae0829f74f71a59eb28f2c82510cb8bc49286ef41a19c"
+      },
+      {
+        "name": "R8.htm",
+        "size_bytes": 15720,
+        "sha256": "646b5158357cb1c437edacd8ac216b693e7eac8877b3df0ea0998eeb941c05be"
+      },
+      {
+        "name": "R9.htm",
+        "size_bytes": 6198,
+        "sha256": "876517f013f80dbdbe99d5729e37c254e328db0a0a171fc30c71d7f91210cccd"
+      }
+    ],
+    "primary_document": "nvda2020q110q.htm",
+    "html_documents_excluding_rendering_preview": [
+      "0001045810-19-000079-index-headers.html",
+      "0001045810-19-000079-index.html",
+      "nvda2020q110q.htm",
+      "nvda2020q1ex311.htm",
+      "nvda2020q1ex312.htm",
+      "nvda2020q1ex321.htm",
+      "nvda2020q1ex322.htm"
+    ],
+    "candidate_traditional_instance_files": [
+      "nvda-20190428.xml"
+    ],
+    "schema_files": [
+      "nvda-20190428.xsd"
+    ],
+    "linkbase_files": [
+      "nvda-20190428_cal.xml",
+      "nvda-20190428_def.xml",
+      "nvda-20190428_lab.xml",
+      "nvda-20190428_pre.xml"
+    ],
+    "entry_point_detection": {
+      "resolved": true,
+      "selected_entry_point": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\NVDA\\000104581019000079\\nvda-20190428.xml",
+      "detected_format": "TRADITIONAL_XBRL_SEPARATE_INSTANCE",
+      "reason": "primary document has no Inline XBRL markup; found exactly one standalone <xbrli:xbrl> instance document in the same package"
+    },
+    "package_complete_enough_to_attempt_parsing": true
+  },
+  "phase2_existing_failure_reproduction": {
+    "result": {
+      "ticker": "NVDA",
+      "report_date": "2019-04-28",
+      "accession_number": "0001045810-19-000079",
+      "status": "PASS",
+      "row_counts": {
+        "xbrl_facts": 0,
+        "xbrl_contexts": 0,
+        "xbrl_units": 0,
+        "xbrl_concepts": 0,
+        "xbrl_labels": 0,
+        "xbrl_presentation_relationships": 0,
+        "xbrl_calculation_relationships": 0,
+        "xbrl_definition_relationships": 0,
+        "xbrl_roles": 0
+      },
+      "total_elapsed_seconds": 0.103
+    },
+    "warehouse_runs_row": {
+      "status": "PASS",
+      "row_counts_json": "{\"xbrl_facts\": 0, \"xbrl_contexts\": 0, \"xbrl_units\": 0, \"xbrl_concepts\": 0, \"xbrl_labels\": 0, \"xbrl_presentation_relationships\": 0, \"xbrl_calculation_relationships\": 0, \"xbrl_definition_relationships\": 0, \"xbrl_roles\": 0}",
+      "total_elapsed_seconds": 0.102724
+    },
+    "false_pass_reproduced": true
+  },
+  "phase4_corrected_loader_results": {
+    "broken": {
+      "ticker": "NVDA",
+      "report_date": "2019-04-28",
+      "accession_number": "0001045810-19-000079",
+      "status": "PASS",
+      "failure_category": null,
+      "failure_reason": null,
+      "entry_point_detection": {
+        "resolved": true,
+        "selected_entry_point": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\NVDA\\000104581019000079\\nvda-20190428.xml",
+        "detected_format": "TRADITIONAL_XBRL_SEPARATE_INSTANCE",
+        "reason": "primary document has no Inline XBRL markup; found exactly one standalone <xbrli:xbrl> instance document in the same package"
+      },
+      "row_counts": {
+        "xbrl_facts": 654,
+        "xbrl_contexts": 134,
+        "xbrl_units": 5,
+        "xbrl_concepts": 711,
+        "xbrl_labels": 942,
+        "xbrl_presentation_relationships": 498,
+        "xbrl_calculation_relationships": 134,
+        "xbrl_definition_relationships": 517,
+        "xbrl_roles": 92
+      },
+      "elapsed_seconds": 1.079
+    },
+    "good_baseline": {
+      "ticker": "NVDA",
+      "report_date": "2019-07-28",
+      "accession_number": "0001045810-19-000144",
+      "status": "PASS",
+      "failure_category": null,
+      "failure_reason": null,
+      "entry_point_detection": {
+        "resolved": true,
+        "selected_entry_point": "C:\\AI_Stock_Agent\\data\\sec_filings_locked\\NVDA\\000104581019000144\\nvda2020q210q.htm",
+        "detected_format": "INLINE_XBRL",
+        "reason": "primary document declares the Inline XBRL namespace"
+      },
+      "row_counts": {
+        "xbrl_facts": 920,
+        "xbrl_contexts": 186,
+        "xbrl_units": 5,
+        "xbrl_concepts": 875,
+        "xbrl_labels": 954,
+        "xbrl_presentation_relationships": 497,
+        "xbrl_calculation_relationships": 129,
+        "xbrl_definition_relationships": 665,
+        "xbrl_roles": 89
+      },
+      "elapsed_seconds": 4.434
+    }
+  },
+  "broken_accession_target_metric_plausibility": {
+    "revenue": {
+      "plausible_fact_count": 16,
+      "facts": [
+        {
+          "concept_qname": "us-gaap:CostOfRevenue",
+          "period_start": "2018-01-29",
+          "period_end": "2018-04-29",
+          "value_numeric": 1139000000.0,
+          "decimals": "-6",
+          "context_id": "FD2019Q1QTD"
+        },
+        {
+          "concept_qname": "us-gaap:DeferredRevenueAdditions",
+          "period_start": "2018-01-29",
+          "period_end": "2018-04-29",
+          "value_numeric": 86000000.0,
+          "decimals": "-6",
+          "context_id": "FD2019Q1QTD"
+        },
+        {
+          "concept_qname": "us-gaap:DeferredRevenueRevenueRecognized1",
+          "period_start": "2018-01-29",
+          "period_end": "2018-04-29",
+          "value_numeric": 75000000.0,
+          "decimals": "-6",
+          "context_id": "FD2019Q1QTD"
+        },
+        {
+          "concept_qname": "us-gaap:Revenues",
+          "period_start": "2018-01-29",
+          "period_end": "2018-04-29",
+          "value_numeric": 3207000000.0,
+          "decimals": "-6",
+          "context_id": "FD2019Q1QTD"
+        },
+        {
+          "concept_qname": "us-gaap:CostOfRevenue",
+          "period_start": "2019-01-28",
+          "period_end": "2019-04-28",
+          "value_numeric": 924000000.0,
+          "decimals": "-6",
+          "context_id": "FD2020Q1YTD"
+        },
+        {
+          "concept_qname": "us-gaap:DeferredRevenueAdditions",
+          "period_start": "2019-01-28",
+          "period_end": "2019-04-28",
+          "value_numeric": 49000000.0,
+          "decimals": "-6",
+          "context_id": "FD2020Q1YTD"
+        }
+      ]
+    },
+    "operating_income": {
+      "plausible_fact_count": 2,
+      "facts": [
+        {
+          "concept_qname": "us-gaap:OperatingIncomeLoss",
+          "period_start": "2018-01-29",
+          "period_end": "2018-04-29",
+          "value_numeric": 1295000000.0,
+          "decimals": "-6",
+          "context_id": "FD2019Q1QTD"
+        },
+        {
+          "concept_qname": "us-gaap:OperatingIncomeLoss",
+          "period_start": "2019-01-28",
+          "period_end": "2019-04-28",
+          "value_numeric": 358000000.0,
+          "decimals": "-6",
+          "context_id": "FD2020Q1YTD"
+        }
+      ]
+    },
+    "pretax_income": {
+      "plausible_fact_count": 2,
+      "facts": [
+        {
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+          "period_start": "2018-01-29",
+          "period_end": "2018-04-29",
+          "value_numeric": 1311000000.0,
+          "decimals": "-6",
+          "context_id": "FD2019Q1QTD"
+        },
+        {
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments",
+          "period_start": "2019-01-28",
+          "period_end": "2019-04-28",
+          "value_numeric": 389000000.0,
+          "decimals": "-6",
+          "context_id": "FD2020Q1YTD"
+        }
+      ]
+    },
+    "income_tax_expense": {
+      "plausible_fact_count": 4,
+      "facts": [
+        {
+          "concept_qname": "us-gaap:DeferredIncomeTaxExpenseBenefit",
+          "period_start": "2018-01-29",
+          "period_end": "2018-04-29",
+          "value_numeric": 51000000.0,
+          "decimals": "-6",
+          "context_id": "FD2019Q1QTD"
+        },
+        {
+          "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+          "period_start": "2018-01-29",
+          "period_end": "2018-04-29",
+          "value_numeric": 67000000.0,
+          "decimals": "-6",
+          "context_id": "FD2019Q1QTD"
+        },
+        {
+          "concept_qname": "us-gaap:DeferredIncomeTaxExpenseBenefit",
+          "period_start": "2019-01-28",
+          "period_end": "2019-04-28",
+          "value_numeric": -42000000.0,
+          "decimals": "-6",
+          "context_id": "FD2020Q1YTD"
+        },
+        {
+          "concept_qname": "us-gaap:IncomeTaxExpenseBenefit",
+          "period_start": "2019-01-28",
+          "period_end": "2019-04-28",
+          "value_numeric": -5000000.0,
+          "decimals": "-6",
+          "context_id": "FD2020Q1YTD"
+        }
+      ]
+    },
+    "operating_cash_flow": {
+      "plausible_fact_count": 2,
+      "facts": [
+        {
+          "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "period_start": "2018-01-29",
+          "period_end": "2018-04-29",
+          "value_numeric": 1445000000.0,
+          "decimals": "-6",
+          "context_id": "FD2019Q1QTD"
+        },
+        {
+          "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities",
+          "period_start": "2019-01-28",
+          "period_end": "2019-04-28",
+          "value_numeric": 720000000.0,
+          "decimals": "-6",
+          "context_id": "FD2020Q1YTD"
+        }
+      ]
+    },
+    "capex": {
+      "plausible_fact_count": 2,
+      "facts": [
+        {
+          "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+          "period_start": "2018-01-29",
+          "period_end": "2018-04-29",
+          "value_numeric": 118000000.0,
+          "decimals": "-6",
+          "context_id": "FD2019Q1QTD"
+        },
+        {
+          "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment",
+          "period_start": "2019-01-28",
+          "period_end": "2019-04-28",
+          "value_numeric": 128000000.0,
+          "decimals": "-6",
+          "context_id": "FD2020Q1YTD"
+        }
+      ]
+    }
+  },
+  "baseline_comparison_vs_production_warehouse": {
+    "production_counts": {
+      "xbrl_facts": 920,
+      "xbrl_contexts": 186,
+      "xbrl_units": 5,
+      "xbrl_concepts": 875
+    },
+    "corrected_loader_counts": {
+      "xbrl_facts": 920,
+      "xbrl_contexts": 186,
+      "xbrl_units": 5,
+      "xbrl_concepts": 875
+    },
+    "no_regression": true
+  },
+  "production_warehouse_untouched": {
+    "xbrl_facts_for_broken_accession_still_zero_in_production": true
+  },
+  "production_database_untouched": {
+    "quarterly_extraction_runs": 45,
+    "quarterly_metric_results": 1080,
+    "financial_metric_results": 900
+  },
+  "runtime_seconds": 6.22
+}

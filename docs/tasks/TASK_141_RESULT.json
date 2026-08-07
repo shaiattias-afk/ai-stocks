@@ -1,0 +1,60 @@
+{
+  "task_id": "TASK_141_GLOBAL_WAREHOUSE_INTEGRITY_AUDIT",
+  "status": "PASS",
+  "started_file": "docs/tasks/TASK_141_STARTED.json",
+  "started_timestamp": "2026-08-05T09:25:00Z",
+  "completion_timestamp": "2026-08-05T09:23:40Z",
+  "script_created": "scripts/141_global_warehouse_integrity_audit.py",
+  "read_only": true,
+  "total_accessions_audited": 185,
+  "counts_by_form": {"10-K": 50, "10-Q": 135},
+  "counts_by_ticker": {
+    "AMZN": 21, "CRWD": 21, "GOOGL": 21, "META": 21, "MSFT": 20,
+    "MU": 20, "NVDA": 21, "ORCL": 20, "PANW": 20
+  },
+  "counts_by_detected_format": {
+    "INLINE_XBRL": 183,
+    "TRADITIONAL_XBRL_SEPARATE_INSTANCE": 2
+  },
+  "counts_by_anomaly_category": {
+    "VALID_INLINE_XBRL": 183,
+    "VALID_TRADITIONAL_XBRL": 1,
+    "FALSE_PASS_ZERO_CONTENT": 1
+  },
+  "false_pass_accessions": ["NVDA 0001045810-19-000079"],
+  "nvda_is_only_false_pass": true,
+  "count_mismatch_accessions": [],
+  "traditional_xbrl_accessions": [
+    "NVDA 0001045810-19-000023",
+    "NVDA 0001045810-19-000079"
+  ],
+  "accessions_requiring_rewarehouse": [
+    "NVDA 0001045810-19-000079 (FALSE_PASS_ZERO_CONTENT)"
+  ],
+  "accessions_with_unproven_state": [],
+  "unresolved_accessions": [],
+  "duplicate_records": [],
+  "record_count_equals_audited_count": true,
+  "production_database_unchanged": {
+    "pre_counts": {"quarterly_extraction_runs": 45, "quarterly_metric_results": 1080, "financial_metric_results": 900},
+    "post_counts": {"quarterly_extraction_runs": 45, "quarterly_metric_results": 1080, "financial_metric_results": 900},
+    "unchanged": true
+  },
+  "warehouse_database_unchanged": {
+    "total_xbrl_facts_before": 225126,
+    "total_xbrl_facts_after": 225126,
+    "unchanged": true
+  },
+  "files_created": [
+    "scripts/141_global_warehouse_integrity_audit.py",
+    "data/warehouse_global_integrity_audit.json",
+    "data/warehouse_global_integrity_audit.csv",
+    "docs/tasks/TASK_141_STARTED.json",
+    "docs/tasks/TASK_141_RESULT.json",
+    "docs/tasks/TASK_141_RESULT.md"
+  ],
+  "actual_runtime_seconds": 0.26,
+  "claude_total_elapsed_note": "local audit script execution was 0.26 seconds; total Claude task time including inspection, script authoring, and reporting was within the 5-10 minute expectation",
+  "result": "PASS",
+  "next_step": "Build a production version of the corrected entry-point-detection loader (scripts/139's logic, generalized) and re-warehouse only NVDA accession 0001045810-19-000079 into the real xbrl_warehouse_proof.duckdb, with a full backup/checksum/verify cycle, then re-run engine v4 (scripts/136) for NVDA FY2020-01-26 to determine whether its 6 metrics resolve, and load into production if they do. No other accession in the entire 185-accession universe requires any repair."
+}

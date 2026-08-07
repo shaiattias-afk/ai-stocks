@@ -1,0 +1,63 @@
+# Python virtual environment
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Editor / local tooling
+.vscode/
+.claude/settings.local.json
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Databases (binary files and write-ahead logs are never tracked)
+*.duckdb
+*.duckdb.wal
+*.db
+
+# Timestamped database backups (regenerable from source + scripts)
+data/database/backups/
+
+# Raw / locked SEC filing source documents (large, re-downloadable from SEC EDGAR)
+data/sec_filings_locked/
+data/sec_filings/
+data/sec_raw/
+
+# Arelle's own local taxonomy/schema cache (rebuilt automatically on first run)
+data/arelle_cache/
+
+# Per-task scratch/intermediate output (throwaway working files, not project history)
+data/_scratch_*/
+
+# Operational archive of replaced rows and per-run manifests from --execute loads
+# (audit trail for that one run, not required to reproduce a project decision --
+# the release manifests that ARE required live directly under data/, not here)
+data/archive/
+
+# Logs
+logs/
+*.log
+data/*run_log*.txt
+data/*batch_heartbeat*.txt
+
+# PID / checkpoint / lock files
+*.pid
+*checkpoint*.json
+
+# Bulk Arelle/XBRL debug dumps from iterative engine development
+# (large in aggregate, regenerable by rerunning the still-present scripts
+# against the locked filings; distinct from the small named proof/regression
+# JSON+CSV reports at data/ root, which are NOT matched by these patterns)
+data/*presentation.csv
+data/*candidates.csv
+data/*inline_xbrl_facts*.csv
+
+# Archive exports
+*.parquet
+
+# OS artifacts
+.DS_Store
+Thumbs.db

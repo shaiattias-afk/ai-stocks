@@ -1,0 +1,6 @@
+﻿as_of_date,current_period_end,previous_period_end,current_filing_date,previous_filing_date,current_revenue_usd,previous_revenue_usd,revenue_growth,revenue_growth_percent,revenue_tag,date_rule_passed,current_revenue_usd_billions,previous_revenue_usd_billions
+2021-04-01,2020-06-30,2019-06-30,2020-07-30,2020-07-30,143015000000.0,125843000000.0,0.1364557424727637,13.645574247276372,RevenueFromContractWithCustomerExcludingAssessedTax,True,143.015,125.843
+2022-04-01,2021-06-30,2020-06-30,2021-07-29,2021-07-29,168088000000.0,143015000000.0,0.17531727441177503,17.5317274411775,RevenueFromContractWithCustomerExcludingAssessedTax,True,168.088,143.015
+2023-04-01,2022-06-30,2021-06-30,2022-07-28,2022-07-28,198270000000.0,168088000000.0,0.17956070629670173,17.956070629670172,RevenueFromContractWithCustomerExcludingAssessedTax,True,198.27,168.088
+2024-04-01,2023-06-30,2022-06-30,2023-07-27,2023-07-27,211915000000.0,198270000000.0,0.06882029555656421,6.8820295556564215,RevenueFromContractWithCustomerExcludingAssessedTax,True,211.915,198.27
+2025-04-01,2024-06-30,2023-06-30,2024-07-30,2024-07-30,245122000000.0,211915000000.0,0.1566996201307127,15.66996201307127,RevenueFromContractWithCustomerExcludingAssessedTax,True,245.122,211.915

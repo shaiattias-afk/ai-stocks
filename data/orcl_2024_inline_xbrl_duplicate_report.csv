@@ -1,0 +1,103 @@
+﻿concept,context_id,period_start,period_end,instant_date,dimension_count,dimensions_json,unit,normalized_value,value_type,occurrence_count,unique_fact_ids,first_fact_number
+us-gaap:AmortizationOfIntangibleAssets,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],iso4217:USD,3582000000,numeric,4,4,1904
+us-gaap:LineOfCreditFacilityMaximumBorrowingCapacity,C_33b4f608-8685-4fb8-9184-c47f6900623d,,,2022-08-16,1,"[{""dimension"": ""us-gaap:CreditFacilityAxis"", ""member"": ""orcl:TermLoanCreditAgreementMember"", ""type"": ""explicitmember""}]",iso4217:USD,4400000000.0,numeric,4,4,1241
+us-gaap:NetIncomeLoss,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],iso4217:USD,13746000000,numeric,4,4,2000
+us-gaap:NetIncomeLoss,C_3204f188-bbca-4ff2-8eb2-34fa54cccbe5,2021-06-01,2022-05-31,,0,[],iso4217:USD,6717000000,numeric,4,4,1999
+us-gaap:NetIncomeLoss,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],iso4217:USD,8503000000,numeric,4,4,1998
+orcl:NonoperatingIncomeExpenseIncludingEliminationOfNetIncomeLossAttributableToNoncontrollingInterests,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],iso4217:USD,282000000,numeric,3,3,1924
+orcl:NonoperatingIncomeExpenseIncludingEliminationOfNetIncomeLossAttributableToNoncontrollingInterests,C_3204f188-bbca-4ff2-8eb2-34fa54cccbe5,2021-06-01,2022-05-31,,0,[],iso4217:USD,-522000000,numeric,3,3,1923
+orcl:NonoperatingIncomeExpenseIncludingEliminationOfNetIncomeLossAttributableToNoncontrollingInterests,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],iso4217:USD,-462000000,numeric,3,3,1922
+orcl:NumberOfBusinesses,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],orcl:Business,,unparsed_numeric,3,3,1837
+us-gaap:AmortizationOfIntangibleAssets,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],iso4217:USD,1379000000,numeric,3,3,1906
+us-gaap:AmortizationOfIntangibleAssets,C_3204f188-bbca-4ff2-8eb2-34fa54cccbe5,2021-06-01,2022-05-31,,0,[],iso4217:USD,1150000000,numeric,3,3,1905
+us-gaap:BusinessCombinationAcquisitionRelatedCosts,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],iso4217:USD,138000000,numeric,3,3,1909
+us-gaap:BusinessCombinationAcquisitionRelatedCosts,C_3204f188-bbca-4ff2-8eb2-34fa54cccbe5,2021-06-01,2022-05-31,,0,[],iso4217:USD,4713000000,numeric,3,3,1908
+us-gaap:BusinessCombinationAcquisitionRelatedCosts,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],iso4217:USD,190000000,numeric,3,3,1907
+us-gaap:FiniteLivedIntangibleAssetsNet,C_8dc19c16-0a90-49bb-9768-74f9aa8bba7f,,,2023-05-31,0,[],iso4217:USD,9837000000,numeric,3,3,180
+us-gaap:IncomeTaxExpenseBenefit,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],iso4217:USD,-747000000,numeric,3,3,1694
+us-gaap:IncomeTaxExpenseBenefit,C_3204f188-bbca-4ff2-8eb2-34fa54cccbe5,2021-06-01,2022-05-31,,0,[],iso4217:USD,932000000,numeric,3,3,1693
+us-gaap:IncomeTaxExpenseBenefit,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],iso4217:USD,623000000,numeric,3,3,1692
+us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],iso4217:USD,40479000000,numeric,3,3,1891
+us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,C_3204f188-bbca-4ff2-8eb2-34fa54cccbe5,2021-06-01,2022-05-31,,0,[],iso4217:USD,42440000000,numeric,3,3,1890
+us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],iso4217:USD,49954000000,numeric,3,3,1889
+orcl:IncomeLossFromContinuingOperationsIncludingNoncontrollingInterestBeforeIncomeTaxesExtraordinaryItems,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],iso4217:USD,12999000000,numeric,2,2,1927
+orcl:IncomeLossFromContinuingOperationsIncludingNoncontrollingInterestBeforeIncomeTaxesExtraordinaryItems,C_3204f188-bbca-4ff2-8eb2-34fa54cccbe5,2021-06-01,2022-05-31,,0,[],iso4217:USD,7649000000,numeric,2,2,1926
+orcl:IncomeLossFromContinuingOperationsIncludingNoncontrollingInterestBeforeIncomeTaxesExtraordinaryItems,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],iso4217:USD,9126000000,numeric,2,2,1925
+orcl:IncomeTaxExpenseBenefitNet,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],iso4217:USD,2300000000.0,numeric,2,2,1656
+us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax,C_adc59fab-04b2-4dc7-85a5-444a63193d6d,,,2022-05-31,0,[],iso4217:USD,-1692000000,numeric,2,2,1486
+us-gaap:AccumulatedOtherComprehensiveIncomeLossNetOfTax,C_8dc19c16-0a90-49bb-9768-74f9aa8bba7f,,,2023-05-31,0,[],iso4217:USD,-1522000000,numeric,2,2,1485
+us-gaap:AvailableForSaleSecuritiesDebtSecuritiesCurrent,C_adc59fab-04b2-4dc7-85a5-444a63193d6d,,,2022-05-31,0,[],iso4217:USD,519000000,numeric,2,2,169
+us-gaap:AvailableForSaleSecuritiesDebtSecuritiesCurrent,C_8dc19c16-0a90-49bb-9768-74f9aa8bba7f,,,2023-05-31,0,[],iso4217:USD,422000000,numeric,2,2,168
+us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsIncludingDisposalGroupAndDiscontinuedOperations,C_ae9116af-ee21-45e9-805d-20f0cf0d35aa,,,2021-05-31,0,[],iso4217:USD,30098000000,numeric,2,2,629
+us-gaap:CashCashEquivalentsRestrictedCashAndRestrictedCashEquivalentsIncludingDisposalGroupAndDiscontinuedOperations,C_adc59fab-04b2-4dc7-85a5-444a63193d6d,,,2022-05-31,0,[],iso4217:USD,21383000000,numeric,2,2,628
+us-gaap:CommonStockDividendsPerShareCashPaid,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],iso4217:USD / xbrli:shares,1.04,numeric,2,2,1472
+us-gaap:CommonStockDividendsPerShareCashPaid,C_3204f188-bbca-4ff2-8eb2-34fa54cccbe5,2021-06-01,2022-05-31,,0,[],iso4217:USD / xbrli:shares,1.28,numeric,2,2,1471
+us-gaap:CommonStockDividendsPerShareCashPaid,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],iso4217:USD / xbrli:shares,1.36,numeric,2,2,1470
+us-gaap:ContractWithCustomerLiabilityCurrent,C_adc59fab-04b2-4dc7-85a5-444a63193d6d,,,2022-05-31,0,[],iso4217:USD,8357000000,numeric,2,2,1422
+us-gaap:ContractWithCustomerLiabilityCurrent,C_8dc19c16-0a90-49bb-9768-74f9aa8bba7f,,,2023-05-31,0,[],iso4217:USD,8970000000,numeric,2,2,1421
+us-gaap:DeferredIncomeTaxAssetsNet,C_adc59fab-04b2-4dc7-85a5-444a63193d6d,,,2022-05-31,0,[],iso4217:USD,12782000000,numeric,2,2,1773
+us-gaap:DeferredIncomeTaxAssetsNet,C_8dc19c16-0a90-49bb-9768-74f9aa8bba7f,,,2023-05-31,0,[],iso4217:USD,12226000000,numeric,2,2,1772
+us-gaap:DeferredIncomeTaxExpenseBenefit,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],iso4217:USD,-2425000000,numeric,2,2,1691
+us-gaap:DeferredIncomeTaxExpenseBenefit,C_3204f188-bbca-4ff2-8eb2-34fa54cccbe5,2021-06-01,2022-05-31,,0,[],iso4217:USD,-1146000000,numeric,2,2,1690
+us-gaap:DeferredIncomeTaxExpenseBenefit,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],iso4217:USD,-2167000000,numeric,2,2,1689
+us-gaap:DeferredIncomeTaxLiabilitiesNet,C_adc59fab-04b2-4dc7-85a5-444a63193d6d,,,2022-05-31,0,[],iso4217:USD,6031000000,numeric,2,2,1775
+us-gaap:DeferredIncomeTaxLiabilitiesNet,C_8dc19c16-0a90-49bb-9768-74f9aa8bba7f,,,2023-05-31,0,[],iso4217:USD,5772000000,numeric,2,2,1774
+us-gaap:DeferredTaxAssetsLiabilitiesNet,C_adc59fab-04b2-4dc7-85a5-444a63193d6d,,,2022-05-31,0,[],iso4217:USD,6751000000,numeric,2,2,1771
+us-gaap:DeferredTaxAssetsLiabilitiesNet,C_8dc19c16-0a90-49bb-9768-74f9aa8bba7f,,,2023-05-31,0,[],iso4217:USD,6454000000,numeric,2,2,1770
+us-gaap:DerivativeFixedInterestRate,C_3f60c19c-87be-4d8c-b6a5-f87f89b54d8d,,,2023-05-31,1,"[{""dimension"": ""us-gaap:CreditFacilityAxis"", ""member"": ""orcl:InterestRateSwapAgreementsMember"", ""type"": ""explicitmember""}]",xbrli:pure,0.0307,numeric,2,2,1217
+us-gaap:EarningsPerShareBasic,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],iso4217:USD / xbrli:shares,4.67,numeric,2,2,2012
+us-gaap:EarningsPerShareBasic,C_3204f188-bbca-4ff2-8eb2-34fa54cccbe5,2021-06-01,2022-05-31,,0,[],iso4217:USD / xbrli:shares,2.49,numeric,2,2,2011
+us-gaap:EarningsPerShareBasic,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],iso4217:USD / xbrli:shares,3.15,numeric,2,2,2010
+us-gaap:EarningsPerShareDiluted,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],iso4217:USD / xbrli:shares,4.55,numeric,2,2,2015
+us-gaap:EarningsPerShareDiluted,C_3204f188-bbca-4ff2-8eb2-34fa54cccbe5,2021-06-01,2022-05-31,,0,[],iso4217:USD / xbrli:shares,2.41,numeric,2,2,2014
+us-gaap:EarningsPerShareDiluted,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],iso4217:USD / xbrli:shares,3.07,numeric,2,2,2013
+us-gaap:FiniteLivedIntangibleAssetsNet,C_adc59fab-04b2-4dc7-85a5-444a63193d6d,,,2022-05-31,0,[],iso4217:USD,1440000000,numeric,2,2,181
+us-gaap:ForeignCurrencyTransactionGainLossBeforeTax,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],iso4217:USD,-112000000,numeric,2,2,692
+us-gaap:ForeignCurrencyTransactionGainLossBeforeTax,C_3204f188-bbca-4ff2-8eb2-34fa54cccbe5,2021-06-01,2022-05-31,,0,[],iso4217:USD,-199000000,numeric,2,2,691
+us-gaap:ForeignCurrencyTransactionGainLossBeforeTax,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],iso4217:USD,-249000000,numeric,2,2,690
+us-gaap:GeneralAndAdministrativeExpense,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],iso4217:USD,1254000000,numeric,2,2,1903
+us-gaap:GeneralAndAdministrativeExpense,C_3204f188-bbca-4ff2-8eb2-34fa54cccbe5,2021-06-01,2022-05-31,,0,[],iso4217:USD,1317000000,numeric,2,2,1902
+us-gaap:GeneralAndAdministrativeExpense,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],iso4217:USD,1579000000,numeric,2,2,1901
+us-gaap:Goodwill,C_adc59fab-04b2-4dc7-85a5-444a63193d6d,,,2022-05-31,0,[],iso4217:USD,43811000000,numeric,2,2,183
+us-gaap:Goodwill,C_8dc19c16-0a90-49bb-9768-74f9aa8bba7f,,,2023-05-31,0,[],iso4217:USD,62261000000,numeric,2,2,182
+us-gaap:InterestExpense,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],iso4217:USD,2496000000,numeric,2,2,1921
+us-gaap:InterestExpense,C_3204f188-bbca-4ff2-8eb2-34fa54cccbe5,2021-06-01,2022-05-31,,0,[],iso4217:USD,2755000000,numeric,2,2,1920
+us-gaap:InterestExpense,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],iso4217:USD,3505000000,numeric,2,2,1919
+us-gaap:LineOfCreditFacilityMaximumBorrowingCapacity,C_158b61b1-5672-4380-b116-58805366a23d,,,2022-11-02,1,"[{""dimension"": ""us-gaap:CreditFacilityAxis"", ""member"": ""orcl:TermLoanCreditAgreementMember"", ""type"": ""explicitmember""}]",iso4217:USD,1300000000.0,numeric,2,2,1245
+us-gaap:OperatingIncomeLoss,C_3bcf1cb2-ef95-4337-a3a6-566920f03813,2020-06-01,2021-05-31,,1,"[{""dimension"": ""srt:ConsolidationItemsAxis"", ""member"": ""us-gaap:OperatingSegmentsMember"", ""type"": ""explicitmember""}]",iso4217:USD,25823000000,numeric,2,2,1881
+us-gaap:OperatingIncomeLoss,C_1310f41f-da39-4167-b03b-2fcfdf26f800,2021-06-01,2022-05-31,,1,"[{""dimension"": ""srt:ConsolidationItemsAxis"", ""member"": ""us-gaap:OperatingSegmentsMember"", ""type"": ""explicitmember""}]",iso4217:USD,26627000000,numeric,2,2,1880
+us-gaap:OperatingIncomeLoss,C_979ad460-4902-4d3d-a086-1165c6b95bc1,2022-06-01,2023-05-31,,1,"[{""dimension"": ""srt:ConsolidationItemsAxis"", ""member"": ""us-gaap:OperatingSegmentsMember"", ""type"": ""explicitmember""}]",iso4217:USD,29162000000,numeric,2,2,1879
+us-gaap:PropertyPlantAndEquipmentNet,C_adc59fab-04b2-4dc7-85a5-444a63193d6d,,,2022-05-31,0,[],iso4217:USD,9716000000,numeric,2,2,179
+us-gaap:PropertyPlantAndEquipmentNet,C_8dc19c16-0a90-49bb-9768-74f9aa8bba7f,,,2023-05-31,0,[],iso4217:USD,17069000000,numeric,2,2,178
+us-gaap:PropertyPlantAndEquipmentUsefulLife,C_22353cd0-272e-41ff-ac13-5087f74f8d39,2022-06-01,2023-05-31,,1,"[{""dimension"": ""srt:RangeAxis"", ""member"": ""srt:MinimumMember"", ""type"": ""explicitmember""}]",,1,text,2,2,8
+us-gaap:ResearchAndDevelopmentExpense,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],iso4217:USD,6527000000,numeric,2,2,1900
+us-gaap:ResearchAndDevelopmentExpense,C_3204f188-bbca-4ff2-8eb2-34fa54cccbe5,2021-06-01,2022-05-31,,0,[],iso4217:USD,7219000000,numeric,2,2,1899
+us-gaap:ResearchAndDevelopmentExpense,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],iso4217:USD,8623000000,numeric,2,2,1898
+us-gaap:RestructuringCharges,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],iso4217:USD,431000000,numeric,2,2,1912
+us-gaap:RestructuringCharges,C_3204f188-bbca-4ff2-8eb2-34fa54cccbe5,2021-06-01,2022-05-31,,0,[],iso4217:USD,191000000,numeric,2,2,1911
+us-gaap:RestructuringCharges,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],iso4217:USD,490000000,numeric,2,2,1910
+us-gaap:RestructuringReserve,C_ae9116af-ee21-45e9-805d-20f0cf0d35aa,,,2021-05-31,0,[],iso4217:USD,225000000,numeric,2,2,1363
+us-gaap:RestructuringReserve,C_adc59fab-04b2-4dc7-85a5-444a63193d6d,,,2022-05-31,0,[],iso4217:USD,131000000,numeric,2,2,1321
+us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,C_3bcf1cb2-ef95-4337-a3a6-566920f03813,2020-06-01,2021-05-31,,1,"[{""dimension"": ""srt:ConsolidationItemsAxis"", ""member"": ""us-gaap:OperatingSegmentsMember"", ""type"": ""explicitmember""}]",iso4217:USD,40481000000,numeric,2,2,1875
+us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,C_d56cf9c7-c625-42ed-9718-0c741273bfc7,2020-06-01,2021-05-31,,1,"[{""dimension"": ""srt:ProductOrServiceAxis"", ""member"": ""orcl:CloudServicesAndLicenseSupportMember"", ""type"": ""explicitmember""}]",iso4217:USD,28700000000,numeric,2,2,1949
+us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,C_d6ff0851-8251-4604-b0bf-0661f5be1c3b,2020-06-01,2021-05-31,,1,"[{""dimension"": ""srt:ConsolidationItemsAxis"", ""member"": ""us-gaap:MaterialReconcilingItemsMember"", ""type"": ""explicitmember""}]",iso4217:USD,-2000000,numeric,2,2,1888
+us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,C_1310f41f-da39-4167-b03b-2fcfdf26f800,2021-06-01,2022-05-31,,1,"[{""dimension"": ""srt:ConsolidationItemsAxis"", ""member"": ""us-gaap:OperatingSegmentsMember"", ""type"": ""explicitmember""}]",iso4217:USD,42440000000,numeric,2,2,1874
+us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,C_558acc11-79c5-42fe-b082-ca00e2ea33a4,2021-06-01,2022-05-31,,1,"[{""dimension"": ""srt:ConsolidationItemsAxis"", ""member"": ""us-gaap:MaterialReconcilingItemsMember"", ""type"": ""explicitmember""}]",iso4217:USD,,unparsed_numeric,2,2,1887
+us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,C_60f21e4f-1b14-406f-8e20-53b483c2c0cb,2021-06-01,2022-05-31,,1,"[{""dimension"": ""srt:ProductOrServiceAxis"", ""member"": ""orcl:CloudServicesAndLicenseSupportMember"", ""type"": ""explicitmember""}]",iso4217:USD,30174000000,numeric,2,2,1948
+us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,C_692282bf-34f3-49be-ac74-cab367cc3a26,2022-06-01,2023-05-31,,1,"[{""dimension"": ""srt:ProductOrServiceAxis"", ""member"": ""orcl:CloudServicesAndLicenseSupportMember"", ""type"": ""explicitmember""}]",iso4217:USD,35307000000,numeric,2,2,1947
+us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,C_979ad460-4902-4d3d-a086-1165c6b95bc1,2022-06-01,2023-05-31,,1,"[{""dimension"": ""srt:ConsolidationItemsAxis"", ""member"": ""us-gaap:OperatingSegmentsMember"", ""type"": ""explicitmember""}]",iso4217:USD,49954000000,numeric,2,2,1873
+us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax,C_eb511663-342c-47a9-9cc1-08665123f316,2022-06-01,2023-05-31,,1,"[{""dimension"": ""srt:ConsolidationItemsAxis"", ""member"": ""us-gaap:MaterialReconcilingItemsMember"", ""type"": ""explicitmember""}]",iso4217:USD,,unparsed_numeric,2,2,1886
+us-gaap:ShareBasedCompensation,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],iso4217:USD,1837000000,numeric,2,2,1614
+us-gaap:ShareBasedCompensation,C_3204f188-bbca-4ff2-8eb2-34fa54cccbe5,2021-06-01,2022-05-31,,0,[],iso4217:USD,2613000000,numeric,2,2,1613
+us-gaap:ShareBasedCompensation,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],iso4217:USD,3547000000,numeric,2,2,1612
+us-gaap:ShareBasedCompensationArrangementByShareBasedPaymentAwardAwardVestingPeriod1,C_8a821524-d272-4073-8f8a-36dab2160af9,2022-06-01,2023-05-31,,1,"[{""dimension"": ""us-gaap:PlanNameAxis"", ""member"": ""orcl:Plan2020And2000Member"", ""type"": ""explicitmember""}]",,four years,text,2,2,1498
+us-gaap:StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest,C_adc59fab-04b2-4dc7-85a5-444a63193d6d,,,2022-05-31,0,[],iso4217:USD,-5768000000,numeric,2,2,239
+us-gaap:StockholdersEquityIncludingPortionAttributableToNoncontrollingInterest,C_8dc19c16-0a90-49bb-9768-74f9aa8bba7f,,,2023-05-31,0,[],iso4217:USD,1556000000,numeric,2,2,238
+us-gaap:UnrecognizedTaxBenefits,C_ae9116af-ee21-45e9-805d-20f0cf0d35aa,,,2021-05-31,0,[],iso4217:USD,6912000000,numeric,2,2,1798
+us-gaap:UnrecognizedTaxBenefits,C_adc59fab-04b2-4dc7-85a5-444a63193d6d,,,2022-05-31,0,[],iso4217:USD,7284000000,numeric,2,2,1797
+us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],xbrli:shares,3022000000,numeric,2,2,2009
+us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding,C_3204f188-bbca-4ff2-8eb2-34fa54cccbe5,2021-06-01,2022-05-31,,0,[],xbrli:shares,2786000000,numeric,2,2,2008
+us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],xbrli:shares,2766000000,numeric,2,2,2007
+us-gaap:WeightedAverageNumberOfSharesOutstandingBasic,C_7cd1c699-6387-4a95-a7eb-d6b817ca8e18,2020-06-01,2021-05-31,,0,[],xbrli:shares,2945000000,numeric,2,2,2003
+us-gaap:WeightedAverageNumberOfSharesOutstandingBasic,C_3204f188-bbca-4ff2-8eb2-34fa54cccbe5,2021-06-01,2022-05-31,,0,[],xbrli:shares,2700000000,numeric,2,2,2002
+us-gaap:WeightedAverageNumberOfSharesOutstandingBasic,C_c621f99d-407f-4251-b31f-e58bcdda6fa8,2022-06-01,2023-05-31,,0,[],xbrli:shares,2696000000,numeric,2,2,2001

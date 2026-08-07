@@ -1,0 +1,6 @@
+﻿as_of_date,revenue_tag,period_start,period_end,filing_date,revenue_usd,accession_number,date_rule_passed,revenue_usd_billions
+2021-04-01,RevenueFromContractWithCustomerExcludingAssessedTax,2018-01-01,2018-12-31,2019-02-19,21461268000,0001564590-19-003165,True,21.461268
+2022-04-01,RevenueFromContractWithCustomerExcludingAssessedTax,2018-01-01,2018-12-31,2019-02-19,21461268000,0001564590-19-003165,True,21.461268
+2023-04-01,RevenueFromContractWithCustomerExcludingAssessedTax,2018-01-01,2018-12-31,2019-02-19,21461268000,0001564590-19-003165,True,21.461268
+2024-04-01,RevenueFromContractWithCustomerExcludingAssessedTax,2023-01-01,2023-12-31,2024-01-29,96773000000,0001628280-24-002390,True,96.773
+2025-04-01,RevenueFromContractWithCustomerExcludingAssessedTax,2024-01-01,2024-12-31,2025-01-30,97690000000,0001628280-25-003063,True,97.69

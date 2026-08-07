@@ -1,0 +1,1331 @@
+{
+  "status": "PASS",
+  "ticker": "MSFT",
+  "generated_at": "2026-08-06T09:25:49.792810+00:00",
+  "schemas_used": {
+    "financial_metric_results": [
+      {
+        "column_name": "extraction_run_id",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "metric_name",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "is_primary_metric",
+        "column_type": "BOOLEAN"
+      },
+      {
+        "column_name": "status",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "value",
+        "column_type": "DOUBLE"
+      },
+      {
+        "column_name": "unit",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "context_id",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "period_start",
+        "column_type": "DATE"
+      },
+      {
+        "column_name": "period_end",
+        "column_type": "DATE"
+      },
+      {
+        "column_name": "source_concept",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "label",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "statement_role_definition",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "selection_tier",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "is_derived_metric",
+        "column_type": "BOOLEAN"
+      },
+      {
+        "column_name": "formula",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "validation_reason",
+        "column_type": "VARCHAR"
+      }
+    ],
+    "extraction_runs": [
+      {
+        "column_name": "extraction_run_id",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "accession_number",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "engine_version",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "loaded_at",
+        "column_type": "TIMESTAMP"
+      }
+    ],
+    "sec_filings": [
+      {
+        "column_name": "accession_number",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "ticker",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "form",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "report_date",
+        "column_type": "DATE"
+      },
+      {
+        "column_name": "filing_date",
+        "column_type": "DATE"
+      },
+      {
+        "column_name": "fiscal_year",
+        "column_type": "INTEGER"
+      },
+      {
+        "column_name": "prior_report_date",
+        "column_type": "DATE"
+      },
+      {
+        "column_name": "source_document",
+        "column_type": "VARCHAR"
+      }
+    ],
+    "quarterly_extraction_runs": [
+      {
+        "column_name": "run_id",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "ticker",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "fiscal_year_end",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "engine_version",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "schema_version",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "q1_accession",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "q2_accession",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "q3_accession",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "fy_accession",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "source_json_path",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "run_status",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "created_at",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "completed_at",
+        "column_type": "VARCHAR"
+      }
+    ],
+    "quarterly_metric_results": [
+      {
+        "column_name": "run_id",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "ticker",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "fiscal_year_end",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "fiscal_quarter",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "metric_name",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "value",
+        "column_type": "DOUBLE"
+      },
+      {
+        "column_name": "unit",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "result_status",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "extraction_basis",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "period_start",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "period_end",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "availability_date",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "accession_number",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "concept_qname",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "context_id",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "dimensions_json",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "lineage_json",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "reconciliation_status",
+        "column_type": "VARCHAR"
+      },
+      {
+        "column_name": "reconciliation_difference",
+        "column_type": "DOUBLE"
+      },
+      {
+        "column_name": "permitted_difference",
+        "column_type": "DOUBLE"
+      },
+      {
+        "column_name": "created_at",
+        "column_type": "VARCHAR"
+      }
+    ]
+  },
+  "source_counts": {
+    "annual_periods": 5,
+    "annual_rows": 10,
+    "quarterly_periods": 20,
+    "quarterly_rows": 40
+  },
+  "observations_by_metric": {
+    "annual_operating_margin": 5,
+    "annual_revenue_yoy_growth": 4,
+    "quarterly_operating_margin": 20,
+    "quarterly_revenue_yoy_growth": 16
+  },
+  "total_observations": 45,
+  "total_unresolved": 5,
+  "validation_tolerance_abs": "1E-9",
+  "global_checks": {
+    "no_duplicate_derived_keys": true,
+    "no_missing_lineage": true,
+    "no_future_data_use": true,
+    "no_duplicate_source_rows": true,
+    "all_source_run_ids_and_accessions_exist": true,
+    "sql_and_python_results_match": true,
+    "database_unchanged": true
+  },
+  "future_data_attempts_caught_and_rejected": 0,
+  "database_sha256_before": "2a37d47b2257a34545196a9b4435f493cb88611215afb3f35a766d21fa325773",
+  "database_sha256_after": "2a37d47b2257a34545196a9b4435f493cb88611215afb3f35a766d21fa325773",
+  "observations": [
+    {
+      "frequency": "annual",
+      "derived_metric": "annual_operating_margin",
+      "fiscal_year_end": "2020-06-30",
+      "fiscal_year": 2020,
+      "fiscal_quarter": null,
+      "value": "0.3703038142852148376044470860",
+      "availability_date": "2020-07-30",
+      "formula": "operating_income / revenue",
+      "source_periods": [
+        "2020-06-30"
+      ],
+      "source_run_ids": [
+        "0001564590-20-034944::v14 (scripts/60_xbrl_metric_engine.py)"
+      ],
+      "source_accessions": [
+        "0001564590-20-034944"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.37030381428521486 python=0.3703038142852148376044470860 diff=2.23955529140E-17"
+    },
+    {
+      "frequency": "annual",
+      "derived_metric": "annual_operating_margin",
+      "fiscal_year_end": "2021-06-30",
+      "fiscal_year": 2021,
+      "fiscal_quarter": null,
+      "value": "0.4159487887297130074722764266",
+      "availability_date": "2021-07-29",
+      "formula": "operating_income / revenue",
+      "source_periods": [
+        "2021-06-30"
+      ],
+      "source_run_ids": [
+        "0001564590-21-039151::v14 (scripts/60_xbrl_metric_engine.py)"
+      ],
+      "source_accessions": [
+        "0001564590-21-039151"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.415948788729713 python=0.4159487887297130074722764266 diff=7.4722764266E-18"
+    },
+    {
+      "frequency": "annual",
+      "derived_metric": "annual_operating_margin",
+      "fiscal_year_end": "2022-06-30",
+      "fiscal_year": 2022,
+      "fiscal_quarter": null,
+      "value": "0.4205527815604983103848287689",
+      "availability_date": "2022-07-28",
+      "formula": "operating_income / revenue",
+      "source_periods": [
+        "2022-06-30"
+      ],
+      "source_run_ids": [
+        "0001564590-22-026876::v14 (scripts/60_xbrl_metric_engine.py)"
+      ],
+      "source_accessions": [
+        "0001564590-22-026876"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.4205527815604983 python=0.4205527815604983103848287689 diff=1.03848287689E-17"
+    },
+    {
+      "frequency": "annual",
+      "derived_metric": "annual_operating_margin",
+      "fiscal_year_end": "2023-06-30",
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "value": "0.4177288063610409834131609372",
+      "availability_date": "2023-07-27",
+      "formula": "operating_income / revenue",
+      "source_periods": [
+        "2023-06-30"
+      ],
+      "source_run_ids": [
+        "0000950170-23-035122::v14 (scripts/60_xbrl_metric_engine.py)"
+      ],
+      "source_accessions": [
+        "0000950170-23-035122"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.417728806361041 python=0.4177288063610409834131609372 diff=1.65868390628E-17"
+    },
+    {
+      "frequency": "annual",
+      "derived_metric": "annual_operating_margin",
+      "fiscal_year_end": "2024-06-30",
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "value": "0.4464429957327371676144940071",
+      "availability_date": "2024-07-30",
+      "formula": "operating_income / revenue",
+      "source_periods": [
+        "2024-06-30"
+      ],
+      "source_run_ids": [
+        "0000950170-24-087843::v14 (scripts/60_xbrl_metric_engine.py)"
+      ],
+      "source_accessions": [
+        "0000950170-24-087843"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.44644299573273716 python=0.4464429957327371676144940071 diff=7.6144940071E-18"
+    },
+    {
+      "frequency": "annual",
+      "derived_metric": "annual_revenue_yoy_growth",
+      "fiscal_year_end": "2021-06-30",
+      "fiscal_year": 2021,
+      "fiscal_quarter": null,
+      "value": "0.175317274411774988637555501",
+      "availability_date": "2021-07-29",
+      "formula": "current_fy_revenue / prior_fy_revenue - 1",
+      "source_periods": [
+        "2020-06-30",
+        "2021-06-30"
+      ],
+      "source_run_ids": [
+        "0001564590-20-034944::v14 (scripts/60_xbrl_metric_engine.py)",
+        "0001564590-21-039151::v14 (scripts/60_xbrl_metric_engine.py)"
+      ],
+      "source_accessions": [
+        "0001564590-20-034944",
+        "0001564590-21-039151"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.17531727441177503 python=0.175317274411774988637555501 diff=4.1362444499E-17"
+    },
+    {
+      "frequency": "annual",
+      "derived_metric": "annual_revenue_yoy_growth",
+      "fiscal_year_end": "2022-06-30",
+      "fiscal_year": 2022,
+      "fiscal_quarter": null,
+      "value": "0.179560706296701727666460425",
+      "availability_date": "2022-07-28",
+      "formula": "current_fy_revenue / prior_fy_revenue - 1",
+      "source_periods": [
+        "2021-06-30",
+        "2022-06-30"
+      ],
+      "source_run_ids": [
+        "0001564590-21-039151::v14 (scripts/60_xbrl_metric_engine.py)",
+        "0001564590-22-026876::v14 (scripts/60_xbrl_metric_engine.py)"
+      ],
+      "source_accessions": [
+        "0001564590-21-039151",
+        "0001564590-22-026876"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.17956070629670173 python=0.179560706296701727666460425 diff=2.333539575E-18"
+    },
+    {
+      "frequency": "annual",
+      "derived_metric": "annual_revenue_yoy_growth",
+      "fiscal_year_end": "2023-06-30",
+      "fiscal_year": 2023,
+      "fiscal_quarter": null,
+      "value": "0.068820295556564281030917436",
+      "availability_date": "2023-07-27",
+      "formula": "current_fy_revenue / prior_fy_revenue - 1",
+      "source_periods": [
+        "2022-06-30",
+        "2023-06-30"
+      ],
+      "source_run_ids": [
+        "0001564590-22-026876::v14 (scripts/60_xbrl_metric_engine.py)",
+        "0000950170-23-035122::v14 (scripts/60_xbrl_metric_engine.py)"
+      ],
+      "source_accessions": [
+        "0001564590-22-026876",
+        "0000950170-23-035122"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.06882029555656421 python=0.068820295556564281030917436 diff=7.1030917436E-17"
+    },
+    {
+      "frequency": "annual",
+      "derived_metric": "annual_revenue_yoy_growth",
+      "fiscal_year_end": "2024-06-30",
+      "fiscal_year": 2024,
+      "fiscal_quarter": null,
+      "value": "0.156699620130712785786754123",
+      "availability_date": "2024-07-30",
+      "formula": "current_fy_revenue / prior_fy_revenue - 1",
+      "source_periods": [
+        "2023-06-30",
+        "2024-06-30"
+      ],
+      "source_run_ids": [
+        "0000950170-23-035122::v14 (scripts/60_xbrl_metric_engine.py)",
+        "0000950170-24-087843::v14 (scripts/60_xbrl_metric_engine.py)"
+      ],
+      "source_accessions": [
+        "0000950170-23-035122",
+        "0000950170-24-087843"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.1566996201307127 python=0.156699620130712785786754123 diff=8.5786754123E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2020-06-30",
+      "fiscal_year": 2020,
+      "fiscal_quarter": "Q1",
+      "value": "0.3837846014218726365148994101",
+      "availability_date": "2019-10-23",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2020-06-30:Q1"
+      ],
+      "source_run_ids": [
+        "35af57f5-567a-4ff6-a17b-8fc466c39d5f"
+      ],
+      "source_accessions": [
+        "0001564590-19-037549"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.38378460142187265 python=0.3837846014218726365148994101 diff=1.34851005899E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2020-06-30",
+      "fiscal_year": 2020,
+      "fiscal_quarter": "Q2",
+      "value": "0.3763886630900124640979786485",
+      "availability_date": "2020-01-29",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2020-06-30:Q2"
+      ],
+      "source_run_ids": [
+        "35af57f5-567a-4ff6-a17b-8fc466c39d5f"
+      ],
+      "source_accessions": [
+        "0001564590-20-002450"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.37638866309001245 python=0.3763886630900124640979786485 diff=1.40979786485E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2020-06-30",
+      "fiscal_year": 2020,
+      "fiscal_quarter": "Q3",
+      "value": "0.3704919905199737300476856743",
+      "availability_date": "2020-04-29",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2020-06-30:Q3"
+      ],
+      "source_run_ids": [
+        "35af57f5-567a-4ff6-a17b-8fc466c39d5f"
+      ],
+      "source_accessions": [
+        "0001564590-20-019706"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.3704919905199737 python=0.3704919905199737300476856743 diff=3.00476856743E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2020-06-30",
+      "fiscal_year": 2020,
+      "fiscal_quarter": "Q4",
+      "value": "0.3525096626613730181684326769",
+      "availability_date": "2020-07-30",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2020-06-30:Q4"
+      ],
+      "source_run_ids": [
+        "35af57f5-567a-4ff6-a17b-8fc466c39d5f"
+      ],
+      "source_accessions": [
+        "0001564590-20-034944"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.352509662661373 python=0.3525096626613730181684326769 diff=1.81684326769E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2021-06-30",
+      "fiscal_year": 2021,
+      "fiscal_quarter": "Q1",
+      "value": "0.4273025784572320611508855036",
+      "availability_date": "2020-10-27",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2021-06-30:Q1"
+      ],
+      "source_run_ids": [
+        "986e24f8-d11f-4efa-9fbf-583c31be39b8"
+      ],
+      "source_accessions": [
+        "0001564590-20-047996"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.4273025784572321 python=0.4273025784572320611508855036 diff=3.88491144964E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2021-06-30",
+      "fiscal_year": 2021,
+      "fiscal_quarter": "Q2",
+      "value": "0.4154749744637385086823289070",
+      "availability_date": "2021-01-26",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2021-06-30:Q2"
+      ],
+      "source_run_ids": [
+        "986e24f8-d11f-4efa-9fbf-583c31be39b8"
+      ],
+      "source_accessions": [
+        "0001564590-21-002316"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.4154749744637385 python=0.4154749744637385086823289070 diff=8.6823289070E-18"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2021-06-30",
+      "fiscal_year": 2021,
+      "fiscal_quarter": "Q3",
+      "value": "0.4087661247782093703543854601",
+      "availability_date": "2021-04-27",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2021-06-30:Q3"
+      ],
+      "source_run_ids": [
+        "986e24f8-d11f-4efa-9fbf-583c31be39b8"
+      ],
+      "source_accessions": [
+        "0001564590-21-020891"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.4087661247782094 python=0.4087661247782093703543854601 diff=2.96456145399E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2021-06-30",
+      "fiscal_year": 2021,
+      "fiscal_quarter": "Q4",
+      "value": "0.4137415496619864794591783671",
+      "availability_date": "2021-07-29",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2021-06-30:Q4"
+      ],
+      "source_run_ids": [
+        "986e24f8-d11f-4efa-9fbf-583c31be39b8"
+      ],
+      "source_accessions": [
+        "0001564590-21-039151"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.41374154966198645 python=0.4137415496619864794591783671 diff=2.94591783671E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2022-06-30",
+      "fiscal_year": 2022,
+      "fiscal_quarter": "Q1",
+      "value": "0.4465873733918838405013571066",
+      "availability_date": "2021-10-26",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2022-06-30:Q1"
+      ],
+      "source_run_ids": [
+        "f098130b-89a8-4206-bc90-5d001e89ab9b"
+      ],
+      "source_accessions": [
+        "0001564590-21-051992"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.4465873733918838 python=0.4465873733918838405013571066 diff=4.05013571066E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2022-06-30",
+      "fiscal_year": 2022,
+      "fiscal_quarter": "Q2",
+      "value": "0.4300765542839467986390349521",
+      "availability_date": "2022-01-25",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2022-06-30:Q2"
+      ],
+      "source_run_ids": [
+        "f098130b-89a8-4206-bc90-5d001e89ab9b"
+      ],
+      "source_accessions": [
+        "0001564590-22-002324"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.4300765542839468 python=0.4300765542839467986390349521 diff=1.3609650479E-18"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2022-06-30",
+      "fiscal_year": 2022,
+      "fiscal_quarter": "Q3",
+      "value": "0.4125607779578606158833063209",
+      "availability_date": "2022-04-26",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2022-06-30:Q3"
+      ],
+      "source_run_ids": [
+        "f098130b-89a8-4206-bc90-5d001e89ab9b"
+      ],
+      "source_accessions": [
+        "0001564590-22-015675"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.4125607779578606 python=0.4125607779578606158833063209 diff=1.58833063209E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2022-06-30",
+      "fiscal_year": 2022,
+      "fiscal_quarter": "Q4",
+      "value": "0.3959124650535042899836112986",
+      "availability_date": "2022-07-28",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2022-06-30:Q4"
+      ],
+      "source_run_ids": [
+        "f098130b-89a8-4206-bc90-5d001e89ab9b"
+      ],
+      "source_accessions": [
+        "0001564590-22-026876"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.3959124650535043 python=0.3959124650535042899836112986 diff=1.00163887014E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2023-06-30",
+      "fiscal_year": 2023,
+      "fiscal_quarter": "Q1",
+      "value": "0.4293124775547663700570607717",
+      "availability_date": "2022-10-25",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2023-06-30:Q1"
+      ],
+      "source_run_ids": [
+        "49990564-6c9c-462a-aeb7-d4c8d95c9744"
+      ],
+      "source_accessions": [
+        "0001564590-22-035087"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.42931247755476637 python=0.4293124775547663700570607717 diff=5.70607717E-20"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2023-06-30",
+      "fiscal_year": 2023,
+      "fiscal_quarter": "Q2",
+      "value": "0.3867328947617874002312927749",
+      "availability_date": "2023-01-24",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2023-06-30:Q2"
+      ],
+      "source_run_ids": [
+        "49990564-6c9c-462a-aeb7-d4c8d95c9744"
+      ],
+      "source_accessions": [
+        "0001564590-23-000733"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.3867328947617874 python=0.3867328947617874002312927749 diff=2.312927749E-19"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2023-06-30",
+      "fiscal_year": 2023,
+      "fiscal_quarter": "Q3",
+      "value": "0.4228768185859961783680496434",
+      "availability_date": "2023-04-25",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2023-06-30:Q3"
+      ],
+      "source_run_ids": [
+        "49990564-6c9c-462a-aeb7-d4c8d95c9744"
+      ],
+      "source_accessions": [
+        "0000950170-23-014423"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.4228768185859962 python=0.4228768185859961783680496434 diff=2.16319503566E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2023-06-30",
+      "fiscal_year": 2023,
+      "fiscal_quarter": "Q4",
+      "value": "0.4316503230169606150670059976",
+      "availability_date": "2023-07-27",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2023-06-30:Q4"
+      ],
+      "source_run_ids": [
+        "49990564-6c9c-462a-aeb7-d4c8d95c9744"
+      ],
+      "source_accessions": [
+        "0000950170-23-035122"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.4316503230169606 python=0.4316503230169606150670059976 diff=1.50670059976E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2024-06-30",
+      "fiscal_year": 2024,
+      "fiscal_quarter": "Q1",
+      "value": "0.4758745156324645681830245767",
+      "availability_date": "2023-10-24",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2024-06-30:Q1"
+      ],
+      "source_run_ids": [
+        "e9c306c0-351a-46fe-be93-4e8de1da1b1d"
+      ],
+      "source_accessions": [
+        "0000950170-23-054855"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.4758745156324646 python=0.4758745156324645681830245767 diff=3.18169754233E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2024-06-30",
+      "fiscal_year": 2024,
+      "fiscal_quarter": "Q2",
+      "value": "0.4358594001934859722670106417",
+      "availability_date": "2024-01-30",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2024-06-30:Q2"
+      ],
+      "source_run_ids": [
+        "e9c306c0-351a-46fe-be93-4e8de1da1b1d"
+      ],
+      "source_accessions": [
+        "0000950170-24-008814"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.43585940019348596 python=0.4358594001934859722670106417 diff=1.22670106417E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2024-06-30",
+      "fiscal_year": 2024,
+      "fiscal_quarter": "Q3",
+      "value": "0.4458760386692101264185715671",
+      "availability_date": "2024-04-25",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2024-06-30:Q3"
+      ],
+      "source_run_ids": [
+        "e9c306c0-351a-46fe-be93-4e8de1da1b1d"
+      ],
+      "source_accessions": [
+        "0000950170-24-048288"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.4458760386692101 python=0.4458760386692101264185715671 diff=2.64185715671E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_operating_margin",
+      "fiscal_year_end": "2024-06-30",
+      "fiscal_year": 2024,
+      "fiscal_quarter": "Q4",
+      "value": "0.4314273796097455466806742163",
+      "availability_date": "2024-07-30",
+      "formula": "quarterly_operating_income / quarterly_revenue",
+      "source_periods": [
+        "2024-06-30:Q4"
+      ],
+      "source_run_ids": [
+        "e9c306c0-351a-46fe-be93-4e8de1da1b1d"
+      ],
+      "source_accessions": [
+        "0000950170-24-087843"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.43142737960974553 python=0.4314273796097455466806742163 diff=1.66806742163E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2021-06-30",
+      "fiscal_year": 2021,
+      "fiscal_quarter": "Q1",
+      "value": "0.124005445469671759189230071",
+      "availability_date": "2020-10-27",
+      "formula": "current_fq_revenue / same_fq_prior_fy_revenue - 1",
+      "source_periods": [
+        "2020-06-30:Q1",
+        "2021-06-30:Q1"
+      ],
+      "source_run_ids": [
+        "35af57f5-567a-4ff6-a17b-8fc466c39d5f",
+        "986e24f8-d11f-4efa-9fbf-583c31be39b8"
+      ],
+      "source_accessions": [
+        "0001564590-19-037549",
+        "0001564590-20-047996"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.12400544546967174 python=0.124005445469671759189230071 diff=1.9189230071E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2021-06-30",
+      "fiscal_year": 2021,
+      "fiscal_quarter": "Q2",
+      "value": "0.167181488104915189942014849",
+      "availability_date": "2021-01-26",
+      "formula": "current_fq_revenue / same_fq_prior_fy_revenue - 1",
+      "source_periods": [
+        "2020-06-30:Q2",
+        "2021-06-30:Q2"
+      ],
+      "source_run_ids": [
+        "35af57f5-567a-4ff6-a17b-8fc466c39d5f",
+        "986e24f8-d11f-4efa-9fbf-583c31be39b8"
+      ],
+      "source_accessions": [
+        "0001564590-20-002450",
+        "0001564590-21-002316"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.16718148810491518 python=0.167181488104915189942014849 diff=9.942014849E-18"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2021-06-30",
+      "fiscal_year": 2021,
+      "fiscal_quarter": "Q3",
+      "value": "0.190885468718768738756745952",
+      "availability_date": "2021-04-27",
+      "formula": "current_fq_revenue / same_fq_prior_fy_revenue - 1",
+      "source_periods": [
+        "2020-06-30:Q3",
+        "2021-06-30:Q3"
+      ],
+      "source_run_ids": [
+        "35af57f5-567a-4ff6-a17b-8fc466c39d5f",
+        "986e24f8-d11f-4efa-9fbf-583c31be39b8"
+      ],
+      "source_accessions": [
+        "0001564590-20-019706",
+        "0001564590-21-020891"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.19088546871876866 python=0.190885468718768738756745952 diff=7.8756745952E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2021-06-30",
+      "fiscal_year": 2021,
+      "fiscal_quarter": "Q4",
+      "value": "0.213472510714379617700418058",
+      "availability_date": "2021-07-29",
+      "formula": "current_fq_revenue / same_fq_prior_fy_revenue - 1",
+      "source_periods": [
+        "2020-06-30:Q4",
+        "2021-06-30:Q4"
+      ],
+      "source_run_ids": [
+        "35af57f5-567a-4ff6-a17b-8fc466c39d5f",
+        "986e24f8-d11f-4efa-9fbf-583c31be39b8"
+      ],
+      "source_accessions": [
+        "0001564590-20-034944",
+        "0001564590-21-039151"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.21347251071437956 python=0.213472510714379617700418058 diff=5.7700418058E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2022-06-30",
+      "fiscal_year": 2022,
+      "fiscal_quarter": "Q1",
+      "value": "0.219707164773644829628034667",
+      "availability_date": "2021-10-26",
+      "formula": "current_fq_revenue / same_fq_prior_fy_revenue - 1",
+      "source_periods": [
+        "2021-06-30:Q1",
+        "2022-06-30:Q1"
+      ],
+      "source_run_ids": [
+        "986e24f8-d11f-4efa-9fbf-583c31be39b8",
+        "f098130b-89a8-4206-bc90-5d001e89ab9b"
+      ],
+      "source_accessions": [
+        "0001564590-20-047996",
+        "0001564590-21-051992"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.21970716477364483 python=0.219707164773644829628034667 diff=3.71965333E-19"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2022-06-30",
+      "fiscal_year": 2022,
+      "fiscal_quarter": "Q2",
+      "value": "0.200854304020800445723836939",
+      "availability_date": "2022-01-25",
+      "formula": "current_fq_revenue / same_fq_prior_fy_revenue - 1",
+      "source_periods": [
+        "2021-06-30:Q2",
+        "2022-06-30:Q2"
+      ],
+      "source_run_ids": [
+        "986e24f8-d11f-4efa-9fbf-583c31be39b8",
+        "f098130b-89a8-4206-bc90-5d001e89ab9b"
+      ],
+      "source_accessions": [
+        "0001564590-21-002316",
+        "0001564590-22-002324"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.2008543040208004 python=0.200854304020800445723836939 diff=4.5723836939E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2022-06-30",
+      "fiscal_year": 2022,
+      "fiscal_quarter": "Q3",
+      "value": "0.183522754519733371697117921",
+      "availability_date": "2022-04-26",
+      "formula": "current_fq_revenue / same_fq_prior_fy_revenue - 1",
+      "source_periods": [
+        "2021-06-30:Q3",
+        "2022-06-30:Q3"
+      ],
+      "source_run_ids": [
+        "986e24f8-d11f-4efa-9fbf-583c31be39b8",
+        "f098130b-89a8-4206-bc90-5d001e89ab9b"
+      ],
+      "source_accessions": [
+        "0001564590-21-020891",
+        "0001564590-22-015675"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.18352275451973332 python=0.183522754519733371697117921 diff=5.1697117921E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2022-06-30",
+      "fiscal_year": 2022,
+      "fiscal_quarter": "Q4",
+      "value": "0.123786618131391922343560409",
+      "availability_date": "2022-07-28",
+      "formula": "current_fq_revenue / same_fq_prior_fy_revenue - 1",
+      "source_periods": [
+        "2021-06-30:Q4",
+        "2022-06-30:Q4"
+      ],
+      "source_run_ids": [
+        "986e24f8-d11f-4efa-9fbf-583c31be39b8",
+        "f098130b-89a8-4206-bc90-5d001e89ab9b"
+      ],
+      "source_accessions": [
+        "0001564590-21-039151",
+        "0001564590-22-026876"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.12378661813139202 python=0.123786618131391922343560409 diff=9.7656439591E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2023-06-30",
+      "fiscal_year": 2023,
+      "fiscal_quarter": "Q1",
+      "value": "0.106030849350133503983052718",
+      "availability_date": "2022-10-25",
+      "formula": "current_fq_revenue / same_fq_prior_fy_revenue - 1",
+      "source_periods": [
+        "2022-06-30:Q1",
+        "2023-06-30:Q1"
+      ],
+      "source_run_ids": [
+        "f098130b-89a8-4206-bc90-5d001e89ab9b",
+        "49990564-6c9c-462a-aeb7-d4c8d95c9744"
+      ],
+      "source_accessions": [
+        "0001564590-21-051992",
+        "0001564590-22-035087"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.1060308493501334 python=0.106030849350133503983052718 diff=1.03983052718E-16"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2023-06-30",
+      "fiscal_year": 2023,
+      "fiscal_quarter": "Q2",
+      "value": "0.019699195793380760903185895",
+      "availability_date": "2023-01-24",
+      "formula": "current_fq_revenue / same_fq_prior_fy_revenue - 1",
+      "source_periods": [
+        "2022-06-30:Q2",
+        "2023-06-30:Q2"
+      ],
+      "source_run_ids": [
+        "f098130b-89a8-4206-bc90-5d001e89ab9b",
+        "49990564-6c9c-462a-aeb7-d4c8d95c9744"
+      ],
+      "source_accessions": [
+        "0001564590-22-002324",
+        "0001564590-23-000733"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.019699195793380753 python=0.019699195793380760903185895 diff=7.903185895E-18"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2023-06-30",
+      "fiscal_year": 2023,
+      "fiscal_quarter": "Q3",
+      "value": "0.070846839546191247974068071",
+      "availability_date": "2023-04-25",
+      "formula": "current_fq_revenue / same_fq_prior_fy_revenue - 1",
+      "source_periods": [
+        "2022-06-30:Q3",
+        "2023-06-30:Q3"
+      ],
+      "source_run_ids": [
+        "f098130b-89a8-4206-bc90-5d001e89ab9b",
+        "49990564-6c9c-462a-aeb7-d4c8d95c9744"
+      ],
+      "source_accessions": [
+        "0001564590-22-015675",
+        "0000950170-23-014423"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.0708468395461912 python=0.070846839546191247974068071 diff=4.7974068071E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2023-06-30",
+      "fiscal_year": 2023,
+      "fiscal_quarter": "Q4",
+      "value": "0.083370288248337028824833703",
+      "availability_date": "2023-07-27",
+      "formula": "current_fq_revenue / same_fq_prior_fy_revenue - 1",
+      "source_periods": [
+        "2022-06-30:Q4",
+        "2023-06-30:Q4"
+      ],
+      "source_run_ids": [
+        "f098130b-89a8-4206-bc90-5d001e89ab9b",
+        "49990564-6c9c-462a-aeb7-d4c8d95c9744"
+      ],
+      "source_accessions": [
+        "0001564590-22-026876",
+        "0000950170-23-035122"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.08337028824833692 python=0.083370288248337028824833703 diff=1.08824833703E-16"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2024-06-30",
+      "fiscal_year": 2024,
+      "fiscal_quarter": "Q1",
+      "value": "0.127588683611986752324328638",
+      "availability_date": "2023-10-24",
+      "formula": "current_fq_revenue / same_fq_prior_fy_revenue - 1",
+      "source_periods": [
+        "2023-06-30:Q1",
+        "2024-06-30:Q1"
+      ],
+      "source_run_ids": [
+        "49990564-6c9c-462a-aeb7-d4c8d95c9744",
+        "e9c306c0-351a-46fe-be93-4e8de1da1b1d"
+      ],
+      "source_accessions": [
+        "0001564590-22-035087",
+        "0000950170-23-054855"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.12758868361198683 python=0.127588683611986752324328638 diff=7.7675671362E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2024-06-30",
+      "fiscal_year": 2024,
+      "fiscal_quarter": "Q2",
+      "value": "0.175801467382031205566193338",
+      "availability_date": "2024-01-30",
+      "formula": "current_fq_revenue / same_fq_prior_fy_revenue - 1",
+      "source_periods": [
+        "2023-06-30:Q2",
+        "2024-06-30:Q2"
+      ],
+      "source_run_ids": [
+        "49990564-6c9c-462a-aeb7-d4c8d95c9744",
+        "e9c306c0-351a-46fe-be93-4e8de1da1b1d"
+      ],
+      "source_accessions": [
+        "0001564590-23-000733",
+        "0000950170-24-008814"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.17580146738203117 python=0.175801467382031205566193338 diff=3.5566193338E-17"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2024-06-30",
+      "fiscal_year": 2024,
+      "fiscal_quarter": "Q3",
+      "value": "0.170289649431484949959324214",
+      "availability_date": "2024-04-25",
+      "formula": "current_fq_revenue / same_fq_prior_fy_revenue - 1",
+      "source_periods": [
+        "2023-06-30:Q3",
+        "2024-06-30:Q3"
+      ],
+      "source_run_ids": [
+        "49990564-6c9c-462a-aeb7-d4c8d95c9744",
+        "e9c306c0-351a-46fe-be93-4e8de1da1b1d"
+      ],
+      "source_accessions": [
+        "0000950170-23-014423",
+        "0000950170-24-048288"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.17028964943148495 python=0.170289649431484949959324214 diff=4.0675786E-20"
+    },
+    {
+      "frequency": "quarterly",
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2024-06-30",
+      "fiscal_year": 2024,
+      "fiscal_quarter": "Q4",
+      "value": "0.151951449571980280837886419",
+      "availability_date": "2024-07-30",
+      "formula": "current_fq_revenue / same_fq_prior_fy_revenue - 1",
+      "source_periods": [
+        "2023-06-30:Q4",
+        "2024-06-30:Q4"
+      ],
+      "source_run_ids": [
+        "49990564-6c9c-462a-aeb7-d4c8d95c9744",
+        "e9c306c0-351a-46fe-be93-4e8de1da1b1d"
+      ],
+      "source_accessions": [
+        "0000950170-23-035122",
+        "0000950170-24-087843"
+      ],
+      "validation_status": "PASS",
+      "validation_detail": "sql=0.15195144957198026 python=0.151951449571980280837886419 diff=2.0837886419E-17"
+    }
+  ],
+  "unresolved": [
+    {
+      "derived_metric": "annual_revenue_yoy_growth",
+      "fiscal_year_end": "2020-06-30",
+      "reason": "no prior fiscal year revenue available in Annual Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2020-06-30",
+      "fiscal_quarter": "Q1",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2020-06-30",
+      "fiscal_quarter": "Q2",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2020-06-30",
+      "fiscal_quarter": "Q3",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    },
+    {
+      "derived_metric": "quarterly_revenue_yoy_growth",
+      "fiscal_year_end": "2020-06-30",
+      "fiscal_quarter": "Q4",
+      "reason": "no same fiscal quarter in the prior fiscal year available in Quarterly Data V1 (earliest frozen fiscal year)"
+    }
+  ],
+  "runtime_seconds": 0.088
+}

@@ -1,0 +1,91 @@
+{
+  "task_id": "TASK_148_V5_FINAL_RELEASE_REGRESSION",
+  "status": "PASS",
+  "started_at": "2026-08-06T04:06:26.432Z",
+  "completed_at": "2026-08-06T04:21:13.278Z",
+  "elapsed_seconds": 886.846,
+  "mandatory_outputs": [
+    "c:\\AI_Stock_Agent\\scripts\\150_v5_final_release_regression.py",
+    "c:\\AI_Stock_Agent\\data\\v5_final_release_regression.json",
+    "c:\\AI_Stock_Agent\\data\\v5_final_release_regression.csv",
+    "c:\\AI_Stock_Agent\\docs\\V5_FINAL_RELEASE_REGRESSION.md"
+  ],
+  "outputs": {
+    "c:\\AI_Stock_Agent\\scripts\\150_v5_final_release_regression.py": {
+      "sha256": "acb40d957beb18d4abd31c37eb40a0da72a939cef35797344173e8424624167c",
+      "size_bytes": 28029,
+      "modified_at_utc": "2026-08-06T04:09:34.448Z"
+    },
+    "c:\\AI_Stock_Agent\\data\\v5_final_release_regression.json": {
+      "sha256": "983d511458353a45dc562feafa65f512ee3bfd7bc716436ff5d9224d8e02d4a9",
+      "size_bytes": 38348,
+      "modified_at_utc": "2026-08-06T04:19:42.281Z"
+    },
+    "c:\\AI_Stock_Agent\\data\\v5_final_release_regression.csv": {
+      "sha256": "f41e69124e5db582984779495fce2d9a2138efaf720ca786681cc76723d5863e",
+      "size_bytes": 3317,
+      "modified_at_utc": "2026-08-06T04:19:42.295Z"
+    },
+    "c:\\AI_Stock_Agent\\docs\\V5_FINAL_RELEASE_REGRESSION.md": {
+      "sha256": "5c2f79ff1b799eee425807bdadc923351c7b2e73bc43e2d2fcf8e91614f24968",
+      "size_bytes": 7718,
+      "modified_at_utc": "2026-08-06T04:20:57.798Z"
+    }
+  },
+  "output_problems": [],
+  "utility_version": "142_task_marker_guard-1.0.0",
+  "regression_status": "PASS",
+  "global_checks": {
+    "all_45_company_years_complete": true,
+    "exactly_1080_v5_rows_produced": true,
+    "all_company_years_24_rows": true,
+    "duplicate_keys_zero": true,
+    "missing_lineage_zero": true,
+    "availability_mismatches_zero": true,
+    "future_data_violations_zero": true,
+    "all_four_target_cases_resolve": true,
+    "no_other_production_row_changes": true,
+    "expected_review_required_after_future_load_is_zero": true,
+    "databases_unchanged": true,
+    "engine_invocations_exactly_45": true,
+    "v4_never_rerun": true
+  },
+  "total_rows_produced": 1080,
+  "performance": {
+    "runtime_seconds_wallclock": 584.18,
+    "active_execution_seconds": 583.02,
+    "engine_invocations": 45,
+    "engine_invocations_expected": 45,
+    "slowest_five_company_years": [
+      {
+        "ticker": "MSFT",
+        "fiscal_year_end": "2024-06-30",
+        "elapsed_seconds": 23.26
+      },
+      {
+        "ticker": "GOOGL",
+        "fiscal_year_end": "2025-12-31",
+        "elapsed_seconds": 18.75
+      },
+      {
+        "ticker": "CRWD",
+        "fiscal_year_end": "2026-01-31",
+        "elapsed_seconds": 18.32
+      },
+      {
+        "ticker": "MSFT",
+        "fiscal_year_end": "2020-06-30",
+        "elapsed_seconds": 18.01
+      },
+      {
+        "ticker": "GOOGL",
+        "fiscal_year_end": "2023-12-31",
+        "elapsed_seconds": 18.0
+      }
+    ],
+    "any_company_year_over_30s": false,
+    "hard_timeout_seconds": 45,
+    "v4_rerun": false
+  },
+  "databases_unchanged": true
+}

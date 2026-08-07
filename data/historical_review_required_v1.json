@@ -1,0 +1,1371 @@
+{
+  "root_cause_counts": {
+    "cascading_derived_metric_component_not_pass": 162,
+    "generic_row_not_found": 11,
+    "current_debt_zero_inference_earliest_bucket_nonzero": 10,
+    "unclassified": 9,
+    "current_debt_zero_inference_role_not_found": 8,
+    "long_term_debt_no_row_ancestry_confirmed_absent": 5,
+    "row_identification_ambiguous": 5,
+    "effective_tax_rate_outside_plausible_range": 4,
+    "current_debt_zero_inference_total_mismatch_with_ltd": 3,
+    "effective_tax_rate_pretax_income_not_positive": 3,
+    "short_term_investments_no_row_found": 2
+  },
+  "cases_by_root_cause": {
+    "effective_tax_rate_outside_plausible_range": [
+      {
+        "ticker": "ORCL",
+        "report_date": "2021-05-31",
+        "metric": "effective_tax_rate",
+        "error": "שיעור המס האפקטיבי המדווח (-0.05746595891991692) מחוץ לטווח הסביר [0, 1]."
+      },
+      {
+        "ticker": "NVDA",
+        "report_date": "2023-01-29",
+        "metric": "effective_tax_rate",
+        "error": "שיעור המס האפקטיבי המדווח (-0.044726142071274816) מחוץ לטווח הסביר [0, 1]."
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2025-01-31",
+        "metric": "effective_tax_rate",
+        "error": "שיעור המס האפקטיבי המדווח (1.3043239080206843) מחוץ לטווח הסביר [0, 1]."
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2024-07-31",
+        "metric": "effective_tax_rate",
+        "error": "שיעור המס האפקטיבי המדווח (-1.608114944854801) מחוץ לטווח הסביר [0, 1]."
+      }
+    ],
+    "cascading_derived_metric_component_not_pass": [
+      {
+        "ticker": "ORCL",
+        "report_date": "2021-05-31",
+        "metric": "nopat",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'operating_income': 'PASS', 'effective_tax_rate': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "ORCL",
+        "report_date": "2021-05-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'REVIEW_REQUIRED', 'average_invested_capital': 'PASS'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2020-12-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2020-12-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2020-12-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2020-12-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2020-12-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'PASS', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2021-12-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2021-12-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2021-12-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2021-12-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2021-12-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'PASS', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2022-12-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'PASS'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2022-12-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2022-12-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2022-12-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2022-12-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'PASS', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2023-12-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'PASS'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2023-12-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2023-12-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2023-12-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2023-12-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'PASS', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2024-12-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'PASS'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2024-12-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2024-12-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2024-12-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "META",
+        "report_date": "2024-12-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'PASS', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "NVDA",
+        "report_date": "2020-01-26",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'PASS'}"
+      },
+      {
+        "ticker": "NVDA",
+        "report_date": "2020-01-26",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "NVDA",
+        "report_date": "2020-01-26",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "NVDA",
+        "report_date": "2020-01-26",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "NVDA",
+        "report_date": "2020-01-26",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'PASS', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "NVDA",
+        "report_date": "2023-01-29",
+        "metric": "nopat",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'operating_income': 'PASS', 'effective_tax_rate': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "NVDA",
+        "report_date": "2023-01-29",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'REVIEW_REQUIRED', 'average_invested_capital': 'PASS'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2021-12-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'PASS'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2021-12-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2021-12-31",
+        "metric": "nopat",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'operating_income': 'PASS', 'effective_tax_rate': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2021-12-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2021-12-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2021-12-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'REVIEW_REQUIRED', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2022-12-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'PASS'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2022-12-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2022-12-31",
+        "metric": "nopat",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'operating_income': 'PASS', 'effective_tax_rate': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2022-12-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2022-12-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2022-12-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'REVIEW_REQUIRED', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2023-12-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'PASS'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2023-12-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2023-12-31",
+        "metric": "nopat",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'operating_income': 'PASS', 'effective_tax_rate': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2023-12-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2023-12-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2023-12-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'REVIEW_REQUIRED', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2024-12-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'PASS'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2024-12-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2024-12-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2024-12-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2024-12-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'PASS', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2025-12-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'PASS'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2025-12-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2025-12-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2025-12-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2025-12-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'PASS', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2021-12-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'PASS'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2021-12-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2021-12-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2021-12-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2021-12-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'PASS', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2022-12-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'PASS'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2022-12-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2022-12-31",
+        "metric": "nopat",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'operating_income': 'PASS', 'effective_tax_rate': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2022-12-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2022-12-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2022-12-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'REVIEW_REQUIRED', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2023-12-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'PASS'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2023-12-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2023-12-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2023-12-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2023-12-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'PASS', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2024-12-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'PASS'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2024-12-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2024-12-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2024-12-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2024-12-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'PASS', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2025-12-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'PASS'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2025-12-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2025-12-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2025-12-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2025-12-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'PASS', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2021-09-02",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'PASS', 'cash_and_equivalents': 'REVIEW_REQUIRED', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2021-09-02",
+        "metric": "nopat",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'operating_income': 'PASS', 'effective_tax_rate': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2021-09-02",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'PASS', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'REVIEW_REQUIRED', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2021-09-02",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2021-09-02",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'REVIEW_REQUIRED', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2022-09-01",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'PASS', 'cash_and_equivalents': 'REVIEW_REQUIRED', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2022-09-01",
+        "metric": "nopat",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'operating_income': 'PASS', 'effective_tax_rate': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2022-09-01",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'PASS', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'REVIEW_REQUIRED', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2022-09-01",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2022-09-01",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'REVIEW_REQUIRED', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2023-08-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'PASS', 'cash_and_equivalents': 'REVIEW_REQUIRED', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2023-08-31",
+        "metric": "nopat",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'operating_income': 'PASS', 'effective_tax_rate': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2023-08-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'PASS', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'REVIEW_REQUIRED', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2023-08-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2023-08-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'REVIEW_REQUIRED', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2024-08-29",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'PASS', 'cash_and_equivalents': 'REVIEW_REQUIRED', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2024-08-29",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'PASS', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'REVIEW_REQUIRED', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2024-08-29",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2024-08-29",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'PASS', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2022-01-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'PASS'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2022-01-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2022-01-31",
+        "metric": "nopat",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'operating_income': 'PASS', 'effective_tax_rate': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2022-01-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2022-01-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2022-01-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'REVIEW_REQUIRED', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2023-01-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'PASS'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2023-01-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2023-01-31",
+        "metric": "nopat",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'operating_income': 'PASS', 'effective_tax_rate': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2023-01-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2023-01-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2023-01-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'REVIEW_REQUIRED', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2024-01-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'PASS'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2024-01-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2024-01-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2024-01-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2024-01-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'PASS', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2025-01-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'PASS'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2025-01-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2025-01-31",
+        "metric": "nopat",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'operating_income': 'PASS', 'effective_tax_rate': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2025-01-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2025-01-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2025-01-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'REVIEW_REQUIRED', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2026-01-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'REVIEW_REQUIRED', 'long_term_debt': 'PASS'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2026-01-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2026-01-31",
+        "metric": "nopat",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'operating_income': 'PASS', 'effective_tax_rate': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2026-01-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2026-01-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2026-01-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'REVIEW_REQUIRED', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2021-07-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'PASS', 'cash_and_equivalents': 'REVIEW_REQUIRED', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2021-07-31",
+        "metric": "nopat",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'operating_income': 'PASS', 'effective_tax_rate': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2021-07-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'PASS', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'REVIEW_REQUIRED', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2021-07-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2021-07-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'REVIEW_REQUIRED', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2022-07-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'PASS', 'cash_and_equivalents': 'REVIEW_REQUIRED', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2022-07-31",
+        "metric": "nopat",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'operating_income': 'PASS', 'effective_tax_rate': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2022-07-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'PASS', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'REVIEW_REQUIRED', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2022-07-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2022-07-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'REVIEW_REQUIRED', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2023-07-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'PASS', 'long_term_debt': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2023-07-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'REVIEW_REQUIRED', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2023-07-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'REVIEW_REQUIRED', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2023-07-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2023-07-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'PASS', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2024-07-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'PASS', 'long_term_debt': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2024-07-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2024-07-31",
+        "metric": "nopat",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'operating_income': 'PASS', 'effective_tax_rate': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2024-07-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2024-07-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2024-07-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'REVIEW_REQUIRED', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2025-07-31",
+        "metric": "total_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'current_debt': 'PASS', 'long_term_debt': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2025-07-31",
+        "metric": "adjusted_net_debt",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2025-07-31",
+        "metric": "invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'total_debt': 'REVIEW_REQUIRED', 'stockholders_equity': 'PASS', 'cash_and_equivalents': 'PASS', 'short_term_investments': 'PASS'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2025-07-31",
+        "metric": "average_invested_capital",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'invested_capital': 'REVIEW_REQUIRED', 'invested_capital_prior': 'REVIEW_REQUIRED'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2025-07-31",
+        "metric": "roic",
+        "error": "לא ניתן לחשב מדד נגזר כי לא כל הרכיבים עברו PASS: {'nopat': 'PASS', 'average_invested_capital': 'REVIEW_REQUIRED'}"
+      }
+    ],
+    "current_debt_zero_inference_role_not_found": [
+      {
+        "ticker": "META",
+        "report_date": "2020-12-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 2 לא הוכח): לא נמצא באופן חד-משמעי ביאור לוח פירעונות חוב (Debt Maturity Schedule) — לא ניתן לאשר תנאי 2."
+      },
+      {
+        "ticker": "META",
+        "report_date": "2021-12-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 2 לא הוכח): לא נמצא באופן חד-משמעי ביאור לוח פירעונות חוב (Debt Maturity Schedule) — לא ניתן לאשר תנאי 2."
+      },
+      {
+        "ticker": "NVDA",
+        "report_date": "2020-01-26",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 2 לא הוכח): לא נמצא באופן חד-משמעי ביאור לוח פירעונות חוב (Debt Maturity Schedule) — לא ניתן לאשר תנאי 2."
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2022-01-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 2 לא הוכח): לא נמצא באופן חד-משמעי ביאור לוח פירעונות חוב (Debt Maturity Schedule) — לא ניתן לאשר תנאי 2."
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2023-01-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 2 לא הוכח): לא נמצא באופן חד-משמעי ביאור לוח פירעונות חוב (Debt Maturity Schedule) — לא ניתן לאשר תנאי 2."
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2024-01-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 2 לא הוכח): לא נמצא באופן חד-משמעי ביאור לוח פירעונות חוב (Debt Maturity Schedule) — לא ניתן לאשר תנאי 2."
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2025-01-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 2 לא הוכח): לא נמצא באופן חד-משמעי ביאור לוח פירעונות חוב (Debt Maturity Schedule) — לא ניתן לאשר תנאי 2."
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2026-01-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 2 לא הוכח): לא נמצא באופן חד-משמעי ביאור לוח פירעונות חוב (Debt Maturity Schedule) — לא ניתן לאשר תנאי 2."
+      }
+    ],
+    "long_term_debt_no_row_ancestry_confirmed_absent": [
+      {
+        "ticker": "META",
+        "report_date": "2020-12-31",
+        "metric": "long_term_debt",
+        "error": "לא נמצאה אף שורת 'long_term_debt' בתוך Statement role ראשי התואם לכללי ה-Role של המדד, וגם לא נמצאה שורת חוב לא-שוטף מועמדת לפי שרשרת ה-Ancestor (מדיניות D-019)."
+      },
+      {
+        "ticker": "META",
+        "report_date": "2021-12-31",
+        "metric": "long_term_debt",
+        "error": "לא נמצאה אף שורת 'long_term_debt' בתוך Statement role ראשי התואם לכללי ה-Role של המדד, וגם לא נמצאה שורת חוב לא-שוטף מועמדת לפי שרשרת ה-Ancestor (מדיניות D-019)."
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2023-07-31",
+        "metric": "long_term_debt",
+        "error": "לא נמצאה אף שורת 'long_term_debt' בתוך Statement role ראשי התואם לכללי ה-Role של המדד, וגם לא נמצאה שורת חוב לא-שוטף מועמדת לפי שרשרת ה-Ancestor (מדיניות D-019)."
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2024-07-31",
+        "metric": "long_term_debt",
+        "error": "לא נמצאה אף שורת 'long_term_debt' בתוך Statement role ראשי התואם לכללי ה-Role של המדד, וגם לא נמצאה שורת חוב לא-שוטף מועמדת לפי שרשרת ה-Ancestor (מדיניות D-019)."
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2025-07-31",
+        "metric": "long_term_debt",
+        "error": "לא נמצאה אף שורת 'long_term_debt' בתוך Statement role ראשי התואם לכללי ה-Role של המדד, וגם לא נמצאה שורת חוב לא-שוטף מועמדת לפי שרשרת ה-Ancestor (מדיניות D-019)."
+      }
+    ],
+    "current_debt_zero_inference_total_mismatch_with_ltd": [
+      {
+        "ticker": "META",
+        "report_date": "2022-12-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 3 לא הוכח): סה\"כ לוח הפירעונות (10000000000.0) אינו מתיישב עם long_term_debt מהמאזן (9923000000.0) — תנאי 3 לא הוכח."
+      },
+      {
+        "ticker": "META",
+        "report_date": "2023-12-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 3 לא הוכח): סה\"כ לוח הפירעונות (18500000000.0) אינו מתיישב עם long_term_debt מהמאזן (18385000000.0) — תנאי 3 לא הוכח."
+      },
+      {
+        "ticker": "META",
+        "report_date": "2024-12-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 3 לא הוכח): סה\"כ לוח הפירעונות (29000000000.0) אינו מתיישב עם long_term_debt מהמאזן (28826000000.0) — תנאי 3 לא הוכח."
+      }
+    ],
+    "current_debt_zero_inference_earliest_bucket_nonzero": [
+      {
+        "ticker": "GOOGL",
+        "report_date": "2021-12-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 2 לא הוכח): השורה המוקדמת ביותר בלוח הפירעונות ('2022') אינה אפס (187000000.0) — לא ניתן לאשר שאין סכום לפירעון תוך 12 חודשים."
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2022-12-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 2 לא הוכח): השורה המוקדמת ביותר בלוח הפירעונות ('2023') אינה אפס (221000000.0) — לא ניתן לאשר שאין סכום לפירעון תוך 12 חודשים."
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2023-12-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 2 לא הוכח): השורה המוקדמת ביותר בלוח הפירעונות ('2024') אינה אפס (1299000000.0) — לא ניתן לאשר שאין סכום לפירעון תוך 12 חודשים."
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2024-12-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 2 לא הוכח): השורה המוקדמת ביותר בלוח הפירעונות ('2025') אינה אפס (1000000000.0) — לא ניתן לאשר שאין סכום לפירעון תוך 12 חודשים."
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2025-12-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 2 לא הוכח): השורה המוקדמת ביותר בלוח הפירעונות ('2026') אינה אפס (2000000000.0) — לא ניתן לאשר שאין סכום לפירעון תוך 12 חודשים."
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2021-12-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 2 לא הוכח): השורה המוקדמת ביותר בלוח הפירעונות ('2022') אינה אפס (1493000000.0) — לא ניתן לאשר שאין סכום לפירעון תוך 12 חודשים."
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2022-12-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 2 לא הוכח): השורה המוקדמת ביותר בלוח הפירעונות ('2023') אינה אפס (3000000000.0) — לא ניתן לאשר שאין סכום לפירעון תוך 12 חודשים."
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2023-12-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 2 לא הוכח): השורה המוקדמת ביותר בלוח הפירעונות ('2024') אינה אפס (8500000000.0) — לא ניתן לאשר שאין סכום לפירעון תוך 12 חודשים."
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2024-12-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 2 לא הוכח): השורה המוקדמת ביותר בלוח הפירעונות ('2025') אינה אפס (5000000000.0) — לא ניתן לאשר שאין סכום לפירעון תוך 12 חודשים."
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2025-12-31",
+        "metric": "current_debt",
+        "error": "current_debt = 0 לא הוסק (תנאי 2 לא הוכח): השורה המוקדמת ביותר בלוח הפירעונות ('2026') אינה אפס (2752000000.0) — לא ניתן לאשר שאין סכום לפירעון תוך 12 חודשים."
+      }
+    ],
+    "generic_row_not_found": [
+      {
+        "ticker": "GOOGL",
+        "report_date": "2021-12-31",
+        "metric": "pretax_income",
+        "error": "לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי התואם לכללי ה-Role של המדד."
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2022-12-31",
+        "metric": "pretax_income",
+        "error": "לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי התואם לכללי ה-Role של המדד."
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2023-12-31",
+        "metric": "pretax_income",
+        "error": "לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי התואם לכללי ה-Role של המדד."
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2021-09-02",
+        "metric": "cash_and_equivalents",
+        "error": "לא נמצאה אף שורת 'cash_and_equivalents' בתוך Statement role ראשי התואם לכללי ה-Role של המדד."
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2022-09-01",
+        "metric": "cash_and_equivalents",
+        "error": "לא נמצאה אף שורת 'cash_and_equivalents' בתוך Statement role ראשי התואם לכללי ה-Role של המדד."
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2023-08-31",
+        "metric": "cash_and_equivalents",
+        "error": "לא נמצאה אף שורת 'cash_and_equivalents' בתוך Statement role ראשי התואם לכללי ה-Role של המדד."
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2024-08-29",
+        "metric": "cash_and_equivalents",
+        "error": "לא נמצאה אף שורת 'cash_and_equivalents' בתוך Statement role ראשי התואם לכללי ה-Role של המדד."
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2022-01-31",
+        "metric": "pretax_income",
+        "error": "לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי התואם לכללי ה-Role של המדד."
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2023-01-31",
+        "metric": "pretax_income",
+        "error": "לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי התואם לכללי ה-Role של המדד."
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2021-07-31",
+        "metric": "pretax_income",
+        "error": "לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי התואם לכללי ה-Role של המדד."
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2022-07-31",
+        "metric": "pretax_income",
+        "error": "לא נמצאה אף שורת 'pretax_income' בתוך Statement role ראשי התואם לכללי ה-Role של המדד."
+      }
+    ],
+    "unclassified": [
+      {
+        "ticker": "GOOGL",
+        "report_date": "2021-12-31",
+        "metric": "effective_tax_rate",
+        "error": "לא ניתן לחשב Effective Tax Rate כי לא כל הרכיבים עברו PASS: {'pretax_income': 'REVIEW_REQUIRED', 'income_tax_expense': 'PASS'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2022-12-31",
+        "metric": "effective_tax_rate",
+        "error": "לא ניתן לחשב Effective Tax Rate כי לא כל הרכיבים עברו PASS: {'pretax_income': 'REVIEW_REQUIRED', 'income_tax_expense': 'PASS'}"
+      },
+      {
+        "ticker": "GOOGL",
+        "report_date": "2023-12-31",
+        "metric": "effective_tax_rate",
+        "error": "לא ניתן לחשב Effective Tax Rate כי לא כל הרכיבים עברו PASS: {'pretax_income': 'REVIEW_REQUIRED', 'income_tax_expense': 'PASS'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2021-09-02",
+        "metric": "effective_tax_rate",
+        "error": "לא ניתן לחשב Effective Tax Rate כי לא כל הרכיבים עברו PASS: {'pretax_income': 'REVIEW_REQUIRED', 'income_tax_expense': 'PASS'}"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2022-09-01",
+        "metric": "effective_tax_rate",
+        "error": "לא ניתן לחשב Effective Tax Rate כי לא כל הרכיבים עברו PASS: {'pretax_income': 'REVIEW_REQUIRED', 'income_tax_expense': 'PASS'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2022-01-31",
+        "metric": "effective_tax_rate",
+        "error": "לא ניתן לחשב Effective Tax Rate כי לא כל הרכיבים עברו PASS: {'pretax_income': 'REVIEW_REQUIRED', 'income_tax_expense': 'PASS'}"
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2023-01-31",
+        "metric": "effective_tax_rate",
+        "error": "לא ניתן לחשב Effective Tax Rate כי לא כל הרכיבים עברו PASS: {'pretax_income': 'REVIEW_REQUIRED', 'income_tax_expense': 'PASS'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2021-07-31",
+        "metric": "effective_tax_rate",
+        "error": "לא ניתן לחשב Effective Tax Rate כי לא כל הרכיבים עברו PASS: {'pretax_income': 'REVIEW_REQUIRED', 'income_tax_expense': 'PASS'}"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2022-07-31",
+        "metric": "effective_tax_rate",
+        "error": "לא ניתן לחשב Effective Tax Rate כי לא כל הרכיבים עברו PASS: {'pretax_income': 'REVIEW_REQUIRED', 'income_tax_expense': 'PASS'}"
+      }
+    ],
+    "effective_tax_rate_pretax_income_not_positive": [
+      {
+        "ticker": "AMZN",
+        "report_date": "2022-12-31",
+        "metric": "effective_tax_rate",
+        "error": "Pretax Income אינו חיובי (-5936000000.0) — לא ניתן לחשב שיעור מס אפקטיבי מהימן."
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2023-08-31",
+        "metric": "effective_tax_rate",
+        "error": "Pretax Income אינו חיובי (-5658000000.0) — לא ניתן לחשב שיעור מס אפקטיבי מהימן."
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2026-01-31",
+        "metric": "effective_tax_rate",
+        "error": "Pretax Income אינו חיובי (-126989000.0) — לא ניתן לחשב שיעור מס אפקטיבי מהימן."
+      }
+    ],
+    "row_identification_ambiguous": [
+      {
+        "ticker": "MU",
+        "report_date": "2021-09-02",
+        "metric": "pretax_income",
+        "error": "לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית.\nמספר שורות מועמדות כוללות: 1, מתוכן 'attributable': 0, 'plain': 0"
+      },
+      {
+        "ticker": "MU",
+        "report_date": "2022-09-01",
+        "metric": "pretax_income",
+        "error": "לא ניתן לזהות שורת 'pretax_income' יחידה וחד-משמעית.\nמספר שורות מועמדות כוללות: 1, מתוכן 'attributable': 0, 'plain': 0"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2021-07-31",
+        "metric": "cash_and_equivalents",
+        "error": "לא ניתן לזהות שורת 'cash_and_equivalents' יחידה וחד-משמעית.\nמספר שורות מועמדות כוללות: 2, מתוכן 'attributable': 0, 'plain': 2"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2022-07-31",
+        "metric": "cash_and_equivalents",
+        "error": "לא ניתן לזהות שורת 'cash_and_equivalents' יחידה וחד-משמעית.\nמספר שורות מועמדות כוללות: 2, מתוכן 'attributable': 0, 'plain': 2"
+      },
+      {
+        "ticker": "PANW",
+        "report_date": "2023-07-31",
+        "metric": "cash_and_equivalents",
+        "error": "לא ניתן לזהות שורת 'cash_and_equivalents' יחידה וחד-משמעית.\nמספר שורות מועמדות כוללות: 2, מתוכן 'attributable': 0, 'plain': 2"
+      }
+    ],
+    "short_term_investments_no_row_found": [
+      {
+        "ticker": "CRWD",
+        "report_date": "2022-01-31",
+        "metric": "short_term_investments",
+        "error": "לא נמצאה אף שורת 'short_term_investments' בתוך Statement role ראשי התואם לכללי ה-Role של המדד."
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2026-01-31",
+        "metric": "short_term_investments",
+        "error": "לא נמצאה אף שורת 'short_term_investments' בתוך Statement role ראשי התואם לכללי ה-Role של המדד."
+      }
+    ]
+  }
+}

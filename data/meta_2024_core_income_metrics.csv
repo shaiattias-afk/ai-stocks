@@ -1,0 +1,4 @@
+﻿metric,fiscal_year,candidate_count,unique_value_count,unique_concept_count,selected_value,status
+net_income,2022,1,1,1,23200000000.0,PASS
+operating_income,2022,1,1,1,28944000000.0,PASS
+revenue,2022,1,1,1,116609000000.0,PASS

@@ -1,0 +1,428 @@
+{
+  "target_company_years": 9,
+  "company_year_results": [
+    {
+      "ticker": "MSFT",
+      "fiscal_year_end": "2022-06-30",
+      "status": "COMMITTED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1192,
+          "context_count": 308,
+          "unit_count": 5,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1550,
+          "context_count": 404,
+          "unit_count": 5,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1589,
+          "context_count": 422,
+          "unit_count": 5,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "PASS",
+        "operating_income": "PASS",
+        "pretax_income": "PASS",
+        "income_tax_expense": "PASS",
+        "operating_cash_flow": "PASS",
+        "capex": "PASS"
+      },
+      "engine_row_count": 24,
+      "load_result": {
+        "ticker": "MSFT",
+        "status": "COMMITTED",
+        "run_id": "f098130b-89a8-4206-bc90-5d001e89ab9b",
+        "rows_committed": 24,
+        "extraction_basis_counts": {
+          "DIRECT_QUARTER": 18,
+          "DERIVED_Q4_FROM_10K_MINUS_9M": 6
+        }
+      },
+      "elapsed_seconds": 14.66
+    },
+    {
+      "ticker": "MSFT",
+      "fiscal_year_end": "2023-06-30",
+      "status": "COMMITTED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1191,
+          "context_count": 303,
+          "unit_count": 5,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1546,
+          "context_count": 401,
+          "unit_count": 6,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1560,
+          "context_count": 405,
+          "unit_count": 6,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "PASS",
+        "operating_income": "PASS",
+        "pretax_income": "PASS",
+        "income_tax_expense": "PASS",
+        "operating_cash_flow": "PASS",
+        "capex": "PASS"
+      },
+      "engine_row_count": 24,
+      "load_result": {
+        "ticker": "MSFT",
+        "status": "COMMITTED",
+        "run_id": "49990564-6c9c-462a-aeb7-d4c8d95c9744",
+        "rows_committed": 24,
+        "extraction_basis_counts": {
+          "DIRECT_QUARTER": 18,
+          "DERIVED_Q4_FROM_10K_MINUS_9M": 6
+        }
+      },
+      "elapsed_seconds": 11.35
+    },
+    {
+      "ticker": "MSFT",
+      "fiscal_year_end": "2024-06-30",
+      "status": "SKIPPED_ALREADY_COMPLETE",
+      "verification": {
+        "already_complete": true,
+        "checks": {
+          "run_status_pass": true,
+          "row_count_24": true,
+          "no_duplicate_keys": "True",
+          "lineage_complete": true,
+          "availability_dates_present": true
+        },
+        "run_id": "e9c306c0-351a-46fe-be93-4e8de1da1b1d",
+        "row_count": 24
+      },
+      "elapsed_seconds": 0.02
+    },
+    {
+      "ticker": "AMZN",
+      "fiscal_year_end": "2022-12-31",
+      "status": "COMMITTED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 831,
+          "context_count": 166,
+          "unit_count": 7,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1129,
+          "context_count": 241,
+          "unit_count": 7,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1136,
+          "context_count": 241,
+          "unit_count": 7,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "PASS",
+        "operating_income": "PASS",
+        "pretax_income": "PASS",
+        "income_tax_expense": "PASS",
+        "operating_cash_flow": "PASS",
+        "capex": "PASS"
+      },
+      "engine_row_count": 24,
+      "load_result": {
+        "ticker": "AMZN",
+        "status": "COMMITTED",
+        "run_id": "9ed7dae9-9a7a-46d1-b662-b8b8bea6e292",
+        "rows_committed": 24,
+        "extraction_basis_counts": {
+          "DIRECT_QUARTER": 18,
+          "DERIVED_Q4_FROM_10K_MINUS_9M": 6
+        }
+      },
+      "elapsed_seconds": 17.76
+    },
+    {
+      "ticker": "AMZN",
+      "fiscal_year_end": "2023-12-31",
+      "status": "COMMITTED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 863,
+          "context_count": 179,
+          "unit_count": 7,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1156,
+          "context_count": 244,
+          "unit_count": 7,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 1138,
+          "context_count": 237,
+          "unit_count": 7,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "PASS",
+        "operating_income": "PASS",
+        "pretax_income": "PASS",
+        "income_tax_expense": "PASS",
+        "operating_cash_flow": "PASS",
+        "capex": "PASS"
+      },
+      "engine_row_count": 24,
+      "load_result": {
+        "ticker": "AMZN",
+        "status": "COMMITTED",
+        "run_id": "b49c40b4-cb9e-4fb8-b196-531218a9afe9",
+        "rows_committed": 24,
+        "extraction_basis_counts": {
+          "DIRECT_QUARTER": 18,
+          "DERIVED_Q4_FROM_10K_MINUS_9M": 6
+        }
+      },
+      "elapsed_seconds": 11.83
+    },
+    {
+      "ticker": "AMZN",
+      "fiscal_year_end": "2024-12-31",
+      "status": "SKIPPED_ALREADY_COMPLETE",
+      "verification": {
+        "already_complete": true,
+        "checks": {
+          "run_status_pass": true,
+          "row_count_24": true,
+          "no_duplicate_keys": "True",
+          "lineage_complete": true,
+          "availability_dates_present": true
+        },
+        "run_id": "ec5dcd3d-f57a-42a5-9d00-fdc3b90751b8",
+        "row_count": 24
+      },
+      "elapsed_seconds": 0.04
+    },
+    {
+      "ticker": "ORCL",
+      "fiscal_year_end": "2022-05-31",
+      "status": "COMMITTED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 618,
+          "context_count": 140,
+          "unit_count": 7,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 846,
+          "context_count": 191,
+          "unit_count": 7,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 875,
+          "context_count": 204,
+          "unit_count": 7,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "PASS_ROUNDING_TOLERANCE",
+        "operating_income": "PASS_ROUNDING_TOLERANCE",
+        "pretax_income": "PASS",
+        "income_tax_expense": "PASS_ROUNDING_TOLERANCE",
+        "operating_cash_flow": "PASS",
+        "capex": "PASS"
+      },
+      "engine_row_count": 24,
+      "load_result": {
+        "ticker": "ORCL",
+        "status": "COMMITTED",
+        "run_id": "908c6a1d-847a-473f-b0f4-29af2e348a1b",
+        "rows_committed": 24,
+        "extraction_basis_counts": {
+          "DIRECT_QUARTER": 14,
+          "DERIVED_Q4_FROM_10K_MINUS_9M": 6,
+          "DERIVED_FROM_YTD": 4
+        }
+      },
+      "elapsed_seconds": 26.62
+    },
+    {
+      "ticker": "ORCL",
+      "fiscal_year_end": "2023-05-31",
+      "status": "COMMITTED",
+      "quarter_status": {
+        "Q1": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 707,
+          "context_count": 180,
+          "unit_count": 7,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q2": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 973,
+          "context_count": 248,
+          "unit_count": 7,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        },
+        "Q3": {
+          "lock_result": "REUSED",
+          "warehouse_result": "REUSED",
+          "fact_count": 994,
+          "context_count": 249,
+          "unit_count": 7,
+          "sec_filings_registration": "NEWLY_REGISTERED"
+        }
+      },
+      "metric_statuses": {
+        "revenue": "PASS",
+        "operating_income": "PASS_ROUNDING_TOLERANCE",
+        "pretax_income": "PASS_ROUNDING_TOLERANCE",
+        "income_tax_expense": "PASS",
+        "operating_cash_flow": "PASS",
+        "capex": "PASS"
+      },
+      "engine_row_count": 24,
+      "load_result": {
+        "ticker": "ORCL",
+        "status": "COMMITTED",
+        "run_id": "5e8eec45-4efa-4149-bb45-78c6315492e1",
+        "rows_committed": 24,
+        "extraction_basis_counts": {
+          "DIRECT_QUARTER": 14,
+          "DERIVED_Q4_FROM_10K_MINUS_9M": 6,
+          "DERIVED_FROM_YTD": 4
+        }
+      },
+      "elapsed_seconds": 22.97
+    },
+    {
+      "ticker": "ORCL",
+      "fiscal_year_end": "2024-05-31",
+      "status": "SKIPPED_ALREADY_COMPLETE",
+      "verification": {
+        "already_complete": true,
+        "checks": {
+          "run_status_pass": true,
+          "row_count_24": true,
+          "no_duplicate_keys": "True",
+          "lineage_complete": true,
+          "availability_dates_present": true
+        },
+        "run_id": "56e4d43e-9ee3-4e82-8537-92d5b835632b",
+        "row_count": 24
+      },
+      "elapsed_seconds": 0.04
+    }
+  ],
+  "total_extraction_runs": 9,
+  "total_quarterly_metric_results": 216,
+  "extraction_basis_counts": {
+    "DIRECT_QUARTER": 150,
+    "DERIVED_Q4_FROM_10K_MINUS_9M": 54,
+    "DERIVED_FROM_YTD": 12
+  },
+  "reconciliation_status_counts_metric_year": {
+    "PASS_ROUNDING_TOLERANCE": 7,
+    "PASS": 47
+  },
+  "rows_per_company_year": [
+    {
+      "ticker": "AMZN",
+      "fiscal_year_end": "2022-12-31",
+      "row_count": 24
+    },
+    {
+      "ticker": "AMZN",
+      "fiscal_year_end": "2023-12-31",
+      "row_count": 24
+    },
+    {
+      "ticker": "AMZN",
+      "fiscal_year_end": "2024-12-31",
+      "row_count": 24
+    },
+    {
+      "ticker": "MSFT",
+      "fiscal_year_end": "2022-06-30",
+      "row_count": 24
+    },
+    {
+      "ticker": "MSFT",
+      "fiscal_year_end": "2023-06-30",
+      "row_count": 24
+    },
+    {
+      "ticker": "MSFT",
+      "fiscal_year_end": "2024-06-30",
+      "row_count": 24
+    },
+    {
+      "ticker": "ORCL",
+      "fiscal_year_end": "2022-05-31",
+      "row_count": 24
+    },
+    {
+      "ticker": "ORCL",
+      "fiscal_year_end": "2023-05-31",
+      "row_count": 24
+    },
+    {
+      "ticker": "ORCL",
+      "fiscal_year_end": "2024-05-31",
+      "row_count": 24
+    }
+  ],
+  "duplicate_natural_keys": [],
+  "review_required_cases": [],
+  "batch_elapsed_seconds": 105.34
+}
