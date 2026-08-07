@@ -1,0 +1,570 @@
+{
+  "status": "PASS",
+  "tickers": [
+    "NVDA",
+    "GOOGL",
+    "PANW"
+  ],
+  "source_file": "C:\\AI_Stock_Agent\\data\\proofs\\9_ticker_historical_price_proof.csv",
+  "determinations": {
+    "yahoo_close_stays_smooth_through_every_split": true,
+    "nominal_reconstruction_shows_expected_mechanical_split_jump": true,
+    "naive_nominal_returns_are_distorted_across_splits": true,
+    "adjclose_returns_are_not_distorted_across_splits": true,
+    "all_known_split_events_validated": true,
+    "all_reconstructed_prices_positive_and_ohlc_valid": true,
+    "reconstruction_is_deterministically_reproducible": true
+  },
+  "known_split_validations": [
+    {
+      "ticker": "NVDA",
+      "expected_count": 2,
+      "checks": [
+        {
+          "year": 2021,
+          "ratio": "4:1",
+          "found": true,
+          "matched_date": "2021-07-20"
+        },
+        {
+          "year": 2024,
+          "ratio": "10:1",
+          "found": true,
+          "matched_date": "2024-06-10"
+        }
+      ],
+      "all_found": true
+    },
+    {
+      "ticker": "GOOGL",
+      "expected_count": 1,
+      "checks": [
+        {
+          "year": 2022,
+          "ratio": "20:1",
+          "found": true,
+          "matched_date": "2022-07-18"
+        }
+      ],
+      "all_found": true
+    },
+    {
+      "ticker": "PANW",
+      "expected_count": 2,
+      "checks": [
+        {
+          "year": 2022,
+          "ratio": "3:1",
+          "found": true,
+          "matched_date": "2022-09-14"
+        },
+        {
+          "year": 2024,
+          "ratio": "2:1",
+          "found": true,
+          "matched_date": "2024-12-16"
+        }
+      ],
+      "all_found": true
+    }
+  ],
+  "reconstruction_validations": [
+    {
+      "ticker": "NVDA",
+      "rows_checked": 1657,
+      "non_positive_reconstructed_prices": [],
+      "ohlc_violations_after_reconstruction": [],
+      "clean": true
+    },
+    {
+      "ticker": "GOOGL",
+      "rows_checked": 1657,
+      "non_positive_reconstructed_prices": [],
+      "ohlc_violations_after_reconstruction": [],
+      "clean": true
+    },
+    {
+      "ticker": "PANW",
+      "rows_checked": 1657,
+      "non_positive_reconstructed_prices": [],
+      "ohlc_violations_after_reconstruction": [],
+      "clean": true
+    }
+  ],
+  "deterministic_checks": [
+    {
+      "ticker": "NVDA",
+      "deterministic": true
+    },
+    {
+      "ticker": "GOOGL",
+      "deterministic": true
+    },
+    {
+      "ticker": "PANW",
+      "deterministic": true
+    }
+  ],
+  "split_window_analyses": [
+    {
+      "split_date": "2021-07-20",
+      "split_ratio": "4:1",
+      "multiplier": 4.0,
+      "window_table": [
+        {
+          "date": "2021-07-15",
+          "yahoo_close": 18.966249465942383,
+          "reconstructed_nominal_close": 758.649979,
+          "split_event": null,
+          "cumulative_future_split_factor": 40.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2021-07-16",
+          "yahoo_close": 18.160999298095703,
+          "reconstructed_nominal_close": 726.439972,
+          "split_event": null,
+          "cumulative_future_split_factor": 40.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2021-07-19",
+          "yahoo_close": 18.77975082397461,
+          "reconstructed_nominal_close": 751.190033,
+          "split_event": null,
+          "cumulative_future_split_factor": 40.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2021-07-20",
+          "yahoo_close": 18.61199951171875,
+          "reconstructed_nominal_close": 186.119995,
+          "split_event": "4:1",
+          "cumulative_future_split_factor": 10.0,
+          "is_split_day": true
+        },
+        {
+          "date": "2021-07-21",
+          "yahoo_close": 19.40999984741211,
+          "reconstructed_nominal_close": 194.099998,
+          "split_event": null,
+          "cumulative_future_split_factor": 10.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2021-07-22",
+          "yahoo_close": 19.5939998626709,
+          "reconstructed_nominal_close": 195.939999,
+          "split_event": null,
+          "cumulative_future_split_factor": 10.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2021-07-23",
+          "yahoo_close": 19.558000564575195,
+          "reconstructed_nominal_close": 195.580006,
+          "split_event": null,
+          "cumulative_future_split_factor": 10.0,
+          "is_split_day": false
+        }
+      ],
+      "day_before": "2021-07-19",
+      "day_after": "2021-07-21",
+      "yahoo_close_pct_change_before_to_after": 3.356,
+      "yahoo_close_stays_smooth": true,
+      "nominal_close_before_over_after_ratio": 3.8701,
+      "nominal_shows_expected_mechanical_jump": true,
+      "ticker": "NVDA"
+    },
+    {
+      "split_date": "2024-06-10",
+      "split_ratio": "10:1",
+      "multiplier": 10.0,
+      "window_table": [
+        {
+          "date": "2024-06-05",
+          "yahoo_close": 122.44000244140625,
+          "reconstructed_nominal_close": 1224.400024,
+          "split_event": null,
+          "cumulative_future_split_factor": 10.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2024-06-06",
+          "yahoo_close": 120.99800109863281,
+          "reconstructed_nominal_close": 1209.980011,
+          "split_event": null,
+          "cumulative_future_split_factor": 10.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2024-06-07",
+          "yahoo_close": 120.88800048828125,
+          "reconstructed_nominal_close": 1208.880005,
+          "split_event": null,
+          "cumulative_future_split_factor": 10.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2024-06-10",
+          "yahoo_close": 121.79000091552734,
+          "reconstructed_nominal_close": 121.790001,
+          "split_event": "10:1",
+          "cumulative_future_split_factor": 1.0,
+          "is_split_day": true
+        },
+        {
+          "date": "2024-06-11",
+          "yahoo_close": 120.91000366210938,
+          "reconstructed_nominal_close": 120.910004,
+          "split_event": null,
+          "cumulative_future_split_factor": 1.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2024-06-12",
+          "yahoo_close": 125.19999694824219,
+          "reconstructed_nominal_close": 125.199997,
+          "split_event": null,
+          "cumulative_future_split_factor": 1.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2024-06-13",
+          "yahoo_close": 129.61000061035156,
+          "reconstructed_nominal_close": 129.610001,
+          "split_event": null,
+          "cumulative_future_split_factor": 1.0,
+          "is_split_day": false
+        }
+      ],
+      "day_before": "2024-06-07",
+      "day_after": "2024-06-11",
+      "yahoo_close_pct_change_before_to_after": 0.0182,
+      "yahoo_close_stays_smooth": true,
+      "nominal_close_before_over_after_ratio": 9.9982,
+      "nominal_shows_expected_mechanical_jump": true,
+      "ticker": "NVDA"
+    },
+    {
+      "split_date": "2022-07-18",
+      "split_ratio": "20:1",
+      "multiplier": 20.0,
+      "window_table": [
+        {
+          "date": "2022-07-13",
+          "yahoo_close": 111.35350036621094,
+          "reconstructed_nominal_close": 2227.070007,
+          "split_event": null,
+          "cumulative_future_split_factor": 20.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2022-07-14",
+          "yahoo_close": 110.36750030517578,
+          "reconstructed_nominal_close": 2207.350006,
+          "split_event": null,
+          "cumulative_future_split_factor": 20.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2022-07-15",
+          "yahoo_close": 111.77749633789062,
+          "reconstructed_nominal_close": 2235.549927,
+          "split_event": null,
+          "cumulative_future_split_factor": 20.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2022-07-18",
+          "yahoo_close": 109.02999877929688,
+          "reconstructed_nominal_close": 109.029999,
+          "split_event": "20:1",
+          "cumulative_future_split_factor": 1.0,
+          "is_split_day": true
+        },
+        {
+          "date": "2022-07-19",
+          "yahoo_close": 113.80999755859375,
+          "reconstructed_nominal_close": 113.809998,
+          "split_event": null,
+          "cumulative_future_split_factor": 1.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2022-07-20",
+          "yahoo_close": 113.9000015258789,
+          "reconstructed_nominal_close": 113.900002,
+          "split_event": null,
+          "cumulative_future_split_factor": 1.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2022-07-21",
+          "yahoo_close": 114.33999633789062,
+          "reconstructed_nominal_close": 114.339996,
+          "split_event": null,
+          "cumulative_future_split_factor": 1.0,
+          "is_split_day": false
+        }
+      ],
+      "day_before": "2022-07-15",
+      "day_after": "2022-07-19",
+      "yahoo_close_pct_change_before_to_after": 1.8183,
+      "yahoo_close_stays_smooth": true,
+      "nominal_close_before_over_after_ratio": 19.6428,
+      "nominal_shows_expected_mechanical_jump": true,
+      "ticker": "GOOGL"
+    },
+    {
+      "split_date": "2022-09-14",
+      "split_ratio": "3:1",
+      "multiplier": 3.0,
+      "window_table": [
+        {
+          "date": "2022-09-09",
+          "yahoo_close": 94.12833404541016,
+          "reconstructed_nominal_close": 564.770004,
+          "split_event": null,
+          "cumulative_future_split_factor": 6.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2022-09-12",
+          "yahoo_close": 94.68000030517578,
+          "reconstructed_nominal_close": 568.080002,
+          "split_event": null,
+          "cumulative_future_split_factor": 6.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2022-09-13",
+          "yahoo_close": 91.4800033569336,
+          "reconstructed_nominal_close": 548.88002,
+          "split_event": null,
+          "cumulative_future_split_factor": 6.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2022-09-14",
+          "yahoo_close": 91.02999877929688,
+          "reconstructed_nominal_close": 182.059998,
+          "split_event": "3:1",
+          "cumulative_future_split_factor": 2.0,
+          "is_split_day": true
+        },
+        {
+          "date": "2022-09-15",
+          "yahoo_close": 89.80999755859375,
+          "reconstructed_nominal_close": 179.619995,
+          "split_event": null,
+          "cumulative_future_split_factor": 2.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2022-09-16",
+          "yahoo_close": 87.04499816894531,
+          "reconstructed_nominal_close": 174.089996,
+          "split_event": null,
+          "cumulative_future_split_factor": 2.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2022-09-19",
+          "yahoo_close": 87.67500305175781,
+          "reconstructed_nominal_close": 175.350006,
+          "split_event": null,
+          "cumulative_future_split_factor": 2.0,
+          "is_split_day": false
+        }
+      ],
+      "day_before": "2022-09-13",
+      "day_after": "2022-09-15",
+      "yahoo_close_pct_change_before_to_after": -1.8255,
+      "yahoo_close_stays_smooth": true,
+      "nominal_close_before_over_after_ratio": 3.0558,
+      "nominal_shows_expected_mechanical_jump": true,
+      "ticker": "PANW"
+    },
+    {
+      "split_date": "2024-12-16",
+      "split_ratio": "2:1",
+      "multiplier": 2.0,
+      "window_table": [
+        {
+          "date": "2024-12-11",
+          "yahoo_close": 199.2100067138672,
+          "reconstructed_nominal_close": 398.420013,
+          "split_event": null,
+          "cumulative_future_split_factor": 2.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2024-12-12",
+          "yahoo_close": 200.10499572753906,
+          "reconstructed_nominal_close": 400.209991,
+          "split_event": null,
+          "cumulative_future_split_factor": 2.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2024-12-13",
+          "yahoo_close": 196.55999755859375,
+          "reconstructed_nominal_close": 393.119995,
+          "split_event": null,
+          "cumulative_future_split_factor": 2.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2024-12-16",
+          "yahoo_close": 202.5,
+          "reconstructed_nominal_close": 202.5,
+          "split_event": "2:1",
+          "cumulative_future_split_factor": 1.0,
+          "is_split_day": true
+        },
+        {
+          "date": "2024-12-17",
+          "yahoo_close": 201.24000549316406,
+          "reconstructed_nominal_close": 201.240005,
+          "split_event": null,
+          "cumulative_future_split_factor": 1.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2024-12-18",
+          "yahoo_close": 188.75999450683594,
+          "reconstructed_nominal_close": 188.759995,
+          "split_event": null,
+          "cumulative_future_split_factor": 1.0,
+          "is_split_day": false
+        },
+        {
+          "date": "2024-12-19",
+          "yahoo_close": 189.36000061035156,
+          "reconstructed_nominal_close": 189.360001,
+          "split_event": null,
+          "cumulative_future_split_factor": 1.0,
+          "is_split_day": false
+        }
+      ],
+      "day_before": "2024-12-13",
+      "day_after": "2024-12-17",
+      "yahoo_close_pct_change_before_to_after": 2.381,
+      "yahoo_close_stays_smooth": true,
+      "nominal_close_before_over_after_ratio": 1.9535,
+      "nominal_shows_expected_mechanical_jump": true,
+      "ticker": "PANW"
+    }
+  ],
+  "return_distortion_demonstrations": [
+    {
+      "split_date": "2021-07-20",
+      "naive_return_from_reconstructed_nominal_pct": -74.161,
+      "return_from_adj_close_pct": 3.356,
+      "nominal_return_is_distorted": true,
+      "adjclose_return_is_not_distorted": true,
+      "ticker": "NVDA"
+    },
+    {
+      "split_date": "2024-06-10",
+      "naive_return_from_reconstructed_nominal_pct": -89.9982,
+      "return_from_adj_close_pct": 0.0264,
+      "nominal_return_is_distorted": true,
+      "adjclose_return_is_not_distorted": true,
+      "ticker": "NVDA"
+    },
+    {
+      "split_date": "2022-07-18",
+      "naive_return_from_reconstructed_nominal_pct": -94.9091,
+      "return_from_adj_close_pct": 1.8183,
+      "nominal_return_is_distorted": true,
+      "adjclose_return_is_not_distorted": true,
+      "ticker": "GOOGL"
+    },
+    {
+      "split_date": "2022-09-14",
+      "naive_return_from_reconstructed_nominal_pct": -67.2752,
+      "return_from_adj_close_pct": -1.8255,
+      "nominal_return_is_distorted": true,
+      "adjclose_return_is_not_distorted": true,
+      "ticker": "PANW"
+    },
+    {
+      "split_date": "2024-12-16",
+      "naive_return_from_reconstructed_nominal_pct": -48.8095,
+      "return_from_adj_close_pct": 2.381,
+      "nominal_return_is_distorted": true,
+      "adjclose_return_is_not_distorted": true,
+      "ticker": "PANW"
+    }
+  ],
+  "no_double_dividend_counting_proofs": [
+    {
+      "ticker": "NVDA",
+      "dividend_events_found": 26,
+      "dividend_dates": [
+        "2020-02-27",
+        "2020-06-04",
+        "2020-09-01",
+        "2020-12-03",
+        "2021-03-09",
+        "2021-06-09",
+        "2021-08-31",
+        "2021-12-01",
+        "2022-03-02",
+        "2022-06-08",
+        "2022-09-07",
+        "2022-11-30",
+        "2023-03-07",
+        "2023-06-07",
+        "2023-09-06",
+        "2023-12-05",
+        "2024-03-05",
+        "2024-06-11",
+        "2024-09-12",
+        "2024-12-05",
+        "2025-03-12",
+        "2025-06-11",
+        "2025-09-11",
+        "2025-12-04",
+        "2026-03-11",
+        "2026-06-04"
+      ],
+      "total_dividend_amount_informational_only": 0.398,
+      "full_period_adjclose_return_pct": 3571.9857,
+      "adjclose_return_function_reads_dividend_field": false,
+      "note": "adj_close already embeds dividend reinvestment; the dividend column is preserved only for explicit portfolio-cash-accounting use (Rule D), never added to an adj_close return."
+    },
+    {
+      "ticker": "GOOGL",
+      "dividend_events_found": 9,
+      "dividend_dates": [
+        "2024-06-10",
+        "2024-09-09",
+        "2024-12-09",
+        "2025-03-10",
+        "2025-06-09",
+        "2025-09-08",
+        "2025-12-08",
+        "2026-03-09",
+        "2026-06-08"
+      ],
+      "total_dividend_amount_informational_only": 1.86,
+      "full_period_adjclose_return_pct": 427.4021,
+      "adjclose_return_function_reads_dividend_field": false,
+      "note": "adj_close already embeds dividend reinvestment; the dividend column is preserved only for explicit portfolio-cash-accounting use (Rule D), never added to an adj_close return."
+    },
+    {
+      "ticker": "PANW",
+      "dividend_events_found": 0,
+      "dividend_dates": [],
+      "total_dividend_amount_informational_only": 0,
+      "full_period_adjclose_return_pct": 816.2482,
+      "adjclose_return_function_reads_dividend_field": false,
+      "note": "adj_close already embeds dividend reinvestment; the dividend column is preserved only for explicit portfolio-cash-accounting use (Rule D), never added to an adj_close return."
+    }
+  ],
+  "runtime_seconds": 0.14,
+  "generated_at_utc": "2026-08-07T10:58:50.569Z"
+}

@@ -554,3 +554,61 @@ unique REVIEW_REQUIRED=0 — all unchanged by this load. Full detail in
 `data/derived_metrics_v1_release_manifest.json`.
 
 This decision requires the user's explicit sign-off to change or extend to a new context, the same as any other entry in this log.
+
+## D-044 — Historical Price Policy V1 is binding (approved)
+**Approved rule:** For all future historical-price work, exactly these
+5 rules apply:
+
+- **Rule A — Preserve source data.** Yahoo's original `open`, `high`,
+  `low`, `close`, `adj_close`, `volume`, `dividend`, `split_ratio` are
+  always kept as separate fields, never overwritten.
+- **Rule B — Total-return calculations use `adj_close`.** Stock return,
+  benchmark return, drawdown. Dividends are never separately added on
+  top of an `adj_close`-based return (would double count).
+- **Rule C — Historical nominal execution price is reconstructed.**
+  Simulated buy/sell prices are recovered by multiplying Yahoo
+  `open`/`high`/`low`/`close` by the product of every split ratio whose
+  effective date is strictly AFTER the price date (a split effective ON
+  the price date is not applied to that date). Dividends are never
+  applied to nominal execution prices.
+- **Rule D — Full portfolio backtest.** A simulation tracking cash,
+  share count, dividends, and splits uses the Rule C nominal price for
+  buy/sell execution, explicit split events for share-count changes,
+  and explicit dividend events for cash — and must never also apply
+  `adj_close` in that same simulation (would double count).
+- **Rule E — Point-in-time safety.** A future split may be used only as
+  the mechanical conversion factor in Rule C. It must never influence a
+  historical score, buy/sell signal, valuation decision, position
+  selection, or ranking. A backtest decision dated T may use only
+  information available at T.
+
+**No future price-related code — return calculations, execution-price
+simulation, or portfolio backtesting — may deviate from these 5 rules
+without a new decision superseding this one.**
+
+**Rationale / origin:** built directly on the NVDA price-semantics
+proof (`docs/NVDA_PRICE_SEMANTICS_PROOF.md`) and its 9-company
+extension (`docs/9_TICKER_HISTORICAL_PRICE_PROOF.md`), both of which
+established that Yahoo's `close` is already retroactively
+split-adjusted at the source. That finding created an open question —
+what price series is safe to use for which purpose — which this policy
+resolves with 5 explicit, testable rules rather than an assumption.
+
+**Applied**: proven read-only against the already-saved data for NVDA,
+GOOGL, and PANW (`scripts/157_price_policy_v1_proof.py`, no new
+download, no database access). All 5 known split events (NVDA 4:1/2021
+and 10:1/2024, GOOGL 20:1/2022, PANW 3:1/2022 and 2:1/2024) validated
+exactly. 7 determinations proven directly from data: Yahoo `close`
+stays smooth through every split; the Rule C nominal reconstruction
+shows the expected large mechanical jump at every split boundary
+(e.g. NVDA 4:1 → 3.87×, GOOGL 20:1 → 19.64×); a naive return computed
+from the nominal series is wildly distorted at every split (-48% to
+-95%) while the same return computed from `adj_close` is not (-1.8% to
++3.4%) — the concrete justification for Rule B/D; the `adj_close`-based
+return calculation was shown structurally to never reference the
+`dividend` field, ruling out double counting; all reconstructed prices
+positive and OHLC-valid across all 4,971 rows; reconstruction
+deterministically reproducible. Full detail in
+`docs/PRICE_POLICY_V1.md`, `data/proofs/price_policy_v1_proof.json`.
+
+This decision requires the user's explicit sign-off to change or extend to a new context, the same as any other entry in this log.
