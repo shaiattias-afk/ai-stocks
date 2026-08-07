@@ -1,0 +1,59 @@
+{
+  "release": "HISTORICAL_PRICES_V1",
+  "status": "FROZEN",
+  "price_policy_version": "HISTORICAL_PRICE_POLICY_V1",
+  "governing_decision": "D-044",
+  "tickers": ["ORCL", "MSFT", "META", "NVDA", "GOOGL", "AMZN", "MU", "CRWD", "PANW"],
+  "ticker_count": 9,
+  "total_rows": 14913,
+  "rows_per_ticker": 1657,
+  "date_range": {"first": "2020-01-02", "last": "2026-08-06"},
+  "production_table": "historical_prices_daily",
+  "primary_key": ["ticker", "price_date"],
+  "source": "Yahoo Finance historical chart API",
+  "load_result": {
+    "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\ai_stock_agent_pre_historical_prices_v1_load_20260807T111954Z.duckdb",
+    "backup_checksum": "0cddc38e10309bb8bdb79b1643b2aac3ae7538db17c2dab659b8d993437749bd",
+    "completed_at_utc": "2026-08-07T11:20:03.869Z"
+  },
+  "independent_post_load_verification": {
+    "historical_prices_daily_exists": true,
+    "exactly_14913_rows": true,
+    "exactly_9_tickers": true,
+    "all_tickers_have_1657_rows": true,
+    "date_range_correct": true,
+    "zero_duplicate_ticker_date_rows": true,
+    "zero_missing_required_price_fields": true,
+    "zero_negative_or_non_positive_prices": true,
+    "zero_negative_volume": true,
+    "valid_ohlc_relationships": true,
+    "valid_reconstructed_nominal_ohlc_relationships": true,
+    "price_policy_version_correct_on_every_row": true,
+    "source_lineage_present_on_every_row": true,
+    "source_sha256_present_on_every_row": true,
+    "split_events_match_9_ticker_proof": true,
+    "dividend_counts_match_9_ticker_proof": true,
+    "nvda_googl_panw_match_price_policy_v1_proof": true
+  },
+  "pre_existing_production_data_unchanged": {
+    "financial_metric_results": 900,
+    "quarterly_extraction_runs": 45,
+    "quarterly_metric_results": 1080,
+    "derived_metric_results": 405,
+    "unique_review_required": 0,
+    "all_pre_existing_table_fingerprints_unchanged": true,
+    "annual_v1_checksum_before": "e655671e36298ce2297b8c86077a8f0559998b81245d1850004da36858e9f814",
+    "annual_v1_checksum_after": "e655671e36298ce2297b8c86077a8f0559998b81245d1850004da36858e9f814",
+    "annual_v1_checksum_unchanged": true
+  },
+  "standing_declarations": {
+    "approved_v1_market_price_source_for_current_9_company_universe": "Yahoo Finance historical chart API",
+    "governed_by": "Historical Price Policy V1 / D-044 (docs/PRICE_POLICY_V1.md, docs/DECISIONS_LOG.md)",
+    "no_changes_without_new_version_and_full_validation": true
+  },
+  "source_scripts": [
+    "scripts/158_historical_prices_v1_load.py",
+    "scripts/159_historical_prices_v1_release.py"
+  ],
+  "created_at_utc": "2026-08-07T11:20:03.883Z"
+}

@@ -1,0 +1,19 @@
+{
+  "status": "PASS",
+  "table_created": true,
+  "rows_inserted": 14913,
+  "tickers": [
+    "AMZN",
+    "CRWD",
+    "GOOGL",
+    "META",
+    "MSFT",
+    "MU",
+    "NVDA",
+    "ORCL",
+    "PANW"
+  ],
+  "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\ai_stock_agent_pre_historical_prices_v1_load_20260807T111954Z.duckdb",
+  "backup_checksum": "0cddc38e10309bb8bdb79b1643b2aac3ae7538db17c2dab659b8d993437749bd",
+  "completed_at": "2026-08-07T11:20:03.869Z"
+}

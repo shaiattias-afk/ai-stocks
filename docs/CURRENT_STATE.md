@@ -1,8 +1,8 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-07 (**DERIVED METRICS V1 IS FROZEN.** `scripts/153_derived_metrics_v1_load.py --execute` succeeded: `derived_metric_results` created and loaded for all 9 approved tickers (ORCL, MSFT, META, NVDA, GOOGL, AMZN, MU, CRWD, PANW), exactly 2 approved metrics (`operating_margin`, `revenue_yoy_growth`) at `annual` and `quarterly` frequency, **405 validated observations** (81 annual + 324 quarterly; per-metric: annual operating_margin=45, annual revenue_yoy_growth=36, quarterly operating_margin=180, quarterly revenue_yoy_growth=144). Independently re-verified read-only, directly from the live database: `derived_metric_results` exists, exactly 405 rows, exactly 81 annual / 324 quarterly, exactly 9 distinct tickers, 0 duplicate primary keys, 0 NULLs in any required column, every annual row has `fiscal_quarter IS NULL`, every quarterly row has `fiscal_quarter` 1–4, only the 2 approved `derived_metric` values present. Both upstream freezes remain untouched: `quarterly_extraction_runs`=45, `quarterly_metric_results`=1,080, `financial_metric_results`=900, unique REVIEW_REQUIRED=0, Annual Data V1 checksum unchanged. **Derived Metrics V1, Annual Data V1, and Quarterly Data V1 are now all frozen; no future changes to any of them are permitted without a new version and full validation (D-043).** See `data/derived_metrics_v1_load_result.json`, `data/derived_metrics_v1_release_manifest.json`, `docs/DECISIONS_LOG.md` D-043, `docs/LAST_CLAUDE_REPORT.md` for full detail.)
+**Last updated:** 2026-08-07 (**HISTORICAL PRICES V1 IS FROZEN.** `scripts/158_historical_prices_v1_load.py --execute` succeeded (run exactly once, orchestrated by `scripts/159_historical_prices_v1_release.py`): `historical_prices_daily` created and loaded for all 9 approved tickers (ORCL, MSFT, META, NVDA, GOOGL, AMZN, MU, CRWD, PANW), **14,913 validated daily price observations** (1,657 per ticker, 2020-01-02 through 2026-08-06), sourced from Yahoo Finance's historical chart API and rebuilt from scratch from the already-saved raw JSON responses. Every row carries both Yahoo's original fields (`open`/`high`/`low`/`close`/`adj_close`/`volume`/`dividend`/`split_ratio`) and the Historical Price Policy V1 (D-044) Rule C reconstructed nominal `open`/`high`/`low`/`close`, plus full source lineage (`source_raw_file`, `source_raw_sha256`) and `price_policy_version='HISTORICAL_PRICE_POLICY_V1'` on every row. Independently re-verified read-only, directly from the live database (not merely the loader's own report): table exists, exactly 14,913 rows, exactly 9 distinct tickers, exactly 1,657 rows per ticker, correct date range, 0 duplicate keys, 0 missing/negative values, all OHLC and reconstructed-nominal-OHLC relationships valid, all split events and dividend counts match the approved 9-company proof exactly, NVDA/GOOGL/PANW reconstructed prices match the Historical Price Policy V1 proof exactly. All pre-existing production data confirmed unchanged: `financial_metric_results`=900, `quarterly_extraction_runs`=45, `quarterly_metric_results`=1,080, `derived_metric_results`=405, unique REVIEW_REQUIRED=0, every pre-existing table fingerprint unchanged, Annual Data V1 checksum unchanged. **Historical Prices V1 is now frozen; Yahoo historical chart data is the approved V1 market-price source for the current 9-company universe, governed by Historical Price Policy V1 / D-044; no future changes without a new version and full validation (D-045).** See `data/historical_prices_v1_release_manifest.json`, `docs/DECISIONS_LOG.md` D-045, `docs/LAST_CLAUDE_REPORT.md` for full detail.)
 
-**Previous update:** 2026-08-06 (**QUARTERLY DATA V1 IS FROZEN.** `QUARTERLY_ENGINE_V5_STANDARD_GAAP_ALLOW_LIST` (`scripts/148`) is now the authoritative quarterly extraction engine (D-042). Production load executed via `scripts/151 --execute`: the 3 remaining target company-years (`CRWD 2022-01-31`, `MU 2021-09-02`, `PANW 2021-07-31`) were replaced as complete company-year units (72 rows, not just the 16 changed) in one atomic transaction, full backup+archive beforehand. Final read-only freeze verification, independently re-derived directly from the live databases (not merely the load script's own report): `quarterly_extraction_runs`=45, `quarterly_metric_results`=1,080, `financial_metric_results`=900, **unique REVIEW_REQUIRED=0** (down from a peak of 21), every company-year exactly 24 rows, 0 duplicate keys, 0 missing lineage, 0 availability mismatches, 0 future-data violations (spot-checked directly from committed `lineage_json`: 4 `STANDARD_GAAP_ALLOW_LIST` activations + 8 point-in-time-reuse activations, 0 violations), Annual V1 checksum unchanged, XBRL warehouse facts unchanged at 225,780, all 3 target runs confirmed `engine_version=QUARTERLY_ENGINE_V5_STANDARD_GAAP_ALLOW_LIST`. **Annual Data V1 and Quarterly Data V1 are now the approved inputs for the next project stage; no further data-engine changes are permitted without a new version and a full regression (D-042).** See `data/quarterly_data_v1_release_manifest.json`, `docs/DECISIONS_LOG.md` D-042, `docs/LAST_CLAUDE_REPORT.md` for full detail.)
+**Previous update:** 2026-08-07 (**DERIVED METRICS V1 IS FROZEN.** `scripts/153_derived_metrics_v1_load.py --execute` succeeded: `derived_metric_results` created and loaded for all 9 approved tickers (ORCL, MSFT, META, NVDA, GOOGL, AMZN, MU, CRWD, PANW), exactly 2 approved metrics (`operating_margin`, `revenue_yoy_growth`) at `annual` and `quarterly` frequency, **405 validated observations** (81 annual + 324 quarterly). Independently re-verified read-only, directly from the live database: `derived_metric_results` exists, exactly 405 rows, exactly 81 annual / 324 quarterly, exactly 9 distinct tickers, 0 duplicate primary keys, 0 NULLs in any required column. Both upstream freezes remain untouched: `quarterly_extraction_runs`=45, `quarterly_metric_results`=1,080, `financial_metric_results`=900, unique REVIEW_REQUIRED=0, Annual Data V1 checksum unchanged. **Derived Metrics V1, Annual Data V1, and Quarterly Data V1 are all frozen; no future changes to any of them are permitted without a new version and full validation (D-043).** See `data/derived_metrics_v1_release_manifest.json`, `docs/DECISIONS_LOG.md` D-043, `docs/LAST_CLAUDE_REPORT.md` for full detail.)
 **Project folder:** `C:\AI_Stock_Agent`
 **Environment:** Windows, VS Code, Python virtual environment, PowerShell
 
@@ -3838,9 +3838,72 @@ Quarterly Data V1.
 `data/derived_metrics_v1_release_manifest.json` (the freeze record).
 Full detail in `docs/LAST_CLAUDE_REPORT.md`.
 
-**Current overall state**: Annual Data V1, Quarterly Data V1, and
-Derived Metrics V1 are all frozen. The fundamentals + derived-metrics
-base for all 9 approved tickers is complete and locked. The next stage
-(not started) would be a valuation/backtesting layer built on top of
-these three frozen releases, or extending Derived Metrics V1 to
-additional metrics under a new version.
+**Current overall state (superseded — see 2026-08-07 Historical Prices
+V1 section below)**: Annual Data V1, Quarterly Data V1, and Derived
+Metrics V1 are all frozen. The fundamentals + derived-metrics base for
+all 9 approved tickers is complete and locked.
+
+## 2026-08-07 — Historical Prices V1 frozen (D-045)
+
+`historical_prices_daily` was built and loaded for all 9 approved
+tickers in a single closed release task: preflight → one `--execute` →
+independent post-load verification → freeze. The production load was
+run exactly once via
+`.\.venv\Scripts\python.exe .\scripts\158_historical_prices_v1_load.py --execute`,
+orchestrated end-to-end by `scripts/159_historical_prices_v1_release.py`.
+
+**Result**: **14,913 rows** (9 tickers × 1,657 daily observations
+each), **2020-01-02 through 2026-08-06**, rebuilt from scratch from the
+already-saved raw Yahoo JSON responses (never from a prior proof's own
+CSV output as a shortcut). Every row carries Yahoo's original
+`open`/`high`/`low`/`close`/`adj_close`/`volume`/`dividend`/`split_ratio`
+fields unmodified (Rule A, D-044) plus the reconstructed nominal
+`open`/`high`/`low`/`close` (Rule C, D-044), full source lineage
+(`source_raw_file`, `source_raw_sha256`), and
+`price_policy_version='HISTORICAL_PRICE_POLICY_V1'` on every row.
+
+| Check | Result |
+|---|---|
+| `historical_prices_daily` exists | ✓ |
+| Total rows | **14,913** |
+| Distinct tickers | **9** |
+| Rows per ticker | **1,657** each |
+| Date range | 2020-01-02 → 2026-08-06 |
+| Duplicate `(ticker, price_date)` keys | 0 |
+| Missing required price fields | 0 |
+| Negative/non-positive prices | 0 |
+| Negative volume | 0 |
+| OHLC relationship violations | 0 |
+| Reconstructed nominal OHLC violations | 0 |
+| `price_policy_version` correct on every row | ✓ |
+| Source lineage present on every row | ✓ |
+| Split events match approved 9-company proof | ✓ |
+| Dividend counts match approved 9-company proof | ✓ |
+| NVDA/GOOGL/PANW reconstructed prices match Historical Price Policy V1 proof | ✓ |
+| `financial_metric_results` | 900 (unchanged) |
+| `quarterly_extraction_runs` | 45 (unchanged) |
+| `quarterly_metric_results` | 1,080 (unchanged) |
+| `derived_metric_results` | 405 (unchanged) |
+| unique REVIEW_REQUIRED | 0 (unchanged) |
+| Every pre-existing production-table fingerprint | unchanged |
+| Annual Data V1 checksum | unchanged |
+
+**Standing declarations (D-045, recorded in `docs/DECISIONS_LOG.md`)**:
+Historical Prices V1 is frozen. 9 companies, 14,913 validated daily
+observations, 2020-01-02 through 2026-08-06. Yahoo historical chart
+data is the approved V1 market-price source for the current 9-company
+universe. Historical Price Policy V1 / D-044 governs all use of these
+prices. No changes to Historical Prices V1 without a new version and
+full validation.
+
+**Files**: `data/historical_prices_v1_release_manifest.json` (the
+freeze record), `data/historical_prices_v1_build_validation.json`,
+`data/historical_prices_v1_release_task_result.json`. Full detail in
+`docs/HISTORICAL_PRICES_V1_BUILD.md`, `docs/LAST_CLAUDE_REPORT.md`.
+
+**Current overall state**: Annual Data V1, Quarterly Data V1, Derived
+Metrics V1, and Historical Prices V1 are all frozen. The fundamentals
++ derived-metrics + market-price base for all 9 approved tickers is
+complete and locked. The next stage (not started) would be a
+valuation/backtesting layer built on top of these four frozen
+releases, applying Historical Price Policy V1's rules exactly.

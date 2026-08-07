@@ -612,3 +612,59 @@ deterministically reproducible. Full detail in
 `docs/PRICE_POLICY_V1.md`, `data/proofs/price_policy_v1_proof.json`.
 
 This decision requires the user's explicit sign-off to change or extend to a new context, the same as any other entry in this log.
+
+## D-045 — Historical Prices V1 is frozen: 14,913 observations, 9 companies (approved)
+**Approved rule:** Historical Prices V1 (`data/database/ai_stock_agent.duckdb`,
+table `historical_prices_daily`) is **frozen**. Exactly **14,913**
+daily price observations across all 9 approved tickers (ORCL, MSFT,
+META, NVDA, GOOGL, AMZN, MU, CRWD, PANW) are approved: **1,657 rows per
+ticker**, **2020-01-02 through 2026-08-06**. Yahoo Finance historical
+chart data is the **approved V1 market-price source** for the current
+9-company universe. **Historical Price Policy V1 / D-044 governs all
+use of these prices** — no code may read or compute from
+`historical_prices_daily` in a way that deviates from D-044's 5 rules.
+**No future change to Historical Prices V1 — a data reload, a new
+ticker, an extended date range, or a schema change — is permitted
+without a new engine version and full validation**, the same
+discipline already applied to Annual Data V1, Quarterly Data V1
+(D-042), and Derived Metrics V1 (D-043).
+
+**Rationale / origin:** built directly on top of the now-frozen
+Historical Price Policy V1 (D-044) and the already-validated 9-company
+proof (`docs/9_TICKER_HISTORICAL_PRICE_PROOF.md`), generalizing the
+check-only-proven loader (`scripts/158_historical_prices_v1_load.py`)
+into a single closed release task
+(`scripts/159_historical_prices_v1_release.py`): preflight → exactly
+one `--execute` → independent post-load re-verification (re-opening
+production read-only, never trusting the loader's own report alone) →
+freeze. The dataset was rebuilt entirely from scratch from the
+already-saved raw Yahoo JSON responses for this release, not from any
+prior proof's computed CSV, so the freeze is independent proof, not a
+copy of earlier work.
+
+**Applied**: `scripts/158 --execute` (run exactly once) created
+`historical_prices_daily` (`ticker, price_date, open, high, low, close,
+adj_close, nominal_open, nominal_high, nominal_low, nominal_close,
+volume, dividend, split_ratio, source, source_raw_file,
+source_raw_sha256, price_policy_version, created_at`, primary key
+`(ticker, price_date)`, with `CHECK` constraints for positive prices,
+non-negative volume, valid OHLC, valid reconstructed-nominal OHLC, and
+correct policy-version tag) and loaded all 14,913 validated rows in one
+atomic transaction, with full backup (SHA-256-verified) beforehand.
+**Independently re-verified read-only, directly against the live
+database** (not merely the loader's own report): table exists, exactly
+14,913 rows, exactly 9 distinct tickers, exactly 1,657 rows per ticker,
+correct date range, 0 duplicate keys, 0 missing/negative values, all
+OHLC and reconstructed-nominal-OHLC relationships valid,
+`price_policy_version` correct on every row, source lineage
+(`source_raw_file`/`source_raw_sha256`) present on every row, all split
+events and dividend counts match the approved 9-company proof exactly,
+NVDA/GOOGL/PANW reconstructed prices match the Historical Price Policy
+V1 proof exactly. Every pre-existing production table's row count and
+content fingerprint confirmed unchanged: `financial_metric_results`=900,
+`quarterly_extraction_runs`=45, `quarterly_metric_results`=1,080,
+`derived_metric_results`=405, unique REVIEW_REQUIRED=0, Annual Data V1
+checksum unchanged. Full detail in `docs/HISTORICAL_PRICES_V1_BUILD.md`,
+`docs/LAST_CLAUDE_REPORT.md`, `data/historical_prices_v1_release_manifest.json`.
+
+This decision requires the user's explicit sign-off to change or extend to a new context, the same as any other entry in this log.

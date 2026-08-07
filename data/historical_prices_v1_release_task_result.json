@@ -1,0 +1,149 @@
+{
+  "final_status": "PASS",
+  "preflight": {
+    "status": "PASS",
+    "checks": {
+      "git_working_tree_clean": true,
+      "historical_price_policy_v1_in_git": true,
+      "historical_prices_v1_loader_build_in_git": true,
+      "no_remote_exists": true,
+      "loader_script_exists": true,
+      "build_validation_exists": true,
+      "build_check_only_status_pass": true,
+      "build_9_tickers": true,
+      "build_1657_rows_per_ticker": true,
+      "build_14913_total_rows": true,
+      "build_date_range_correct": true,
+      "build_in_memory_load_proof_pass": true,
+      "build_table_not_yet_created": true,
+      "all_raw_source_files_verified": true,
+      "d044_present_in_decisions_log": true,
+      "annual_v1_checksum_matches_expected": true,
+      "before_count_financial_metric_results_matches_expected": true,
+      "before_count_quarterly_extraction_runs_matches_expected": true,
+      "before_count_quarterly_metric_results_matches_expected": true,
+      "before_count_derived_metric_results_matches_expected": true,
+      "before_unique_review_required_is_0": true,
+      "production_db_hash_captured": true
+    },
+    "detail": {
+      "git_status_porcelain": "?? data/historical_prices_v1_release_task_result.json\n?? scripts/159_historical_prices_v1_release.py",
+      "git_status_porcelain_excluding_this_script": [],
+      "annual_v1_checksum_actual": "e655671e36298ce2297b8c86077a8f0559998b81245d1850004da36858e9f814"
+    },
+    "before_fingerprints": {
+      "companies": {
+        "row_count": 9,
+        "fingerprint": "17015801ef60d1ce7dd6e50fd35b98414311c6d547c7153059fb6ab794c2365f"
+      },
+      "derived_metric_results": {
+        "row_count": 405,
+        "fingerprint": "e594f4c18909e8854fed3026f86321789acb98d8fdca095069da271d3b15aee2"
+      },
+      "extraction_runs": {
+        "row_count": 172,
+        "fingerprint": "efd3b95dd07130fa214e76798ae086c87c46cbe20c0ca2de60cf01523789506e"
+      },
+      "financial_metric_results": {
+        "row_count": 900,
+        "fingerprint": "35ad1314e2121123d30aa42c652cdc41943470a02ecdfd7cd9046a388655f8e6"
+      },
+      "historical_review_items": {
+        "row_count": 222,
+        "fingerprint": "09848f26105d874f809aca227ccf003e2fce1a8f7a7299f38138d0de2ec9fea4"
+      },
+      "quarterly_extraction_runs": {
+        "row_count": 45,
+        "fingerprint": "467c2f380932118c15a3d10471695626eab3b9bb61186dad5d112a463983771d"
+      },
+      "quarterly_metric_results": {
+        "row_count": 1080,
+        "fingerprint": "49bbfed0a3d85d623eb8bc5bff6eb80473209d1281bef83286ebd4a98b38bb20"
+      },
+      "sec_filings": {
+        "row_count": 185,
+        "fingerprint": "77a6a53447724dceb35940589e08cfe773141d6e0308fc394a69230919146833"
+      }
+    },
+    "before_review_required": 0,
+    "production_db_hash_before": "0cddc38e10309bb8bdb79b1643b2aac3ae7538db17c2dab659b8d993437749bd",
+    "annual_v1_hash_before": "e655671e36298ce2297b8c86077a8f0559998b81245d1850004da36858e9f814"
+  },
+  "execute_result": {
+    "returncode": 0,
+    "stdout": "PID lock acquired (pid=23260).\n=== historical prices v1 load: --execute started ===\nBackup complete: C:\\AI_Stock_Agent\\data\\database\\backups\\ai_stock_agent_pre_historical_prices_v1_load_20260807T111954Z.duckdb\nAtomic transaction committed.\n=== historical prices v1 load: --execute COMPLETE (PASS) ===\nPID lock released.\n",
+    "stderr": "",
+    "runtime_seconds": 9.762,
+    "load_result_json": {
+      "status": "PASS",
+      "table_created": true,
+      "rows_inserted": 14913,
+      "tickers": [
+        "AMZN",
+        "CRWD",
+        "GOOGL",
+        "META",
+        "MSFT",
+        "MU",
+        "NVDA",
+        "ORCL",
+        "PANW"
+      ],
+      "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\ai_stock_agent_pre_historical_prices_v1_load_20260807T111954Z.duckdb",
+      "backup_checksum": "0cddc38e10309bb8bdb79b1643b2aac3ae7538db17c2dab659b8d993437749bd",
+      "completed_at": "2026-08-07T11:20:03.869Z"
+    },
+    "succeeded": true
+  },
+  "verification": {
+    "status": "PASS",
+    "checks": {
+      "historical_prices_daily_exists": true,
+      "exactly_14913_rows": true,
+      "exactly_9_tickers": true,
+      "all_tickers_have_1657_rows": true,
+      "date_range_correct": true,
+      "zero_duplicate_ticker_date_rows": true,
+      "zero_missing_required_price_fields": true,
+      "zero_negative_or_non_positive_prices": true,
+      "zero_negative_volume": true,
+      "valid_ohlc_relationships": true,
+      "valid_reconstructed_nominal_ohlc_relationships": true,
+      "price_policy_version_correct_on_every_row": true,
+      "source_lineage_present_on_every_row": true,
+      "source_sha256_present_on_every_row": true,
+      "split_events_match_9_ticker_proof": true,
+      "dividend_counts_match_9_ticker_proof": true,
+      "nvda_googl_panw_match_price_policy_v1_proof": true,
+      "review_required_still_0": true,
+      "after_count_financial_metric_results_unchanged": true,
+      "after_count_quarterly_extraction_runs_unchanged": true,
+      "after_count_quarterly_metric_results_unchanged": true,
+      "after_count_derived_metric_results_unchanged": true,
+      "all_pre_existing_table_fingerprints_unchanged": true,
+      "annual_v1_checksum_unchanged": true
+    },
+    "total_rows": 14913,
+    "per_ticker_counts": {
+      "NVDA": 1657,
+      "GOOGL": 1657,
+      "AMZN": 1657,
+      "PANW": 1657,
+      "ORCL": 1657,
+      "CRWD": 1657,
+      "MSFT": 1657,
+      "META": 1657,
+      "MU": 1657
+    },
+    "date_range": [
+      "2020-01-02",
+      "2026-08-06"
+    ],
+    "split_mismatches": [],
+    "dividend_mismatches": [],
+    "policy_mismatches": [],
+    "fingerprint_diffs": [],
+    "annual_v1_hash_after": "e655671e36298ce2297b8c86077a8f0559998b81245d1850004da36858e9f814"
+  },
+  "generated_at_utc": "2026-08-07T11:20:04.070Z"
+}
