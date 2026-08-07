@@ -95,13 +95,83 @@ results below. `data/derived_metrics_v1_preview.csv` now includes the
 new `fiscal_quarter_key` column for transparency (0 for every annual
 row, 1–4 for every quarterly row, matching the schema exactly).
 
+## Release Blocker 1 — frequency-count documentation error (found and fixed)
+
+An earlier version of this report's schema section stated *"`fiscal_quarter`
+is `NULL` for all 90 annual rows, ... for all 315 quarterly rows"* —
+this directly contradicted the correct per-ticker breakdown table
+elsewhere in the same document (5+4=9 annual, 20+16=36 quarterly per
+ticker → 9×9=81 annual, 9×36=324 quarterly across 9 tickers).
+
+**Determined to be a documentation-only error, not a data or code
+error**, verified two independent ways:
+1. Direct count from the actual generated `data/derived_metrics_v1_preview.csv`: `81 annual`, `324 quarterly`, `405 total`.
+2. New dynamic checks added to `calculate_and_validate_full_dataset()`'s `global_checks` (`annual_row_count_is_81`, `quarterly_row_count_is_324`, `total_row_count_is_405`) and to `validate_committed_table()`'s pre-commit checks (re-queried directly from the committed table) — both confirm `81`/`324`/`405` exactly.
+
+The erroneous "90 / 315" sentence has been corrected in place (see the
+schema section below). No calculation code was ever wrong.
+
+## Release Blocker 2 — NULL validation scope (inspected, hardened)
+
+The existing `--execute` pre-commit check was
+`SELECT COUNT(*) FROM derived_metric_results WHERE value IS NULL` — this
+was **already correctly scoped to the `value` column only**, not a
+blanket "0 NULLs anywhere" check that would have wrongly flagged
+`fiscal_quarter`'s required 81 NULLs. No bug was present in the shipped
+check itself.
+
+Per the explicit requirement, the pre-commit validation was still
+**hardened** into a single reusable function,
+`validate_committed_table(connection, expected_row_count)`, now
+verifying explicitly (in addition to what existed before):
+
+- `fiscal_quarter` NULL count = exactly 81
+- 0 rows have NULL `fiscal_quarter` outside `frequency='annual'`
+- 0 quarterly rows have NULL `fiscal_quarter`
+- 0 rows have NULL `fiscal_quarter_key` (never permitted to be NULL)
+- every annual row has `fiscal_quarter_key = 0`
+- every quarterly row has `fiscal_quarter_key = fiscal_quarter`
+- every other schema-defined `NOT NULL` column (`ticker`, `frequency`,
+  `fiscal_year_end`, `fiscal_year`, `derived_metric`, `value`,
+  `availability_date`, `formula`, `source_periods`, `source_run_ids`,
+  `source_accessions`, `reconciliation_status`, `engine_version`,
+  `created_at`) has 0 NULLs
+
+This function is called from `run_execute()`'s pre-commit block and,
+independently, from the in-memory execute-path proof below — the exact
+same code, not a re-implementation, so the proof is genuinely testing
+what `--execute` will do.
+
+## Full in-memory execute-path proof — PASS
+
+Computed the complete, real, validated 405-row dataset via
+`calculate_and_validate_full_dataset()` against the production database
+(opened `read_only=True` only), then replayed the exact DDL, insert
+mapping, `fiscal_quarter_key` logic, one `BEGIN`/`COMMIT` transaction,
+and `validate_committed_table()` call against a **`:memory:`** DuckDB
+connection only — no file database was ever created.
+
+| Requirement | Result |
+|---|---|
+| 405 rows inserted | ✓ |
+| 81 annual | ✓ |
+| 324 quarterly | ✓ |
+| Exactly 81 `fiscal_quarter` NULLs | ✓ |
+| 0 NULL `fiscal_quarter_key` | ✓ |
+| 0 duplicate primary keys | ✓ |
+| 9 distinct tickers | ✓ |
+| Exact metric/frequency distribution | ✓ `{('annual','operating_margin'): 45, ('annual','revenue_yoy_growth'): 36, ('quarterly','operating_margin'): 180, ('quarterly','revenue_yoy_growth'): 144}` (sums to 405) |
+| `CHECK` constraints satisfied | ✓ (all 405 valid rows inserted; 3 deliberately-invalid rows attempted *after* `COMMIT` against the same committed table were all correctly rejected, proving the constraints are live on the real table, not only at DDL time) |
+| Transaction `COMMIT` succeeds in memory | ✓ |
+| `validate_committed_table()` (the exact function `--execute` calls) | ✓ raised nothing |
+
 ## Check-only run (post-fix) — PASS
 
 ```
 .\.venv\Scripts\python.exe .\scripts\153_derived_metrics_v1_load.py --check-only
 ```
 
-**Result: PASS. Runtime: 0.56s** (well under the 2-minute expectation).
+**Result: PASS. Runtime: 0.484s** (well under the 2-minute expectation).
 
 ## Source periods found, per ticker
 
@@ -169,6 +239,11 @@ across all 9 tickers.
 | Every source accession exists in Production | ✓ (re-queried against `sec_filings`) |
 | SQL and Python results match, every emitted row | ✓ **405/405**, tolerance `1e-9` absolute |
 | **MSFT results match the existing single-ticker proof exactly** | ✓ **45/45** observations, 0 mismatches (`data/proofs/msft_derived_metrics_proof.json`) |
+| Annual row count is exactly 81 | ✓ (Release Blocker 1) |
+| Quarterly row count is exactly 324 | ✓ (Release Blocker 1) |
+| Total row count is exactly 405 | ✓ |
+| Annual observations have no `fiscal_quarter` | ✓ |
+| Quarterly observations have `fiscal_quarter` 1–4 | ✓ |
 | Annual Data V1 checksum unchanged | ✓ |
 | Quarterly Data V1 counts unchanged | ✓ (`quarterly_extraction_runs`/`quarterly_metric_results` re-queried before and after, identical) |
 | Production database SHA-256 unchanged | ✓ `2a37d47b2257a34545196a9b4435f493cb88611215afb3f35a766d21fa325773` (identical before and after) |
@@ -218,7 +293,7 @@ CREATE TABLE derived_metric_results (
 ```
 
 - `frequency` is exactly `'annual'` or `'quarterly'` for every row (`CHECK`-enforced).
-- `fiscal_quarter` is `NULL` for all 90 annual rows, `1`/`2`/`3`/`4` for all 315 quarterly rows — this is the column callers should read; its semantics are unchanged from the original design.
+- `fiscal_quarter` is `NULL` for all **81** annual rows, `1`/`2`/`3`/`4` for all **324** quarterly rows — this is the column callers should read; its semantics are unchanged from the original design.
 - `fiscal_quarter_key` (new) is a `NOT NULL` surrogate used only inside the `PRIMARY KEY`: `0` for annual rows, `1`–`4` (always equal to `fiscal_quarter`) for quarterly rows — `CHECK`-enforced to always stay in lockstep with `fiscal_quarter`, so it carries no independent information.
 - `derived_metric` is exactly `'operating_margin'` or `'revenue_yoy_growth'` for every row (`CHECK`-enforced).
 - `engine_version` is exactly `'DERIVED_METRICS_ENGINE_V1'` for every row.
@@ -252,26 +327,35 @@ the script's own self-report and independent filesystem verification
 `data/derived_metrics_v1_release_manifest.json`, no new file in
 `data/database/backups/`).
 
-## Files created / modified (this schema-fix update)
-- `scripts/153_derived_metrics_v1_load.py` (**edited in place** — `fiscal_quarter_key` column + 4 `CHECK` constraints + corrected `PRIMARY KEY`; still the only production-load script)
+## Files created / modified (this release-blocker update)
+- `scripts/153_derived_metrics_v1_load.py` (**edited in place** — added `EXPECTED_ANNUAL_ROWS`/`EXPECTED_QUARTERLY_ROWS`/`EXPECTED_TOTAL_ROWS` constants, 5 new dataset-level `global_checks`, and a new reusable `validate_committed_table()` function replacing the old inline pre-commit checks with explicit `fiscal_quarter`/`fiscal_quarter_key` shape validation; still the only production-load script)
 - `data/derived_metrics_v1_build_validation.json` (re-written by the post-fix `--check-only` run)
-- `data/derived_metrics_v1_preview.csv` (405 rows, now includes `fiscal_quarter_key`)
-- `docs/DERIVED_METRICS_V1_BUILD.md` (this report, updated)
+- `docs/DERIVED_METRICS_V1_BUILD.md` (this report, updated — corrected the 90/315 documentation error, added the two release-blocker sections and the in-memory execute-path proof)
 - `docs/LAST_CLAUDE_REPORT.md` — updated
-- Temporary in-memory schema test: written to and run from the session scratchpad only (`:memory:` DuckDB, no file, no production database — not part of the repository)
+- Temporary in-memory proof scripts: written to and run from the session scratchpad only (`:memory:` DuckDB, no file, no production database — not part of the repository)
+
+`data/derived_metrics_v1_preview.csv` content is unchanged from the
+prior commit (byte-identical — the underlying observations/values never
+changed, only the validation/reporting layer did).
 
 No production database was modified. `--execute` was **not** run.
 
-## Result: BUILD PASS (schema fixed and verified)
-The `fiscal_quarter`/`PRIMARY KEY` defect is fixed. All 13 in-memory
-schema tests pass (including one the fix itself needed — see above).
-Post-fix `--check-only` passed cleanly (0.56s), confirming: all 9
-tickers still process identically and cleanly, exactly 405 rows would
-be produced (45 per ticker), the MSFT subset still matches the existing
-single-ticker proof exactly (45/45, 0 mismatches), SQL and Python
-independently agree on every one of 405 rows, and the production
-database remains untouched (SHA-256 identical before/after). `--execute`
-remains fully built but intentionally not invoked.
+## Result: BUILD PASS (release blockers closed, schema fix re-verified)
+Both release blockers are closed: the 90/315 figure was a documentation
+typo (actual data was always 81/324/405, now independently re-verified
+three ways — direct CSV count, dataset-level checks, and committed-table
+checks) and the NULL validation is now explicit and complete (was
+already correctly scoped for `value`, now also explicitly covers
+`fiscal_quarter`, `fiscal_quarter_key`, and every other required
+column). The full in-memory execute-path proof passed all required
+checks against the real 405-row dataset. Post-fix `--check-only` passed
+cleanly (0.484s), confirming: all 9 tickers still process identically
+and cleanly, exactly 405 rows would be produced (81 annual + 324
+quarterly), the MSFT subset still matches the existing single-ticker
+proof exactly (45/45, 0 mismatches), SQL and Python independently agree
+on every one of 405 rows, and the production database remains untouched
+(SHA-256 identical before/after). `--execute` remains fully built but
+intentionally not invoked.
 
 ## The exact manual command to run the production load
 

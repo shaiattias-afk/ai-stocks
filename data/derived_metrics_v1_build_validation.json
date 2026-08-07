@@ -142,6 +142,8 @@
   },
   "total_observations": 405,
   "total_unresolved": 45,
+  "annual_row_count": 81,
+  "quarterly_row_count": 324,
   "unresolved": [
     {
       "ticker": "ORCL",
@@ -513,6 +515,11 @@
     "no_ambiguous_prior_period_matching": true,
     "all_source_run_ids_and_accessions_exist": true,
     "sql_and_python_results_match": true,
+    "annual_row_count_is_81": true,
+    "quarterly_row_count_is_324": true,
+    "total_row_count_is_405": true,
+    "annual_observations_have_no_fiscal_quarter": true,
+    "quarterly_observations_have_fiscal_quarter_1_to_4": true,
     "msft_matches_proof_exactly": true,
     "annual_v1_checksum_unchanged": true,
     "quarterly_v1_counts_unchanged": true,
@@ -543,6 +550,6 @@
   "backup_performed": false,
   "archive_created": false,
   "pid_lock_acquired": false,
-  "runtime_seconds": 0.56,
-  "checked_at": "2026-08-07T07:59:50.066Z"
+  "runtime_seconds": 0.484,
+  "checked_at": "2026-08-07T08:12:03.230Z"
 }

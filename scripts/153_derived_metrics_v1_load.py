@@ -76,6 +76,13 @@ PID_LOCK_PATH = DATA_DIR / "derived_metrics_v1_load.pid"
 
 TICKERS = ["ORCL", "MSFT", "META", "NVDA", "GOOGL", "AMZN", "MU", "CRWD", "PANW"]
 EXPECTED_TICKER_COUNT = 9
+# Row-count sanity gates for the current frozen 9-ticker / 5-year data
+# window (validation-only constants -- calculate_and_validate_full_dataset
+# and the DDL/CHECK constraints remain fully dynamic and never assume
+# these numbers; this only asserts that TODAY's data matches them).
+EXPECTED_ANNUAL_ROWS = 81  # 9 tickers x (5 operating_margin + 4 revenue_yoy_growth)
+EXPECTED_QUARTERLY_ROWS = 324  # 9 tickers x (20 operating_margin + 16 revenue_yoy_growth)
+EXPECTED_TOTAL_ROWS = EXPECTED_ANNUAL_ROWS + EXPECTED_QUARTERLY_ROWS  # 405
 ENGINE_VERSION = "DERIVED_METRICS_ENGINE_V1"
 VALIDATION_TOLERANCE_ABS = Decimal("0.000000001")  # 1e-9, absolute
 DECIMAL_18 = Decimal("0.000000000000000001")
@@ -637,6 +644,12 @@ def calculate_and_validate_full_dataset(connection) -> dict:
     missing_lineage = [o for o in all_observations if not o["source_periods"] or not o["source_run_ids"] or not o["source_accessions"]]
     all_sql_python_match = all(o["validation_status"] == "PASS" for o in all_observations)
 
+    # Release Blocker 1 (frequency-count validation): counted directly from
+    # the observation list, independent of any prose summary elsewhere.
+    annual_observations = [o for o in all_observations if o["frequency"] == "annual"]
+    quarterly_observations = [o for o in all_observations if o["frequency"] == "quarterly"]
+    annual_count, quarterly_count = len(annual_observations), len(quarterly_observations)
+
     global_checks = {
         "exactly_9_tickers_processed": len(tickers_processed) == EXPECTED_TICKER_COUNT,
         "no_duplicate_source_rows": len(duplicate_errors_total) == 0,
@@ -646,11 +659,17 @@ def calculate_and_validate_full_dataset(connection) -> dict:
         "no_ambiguous_prior_period_matching": True,  # enforced structurally -- ambiguous cases routed to `unresolved`
         "all_source_run_ids_and_accessions_exist": len(existence_errors_total) == 0,
         "sql_and_python_results_match": all_sql_python_match,
+        "annual_row_count_is_81": annual_count == EXPECTED_ANNUAL_ROWS,
+        "quarterly_row_count_is_324": quarterly_count == EXPECTED_QUARTERLY_ROWS,
+        "total_row_count_is_405": len(all_observations) == EXPECTED_TOTAL_ROWS,
+        "annual_observations_have_no_fiscal_quarter": all(o["fiscal_quarter"] is None for o in annual_observations),
+        "quarterly_observations_have_fiscal_quarter_1_to_4": all(o["fiscal_quarter"] in QUARTERS for o in quarterly_observations),
     }
 
     return {
         "per_ticker": per_ticker, "observations": all_observations, "unresolved": all_unresolved,
         "tickers_processed": tickers_processed, "global_checks": global_checks,
+        "annual_row_count": annual_count, "quarterly_row_count": quarterly_count,
     }
 
 
@@ -752,6 +771,7 @@ def run_check_only() -> dict:
         "mode": "check-only", "status": "PASS" if overall else "FAIL",
         "tickers_processed": dataset["tickers_processed"], "per_ticker": dataset["per_ticker"],
         "total_observations": total_expected_rows, "total_unresolved": len(dataset["unresolved"]),
+        "annual_row_count": dataset["annual_row_count"], "quarterly_row_count": dataset["quarterly_row_count"],
         "unresolved": dataset["unresolved"], "global_checks": dataset["global_checks"],
         "msft_proof_comparison": msft_comparison,
         "expected_production_table_ddl": DERIVED_METRIC_RESULTS_DDL.strip(),
@@ -772,7 +792,8 @@ def run_check_only() -> dict:
         pt = dataset["per_ticker"][ticker]
         print(f"  {ticker}: annual_periods={pt['annual_periods']} quarterly_periods={pt['quarterly_periods']} "
               f"observations={pt['observation_count']} unresolved={pt['unresolved_count']}")
-    print(f"\nTotal observations (expected production rows): {total_expected_rows}")
+    print(f"\nTotal observations (expected production rows): {total_expected_rows} "
+          f"(annual={dataset['annual_row_count']}, quarterly={dataset['quarterly_row_count']})")
     print(f"Total unresolved: {len(dataset['unresolved'])}")
     print(f"Global checks: {dataset['global_checks']}")
     print(f"MSFT proof comparison: passed={msft_comparison['passed']}")
@@ -795,6 +816,91 @@ def phase_backup() -> dict:
     if source_checksum != backup_checksum:
         raise RuntimeError("Backup checksum mismatch -- aborting before any write.")
     return {"backup_path": str(backup_path), "backup_checksum": backup_checksum, "source_checksum": source_checksum}
+
+
+NOT_NULL_COLUMNS = (
+    "ticker", "frequency", "fiscal_year_end", "fiscal_year", "fiscal_quarter_key", "derived_metric", "value",
+    "availability_date", "formula", "source_periods", "source_run_ids", "source_accessions",
+    "reconciliation_status", "engine_version", "created_at",
+)  # every derived_metric_results column except fiscal_quarter, which is intentionally nullable (annual rows)
+
+
+def validate_committed_table(connection, expected_row_count: int) -> None:
+    """The exact pre-commit validation --execute performs on the live
+    transaction, factored out so the in-memory schema proof can exercise
+    the identical logic (not a re-implementation) against its own
+    ':memory:' connection. Raises RuntimeError, collecting every
+    violation found, on the first call where anything is wrong."""
+    errors = []
+
+    committed_count = connection.execute("SELECT COUNT(*) FROM derived_metric_results").fetchone()[0]
+    if committed_count != expected_row_count:
+        errors.append(f"committed row count {committed_count} != expected {expected_row_count}")
+
+    dup = connection.execute(
+        "SELECT COUNT(*) FROM (SELECT ticker, frequency, fiscal_year_end, fiscal_quarter_key, derived_metric, COUNT(*) c "
+        "FROM derived_metric_results GROUP BY 1,2,3,4,5 HAVING COUNT(*) > 1)"
+    ).fetchone()[0]
+    if dup:
+        errors.append(f"{dup} duplicate keys found in committed table")
+
+    distinct_tickers = connection.execute("SELECT COUNT(DISTINCT ticker) FROM derived_metric_results").fetchone()[0]
+    if distinct_tickers != EXPECTED_TICKER_COUNT:
+        errors.append(f"committed table has {distinct_tickers} distinct tickers, expected {EXPECTED_TICKER_COUNT}")
+
+    # Release Blocker 1: exact annual/quarterly row-count split, counted
+    # directly from the committed table (not merely trusted from the
+    # in-memory observation list that produced it).
+    annual_count = connection.execute("SELECT COUNT(*) FROM derived_metric_results WHERE frequency = 'annual'").fetchone()[0]
+    quarterly_count = connection.execute("SELECT COUNT(*) FROM derived_metric_results WHERE frequency = 'quarterly'").fetchone()[0]
+    if annual_count != EXPECTED_ANNUAL_ROWS:
+        errors.append(f"annual row count {annual_count} != expected {EXPECTED_ANNUAL_ROWS}")
+    if quarterly_count != EXPECTED_QUARTERLY_ROWS:
+        errors.append(f"quarterly row count {quarterly_count} != expected {EXPECTED_QUARTERLY_ROWS}")
+
+    # Release Blocker 2: fiscal_quarter is REQUIRED to be NULL for annual
+    # rows -- "0 NULL values" is the wrong bar for this column. Verify the
+    # exact intended shape instead, plus fiscal_quarter_key's lockstep
+    # relationship, plus every genuinely-required (NOT NULL) column.
+    fiscal_quarter_nulls = connection.execute("SELECT COUNT(*) FROM derived_metric_results WHERE fiscal_quarter IS NULL").fetchone()[0]
+    if fiscal_quarter_nulls != EXPECTED_ANNUAL_ROWS:
+        errors.append(f"fiscal_quarter NULL count {fiscal_quarter_nulls} != expected {EXPECTED_ANNUAL_ROWS} (exactly the annual rows)")
+
+    non_annual_nulls = connection.execute(
+        "SELECT COUNT(*) FROM derived_metric_results WHERE fiscal_quarter IS NULL AND frequency <> 'annual'"
+    ).fetchone()[0]
+    if non_annual_nulls:
+        errors.append(f"{non_annual_nulls} row(s) have NULL fiscal_quarter but frequency != 'annual'")
+
+    quarterly_null_quarter = connection.execute(
+        "SELECT COUNT(*) FROM derived_metric_results WHERE frequency = 'quarterly' AND fiscal_quarter IS NULL"
+    ).fetchone()[0]
+    if quarterly_null_quarter:
+        errors.append(f"{quarterly_null_quarter} quarterly row(s) have NULL fiscal_quarter")
+
+    fiscal_quarter_key_nulls = connection.execute("SELECT COUNT(*) FROM derived_metric_results WHERE fiscal_quarter_key IS NULL").fetchone()[0]
+    if fiscal_quarter_key_nulls:
+        errors.append(f"{fiscal_quarter_key_nulls} row(s) have NULL fiscal_quarter_key (must never be NULL)")
+
+    annual_key_mismatch = connection.execute(
+        "SELECT COUNT(*) FROM derived_metric_results WHERE frequency = 'annual' AND fiscal_quarter_key <> 0"
+    ).fetchone()[0]
+    if annual_key_mismatch:
+        errors.append(f"{annual_key_mismatch} annual row(s) have fiscal_quarter_key != 0")
+
+    quarterly_key_mismatch = connection.execute(
+        "SELECT COUNT(*) FROM derived_metric_results WHERE frequency = 'quarterly' AND fiscal_quarter_key <> fiscal_quarter"
+    ).fetchone()[0]
+    if quarterly_key_mismatch:
+        errors.append(f"{quarterly_key_mismatch} quarterly row(s) have fiscal_quarter_key != fiscal_quarter")
+
+    for column in NOT_NULL_COLUMNS:
+        n = connection.execute(f"SELECT COUNT(*) FROM derived_metric_results WHERE {column} IS NULL").fetchone()[0]
+        if n:
+            errors.append(f"{n} NULL value(s) found in required column {column!r} (schema violation)")
+
+    if errors:
+        raise RuntimeError(f"Post-insert table validation failed ({len(errors)} issue(s)): {errors}")
 
 
 def run_execute() -> int:
@@ -843,21 +949,7 @@ def run_execute() -> int:
                      "PASS", ENGINE_VERSION, created_at],
                 )
 
-            committed_count = connection.execute("SELECT COUNT(*) FROM derived_metric_results").fetchone()[0]
-            if committed_count != len(dataset["observations"]):
-                raise RuntimeError(f"committed row count {committed_count} != expected {len(dataset['observations'])}")
-            dup = connection.execute(
-                "SELECT COUNT(*) FROM (SELECT ticker, frequency, fiscal_year_end, fiscal_quarter_key, derived_metric, COUNT(*) c "
-                "FROM derived_metric_results GROUP BY 1,2,3,4,5 HAVING COUNT(*) > 1)"
-            ).fetchone()[0]
-            if dup:
-                raise RuntimeError(f"{dup} duplicate keys found in committed table")
-            null_values = connection.execute("SELECT COUNT(*) FROM derived_metric_results WHERE value IS NULL").fetchone()[0]
-            if null_values:
-                raise RuntimeError(f"{null_values} NULL values found in committed table (schema violation)")
-            distinct_tickers = connection.execute("SELECT COUNT(DISTINCT ticker) FROM derived_metric_results").fetchone()[0]
-            if distinct_tickers != EXPECTED_TICKER_COUNT:
-                raise RuntimeError(f"committed table has {distinct_tickers} distinct tickers, expected {EXPECTED_TICKER_COUNT}")
+            validate_committed_table(connection, len(dataset["observations"]))
 
             connection.execute("COMMIT")
             log("Atomic transaction committed.")
