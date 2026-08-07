@@ -1,8 +1,6 @@
 {
-  "status": "PASS",
-  "table_created": true,
-  "existing_table_before_load": false,
-  "rows_inserted": 405,
+  "release": "DERIVED_METRICS_V1",
+  "engine_version": "DERIVED_METRICS_ENGINE_V1",
   "tickers": [
     "AMZN",
     "CRWD",
@@ -14,24 +12,19 @@
     "ORCL",
     "PANW"
   ],
+  "rows_inserted": 405,
   "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\ai_stock_agent_pre_derived_metrics_v1_load_20260807T081925Z.duckdb",
   "backup_checksum": "2a37d47b2257a34545196a9b4435f493cb88611215afb3f35a766d21fa325773",
-  "pre_counts": {
+  "annual_v1_checksum_unchanged": true,
+  "pre_load_counts": {
     "quarterly_extraction_runs": 45,
     "quarterly_metric_results": 1080,
     "financial_metric_results": 900
   },
-  "post_counts": {
+  "post_load_counts": {
     "quarterly_extraction_runs": 45,
     "quarterly_metric_results": 1080,
     "financial_metric_results": 900
   },
-  "post_checks": {
-    "quarterly_v1_counts_unchanged": true,
-    "derived_row_count_matches_expected": true,
-    "annual_v1_checksum_unchanged": true,
-    "table_did_not_previously_exist_or_was_replaced_cleanly": true
-  },
-  "warehouse_facts": 225780,
-  "completed_at": "2026-08-07T08:19:25.815Z"
+  "created_at_utc": "2026-08-07T08:19:25.829Z"
 }

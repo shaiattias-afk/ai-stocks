@@ -500,3 +500,57 @@ Full detail in `docs/V5_FINAL_RELEASE_REGRESSION.md`,
 manifest.json`.
 
 This decision requires the user's explicit sign-off to change or extend to a new context, the same as any other entry in this log.
+
+## D-043 — Derived Metrics V1 is frozen: 405 observations, exactly 2 approved metrics (approved)
+**Approved rule:** Derived Metrics V1 (`data/database/ai_stock_agent.duckdb`,
+table `derived_metric_results`) is **frozen**. Exactly **405** derived
+observations across all 9 approved tickers (ORCL, MSFT, META, NVDA,
+GOOGL, AMZN, MU, CRWD, PANW) are approved: 81 annual + 324 quarterly.
+Exactly **2** approved derived metrics: `operating_margin` and
+`revenue_yoy_growth`. **No future change to Derived Metrics V1 — a new
+metric, a formula change, or a data reload — is permitted without a new
+engine version and full validation**, the same discipline already
+applied to Annual Data V1 (freeze) and Quarterly Data V1 (D-042).
+
+**Rationale / origin:** built on top of the now-frozen Annual Data V1
+and Quarterly Data V1 (D-042), generalizing the exact formulas and
+point-in-time rules first proven single-ticker
+(`scripts/152_msft_derived_metrics_proof.py`) to all 9 tickers
+(`scripts/153_derived_metrics_v1_load.py`). Two real defects were found
+and fixed before this load ran, each independently re-verified
+read-only before any further write was attempted: (1) a
+`fiscal_quarter`/`PRIMARY KEY` schema defect (a column inside a
+`PRIMARY KEY` is implicitly `NOT NULL` in DuckDB, conflicting with the
+required `NULL` semantics for annual rows) — fixed with a
+`fiscal_quarter_key` surrogate column plus 4 `CHECK` constraints,
+proven via a 13-case in-memory DuckDB test (which itself caught a
+second defect: `BETWEEN` alone does not reject `NULL` under SQL's
+three-valued logic); and (2) a documentation-only "90 annual / 315
+quarterly" error that contradicted the correct, always-405 total —
+corrected after independently re-deriving the true 81/324 split three
+separate ways (direct CSV count, dataset-level checks, committed-table
+checks).
+
+**Applied**: `scripts/153 --execute` created `derived_metric_results`
+(schema: `ticker, frequency, fiscal_year_end, fiscal_year,
+fiscal_quarter, fiscal_quarter_key, derived_metric, value,
+availability_date, formula, source_periods, source_run_ids,
+source_accessions, reconciliation_status, engine_version, created_at`,
+with 4 `CHECK` constraints and a composite primary key on
+`fiscal_quarter_key` rather than the nullable `fiscal_quarter`) and
+loaded all 405 validated rows in one atomic transaction, with full
+backup (SHA-256-verified) beforehand. **Independently re-verified
+read-only, directly against the live database**: load status `PASS`,
+table exists, exactly 405 rows (81 annual, 324 quarterly), exactly 9
+distinct tickers, 0 duplicate primary keys, 0 NULLs in any required
+column, every annual row has `fiscal_quarter IS NULL`, every quarterly
+row has `fiscal_quarter` 1–4, exact per-metric counts (`operating_margin`
+45 annual + 180 quarterly, `revenue_yoy_growth` 36 annual + 144
+quarterly), only the 2 approved `derived_metric` values present, Annual
+V1 checksum unchanged, `quarterly_extraction_runs`=45,
+`quarterly_metric_results`=1,080, `financial_metric_results`=900,
+unique REVIEW_REQUIRED=0 — all unchanged by this load. Full detail in
+`docs/DERIVED_METRICS_V1_BUILD.md`, `docs/LAST_CLAUDE_REPORT.md`,
+`data/derived_metrics_v1_release_manifest.json`.
+
+This decision requires the user's explicit sign-off to change or extend to a new context, the same as any other entry in this log.

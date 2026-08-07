@@ -1,6 +1,8 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-06 (**QUARTERLY DATA V1 IS FROZEN.** `QUARTERLY_ENGINE_V5_STANDARD_GAAP_ALLOW_LIST` (`scripts/148`) is now the authoritative quarterly extraction engine (D-042). Production load executed via `scripts/151 --execute`: the 3 remaining target company-years (`CRWD 2022-01-31`, `MU 2021-09-02`, `PANW 2021-07-31`) were replaced as complete company-year units (72 rows, not just the 16 changed) in one atomic transaction, full backup+archive beforehand. Final read-only freeze verification, independently re-derived directly from the live databases (not merely the load script's own report): `quarterly_extraction_runs`=45, `quarterly_metric_results`=1,080, `financial_metric_results`=900, **unique REVIEW_REQUIRED=0** (down from a peak of 21), every company-year exactly 24 rows, 0 duplicate keys, 0 missing lineage, 0 availability mismatches, 0 future-data violations (spot-checked directly from committed `lineage_json`: 4 `STANDARD_GAAP_ALLOW_LIST` activations + 8 point-in-time-reuse activations, 0 violations), Annual V1 checksum unchanged, XBRL warehouse facts unchanged at 225,780, all 3 target runs confirmed `engine_version=QUARTERLY_ENGINE_V5_STANDARD_GAAP_ALLOW_LIST`. **Annual Data V1 and Quarterly Data V1 are now the approved inputs for the next project stage; no further data-engine changes are permitted without a new version and a full regression (D-042).** See `data/quarterly_data_v1_release_manifest.json`, `docs/DECISIONS_LOG.md` D-042, `docs/LAST_CLAUDE_REPORT.md` for full detail.)
+**Last updated:** 2026-08-07 (**DERIVED METRICS V1 IS FROZEN.** `scripts/153_derived_metrics_v1_load.py --execute` succeeded: `derived_metric_results` created and loaded for all 9 approved tickers (ORCL, MSFT, META, NVDA, GOOGL, AMZN, MU, CRWD, PANW), exactly 2 approved metrics (`operating_margin`, `revenue_yoy_growth`) at `annual` and `quarterly` frequency, **405 validated observations** (81 annual + 324 quarterly; per-metric: annual operating_margin=45, annual revenue_yoy_growth=36, quarterly operating_margin=180, quarterly revenue_yoy_growth=144). Independently re-verified read-only, directly from the live database: `derived_metric_results` exists, exactly 405 rows, exactly 81 annual / 324 quarterly, exactly 9 distinct tickers, 0 duplicate primary keys, 0 NULLs in any required column, every annual row has `fiscal_quarter IS NULL`, every quarterly row has `fiscal_quarter` 1–4, only the 2 approved `derived_metric` values present. Both upstream freezes remain untouched: `quarterly_extraction_runs`=45, `quarterly_metric_results`=1,080, `financial_metric_results`=900, unique REVIEW_REQUIRED=0, Annual Data V1 checksum unchanged. **Derived Metrics V1, Annual Data V1, and Quarterly Data V1 are now all frozen; no future changes to any of them are permitted without a new version and full validation (D-043).** See `data/derived_metrics_v1_load_result.json`, `data/derived_metrics_v1_release_manifest.json`, `docs/DECISIONS_LOG.md` D-043, `docs/LAST_CLAUDE_REPORT.md` for full detail.)
+
+**Previous update:** 2026-08-06 (**QUARTERLY DATA V1 IS FROZEN.** `QUARTERLY_ENGINE_V5_STANDARD_GAAP_ALLOW_LIST` (`scripts/148`) is now the authoritative quarterly extraction engine (D-042). Production load executed via `scripts/151 --execute`: the 3 remaining target company-years (`CRWD 2022-01-31`, `MU 2021-09-02`, `PANW 2021-07-31`) were replaced as complete company-year units (72 rows, not just the 16 changed) in one atomic transaction, full backup+archive beforehand. Final read-only freeze verification, independently re-derived directly from the live databases (not merely the load script's own report): `quarterly_extraction_runs`=45, `quarterly_metric_results`=1,080, `financial_metric_results`=900, **unique REVIEW_REQUIRED=0** (down from a peak of 21), every company-year exactly 24 rows, 0 duplicate keys, 0 missing lineage, 0 availability mismatches, 0 future-data violations (spot-checked directly from committed `lineage_json`: 4 `STANDARD_GAAP_ALLOW_LIST` activations + 8 point-in-time-reuse activations, 0 violations), Annual V1 checksum unchanged, XBRL warehouse facts unchanged at 225,780, all 3 target runs confirmed `engine_version=QUARTERLY_ENGINE_V5_STANDARD_GAAP_ALLOW_LIST`. **Annual Data V1 and Quarterly Data V1 are now the approved inputs for the next project stage; no further data-engine changes are permitted without a new version and a full regression (D-042).** See `data/quarterly_data_v1_release_manifest.json`, `docs/DECISIONS_LOG.md` D-042, `docs/LAST_CLAUDE_REPORT.md` for full detail.)
 **Project folder:** `C:\AI_Stock_Agent`
 **Environment:** Windows, VS Code, Python virtual environment, PowerShell
 
@@ -3787,3 +3789,58 @@ point-in-time-safe backtesting datasets) — per `CLAUDE.md`'s own
 stated purpose ("personal stock-analysis and investment-decision
 system") — rather than further extraction-engine work, which is now
 explicitly frozen pending a new version + regression.
+
+## Derived Metrics V1 FROZEN — production load executed and verified (D-043)
+
+`scripts/153_derived_metrics_v1_load.py --execute` succeeded, creating
+`derived_metric_results` in `data/database/ai_stock_agent.duckdb` and
+loading it for all 9 approved tickers with exactly 2 approved metrics
+(`operating_margin`, `revenue_yoy_growth`) at `annual` and `quarterly`
+frequency — the exact same formulas, point-in-time rules, and lineage
+logic proven single-ticker (`scripts/152`) and regression-validated
+9-ticker (`scripts/153 --check-only`) in the two prior tasks, with the
+`fiscal_quarter`/`PRIMARY KEY` schema defect and the 90/315 documentation
+error both already found and fixed before this load ran.
+
+**Final read-only verification — independently re-derived directly from
+the live database** (not merely the load script's own self-report):
+
+| Check | Result |
+|---|---|
+| Load status | `PASS` |
+| `derived_metric_results` exists | ✓ |
+| Total rows | **405** |
+| Annual rows | **81** |
+| Quarterly rows | **324** |
+| Distinct tickers | **9** (AMZN, CRWD, GOOGL, META, MSFT, MU, NVDA, ORCL, PANW) |
+| Duplicate primary keys | 0 |
+| NULLs in any required (`NOT NULL`) column | 0 |
+| Annual rows with a non-NULL `fiscal_quarter` | 0 (correctly always NULL) |
+| Quarterly rows with `fiscal_quarter` outside 1–4 | 0 |
+| `operating_margin` counts | annual=45, quarterly=180 (correct) |
+| `revenue_yoy_growth` counts | annual=36, quarterly=144 (correct) |
+| Distinct `derived_metric` values | exactly `{operating_margin, revenue_yoy_growth}` — no others |
+| Annual Data V1 checksum | unchanged |
+| `quarterly_extraction_runs` | 45 (unchanged) |
+| `quarterly_metric_results` | 1,080 (unchanged) |
+| `financial_metric_results` | 900 (unchanged) |
+| unique REVIEW_REQUIRED | 0 (unchanged) |
+
+**Standing declarations (D-043, recorded in `docs/DECISIONS_LOG.md`)**:
+Derived Metrics V1 is frozen. 405 approved derived observations across
+exactly 2 approved metrics (`operating_margin`, `revenue_yoy_growth`).
+No future changes to Derived Metrics V1 (new metrics, formula changes,
+or data reloads) are permitted without a new version and full
+validation — the same discipline already applied to Annual Data V1 and
+Quarterly Data V1.
+
+**Files**: `data/derived_metrics_v1_load_result.json`,
+`data/derived_metrics_v1_release_manifest.json` (the freeze record).
+Full detail in `docs/LAST_CLAUDE_REPORT.md`.
+
+**Current overall state**: Annual Data V1, Quarterly Data V1, and
+Derived Metrics V1 are all frozen. The fundamentals + derived-metrics
+base for all 9 approved tickers is complete and locked. The next stage
+(not started) would be a valuation/backtesting layer built on top of
+these three frozen releases, or extending Derived Metrics V1 to
+additional metrics under a new version.
