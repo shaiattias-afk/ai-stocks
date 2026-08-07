@@ -1,0 +1,367 @@
+{
+  "mode": "check-only",
+  "status": "PASS",
+  "tickers_processed": [
+    "AMZN",
+    "CRWD",
+    "GOOGL",
+    "META",
+    "MSFT",
+    "MU",
+    "NVDA",
+    "ORCL",
+    "PANW"
+  ],
+  "total_rows": 14913,
+  "per_ticker_validation": [
+    {
+      "ticker": "ORCL",
+      "row_count": 1657,
+      "row_count_matches_expected": true,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-06",
+      "dates_sorted": true,
+      "dates_unique": true,
+      "duplicate_dates": [],
+      "missing_fields": [],
+      "negative_price_rows": [],
+      "negative_volume_rows": [],
+      "ohlc_violations": [],
+      "nominal_non_positive": [],
+      "nominal_ohlc_violations": [],
+      "clean": true
+    },
+    {
+      "ticker": "MSFT",
+      "row_count": 1657,
+      "row_count_matches_expected": true,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-06",
+      "dates_sorted": true,
+      "dates_unique": true,
+      "duplicate_dates": [],
+      "missing_fields": [],
+      "negative_price_rows": [],
+      "negative_volume_rows": [],
+      "ohlc_violations": [],
+      "nominal_non_positive": [],
+      "nominal_ohlc_violations": [],
+      "clean": true
+    },
+    {
+      "ticker": "META",
+      "row_count": 1657,
+      "row_count_matches_expected": true,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-06",
+      "dates_sorted": true,
+      "dates_unique": true,
+      "duplicate_dates": [],
+      "missing_fields": [],
+      "negative_price_rows": [],
+      "negative_volume_rows": [],
+      "ohlc_violations": [],
+      "nominal_non_positive": [],
+      "nominal_ohlc_violations": [],
+      "clean": true
+    },
+    {
+      "ticker": "NVDA",
+      "row_count": 1657,
+      "row_count_matches_expected": true,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-06",
+      "dates_sorted": true,
+      "dates_unique": true,
+      "duplicate_dates": [],
+      "missing_fields": [],
+      "negative_price_rows": [],
+      "negative_volume_rows": [],
+      "ohlc_violations": [],
+      "nominal_non_positive": [],
+      "nominal_ohlc_violations": [],
+      "clean": true
+    },
+    {
+      "ticker": "GOOGL",
+      "row_count": 1657,
+      "row_count_matches_expected": true,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-06",
+      "dates_sorted": true,
+      "dates_unique": true,
+      "duplicate_dates": [],
+      "missing_fields": [],
+      "negative_price_rows": [],
+      "negative_volume_rows": [],
+      "ohlc_violations": [],
+      "nominal_non_positive": [],
+      "nominal_ohlc_violations": [],
+      "clean": true
+    },
+    {
+      "ticker": "AMZN",
+      "row_count": 1657,
+      "row_count_matches_expected": true,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-06",
+      "dates_sorted": true,
+      "dates_unique": true,
+      "duplicate_dates": [],
+      "missing_fields": [],
+      "negative_price_rows": [],
+      "negative_volume_rows": [],
+      "ohlc_violations": [],
+      "nominal_non_positive": [],
+      "nominal_ohlc_violations": [],
+      "clean": true
+    },
+    {
+      "ticker": "MU",
+      "row_count": 1657,
+      "row_count_matches_expected": true,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-06",
+      "dates_sorted": true,
+      "dates_unique": true,
+      "duplicate_dates": [],
+      "missing_fields": [],
+      "negative_price_rows": [],
+      "negative_volume_rows": [],
+      "ohlc_violations": [],
+      "nominal_non_positive": [],
+      "nominal_ohlc_violations": [],
+      "clean": true
+    },
+    {
+      "ticker": "CRWD",
+      "row_count": 1657,
+      "row_count_matches_expected": true,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-06",
+      "dates_sorted": true,
+      "dates_unique": true,
+      "duplicate_dates": [],
+      "missing_fields": [],
+      "negative_price_rows": [],
+      "negative_volume_rows": [],
+      "ohlc_violations": [],
+      "nominal_non_positive": [],
+      "nominal_ohlc_violations": [],
+      "clean": true
+    },
+    {
+      "ticker": "PANW",
+      "row_count": 1657,
+      "row_count_matches_expected": true,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-06",
+      "dates_sorted": true,
+      "dates_unique": true,
+      "duplicate_dates": [],
+      "missing_fields": [],
+      "negative_price_rows": [],
+      "negative_volume_rows": [],
+      "ohlc_violations": [],
+      "nominal_non_positive": [],
+      "nominal_ohlc_violations": [],
+      "clean": true
+    }
+  ],
+  "prior_proof_cross_checks": [
+    {
+      "ticker": "ORCL",
+      "splits_match_prior_proof": true,
+      "dividends_count_match_prior_proof": true,
+      "rebuilt_splits_count": 0,
+      "prior_proof_splits_count": 0,
+      "rebuilt_dividends_count": 27,
+      "prior_proof_dividends_count": 27
+    },
+    {
+      "ticker": "MSFT",
+      "splits_match_prior_proof": true,
+      "dividends_count_match_prior_proof": true,
+      "rebuilt_splits_count": 0,
+      "prior_proof_splits_count": 0,
+      "rebuilt_dividends_count": 26,
+      "prior_proof_dividends_count": 26
+    },
+    {
+      "ticker": "META",
+      "splits_match_prior_proof": true,
+      "dividends_count_match_prior_proof": true,
+      "rebuilt_splits_count": 0,
+      "prior_proof_splits_count": 0,
+      "rebuilt_dividends_count": 10,
+      "prior_proof_dividends_count": 10
+    },
+    {
+      "ticker": "NVDA",
+      "splits_match_prior_proof": true,
+      "dividends_count_match_prior_proof": true,
+      "rebuilt_splits_count": 2,
+      "prior_proof_splits_count": 2,
+      "rebuilt_dividends_count": 26,
+      "prior_proof_dividends_count": 26
+    },
+    {
+      "ticker": "GOOGL",
+      "splits_match_prior_proof": true,
+      "dividends_count_match_prior_proof": true,
+      "rebuilt_splits_count": 1,
+      "prior_proof_splits_count": 1,
+      "rebuilt_dividends_count": 9,
+      "prior_proof_dividends_count": 9
+    },
+    {
+      "ticker": "AMZN",
+      "splits_match_prior_proof": true,
+      "dividends_count_match_prior_proof": true,
+      "rebuilt_splits_count": 1,
+      "prior_proof_splits_count": 1,
+      "rebuilt_dividends_count": 0,
+      "prior_proof_dividends_count": 0
+    },
+    {
+      "ticker": "MU",
+      "splits_match_prior_proof": true,
+      "dividends_count_match_prior_proof": true,
+      "rebuilt_splits_count": 0,
+      "prior_proof_splits_count": 0,
+      "rebuilt_dividends_count": 20,
+      "prior_proof_dividends_count": 20
+    },
+    {
+      "ticker": "CRWD",
+      "splits_match_prior_proof": true,
+      "dividends_count_match_prior_proof": true,
+      "rebuilt_splits_count": 1,
+      "prior_proof_splits_count": 1,
+      "rebuilt_dividends_count": 0,
+      "prior_proof_dividends_count": 0
+    },
+    {
+      "ticker": "PANW",
+      "splits_match_prior_proof": true,
+      "dividends_count_match_prior_proof": true,
+      "rebuilt_splits_count": 2,
+      "prior_proof_splits_count": 2,
+      "rebuilt_dividends_count": 0,
+      "prior_proof_dividends_count": 0
+    }
+  ],
+  "policy_cross_check": {
+    "tickers_checked": [
+      "NVDA",
+      "GOOGL",
+      "PANW"
+    ],
+    "dates_checked": 35,
+    "mismatches": [],
+    "matches_price_policy_v1_proof": true
+  },
+  "raw_file_records": [
+    {
+      "ticker": "ORCL",
+      "path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\ORCL\\orcl_chart_raw_20260807T100954Z.json",
+      "sha256": "cfb5cfe29107bba2d11005fbe536bfdf8cca151dead65757c3ff3ea292b43135",
+      "exists": true
+    },
+    {
+      "ticker": "MSFT",
+      "path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\MSFT\\msft_chart_raw_20260807T100956Z.json",
+      "sha256": "d98ee05a7e8804678a3ba7ef8ceaba75df82054d60b5093c909d540194b8d0eb",
+      "exists": true
+    },
+    {
+      "ticker": "META",
+      "path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\META\\meta_chart_raw_20260807T100958Z.json",
+      "sha256": "2ecb6b9343972aab1f3b10a06439762780b29c0dbc1a678c683ebbcabd2905f4",
+      "exists": true
+    },
+    {
+      "ticker": "NVDA",
+      "path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\NVDA\\nvda_chart_raw_20260807T100959Z.json",
+      "sha256": "54db66cfb68d86966edceb10a796c56f8a37e8411f793609377939a9db3fd601",
+      "exists": true
+    },
+    {
+      "ticker": "GOOGL",
+      "path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\GOOGL\\googl_chart_raw_20260807T101001Z.json",
+      "sha256": "a19ab26b772216983fb06f7931462cf6c51b2f5e87046f6003b32bb2a62e5b4d",
+      "exists": true
+    },
+    {
+      "ticker": "AMZN",
+      "path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\AMZN\\amzn_chart_raw_20260807T101003Z.json",
+      "sha256": "fb7f90e907e9fe0b4baf41819935a177b430c9d5b6fa9b0a1fef99edf8fc9b2e",
+      "exists": true
+    },
+    {
+      "ticker": "MU",
+      "path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\MU\\mu_chart_raw_20260807T101005Z.json",
+      "sha256": "b0ea1e8641fd93568dab7e7b49e48b80d65473b9416bab4db1c789cfb3b2bef6",
+      "exists": true
+    },
+    {
+      "ticker": "CRWD",
+      "path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\CRWD\\crwd_chart_raw_20260807T101007Z.json",
+      "sha256": "8a9effb4cd995932d21b1b36b478a964da772380c94389c857e951bb19e877a4",
+      "exists": true
+    },
+    {
+      "ticker": "PANW",
+      "path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\PANW\\panw_chart_raw_20260807T101009Z.json",
+      "sha256": "5a1e8c91a82f15e7122eddf39ccd9122ac385fe820811ebef7d68495cd932324",
+      "exists": true
+    }
+  ],
+  "global_checks": {
+    "exactly_9_tickers": true,
+    "no_unexpected_ticker": true,
+    "exactly_1657_rows_per_ticker": true,
+    "exactly_14913_total_rows": true,
+    "no_duplicate_ticker_date_rows": true,
+    "all_per_ticker_validation_clean": true,
+    "every_raw_source_file_exists": true,
+    "every_raw_source_file_sha256_recorded": true,
+    "all_split_events_match_9_ticker_proof": true,
+    "all_dividend_counts_match_9_ticker_proof": true,
+    "nvda_googl_panw_match_price_policy_v1_proof": true,
+    "in_memory_load_proof_passed": true,
+    "production_table_does_not_yet_exist": true,
+    "database_unchanged": true
+  },
+  "in_memory_load_proof": {
+    "commit_succeeded": true,
+    "rows_inserted": 14913,
+    "distinct_tickers": 9,
+    "per_ticker_counts": {
+      "AMZN": 1657,
+      "PANW": 1657,
+      "GOOGL": 1657,
+      "ORCL": 1657,
+      "CRWD": 1657,
+      "MSFT": 1657,
+      "META": 1657,
+      "MU": 1657,
+      "NVDA": 1657
+    },
+    "all_tickers_have_1657_rows": true,
+    "duplicate_keys": 0,
+    "required_fields_null_count": 0,
+    "wrong_policy_version_count": 0,
+    "proof_passed": true,
+    "used_file_database": false
+  },
+  "expected_production_table_ddl": "CREATE TABLE historical_prices_daily (\n    ticker                  VARCHAR NOT NULL,\n    price_date              DATE NOT NULL,\n    open                    DOUBLE NOT NULL,\n    high                    DOUBLE NOT NULL,\n    low                     DOUBLE NOT NULL,\n    close                   DOUBLE NOT NULL,\n    adj_close               DOUBLE NOT NULL,\n    nominal_open            DOUBLE NOT NULL,\n    nominal_high            DOUBLE NOT NULL,\n    nominal_low             DOUBLE NOT NULL,\n    nominal_close           DOUBLE NOT NULL,\n    volume                  BIGINT NOT NULL,\n    dividend                DOUBLE,\n    split_ratio             VARCHAR,\n    source                  VARCHAR NOT NULL,\n    source_raw_file         VARCHAR NOT NULL,\n    source_raw_sha256       VARCHAR NOT NULL,\n    price_policy_version    VARCHAR NOT NULL,\n    created_at              TIMESTAMP NOT NULL,\n    CONSTRAINT chk_prices_positive CHECK (\n        open > 0 AND high > 0 AND low > 0 AND close > 0 AND adj_close > 0\n        AND nominal_open > 0 AND nominal_high > 0 AND nominal_low > 0 AND nominal_close > 0\n    ),\n    CONSTRAINT chk_volume_non_negative CHECK (volume >= 0),\n    CONSTRAINT chk_ohlc_valid CHECK (low <= open AND open <= high AND low <= close AND close <= high),\n    CONSTRAINT chk_nominal_ohlc_valid CHECK (\n        nominal_low <= nominal_open AND nominal_open <= nominal_high\n        AND nominal_low <= nominal_close AND nominal_close <= nominal_high\n    ),\n    CONSTRAINT chk_price_policy_version CHECK (price_policy_version = 'HISTORICAL_PRICE_POLICY_V1'),\n    PRIMARY KEY (ticker, price_date)\n)",
+  "price_policy_version": "HISTORICAL_PRICE_POLICY_V1",
+  "database_sha256_before": "0cddc38e10309bb8bdb79b1643b2aac3ae7538db17c2dab659b8d993437749bd",
+  "database_sha256_after": "0cddc38e10309bb8bdb79b1643b2aac3ae7538db17c2dab659b8d993437749bd",
+  "table_created": false,
+  "backup_performed": false,
+  "pid_lock_acquired": false,
+  "runtime_seconds": 21.148,
+  "checked_at": "2026-08-07T11:12:10.133Z"
+}

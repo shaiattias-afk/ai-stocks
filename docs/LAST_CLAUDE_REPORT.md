@@ -1,92 +1,79 @@
-# Historical Price Policy V1 — RESULT: PASS
+# Historical Prices V1 — production loader build — RESULT: PASS (check-only)
 
-Defined and proved the official Historical Price Policy V1 — 5 binding
-rules for how historical prices, splits, and dividends are used in
-return calculations, simulated execution prices, and future portfolio
-backtests. Proved using the already-saved data for **NVDA, GOOGL, and
-PANW** (the 3 companies with proven splits). **Proof/validation stage
-only — no production price table, no database changes, no backtest, no
-new market data downloaded.**
+Built the production loader (`scripts/158_historical_prices_v1_load.py`)
+for the 9-company historical price dataset, applying Historical Price
+Policy V1 / D-044 exactly (Rule A: preserve Yahoo's original fields;
+Rule C: reconstruct nominal historical OHLC). **Only `--check-only` was
+run — `--execute` was never invoked. The production database was not
+modified.**
 
-Full report: `docs/PRICE_POLICY_V1.md`.
-Decision recorded: `docs/DECISIONS_LOG.md` — **D-044**.
-Source code: `scripts/157_price_policy_v1_proof.py`.
-Machine-readable result: `data/proofs/price_policy_v1_proof.json`.
-Reconstructed series: `data/proofs/price_policy_v1_proof.csv` (4,971 rows).
+Full report: `docs/HISTORICAL_PRICES_V1_BUILD.md`.
+Outputs: `data/historical_prices_v1_build_validation.json`,
+`data/historical_prices_v1_preview.csv` (14,913 rows).
 
-## The 5 rules (now binding, D-044)
+## Command run
 
-- **Rule A**: preserve Yahoo's original fields, never overwrite.
-- **Rule B**: use `adj_close` for total-return calculations; never add
-  dividends on top (double counting).
-- **Rule C**: reconstruct nominal historical execution prices by
-  multiplying Yahoo OHLC by the product of all *later* split ratios
-  (a split on the price date itself doesn't apply to that date).
-- **Rule D**: a full portfolio backtest uses Rule C's nominal price for
-  execution plus explicit split/dividend events — never `adj_close` in
-  the same simulation (double counting).
-- **Rule E**: a future split may be used only as Rule C's mechanical
-  conversion factor — never as input to a score, signal, valuation, or
-  ranking decision (point-in-time safety).
+```
+.\.venv\Scripts\python.exe .\scripts\158_historical_prices_v1_load.py --check-only
+```
 
-## Proof results — all 7 determinations PASS
+## Result summary
 
-1. Yahoo `close` stays smooth through every split — largest move +3.36%.
-2. Reconstructed nominal price shows the expected mechanical jump —
-   e.g. NVDA 4:1 → 3.87×, GOOGL 20:1 → 19.64×, PANW 3:1 → 3.06×.
-3. Naive returns from the reconstructed nominal series are wildly
-   distorted at every split boundary (-48% to -95%).
-4. Returns from `adj_close` are not distorted (-1.8% to +3.4%) — the
-   concrete justification for Rule B/D.
-5. All 5 known split events validated exactly (NVDA 4:1/2021,
-   10:1/2024; GOOGL 20:1/2022; PANW 3:1/2022, 2:1/2024).
-6. All reconstructed prices positive, all OHLC relationships valid
-   across 4,971 rows.
-7. Reconstruction deterministically reproducible (ran twice, identical).
+- **9 companies**, **14,913 daily price rows** (1,657 per ticker),
+  **2020-01-02 to 2026-08-06** — rebuilt from scratch by re-parsing the
+  already-saved raw Yahoo JSON files, never from the prior proof's own
+  CSV output.
+- **All validation checks passed**: exactly 9 tickers, no unexpected
+  ticker, exactly 1,657 rows/ticker, exactly 14,913 total, no
+  duplicates, no missing/negative values, all OHLC and reconstructed
+  nominal-OHLC relationships valid, every raw source file exists with
+  its SHA-256 recorded, all split events and dividend counts matched
+  the existing 9-company proof exactly, and NVDA/GOOGL/PANW's
+  reconstructed nominal prices matched the Historical Price Policy V1
+  proof exactly (35 dates checked, 0 mismatches).
+- **In-memory load proof passed**: the exact future production schema
+  was created in a `:memory:` DuckDB connection (no file touched), all
+  14,913 rows inserted in one transaction, commit succeeded — 9
+  tickers, 1,657 rows each, 0 duplicate keys, 0 NULLs in any required
+  field.
+- **Production remained untouched**: database SHA-256 identical
+  before/after; `historical_prices_daily` does not yet exist in
+  production.
 
-## No double-counting — structurally proven
+## Future production table
 
-The `adj_close`-based return function for each ticker never reads the
-`dividend` column — verified by construction, not just by inspection.
-Dividends are preserved separately, purely for Rule D's explicit
-portfolio-cash use.
+`historical_prices_daily` — one row per ticker per trading date, PK
+`(ticker, price_date)`, columns per the task spec plus 4 `CHECK`
+constraints (positive prices, non-negative volume, valid OHLC, valid
+reconstructed nominal OHLC, correct policy version tag).
+`price_policy_version = 'HISTORICAL_PRICE_POLICY_V1'` on every row.
 
 ## Files created
-- `scripts/157_price_policy_v1_proof.py` (new)
-- `data/proofs/price_policy_v1_proof.csv` (new)
-- `data/proofs/price_policy_v1_proof.json` (new)
-- `docs/PRICE_POLICY_V1.md` (new)
-- `docs/DECISIONS_LOG.md` — D-044 added
+- `scripts/158_historical_prices_v1_load.py` (new)
+- `data/historical_prices_v1_build_validation.json` (new)
+- `data/historical_prices_v1_preview.csv` (new)
+- `docs/HISTORICAL_PRICES_V1_BUILD.md` (new)
 - `docs/LAST_CLAUDE_REPORT.md` — this file, updated
 
-No existing database was modified. No production price table was
-created. No backtest was run. No new market data was downloaded — all
-values came from the already-saved 9-ticker proof CSV. Annual Data V1,
-Quarterly Data V1, Derived Metrics V1, and all prior price proofs were
-untouched.
+No existing database was modified. No new market data was downloaded.
+No backtest was run. Annual Data V1, Quarterly Data V1, Derived
+Metrics V1, and Historical Price Policy V1 (D-044) were untouched.
 
 ## Result: PASS
-Runtime **0.14s** (well under the 5-minute expectation).
+Runtime **21.15s** (well under the 5-minute expectation).
 
 ## Report — in simple terms
 
-- **What price for returns?** `adj_close` — proven continuous and
-  undistorted across every split tested.
-- **What price for simulating historical buys/sells?** A reconstructed
-  nominal price: Yahoo's price multiplied by every later split ratio,
-  recovering the real dollar price actually quoted on that date.
-- **How are splits handled?** As an explicit multiplier applied only to
-  dates before the split, used solely to reconstruct nominal prices —
-  never silently baked into any other number.
-- **How are dividends handled?** Implicitly inside `adj_close` for
-  return math; explicitly as cash events for a full portfolio
-  simulation — never both at once.
-- **Why no double counting?** `adj_close` already embeds dividends, so
-  the dividend column is never separately added when `adj_close` is in
-  use, and the nominal-price path never touches dividends at all.
-- **Why no look-ahead bias?** A future split is used only as a
-  mechanical price-scale multiplier (Rule C) — never as input to any
-  scoring, signal, or selection decision (Rule E).
-- **Did the 3-company proof pass?** Yes — all 7 checks passed for NVDA,
-  GOOGL, and PANW, covering all 5 known split events.
-- **Git commit hash?** See below.
+- **Number of companies?** 9.
+- **Number of daily price rows?** 14,913 (1,657 per company).
+- **Date range?** 2020-01-02 to 2026-08-06.
+- **Did all validation pass?** Yes — every check listed in the task
+  passed, including cross-checks against both prior proofs.
+- **Did the in-memory load simulation pass?** Yes — 14,913 rows
+  inserted and committed against the exact future production schema,
+  entirely in memory, no file database touched.
+- **Did production remain untouched?** Yes — database checksum
+  unchanged, target table does not yet exist.
+- **Exact Git commit hash?** See below (committed after this report).
+- **Exact future manual `--execute` command?**
+  `.\.venv\Scripts\python.exe .\scripts\158_historical_prices_v1_load.py --execute`
