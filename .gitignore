@@ -26,6 +26,9 @@ data/sec_filings_locked/
 data/sec_filings/
 data/sec_raw/
 
+# Raw market-data source responses (re-fetchable from the provider; never committed)
+data/market_data/raw/
+
 # Arelle's own local taxonomy/schema cache (rebuilt automatically on first run)
 data/arelle_cache/
 

@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "ticker": "NVDA",
+  "source": "Yahoo Finance historical chart API",
+  "request": {
+    "url": "https://query1.finance.yahoo.com/v8/finance/chart/NVDA?period1=1577836800&period2=1786060800&interval=1d&events=div%2Csplits&includeAdjustedClose=true",
+    "status_code": 200,
+    "period1": 1577836800,
+    "period2": 1786060800,
+    "fetch_start_date": "2020-01-01",
+    "fetch_end_date_exclusive": "2026-08-07",
+    "fetched_at_utc": "2026-08-07T08:37:30.720Z"
+  },
+  "raw_response_path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\NVDA\\nvda_chart_raw_20260807T083730Z.json",
+  "fetch_start_date": "2020-01-01",
+  "fetch_end_date_exclusive": "2026-08-07",
+  "validation": {
+    "total_observations": 1657,
+    "first_trading_date": "2020-01-02",
+    "last_trading_date": "2026-08-06",
+    "dates_sorted": true,
+    "dates_unique": true,
+    "duplicate_dates": [],
+    "negative_price_rows": [],
+    "negative_volume_rows": [],
+    "missing_fields": [],
+    "missing_fields_count": 0,
+    "complete_ohlc_rows": 1657,
+    "ohlc_relationship_violations": [],
+    "all_splits_found_in_source": [
+      {
+        "date": "2021-07-20",
+        "numerator": 4.0,
+        "denominator": 1.0,
+        "split_ratio": "4:1"
+      },
+      {
+        "date": "2024-06-10",
+        "numerator": 10.0,
+        "denominator": 1.0,
+        "split_ratio": "10:1"
+      }
+    ],
+    "expected_splits_check": [
+      {
+        "year": 2021,
+        "ratio": "4:1",
+        "numerator": 4.0,
+        "denominator": 1.0,
+        "found": true,
+        "matched_record": {
+          "date": "2021-07-20",
+          "numerator": 4.0,
+          "denominator": 1.0,
+          "split_ratio": "4:1"
+        }
+      },
+      {
+        "year": 2024,
+        "ratio": "10:1",
+        "numerator": 10.0,
+        "denominator": 1.0,
+        "found": true,
+        "matched_record": {
+          "date": "2024-06-10",
+          "numerator": 10.0,
+          "denominator": 1.0,
+          "split_ratio": "10:1"
+        }
+      }
+    ],
+    "both_expected_splits_found": true,
+    "dividends_count": 26,
+    "close_vs_adjclose_differ_count": 1613,
+    "close_and_adjclose_kept_separate": true
+  },
+  "note_on_price_methodology": "Raw close and adjusted close are preserved as separate fields. No decision has been made about which will be used for backtesting -- that decision is explicitly deferred to a separate future task.",
+  "generated_at_utc": "2026-08-07T08:37:30.782Z",
+  "runtime_seconds": 0.88
+}
