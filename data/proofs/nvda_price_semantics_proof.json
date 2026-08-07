@@ -1,0 +1,325 @@
+{
+  "status": "PASS",
+  "ticker": "NVDA",
+  "source_file": "C:\\AI_Stock_Agent\\data\\proofs\\nvda_historical_price_proof.csv",
+  "generated_at_utc": "2026-08-07T09:17:40.221Z",
+  "split_analyses": [
+    {
+      "split_date": "2021-07-20",
+      "documented_ratio": "4:1",
+      "day_before": "2021-07-19",
+      "day_after": "2021-07-21",
+      "close_before": 18.77975082397461,
+      "close_split_day": 18.61199951171875,
+      "close_after": 19.40999984741211,
+      "adj_close_before": 18.715017318725586,
+      "adj_close_split_day": 18.547842025756836,
+      "adj_close_after": 19.34309196472168,
+      "close_to_adjclose_ratio_before": 1.003459,
+      "close_to_adjclose_ratio_after": 1.003459,
+      "ratio_of_ratios_before_over_after": 1.0,
+      "close_pct_change_day_before_to_day_after": 3.356,
+      "adj_close_pct_change_day_before_to_day_after": 3.356,
+      "close_before_over_close_after": 0.96753,
+      "documented_split_multiple": 4.0,
+      "close_already_split_adjusted_for_this_split": true,
+      "window_table": [
+        {
+          "date": "2021-07-15",
+          "close": 18.966249465942383,
+          "adjusted_close": 18.90087127685547,
+          "split_event": null,
+          "dividend": null,
+          "close_to_adjclose_ratio": 1.003459,
+          "is_split_day": false
+        },
+        {
+          "date": "2021-07-16",
+          "close": 18.160999298095703,
+          "adjusted_close": 18.098400115966797,
+          "split_event": null,
+          "dividend": null,
+          "close_to_adjclose_ratio": 1.003459,
+          "is_split_day": false
+        },
+        {
+          "date": "2021-07-19",
+          "close": 18.77975082397461,
+          "adjusted_close": 18.715017318725586,
+          "split_event": null,
+          "dividend": null,
+          "close_to_adjclose_ratio": 1.003459,
+          "is_split_day": false
+        },
+        {
+          "date": "2021-07-20",
+          "close": 18.61199951171875,
+          "adjusted_close": 18.547842025756836,
+          "split_event": "4:1",
+          "dividend": null,
+          "close_to_adjclose_ratio": 1.003459,
+          "is_split_day": true
+        },
+        {
+          "date": "2021-07-21",
+          "close": 19.40999984741211,
+          "adjusted_close": 19.34309196472168,
+          "split_event": null,
+          "dividend": null,
+          "close_to_adjclose_ratio": 1.003459,
+          "is_split_day": false
+        },
+        {
+          "date": "2021-07-22",
+          "close": 19.5939998626709,
+          "adjusted_close": 19.526458740234375,
+          "split_event": null,
+          "dividend": null,
+          "close_to_adjclose_ratio": 1.003459,
+          "is_split_day": false
+        },
+        {
+          "date": "2021-07-23",
+          "close": 19.558000564575195,
+          "adjusted_close": 19.49058723449707,
+          "split_event": null,
+          "dividend": null,
+          "close_to_adjclose_ratio": 1.003459,
+          "is_split_day": false
+        }
+      ]
+    },
+    {
+      "split_date": "2024-06-10",
+      "documented_ratio": "10:1",
+      "day_before": "2024-06-07",
+      "day_after": "2024-06-11",
+      "close_before": 120.88800048828125,
+      "close_split_day": 121.79000091552734,
+      "close_after": 120.91000366210938,
+      "adj_close_before": 120.67916870117188,
+      "adj_close_split_day": 121.5796127319336,
+      "adj_close_after": 120.71104431152344,
+      "close_to_adjclose_ratio_before": 1.00173,
+      "close_to_adjclose_ratio_after": 1.001648,
+      "ratio_of_ratios_before_over_after": 1.000082,
+      "close_pct_change_day_before_to_day_after": 0.0182,
+      "adj_close_pct_change_day_before_to_day_after": 0.0264,
+      "close_before_over_close_after": 0.999818,
+      "documented_split_multiple": 10.0,
+      "close_already_split_adjusted_for_this_split": true,
+      "window_table": [
+        {
+          "date": "2024-06-05",
+          "close": 122.44000244140625,
+          "adjusted_close": 122.22847747802734,
+          "split_event": null,
+          "dividend": null,
+          "close_to_adjclose_ratio": 1.001731,
+          "is_split_day": false
+        },
+        {
+          "date": "2024-06-06",
+          "close": 120.99800109863281,
+          "adjusted_close": 120.7889633178711,
+          "split_event": null,
+          "dividend": null,
+          "close_to_adjclose_ratio": 1.001731,
+          "is_split_day": false
+        },
+        {
+          "date": "2024-06-07",
+          "close": 120.88800048828125,
+          "adjusted_close": 120.67916870117188,
+          "split_event": null,
+          "dividend": null,
+          "close_to_adjclose_ratio": 1.00173,
+          "is_split_day": false
+        },
+        {
+          "date": "2024-06-10",
+          "close": 121.79000091552734,
+          "adjusted_close": 121.5796127319336,
+          "split_event": "10:1",
+          "dividend": null,
+          "close_to_adjclose_ratio": 1.00173,
+          "is_split_day": true
+        },
+        {
+          "date": "2024-06-11",
+          "close": 120.91000366210938,
+          "adjusted_close": 120.71104431152344,
+          "split_event": null,
+          "dividend": 0.01,
+          "close_to_adjclose_ratio": 1.001648,
+          "is_split_day": false
+        },
+        {
+          "date": "2024-06-12",
+          "close": 125.19999694824219,
+          "adjusted_close": 124.99397277832031,
+          "split_event": null,
+          "dividend": null,
+          "close_to_adjclose_ratio": 1.001648,
+          "is_split_day": false
+        },
+        {
+          "date": "2024-06-13",
+          "close": 129.61000061035156,
+          "adjusted_close": 129.39674377441406,
+          "split_event": null,
+          "dividend": null,
+          "close_to_adjclose_ratio": 1.001648,
+          "is_split_day": false
+        }
+      ]
+    }
+  ],
+  "checkpoint_series": [
+    {
+      "requested_date": "2020-01-02",
+      "actual_date": "2020-01-02",
+      "close": 5.9977498054504395,
+      "adjusted_close": 5.963805675506592,
+      "close_to_adjclose_ratio": 1.005692
+    },
+    {
+      "requested_date": "2021-01-04",
+      "actual_date": "2021-01-04",
+      "close": 13.113499641418457,
+      "adjusted_close": 13.060792922973633,
+      "close_to_adjclose_ratio": 1.004035
+    },
+    {
+      "requested_date": "2021-07-19",
+      "actual_date": "2021-07-19",
+      "close": 18.77975082397461,
+      "adjusted_close": 18.715017318725586,
+      "close_to_adjclose_ratio": 1.003459
+    },
+    {
+      "requested_date": "2021-07-20",
+      "actual_date": "2021-07-20",
+      "close": 18.61199951171875,
+      "adjusted_close": 18.547842025756836,
+      "close_to_adjclose_ratio": 1.003459
+    },
+    {
+      "requested_date": "2021-07-21",
+      "actual_date": "2021-07-21",
+      "close": 19.40999984741211,
+      "adjusted_close": 19.34309196472168,
+      "close_to_adjclose_ratio": 1.003459
+    },
+    {
+      "requested_date": "2022-01-03",
+      "actual_date": "2022-01-03",
+      "close": 30.121000289916992,
+      "adjusted_close": 30.026140213012695,
+      "close_to_adjclose_ratio": 1.003159
+    },
+    {
+      "requested_date": "2023-01-03",
+      "actual_date": "2023-01-03",
+      "close": 14.3149995803833,
+      "adjusted_close": 14.283262252807617,
+      "close_to_adjclose_ratio": 1.002222
+    },
+    {
+      "requested_date": "2024-01-02",
+      "actual_date": "2024-01-02",
+      "close": 48.167999267578125,
+      "adjusted_close": 48.08253860473633,
+      "close_to_adjclose_ratio": 1.001777
+    },
+    {
+      "requested_date": "2024-06-07",
+      "actual_date": "2024-06-07",
+      "close": 120.88800048828125,
+      "adjusted_close": 120.67916870117188,
+      "close_to_adjclose_ratio": 1.00173
+    },
+    {
+      "requested_date": "2024-06-10",
+      "actual_date": "2024-06-10",
+      "close": 121.79000091552734,
+      "adjusted_close": 121.5796127319336,
+      "close_to_adjclose_ratio": 1.00173
+    },
+    {
+      "requested_date": "2024-06-11",
+      "actual_date": "2024-06-11",
+      "close": 120.91000366210938,
+      "adjusted_close": 120.71104431152344,
+      "close_to_adjclose_ratio": 1.001648
+    },
+    {
+      "requested_date": "2025-01-02",
+      "actual_date": "2025-01-02",
+      "close": 138.30999755859375,
+      "adjusted_close": 138.1037139892578,
+      "close_to_adjclose_ratio": 1.001494
+    },
+    {
+      "requested_date": "2026-08-06",
+      "actual_date": "2026-08-06",
+      "close": 218.99000549316406,
+      "adjusted_close": 218.99000549316406,
+      "close_to_adjclose_ratio": 1.0
+    }
+  ],
+  "dividend_info": {
+    "all_dividend_dates": [
+      "2020-02-27",
+      "2020-06-04",
+      "2020-09-01",
+      "2020-12-03",
+      "2021-03-09",
+      "2021-06-09",
+      "2021-08-31",
+      "2021-12-01",
+      "2022-03-02",
+      "2022-06-08",
+      "2022-09-07",
+      "2022-11-30",
+      "2023-03-07",
+      "2023-06-07",
+      "2023-09-06",
+      "2023-12-05",
+      "2024-03-05",
+      "2024-06-11",
+      "2024-09-12",
+      "2024-12-05",
+      "2025-03-12",
+      "2025-06-11",
+      "2025-09-11",
+      "2025-12-04",
+      "2026-03-11",
+      "2026-06-04"
+    ],
+    "dividend_count": 26,
+    "example_date_used": "2022-03-02"
+  },
+  "determinations": {
+    "close_is_already_split_adjusted_retroactively": true,
+    "adj_close_additionally_reflects_dividends": true,
+    "close_based_returns_show_no_artificial_split_jump": true,
+    "adjclose_based_returns_continuous_across_splits": true
+  },
+  "look_ahead_finding": {
+    "look_ahead_present_in_close_field": true,
+    "explanation": "Yahoo's `close` field for a date in 2021 (before the 2024 split even happened) is already divided by the FUTURE 10:1 split ratio -- e.g. close=18.78 on 2021-07-19 implies the true nominal price that day was approx. 18.78 x 4 x 10 = ~$751, matching NVDA's actual pre-split trading range in mid-2021. The stored `close` value therefore encodes information (the 2024 split ratio) that did not exist yet at that point in history. This is harmless for RETURN calculations (a consistent proportional rescaling does not change percentage returns), but it means `close`/`adj_close` as returned by this endpoint must NEVER be treated as 'the nominal dollar price an investor actually paid on that historical date' for point-in-time position-sizing or dollar-based backtesting -- doing so would silently use future-split-adjusted numbers for a decision dated before that split was known."
+  },
+  "documented_splits_compared": [
+    {
+      "date": "2021-07-20",
+      "documented_ratio": "4:1",
+      "matches_previous_proof": true
+    },
+    {
+      "date": "2024-06-10",
+      "documented_ratio": "10:1",
+      "matches_previous_proof": true
+    }
+  ]
+}
