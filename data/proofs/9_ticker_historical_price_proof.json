@@ -1,0 +1,742 @@
+{
+  "status": "PASS",
+  "tickers": [
+    "ORCL",
+    "MSFT",
+    "META",
+    "NVDA",
+    "GOOGL",
+    "AMZN",
+    "MU",
+    "CRWD",
+    "PANW"
+  ],
+  "source": "Yahoo Finance historical chart API",
+  "fetch_start_date": "2020-01-01",
+  "fetch_end_date_exclusive": "2026-08-08",
+  "per_ticker": [
+    {
+      "ticker": "ORCL",
+      "fetch_status": "success",
+      "attempts": [
+        {
+          "attempt": 1,
+          "outcome": "success",
+          "status_code": 200
+        }
+      ],
+      "raw_response_path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\ORCL\\orcl_chart_raw_20260807T100954Z.json",
+      "validation": {
+        "ticker": "ORCL",
+        "status": "PASS",
+        "total_observations": 1657,
+        "first_trading_date": "2020-01-02",
+        "last_trading_date": "2026-08-06",
+        "dates_sorted": true,
+        "dates_unique": true,
+        "duplicate_dates": [],
+        "negative_price_rows": [],
+        "negative_volume_rows": [],
+        "missing_fields": [],
+        "missing_fields_count": 0,
+        "complete_ohlc_rows": 1657,
+        "ohlc_relationship_violations": [],
+        "splits_found": [],
+        "splits_count": 0,
+        "dividends_count": 27,
+        "dividend_dates": [
+          "2020-01-08",
+          "2020-04-08",
+          "2020-07-14",
+          "2020-10-07",
+          "2021-01-06",
+          "2021-04-07",
+          "2021-07-14",
+          "2021-10-08",
+          "2022-01-06",
+          "2022-04-07",
+          "2022-07-11",
+          "2022-10-11",
+          "2023-01-09",
+          "2023-04-10",
+          "2023-07-11",
+          "2023-10-11",
+          "2024-01-10",
+          "2024-04-09",
+          "2024-07-11",
+          "2024-10-10",
+          "2025-01-10",
+          "2025-04-10",
+          "2025-07-10",
+          "2025-10-09",
+          "2026-01-09",
+          "2026-04-09",
+          "2026-07-10"
+        ],
+        "close_vs_adjclose_differ_count": 1637,
+        "close_and_adjclose_kept_separate": true
+      }
+    },
+    {
+      "ticker": "MSFT",
+      "fetch_status": "success",
+      "attempts": [
+        {
+          "attempt": 1,
+          "outcome": "success",
+          "status_code": 200
+        }
+      ],
+      "raw_response_path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\MSFT\\msft_chart_raw_20260807T100956Z.json",
+      "validation": {
+        "ticker": "MSFT",
+        "status": "PASS",
+        "total_observations": 1657,
+        "first_trading_date": "2020-01-02",
+        "last_trading_date": "2026-08-06",
+        "dates_sorted": true,
+        "dates_unique": true,
+        "duplicate_dates": [],
+        "negative_price_rows": [],
+        "negative_volume_rows": [],
+        "missing_fields": [],
+        "missing_fields_count": 0,
+        "complete_ohlc_rows": 1657,
+        "ohlc_relationship_violations": [],
+        "splits_found": [],
+        "splits_count": 0,
+        "dividends_count": 26,
+        "dividend_dates": [
+          "2020-02-19",
+          "2020-05-20",
+          "2020-08-19",
+          "2020-11-18",
+          "2021-02-17",
+          "2021-05-19",
+          "2021-08-18",
+          "2021-11-17",
+          "2022-02-16",
+          "2022-05-18",
+          "2022-08-17",
+          "2022-11-16",
+          "2023-02-15",
+          "2023-05-17",
+          "2023-08-16",
+          "2023-11-15",
+          "2024-02-14",
+          "2024-05-15",
+          "2024-08-15",
+          "2024-11-21",
+          "2025-02-20",
+          "2025-05-15",
+          "2025-08-21",
+          "2025-11-20",
+          "2026-02-19",
+          "2026-05-21"
+        ],
+        "close_vs_adjclose_differ_count": 1604,
+        "close_and_adjclose_kept_separate": true
+      }
+    },
+    {
+      "ticker": "META",
+      "fetch_status": "success",
+      "attempts": [
+        {
+          "attempt": 1,
+          "outcome": "success",
+          "status_code": 200
+        }
+      ],
+      "raw_response_path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\META\\meta_chart_raw_20260807T100958Z.json",
+      "validation": {
+        "ticker": "META",
+        "status": "PASS",
+        "total_observations": 1657,
+        "first_trading_date": "2020-01-02",
+        "last_trading_date": "2026-08-06",
+        "dates_sorted": true,
+        "dates_unique": true,
+        "duplicate_dates": [],
+        "negative_price_rows": [],
+        "negative_volume_rows": [],
+        "missing_fields": [],
+        "missing_fields_count": 0,
+        "complete_ohlc_rows": 1657,
+        "ohlc_relationship_violations": [],
+        "splits_found": [],
+        "splits_count": 0,
+        "dividends_count": 10,
+        "dividend_dates": [
+          "2024-02-21",
+          "2024-06-14",
+          "2024-09-16",
+          "2024-12-16",
+          "2025-03-14",
+          "2025-06-16",
+          "2025-09-22",
+          "2025-12-15",
+          "2026-03-16",
+          "2026-06-15"
+        ],
+        "close_vs_adjclose_differ_count": 1620,
+        "close_and_adjclose_kept_separate": true
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "fetch_status": "success",
+      "attempts": [
+        {
+          "attempt": 1,
+          "outcome": "success",
+          "status_code": 200
+        }
+      ],
+      "raw_response_path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\NVDA\\nvda_chart_raw_20260807T100959Z.json",
+      "validation": {
+        "ticker": "NVDA",
+        "status": "PASS",
+        "total_observations": 1657,
+        "first_trading_date": "2020-01-02",
+        "last_trading_date": "2026-08-06",
+        "dates_sorted": true,
+        "dates_unique": true,
+        "duplicate_dates": [],
+        "negative_price_rows": [],
+        "negative_volume_rows": [],
+        "missing_fields": [],
+        "missing_fields_count": 0,
+        "complete_ohlc_rows": 1657,
+        "ohlc_relationship_violations": [],
+        "splits_found": [
+          {
+            "date": "2021-07-20",
+            "numerator": 4.0,
+            "denominator": 1.0,
+            "split_ratio": "4:1"
+          },
+          {
+            "date": "2024-06-10",
+            "numerator": 10.0,
+            "denominator": 1.0,
+            "split_ratio": "10:1"
+          }
+        ],
+        "splits_count": 2,
+        "dividends_count": 26,
+        "dividend_dates": [
+          "2020-02-27",
+          "2020-06-04",
+          "2020-09-01",
+          "2020-12-03",
+          "2021-03-09",
+          "2021-06-09",
+          "2021-08-31",
+          "2021-12-01",
+          "2022-03-02",
+          "2022-06-08",
+          "2022-09-07",
+          "2022-11-30",
+          "2023-03-07",
+          "2023-06-07",
+          "2023-09-06",
+          "2023-12-05",
+          "2024-03-05",
+          "2024-06-11",
+          "2024-09-12",
+          "2024-12-05",
+          "2025-03-12",
+          "2025-06-11",
+          "2025-09-11",
+          "2025-12-04",
+          "2026-03-11",
+          "2026-06-04"
+        ],
+        "close_vs_adjclose_differ_count": 1613,
+        "close_and_adjclose_kept_separate": true,
+        "nvda_known_splits_reproduced": true,
+        "nvda_known_splits_check": [
+          {
+            "year": 2021,
+            "numerator": 4.0,
+            "denominator": 1.0,
+            "found": true
+          },
+          {
+            "year": 2024,
+            "numerator": 10.0,
+            "denominator": 1.0,
+            "found": true
+          }
+        ]
+      }
+    },
+    {
+      "ticker": "GOOGL",
+      "fetch_status": "success",
+      "attempts": [
+        {
+          "attempt": 1,
+          "outcome": "success",
+          "status_code": 200
+        }
+      ],
+      "raw_response_path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\GOOGL\\googl_chart_raw_20260807T101001Z.json",
+      "validation": {
+        "ticker": "GOOGL",
+        "status": "PASS",
+        "total_observations": 1657,
+        "first_trading_date": "2020-01-02",
+        "last_trading_date": "2026-08-06",
+        "dates_sorted": true,
+        "dates_unique": true,
+        "duplicate_dates": [],
+        "negative_price_rows": [],
+        "negative_volume_rows": [],
+        "missing_fields": [],
+        "missing_fields_count": 0,
+        "complete_ohlc_rows": 1657,
+        "ohlc_relationship_violations": [],
+        "splits_found": [
+          {
+            "date": "2022-07-18",
+            "numerator": 20.0,
+            "denominator": 1.0,
+            "split_ratio": "20:1"
+          }
+        ],
+        "splits_count": 1,
+        "dividends_count": 9,
+        "dividend_dates": [
+          "2024-06-10",
+          "2024-09-09",
+          "2024-12-09",
+          "2025-03-10",
+          "2025-06-09",
+          "2025-09-08",
+          "2025-12-08",
+          "2026-03-09",
+          "2026-06-08"
+        ],
+        "close_vs_adjclose_differ_count": 1615,
+        "close_and_adjclose_kept_separate": true
+      }
+    },
+    {
+      "ticker": "AMZN",
+      "fetch_status": "success",
+      "attempts": [
+        {
+          "attempt": 1,
+          "outcome": "success",
+          "status_code": 200
+        }
+      ],
+      "raw_response_path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\AMZN\\amzn_chart_raw_20260807T101003Z.json",
+      "validation": {
+        "ticker": "AMZN",
+        "status": "PASS",
+        "total_observations": 1657,
+        "first_trading_date": "2020-01-02",
+        "last_trading_date": "2026-08-06",
+        "dates_sorted": true,
+        "dates_unique": true,
+        "duplicate_dates": [],
+        "negative_price_rows": [],
+        "negative_volume_rows": [],
+        "missing_fields": [],
+        "missing_fields_count": 0,
+        "complete_ohlc_rows": 1657,
+        "ohlc_relationship_violations": [],
+        "splits_found": [
+          {
+            "date": "2022-06-06",
+            "numerator": 20.0,
+            "denominator": 1.0,
+            "split_ratio": "20:1"
+          }
+        ],
+        "splits_count": 1,
+        "dividends_count": 0,
+        "dividend_dates": [],
+        "close_vs_adjclose_differ_count": 0,
+        "close_and_adjclose_kept_separate": true
+      }
+    },
+    {
+      "ticker": "MU",
+      "fetch_status": "success",
+      "attempts": [
+        {
+          "attempt": 1,
+          "outcome": "success",
+          "status_code": 200
+        }
+      ],
+      "raw_response_path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\MU\\mu_chart_raw_20260807T101005Z.json",
+      "validation": {
+        "ticker": "MU",
+        "status": "PASS",
+        "total_observations": 1657,
+        "first_trading_date": "2020-01-02",
+        "last_trading_date": "2026-08-06",
+        "dates_sorted": true,
+        "dates_unique": true,
+        "duplicate_dates": [],
+        "negative_price_rows": [],
+        "negative_volume_rows": [],
+        "missing_fields": [],
+        "missing_fields_count": 0,
+        "complete_ohlc_rows": 1657,
+        "ohlc_relationship_violations": [],
+        "splits_found": [],
+        "splits_count": 0,
+        "dividends_count": 20,
+        "dividend_dates": [
+          "2021-09-30",
+          "2021-12-31",
+          "2022-04-08",
+          "2022-07-08",
+          "2022-10-07",
+          "2022-12-30",
+          "2023-04-06",
+          "2023-07-07",
+          "2023-10-06",
+          "2023-12-29",
+          "2024-03-28",
+          "2024-07-08",
+          "2024-10-07",
+          "2024-12-30",
+          "2025-03-31",
+          "2025-07-07",
+          "2025-10-03",
+          "2025-12-29",
+          "2026-03-30",
+          "2026-07-06"
+        ],
+        "close_vs_adjclose_differ_count": 1633,
+        "close_and_adjclose_kept_separate": true
+      }
+    },
+    {
+      "ticker": "CRWD",
+      "fetch_status": "success",
+      "attempts": [
+        {
+          "attempt": 1,
+          "outcome": "success",
+          "status_code": 200
+        }
+      ],
+      "raw_response_path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\CRWD\\crwd_chart_raw_20260807T101007Z.json",
+      "validation": {
+        "ticker": "CRWD",
+        "status": "PASS",
+        "total_observations": 1657,
+        "first_trading_date": "2020-01-02",
+        "last_trading_date": "2026-08-06",
+        "dates_sorted": true,
+        "dates_unique": true,
+        "duplicate_dates": [],
+        "negative_price_rows": [],
+        "negative_volume_rows": [],
+        "missing_fields": [],
+        "missing_fields_count": 0,
+        "complete_ohlc_rows": 1657,
+        "ohlc_relationship_violations": [],
+        "splits_found": [
+          {
+            "date": "2026-07-02",
+            "numerator": 4.0,
+            "denominator": 1.0,
+            "split_ratio": "4:1"
+          }
+        ],
+        "splits_count": 1,
+        "dividends_count": 0,
+        "dividend_dates": [],
+        "close_vs_adjclose_differ_count": 0,
+        "close_and_adjclose_kept_separate": true
+      }
+    },
+    {
+      "ticker": "PANW",
+      "fetch_status": "success",
+      "attempts": [
+        {
+          "attempt": 1,
+          "outcome": "success",
+          "status_code": 200
+        }
+      ],
+      "raw_response_path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\PANW\\panw_chart_raw_20260807T101009Z.json",
+      "validation": {
+        "ticker": "PANW",
+        "status": "PASS",
+        "total_observations": 1657,
+        "first_trading_date": "2020-01-02",
+        "last_trading_date": "2026-08-06",
+        "dates_sorted": true,
+        "dates_unique": true,
+        "duplicate_dates": [],
+        "negative_price_rows": [],
+        "negative_volume_rows": [],
+        "missing_fields": [],
+        "missing_fields_count": 0,
+        "complete_ohlc_rows": 1657,
+        "ohlc_relationship_violations": [],
+        "splits_found": [
+          {
+            "date": "2022-09-14",
+            "numerator": 3.0,
+            "denominator": 1.0,
+            "split_ratio": "3:1"
+          },
+          {
+            "date": "2024-12-16",
+            "numerator": 2.0,
+            "denominator": 1.0,
+            "split_ratio": "2:1"
+          }
+        ],
+        "splits_count": 2,
+        "dividends_count": 0,
+        "dividend_dates": [],
+        "close_vs_adjclose_differ_count": 0,
+        "close_and_adjclose_kept_separate": true
+      }
+    }
+  ],
+  "cross_company_validation": {
+    "tickers_attempted": 9,
+    "tickers_succeeded": 9,
+    "observation_counts": {
+      "ORCL": 1657,
+      "MSFT": 1657,
+      "META": 1657,
+      "NVDA": 1657,
+      "GOOGL": 1657,
+      "AMZN": 1657,
+      "MU": 1657,
+      "CRWD": 1657,
+      "PANW": 1657
+    },
+    "first_trading_dates": {
+      "ORCL": "2020-01-02",
+      "MSFT": "2020-01-02",
+      "META": "2020-01-02",
+      "NVDA": "2020-01-02",
+      "GOOGL": "2020-01-02",
+      "AMZN": "2020-01-02",
+      "MU": "2020-01-02",
+      "CRWD": "2020-01-02",
+      "PANW": "2020-01-02"
+    },
+    "last_trading_dates": {
+      "ORCL": "2026-08-06",
+      "MSFT": "2026-08-06",
+      "META": "2026-08-06",
+      "NVDA": "2026-08-06",
+      "GOOGL": "2026-08-06",
+      "AMZN": "2026-08-06",
+      "MU": "2026-08-06",
+      "CRWD": "2026-08-06",
+      "PANW": "2026-08-06"
+    },
+    "flags": [],
+    "clean": true
+  },
+  "split_semantics_by_ticker": [
+    {
+      "ticker": "ORCL",
+      "splits_in_period": 0,
+      "test_possible": false,
+      "note": "No split-semantics test possible during available period.",
+      "results": []
+    },
+    {
+      "ticker": "MSFT",
+      "splits_in_period": 0,
+      "test_possible": false,
+      "note": "No split-semantics test possible during available period.",
+      "results": []
+    },
+    {
+      "ticker": "META",
+      "splits_in_period": 0,
+      "test_possible": false,
+      "note": "No split-semantics test possible during available period.",
+      "results": []
+    },
+    {
+      "ticker": "NVDA",
+      "splits_in_period": 2,
+      "test_possible": true,
+      "results": [
+        {
+          "split_date": "2021-07-20",
+          "split_ratio": "4:1",
+          "numerator": 4.0,
+          "denominator": 1.0,
+          "day_before": "2021-07-19",
+          "day_after": "2021-07-21",
+          "close_before": 18.77975082397461,
+          "close_after": 19.40999984741211,
+          "adj_close_before": 18.715017318725586,
+          "adj_close_after": 19.343093872070312,
+          "close_to_adjclose_ratio_before": 1.003459,
+          "close_to_adjclose_ratio_after": 1.003459,
+          "close_pct_change_before_to_after": 3.356,
+          "close_already_split_adjusted": true,
+          "consistent_with_nvda_finding": true
+        },
+        {
+          "split_date": "2024-06-10",
+          "split_ratio": "10:1",
+          "numerator": 10.0,
+          "denominator": 1.0,
+          "day_before": "2024-06-07",
+          "day_after": "2024-06-11",
+          "close_before": 120.88800048828125,
+          "close_after": 120.91000366210938,
+          "adj_close_before": 120.6791763305664,
+          "adj_close_after": 120.7110595703125,
+          "close_to_adjclose_ratio_before": 1.00173,
+          "close_to_adjclose_ratio_after": 1.001648,
+          "close_pct_change_before_to_after": 0.0182,
+          "close_already_split_adjusted": true,
+          "consistent_with_nvda_finding": true
+        }
+      ],
+      "all_tested_splits_show_close_already_adjusted": true
+    },
+    {
+      "ticker": "GOOGL",
+      "splits_in_period": 1,
+      "test_possible": true,
+      "results": [
+        {
+          "split_date": "2022-07-18",
+          "split_ratio": "20:1",
+          "numerator": 20.0,
+          "denominator": 1.0,
+          "day_before": "2022-07-15",
+          "day_after": "2022-07-19",
+          "close_before": 111.77749633789062,
+          "close_after": 113.80999755859375,
+          "adj_close_before": 110.79505157470703,
+          "adj_close_after": 112.80967712402344,
+          "close_to_adjclose_ratio_before": 1.008867,
+          "close_to_adjclose_ratio_after": 1.008867,
+          "close_pct_change_before_to_after": 1.8183,
+          "close_already_split_adjusted": true,
+          "consistent_with_nvda_finding": true
+        }
+      ],
+      "all_tested_splits_show_close_already_adjusted": true
+    },
+    {
+      "ticker": "AMZN",
+      "splits_in_period": 1,
+      "test_possible": true,
+      "results": [
+        {
+          "split_date": "2022-06-06",
+          "split_ratio": "20:1",
+          "numerator": 20.0,
+          "denominator": 1.0,
+          "day_before": "2022-06-03",
+          "day_after": "2022-06-07",
+          "close_before": 122.3499984741211,
+          "close_after": 123.0,
+          "adj_close_before": 122.3499984741211,
+          "adj_close_after": 123.0,
+          "close_to_adjclose_ratio_before": 1.0,
+          "close_to_adjclose_ratio_after": 1.0,
+          "close_pct_change_before_to_after": 0.5313,
+          "close_already_split_adjusted": true,
+          "consistent_with_nvda_finding": true
+        }
+      ],
+      "all_tested_splits_show_close_already_adjusted": true
+    },
+    {
+      "ticker": "MU",
+      "splits_in_period": 0,
+      "test_possible": false,
+      "note": "No split-semantics test possible during available period.",
+      "results": []
+    },
+    {
+      "ticker": "CRWD",
+      "splits_in_period": 1,
+      "test_possible": true,
+      "results": [
+        {
+          "split_date": "2026-07-02",
+          "split_ratio": "4:1",
+          "numerator": 4.0,
+          "denominator": 1.0,
+          "day_before": "2026-07-01",
+          "day_after": "2026-07-06",
+          "close_before": 193.18499755859375,
+          "close_after": 199.3800048828125,
+          "adj_close_before": 193.18499755859375,
+          "adj_close_after": 199.3800048828125,
+          "close_to_adjclose_ratio_before": 1.0,
+          "close_to_adjclose_ratio_after": 1.0,
+          "close_pct_change_before_to_after": 3.2068,
+          "close_already_split_adjusted": true,
+          "consistent_with_nvda_finding": true
+        }
+      ],
+      "all_tested_splits_show_close_already_adjusted": true
+    },
+    {
+      "ticker": "PANW",
+      "splits_in_period": 2,
+      "test_possible": true,
+      "results": [
+        {
+          "split_date": "2022-09-14",
+          "split_ratio": "3:1",
+          "numerator": 3.0,
+          "denominator": 1.0,
+          "day_before": "2022-09-13",
+          "day_after": "2022-09-15",
+          "close_before": 91.4800033569336,
+          "close_after": 89.80999755859375,
+          "adj_close_before": 91.4800033569336,
+          "adj_close_after": 89.80999755859375,
+          "close_to_adjclose_ratio_before": 1.0,
+          "close_to_adjclose_ratio_after": 1.0,
+          "close_pct_change_before_to_after": -1.8255,
+          "close_already_split_adjusted": true,
+          "consistent_with_nvda_finding": true
+        },
+        {
+          "split_date": "2024-12-16",
+          "split_ratio": "2:1",
+          "numerator": 2.0,
+          "denominator": 1.0,
+          "day_before": "2024-12-13",
+          "day_after": "2024-12-17",
+          "close_before": 196.55999755859375,
+          "close_after": 201.24000549316406,
+          "adj_close_before": 196.55999755859375,
+          "adj_close_after": 201.24000549316406,
+          "close_to_adjclose_ratio_before": 1.0,
+          "close_to_adjclose_ratio_after": 1.0,
+          "close_pct_change_before_to_after": 2.381,
+          "close_already_split_adjusted": true,
+          "consistent_with_nvda_finding": true
+        }
+      ],
+      "all_tested_splits_show_close_already_adjusted": true
+    }
+  ],
+  "note_on_price_methodology": "close and adjusted_close are preserved as separate fields for every ticker. No final production price-methodology decision has been made in this proof. Where close was found to be already split-adjusted at the source, it is suitable for return calculations across split boundaries but must not be treated as the literal historical dollar price known to an investor before a later split occurred (look-ahead risk for nominal-price use, not for percentage-return use).",
+  "runtime_seconds": 15.67,
+  "generated_at_utc": "2026-08-07T10:10:09.128Z"
+}
