@@ -524,7 +524,7 @@
     "new_msft_observation_count": 45,
     "mismatches": []
   },
-  "expected_production_table_ddl": "CREATE TABLE derived_metric_results (\n    ticker                  VARCHAR NOT NULL,\n    frequency               VARCHAR NOT NULL,\n    fiscal_year_end         DATE NOT NULL,\n    fiscal_year             INTEGER NOT NULL,\n    fiscal_quarter          TINYINT,\n    derived_metric          VARCHAR NOT NULL,\n    value                   DECIMAL(38,18) NOT NULL,\n    availability_date       DATE NOT NULL,\n    formula                 VARCHAR NOT NULL,\n    source_periods          JSON NOT NULL,\n    source_run_ids          JSON NOT NULL,\n    source_accessions       JSON NOT NULL,\n    reconciliation_status   VARCHAR NOT NULL,\n    engine_version          VARCHAR NOT NULL,\n    created_at              TIMESTAMP NOT NULL,\n    PRIMARY KEY (ticker, frequency, fiscal_year_end, fiscal_quarter, derived_metric)\n)",
+  "expected_production_table_ddl": "CREATE TABLE derived_metric_results (\n    ticker                  VARCHAR NOT NULL,\n    frequency               VARCHAR NOT NULL,\n    fiscal_year_end         DATE NOT NULL,\n    fiscal_year             INTEGER NOT NULL,\n    fiscal_quarter          TINYINT,\n    fiscal_quarter_key      TINYINT NOT NULL,\n    derived_metric          VARCHAR NOT NULL,\n    value                   DECIMAL(38,18) NOT NULL,\n    availability_date       DATE NOT NULL,\n    formula                 VARCHAR NOT NULL,\n    source_periods          JSON NOT NULL,\n    source_run_ids          JSON NOT NULL,\n    source_accessions       JSON NOT NULL,\n    reconciliation_status   VARCHAR NOT NULL,\n    engine_version          VARCHAR NOT NULL,\n    created_at              TIMESTAMP NOT NULL,\n    CONSTRAINT chk_frequency_values\n        CHECK (frequency IN ('annual', 'quarterly')),\n    CONSTRAINT chk_annual_quarter_shape\n        CHECK (frequency <> 'annual' OR (fiscal_quarter IS NULL AND fiscal_quarter_key = 0)),\n    CONSTRAINT chk_quarterly_quarter_shape\n        CHECK (frequency <> 'quarterly' OR (\n            fiscal_quarter IS NOT NULL AND fiscal_quarter BETWEEN 1 AND 4 AND fiscal_quarter_key = fiscal_quarter\n        )),\n    CONSTRAINT chk_derived_metric_values\n        CHECK (derived_metric IN ('operating_margin', 'revenue_yoy_growth')),\n    PRIMARY KEY (ticker, frequency, fiscal_year_end, fiscal_quarter_key, derived_metric)\n)",
   "database_sha256_before": "2a37d47b2257a34545196a9b4435f493cb88611215afb3f35a766d21fa325773",
   "database_sha256_after": "2a37d47b2257a34545196a9b4435f493cb88611215afb3f35a766d21fa325773",
   "annual_v1_sha256_before": "e655671e36298ce2297b8c86077a8f0559998b81245d1850004da36858e9f814",
@@ -543,6 +543,6 @@
   "backup_performed": false,
   "archive_created": false,
   "pid_lock_acquired": false,
-  "runtime_seconds": 0.66,
-  "checked_at": "2026-08-06T13:30:14.056Z"
+  "runtime_seconds": 0.56,
+  "checked_at": "2026-08-07T07:59:50.066Z"
 }

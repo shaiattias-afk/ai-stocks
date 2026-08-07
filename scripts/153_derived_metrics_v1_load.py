@@ -84,7 +84,17 @@ APPROVED_ANNUAL_STATUSES = ("PASS", "PASS_MATURITY_BASIS", "PASS_NORMALIZED_TAX"
 APPROVED_QUARTERLY_STATUSES = ("PASS", "PASS_ROUNDING_TOLERANCE")
 QUARTERS = ("Q1", "Q2", "Q3", "Q4")
 QUARTER_TO_INT = {"Q1": 1, "Q2": 2, "Q3": 3, "Q4": 4}
+ANNUAL_FISCAL_QUARTER_KEY = 0  # sentinel used only inside the PRIMARY KEY -- fiscal_quarter itself stays NULL for annual rows
 
+# Schema note (fix for the fiscal_quarter / PRIMARY KEY defect found by the
+# first --execute attempt): a column that is part of a PRIMARY KEY is
+# implicitly NOT NULL in DuckDB (and standard SQL), regardless of its own
+# column-level nullability declaration. `fiscal_quarter` must stay NULL for
+# annual rows (per the required semantics), so it can no longer be a PK
+# member. `fiscal_quarter_key` is a NOT NULL surrogate used ONLY for
+# uniqueness (0 for annual, 1-4 for quarterly, always in lockstep with
+# `fiscal_quarter` via the CHECK constraints below) -- it carries no new
+# information and `fiscal_quarter` remains the column callers should read.
 DERIVED_METRIC_RESULTS_DDL = """
 CREATE TABLE derived_metric_results (
     ticker                  VARCHAR NOT NULL,
@@ -92,6 +102,7 @@ CREATE TABLE derived_metric_results (
     fiscal_year_end         DATE NOT NULL,
     fiscal_year             INTEGER NOT NULL,
     fiscal_quarter          TINYINT,
+    fiscal_quarter_key      TINYINT NOT NULL,
     derived_metric          VARCHAR NOT NULL,
     value                   DECIMAL(38,18) NOT NULL,
     availability_date       DATE NOT NULL,
@@ -102,9 +113,24 @@ CREATE TABLE derived_metric_results (
     reconciliation_status   VARCHAR NOT NULL,
     engine_version          VARCHAR NOT NULL,
     created_at              TIMESTAMP NOT NULL,
-    PRIMARY KEY (ticker, frequency, fiscal_year_end, fiscal_quarter, derived_metric)
+    CONSTRAINT chk_frequency_values
+        CHECK (frequency IN ('annual', 'quarterly')),
+    CONSTRAINT chk_annual_quarter_shape
+        CHECK (frequency <> 'annual' OR (fiscal_quarter IS NULL AND fiscal_quarter_key = 0)),
+    CONSTRAINT chk_quarterly_quarter_shape
+        CHECK (frequency <> 'quarterly' OR (
+            fiscal_quarter IS NOT NULL AND fiscal_quarter BETWEEN 1 AND 4 AND fiscal_quarter_key = fiscal_quarter
+        )),
+    CONSTRAINT chk_derived_metric_values
+        CHECK (derived_metric IN ('operating_margin', 'revenue_yoy_growth')),
+    PRIMARY KEY (ticker, frequency, fiscal_year_end, fiscal_quarter_key, derived_metric)
 )
 """
+
+
+def fiscal_quarter_key_for(fiscal_quarter_label: str | None) -> int:
+    """0 for annual (fiscal_quarter_label is None), 1-4 for quarterly."""
+    return QUARTER_TO_INT[fiscal_quarter_label] if fiscal_quarter_label else ANNUAL_FISCAL_QUARTER_KEY
 
 
 # =====================================================================
@@ -670,15 +696,16 @@ def compare_msft_against_proof(observations: list[dict]) -> dict:
 # =====================================================================
 
 def write_preview_csv(observations: list[dict]) -> None:
-    columns = ["ticker", "frequency", "fiscal_year_end", "fiscal_year", "fiscal_quarter", "derived_metric",
-               "value", "availability_date", "formula", "source_periods", "source_run_ids", "source_accessions",
-               "reconciliation_status", "engine_version", "validation_status"]
+    columns = ["ticker", "frequency", "fiscal_year_end", "fiscal_year", "fiscal_quarter", "fiscal_quarter_key",
+               "derived_metric", "value", "availability_date", "formula", "source_periods", "source_run_ids",
+               "source_accessions", "reconciliation_status", "engine_version", "validation_status"]
     with PREVIEW_CSV_PATH.open("w", newline="", encoding="utf-8-sig") as handle:
         writer = csv.writer(handle)
         writer.writerow(columns)
         for o in sorted(observations, key=lambda x: (x["ticker"], x["frequency"], x["fiscal_year_end"], x["fiscal_quarter"] or "", x["derived_metric"])):
             writer.writerow([
                 o["ticker"], o["frequency"], o["fiscal_year_end"], o["fiscal_year"], o["fiscal_quarter"] or "",
+                fiscal_quarter_key_for(o["fiscal_quarter"]),
                 o["derived_metric"], str(quantize_18(o["value"])), o["availability_date"], o["formula"],
                 ";".join(o["source_periods"]), ";".join(o["source_run_ids"]), ";".join(o["source_accessions"]),
                 "PASS", ENGINE_VERSION, o["validation_status"],
@@ -807,9 +834,10 @@ def run_execute() -> int:
             created_at = datetime.now(timezone.utc).replace(tzinfo=None)
             for o in dataset["observations"]:
                 connection.execute(
-                    "INSERT INTO derived_metric_results VALUES (?,?,?,?,?,?,?,?,?,?::JSON,?::JSON,?::JSON,?,?,?)",
+                    "INSERT INTO derived_metric_results VALUES (?,?,?,?,?,?,?,?,?,?,?::JSON,?::JSON,?::JSON,?,?,?)",
                     [o["ticker"], o["frequency"], to_date(date.fromisoformat(o["fiscal_year_end"])), o["fiscal_year"],
-                     QUARTER_TO_INT.get(o["fiscal_quarter"]) if o["fiscal_quarter"] else None, o["derived_metric"],
+                     QUARTER_TO_INT.get(o["fiscal_quarter"]) if o["fiscal_quarter"] else None,
+                     fiscal_quarter_key_for(o["fiscal_quarter"]), o["derived_metric"],
                      quantize_18(o["value"]), date.fromisoformat(o["availability_date"]), o["formula"],
                      json.dumps(o["source_periods"]), json.dumps(o["source_run_ids"]), json.dumps(o["source_accessions"]),
                      "PASS", ENGINE_VERSION, created_at],
@@ -819,7 +847,7 @@ def run_execute() -> int:
             if committed_count != len(dataset["observations"]):
                 raise RuntimeError(f"committed row count {committed_count} != expected {len(dataset['observations'])}")
             dup = connection.execute(
-                "SELECT COUNT(*) FROM (SELECT ticker, frequency, fiscal_year_end, fiscal_quarter, derived_metric, COUNT(*) c "
+                "SELECT COUNT(*) FROM (SELECT ticker, frequency, fiscal_year_end, fiscal_quarter_key, derived_metric, COUNT(*) c "
                 "FROM derived_metric_results GROUP BY 1,2,3,4,5 HAVING COUNT(*) > 1)"
             ).fetchone()[0]
             if dup:

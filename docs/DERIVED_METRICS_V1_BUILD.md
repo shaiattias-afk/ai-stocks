@@ -8,13 +8,100 @@ for exactly 2 metrics (`operating_margin`, `revenue_yoy_growth`) at
 only** — `--execute` was never invoked, per explicit instruction. No
 production data was changed, no table was created.
 
-## Check-only run — PASS
+## Schema fix: `fiscal_quarter` / `PRIMARY KEY` defect (this update)
+
+The first real `--execute` attempt failed with `Constraint Error: NOT
+NULL constraint failed: derived_metric_results.fiscal_quarter` (see
+`docs/LAST_CLAUDE_REPORT.md`'s prior read-only verification — production
+was proven unchanged, transaction rolled back cleanly). Root cause: a
+column that is part of a `PRIMARY KEY` is implicitly `NOT NULL` in
+DuckDB regardless of its own column-level declaration, but the schema
+requires `fiscal_quarter IS NULL` for every annual row.
+
+**Exact schema change** (`scripts/153_derived_metrics_v1_load.py`,
+`DERIVED_METRIC_RESULTS_DDL`):
+
+```sql
+CREATE TABLE derived_metric_results (
+    ticker                  VARCHAR NOT NULL,
+    frequency               VARCHAR NOT NULL,
+    fiscal_year_end         DATE NOT NULL,
+    fiscal_year             INTEGER NOT NULL,
+    fiscal_quarter          TINYINT,
+    fiscal_quarter_key      TINYINT NOT NULL,
+    derived_metric          VARCHAR NOT NULL,
+    value                   DECIMAL(38,18) NOT NULL,
+    availability_date       DATE NOT NULL,
+    formula                 VARCHAR NOT NULL,
+    source_periods          JSON NOT NULL,
+    source_run_ids          JSON NOT NULL,
+    source_accessions       JSON NOT NULL,
+    reconciliation_status   VARCHAR NOT NULL,
+    engine_version          VARCHAR NOT NULL,
+    created_at              TIMESTAMP NOT NULL,
+    CONSTRAINT chk_frequency_values
+        CHECK (frequency IN ('annual', 'quarterly')),
+    CONSTRAINT chk_annual_quarter_shape
+        CHECK (frequency <> 'annual' OR (fiscal_quarter IS NULL AND fiscal_quarter_key = 0)),
+    CONSTRAINT chk_quarterly_quarter_shape
+        CHECK (frequency <> 'quarterly' OR (
+            fiscal_quarter IS NOT NULL AND fiscal_quarter BETWEEN 1 AND 4 AND fiscal_quarter_key = fiscal_quarter
+        )),
+    CONSTRAINT chk_derived_metric_values
+        CHECK (derived_metric IN ('operating_margin', 'revenue_yoy_growth')),
+    PRIMARY KEY (ticker, frequency, fiscal_year_end, fiscal_quarter_key, derived_metric)
+)
+```
+
+`fiscal_quarter_key` is a new `NOT NULL` surrogate column used only
+inside the `PRIMARY KEY`: `0` for annual rows, `1`–`4` (mirroring
+`fiscal_quarter`) for quarterly rows. `fiscal_quarter` itself keeps its
+original semantics (`NULL` for annual, `1`–`4` for quarterly) and
+remains the column callers should read. No new derived metric, no
+calculation-formula change, no ticker- or year-specific logic.
+
+**In-memory DuckDB schema test — 13/13 PASS** (`:memory:` only; no file
+on disk, no production database opened at all):
+
+| Case | Expected | Result |
+|---|---|---|
+| Annual row, `fiscal_quarter=NULL`, `fiscal_quarter_key=0` | inserts | ✓ PASS |
+| Q1 / Q2 / Q3 / Q4 rows | insert | ✓ PASS (4/4) |
+| Duplicate derived key | rejected | ✓ PASS (`PRIMARY KEY` violation) |
+| Annual row with `fiscal_quarter_key != 0` | rejected | ✓ PASS (`chk_annual_quarter_shape`) |
+| Quarterly row with `fiscal_quarter = NULL` | rejected | ✓ PASS (`chk_quarterly_quarter_shape`) — **caught a real defect in the first draft of this same constraint**, see below |
+| Quarterly row, `fiscal_quarter_key != fiscal_quarter` | rejected | ✓ PASS (`chk_quarterly_quarter_shape`) |
+| Quarterly row, quarter = 5 (outside 1–4) | rejected | ✓ PASS (`chk_quarterly_quarter_shape`) |
+| Quarterly row, quarter = 0 (outside 1–4) | rejected | ✓ PASS (`chk_quarterly_quarter_shape`) |
+| Invalid `frequency` value | rejected | ✓ PASS (`chk_frequency_values`) |
+| Invalid `derived_metric` value | rejected | ✓ PASS (`chk_derived_metric_values`) |
+
+**One additional defect found and fixed during this same in-memory
+test, before `--check-only` was ever run**: the first draft of
+`chk_quarterly_quarter_shape` used `fiscal_quarter BETWEEN 1 AND 4`
+without an explicit `IS NOT NULL` guard. In SQL's three-valued logic,
+`NULL BETWEEN 1 AND 4` evaluates to `NULL` (not `FALSE`), and a `CHECK`
+constraint only **rejects** a row when its expression evaluates to
+`FALSE` — `NULL` is treated as satisfied. A quarterly row with
+`fiscal_quarter = NULL` therefore silently passed the first draft's
+constraint. The in-memory test's "quarterly row with NULL fiscal_quarter
+is rejected" case caught this immediately (`FAIL` on the first run);
+the constraint was corrected to
+`fiscal_quarter IS NOT NULL AND fiscal_quarter BETWEEN 1 AND 4 AND ...`,
+and the full 13-case suite was re-run and passed cleanly.
+
+**Post-fix `--check-only`**: **PASS, runtime 0.56s** — see updated
+results below. `data/derived_metrics_v1_preview.csv` now includes the
+new `fiscal_quarter_key` column for transparency (0 for every annual
+row, 1–4 for every quarterly row, matching the schema exactly).
+
+## Check-only run (post-fix) — PASS
 
 ```
 .\.venv\Scripts\python.exe .\scripts\153_derived_metrics_v1_load.py --check-only
 ```
 
-**Result: PASS. Runtime: 0.66s** (well under the 2-minute expectation).
+**Result: PASS. Runtime: 0.56s** (well under the 2-minute expectation).
 
 ## Source periods found, per ticker
 
@@ -96,7 +183,7 @@ contains "future-data violation") and never emitted. **0 such rejections
 occurred across all 9 tickers** — every ticker's frozen data is already
 chronologically well-ordered.
 
-## Exact database schema (created only during `--execute`, not run here)
+## Exact database schema (corrected; created only during `--execute`, not run here)
 
 ```sql
 CREATE TABLE derived_metric_results (
@@ -105,6 +192,7 @@ CREATE TABLE derived_metric_results (
     fiscal_year_end         DATE NOT NULL,
     fiscal_year             INTEGER NOT NULL,
     fiscal_quarter          TINYINT,
+    fiscal_quarter_key      TINYINT NOT NULL,
     derived_metric          VARCHAR NOT NULL,
     value                   DECIMAL(38,18) NOT NULL,
     availability_date       DATE NOT NULL,
@@ -115,13 +203,24 @@ CREATE TABLE derived_metric_results (
     reconciliation_status   VARCHAR NOT NULL,
     engine_version          VARCHAR NOT NULL,
     created_at              TIMESTAMP NOT NULL,
-    PRIMARY KEY (ticker, frequency, fiscal_year_end, fiscal_quarter, derived_metric)
+    CONSTRAINT chk_frequency_values
+        CHECK (frequency IN ('annual', 'quarterly')),
+    CONSTRAINT chk_annual_quarter_shape
+        CHECK (frequency <> 'annual' OR (fiscal_quarter IS NULL AND fiscal_quarter_key = 0)),
+    CONSTRAINT chk_quarterly_quarter_shape
+        CHECK (frequency <> 'quarterly' OR (
+            fiscal_quarter IS NOT NULL AND fiscal_quarter BETWEEN 1 AND 4 AND fiscal_quarter_key = fiscal_quarter
+        )),
+    CONSTRAINT chk_derived_metric_values
+        CHECK (derived_metric IN ('operating_margin', 'revenue_yoy_growth')),
+    PRIMARY KEY (ticker, frequency, fiscal_year_end, fiscal_quarter_key, derived_metric)
 );
 ```
 
-- `frequency` is exactly `'annual'` or `'quarterly'` for every row.
-- `fiscal_quarter` is `NULL` for all 90 annual rows, `1`/`2`/`3`/`4` for all 315 quarterly rows.
-- `derived_metric` is exactly `'operating_margin'` or `'revenue_yoy_growth'` for every row.
+- `frequency` is exactly `'annual'` or `'quarterly'` for every row (`CHECK`-enforced).
+- `fiscal_quarter` is `NULL` for all 90 annual rows, `1`/`2`/`3`/`4` for all 315 quarterly rows — this is the column callers should read; its semantics are unchanged from the original design.
+- `fiscal_quarter_key` (new) is a `NOT NULL` surrogate used only inside the `PRIMARY KEY`: `0` for annual rows, `1`–`4` (always equal to `fiscal_quarter`) for quarterly rows — `CHECK`-enforced to always stay in lockstep with `fiscal_quarter`, so it carries no independent information.
+- `derived_metric` is exactly `'operating_margin'` or `'revenue_yoy_growth'` for every row (`CHECK`-enforced).
 - `engine_version` is exactly `'DERIVED_METRICS_ENGINE_V1'` for every row.
 - `value` is quantized to `DECIMAL(38,18)` (rounded from full-precision `Decimal` at insert time).
 - Because `value` is `NOT NULL`, genuinely unresolved combinations are
@@ -153,21 +252,26 @@ the script's own self-report and independent filesystem verification
 `data/derived_metrics_v1_release_manifest.json`, no new file in
 `data/database/backups/`).
 
-## Files created
-- `scripts/153_derived_metrics_v1_load.py` (new — the only new script)
-- `data/derived_metrics_v1_build_validation.json` (full check-only report: per-ticker source counts, all 405 observations' validation status, all 45 unresolved reasons, MSFT-proof comparison, global checks, database hashes)
-- `data/derived_metrics_v1_preview.csv` (405 rows, long format, matching the required column set)
-- `docs/DERIVED_METRICS_V1_BUILD.md` (source of this report)
+## Files created / modified (this schema-fix update)
+- `scripts/153_derived_metrics_v1_load.py` (**edited in place** — `fiscal_quarter_key` column + 4 `CHECK` constraints + corrected `PRIMARY KEY`; still the only production-load script)
+- `data/derived_metrics_v1_build_validation.json` (re-written by the post-fix `--check-only` run)
+- `data/derived_metrics_v1_preview.csv` (405 rows, now includes `fiscal_quarter_key`)
+- `docs/DERIVED_METRICS_V1_BUILD.md` (this report, updated)
 - `docs/LAST_CLAUDE_REPORT.md` — updated
+- Temporary in-memory schema test: written to and run from the session scratchpad only (`:memory:` DuckDB, no file, no production database — not part of the repository)
 
 No production database was modified. `--execute` was **not** run.
 
-## Result: BUILD PASS
-`--check-only` passed cleanly (0.66s), confirming: all 9 tickers
-process identically and cleanly, exactly 405 rows would be produced (45
-per ticker), the MSFT subset matches the existing single-ticker proof
-exactly (45/45, 0 mismatches), SQL and Python independently agree on
-every one of 405 rows, and the production database remains untouched.
+## Result: BUILD PASS (schema fixed and verified)
+The `fiscal_quarter`/`PRIMARY KEY` defect is fixed. All 13 in-memory
+schema tests pass (including one the fix itself needed — see above).
+Post-fix `--check-only` passed cleanly (0.56s), confirming: all 9
+tickers still process identically and cleanly, exactly 405 rows would
+be produced (45 per ticker), the MSFT subset still matches the existing
+single-ticker proof exactly (45/45, 0 mismatches), SQL and Python
+independently agree on every one of 405 rows, and the production
+database remains untouched (SHA-256 identical before/after). `--execute`
+remains fully built but intentionally not invoked.
 
 ## The exact manual command to run the production load
 
