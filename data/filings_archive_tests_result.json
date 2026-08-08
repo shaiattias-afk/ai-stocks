@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "tests": {
+    "round_trip_and_sha256": {
+      "accessions_checked": 6,
+      "files_checked": 35
+    },
+    "cleanup": {
+      "cleaned_up_dir": "C:\\Users\\shai\\AppData\\Local\\Temp\\filings_archive_000095017024087843_chgfr6iz"
+    },
+    "corrupted_blob_rejected": {
+      "corruption_detected": true,
+      "original_sha256": "56bc042e3e64e1f97191dcaf3529f7dc376ac0f6a497a0d7cdd4fc6247cc55bf"
+    },
+    "truncated_download_rejected": {
+      "truncation_rejected": true,
+      "complete_download_still_works": true
+    }
+  }
+}
