@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "table_created": true,
+  "rows_inserted": 45,
+  "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\ai_stock_agent_pre_valuation_v1_load_20260808T045545Z.duckdb",
+  "backup_checksum": "181abe35e5572ef5da32701ab645c838a37ef22babb3076792b7a4ae4b6c0c15",
+  "post_checks": {
+    "row_count_correct": true,
+    "pre_existing_tables_unchanged": true,
+    "annual_v1_checksum_unchanged": true
+  },
+  "completed_at": "2026-08-08T04:55:45.720Z"
+}

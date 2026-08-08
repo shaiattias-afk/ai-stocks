@@ -668,3 +668,69 @@ checksum unchanged. Full detail in `docs/HISTORICAL_PRICES_V1_BUILD.md`,
 `docs/LAST_CLAUDE_REPORT.md`, `data/historical_prices_v1_release_manifest.json`.
 
 This decision requires the user's explicit sign-off to change or extend to a new context, the same as any other entry in this log.
+
+## D-046 — Valuation V1 per-share input is frozen: reported diluted EPS, 45/45 company-years (approved)
+**Approved rule:** Valuation V1 (`data/database/ai_stock_agent.duckdb`,
+table `valuation_v1_per_share_inputs`) is **frozen**. The authoritative
+per-share valuation input is **reported diluted EPS**
+(`us-gaap:EarningsPerShareDiluted`), taken directly from each
+company's own already-locked 10-K, using the single consolidated
+(non-dimensional), full-fiscal-year fact matching the filing's own
+`report_date`. **Fallback rule**: only if reported diluted EPS cannot
+be resolved this way, `net_income / us-gaap:WeightedAverageNumberOfDilutedSharesOutstanding`
+may be used instead (not needed for any of the 45 currently-approved
+company-years — reported diluted EPS resolved directly for all 45).
+**Point-in-time availability rule**: `availability_date =
+filing_date` — the diluted EPS value for a fiscal year is not usable
+for any historical evaluation dated before that 10-K's own
+`filing_date`. **Shares outstanding (diluted weighted-average or
+period-end) is explicitly NOT stored in production** — it has no
+required use once diluted EPS is available directly, since historical
+P/E only needs a per-share figure, not a share count; it was used only
+transiently as a cross-check during resolution. **No future change to
+Valuation V1 — a new per-share input, a different resolution rule, or
+a data reload — is permitted without a new version and full
+validation**, the same discipline already applied to Annual Data V1,
+Quarterly Data V1 (D-042), Derived Metrics V1 (D-043), and Historical
+Prices V1 (D-045).
+
+**Rationale / origin:** closes the valuation-data gap identified in
+the Scoring Model V1 blueprint (`docs/SCORING_MODEL_V1_BLUEPRINT.md`),
+which had flagged the complete absence of any per-share/EPS/shares
+data as the single highest-leverage gap blocking Forward P/E, current
+P/E, PEG, and both candidate Entry Price V1 methods. Resolved entirely
+from data already on hand: the same 45 approved 10-K accessions behind
+Annual Data V1, re-inspected via the already-built XBRL warehouse
+(`data/database/xbrl_warehouse_proof.duckdb`) — no new filing was
+downloaded, no external/analyst data was used. A real defect was found
+and fixed before production load, independently by re-deriving the
+result rather than assuming it: the first historical-P/E proof attempt
+paired `close` (which Historical Price Policy V1 / D-044 Rule C
+retroactively split-adjusts for later splits) with as-reported diluted
+EPS (which is never split-adjusted), silently understating NVDA's
+2024-02 P/E by exactly the pending 10:1 split factor (5.66 instead of
+the correct 56.56); fixed by using `nominal_close` (the original-scale
+reconstructed price) for any per-share calculation paired with
+as-reported EPS.
+
+**Applied**: `scripts/160_valuation_v1_per_share_inputs.py --execute`
+created `valuation_v1_per_share_inputs` (`ticker, fiscal_year,
+fiscal_year_end, diluted_eps, resolution_method, eps_source_concept,
+accession_number, filing_date, availability_date,
+cross_check_calculated_eps, cross_check_diff, valuation_version,
+created_at`, primary key `(ticker, fiscal_year)`) and loaded all 45
+validated rows in one atomic transaction, with full backup
+(SHA-256-verified) beforehand. **Independently re-verified read-only,
+directly against the live database**: table exists, exactly 45 rows,
+exactly 9 distinct tickers, 0 duplicate keys, 0 missing lineage,
+`availability_date = filing_date` on every row, the historical P/E
+proof re-derived directly from the committed table for MSFT
+(35.8407), NVDA (56.5566), and AMZN (29.3333) matches the pre-load
+proof exactly. Every pre-existing production table confirmed
+unchanged: `financial_metric_results`=900, `quarterly_extraction_runs`=45,
+`quarterly_metric_results`=1,080, `derived_metric_results`=405,
+`historical_prices_daily`=14,913, unique REVIEW_REQUIRED=0, Annual
+Data V1 checksum unchanged. Full detail in
+`docs/LAST_CLAUDE_REPORT.md`, `data/valuation_v1_release_manifest.json`.
+
+This decision requires the user's explicit sign-off to change or extend to a new context, the same as any other entry in this log.

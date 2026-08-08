@@ -1,0 +1,331 @@
+{
+  "mode": "check-only",
+  "status": "PASS",
+  "company_years_total": 45,
+  "concept_coverage": {
+    "EarningsPerShareDiluted": {
+      "distinct_accessions_with_concept": 45,
+      "of_total": 45
+    },
+    "EarningsPerShareBasic": {
+      "distinct_accessions_with_concept": 45,
+      "of_total": 45
+    },
+    "WeightedAverageNumberOfDilutedSharesOutstanding": {
+      "distinct_accessions_with_concept": 45,
+      "of_total": 45
+    },
+    "WeightedAverageNumberOfSharesOutstandingBasic": {
+      "distinct_accessions_with_concept": 45,
+      "of_total": 45
+    },
+    "CommonStockSharesOutstanding": {
+      "distinct_accessions_with_concept": 45,
+      "of_total": 45
+    },
+    "EntityCommonStockSharesOutstanding": {
+      "distinct_accessions_with_concept": 45,
+      "of_total": 45
+    }
+  },
+  "resolved_count": 45,
+  "unavailable_count": 0,
+  "review_required_count": 0,
+  "unavailable": [],
+  "review_required": [],
+  "micro_proof_entries": [
+    {
+      "ticker": "MSFT",
+      "fiscal_year": 2024,
+      "fiscal_year_end": "2024-06-30",
+      "accession_number": "0000950170-24-087843",
+      "filing_date": "2024-07-30",
+      "availability_date": "2024-07-30",
+      "net_income_used": 88136000000.0,
+      "diluted_weighted_average_shares": 7469000000.0,
+      "cross_check_calculated_eps": 11.8,
+      "eps_resolution_detail": {
+        "status": "RESOLVED",
+        "value": 11.8,
+        "matched_contexts": [
+          {
+            "context_id": "C_6dbdb3a2-9baf-41b4-922d-f59879124337",
+            "value_raw": "11.80"
+          },
+          {
+            "context_id": "C_6dbdb3a2-9baf-41b4-922d-f59879124337",
+            "value_raw": "11.8"
+          }
+        ]
+      },
+      "shares_resolution_detail": {
+        "status": "RESOLVED",
+        "value": 7469000000.0,
+        "matched_contexts": [
+          {
+            "context_id": "C_6dbdb3a2-9baf-41b4-922d-f59879124337",
+            "value_raw": "7469000000"
+          }
+        ]
+      },
+      "status": "RESOLVED",
+      "diluted_eps": 11.8,
+      "resolution_method": "REPORTED_DILUTED_EPS",
+      "eps_source_concept": "us-gaap:EarningsPerShareDiluted",
+      "cross_check_diff": 0.0,
+      "cross_check_within_tolerance": true
+    },
+    {
+      "ticker": "MSFT",
+      "fiscal_year": 2023,
+      "fiscal_year_end": "2023-06-30",
+      "accession_number": "0000950170-23-035122",
+      "filing_date": "2023-07-27",
+      "availability_date": "2023-07-27",
+      "net_income_used": 72361000000.0,
+      "diluted_weighted_average_shares": 7472000000.0,
+      "cross_check_calculated_eps": 9.68,
+      "eps_resolution_detail": {
+        "status": "RESOLVED",
+        "value": 9.68,
+        "matched_contexts": [
+          {
+            "context_id": "C_da7a1266-ce2b-41b7-83ff-bb6e03dc1fa5",
+            "value_raw": "9.68"
+          }
+        ]
+      },
+      "shares_resolution_detail": {
+        "status": "RESOLVED",
+        "value": 7472000000.0,
+        "matched_contexts": [
+          {
+            "context_id": "C_da7a1266-ce2b-41b7-83ff-bb6e03dc1fa5",
+            "value_raw": "7472000000"
+          }
+        ]
+      },
+      "status": "RESOLVED",
+      "diluted_eps": 9.68,
+      "resolution_method": "REPORTED_DILUTED_EPS",
+      "eps_source_concept": "us-gaap:EarningsPerShareDiluted",
+      "cross_check_diff": 0.0,
+      "cross_check_within_tolerance": true
+    },
+    {
+      "ticker": "NVDA",
+      "fiscal_year": 2024,
+      "fiscal_year_end": "2024-01-28",
+      "accession_number": "0001045810-24-000029",
+      "filing_date": "2024-02-21",
+      "availability_date": "2024-02-21",
+      "net_income_used": 29760000000.0,
+      "diluted_weighted_average_shares": 2494000000.0,
+      "cross_check_calculated_eps": 11.93,
+      "eps_resolution_detail": {
+        "status": "RESOLVED",
+        "value": 11.93,
+        "matched_contexts": [
+          {
+            "context_id": "c-1",
+            "value_raw": "11.93"
+          }
+        ]
+      },
+      "shares_resolution_detail": {
+        "status": "RESOLVED",
+        "value": 2494000000.0,
+        "matched_contexts": [
+          {
+            "context_id": "c-1",
+            "value_raw": "2494000000"
+          }
+        ]
+      },
+      "status": "RESOLVED",
+      "diluted_eps": 11.93,
+      "resolution_method": "REPORTED_DILUTED_EPS",
+      "eps_source_concept": "us-gaap:EarningsPerShareDiluted",
+      "cross_check_diff": 0.0,
+      "cross_check_within_tolerance": true
+    },
+    {
+      "ticker": "NVDA",
+      "fiscal_year": 2023,
+      "fiscal_year_end": "2023-01-29",
+      "accession_number": "0001045810-23-000017",
+      "filing_date": "2023-02-24",
+      "availability_date": "2023-02-24",
+      "net_income_used": 4368000000.0,
+      "diluted_weighted_average_shares": 2507000000.0,
+      "cross_check_calculated_eps": 1.74,
+      "eps_resolution_detail": {
+        "status": "RESOLVED",
+        "value": 1.74,
+        "matched_contexts": [
+          {
+            "context_id": "i793edb174e3c4f8499d46ce84a602d1b_D20220131-20230129",
+            "value_raw": "1.74"
+          }
+        ]
+      },
+      "shares_resolution_detail": {
+        "status": "RESOLVED",
+        "value": 2507000000.0,
+        "matched_contexts": [
+          {
+            "context_id": "i793edb174e3c4f8499d46ce84a602d1b_D20220131-20230129",
+            "value_raw": "2507000000"
+          }
+        ]
+      },
+      "status": "RESOLVED",
+      "diluted_eps": 1.74,
+      "resolution_method": "REPORTED_DILUTED_EPS",
+      "eps_source_concept": "us-gaap:EarningsPerShareDiluted",
+      "cross_check_diff": 0.0,
+      "cross_check_within_tolerance": true
+    },
+    {
+      "ticker": "AMZN",
+      "fiscal_year": 2025,
+      "fiscal_year_end": "2025-12-31",
+      "accession_number": "0001018724-26-000004",
+      "filing_date": "2026-02-06",
+      "availability_date": "2026-02-06",
+      "net_income_used": 77670000000.0,
+      "diluted_weighted_average_shares": 10827000000.0,
+      "cross_check_calculated_eps": 7.17,
+      "eps_resolution_detail": {
+        "status": "RESOLVED",
+        "value": 7.17,
+        "matched_contexts": [
+          {
+            "context_id": "c-1",
+            "value_raw": "7.17"
+          }
+        ]
+      },
+      "shares_resolution_detail": {
+        "status": "RESOLVED",
+        "value": 10827000000.0,
+        "matched_contexts": [
+          {
+            "context_id": "c-1",
+            "value_raw": "10827000000"
+          }
+        ]
+      },
+      "status": "RESOLVED",
+      "diluted_eps": 7.17,
+      "resolution_method": "REPORTED_DILUTED_EPS",
+      "eps_source_concept": "us-gaap:EarningsPerShareDiluted",
+      "cross_check_diff": 0.0,
+      "cross_check_within_tolerance": true
+    },
+    {
+      "ticker": "AMZN",
+      "fiscal_year": 2024,
+      "fiscal_year_end": "2024-12-31",
+      "accession_number": "0001018724-25-000004",
+      "filing_date": "2025-02-07",
+      "availability_date": "2025-02-07",
+      "net_income_used": 59248000000.0,
+      "diluted_weighted_average_shares": 10721000000.0,
+      "cross_check_calculated_eps": 5.53,
+      "eps_resolution_detail": {
+        "status": "RESOLVED",
+        "value": 5.53,
+        "matched_contexts": [
+          {
+            "context_id": "c-1",
+            "value_raw": "5.53"
+          }
+        ]
+      },
+      "shares_resolution_detail": {
+        "status": "RESOLVED",
+        "value": 10721000000.0,
+        "matched_contexts": [
+          {
+            "context_id": "c-1",
+            "value_raw": "10721000000"
+          }
+        ]
+      },
+      "status": "RESOLVED",
+      "diluted_eps": 5.53,
+      "resolution_method": "REPORTED_DILUTED_EPS",
+      "eps_source_concept": "us-gaap:EarningsPerShareDiluted",
+      "cross_check_diff": 0.0,
+      "cross_check_within_tolerance": true
+    }
+  ],
+  "pe_proof": [
+    {
+      "ticker": "MSFT",
+      "status": "PASS",
+      "diluted_eps": 11.8,
+      "eps_availability_date": "2024-07-30",
+      "price_date_used": "2024-07-30",
+      "price_used": 422.9200134277344,
+      "price_date_on_or_after_availability_date": true,
+      "historical_pe": 35.8407,
+      "reproducible": true,
+      "price_policy_version_confirmed": true
+    },
+    {
+      "ticker": "NVDA",
+      "status": "PASS",
+      "diluted_eps": 11.93,
+      "eps_availability_date": "2024-02-21",
+      "price_date_used": "2024-02-21",
+      "price_used": 674.7200012207031,
+      "price_date_on_or_after_availability_date": true,
+      "historical_pe": 56.5566,
+      "reproducible": true,
+      "price_policy_version_confirmed": true
+    },
+    {
+      "ticker": "AMZN",
+      "status": "PASS",
+      "diluted_eps": 7.17,
+      "eps_availability_date": "2026-02-06",
+      "price_date_used": "2026-02-06",
+      "price_used": 210.32000732421875,
+      "price_date_on_or_after_availability_date": true,
+      "historical_pe": 29.3333,
+      "reproducible": true,
+      "price_policy_version_confirmed": true
+    }
+  ],
+  "in_memory_proof": {
+    "commit_succeeded": true,
+    "rows_inserted": 45,
+    "distinct_tickers": 9,
+    "duplicate_keys": 0,
+    "required_fields_null_count": 0,
+    "all_pe_proof_cases_still_valid": true,
+    "proof_passed": true,
+    "used_file_database": false
+  },
+  "global_checks": {
+    "micro_proof_passed": true,
+    "all_45_resolved": true,
+    "no_duplicate_keys": true,
+    "all_lineage_complete": true,
+    "all_cross_checks_within_tolerance": true,
+    "pe_proof_passed": true,
+    "in_memory_load_proof_passed": true,
+    "production_table_does_not_yet_exist": true,
+    "database_unchanged": true
+  },
+  "expected_production_table_ddl": "CREATE TABLE valuation_v1_per_share_inputs (\n    ticker                          VARCHAR NOT NULL,\n    fiscal_year                     INTEGER NOT NULL,\n    fiscal_year_end                 DATE NOT NULL,\n    diluted_eps                     DOUBLE NOT NULL,\n    resolution_method               VARCHAR NOT NULL,\n    eps_source_concept               VARCHAR NOT NULL,\n    accession_number                VARCHAR NOT NULL,\n    filing_date                     DATE NOT NULL,\n    availability_date               DATE NOT NULL,\n    cross_check_calculated_eps      DOUBLE,\n    cross_check_diff                DOUBLE,\n    valuation_version               VARCHAR NOT NULL,\n    created_at                      TIMESTAMP NOT NULL,\n    CONSTRAINT chk_resolution_method CHECK (\n        resolution_method IN ('REPORTED_DILUTED_EPS', 'CALCULATED_NET_INCOME_OVER_DILUTED_SHARES')\n    ),\n    CONSTRAINT chk_valuation_version CHECK (valuation_version = 'VALUATION_V1'),\n    PRIMARY KEY (ticker, fiscal_year)\n)",
+  "database_sha256_before": "181abe35e5572ef5da32701ab645c838a37ef22babb3076792b7a4ae4b6c0c15",
+  "database_sha256_after": "181abe35e5572ef5da32701ab645c838a37ef22babb3076792b7a4ae4b6c0c15",
+  "table_created": false,
+  "backup_performed": false,
+  "pid_lock_acquired": false,
+  "runtime_seconds": 1.002,
+  "checked_at": "2026-08-08T04:55:27.870Z"
+}

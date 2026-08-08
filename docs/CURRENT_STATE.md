@@ -1,8 +1,9 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-07 (**HISTORICAL PRICES V1 IS FROZEN.** `scripts/158_historical_prices_v1_load.py --execute` succeeded (run exactly once, orchestrated by `scripts/159_historical_prices_v1_release.py`): `historical_prices_daily` created and loaded for all 9 approved tickers (ORCL, MSFT, META, NVDA, GOOGL, AMZN, MU, CRWD, PANW), **14,913 validated daily price observations** (1,657 per ticker, 2020-01-02 through 2026-08-06), sourced from Yahoo Finance's historical chart API and rebuilt from scratch from the already-saved raw JSON responses. Every row carries both Yahoo's original fields (`open`/`high`/`low`/`close`/`adj_close`/`volume`/`dividend`/`split_ratio`) and the Historical Price Policy V1 (D-044) Rule C reconstructed nominal `open`/`high`/`low`/`close`, plus full source lineage (`source_raw_file`, `source_raw_sha256`) and `price_policy_version='HISTORICAL_PRICE_POLICY_V1'` on every row. Independently re-verified read-only, directly from the live database (not merely the loader's own report): table exists, exactly 14,913 rows, exactly 9 distinct tickers, exactly 1,657 rows per ticker, correct date range, 0 duplicate keys, 0 missing/negative values, all OHLC and reconstructed-nominal-OHLC relationships valid, all split events and dividend counts match the approved 9-company proof exactly, NVDA/GOOGL/PANW reconstructed prices match the Historical Price Policy V1 proof exactly. All pre-existing production data confirmed unchanged: `financial_metric_results`=900, `quarterly_extraction_runs`=45, `quarterly_metric_results`=1,080, `derived_metric_results`=405, unique REVIEW_REQUIRED=0, every pre-existing table fingerprint unchanged, Annual Data V1 checksum unchanged. **Historical Prices V1 is now frozen; Yahoo historical chart data is the approved V1 market-price source for the current 9-company universe, governed by Historical Price Policy V1 / D-044; no future changes without a new version and full validation (D-045).** See `data/historical_prices_v1_release_manifest.json`, `docs/DECISIONS_LOG.md` D-045, `docs/LAST_CLAUDE_REPORT.md` for full detail.)
+**Last updated:** 2026-08-08 (**VALUATION V1 IS FROZEN.** `scripts/160_valuation_v1_per_share_inputs.py --execute` succeeded (run exactly once, after a full read-only proof: inventory → micro proof (MSFT/NVDA/AMZN) → 45-company-year proof → historical P/E proof → in-memory load proof): `valuation_v1_per_share_inputs` created and loaded for all 9 approved tickers, **45/45 company-years resolved** using **reported diluted EPS** (`us-gaap:EarningsPerShareDiluted`), extracted directly from the already-locked 10-K filings via the already-built XBRL warehouse — no new filing downloaded, no external/analyst data used. Shares outstanding was evaluated but deliberately **not** stored in production (no required use once diluted EPS is available directly). A real defect was found and fixed before load: pairing `close` (retroactively split-adjusted per D-044 Rule C) with as-reported (never split-adjusted) diluted EPS silently distorted P/E for company-years preceding a later split (NVDA 2024-02 understated 10x); fixed by using `nominal_close`. Independently re-verified read-only, directly from the live database: table exists, exactly 45 rows, exactly 9 distinct tickers, 0 duplicate keys, 0 missing lineage, `availability_date=filing_date` on every row, historical P/E re-derived from the committed table matches the pre-load proof exactly for MSFT/NVDA/AMZN. All pre-existing production data confirmed unchanged: `financial_metric_results`=900, `quarterly_extraction_runs`=45, `quarterly_metric_results`=1,080, `derived_metric_results`=405, `historical_prices_daily`=14,913, unique REVIEW_REQUIRED=0, Annual Data V1 checksum unchanged. **Valuation V1 is now frozen; reported diluted EPS is the approved V1 per-share valuation input; no future changes without a new version and full validation (D-046).** See `data/valuation_v1_release_manifest.json`, `docs/DECISIONS_LOG.md` D-046, `docs/LAST_CLAUDE_REPORT.md` for full detail.)
 
-**Previous update:** 2026-08-07 (**DERIVED METRICS V1 IS FROZEN.** `scripts/153_derived_metrics_v1_load.py --execute` succeeded: `derived_metric_results` created and loaded for all 9 approved tickers (ORCL, MSFT, META, NVDA, GOOGL, AMZN, MU, CRWD, PANW), exactly 2 approved metrics (`operating_margin`, `revenue_yoy_growth`) at `annual` and `quarterly` frequency, **405 validated observations** (81 annual + 324 quarterly). Independently re-verified read-only, directly from the live database: `derived_metric_results` exists, exactly 405 rows, exactly 81 annual / 324 quarterly, exactly 9 distinct tickers, 0 duplicate primary keys, 0 NULLs in any required column. Both upstream freezes remain untouched: `quarterly_extraction_runs`=45, `quarterly_metric_results`=1,080, `financial_metric_results`=900, unique REVIEW_REQUIRED=0, Annual Data V1 checksum unchanged. **Derived Metrics V1, Annual Data V1, and Quarterly Data V1 are all frozen; no future changes to any of them are permitted without a new version and full validation (D-043).** See `data/derived_metrics_v1_release_manifest.json`, `docs/DECISIONS_LOG.md` D-043, `docs/LAST_CLAUDE_REPORT.md` for full detail.)
+**Previous update:** 2026-08-07 (**HISTORICAL PRICES V1 IS FROZEN.** `scripts/158_historical_prices_v1_load.py --execute` succeeded (run exactly once, orchestrated by `scripts/159_historical_prices_v1_release.py`): `historical_prices_daily` created and loaded for all 9 approved tickers, **14,913 validated daily price observations** (1,657 per ticker, 2020-01-02 through 2026-08-06). Independently re-verified read-only. **Historical Prices V1 is now frozen (D-045).** See `docs/DECISIONS_LOG.md` D-045.)
+
 **Project folder:** `C:\AI_Stock_Agent`
 **Environment:** Windows, VS Code, Python virtual environment, PowerShell
 
@@ -3901,9 +3902,79 @@ freeze record), `data/historical_prices_v1_build_validation.json`,
 `data/historical_prices_v1_release_task_result.json`. Full detail in
 `docs/HISTORICAL_PRICES_V1_BUILD.md`, `docs/LAST_CLAUDE_REPORT.md`.
 
+**Current overall state (superseded — see 2026-08-08 Valuation V1
+section below)**: Annual Data V1, Quarterly Data V1, Derived Metrics
+V1, and Historical Prices V1 are all frozen.
+
+## 2026-08-08 — Valuation V1 frozen (D-046)
+
+`valuation_v1_per_share_inputs` was built and loaded for all 9
+approved tickers, closing the valuation-data gap flagged in the
+Scoring Model V1 blueprint (`docs/SCORING_MODEL_V1_BLUEPRINT.md`).
+Full proof chain run in one closed task: inventory of filing-based
+per-share XBRL concepts → micro proof (MSFT/NVDA/AMZN, 2 fiscal years
+each) → full 45-company-year proof → historical P/E proof
+(MSFT/NVDA/AMZN) → in-memory load proof → production load (run exactly
+once, `scripts/160_valuation_v1_per_share_inputs.py --execute`) →
+independent post-load verification.
+
+**Chosen basis**: reported diluted EPS (`us-gaap:EarningsPerShareDiluted`),
+resolved directly from the consolidated (non-dimensional),
+full-fiscal-year fact in each company's own already-locked 10-K —
+**no new filing downloaded, no external/analyst data used**. Shares
+outstanding (diluted weighted-average or period-end) was evaluated per
+the task's requirement but deliberately **not stored in production**:
+historical P/E only needs a per-share earnings figure, not a share
+count, so shares data has no required use once diluted EPS is
+available directly. It was used only transiently, during resolution,
+as a cross-check (`net_income / diluted weighted-average shares`
+compared against reported diluted EPS — max observed difference across
+all 45 company-years: $0.03).
+
+**Real defect found and fixed before production load**: the first
+historical-P/E proof attempt paired Yahoo `close` (retroactively
+split-adjusted for later splits, per Historical Price Policy V1 / D-044
+Rule C) with as-reported diluted EPS (never split-adjusted), silently
+distorting P/E for any company-year preceding a later split — NVDA's
+2024-02-21 filing (before the 2024-06-10 10:1 split) produced an
+implausible P/E of 5.66 instead of the correct 56.56. Fixed by using
+`nominal_close` (the reconstructed original-scale price) for any
+calculation paired with as-reported EPS.
+
+| Check | Result |
+|---|---|
+| `valuation_v1_per_share_inputs` exists | ✓ |
+| Company-years resolved | **45 / 45** |
+| Unavailable / Ambiguous / REVIEW_REQUIRED | 0 / 0 / 0 |
+| Duplicate `(ticker, fiscal_year)` keys | 0 |
+| Missing lineage (accession/filing_date/availability_date/source concept) | 0 |
+| `availability_date = filing_date` on every row | ✓ |
+| Micro proof (MSFT/NVDA/AMZN × 2 fiscal years) | PASS, max cross-check diff $0.00 |
+| Historical P/E proof (MSFT/NVDA/AMZN) | PASS — 35.84 / 56.56 / 29.33, reproducible, re-derived identically post-load |
+| `financial_metric_results` | 900 (unchanged) |
+| `quarterly_extraction_runs` | 45 (unchanged) |
+| `quarterly_metric_results` | 1,080 (unchanged) |
+| `derived_metric_results` | 405 (unchanged) |
+| `historical_prices_daily` | 14,913 (unchanged) |
+| unique REVIEW_REQUIRED | 0 (unchanged) |
+| Annual Data V1 checksum | unchanged |
+
+**Standing declarations (D-046, recorded in `docs/DECISIONS_LOG.md`)**:
+Valuation V1 is frozen. Reported diluted EPS is the authoritative
+per-share valuation input, with a validated (but currently unused)
+fallback to `net_income / diluted weighted-average shares`.
+`availability_date = filing_date` governs point-in-time use. No
+changes to Valuation V1 without a new version and full validation.
+
+**Files**: `data/valuation_v1_release_manifest.json` (the freeze
+record), `data/valuation_v1_build_validation.json`,
+`data/valuation_v1_preview.csv`. Full detail in
+`docs/LAST_CLAUDE_REPORT.md`.
+
 **Current overall state**: Annual Data V1, Quarterly Data V1, Derived
-Metrics V1, and Historical Prices V1 are all frozen. The fundamentals
-+ derived-metrics + market-price base for all 9 approved tickers is
-complete and locked. The next stage (not started) would be a
-valuation/backtesting layer built on top of these four frozen
-releases, applying Historical Price Policy V1's rules exactly.
+Metrics V1, Historical Prices V1, and Valuation V1 are all frozen.
+Historical P/E can now be calculated safely and reproducibly for any
+of the 45 approved company-years. The next stage (not started) would
+be building the full Scoring Model V1 (per
+`docs/SCORING_MODEL_V1_BLUEPRINT.md`) and the point-in-time backtest
+engine on top of these five frozen releases.
