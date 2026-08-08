@@ -1,0 +1,59 @@
+{
+  "generated_for": "Scoring Model V1 blueprint",
+  "source_document": "docs/SCORING_MODEL_V1_BLUEPRINT.md",
+  "universe": ["ORCL", "MSFT", "META", "NVDA", "GOOGL", "AMZN", "MU", "CRWD", "PANW"],
+  "gaps": [
+    {
+      "priority": 1,
+      "gap": "Shares outstanding (diluted, weighted-average, point-in-time)",
+      "why_needed": "Blocks EPS, current P/E, forward P/E, PEG, P/S, market cap, and both candidate Entry Price V1 methods -- no per-share or market-value metric can be computed without it.",
+      "essential_for_scoring_v1": false,
+      "essential_for_full_draft_model": true,
+      "essential_for_entry_price": true,
+      "point_in_time_required": true,
+      "approx_required_history": "Same 5-year window already covered by Annual/Quarterly Data V1 (2019/2020-2026) for the same 9 tickers -- no new filings need to be fetched, only re-extraction of an existing XBRL tag from filings already locked.",
+      "new_external_source_required": false,
+      "can_proceed_without_it_temporarily": true,
+      "notes": "Lowest-risk, highest-leverage gap to close -- uses the already-proven statement-first XBRL extraction pipeline, not a new provider."
+    },
+    {
+      "priority": 2,
+      "gap": "Analyst consensus data (ratings, coverage count, rating changes, price targets, forward EPS estimates)",
+      "why_needed": "Needed for Analyst trend, Target-price gap, Forward P/E, PEG, and Entry Price Method 2.",
+      "essential_for_scoring_v1": false,
+      "essential_for_full_draft_model": true,
+      "essential_for_entry_price": false,
+      "point_in_time_required": true,
+      "approx_required_history": "Full 5-year backtest window, ideally as true as-of-date historical snapshots (not today's restated consensus).",
+      "new_external_source_required": true,
+      "can_proceed_without_it_temporarily": true,
+      "notes": "Hardest gap to close safely for backtesting -- most providers expose only current consensus, which would introduce look-ahead bias if used retroactively. Provider evaluation explicitly out of scope for this task."
+    },
+    {
+      "priority": 3,
+      "gap": "Sector / industry classification for each company",
+      "why_needed": "Needed for a true 'Relative to industry' valuation/growth factor.",
+      "essential_for_scoring_v1": false,
+      "essential_for_full_draft_model": true,
+      "essential_for_entry_price": false,
+      "point_in_time_required": false,
+      "approx_required_history": "None -- current classification is largely static and sufficient.",
+      "new_external_source_required": false,
+      "can_proceed_without_it_temporarily": true,
+      "notes": "Partially mitigated already: Scoring Model V1's within-universe percentile-rank scoring gives every factor a relative-to-peers flavor, just not a true sector-relative one. Becomes more important once the universe expands beyond 9 companies."
+    },
+    {
+      "priority": 4,
+      "gap": "Benchmark index historical daily prices (S&P 500, Nasdaq-100, relevant industry benchmarks)",
+      "why_needed": "Needed to measure excess return, drawdown, and hit rate versus benchmark in the eventual backtest, per docs/PROJECT_CONTEXT.md Backtesting requirements.",
+      "essential_for_scoring_v1": false,
+      "essential_for_full_draft_model": false,
+      "essential_for_entry_price": false,
+      "point_in_time_required": true,
+      "approx_required_history": "Same 5-year window as the company price data.",
+      "new_external_source_required": true,
+      "can_proceed_without_it_temporarily": true,
+      "notes": "Not needed to compute company scores or entry prices -- only needed at the final backtest-evaluation stage (Stage 6, step 5), which is explicitly not built in this task."
+    }
+  ]
+}

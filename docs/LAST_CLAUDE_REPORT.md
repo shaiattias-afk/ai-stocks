@@ -1,101 +1,101 @@
-# Historical Prices V1 — RESULT: PASS — FROZEN
+# Scoring Model V1 blueprint — RESULT: PASS
 
-Completed the full closed release for Historical Prices V1 in one task:
-preflight → production load (`--execute`, run exactly once) →
-independent post-load verification → freeze documentation → Git
-commit → release tag.
+Defined the executable Scoring Model V1 blueprint from the actual
+frozen project data (Annual Data V1, Quarterly Data V1, Derived
+Metrics V1, Historical Prices V1) and the approved project context.
+**Planning task only — no database was modified, no external data was
+downloaded, no paid provider was recommended, no backtest was built, no
+frozen release was changed.**
 
-Source code: `scripts/159_historical_prices_v1_release.py`
-(orchestrator), `scripts/158_historical_prices_v1_load.py` (loader,
-built in a prior task, `--execute` invoked here for the first time).
-Freeze record: `data/historical_prices_v1_release_manifest.json`.
-Decision recorded: `docs/DECISIONS_LOG.md` — **D-045**.
+Full blueprint: `docs/SCORING_MODEL_V1_BLUEPRINT.md`.
+Data gap list: `data/scoring_model_v1_data_gap.json`.
+`docs/CURRENT_STATE.md` and `docs/DECISIONS_LOG.md` were **not**
+modified — no scoring-model decision is frozen by this task.
 
-## Stage 1 — Preflight: PASS
+## What we can already calculate
 
-Git working tree clean (excluding this task's own new files), both
-required prior commits present (`Define Historical Price Policy V1`,
-`Build Historical Prices V1 loader`), no remote. Build artifacts
-verified: `scripts/158` exists, check-only result PASS, 9 tickers,
-1,657 rows/ticker, 14,913 total rows, correct date range, in-memory
-load proof PASS, `historical_prices_daily` did not yet exist. All 9
-raw Yahoo source files verified present with matching SHA-256. D-044
-confirmed present and unchanged. BEFORE-state recorded and fingerprinted
-for every existing production table: `financial_metric_results`=900,
-`quarterly_extraction_runs`=45, `quarterly_metric_results`=1,080,
-`derived_metric_results`=405, unique REVIEW_REQUIRED=0. Annual Data V1
-checksum confirmed `e655671e...58e9f814` as required.
+Directly available or trivially calculable from already-frozen data,
+for all 45 company-years: revenue growth, operating margin, ROIC, FCF
+(and calculable FCF growth/margin), CapEx (annual + quarterly),
+balance-sheet components (debt, cash, equity — calculable into a
+strength ratio), and distance from high (from Historical Prices V1,
+with a strict trailing-window safeguard). None of these require any
+new data acquisition — only new calculation logic on data already
+frozen.
 
-## Stage 2 — Production load: PASS
+## What's still missing (important)
 
-Ran exactly once:
-```
-.\.venv\Scripts\python.exe .\scripts\158_historical_prices_v1_load.py --execute
-```
-Runtime 9.76s. Loader created a SHA-256-verified backup before writing,
-used one atomic transaction, and reported PASS: `historical_prices_daily`
-created, 14,913 rows inserted.
+**Shares outstanding does not exist anywhere in the schema.** This
+single gap blocks EPS, current P/E, forward P/E, PEG, P/S, market cap,
+and both candidate Entry Price V1 methods — essentially the entire
+"valuation" dimension of the draft model. It is a low-risk, fast fix:
+extractable from filings **already locked**, using the same proven
+XBRL pipeline, no new provider. Also missing: analyst consensus data
+(ratings, targets, forward estimates — genuinely needs a new external,
+point-in-time-safe source) and sector/industry classification (low
+priority, partially substituted by within-universe ranking).
 
-## Stage 3 — Independent post-load verification: PASS
+## Recommended Scoring Model V1
 
-Re-opened production read-only and verified directly from the database
-(not from the loader's own report): table exists; exactly 14,913 rows;
-exactly 9 distinct tickers; exactly 1,657 rows for every ticker; date
-range 2020-01-02 to 2026-08-06; 0 duplicate `(ticker, price_date)` keys;
-0 missing required price fields; 0 negative/non-positive prices; 0
-negative volume; all OHLC relationships valid; all reconstructed
-nominal-OHLC relationships valid; `price_policy_version =
-'HISTORICAL_PRICE_POLICY_V1'` on every row; source lineage
-(`source_raw_file`, `source_raw_sha256`) present on every row; all
-split events match the approved 9-company proof exactly; all dividend
-counts match the approved 9-company proof exactly; NVDA/GOOGL/PANW
-reconstructed prices match the Historical Price Policy V1 proof exactly.
-All pre-existing production data confirmed unchanged: the 4 tracked
-counts, unique REVIEW_REQUIRED=0, every pre-existing table's content
-fingerprint identical to its BEFORE fingerprint, Annual Data V1
-checksum unchanged.
+9 factors, 100% weight, all computable today: revenue growth (20%),
+ROIC level (15%), ROIC trend (10%), operating margin (10%), FCF growth
+(15%), FCF margin (10%), balance-sheet strength (10%), CapEx discipline
+(5%), distance from high (5%). Scored as continuous 0–100 percentile
+rank within the 9-company universe per fiscal year. Forward P/E, PEG,
+EPS growth, analyst trend, target-price gap, and relative-to-industry
+are explicitly excluded (not silently dropped) pending the
+shares-outstanding and analyst-data gaps. Entry Price is defined
+separately from the general score (a gate, not a weighted factor) —
+two methods specified (company-own historical multiple reversion,
+tested first; forward-estimate multiple, tested second) — neither can
+be calculated yet since both need shares outstanding at minimum.
 
-## Stage 4 — Freeze: complete
+## Recommended next step
 
-Recorded standing decision **D-045**: Historical Prices V1 is frozen —
-9 companies, 14,913 validated daily observations, 2020-01-02 through
-2026-08-06, Yahoo historical chart data approved as the V1 market-price
-source for the current 9-company universe, governed by Historical
-Price Policy V1 / D-044, no changes without a new version and full
-validation. Historical Price Policy V1 itself was not changed.
+Extend the XBRL extraction scope to add diluted weighted-average shares
+outstanding for the same 9 tickers, from filings already locked — no
+new filings, no new provider. This unblocks the valuation dimension and
+Entry Price Method 1.
 
-## Stage 5 — Git release
-
-Committed the release files with message `Freeze Historical Prices V1`
-and created annotated tag `historical-prices-v1-frozen`.
-
-## Files created/updated
-- `scripts/159_historical_prices_v1_release.py` (new)
-- `data/historical_prices_v1_release_manifest.json` (updated — full freeze record)
-- `data/historical_prices_v1_release_task_result.json` (new — full stage-by-stage proof)
-- `docs/CURRENT_STATE.md` — updated
-- `docs/DECISIONS_LOG.md` — D-045 added
+## Files produced
+- `docs/SCORING_MODEL_V1_BLUEPRINT.md` (new)
+- `data/scoring_model_v1_data_gap.json` (new)
 - `docs/LAST_CLAUDE_REPORT.md` — this file, updated
 
-Not committed (per policy): `data/database/ai_stock_agent.duckdb`, the
-pre-load backup, raw Yahoo data, logs, PID lock files.
-
-## Result: PASS — Historical Prices V1 is now frozen
+## Result: PASS
 
 ## Report — in simple terms
 
-- **Did the load succeed?** Yes, on the first and only attempt.
-- **Number of companies?** 9.
-- **Number of price rows?** 14,913 (1,657 per company).
-- **Date range?** 2020-01-02 to 2026-08-06.
-- **Did the old financial data remain unchanged?** Yes — every
-  pre-existing production table (fundamentals, quarterly data, derived
-  metrics) was independently re-verified as byte-for-byte unchanged,
-  including the Annual Data V1 checksum.
-- **Is Historical Prices V1 now frozen?** Yes.
-- **Git release commit hash?** See below (recorded after commit).
-- **Git tag?** `historical-prices-v1-frozen`.
-- **Recommended next project stage?** A valuation/backtesting layer
-  built on top of the four now-frozen releases (Annual Data V1,
-  Quarterly Data V1, Derived Metrics V1, Historical Prices V1),
-  applying Historical Price Policy V1's rules exactly.
+- **Which scoring factors can we already calculate?** Growth
+  (revenue), profitability and capital efficiency (operating margin,
+  ROIC and its trend), cash generation (free cash flow growth and
+  margin), balance-sheet strength, capital-spending discipline (CapEx),
+  and how far the stock price has fallen from its recent high — for
+  all 9 companies across the full 5-year window, using only data
+  already collected and frozen.
+- **Which important factors are still missing?** Everything based on
+  the stock's valuation multiple (P/E, PEG) and anything based on
+  analyst opinions or price targets. The root cause for the valuation
+  side is simple: we never extracted the number of shares each company
+  has outstanding, so we cannot yet turn a stock price into a
+  per-share earnings multiple. Analyst data is a separate, genuinely
+  external gap.
+- **Do we have enough data to build a meaningful first scoring model?**
+  Yes — a company-quality-and-growth score with a light timing overlay
+  can be built today, fully from data already on hand. It is not yet
+  the complete quality+valuation+timing model the project aims for,
+  but it is a real, usable, honest first version.
+- **Do we have enough data to run a valid backtest yet?** Not yet.
+  The scoring inputs exist, but the backtest itself, an entry-price
+  calculation, and comparison against a market benchmark are not built
+  in this task and need a few more small steps first.
+- **Recommended next single project step?** Add the missing
+  shares-outstanding number for the 9 companies, using the extraction
+  process we already have — no new filings, no new outside data
+  provider needed for this step.
+- **Estimated work remaining before the first real backtest?** A small,
+  well-defined sequence: add shares outstanding, build the new scoring
+  calculations, build one entry-price method, sanity-check the
+  rankings by hand, then build the backtest itself. Each step is small
+  and uses tools already built in this project.
+- **Git commit hash?** See below (recorded after commit).
