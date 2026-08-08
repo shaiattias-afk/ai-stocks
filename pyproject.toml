@@ -19,3 +19,9 @@ dev = [
 
 [tool.setuptools.packages.find]
 where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+markers = [
+    "golden: slow, real-warehouse/production-database golden regression tests (read-only; still collected and run by default with a plain `pytest` invocation -- not deselected by default, only usable to filter with -m 'not golden' when a fast subset is explicitly wanted).",
+]

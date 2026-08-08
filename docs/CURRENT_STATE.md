@@ -1,7 +1,46 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-08 (**PR1 structural extraction opened (not
-merged): `refactor/extract-stock-agent-package`, PR "refactor: extract
+**Last updated:** 2026-08-08 (**PR2: the project's first real pytest test
+suite, `tests/` (94 tests), merged on top of PR1.** Four categories, all
+under `src/stock_agent`: (1) `tests/test_golden_regression.py` —
+formalizes PR1's throwaway verification into permanent, always-run
+(`@pytest.mark.golden`, not silently skipped) tests: **900/900 annual
+`financial_metric_results` pairs and 1,080/1,080 quarterly
+`quarterly_metric_results` rows reproduced exactly (value and status),
+read-only, zero database writes** — independently re-run by the
+orchestrating session after the implementing agent, not just trusted on
+report (94 total tests incl. golden: 92 fast tests in 1.34s + 2 golden
+tests in 374s, all PASS). (2) `tests/policies/*.py` — synthetic-fixture
+unit tests per policy family, including D-017's 4-condition
+current_debt=0 proof as an explicit parametrized pass/fail matrix. (3)
+`tests/test_historical_bugs.py` — regression tests for 5 named
+historical incidents (XBRL instant-date off-by-one, decimals-precision
+duplicate reconciliation, `ixTransformValueError` handling, Meta's
+"Income (loss) from operations" label, Micron's bare "Current debt"
+label), each with a citation to where the original incident is
+documented in this file / `docs/DECISIONS_LOG.md`. (4)
+`tests/test_fail_closed.py` — ambiguous evidence must yield
+`REVIEW_REQUIRED`, never a guessed value, across multiple policy modules.
+
+**A real, latent bug was found and fixed by this test suite, not merely
+disclosed**: PR1's ported `src/stock_agent/extraction/core.py` defined
+`ANNUAL_DURATION_MIN_DAYS = 350` but never defined
+`ANNUAL_DURATION_MAX_DAYS` (referenced in the same duration filter),
+even though every one of its ~20 source-script ancestors (`scripts/42`
+through `scripts/96`, now archived) defined both constants together as
+350/380. This was a `NameError` waiting to happen on any request that
+reached the date-tolerance prior-period matching path — silent in PR1's
+narrower verification because none of the 45+5 company-years it checked
+happened to exercise that branch. Fixed by restoring
+`ANNUAL_DURATION_MAX_DAYS = 380`, exactly matching every source script.
+Re-verified after the fix: still 900/900 and 1,080/1,080.
+
+This entry documents a task result only — no data, policy, or production
+table changed; `docs/DECISIONS_LOG.md` D-015 through D-047 remain
+unchanged and binding. See PR2 for full detail.)
+
+**Previous update:** 2026-08-08 (**PR1 structural extraction merged:
+`refactor/extract-stock-agent-package`, PR "refactor: extract
 stock_agent package".** Moves the annual/quarterly XBRL policy-engine
 lineage out of the numbered `scripts/` prototypes into an installable
 package, `src/stock_agent/` (`extraction/`, `policies/`, `metrics/`,
