@@ -37,16 +37,10 @@ from urllib.request import Request, urlopen
 import duckdb
 import pandas as pd
 
-from importlib import util as _importlib_util
-import sys
+from stock_agent import PROJECT_DIR
+from stock_agent.filings import archive
 
-PROJECT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_DIR / "data"
-
-_spec161 = _importlib_util.spec_from_file_location("s161", PROJECT_DIR / "scripts" / "161_filings_archive_core.py")
-s161 = _importlib_util.module_from_spec(_spec161)
-sys.modules["s161"] = s161
-_spec161.loader.exec_module(s161)
 
 SEC_BASE_URL = "https://www.sec.gov"
 SEC_DATA_URL = "https://data.sec.gov"
@@ -176,7 +170,7 @@ def download_and_archive_needed_files(
 
     for item in index_items:
         file_name = str(item.get("name", "")).strip()
-        if not file_name or not s161.is_needed_file(file_name, primary_document):
+        if not file_name or not archive.is_needed_file(file_name, primary_document):
             continue
 
         declared_size_raw = item.get("size", "")
@@ -188,7 +182,7 @@ def download_and_archive_needed_files(
         file_url = f"{filing_base_url}/{file_name}"
         content = sec_get_bytes(file_url)
 
-        record = s161.archive_file(
+        record = archive.archive_file(
             connection=connection,
             accession_number=accession_number,
             file_name=file_name,
@@ -241,10 +235,10 @@ def main() -> None:
     filing_index = load_filing_index(filing_base_url)
     index_items = get_index_items(filing_index)
 
-    ARCHIVE_DB_PATH = s161.ARCHIVE_DB_PATH
+    ARCHIVE_DB_PATH = archive.ARCHIVE_DB_PATH
     ARCHIVE_DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     connection = duckdb.connect(database=str(ARCHIVE_DB_PATH))
-    s161.create_archive_schema(connection)
+    archive.create_archive_schema(connection)
 
     print()
     print("Downloading needed files only...")
@@ -259,7 +253,7 @@ def main() -> None:
     total_uncompressed = sum(r["byte_size"] for r in records)
     total_compressed = sum(r["compressed_byte_size"] for r in records)
 
-    s161.archive_manifest_row(
+    archive.archive_manifest_row(
         connection=connection,
         accession_number=accession_number,
         ticker=ticker,

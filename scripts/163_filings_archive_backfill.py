@@ -18,21 +18,16 @@ source="BACKFILL_FROM_DISK".
 from __future__ import annotations
 
 import json
-import sys
 import time
-from importlib import util as _importlib_util
 from pathlib import Path
 
 import duckdb
 
-PROJECT_DIR = Path(__file__).resolve().parent.parent
+from stock_agent import PROJECT_DIR
+from stock_agent.filings import archive
+
 DATA_DIR = PROJECT_DIR / "data"
 LOCKED_FILINGS_DIR = DATA_DIR / "sec_filings_locked"
-
-_spec161 = _importlib_util.spec_from_file_location("s161", PROJECT_DIR / "scripts" / "161_filings_archive_core.py")
-s161 = _importlib_util.module_from_spec(_spec161)
-sys.modules["s161"] = s161
-_spec161.loader.exec_module(s161)
 
 
 def find_locked_manifests() -> list[Path]:
@@ -57,11 +52,11 @@ def backfill_one_filing(connection: duckdb.DuckDBPyConnection, manifest_path: Pa
 
     for file_path in candidate_files:
         file_name = file_path.name
-        if not s161.is_needed_file(file_name, primary_document):
+        if not archive.is_needed_file(file_name, primary_document):
             continue
 
         raw_bytes = file_path.read_bytes()
-        record = s161.archive_file(
+        record = archive.archive_file(
             connection=connection,
             accession_number=accession_number,
             file_name=file_name,
@@ -78,7 +73,7 @@ def backfill_one_filing(connection: duckdb.DuckDBPyConnection, manifest_path: Pa
     if primary_document not in {r["file_name"] for r in records}:
         raise RuntimeError(f"Primary document {primary_document} was not archived for {accession_number} -- filter bug.")
 
-    s161.archive_manifest_row(
+    archive.archive_manifest_row(
         connection=connection,
         accession_number=accession_number,
         ticker=str(manifest["ticker"]),
@@ -119,10 +114,10 @@ def main() -> None:
     if not manifest_paths:
         raise RuntimeError(f"No locked_filing_manifest.json files found under {LOCKED_FILINGS_DIR}")
 
-    ARCHIVE_DB_PATH = s161.ARCHIVE_DB_PATH
+    ARCHIVE_DB_PATH = archive.ARCHIVE_DB_PATH
     ARCHIVE_DB_PATH.parent.mkdir(parents=True, exist_ok=True)
     connection = duckdb.connect(database=str(ARCHIVE_DB_PATH))
-    s161.create_archive_schema(connection)
+    archive.create_archive_schema(connection)
 
     results = []
     total_uncompressed_all = 0
