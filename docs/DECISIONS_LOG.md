@@ -1029,3 +1029,63 @@ This decision was given directly by the user in a live conversation
 (not the earlier autonomous batch instruction); it still requires the
 user's explicit sign-off to change or extend further.
 
+## D-050 — Full `scripts/` sweep: 136 one-time/historical scripts archived (approved, live user instruction)
+**Direct follow-up to D-049**, at the user's explicit request to go
+further than D-049's initial 4-file cleanup. `scripts/` went from 156
+files to 20; the other 136 moved to `archive/scripts/` via `git mv`
+(never deleted — full git history preserved for every one).
+
+**Classification method:** every file in `scripts/` was placed into
+exactly one bucket: (A) still `importlib`-loaded by another non-archived
+script, (B) not imported by anything but a genuinely reusable, ongoing
+tool per its own docstring, (C) a one-time proof/exploratory
+script/single-company-year loader/one-time migration whose result is
+already captured elsewhere (a database row, a `docs/*.md` entry, a
+manifest JSON, an already-recorded decision in this file), or (D) the
+unrelated, uncommitted, in-progress filings-archive work
+(`scripts/161`-`166`) already sitting in the working tree before this
+session began — left untouched, not evaluated further, not mine to
+move.
+
+**Kept in `scripts/` (20 files):** the 13 still-imported files
+(`89_panw_zero_long_term_debt_policy.py`,
+`107_download_accession_locked_filing_any_form.py`, the quarterly
+engine version lineage `118`/`128`/`132`/`136`/`148`/`149`/`150`,
+`120_quarterly_production_schema_load.py`,
+`121_quarterly_batch_runner.py`,
+`139_corrected_warehouse_loader_entry_point_detection.py`,
+`144_warehouse_loader_v2_production.py`), the 1 live reusable tool
+(`170_historical_prices_append.py` — the ongoing D-047 price-append
+mechanism), and the 6 untouched WIP files.
+
+**A documentation defect found and fixed while doing this:**
+`docs/CURRENT_STATE.md`'s PR1 entry claimed `scripts/89` was "now
+archived" — it was briefly archived during D-048's work, then
+**restored** (as D-048's own text, further down the same file, already
+correctly says) because it is a live transitive dependency of
+`scripts/136`/`149`/`150`. The stale first mention was corrected in
+place; `scripts/89` correctly remains in `scripts/`, confirmed by this
+sweep's own mechanical "still imported" check.
+
+**Historical citations not rewritten, by design:** dozens of entries in
+this file (D-020 through D-047) cite one-time scripts by their
+`scripts/NNN_name.py` path as historical evidence of what happened at
+decision time. Those citations were deliberately left as-is rather than
+mass-edited to `archive/scripts/NNN_name.py` — rewriting binding
+historical decision text for a routine file relocation was judged
+higher-risk (transcription error in binding text) than the alternative:
+**if a script cited anywhere in this file by path is not found under
+`scripts/`, check `archive/scripts/` — the filename itself never
+changes, only its folder.**
+
+**Verification:** 110 fast tests pass (0 regressions — this sweep moved
+files only, touched no logic in `src/stock_agent` or any file that
+stayed in `scripts/`). Every remaining `importlib` reference among the
+20 kept files confirmed to resolve to an existing file (no broken
+imports introduced). Both production databases confirmed byte-identical
+(SHA-256) before and after.
+
+This decision was given directly by the user in a live conversation; it
+still requires the user's explicit sign-off to change or extend
+further.
+

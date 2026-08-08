@@ -1,6 +1,26 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-08 (**D-049: D-011's numbered-script workflow
+**Last updated:** 2026-08-08 (**D-050: full `scripts/` sweep at the
+user's explicit request — 136 one-time/historical scripts moved to
+`archive/scripts/` via `git mv`.** `scripts/` went from 156 files to
+**20**: 13 still `importlib`-imported by another live script
+(`89`, `107`, `118`, `120`, `121`, `128`, `132`, `136`, `139`, `144`,
+`148`, `149`, `150`), 1 genuinely-reusable ongoing tool
+(`170_historical_prices_append.py`), and the 6 untouched, unrelated,
+uncommitted filings-archive WIP files (`161`-`166`). Everything else —
+one-off proofs, single-company-year loaders, one-time migrations whose
+result is already captured in a database row, a manifest, or an
+already-recorded decision — archived, never deleted (full git history
+preserved). Also fixed a stale claim in this file's own PR1 entry below
+("`scripts/89` now archived" — it was briefly archived then restored;
+it correctly remains in `scripts/`). Historical `scripts/NNN` citations
+throughout `docs/DECISIONS_LOG.md` were deliberately left unedited — if
+a cited script isn't under `scripts/`, check `archive/scripts/`, same
+filename. **110 fast tests pass, 0 regressions** (file moves only, no
+logic touched); both production databases confirmed byte-identical
+(SHA-256) before/after. Full detail in `docs/DECISIONS_LOG.md` D-050.)
+
+**Previous update:** 2026-08-08 (**D-049: D-011's numbered-script workflow
 fully retired (see `CLAUDE.md`); remaining storage-layer duplication
 integrated into `src/stock_agent`.** `scripts/142_task_marker_guard.py`
 and `scripts/167_versioned_write_guard.py` had been ported into
@@ -108,7 +128,10 @@ table exactly, value and status, zero mismatches.**
 Quarterly: `scripts/148_quarterly_engine_v5_standard_gaap_fallback.py`
 was edited in place (same path/number) to import its logic from the new
 `stock_agent.extraction.quarterly` module instead of importlib-loading
-`scripts/89` (now archived); re-running `scripts/150_v5_final_release_
+`scripts/89` (correction: `scripts/89` was briefly archived during this
+work, then restored — it is a live transitive dependency of
+`scripts/136`/`149`/`150`, none of which are in this PR's edit scope; it
+remains in `scripts/`, not `archive/scripts/`); re-running `scripts/150_v5_final_release_
 regression.py` (unmodified) against the refactored 148 confirmed **45/45
 company-years PASS, 1,080/1,080 rows produced, 0 changed, databases
 unchanged** — byte-identical to the pre-refactor baseline.
