@@ -21,24 +21,28 @@ accessions (AMZN 2020-12-31, CRWD 2021-01-31, GOOGL 2020-12-31, META
 2019-12-31, NVDA 2019-01-27 — identified read-only from `extraction_
 runs`/`sec_filings`, confirmed to carry zero rows of their own in the
 frozen `financial_metric_results` table by design) using ONLY the new
-package. **854 of 900 (accession_number, metric_name) pairs matched
-the live table exactly (value AND status).** The remaining **46 rows
-are a found-and-explained, NOT a fixed, discrepancy**: AMZN's and
-GOOGL's `total_debt`/`adjusted_net_debt`/`invested_capital`/`average_
-invested_capital`/`roic` (for the company-years where the package finds
-the newer D-027 Policy C "direct aggregate" tier) carry the exact same
-numeric value as the live table but a more specific status label
-(`PASS_DIRECT_AGGREGATE`) than what is currently stored
-(`PASS_MATURITY_BASIS`) — because AMZN/GOOGL were never in scripts/92's
-own `TARGET_FILINGS` scope, so their rows were never reprocessed under
-Policy C even though it would return an identical value. Zero rows
-differ in VALUE anywhere in the 900. Per this task's own instruction
-("if there are ANY mismatches... report the specific unresolved
-mismatch precisely... rather than claim false success"), the PR was
-opened as a **draft**, not claimed as a clean PASS, pending the
-orchestrating session's decision on whether this status-label staleness
-should be corrected in production separately (a write, out of this
-read-only task's scope) or accepted as-is.
+package. First pass: 854 of 900 pairs matched exactly, with 46 rows
+(AMZN/GOOGL `total_debt`-family metrics) carrying an identical value
+but a more specific status label (`PASS_DIRECT_AGGREGATE`, from the
+newer D-027 Policy C direct-aggregate tier) than the live table's
+`PASS_MATURITY_BASIS`. Root-caused, not accepted as a known gap: a
+direct query of `extraction_runs.engine_version` for exactly those 46
+rows confirmed they were written by `scripts/79, D-022` — `scripts/92`'s
+own Policy C was only ever run against its bounded 12-filing
+`TARGET_FILINGS` scope, which never included AMZN/GOOGL, so their rows
+were always resolved by scripts/79's earlier, narrower 2-tier precedence
+(GAAP carrying value, then bucket-sum — never the reported Total row
+directly); for AMZN/GOOGL the reported Total happens to equal the
+bucket sum, which is why the value matched but the status didn't.
+Fixed by porting scripts/79's original narrower resolver into
+`policies/debt_total_aggregate.py` alongside both scripts' exact
+historical `TARGET_FILINGS`/`TARGET_FILINGS` scopes, and selecting the
+resolver by accession scope in `metrics.annual.compute_company_year` —
+reproducing exactly which historical script produced each row, not
+"whichever policy tier happens to resolve." **Independently re-run
+after the fix (by the orchestrating session, not just the implementing
+agent): 900 of 900 (accession_number, metric_name) pairs match the live
+table exactly, value and status, zero mismatches.**
 
 Quarterly: `scripts/148_quarterly_engine_v5_standard_gaap_fallback.py`
 was edited in place (same path/number) to import its logic from the new
