@@ -1,0 +1,20 @@
+{
+  "purpose": "Validate EODHD as a candidate delisted-security price source (D-052) using only the public, keyless 'demo' API token -- no signup performed.",
+  "date_tested": "2026-08-08",
+  "methodology_check": {
+    "ticker": "MSFT",
+    "date_range": "2024-01-02 to 2024-01-10",
+    "comparison": "EODHD demo response vs. this project's own historical_prices_daily table (Yahoo-sourced, D-044/D-045)",
+    "result": "MATCH -- max close diff $0.00, max adjusted_close diff $0.0001 (floating-point rounding) across all 7 trading days",
+    "conclusion": "EODHD's raw close and adjusted_close values agree with the project's already-verified Yahoo-sourced data for a still-listed name -- supports EODHD's general data quality, but does NOT test delisted coverage (see below)."
+  },
+  "delisted_coverage_check": {
+    "tested_tickers": ["ATVI.US", "CTXS.US", "MXIM.US", "SPLK.US"],
+    "endpoint": "https://eodhd.com/api/eod/{TICKER}?api_token=demo",
+    "result": "Forbidden (HTTP 403-equivalent body) for every delisted ticker tested",
+    "also_tested": "https://eodhd.com/api/exchange-symbol-list/US?api_token=demo&delisted=1",
+    "also_result": "Forbidden",
+    "conclusion": "The demo token is restricted to a small whitelist of still-listed tickers (confirmed working: AAPL.US, MSFT.US). It CANNOT be used to validate EODHD's actual delisted-security coverage claim -- that requires a real (free-tier) API key. This narrows what 'proceed without signing up' can actually prove: methodology/quality yes, delisted coverage no."
+  },
+  "status": "BLOCKED on delisted-coverage validation specifically -- everything else about EODHD (pricing, documented coverage claims, methodology match on a control ticker) has been checked without signup. A free API key is now required to go further on this specific point."
+}

@@ -4402,3 +4402,17 @@ real account) or its $19.99/mo paid tier if the free rate limit (20
 calls/day) proves too slow — both require the user's explicit approval
 before signup, per this task's own instruction ("do not sign up for or
 pay for anything without asking me first"). Not yet requested/approved.
+
+**Follow-up validation with the public demo token only (no signup,
+`data/eodhd_demo_token_validation.json`)**: a methodology check —
+pulling MSFT 2024-01-02..01-10 through EODHD's `demo` token and diffing
+against this project's own `historical_prices_daily` (Yahoo-sourced) —
+matched almost exactly (max close diff $0.00, max adjusted_close diff
+$0.0001, floating-point rounding). But the demo token turned out to be
+restricted to a small whitelist of still-listed tickers: every one of 4
+delisted tickers tested (ATVI.US, CTXS.US, MXIM.US, SPLK.US) and the
+delisted-symbol-list endpoint itself returned `Forbidden`. **This means
+the demo token can validate EODHD's general data quality but cannot
+validate its actual delisted-coverage claim — that specific check is
+blocked on the free API key signup above**, narrowing what "proceed
+without signing up" can prove any further on this source.
