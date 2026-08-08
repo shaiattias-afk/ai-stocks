@@ -850,3 +850,118 @@ This decision was explicitly pre-authorized by the user as a superseding
 entry for D-042/D-043/D-045/D-046; it still requires the user's explicit
 sign-off to change or extend further.
 
+## D-048 — Engine code restructured into an installable package, `src/stock_agent`; a permanent pytest suite replaces one-off verification scripts (approved, user pre-authorized)
+**Supersedes, for stabilized engine code only, D-011's "create a new
+complete file under `scripts`, preserve the prior version" workflow.**
+D-011 remains binding for exploratory/analysis scripts as before; it no
+longer governs the annual/quarterly XBRL extraction-and-policy engine,
+which now lives in `src/stock_agent/` (an installable Python package,
+`pip install -e .`) with a real `tests/` suite, instead of accumulating
+further copy-paste-and-extend numbered scripts.
+
+**Rationale / origin:** the annual engine had become a 15-script
+copy-paste-and-extend lineage (`scripts/60` → `69` → `79` → `82` → `84`
+→ `87` → `89` → `92` → five further one-off patch scripts `93`-`105`),
+each a near-total duplicate of its predecessor with a small delta
+appended — confirmed, not assumed, by a dedicated research pass before
+any code was moved (every dependency edge, every `TARGET_FILINGS` scope,
+and which specific script actually wrote each of the live 900
+`financial_metric_results` rows was traced directly from
+`extraction_runs.engine_version` and each script's own source, not
+guessed). `scripts/42`-`59` and `scripts/72` (the pre-warehouse
+live-Arelle iteration) were confirmed fully dead — unreferenced by any
+`importlib`/`subprocess` call anywhere in the repository. No test of any
+kind existed anywhere in the project before this decision.
+
+**What changed:**
+1. **`src/stock_agent/`** (`extraction/`, `policies/`, `metrics/`,
+   `warehouse/`, `storage/`, `filings/`) — a pure structural extraction.
+   No formula, threshold, regex, or precedence order was changed; every
+   binding accounting policy D-015 through D-047 remains unchanged and
+   binding. `scripts/148_quarterly_engine_v5_standard_gaap_fallback.py`
+   was edited in place to import `stock_agent.extraction.quarterly`
+   instead of its `importlib.util.spec_from_file_location` hack on
+   `scripts/89`. `scripts/42`-`59`, `72`, and the fully-ported `79, 82,
+   84, 87, 92, 93, 94, 95, 96, 98, 99, 101, 102, 103, 105` were archived
+   to `archive/scripts/` via `git mv` — never deleted. `scripts/89` was
+   restored to `scripts/` after archiving broke a live transitive
+   `importlib` dependency (`scripts/136 ← scripts/149 ← scripts/150`,
+   the quarterly regression harness) — out of this work's edit scope to
+   change. `scripts/60`/`69` (9 of the 20 primary annual metrics — the
+   simpler, always-resolved ones: revenue, net_income, operating_income,
+   pretax_income, income_tax_expense, operating_cash_flow, capex,
+   free_cash_flow, and untouched company-years of
+   stockholders_equity/cash/short_term_investments) remain the source of
+   those metrics, unported — an explicit, disclosed scope boundary, not
+   a silent gap.
+2. **`tests/`** — the project's first real test suite (pytest), 94
+   tests: a permanent golden-regression test (formalizing the throwaway
+   `scripts/171_recompute_annual_company_year.py`), synthetic-fixture
+   unit tests per policy family (including D-017's 4-condition
+   `current_debt=0` proof as an explicit pass/fail parametrized matrix),
+   regression tests for 5 named historical incidents (XBRL instant-date
+   off-by-one, decimals-precision duplicate reconciliation,
+   `ixTransformValueError` handling, Meta's "Income (loss) from
+   operations" label, Micron's bare "Current debt" label), and
+   fail-closed tests (ambiguous evidence → `REVIEW_REQUIRED`, never a
+   guess) across multiple policy modules.
+3. **`derived_metric_results` (405 rows) and
+   `valuation_v1_per_share_inputs` (45 rows) were explicitly left out of
+   scope** — `scripts/153`/`scripts/160`, which produce them, were never
+   ported, so there is no package code to regression-test against them.
+   This is disclosed, not silent.
+
+**Verification (read-only throughout; zero writes to any `.duckdb` file
+in `data/database/` at any point in this work):**
+- **Annual: 900/900** (`accession_number`, `metric_name`) pairs
+  recomputed via `stock_agent` alone match the live
+  `financial_metric_results` table exactly — value AND status — across
+  all 45 approved company-years plus the 5 supplementary prior-fiscal-
+  year accessions. A first pass found 854/900, with 46 rows (AMZN/GOOGL
+  `total_debt`-family) carrying an identical value but a more advanced
+  status label than production actually has; this was treated as a real
+  defect to fix, not an acceptable disclosed gap, per this project's
+  standing "never accept a difference" rule. Root cause, confirmed by
+  directly querying `extraction_runs.engine_version` for exactly those
+  46 rows: they were written by `scripts/79` (D-022), not `scripts/92` —
+  AMZN/GOOGL were never inside `scripts/92`'s own bounded 12-filing
+  `TARGET_FILINGS` scope for its newer Policy C tier. Fixed by porting
+  `scripts/79`'s original, narrower 2-tier resolver alongside both
+  scripts' exact historical `TARGET_FILINGS` scopes, and selecting the
+  resolver by accession scope — reproducing which historical script
+  actually produced each row, not "whichever policy tier happens to
+  resolve." Re-verified: 900/900.
+- **Quarterly: 1,080/1,080** `quarterly_metric_results` rows reproduced
+  exactly, across all 45 company-years, re-running
+  `scripts/150_v5_final_release_regression.py` (unmodified) against the
+  refactored `scripts/148`.
+- **A second real, latent bug was found and fixed by the test suite
+  itself**, independently of the golden-regression work above:
+  `extraction/core.py` defined `ANNUAL_DURATION_MIN_DAYS = 350` but
+  never defined the `ANNUAL_DURATION_MAX_DAYS` constant referenced in
+  the same duration filter, unlike every one of its ~20 source-script
+  ancestors, which always defined both together as 350/380 — a
+  `NameError` waiting to happen on the date-tolerance prior-period
+  matching path, silent only because none of the 45+5 tested
+  company-years happened to exercise that branch. Fixed by restoring the
+  missing constant, exactly matching every source script. Re-verified
+  after the fix: still 900/900 and 1,080/1,080.
+- Every verification step (both the implementing agents' own runs and
+  the orchestrating session's independent re-runs) confirmed
+  `data/database/ai_stock_agent.duckdb` and
+  `data/database/xbrl_warehouse_proof.duckdb` byte-identical (SHA-256)
+  before and after. Final row counts confirmed unchanged:
+  `financial_metric_results`=900, `quarterly_metric_results`=1,080,
+  `derived_metric_results`=405, `valuation_v1_per_share_inputs`=45.
+
+**Two PRs, both opened and merged**: "refactor: extract stock_agent
+package" (PR #2) and "test: policy + golden regression suite" (PR #3),
+both squash-merged into `main` after independent re-verification by the
+orchestrating session (re-running the recomputation and the full pytest
+suite itself, not merely trusting the implementing agent's report).
+
+This decision was explicitly pre-authorized by the user (an autonomous,
+non-interactive stage with pre-authorized D-011 supersession for
+stabilized engine code); it still requires the user's explicit sign-off
+to change or extend further.
+
