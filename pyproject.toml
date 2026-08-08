@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=68", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stock-agent"
+version = "0.1.0"
+description = "AI Stock Agent — structured extraction/policy package (PR1 extraction of scripts/ lineage, no logic changes)"
+requires-python = ">=3.11"
+dependencies = [
+    "duckdb",
+    "pandas",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest",
+]
+
+[tool.setuptools.packages.find]
+where = ["src"]

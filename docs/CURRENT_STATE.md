@@ -1,6 +1,65 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-08 (**D-047: the table-freeze policy (D-042/
+**Last updated:** 2026-08-08 (**PR1 structural extraction opened (not
+merged): `refactor/extract-stock-agent-package`, PR "refactor: extract
+stock_agent package".** Moves the annual/quarterly XBRL policy-engine
+lineage out of the numbered `scripts/` prototypes into an installable
+package, `src/stock_agent/` (`extraction/`, `policies/`, `metrics/`,
+`warehouse/`, `storage/`, `filings/`), with `scripts/171_recompute_
+annual_company_year.py` as the read-only verification script (no
+database writes anywhere in this task; PR2, separately, will formalize
+this into a permanent pytest suite). This is a **pure structural
+move** — no formula, threshold, regex, or precedence order was changed;
+`docs/DECISIONS_LOG.md` D-015 through D-047 remain the binding source
+of truth for every accounting policy, unchanged.
+
+**Verification result (read-only, against the live `data/database/
+ai_stock_agent.duckdb` and `xbrl_warehouse_proof.duckdb`, never
+written to):** recomputed all 20 primary annual metrics for the 45
+approved company-years plus the 5 supplementary prior-fiscal-year
+accessions (AMZN 2020-12-31, CRWD 2021-01-31, GOOGL 2020-12-31, META
+2019-12-31, NVDA 2019-01-27 — identified read-only from `extraction_
+runs`/`sec_filings`, confirmed to carry zero rows of their own in the
+frozen `financial_metric_results` table by design) using ONLY the new
+package. **854 of 900 (accession_number, metric_name) pairs matched
+the live table exactly (value AND status).** The remaining **46 rows
+are a found-and-explained, NOT a fixed, discrepancy**: AMZN's and
+GOOGL's `total_debt`/`adjusted_net_debt`/`invested_capital`/`average_
+invested_capital`/`roic` (for the company-years where the package finds
+the newer D-027 Policy C "direct aggregate" tier) carry the exact same
+numeric value as the live table but a more specific status label
+(`PASS_DIRECT_AGGREGATE`) than what is currently stored
+(`PASS_MATURITY_BASIS`) — because AMZN/GOOGL were never in scripts/92's
+own `TARGET_FILINGS` scope, so their rows were never reprocessed under
+Policy C even though it would return an identical value. Zero rows
+differ in VALUE anywhere in the 900. Per this task's own instruction
+("if there are ANY mismatches... report the specific unresolved
+mismatch precisely... rather than claim false success"), the PR was
+opened as a **draft**, not claimed as a clean PASS, pending the
+orchestrating session's decision on whether this status-label staleness
+should be corrected in production separately (a write, out of this
+read-only task's scope) or accepted as-is.
+
+Quarterly: `scripts/148_quarterly_engine_v5_standard_gaap_fallback.py`
+was edited in place (same path/number) to import its logic from the new
+`stock_agent.extraction.quarterly` module instead of importlib-loading
+`scripts/89` (now archived); re-running `scripts/150_v5_final_release_
+regression.py` (unmodified) against the refactored 148 confirmed **45/45
+company-years PASS, 1,080/1,080 rows produced, 0 changed, databases
+unchanged** — byte-identical to the pre-refactor baseline.
+
+Archived (via `git mv`, never deleted): the confirmed-dead
+`scripts/42`-`scripts/59` and `scripts/72` range, plus the now-
+superseded, fully-ported lineage `scripts/79, 82, 84, 87, 89, 92, 93,
+94, 95, 96, 98, 99, 101, 102, 103, 105` — all now under
+`archive/scripts/`. `scripts/144` (warehouse loader) and `scripts/106`
+onward not in that explicit list are untouched. See the PR description
+for the full module map and the complete verification output.
+
+This entry documents a task result only — no data, policy, or
+production table changed. See the PR for full detail.)
+
+**Previous update:** 2026-08-08 (**D-047: the table-freeze policy (D-042/
 D-043/D-045/D-046) has been replaced, for its "no writes without a new
 engine version" restriction only, by code-enforced versioned
 append-only writes.** New shared module
