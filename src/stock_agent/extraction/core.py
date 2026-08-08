@@ -197,6 +197,7 @@ BUILT_IN_METRICS: dict[str, MetricDefinition] = {
 
 
 ANNUAL_DURATION_MIN_DAYS = 350
+ANNUAL_DURATION_MAX_DAYS = 380
 
 
 def identify_canonical_row(
