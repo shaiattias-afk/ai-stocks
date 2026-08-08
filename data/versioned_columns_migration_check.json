@@ -1,0 +1,84 @@
+{
+  "mode": "check-only",
+  "status": "PASS",
+  "per_table": [
+    {
+      "table": "financial_metric_results",
+      "row_count": 900,
+      "columns_to_add": [
+        "engine_version",
+        "loaded_at",
+        "is_active"
+      ],
+      "already_present_columns": [],
+      "unmatched_backfill_join_rows": 0,
+      "preflight_ok": true
+    },
+    {
+      "table": "quarterly_extraction_runs",
+      "row_count": 45,
+      "columns_to_add": [
+        "loaded_at",
+        "is_active"
+      ],
+      "already_present_columns": [],
+      "unmatched_backfill_join_rows": null,
+      "preflight_ok": true
+    },
+    {
+      "table": "quarterly_metric_results",
+      "row_count": 1080,
+      "columns_to_add": [
+        "engine_version",
+        "loaded_at",
+        "is_active"
+      ],
+      "already_present_columns": [],
+      "unmatched_backfill_join_rows": 0,
+      "preflight_ok": true
+    },
+    {
+      "table": "derived_metric_results",
+      "row_count": 405,
+      "columns_to_add": [
+        "loaded_at",
+        "is_active"
+      ],
+      "already_present_columns": [],
+      "unmatched_backfill_join_rows": null,
+      "preflight_ok": true
+    },
+    {
+      "table": "historical_prices_daily",
+      "row_count": 14913,
+      "columns_to_add": [
+        "engine_version",
+        "loaded_at",
+        "is_active"
+      ],
+      "already_present_columns": [],
+      "unmatched_backfill_join_rows": null,
+      "preflight_ok": true
+    },
+    {
+      "table": "valuation_v1_per_share_inputs",
+      "row_count": 45,
+      "columns_to_add": [
+        "engine_version",
+        "loaded_at",
+        "is_active"
+      ],
+      "already_present_columns": [],
+      "unmatched_backfill_join_rows": null,
+      "preflight_ok": true
+    }
+  ],
+  "global_checks": {
+    "all_preflight_ok": true,
+    "database_unchanged": true
+  },
+  "database_sha256_before": "ddc7fcc85bbcd5fab8c6c06c0a9f2db11f7a989402a3b7a09d9d4c275ecb7d1f",
+  "database_sha256_after": "ddc7fcc85bbcd5fab8c6c06c0a9f2db11f7a989402a3b7a09d9d4c275ecb7d1f",
+  "runtime_seconds": 0.561,
+  "checked_at": "2026-08-08T08:34:19.697Z"
+}

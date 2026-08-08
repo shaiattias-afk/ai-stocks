@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "rows_inserted": 9,
+  "stored_row_count_before": 14913,
+  "row_count_after": 14922,
+  "stored_max_date_before": "2026-08-06",
+  "max_date_after": "2026-08-07",
+  "per_ticker_counts_after": {
+    "GOOGL": 1658,
+    "MSFT": 1658,
+    "META": 1658,
+    "MU": 1658,
+    "ORCL": 1658,
+    "CRWD": 1658,
+    "AMZN": 1658,
+    "PANW": 1658,
+    "NVDA": 1658
+  },
+  "post_checks": {
+    "row_count_correct": true,
+    "no_duplicate_keys": true,
+    "new_rows_carry_append_engine_version": true,
+    "old_rows_engine_version_untouched": true,
+    "max_date_advanced": true
+  },
+  "guard_result": {
+    "table": "historical_prices_daily",
+    "pre_count": 14913,
+    "post_count": 14922,
+    "rows_inserted": 9,
+    "declared_row_delta": 9,
+    "actual_row_delta": 9,
+    "pre_existing_checksum_before": "0486afd277f1d17c2ca74000b49dcc4420dee3881a585f401cf006836e75aa60",
+    "pre_existing_checksum_after": "0486afd277f1d17c2ca74000b49dcc4420dee3881a585f401cf006836e75aa60",
+    "pre_existing_rows_byte_identical": true
+  },
+  "other_tables_row_counts": {
+    "companies": 9,
+    "derived_metric_results": 405,
+    "extraction_runs": 172,
+    "financial_metric_results": 900,
+    "historical_review_items": 222,
+    "quarterly_extraction_runs": 45,
+    "quarterly_metric_results": 1080,
+    "sec_filings": 185,
+    "valuation_v1_per_share_inputs": 45
+  },
+  "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\ai_stock_agent_pre_historical_prices_append_20260808T084046Z.duckdb",
+  "backup_checksum": "26715b87be942329e075a6eae6ba053ee2044a41fd4b2a73e381b4e438e8b361",
+  "completed_at": "2026-08-08T08:40:47.201Z"
+}

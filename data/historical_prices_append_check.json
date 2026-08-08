@@ -1,0 +1,289 @@
+{
+  "mode": "check-only",
+  "status": "PASS",
+  "stored_max_date_before": "2026-08-06",
+  "stored_row_count_before": 14913,
+  "total_new_rows": 9,
+  "per_ticker": [
+    {
+      "ticker": "ORCL",
+      "fetched_rows": 1658,
+      "overlap_rows_checked": 1657,
+      "material_overlap_mismatches": 0,
+      "volume_only_overlap_mismatches": 1,
+      "new_rows": 1,
+      "new_dates": [
+        "2026-08-07"
+      ],
+      "splits_found_in_fresh_fetch": []
+    },
+    {
+      "ticker": "MSFT",
+      "fetched_rows": 1658,
+      "overlap_rows_checked": 1657,
+      "material_overlap_mismatches": 0,
+      "volume_only_overlap_mismatches": 1,
+      "new_rows": 1,
+      "new_dates": [
+        "2026-08-07"
+      ],
+      "splits_found_in_fresh_fetch": []
+    },
+    {
+      "ticker": "META",
+      "fetched_rows": 1658,
+      "overlap_rows_checked": 1657,
+      "material_overlap_mismatches": 0,
+      "volume_only_overlap_mismatches": 1,
+      "new_rows": 1,
+      "new_dates": [
+        "2026-08-07"
+      ],
+      "splits_found_in_fresh_fetch": []
+    },
+    {
+      "ticker": "NVDA",
+      "fetched_rows": 1658,
+      "overlap_rows_checked": 1657,
+      "material_overlap_mismatches": 0,
+      "volume_only_overlap_mismatches": 1,
+      "new_rows": 1,
+      "new_dates": [
+        "2026-08-07"
+      ],
+      "splits_found_in_fresh_fetch": [
+        {
+          "date": "2021-07-20",
+          "numerator": 4.0,
+          "denominator": 1.0,
+          "split_ratio": "4:1"
+        },
+        {
+          "date": "2024-06-10",
+          "numerator": 10.0,
+          "denominator": 1.0,
+          "split_ratio": "10:1"
+        }
+      ]
+    },
+    {
+      "ticker": "GOOGL",
+      "fetched_rows": 1658,
+      "overlap_rows_checked": 1657,
+      "material_overlap_mismatches": 0,
+      "volume_only_overlap_mismatches": 1,
+      "new_rows": 1,
+      "new_dates": [
+        "2026-08-07"
+      ],
+      "splits_found_in_fresh_fetch": [
+        {
+          "date": "2022-07-18",
+          "numerator": 20.0,
+          "denominator": 1.0,
+          "split_ratio": "20:1"
+        }
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "fetched_rows": 1658,
+      "overlap_rows_checked": 1657,
+      "material_overlap_mismatches": 0,
+      "volume_only_overlap_mismatches": 1,
+      "new_rows": 1,
+      "new_dates": [
+        "2026-08-07"
+      ],
+      "splits_found_in_fresh_fetch": [
+        {
+          "date": "2022-06-06",
+          "numerator": 20.0,
+          "denominator": 1.0,
+          "split_ratio": "20:1"
+        }
+      ]
+    },
+    {
+      "ticker": "MU",
+      "fetched_rows": 1658,
+      "overlap_rows_checked": 1657,
+      "material_overlap_mismatches": 0,
+      "volume_only_overlap_mismatches": 1,
+      "new_rows": 1,
+      "new_dates": [
+        "2026-08-07"
+      ],
+      "splits_found_in_fresh_fetch": []
+    },
+    {
+      "ticker": "CRWD",
+      "fetched_rows": 1658,
+      "overlap_rows_checked": 1657,
+      "material_overlap_mismatches": 0,
+      "volume_only_overlap_mismatches": 1,
+      "new_rows": 1,
+      "new_dates": [
+        "2026-08-07"
+      ],
+      "splits_found_in_fresh_fetch": [
+        {
+          "date": "2026-07-02",
+          "numerator": 4.0,
+          "denominator": 1.0,
+          "split_ratio": "4:1"
+        }
+      ]
+    },
+    {
+      "ticker": "PANW",
+      "fetched_rows": 1658,
+      "overlap_rows_checked": 1657,
+      "material_overlap_mismatches": 0,
+      "volume_only_overlap_mismatches": 1,
+      "new_rows": 1,
+      "new_dates": [
+        "2026-08-07"
+      ],
+      "splits_found_in_fresh_fetch": [
+        {
+          "date": "2022-09-14",
+          "numerator": 3.0,
+          "denominator": 1.0,
+          "split_ratio": "3:1"
+        },
+        {
+          "date": "2024-12-16",
+          "numerator": 2.0,
+          "denominator": 1.0,
+          "split_ratio": "2:1"
+        }
+      ]
+    }
+  ],
+  "material_overlap_diffs": [],
+  "volume_only_overlap_diffs": [
+    {
+      "ticker": "ORCL",
+      "date": "2026-08-06",
+      "diffs": [
+        "volume: fresh=23073300 stored=23016900"
+      ]
+    },
+    {
+      "ticker": "MSFT",
+      "date": "2026-08-06",
+      "diffs": [
+        "volume: fresh=36441500 stored=36397900"
+      ]
+    },
+    {
+      "ticker": "META",
+      "date": "2026-08-06",
+      "diffs": [
+        "volume: fresh=11811500 stored=11787600"
+      ]
+    },
+    {
+      "ticker": "NVDA",
+      "date": "2026-08-06",
+      "diffs": [
+        "volume: fresh=113940600 stored=113686000"
+      ]
+    },
+    {
+      "ticker": "GOOGL",
+      "date": "2026-08-06",
+      "diffs": [
+        "volume: fresh=25235900 stored=25186500"
+      ]
+    },
+    {
+      "ticker": "AMZN",
+      "date": "2026-08-06",
+      "diffs": [
+        "volume: fresh=30672900 stored=30627000"
+      ]
+    },
+    {
+      "ticker": "MU",
+      "date": "2026-08-06",
+      "diffs": [
+        "volume: fresh=35784100 stored=35611000"
+      ]
+    },
+    {
+      "ticker": "CRWD",
+      "date": "2026-08-06",
+      "diffs": [
+        "volume: fresh=6911300 stored=6810400"
+      ]
+    },
+    {
+      "ticker": "PANW",
+      "date": "2026-08-06",
+      "diffs": [
+        "volume: fresh=5684200 stored=5681700"
+      ]
+    }
+  ],
+  "new_splits_since_freeze": [],
+  "raw_file_records": [
+    {
+      "ticker": "ORCL",
+      "path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\ORCL\\orcl_chart_raw_append_20260808T084000Z.json",
+      "sha256": "45e97803e94de8f149656be1f9b660f0918a86e88502485d648761527d30a749"
+    },
+    {
+      "ticker": "MSFT",
+      "path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\MSFT\\msft_chart_raw_append_20260808T084002Z.json",
+      "sha256": "70f58aeaca7e58f8ee822d91745f0e3c10eb7bc2418bc756613f29659d4444d1"
+    },
+    {
+      "ticker": "META",
+      "path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\META\\meta_chart_raw_append_20260808T084004Z.json",
+      "sha256": "af8a3a10e98ae8660051d1aa078a0a1a95f6e1fcc77a293b1dff49b6bfbb291f"
+    },
+    {
+      "ticker": "NVDA",
+      "path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\NVDA\\nvda_chart_raw_append_20260808T084006Z.json",
+      "sha256": "8b6c631465eef8084a40278ffe51fabd42a5b871046d3e7a8a1422a82c12338a"
+    },
+    {
+      "ticker": "GOOGL",
+      "path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\GOOGL\\googl_chart_raw_append_20260808T084008Z.json",
+      "sha256": "22c10c2383d722fb9a0f5b62e3cd5282db1317b82ab3f897cb2bdb455468e79a"
+    },
+    {
+      "ticker": "AMZN",
+      "path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\AMZN\\amzn_chart_raw_append_20260808T084010Z.json",
+      "sha256": "6dcd63b4411c367376f1e4a486e1078d6876251f6e25cd0f7e1a326a9c3cac33"
+    },
+    {
+      "ticker": "MU",
+      "path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\MU\\mu_chart_raw_append_20260808T084012Z.json",
+      "sha256": "f7db82221262a3cb5a1d31dbe8b9668e78f789d7c6591a3dd7360da31573bf29"
+    },
+    {
+      "ticker": "CRWD",
+      "path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\CRWD\\crwd_chart_raw_append_20260808T084013Z.json",
+      "sha256": "e7608c86ddc6e0ac639b39e56e9af84fb32b5ad695941790c74ffcb3642a0e6a"
+    },
+    {
+      "ticker": "PANW",
+      "path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\PANW\\panw_chart_raw_append_20260808T084015Z.json",
+      "sha256": "deef076715d7940b1bbed7f0ccbbd01643965fc9bbb057efaae7c34b2d44d814"
+    }
+  ],
+  "global_checks": {
+    "no_material_overlap_mismatches": true,
+    "no_new_splits_since_freeze": true,
+    "all_9_tickers_fetched": true,
+    "has_new_rows": true,
+    "database_unchanged": true
+  },
+  "database_sha256_before": "26715b87be942329e075a6eae6ba053ee2044a41fd4b2a73e381b4e438e8b361",
+  "database_sha256_after": "26715b87be942329e075a6eae6ba053ee2044a41fd4b2a73e381b4e438e8b361",
+  "runtime_seconds": 15.882,
+  "checked_at": "2026-08-08T08:40:15.790Z"
+}
