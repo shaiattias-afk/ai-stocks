@@ -1,6 +1,34 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-08 (**D-050: full `scripts/` sweep at the
+**Last updated:** 2026-08-08 (**FILINGS ARCHIVE V1 IS COMPLETE AND
+ACCEPTANCE-VERIFIED.** The compressed SEC filing archive
+(`data/database/filings_archive.duckdb`) now holds **185 accessions /
+1,277 files** — only the XBRL document set per filing (primary `.htm`,
+`.xsd`, the four linkbases, `FilingSummary.xml`), replacing the prior
+~106-file-per-accession download. **828,354,656 uncompressed bytes →
+59,695,092 compressed (13.9×)**, every file carrying a SHA-256 of its
+uncompressed bytes. Backfilled from the already-locked filings on disk
+in 15.3s — no re-download. Integrity tests PASS: 35 files round-tripped
+byte-identical across 6 accessions, a deliberately corrupted BLOB was
+detected and rejected, a truncated download was rejected.
+**Acceptance proof PASSED (`scripts/166`, run to completion):** the
+entire XBRL warehouse was rebuilt from the ARCHIVE ONLY —
+`data/sec_filings_locked/` never read — for all 185 accessions
+(185/185 `PASS`, 0 failures, 667.6s), then independently re-verified
+read-only against production. **`REPRODUCTION_VERIFIED`: every table,
+every accession, matches exactly** — `xbrl_facts` 225,780,
+`xbrl_contexts` 55,923, `xbrl_units` 1,366, `xbrl_concepts` 225,553,
+`xbrl_labels` 260,411, `xbrl_presentation_relationships` 142,719,
+`xbrl_calculation_relationships` 29,560,
+`xbrl_definition_relationships` 206,403, `xbrl_roles` 24,477. Full
+test suite: 112 passed. The project is therefore now fully
+reproducible from the archive alone; `data/sec_filings_locked/` is
+retained but no longer required by any pipeline. See
+`data/warehouse_rebuild_from_archive_result.json`,
+`data/filings_archive_backfill_result.json`,
+`data/filings_archive_tests_result.json`.)
+
+**Previous update:** 2026-08-08 (**D-050: full `scripts/` sweep at the
 user's explicit request — 136 one-time/historical scripts moved to
 `archive/scripts/` via `git mv`.** `scripts/` went from 156 files to
 **20**: 13 still `importlib`-imported by another live script
