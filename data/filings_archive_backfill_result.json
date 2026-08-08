@@ -1,0 +1,3322 @@
+{
+  "accessions_archived": 185,
+  "accessions_in_archive_total": 185,
+  "files_in_archive_total": 1277,
+  "total_uncompressed_bytes": 828354656,
+  "total_compressed_bytes": 59695092,
+  "elapsed_seconds": 15.306,
+  "results": [
+    {
+      "accession_number": "0001018724-21-000004",
+      "ticker": "AMZN",
+      "report_date": "2020-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4757014,
+      "total_compressed_bytes": 414233,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20201231.htm",
+        "amzn-20201231.xsd",
+        "amzn-20201231_cal.xml",
+        "amzn-20201231_def.xml",
+        "amzn-20201231_lab.xml",
+        "amzn-20201231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-21-000010",
+      "ticker": "AMZN",
+      "report_date": "2021-03-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 2813100,
+      "total_compressed_bytes": 248920,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20210331.htm",
+        "amzn-20210331.xsd",
+        "amzn-20210331_cal.xml",
+        "amzn-20210331_def.xml",
+        "amzn-20210331_lab.xml",
+        "amzn-20210331_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-21-000020",
+      "ticker": "AMZN",
+      "report_date": "2021-06-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3201578,
+      "total_compressed_bytes": 273315,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20210630.htm",
+        "amzn-20210630.xsd",
+        "amzn-20210630_cal.xml",
+        "amzn-20210630_def.xml",
+        "amzn-20210630_lab.xml",
+        "amzn-20210630_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-21-000028",
+      "ticker": "AMZN",
+      "report_date": "2021-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3190095,
+      "total_compressed_bytes": 272485,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20210930.htm",
+        "amzn-20210930.xsd",
+        "amzn-20210930_cal.xml",
+        "amzn-20210930_def.xml",
+        "amzn-20210930_lab.xml",
+        "amzn-20210930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-22-000005",
+      "ticker": "AMZN",
+      "report_date": "2021-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4739038,
+      "total_compressed_bytes": 421670,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20211231.htm",
+        "amzn-20211231.xsd",
+        "amzn-20211231_cal.xml",
+        "amzn-20211231_def.xml",
+        "amzn-20211231_lab.xml",
+        "amzn-20211231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-22-000013",
+      "ticker": "AMZN",
+      "report_date": "2022-03-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3019748,
+      "total_compressed_bytes": 270376,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20220331.htm",
+        "amzn-20220331.xsd",
+        "amzn-20220331_cal.xml",
+        "amzn-20220331_def.xml",
+        "amzn-20220331_lab.xml",
+        "amzn-20220331_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-22-000019",
+      "ticker": "AMZN",
+      "report_date": "2022-06-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3437738,
+      "total_compressed_bytes": 296814,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20220630.htm",
+        "amzn-20220630.xsd",
+        "amzn-20220630_cal.xml",
+        "amzn-20220630_def.xml",
+        "amzn-20220630_lab.xml",
+        "amzn-20220630_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-22-000023",
+      "ticker": "AMZN",
+      "report_date": "2022-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3430136,
+      "total_compressed_bytes": 297325,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20220930.htm",
+        "amzn-20220930.xsd",
+        "amzn-20220930_cal.xml",
+        "amzn-20220930_def.xml",
+        "amzn-20220930_lab.xml",
+        "amzn-20220930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-23-000004",
+      "ticker": "AMZN",
+      "report_date": "2022-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4874373,
+      "total_compressed_bytes": 439291,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20221231.htm",
+        "amzn-20221231.xsd",
+        "amzn-20221231_cal.xml",
+        "amzn-20221231_def.xml",
+        "amzn-20221231_lab.xml",
+        "amzn-20221231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-23-000008",
+      "ticker": "AMZN",
+      "report_date": "2023-03-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3066603,
+      "total_compressed_bytes": 276250,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20230331.htm",
+        "amzn-20230331.xsd",
+        "amzn-20230331_cal.xml",
+        "amzn-20230331_def.xml",
+        "amzn-20230331_lab.xml",
+        "amzn-20230331_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-23-000012",
+      "ticker": "AMZN",
+      "report_date": "2023-06-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3118631,
+      "total_compressed_bytes": 251178,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20230630.htm",
+        "amzn-20230630.xsd",
+        "amzn-20230630_cal.xml",
+        "amzn-20230630_def.xml",
+        "amzn-20230630_lab.xml",
+        "amzn-20230630_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-23-000018",
+      "ticker": "AMZN",
+      "report_date": "2023-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 2951563,
+      "total_compressed_bytes": 237018,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20230930.htm",
+        "amzn-20230930.xsd",
+        "amzn-20230930_cal.xml",
+        "amzn-20230930_def.xml",
+        "amzn-20230930_lab.xml",
+        "amzn-20230930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-24-000008",
+      "ticker": "AMZN",
+      "report_date": "2023-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4480941,
+      "total_compressed_bytes": 371605,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20231231.htm",
+        "amzn-20231231.xsd",
+        "amzn-20231231_cal.xml",
+        "amzn-20231231_def.xml",
+        "amzn-20231231_lab.xml",
+        "amzn-20231231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-24-000083",
+      "ticker": "AMZN",
+      "report_date": "2024-03-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 2772895,
+      "total_compressed_bytes": 238266,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20240331.htm",
+        "amzn-20240331.xsd",
+        "amzn-20240331_cal.xml",
+        "amzn-20240331_def.xml",
+        "amzn-20240331_lab.xml",
+        "amzn-20240331_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-24-000130",
+      "ticker": "AMZN",
+      "report_date": "2024-06-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 2986276,
+      "total_compressed_bytes": 244176,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20240630.htm",
+        "amzn-20240630.xsd",
+        "amzn-20240630_cal.xml",
+        "amzn-20240630_def.xml",
+        "amzn-20240630_lab.xml",
+        "amzn-20240630_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-24-000161",
+      "ticker": "AMZN",
+      "report_date": "2024-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3058019,
+      "total_compressed_bytes": 252606,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20240930.htm",
+        "amzn-20240930.xsd",
+        "amzn-20240930_cal.xml",
+        "amzn-20240930_def.xml",
+        "amzn-20240930_lab.xml",
+        "amzn-20240930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-25-000004",
+      "ticker": "AMZN",
+      "report_date": "2024-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4365677,
+      "total_compressed_bytes": 369473,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20241231.htm",
+        "amzn-20241231.xsd",
+        "amzn-20241231_cal.xml",
+        "amzn-20241231_def.xml",
+        "amzn-20241231_lab.xml",
+        "amzn-20241231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-25-000036",
+      "ticker": "AMZN",
+      "report_date": "2025-03-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 2850588,
+      "total_compressed_bytes": 245493,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20250331.htm",
+        "amzn-20250331.xsd",
+        "amzn-20250331_cal.xml",
+        "amzn-20250331_def.xml",
+        "amzn-20250331_lab.xml",
+        "amzn-20250331_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-25-000086",
+      "ticker": "AMZN",
+      "report_date": "2025-06-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3059133,
+      "total_compressed_bytes": 250169,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20250630.htm",
+        "amzn-20250630.xsd",
+        "amzn-20250630_cal.xml",
+        "amzn-20250630_def.xml",
+        "amzn-20250630_lab.xml",
+        "amzn-20250630_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-25-000123",
+      "ticker": "AMZN",
+      "report_date": "2025-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3141965,
+      "total_compressed_bytes": 259701,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20250930.htm",
+        "amzn-20250930.xsd",
+        "amzn-20250930_cal.xml",
+        "amzn-20250930_def.xml",
+        "amzn-20250930_lab.xml",
+        "amzn-20250930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001018724-26-000004",
+      "ticker": "AMZN",
+      "report_date": "2025-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4529815,
+      "total_compressed_bytes": 382698,
+      "file_names": [
+        "FilingSummary.xml",
+        "amzn-20251231.htm",
+        "amzn-20251231.xsd",
+        "amzn-20251231_cal.xml",
+        "amzn-20251231_def.xml",
+        "amzn-20251231_lab.xml",
+        "amzn-20251231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-21-000007",
+      "ticker": "CRWD",
+      "report_date": "2021-01-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6188344,
+      "total_compressed_bytes": 544937,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20210131.htm",
+        "crwd-20210131.xsd",
+        "crwd-20210131_cal.xml",
+        "crwd-20210131_def.xml",
+        "crwd-20210131_lab.xml",
+        "crwd-20210131_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-21-000013",
+      "ticker": "CRWD",
+      "report_date": "2021-04-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3683624,
+      "total_compressed_bytes": 343546,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20210430.htm",
+        "crwd-20210430.xsd",
+        "crwd-20210430_cal.xml",
+        "crwd-20210430_def.xml",
+        "crwd-20210430_lab.xml",
+        "crwd-20210430_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-21-000022",
+      "ticker": "CRWD",
+      "report_date": "2021-07-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4365344,
+      "total_compressed_bytes": 382343,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20210731.htm",
+        "crwd-20210731.xsd",
+        "crwd-20210731_cal.xml",
+        "crwd-20210731_def.xml",
+        "crwd-20210731_lab.xml",
+        "crwd-20210731_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-21-000028",
+      "ticker": "CRWD",
+      "report_date": "2021-10-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4441798,
+      "total_compressed_bytes": 387962,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20211031.htm",
+        "crwd-20211031.xsd",
+        "crwd-20211031_cal.xml",
+        "crwd-20211031_def.xml",
+        "crwd-20211031_lab.xml",
+        "crwd-20211031_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-22-000006",
+      "ticker": "CRWD",
+      "report_date": "2022-01-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5331229,
+      "total_compressed_bytes": 494756,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20220131.htm",
+        "crwd-20220131.xsd",
+        "crwd-20220131_cal.xml",
+        "crwd-20220131_def.xml",
+        "crwd-20220131_lab.xml",
+        "crwd-20220131_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-22-000012",
+      "ticker": "CRWD",
+      "report_date": "2022-04-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3377555,
+      "total_compressed_bytes": 321553,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20220430.htm",
+        "crwd-20220430.xsd",
+        "crwd-20220430_cal.xml",
+        "crwd-20220430_def.xml",
+        "crwd-20220430_lab.xml",
+        "crwd-20220430_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-22-000018",
+      "ticker": "CRWD",
+      "report_date": "2022-07-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3875962,
+      "total_compressed_bytes": 346827,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20220731.htm",
+        "crwd-20220731.xsd",
+        "crwd-20220731_cal.xml",
+        "crwd-20220731_def.xml",
+        "crwd-20220731_lab.xml",
+        "crwd-20220731_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-22-000025",
+      "ticker": "CRWD",
+      "report_date": "2022-10-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3966791,
+      "total_compressed_bytes": 354089,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20221031.htm",
+        "crwd-20221031.xsd",
+        "crwd-20221031_cal.xml",
+        "crwd-20221031_def.xml",
+        "crwd-20221031_lab.xml",
+        "crwd-20221031_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-23-000008",
+      "ticker": "CRWD",
+      "report_date": "2023-01-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4887113,
+      "total_compressed_bytes": 461424,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20230131.htm",
+        "crwd-20230131.xsd",
+        "crwd-20230131_cal.xml",
+        "crwd-20230131_def.xml",
+        "crwd-20230131_lab.xml",
+        "crwd-20230131_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-23-000014",
+      "ticker": "CRWD",
+      "report_date": "2023-04-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3260293,
+      "total_compressed_bytes": 311692,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20230430.htm",
+        "crwd-20230430.xsd",
+        "crwd-20230430_cal.xml",
+        "crwd-20230430_def.xml",
+        "crwd-20230430_lab.xml",
+        "crwd-20230430_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-23-000020",
+      "ticker": "CRWD",
+      "report_date": "2023-07-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3545173,
+      "total_compressed_bytes": 293720,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20230731.htm",
+        "crwd-20230731.xsd",
+        "crwd-20230731_cal.xml",
+        "crwd-20230731_def.xml",
+        "crwd-20230731_lab.xml",
+        "crwd-20230731_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-23-000026",
+      "ticker": "CRWD",
+      "report_date": "2023-10-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3646861,
+      "total_compressed_bytes": 299778,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20231031.htm",
+        "crwd-20231031.xsd",
+        "crwd-20231031_cal.xml",
+        "crwd-20231031_def.xml",
+        "crwd-20231031_lab.xml",
+        "crwd-20231031_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-24-000007",
+      "ticker": "CRWD",
+      "report_date": "2024-01-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4482480,
+      "total_compressed_bytes": 400257,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20240131.htm",
+        "crwd-20240131.xsd",
+        "crwd-20240131_cal.xml",
+        "crwd-20240131_def.xml",
+        "crwd-20240131_lab.xml",
+        "crwd-20240131_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-24-000013",
+      "ticker": "CRWD",
+      "report_date": "2024-04-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3002420,
+      "total_compressed_bytes": 272036,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20240430.htm",
+        "crwd-20240430.xsd",
+        "crwd-20240430_cal.xml",
+        "crwd-20240430_def.xml",
+        "crwd-20240430_lab.xml",
+        "crwd-20240430_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-24-000020",
+      "ticker": "CRWD",
+      "report_date": "2024-07-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3686994,
+      "total_compressed_bytes": 308951,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20240731.htm",
+        "crwd-20240731.xsd",
+        "crwd-20240731_cal.xml",
+        "crwd-20240731_def.xml",
+        "crwd-20240731_lab.xml",
+        "crwd-20240731_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-24-000026",
+      "ticker": "CRWD",
+      "report_date": "2024-10-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3598180,
+      "total_compressed_bytes": 304322,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20241031.htm",
+        "crwd-20241031.xsd",
+        "crwd-20241031_cal.xml",
+        "crwd-20241031_def.xml",
+        "crwd-20241031_lab.xml",
+        "crwd-20241031_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-25-000009",
+      "ticker": "CRWD",
+      "report_date": "2025-01-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4649024,
+      "total_compressed_bytes": 417368,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20250131.htm",
+        "crwd-20250131.xsd",
+        "crwd-20250131_cal.xml",
+        "crwd-20250131_def.xml",
+        "crwd-20250131_lab.xml",
+        "crwd-20250131_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-25-000019",
+      "ticker": "CRWD",
+      "report_date": "2025-04-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3444959,
+      "total_compressed_bytes": 310159,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20250430.htm",
+        "crwd-20250430.xsd",
+        "crwd-20250430_cal.xml",
+        "crwd-20250430_def.xml",
+        "crwd-20250430_lab.xml",
+        "crwd-20250430_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-25-000025",
+      "ticker": "CRWD",
+      "report_date": "2025-07-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4030557,
+      "total_compressed_bytes": 337593,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20250731.htm",
+        "crwd-20250731.xsd",
+        "crwd-20250731_cal.xml",
+        "crwd-20250731_def.xml",
+        "crwd-20250731_lab.xml",
+        "crwd-20250731_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-25-000033",
+      "ticker": "CRWD",
+      "report_date": "2025-10-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4046323,
+      "total_compressed_bytes": 338609,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20251031.htm",
+        "crwd-20251031.xsd",
+        "crwd-20251031_cal.xml",
+        "crwd-20251031_def.xml",
+        "crwd-20251031_lab.xml",
+        "crwd-20251031_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001535527-26-000010",
+      "ticker": "CRWD",
+      "report_date": "2026-01-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5389048,
+      "total_compressed_bytes": 445979,
+      "file_names": [
+        "FilingSummary.xml",
+        "crwd-20260131.htm",
+        "crwd-20260131.xsd",
+        "crwd-20260131_cal.xml",
+        "crwd-20260131_def.xml",
+        "crwd-20260131_lab.xml",
+        "crwd-20260131_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-21-000010",
+      "ticker": "GOOGL",
+      "report_date": "2020-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5613539,
+      "total_compressed_bytes": 482411,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20201231.htm",
+        "goog-20201231.xsd",
+        "goog-20201231_cal.xml",
+        "goog-20201231_def.xml",
+        "goog-20201231_lab.xml",
+        "goog-20201231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-21-000020",
+      "ticker": "GOOGL",
+      "report_date": "2021-03-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3846020,
+      "total_compressed_bytes": 316969,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20210331.htm",
+        "goog-20210331.xsd",
+        "goog-20210331_cal.xml",
+        "goog-20210331_def.xml",
+        "goog-20210331_lab.xml",
+        "goog-20210331_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-21-000047",
+      "ticker": "GOOGL",
+      "report_date": "2021-06-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4428695,
+      "total_compressed_bytes": 349494,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20210630.htm",
+        "goog-20210630.xsd",
+        "goog-20210630_cal.xml",
+        "goog-20210630_def.xml",
+        "goog-20210630_lab.xml",
+        "goog-20210630_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-21-000057",
+      "ticker": "GOOGL",
+      "report_date": "2021-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4444783,
+      "total_compressed_bytes": 350497,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20210930.htm",
+        "goog-20210930.xsd",
+        "goog-20210930_cal.xml",
+        "goog-20210930_def.xml",
+        "goog-20210930_lab.xml",
+        "goog-20210930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-22-000019",
+      "ticker": "GOOGL",
+      "report_date": "2021-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5362537,
+      "total_compressed_bytes": 466660,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20211231.htm",
+        "goog-20211231.xsd",
+        "goog-20211231_cal.xml",
+        "goog-20211231_def.xml",
+        "goog-20211231_lab.xml",
+        "goog-20211231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-22-000029",
+      "ticker": "GOOGL",
+      "report_date": "2022-03-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3846844,
+      "total_compressed_bytes": 311515,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20220331.htm",
+        "goog-20220331.xsd",
+        "goog-20220331_cal.xml",
+        "goog-20220331_def.xml",
+        "goog-20220331_lab.xml",
+        "goog-20220331_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-22-000071",
+      "ticker": "GOOGL",
+      "report_date": "2022-06-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4440133,
+      "total_compressed_bytes": 347857,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20220630.htm",
+        "goog-20220630.xsd",
+        "goog-20220630_cal.xml",
+        "goog-20220630_def.xml",
+        "goog-20220630_lab.xml",
+        "goog-20220630_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-22-000090",
+      "ticker": "GOOGL",
+      "report_date": "2022-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4517011,
+      "total_compressed_bytes": 354893,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20220930.htm",
+        "goog-20220930.xsd",
+        "goog-20220930_cal.xml",
+        "goog-20220930_def.xml",
+        "goog-20220930_lab.xml",
+        "goog-20220930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-23-000016",
+      "ticker": "GOOGL",
+      "report_date": "2022-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5402589,
+      "total_compressed_bytes": 467923,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20221231.htm",
+        "goog-20221231.xsd",
+        "goog-20221231_cal.xml",
+        "goog-20221231_def.xml",
+        "goog-20221231_lab.xml",
+        "goog-20221231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-23-000045",
+      "ticker": "GOOGL",
+      "report_date": "2023-03-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3981836,
+      "total_compressed_bytes": 327113,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20230331.htm",
+        "goog-20230331.xsd",
+        "goog-20230331_cal.xml",
+        "goog-20230331_def.xml",
+        "goog-20230331_lab.xml",
+        "goog-20230331_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-23-000070",
+      "ticker": "GOOGL",
+      "report_date": "2023-06-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4164578,
+      "total_compressed_bytes": 293439,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20230630.htm",
+        "goog-20230630.xsd",
+        "goog-20230630_cal.xml",
+        "goog-20230630_def.xml",
+        "goog-20230630_lab.xml",
+        "goog-20230630_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-23-000094",
+      "ticker": "GOOGL",
+      "report_date": "2023-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4157200,
+      "total_compressed_bytes": 291740,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20230930.htm",
+        "goog-20230930.xsd",
+        "goog-20230930_cal.xml",
+        "goog-20230930_def.xml",
+        "goog-20230930_lab.xml",
+        "goog-20230930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-24-000022",
+      "ticker": "GOOGL",
+      "report_date": "2023-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4801458,
+      "total_compressed_bytes": 388607,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20231231.htm",
+        "goog-20231231.xsd",
+        "goog-20231231_cal.xml",
+        "goog-20231231_def.xml",
+        "goog-20231231_lab.xml",
+        "goog-20231231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-24-000053",
+      "ticker": "GOOGL",
+      "report_date": "2024-03-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3301204,
+      "total_compressed_bytes": 254193,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20240331.htm",
+        "goog-20240331.xsd",
+        "goog-20240331_cal.xml",
+        "goog-20240331_def.xml",
+        "goog-20240331_lab.xml",
+        "goog-20240331_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-24-000079",
+      "ticker": "GOOGL",
+      "report_date": "2024-06-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3881173,
+      "total_compressed_bytes": 275796,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20240630.htm",
+        "goog-20240630.xsd",
+        "goog-20240630_cal.xml",
+        "goog-20240630_def.xml",
+        "goog-20240630_lab.xml",
+        "goog-20240630_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-24-000118",
+      "ticker": "GOOGL",
+      "report_date": "2024-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3924714,
+      "total_compressed_bytes": 283082,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20240930.htm",
+        "goog-20240930.xsd",
+        "goog-20240930_cal.xml",
+        "goog-20240930_def.xml",
+        "goog-20240930_lab.xml",
+        "goog-20240930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-25-000014",
+      "ticker": "GOOGL",
+      "report_date": "2024-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4906045,
+      "total_compressed_bytes": 401843,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20241231.htm",
+        "goog-20241231.xsd",
+        "goog-20241231_cal.xml",
+        "goog-20241231_def.xml",
+        "goog-20241231_lab.xml",
+        "goog-20241231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-25-000043",
+      "ticker": "GOOGL",
+      "report_date": "2025-03-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3665947,
+      "total_compressed_bytes": 282668,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20250331.htm",
+        "goog-20250331.xsd",
+        "goog-20250331_cal.xml",
+        "goog-20250331_def.xml",
+        "goog-20250331_lab.xml",
+        "goog-20250331_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-25-000062",
+      "ticker": "GOOGL",
+      "report_date": "2025-06-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4342629,
+      "total_compressed_bytes": 310717,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20250630.htm",
+        "goog-20250630.xsd",
+        "goog-20250630_cal.xml",
+        "goog-20250630_def.xml",
+        "goog-20250630_lab.xml",
+        "goog-20250630_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-25-000091",
+      "ticker": "GOOGL",
+      "report_date": "2025-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4348305,
+      "total_compressed_bytes": 314129,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20250930.htm",
+        "goog-20250930.xsd",
+        "goog-20250930_cal.xml",
+        "goog-20250930_def.xml",
+        "goog-20250930_lab.xml",
+        "goog-20250930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001652044-26-000018",
+      "ticker": "GOOGL",
+      "report_date": "2025-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5235086,
+      "total_compressed_bytes": 421811,
+      "file_names": [
+        "FilingSummary.xml",
+        "goog-20251231.htm",
+        "goog-20251231.xsd",
+        "goog-20251231_cal.xml",
+        "goog-20251231_def.xml",
+        "goog-20251231_lab.xml",
+        "goog-20251231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-20-000013",
+      "ticker": "META",
+      "report_date": "2019-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4867832,
+      "total_compressed_bytes": 354304,
+      "file_names": [
+        "FilingSummary.xml",
+        "fb-12312019x10k.htm",
+        "fb-20191231.xsd",
+        "fb-20191231_cal.xml",
+        "fb-20191231_def.xml",
+        "fb-20191231_lab.xml",
+        "fb-20191231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-20-000048",
+      "ticker": "META",
+      "report_date": "2020-03-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3057834,
+      "total_compressed_bytes": 256032,
+      "file_names": [
+        "FilingSummary.xml",
+        "fb-03312020x10q.htm",
+        "fb-20200331.xsd",
+        "fb-20200331_cal.xml",
+        "fb-20200331_def.xml",
+        "fb-20200331_lab.xml",
+        "fb-20200331_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-20-000076",
+      "ticker": "META",
+      "report_date": "2020-06-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3454431,
+      "total_compressed_bytes": 264806,
+      "file_names": [
+        "FilingSummary.xml",
+        "fb-06302020x10q.htm",
+        "fb-20200630.xsd",
+        "fb-20200630_cal.xml",
+        "fb-20200630_def.xml",
+        "fb-20200630_lab.xml",
+        "fb-20200630_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-20-000084",
+      "ticker": "META",
+      "report_date": "2020-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3548157,
+      "total_compressed_bytes": 275410,
+      "file_names": [
+        "FilingSummary.xml",
+        "fb-09302020x10q.htm",
+        "fb-20200930.xsd",
+        "fb-20200930_cal.xml",
+        "fb-20200930_def.xml",
+        "fb-20200930_lab.xml",
+        "fb-20200930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-21-000014",
+      "ticker": "META",
+      "report_date": "2020-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4507843,
+      "total_compressed_bytes": 397979,
+      "file_names": [
+        "FilingSummary.xml",
+        "fb-20201231.htm",
+        "fb-20201231.xsd",
+        "fb-20201231_cal.xml",
+        "fb-20201231_def.xml",
+        "fb-20201231_lab.xml",
+        "fb-20201231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-21-000033",
+      "ticker": "META",
+      "report_date": "2021-03-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 2823861,
+      "total_compressed_bytes": 269000,
+      "file_names": [
+        "FilingSummary.xml",
+        "fb-20210331.htm",
+        "fb-20210331.xsd",
+        "fb-20210331_cal.xml",
+        "fb-20210331_def.xml",
+        "fb-20210331_lab.xml",
+        "fb-20210331_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-21-000049",
+      "ticker": "META",
+      "report_date": "2021-06-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3161042,
+      "total_compressed_bytes": 284007,
+      "file_names": [
+        "FilingSummary.xml",
+        "fb-20210630.htm",
+        "fb-20210630.xsd",
+        "fb-20210630_cal.xml",
+        "fb-20210630_def.xml",
+        "fb-20210630_lab.xml",
+        "fb-20210630_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-21-000065",
+      "ticker": "META",
+      "report_date": "2021-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3249487,
+      "total_compressed_bytes": 293756,
+      "file_names": [
+        "FilingSummary.xml",
+        "fb-20210930.htm",
+        "fb-20210930.xsd",
+        "fb-20210930_cal.xml",
+        "fb-20210930_def.xml",
+        "fb-20210930_lab.xml",
+        "fb-20210930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-22-000018",
+      "ticker": "META",
+      "report_date": "2021-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4305681,
+      "total_compressed_bytes": 392908,
+      "file_names": [
+        "FilingSummary.xml",
+        "fb-20211231.htm",
+        "fb-20211231.xsd",
+        "fb-20211231_cal.xml",
+        "fb-20211231_def.xml",
+        "fb-20211231_lab.xml",
+        "fb-20211231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-22-000057",
+      "ticker": "META",
+      "report_date": "2022-03-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3261096,
+      "total_compressed_bytes": 298801,
+      "file_names": [
+        "FilingSummary.xml",
+        "meta-20220331.htm",
+        "meta-20220331.xsd",
+        "meta-20220331_cal.xml",
+        "meta-20220331_def.xml",
+        "meta-20220331_lab.xml",
+        "meta-20220331_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-22-000082",
+      "ticker": "META",
+      "report_date": "2022-06-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3730421,
+      "total_compressed_bytes": 326513,
+      "file_names": [
+        "FilingSummary.xml",
+        "meta-20220630.htm",
+        "meta-20220630.xsd",
+        "meta-20220630_cal.xml",
+        "meta-20220630_def.xml",
+        "meta-20220630_lab.xml",
+        "meta-20220630_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-22-000108",
+      "ticker": "META",
+      "report_date": "2022-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3888695,
+      "total_compressed_bytes": 344028,
+      "file_names": [
+        "FilingSummary.xml",
+        "meta-20220930.htm",
+        "meta-20220930.xsd",
+        "meta-20220930_cal.xml",
+        "meta-20220930_def.xml",
+        "meta-20220930_lab.xml",
+        "meta-20220930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-23-000013",
+      "ticker": "META",
+      "report_date": "2022-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4940165,
+      "total_compressed_bytes": 452417,
+      "file_names": [
+        "FilingSummary.xml",
+        "meta-20221231.htm",
+        "meta-20221231.xsd",
+        "meta-20221231_cal.xml",
+        "meta-20221231_def.xml",
+        "meta-20221231_lab.xml",
+        "meta-20221231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-23-000067",
+      "ticker": "META",
+      "report_date": "2023-03-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3788533,
+      "total_compressed_bytes": 345083,
+      "file_names": [
+        "FilingSummary.xml",
+        "meta-20230331.htm",
+        "meta-20230331.xsd",
+        "meta-20230331_cal.xml",
+        "meta-20230331_def.xml",
+        "meta-20230331_lab.xml",
+        "meta-20230331_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-23-000093",
+      "ticker": "META",
+      "report_date": "2023-06-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3869455,
+      "total_compressed_bytes": 317731,
+      "file_names": [
+        "FilingSummary.xml",
+        "meta-20230630.htm",
+        "meta-20230630.xsd",
+        "meta-20230630_cal.xml",
+        "meta-20230630_def.xml",
+        "meta-20230630_lab.xml",
+        "meta-20230630_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-23-000103",
+      "ticker": "META",
+      "report_date": "2023-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3898686,
+      "total_compressed_bytes": 320063,
+      "file_names": [
+        "FilingSummary.xml",
+        "meta-20230930.htm",
+        "meta-20230930.xsd",
+        "meta-20230930_cal.xml",
+        "meta-20230930_def.xml",
+        "meta-20230930_lab.xml",
+        "meta-20230930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-24-000012",
+      "ticker": "META",
+      "report_date": "2023-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4642870,
+      "total_compressed_bytes": 403339,
+      "file_names": [
+        "FilingSummary.xml",
+        "meta-20231231.htm",
+        "meta-20231231.xsd",
+        "meta-20231231_cal.xml",
+        "meta-20231231_def.xml",
+        "meta-20231231_lab.xml",
+        "meta-20231231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-24-000049",
+      "ticker": "META",
+      "report_date": "2024-03-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 2962966,
+      "total_compressed_bytes": 269366,
+      "file_names": [
+        "FilingSummary.xml",
+        "meta-20240331.htm",
+        "meta-20240331.xsd",
+        "meta-20240331_cal.xml",
+        "meta-20240331_def.xml",
+        "meta-20240331_lab.xml",
+        "meta-20240331_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-24-000069",
+      "ticker": "META",
+      "report_date": "2024-06-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3288355,
+      "total_compressed_bytes": 283347,
+      "file_names": [
+        "FilingSummary.xml",
+        "meta-20240630.htm",
+        "meta-20240630.xsd",
+        "meta-20240630_cal.xml",
+        "meta-20240630_def.xml",
+        "meta-20240630_lab.xml",
+        "meta-20240630_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-24-000081",
+      "ticker": "META",
+      "report_date": "2024-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3365889,
+      "total_compressed_bytes": 289348,
+      "file_names": [
+        "FilingSummary.xml",
+        "meta-20240930.htm",
+        "meta-20240930.xsd",
+        "meta-20240930_cal.xml",
+        "meta-20240930_def.xml",
+        "meta-20240930_lab.xml",
+        "meta-20240930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001326801-25-000017",
+      "ticker": "META",
+      "report_date": "2024-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4382868,
+      "total_compressed_bytes": 397153,
+      "file_names": [
+        "FilingSummary.xml",
+        "meta-20241231.htm",
+        "meta-20241231.xsd",
+        "meta-20241231_cal.xml",
+        "meta-20241231_def.xml",
+        "meta-20241231_lab.xml",
+        "meta-20241231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000950170-23-014423",
+      "ticker": "MSFT",
+      "report_date": "2023-03-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 9770146,
+      "total_compressed_bytes": 371551,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-20230331.htm",
+        "msft-20230331.xsd",
+        "msft-20230331_cal.xml",
+        "msft-20230331_def.xml",
+        "msft-20230331_lab.xml",
+        "msft-20230331_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000950170-23-035122",
+      "ticker": "MSFT",
+      "report_date": "2023-06-30",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 12037883,
+      "total_compressed_bytes": 500419,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-20230630.htm",
+        "msft-20230630.xsd",
+        "msft-20230630_cal.xml",
+        "msft-20230630_def.xml",
+        "msft-20230630_lab.xml",
+        "msft-20230630_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000950170-23-054855",
+      "ticker": "MSFT",
+      "report_date": "2023-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6448454,
+      "total_compressed_bytes": 300880,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-20230930.htm",
+        "msft-20230930.xsd",
+        "msft-20230930_cal.xml",
+        "msft-20230930_def.xml",
+        "msft-20230930_lab.xml",
+        "msft-20230930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000950170-24-008814",
+      "ticker": "MSFT",
+      "report_date": "2023-12-31",
+      "form": "10-Q",
+      "file_count": 3,
+      "total_uncompressed_bytes": 7284391,
+      "total_compressed_bytes": 339326,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-20231231.htm",
+        "msft-20231231.xsd"
+      ]
+    },
+    {
+      "accession_number": "0000950170-24-048288",
+      "ticker": "MSFT",
+      "report_date": "2024-03-31",
+      "form": "10-Q",
+      "file_count": 3,
+      "total_uncompressed_bytes": 7343717,
+      "total_compressed_bytes": 348126,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-20240331.htm",
+        "msft-20240331.xsd"
+      ]
+    },
+    {
+      "accession_number": "0000950170-24-087843",
+      "ticker": "MSFT",
+      "report_date": "2024-06-30",
+      "form": "10-K",
+      "file_count": 3,
+      "total_uncompressed_bytes": 9033898,
+      "total_compressed_bytes": 467652,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-20240630.htm",
+        "msft-20240630.xsd"
+      ]
+    },
+    {
+      "accession_number": "0001564590-19-037549",
+      "ticker": "MSFT",
+      "report_date": "2019-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5291832,
+      "total_compressed_bytes": 235564,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-10q_20190930.htm",
+        "msft-20190930.xsd",
+        "msft-20190930_cal.xml",
+        "msft-20190930_def.xml",
+        "msft-20190930_lab.xml",
+        "msft-20190930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-20-002450",
+      "ticker": "MSFT",
+      "report_date": "2019-12-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6562274,
+      "total_compressed_bytes": 266219,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-10q_20191231.htm",
+        "msft-20191231.xsd",
+        "msft-20191231_cal.xml",
+        "msft-20191231_def.xml",
+        "msft-20191231_lab.xml",
+        "msft-20191231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-20-019706",
+      "ticker": "MSFT",
+      "report_date": "2020-03-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6636221,
+      "total_compressed_bytes": 272307,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-10q_20200331.htm",
+        "msft-20200331.xsd",
+        "msft-20200331_cal.xml",
+        "msft-20200331_def.xml",
+        "msft-20200331_lab.xml",
+        "msft-20200331_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-20-034944",
+      "ticker": "MSFT",
+      "report_date": "2020-06-30",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 8729502,
+      "total_compressed_bytes": 387393,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-10k_20200630.htm",
+        "msft-20200630.xsd",
+        "msft-20200630_cal.xml",
+        "msft-20200630_def.xml",
+        "msft-20200630_lab.xml",
+        "msft-20200630_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-20-047996",
+      "ticker": "MSFT",
+      "report_date": "2020-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5450709,
+      "total_compressed_bytes": 246150,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-10q_20200930.htm",
+        "msft-20200930.xsd",
+        "msft-20200930_cal.xml",
+        "msft-20200930_def.xml",
+        "msft-20200930_lab.xml",
+        "msft-20200930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-21-002316",
+      "ticker": "MSFT",
+      "report_date": "2020-12-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6638852,
+      "total_compressed_bytes": 276039,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-10q_20201231.htm",
+        "msft-20201231.xsd",
+        "msft-20201231_cal.xml",
+        "msft-20201231_def.xml",
+        "msft-20201231_lab.xml",
+        "msft-20201231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-21-020891",
+      "ticker": "MSFT",
+      "report_date": "2021-03-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6961596,
+      "total_compressed_bytes": 291945,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-10q_20210331.htm",
+        "msft-20210331.xsd",
+        "msft-20210331_cal.xml",
+        "msft-20210331_def.xml",
+        "msft-20210331_lab.xml",
+        "msft-20210331_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-21-039151",
+      "ticker": "MSFT",
+      "report_date": "2021-06-30",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 8419047,
+      "total_compressed_bytes": 387246,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-10k_20210630.htm",
+        "msft-20210630.xsd",
+        "msft-20210630_cal.xml",
+        "msft-20210630_def.xml",
+        "msft-20210630_lab.xml",
+        "msft-20210630_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-21-051992",
+      "ticker": "MSFT",
+      "report_date": "2021-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5559671,
+      "total_compressed_bytes": 253947,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-10q_20210930.htm",
+        "msft-20210930.xsd",
+        "msft-20210930_cal.xml",
+        "msft-20210930_def.xml",
+        "msft-20210930_lab.xml",
+        "msft-20210930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-22-002324",
+      "ticker": "MSFT",
+      "report_date": "2021-12-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6776359,
+      "total_compressed_bytes": 286291,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-10q_20211231.htm",
+        "msft-20211231.xsd",
+        "msft-20211231_cal.xml",
+        "msft-20211231_def.xml",
+        "msft-20211231_lab.xml",
+        "msft-20211231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-22-015675",
+      "ticker": "MSFT",
+      "report_date": "2022-03-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6885582,
+      "total_compressed_bytes": 292094,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-10q_20220331.htm",
+        "msft-20220331.xsd",
+        "msft-20220331_cal.xml",
+        "msft-20220331_def.xml",
+        "msft-20220331_lab.xml",
+        "msft-20220331_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-22-026876",
+      "ticker": "MSFT",
+      "report_date": "2022-06-30",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 8276800,
+      "total_compressed_bytes": 384341,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-10k_20220630.htm",
+        "msft-20220630.xsd",
+        "msft-20220630_cal.xml",
+        "msft-20220630_def.xml",
+        "msft-20220630_lab.xml",
+        "msft-20220630_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-22-035087",
+      "ticker": "MSFT",
+      "report_date": "2022-09-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5594289,
+      "total_compressed_bytes": 258095,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-10q_20220930.htm",
+        "msft-20220930.xsd",
+        "msft-20220930_cal.xml",
+        "msft-20220930_def.xml",
+        "msft-20220930_lab.xml",
+        "msft-20220930_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-23-000733",
+      "ticker": "MSFT",
+      "report_date": "2022-12-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6888015,
+      "total_compressed_bytes": 291178,
+      "file_names": [
+        "FilingSummary.xml",
+        "msft-10q_20221231.htm",
+        "msft-20221231.xsd",
+        "msft-20221231_cal.xml",
+        "msft-20221231_def.xml",
+        "msft-20221231_lab.xml",
+        "msft-20221231_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-21-000012",
+      "ticker": "MU",
+      "report_date": "2020-12-03",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3010492,
+      "total_compressed_bytes": 278768,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20201203.htm",
+        "mu-20201203.xsd",
+        "mu-20201203_cal.xml",
+        "mu-20201203_def.xml",
+        "mu-20201203_lab.xml",
+        "mu-20201203_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-21-000032",
+      "ticker": "MU",
+      "report_date": "2021-03-04",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3594211,
+      "total_compressed_bytes": 321390,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20210304.htm",
+        "mu-20210304.xsd",
+        "mu-20210304_cal.xml",
+        "mu-20210304_def.xml",
+        "mu-20210304_lab.xml",
+        "mu-20210304_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-21-000052",
+      "ticker": "MU",
+      "report_date": "2021-06-03",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3976823,
+      "total_compressed_bytes": 351948,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20210603.htm",
+        "mu-20210603.xsd",
+        "mu-20210603_cal.xml",
+        "mu-20210603_def.xml",
+        "mu-20210603_lab.xml",
+        "mu-20210603_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-21-000065",
+      "ticker": "MU",
+      "report_date": "2021-09-02",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5485878,
+      "total_compressed_bytes": 500290,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20210902.htm",
+        "mu-20210902.xsd",
+        "mu-20210902_cal.xml",
+        "mu-20210902_def.xml",
+        "mu-20210902_lab.xml",
+        "mu-20210902_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-22-000004",
+      "ticker": "MU",
+      "report_date": "2021-12-02",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3288167,
+      "total_compressed_bytes": 306062,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20211202.htm",
+        "mu-20211202.xsd",
+        "mu-20211202_cal.xml",
+        "mu-20211202_def.xml",
+        "mu-20211202_lab.xml",
+        "mu-20211202_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-22-000016",
+      "ticker": "MU",
+      "report_date": "2022-03-03",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3701853,
+      "total_compressed_bytes": 331648,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20220303.htm",
+        "mu-20220303.xsd",
+        "mu-20220303_cal.xml",
+        "mu-20220303_def.xml",
+        "mu-20220303_lab.xml",
+        "mu-20220303_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-22-000036",
+      "ticker": "MU",
+      "report_date": "2022-06-02",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3827878,
+      "total_compressed_bytes": 337828,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20220602.htm",
+        "mu-20220602.xsd",
+        "mu-20220602_cal.xml",
+        "mu-20220602_def.xml",
+        "mu-20220602_lab.xml",
+        "mu-20220602_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-22-000048",
+      "ticker": "MU",
+      "report_date": "2022-09-01",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5430063,
+      "total_compressed_bytes": 489687,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20220901.htm",
+        "mu-20220901.xsd",
+        "mu-20220901_cal.xml",
+        "mu-20220901_def.xml",
+        "mu-20220901_lab.xml",
+        "mu-20220901_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-22-000072",
+      "ticker": "MU",
+      "report_date": "2022-12-01",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3218755,
+      "total_compressed_bytes": 294637,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20221201.htm",
+        "mu-20221201.xsd",
+        "mu-20221201_cal.xml",
+        "mu-20221201_def.xml",
+        "mu-20221201_lab.xml",
+        "mu-20221201_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-23-000022",
+      "ticker": "MU",
+      "report_date": "2023-03-02",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3313787,
+      "total_compressed_bytes": 282952,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20230302.htm",
+        "mu-20230302.xsd",
+        "mu-20230302_cal.xml",
+        "mu-20230302_def.xml",
+        "mu-20230302_lab.xml",
+        "mu-20230302_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-23-000041",
+      "ticker": "MU",
+      "report_date": "2023-06-01",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3456070,
+      "total_compressed_bytes": 290391,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20230601.htm",
+        "mu-20230601.xsd",
+        "mu-20230601_cal.xml",
+        "mu-20230601_def.xml",
+        "mu-20230601_lab.xml",
+        "mu-20230601_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-23-000054",
+      "ticker": "MU",
+      "report_date": "2023-08-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4994983,
+      "total_compressed_bytes": 420454,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20230831.htm",
+        "mu-20230831.xsd",
+        "mu-20230831_cal.xml",
+        "mu-20230831_def.xml",
+        "mu-20230831_lab.xml",
+        "mu-20230831_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-23-000077",
+      "ticker": "MU",
+      "report_date": "2023-11-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 2904745,
+      "total_compressed_bytes": 244251,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20231130.htm",
+        "mu-20231130.xsd",
+        "mu-20231130_cal.xml",
+        "mu-20231130_def.xml",
+        "mu-20231130_lab.xml",
+        "mu-20231130_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-24-000007",
+      "ticker": "MU",
+      "report_date": "2024-02-29",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3308706,
+      "total_compressed_bytes": 269150,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20240229.htm",
+        "mu-20240229.xsd",
+        "mu-20240229_cal.xml",
+        "mu-20240229_def.xml",
+        "mu-20240229_lab.xml",
+        "mu-20240229_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-24-000019",
+      "ticker": "MU",
+      "report_date": "2024-05-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3399779,
+      "total_compressed_bytes": 272063,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20240530.htm",
+        "mu-20240530.xsd",
+        "mu-20240530_cal.xml",
+        "mu-20240530_def.xml",
+        "mu-20240530_lab.xml",
+        "mu-20240530_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-24-000027",
+      "ticker": "MU",
+      "report_date": "2024-08-29",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4811470,
+      "total_compressed_bytes": 412320,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20240829.htm",
+        "mu-20240829.xsd",
+        "mu-20240829_cal.xml",
+        "mu-20240829_def.xml",
+        "mu-20240829_lab.xml",
+        "mu-20240829_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-24-000047",
+      "ticker": "MU",
+      "report_date": "2024-11-28",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 2946033,
+      "total_compressed_bytes": 256836,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20241128.htm",
+        "mu-20241128.xsd",
+        "mu-20241128_cal.xml",
+        "mu-20241128_def.xml",
+        "mu-20241128_lab.xml",
+        "mu-20241128_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-25-000009",
+      "ticker": "MU",
+      "report_date": "2025-02-27",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3364756,
+      "total_compressed_bytes": 279082,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20250227.htm",
+        "mu-20250227.xsd",
+        "mu-20250227_cal.xml",
+        "mu-20250227_def.xml",
+        "mu-20250227_lab.xml",
+        "mu-20250227_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-25-000021",
+      "ticker": "MU",
+      "report_date": "2025-05-29",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3473774,
+      "total_compressed_bytes": 285276,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20250529.htm",
+        "mu-20250529.xsd",
+        "mu-20250529_cal.xml",
+        "mu-20250529_def.xml",
+        "mu-20250529_lab.xml",
+        "mu-20250529_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000723125-25-000028",
+      "ticker": "MU",
+      "report_date": "2025-08-28",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5085016,
+      "total_compressed_bytes": 432035,
+      "file_names": [
+        "FilingSummary.xml",
+        "mu-20250828.htm",
+        "mu-20250828.xsd",
+        "mu-20250828_cal.xml",
+        "mu-20250828_def.xml",
+        "mu-20250828_lab.xml",
+        "mu-20250828_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001045810-19-000023",
+      "ticker": "NVDA",
+      "report_date": "2019-01-27",
+      "form": "10-K",
+      "file_count": 8,
+      "total_uncompressed_bytes": 6893376,
+      "total_compressed_bytes": 432999,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20190127.xml",
+        "nvda-20190127.xsd",
+        "nvda-20190127_cal.xml",
+        "nvda-20190127_def.xml",
+        "nvda-20190127_lab.xml",
+        "nvda-20190127_pre.xml",
+        "nvda-2019x10k.htm"
+      ]
+    },
+    {
+      "accession_number": "0001045810-19-000079",
+      "ticker": "NVDA",
+      "report_date": "2019-04-28",
+      "form": "10-Q",
+      "file_count": 8,
+      "total_uncompressed_bytes": 3814868,
+      "total_compressed_bytes": 226893,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20190428.xml",
+        "nvda-20190428.xsd",
+        "nvda-20190428_cal.xml",
+        "nvda-20190428_def.xml",
+        "nvda-20190428_lab.xml",
+        "nvda-20190428_pre.xml",
+        "nvda2020q110q.htm"
+      ]
+    },
+    {
+      "accession_number": "0001045810-19-000144",
+      "ticker": "NVDA",
+      "report_date": "2019-07-28",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3029221,
+      "total_compressed_bytes": 203907,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20190728.xsd",
+        "nvda-20190728_cal.xml",
+        "nvda-20190728_def.xml",
+        "nvda-20190728_lab.xml",
+        "nvda-20190728_pre.xml",
+        "nvda2020q210q.htm"
+      ]
+    },
+    {
+      "accession_number": "0001045810-19-000170",
+      "ticker": "NVDA",
+      "report_date": "2019-10-27",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3049397,
+      "total_compressed_bytes": 211725,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20191027.xsd",
+        "nvda-20191027_cal.xml",
+        "nvda-20191027_def.xml",
+        "nvda-20191027_lab.xml",
+        "nvda-20191027_pre.xml",
+        "nvda2020q310q.htm"
+      ]
+    },
+    {
+      "accession_number": "0001045810-20-000010",
+      "ticker": "NVDA",
+      "report_date": "2020-01-26",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4603359,
+      "total_compressed_bytes": 342544,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20200126.xsd",
+        "nvda-20200126_cal.xml",
+        "nvda-20200126_def.xml",
+        "nvda-20200126_lab.xml",
+        "nvda-20200126_pre.xml",
+        "nvda-2020x10k.htm"
+      ]
+    },
+    {
+      "accession_number": "0001045810-20-000065",
+      "ticker": "NVDA",
+      "report_date": "2020-04-26",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 2833034,
+      "total_compressed_bytes": 217879,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20200426.htm",
+        "nvda-20200426.xsd",
+        "nvda-20200426_cal.xml",
+        "nvda-20200426_def.xml",
+        "nvda-20200426_lab.xml",
+        "nvda-20200426_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001045810-20-000147",
+      "ticker": "NVDA",
+      "report_date": "2020-07-26",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3589724,
+      "total_compressed_bytes": 269617,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20200726.htm",
+        "nvda-20200726.xsd",
+        "nvda-20200726_cal.xml",
+        "nvda-20200726_def.xml",
+        "nvda-20200726_lab.xml",
+        "nvda-20200726_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001045810-20-000189",
+      "ticker": "NVDA",
+      "report_date": "2020-10-25",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3240568,
+      "total_compressed_bytes": 273608,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20201025.htm",
+        "nvda-20201025.xsd",
+        "nvda-20201025_cal.xml",
+        "nvda-20201025_def.xml",
+        "nvda-20201025_lab.xml",
+        "nvda-20201025_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001045810-21-000010",
+      "ticker": "NVDA",
+      "report_date": "2021-01-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4625520,
+      "total_compressed_bytes": 414855,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20210131.htm",
+        "nvda-20210131.xsd",
+        "nvda-20210131_cal.xml",
+        "nvda-20210131_def.xml",
+        "nvda-20210131_lab.xml",
+        "nvda-20210131_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001045810-21-000064",
+      "ticker": "NVDA",
+      "report_date": "2021-05-02",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 2675583,
+      "total_compressed_bytes": 229508,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20210502.htm",
+        "nvda-20210502.xsd",
+        "nvda-20210502_cal.xml",
+        "nvda-20210502_def.xml",
+        "nvda-20210502_lab.xml",
+        "nvda-20210502_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001045810-21-000131",
+      "ticker": "NVDA",
+      "report_date": "2021-08-01",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3099254,
+      "total_compressed_bytes": 259496,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20210801.htm",
+        "nvda-20210801.xsd",
+        "nvda-20210801_cal.xml",
+        "nvda-20210801_def.xml",
+        "nvda-20210801_lab.xml",
+        "nvda-20210801_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001045810-21-000163",
+      "ticker": "NVDA",
+      "report_date": "2021-10-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3144776,
+      "total_compressed_bytes": 268028,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20211031.htm",
+        "nvda-20211031.xsd",
+        "nvda-20211031_cal.xml",
+        "nvda-20211031_def.xml",
+        "nvda-20211031_lab.xml",
+        "nvda-20211031_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001045810-22-000036",
+      "ticker": "NVDA",
+      "report_date": "2022-01-30",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4664434,
+      "total_compressed_bytes": 419555,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20220130.htm",
+        "nvda-20220130.xsd",
+        "nvda-20220130_cal.xml",
+        "nvda-20220130_def.xml",
+        "nvda-20220130_lab.xml",
+        "nvda-20220130_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001045810-22-000079",
+      "ticker": "NVDA",
+      "report_date": "2022-05-01",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 2731607,
+      "total_compressed_bytes": 234743,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20220501.htm",
+        "nvda-20220501.xsd",
+        "nvda-20220501_cal.xml",
+        "nvda-20220501_def.xml",
+        "nvda-20220501_lab.xml",
+        "nvda-20220501_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001045810-22-000147",
+      "ticker": "NVDA",
+      "report_date": "2022-07-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3194497,
+      "total_compressed_bytes": 270316,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20220731.htm",
+        "nvda-20220731.xsd",
+        "nvda-20220731_cal.xml",
+        "nvda-20220731_def.xml",
+        "nvda-20220731_lab.xml",
+        "nvda-20220731_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001045810-22-000166",
+      "ticker": "NVDA",
+      "report_date": "2022-10-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3201172,
+      "total_compressed_bytes": 267214,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20221030.htm",
+        "nvda-20221030.xsd",
+        "nvda-20221030_cal.xml",
+        "nvda-20221030_def.xml",
+        "nvda-20221030_lab.xml",
+        "nvda-20221030_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001045810-23-000017",
+      "ticker": "NVDA",
+      "report_date": "2023-01-29",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4862967,
+      "total_compressed_bytes": 436439,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20230129.htm",
+        "nvda-20230129.xsd",
+        "nvda-20230129_cal.xml",
+        "nvda-20230129_def.xml",
+        "nvda-20230129_lab.xml",
+        "nvda-20230129_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001045810-23-000093",
+      "ticker": "NVDA",
+      "report_date": "2023-04-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 2819259,
+      "total_compressed_bytes": 245759,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20230430.htm",
+        "nvda-20230430.xsd",
+        "nvda-20230430_cal.xml",
+        "nvda-20230430_def.xml",
+        "nvda-20230430_lab.xml",
+        "nvda-20230430_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001045810-23-000175",
+      "ticker": "NVDA",
+      "report_date": "2023-07-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3039419,
+      "total_compressed_bytes": 232259,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20230730.htm",
+        "nvda-20230730.xsd",
+        "nvda-20230730_cal.xml",
+        "nvda-20230730_def.xml",
+        "nvda-20230730_lab.xml",
+        "nvda-20230730_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001045810-23-000227",
+      "ticker": "NVDA",
+      "report_date": "2023-10-29",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3076215,
+      "total_compressed_bytes": 236654,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20231029.htm",
+        "nvda-20231029.xsd",
+        "nvda-20231029_cal.xml",
+        "nvda-20231029_def.xml",
+        "nvda-20231029_lab.xml",
+        "nvda-20231029_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001045810-24-000029",
+      "ticker": "NVDA",
+      "report_date": "2024-01-28",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4306306,
+      "total_compressed_bytes": 362848,
+      "file_names": [
+        "FilingSummary.xml",
+        "nvda-20240128.htm",
+        "nvda-20240128.xsd",
+        "nvda-20240128_cal.xml",
+        "nvda-20240128_def.xml",
+        "nvda-20240128_lab.xml",
+        "nvda-20240128_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000950170-23-028914",
+      "ticker": "ORCL",
+      "report_date": "2023-05-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 9471947,
+      "total_compressed_bytes": 517430,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-20230531.htm",
+        "orcl-20230531.xsd",
+        "orcl-20230531_cal.xml",
+        "orcl-20230531_def.xml",
+        "orcl-20230531_lab.xml",
+        "orcl-20230531_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000950170-23-047713",
+      "ticker": "ORCL",
+      "report_date": "2023-08-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3709588,
+      "total_compressed_bytes": 208024,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-20230831.htm",
+        "orcl-20230831.xsd",
+        "orcl-20230831_cal.xml",
+        "orcl-20230831_def.xml",
+        "orcl-20230831_lab.xml",
+        "orcl-20230831_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000950170-23-069682",
+      "ticker": "ORCL",
+      "report_date": "2023-11-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4114881,
+      "total_compressed_bytes": 225278,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-20231130.htm",
+        "orcl-20231130.xsd",
+        "orcl-20231130_cal.xml",
+        "orcl-20231130_def.xml",
+        "orcl-20231130_lab.xml",
+        "orcl-20231130_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0000950170-24-029904",
+      "ticker": "ORCL",
+      "report_date": "2024-02-29",
+      "form": "10-Q",
+      "file_count": 3,
+      "total_uncompressed_bytes": 4144045,
+      "total_compressed_bytes": 228456,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-20240229.htm",
+        "orcl-20240229.xsd"
+      ]
+    },
+    {
+      "accession_number": "0000950170-24-075605",
+      "ticker": "ORCL",
+      "report_date": "2024-05-31",
+      "form": "10-K",
+      "file_count": 3,
+      "total_uncompressed_bytes": 7576158,
+      "total_compressed_bytes": 486675,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-20240531.htm",
+        "orcl-20240531.xsd"
+      ]
+    },
+    {
+      "accession_number": "0001564590-19-034717",
+      "ticker": "ORCL",
+      "report_date": "2019-08-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3941345,
+      "total_compressed_bytes": 189505,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-10q_20190831.htm",
+        "orcl-20190831.xsd",
+        "orcl-20190831_cal.xml",
+        "orcl-20190831_def.xml",
+        "orcl-20190831_lab.xml",
+        "orcl-20190831_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-19-045966",
+      "ticker": "ORCL",
+      "report_date": "2019-11-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5230047,
+      "total_compressed_bytes": 213974,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-10q_20191130.htm",
+        "orcl-20191130.xsd",
+        "orcl-20191130_cal.xml",
+        "orcl-20191130_def.xml",
+        "orcl-20191130_lab.xml",
+        "orcl-20191130_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-20-010833",
+      "ticker": "ORCL",
+      "report_date": "2020-02-29",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5207727,
+      "total_compressed_bytes": 213677,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-10q_20200229.htm",
+        "orcl-20200229.xsd",
+        "orcl-20200229_cal.xml",
+        "orcl-20200229_def.xml",
+        "orcl-20200229_lab.xml",
+        "orcl-20200229_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-20-030125",
+      "ticker": "ORCL",
+      "report_date": "2020-05-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 8740998,
+      "total_compressed_bytes": 421566,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-10k_20200531.htm",
+        "orcl-20200531.xsd",
+        "orcl-20200531_cal.xml",
+        "orcl-20200531_def.xml",
+        "orcl-20200531_lab.xml",
+        "orcl-20200531_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-20-043448",
+      "ticker": "ORCL",
+      "report_date": "2020-08-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3803599,
+      "total_compressed_bytes": 181108,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-10q_20200831.htm",
+        "orcl-20200831.xsd",
+        "orcl-20200831_cal.xml",
+        "orcl-20200831_def.xml",
+        "orcl-20200831_lab.xml",
+        "orcl-20200831_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-20-056896",
+      "ticker": "ORCL",
+      "report_date": "2020-11-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5071907,
+      "total_compressed_bytes": 204272,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-10q_20201130.htm",
+        "orcl-20201130.xsd",
+        "orcl-20201130_cal.xml",
+        "orcl-20201130_def.xml",
+        "orcl-20201130_lab.xml",
+        "orcl-20201130_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-21-012539",
+      "ticker": "ORCL",
+      "report_date": "2021-02-28",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5077973,
+      "total_compressed_bytes": 206952,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-10q_20210228.htm",
+        "orcl-20210228.xsd",
+        "orcl-20210228_cal.xml",
+        "orcl-20210228_def.xml",
+        "orcl-20210228_lab.xml",
+        "orcl-20210228_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-21-033616",
+      "ticker": "ORCL",
+      "report_date": "2021-05-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 8491846,
+      "total_compressed_bytes": 412867,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-10k_20210531.htm",
+        "orcl-20210531.xsd",
+        "orcl-20210531_cal.xml",
+        "orcl-20210531_def.xml",
+        "orcl-20210531_lab.xml",
+        "orcl-20210531_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-21-047772",
+      "ticker": "ORCL",
+      "report_date": "2021-08-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3498779,
+      "total_compressed_bytes": 169300,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-10q_20210831.htm",
+        "orcl-20210831.xsd",
+        "orcl-20210831_cal.xml",
+        "orcl-20210831_def.xml",
+        "orcl-20210831_lab.xml",
+        "orcl-20210831_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-21-060022",
+      "ticker": "ORCL",
+      "report_date": "2021-11-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4656813,
+      "total_compressed_bytes": 192170,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-10q_20211130.htm",
+        "orcl-20211130.xsd",
+        "orcl-20211130_cal.xml",
+        "orcl-20211130_def.xml",
+        "orcl-20211130_lab.xml",
+        "orcl-20211130_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-22-009859",
+      "ticker": "ORCL",
+      "report_date": "2022-02-28",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4784826,
+      "total_compressed_bytes": 202313,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-10q_20220228.htm",
+        "orcl-20220228.xsd",
+        "orcl-20220228_cal.xml",
+        "orcl-20220228_def.xml",
+        "orcl-20220228_lab.xml",
+        "orcl-20220228_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-22-023675",
+      "ticker": "ORCL",
+      "report_date": "2022-05-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 8087141,
+      "total_compressed_bytes": 399178,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-10k_20220531.htm",
+        "orcl-20220531.xsd",
+        "orcl-20220531_cal.xml",
+        "orcl-20220531_def.xml",
+        "orcl-20220531_lab.xml",
+        "orcl-20220531_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-22-031545",
+      "ticker": "ORCL",
+      "report_date": "2022-08-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3842198,
+      "total_compressed_bytes": 189744,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-10q_20220831.htm",
+        "orcl-20220831.xsd",
+        "orcl-20220831_cal.xml",
+        "orcl-20220831_def.xml",
+        "orcl-20220831_lab.xml",
+        "orcl-20220831_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-22-039278",
+      "ticker": "ORCL",
+      "report_date": "2022-11-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5095971,
+      "total_compressed_bytes": 217294,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-10q_20221130.htm",
+        "orcl-20221130.xsd",
+        "orcl-20221130_cal.xml",
+        "orcl-20221130_def.xml",
+        "orcl-20221130_lab.xml",
+        "orcl-20221130_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001564590-23-003413",
+      "ticker": "ORCL",
+      "report_date": "2023-02-28",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5121761,
+      "total_compressed_bytes": 218496,
+      "file_names": [
+        "FilingSummary.xml",
+        "orcl-10q_20230228.htm",
+        "orcl-20230228.xsd",
+        "orcl-20230228_cal.xml",
+        "orcl-20230228_def.xml",
+        "orcl-20230228_lab.xml",
+        "orcl-20230228_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-20-000041",
+      "ticker": "PANW",
+      "report_date": "2020-10-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3413531,
+      "total_compressed_bytes": 303594,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20201031.htm",
+        "panw-20201031.xsd",
+        "panw-20201031_cal.xml",
+        "panw-20201031_def.xml",
+        "panw-20201031_lab.xml",
+        "panw-20201031_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-21-000004",
+      "ticker": "PANW",
+      "report_date": "2021-01-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4097799,
+      "total_compressed_bytes": 347196,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20210131.htm",
+        "panw-20210131.xsd",
+        "panw-20210131_cal.xml",
+        "panw-20210131_def.xml",
+        "panw-20210131_lab.xml",
+        "panw-20210131_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-21-000014",
+      "ticker": "PANW",
+      "report_date": "2021-04-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4103006,
+      "total_compressed_bytes": 344909,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20210430.htm",
+        "panw-20210430.xsd",
+        "panw-20210430_cal.xml",
+        "panw-20210430_def.xml",
+        "panw-20210430_lab.xml",
+        "panw-20210430_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-21-000029",
+      "ticker": "PANW",
+      "report_date": "2021-07-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6429340,
+      "total_compressed_bytes": 544695,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20210731.htm",
+        "panw-20210731.xsd",
+        "panw-20210731_cal.xml",
+        "panw-20210731_def.xml",
+        "panw-20210731_lab.xml",
+        "panw-20210731_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-21-000040",
+      "ticker": "PANW",
+      "report_date": "2021-10-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3575022,
+      "total_compressed_bytes": 314888,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20211031.htm",
+        "panw-20211031.xsd",
+        "panw-20211031_cal.xml",
+        "panw-20211031_def.xml",
+        "panw-20211031_lab.xml",
+        "panw-20211031_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-22-000008",
+      "ticker": "PANW",
+      "report_date": "2022-01-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4017535,
+      "total_compressed_bytes": 336186,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20220131.htm",
+        "panw-20220131.xsd",
+        "panw-20220131_cal.xml",
+        "panw-20220131_def.xml",
+        "panw-20220131_lab.xml",
+        "panw-20220131_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-22-000016",
+      "ticker": "PANW",
+      "report_date": "2022-04-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4049288,
+      "total_compressed_bytes": 338550,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20220430.htm",
+        "panw-20220430.xsd",
+        "panw-20220430_cal.xml",
+        "panw-20220430_def.xml",
+        "panw-20220430_lab.xml",
+        "panw-20220430_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-22-000028",
+      "ticker": "PANW",
+      "report_date": "2022-07-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6253680,
+      "total_compressed_bytes": 529016,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20220731.htm",
+        "panw-20220731.xsd",
+        "panw-20220731_cal.xml",
+        "panw-20220731_def.xml",
+        "panw-20220731_lab.xml",
+        "panw-20220731_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-22-000038",
+      "ticker": "PANW",
+      "report_date": "2022-10-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3693233,
+      "total_compressed_bytes": 318832,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20221031.htm",
+        "panw-20221031.xsd",
+        "panw-20221031_cal.xml",
+        "panw-20221031_def.xml",
+        "panw-20221031_lab.xml",
+        "panw-20221031_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-23-000006",
+      "ticker": "PANW",
+      "report_date": "2023-01-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4210617,
+      "total_compressed_bytes": 349408,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20230131.htm",
+        "panw-20230131.xsd",
+        "panw-20230131_cal.xml",
+        "panw-20230131_def.xml",
+        "panw-20230131_lab.xml",
+        "panw-20230131_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-23-000014",
+      "ticker": "PANW",
+      "report_date": "2023-04-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4256493,
+      "total_compressed_bytes": 351953,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20230430.htm",
+        "panw-20230430.xsd",
+        "panw-20230430_cal.xml",
+        "panw-20230430_def.xml",
+        "panw-20230430_lab.xml",
+        "panw-20230430_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-23-000024",
+      "ticker": "PANW",
+      "report_date": "2023-07-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5438430,
+      "total_compressed_bytes": 425464,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20230731.htm",
+        "panw-20230731.xsd",
+        "panw-20230731_cal.xml",
+        "panw-20230731_def.xml",
+        "panw-20230731_lab.xml",
+        "panw-20230731_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-23-000032",
+      "ticker": "PANW",
+      "report_date": "2023-10-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3375560,
+      "total_compressed_bytes": 263754,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20231031.htm",
+        "panw-20231031.xsd",
+        "panw-20231031_cal.xml",
+        "panw-20231031_def.xml",
+        "panw-20231031_lab.xml",
+        "panw-20231031_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-24-000005",
+      "ticker": "PANW",
+      "report_date": "2024-01-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3897890,
+      "total_compressed_bytes": 291022,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20240131.htm",
+        "panw-20240131.xsd",
+        "panw-20240131_cal.xml",
+        "panw-20240131_def.xml",
+        "panw-20240131_lab.xml",
+        "panw-20240131_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-24-000017",
+      "ticker": "PANW",
+      "report_date": "2024-04-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3761257,
+      "total_compressed_bytes": 288067,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20240430.htm",
+        "panw-20240430.xsd",
+        "panw-20240430_cal.xml",
+        "panw-20240430_def.xml",
+        "panw-20240430_lab.xml",
+        "panw-20240430_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-24-000029",
+      "ticker": "PANW",
+      "report_date": "2024-07-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5417184,
+      "total_compressed_bytes": 437710,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20240731.htm",
+        "panw-20240731.xsd",
+        "panw-20240731_cal.xml",
+        "panw-20240731_def.xml",
+        "panw-20240731_lab.xml",
+        "panw-20240731_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-24-000040",
+      "ticker": "PANW",
+      "report_date": "2024-10-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3575704,
+      "total_compressed_bytes": 289088,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20241031.htm",
+        "panw-20241031.xsd",
+        "panw-20241031_cal.xml",
+        "panw-20241031_def.xml",
+        "panw-20241031_lab.xml",
+        "panw-20241031_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-25-000010",
+      "ticker": "PANW",
+      "report_date": "2025-01-31",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3898321,
+      "total_compressed_bytes": 301437,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20250131.htm",
+        "panw-20250131.xsd",
+        "panw-20250131_cal.xml",
+        "panw-20250131_def.xml",
+        "panw-20250131_lab.xml",
+        "panw-20250131_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-25-000017",
+      "ticker": "PANW",
+      "report_date": "2025-04-30",
+      "form": "10-Q",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3861080,
+      "total_compressed_bytes": 299489,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20250430.htm",
+        "panw-20250430.xsd",
+        "panw-20250430_cal.xml",
+        "panw-20250430_def.xml",
+        "panw-20250430_lab.xml",
+        "panw-20250430_pre.xml"
+      ]
+    },
+    {
+      "accession_number": "0001327567-25-000027",
+      "ticker": "PANW",
+      "report_date": "2025-07-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5329612,
+      "total_compressed_bytes": 431167,
+      "file_names": [
+        "FilingSummary.xml",
+        "panw-20250731.htm",
+        "panw-20250731.xsd",
+        "panw-20250731_cal.xml",
+        "panw-20250731_def.xml",
+        "panw-20250731_lab.xml",
+        "panw-20250731_pre.xml"
+      ]
+    }
+  ]
+}
