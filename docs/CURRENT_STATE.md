@@ -4294,3 +4294,111 @@ timeout this design deliberately chose.
 `tests/test_parallel_warehouse.py`, `tests/test_rate_limiter.py`,
 `data/parallel_warehouse_ingest_batch_result.json` (185-filing benchmark
 result, scratch database only — not a change to production).
+
+## 2026-08-08 — Point-in-time universe expansion, MVP proof (D-052)
+
+**Goal**: eliminate the survivorship bias in the project's 9-company
+universe (all 9 picked in 2026 as known-current winners — a model
+validated on that sample measures its own selection, not predictive
+power). Fixing it requires companies that FAILED or were REMOVED from an
+index, which the existing download pipeline cannot resolve at all: it
+looks up CIK exclusively via SEC's `company_tickers.json`, which lists
+only currently-active registrants.
+
+**What changed:**
+1. `src/stock_agent/ingestion/cik_resolver.py` (new): resolves ticker ->
+   CIK uniformly for ANY company SEC has ever assigned a CIK to. Tier 1
+   (unchanged from `scripts/107`/`162`): `company_tickers.json` by
+   ticker. Tier 2 (new, tried only when tier 1 finds nothing): SEC's own
+   `browse-edgar?action=getcompany&company=...&output=atom` company-NAME
+   search, not restricted to active registrants — requires a unique
+   match whose conformed name starts with the supplied name, fails
+   closed (never guesses among ambiguous candidates). The SAME function
+   runs for every ticker; which tier actually resolves it is decided
+   entirely by what SEC returns, never by a ticker-specific branch.
+2. `src/stock_agent/ingestion/download_and_lock.py` (new): downloads and
+   disk-locks a filing in the exact same `locked_filing_manifest.json`
+   format/location `scripts/107` already produces (which `warehouse/
+   loader.py` already reads unchanged), routed through the new resolver.
+   Supports `report_date=None` ("the most recent filing of this form")
+   for a delisted company where the caller wants whatever the last one
+   was.
+3. `src/stock_agent/universe/point_in_time.py` (new): a sourced,
+   confidence-disclosed dataset of 11 former Nasdaq-100 constituents
+   removed 2020-2026 (CTXS, ALXN, MXIM, CERN, XLNX, RIVN, ATVI, SGEN,
+   SPLK, ANSS, EA — acquisitions, one still-trading index-weight drop,
+   two take-privates), compiled from Wikipedia's "List of NASDAQ-100
+   companies" historical-components table. Explicitly disclosed as
+   crowdsourced, not an official Nasdaq feed; 3 of the 11 rows
+   (MXIM, ATVI, EA) were independently cross-checked against a primary
+   source and marked `cross_checked=True` with the corroborating source
+   recorded; the other 8 are `cross_checked=False` — Wikipedia-only,
+   not yet independently verified against Nasdaq's own official
+   reconstitution press releases. This is a REMOVAL-event list, not a
+   full historical membership snapshot (no free source for that was
+   found) — it is exactly the piece needed to add failed/removed
+   companies to the universe.
+4. `scripts/173_expand_universe_batch.py` (new, thin entry point):
+   downloads+locks+warehouses a configurable target list, idempotent
+   (skips a ticker already locked). Currently configured with the 2
+   companies proved below; extending it to more names (from
+   `FORMER_NASDAQ100_CONSTITUENTS` or additional still-listed names, for
+   the "~25, then 100 companies" scale-out) requires only adding a row —
+   no code change.
+
+**End-to-end proof, real SEC data, no special-casing (MVP per the "2-3
+removed from the index" requirement):**
+
+| Ticker | Company | CIK resolution | Filing locked | Warehoused |
+|---|---|---|---|---|
+| CTXS | Citrix Systems Inc | `COMPANY_NAME_SEARCH_FULL_REGISTRY` (absent from active-registry file — removed from Nasdaq-100 2020-12-21, went private ~2022-09) | 10-K, report_date=2021-12-31, accession 0000877890-22-000019 | PASS, 1,600 facts |
+| MXIM | Maxim Integrated Products Inc | `COMPANY_NAME_SEARCH_FULL_REGISTRY` (absent from active-registry file — acquired by Analog Devices, removed 2021-08-26) | 10-K, report_date=2021-06-26, accession 0000743316-21-000025 | PASS, 1,505 facts |
+
+Both filings were downloaded via `download_and_lock_filing()`, then
+warehoused via the exact same `run_parallel_warehouse_load()` built for
+D-051 — the identical code path the existing 9 companies use, with zero
+ticker-specific logic anywhere. Warehouse schema for both filings
+independently confirmed identical (all 9 tables) to the live production
+warehouse's schema.
+
+**Tests added** (no live network — every SEC response is a canned
+fixture via monkeypatching, proving the *structure* of the no-special-
+casing guarantee deterministically): `tests/test_cik_resolver.py` (5
+tests — fast path used and fallback never attempted when it succeeds;
+fallback correctly attempted when the ticker is absent, using the exact
+CTXS scenario; no-hint case fails closed without attempting the
+fallback; ambiguous/missing name match fails closed; a conformed-name
+mismatch is rejected, never silently accepted) and `tests/test_universe_
+point_in_time.py` (5 tests — dataset integrity, date-range filtering,
+cross-checked-subset filtering). Full suite: **124/124 fast tests pass**
+(0 regressions).
+
+**MVP scope, explicitly bounded, not silently incomplete**: this proves
+the delisted-ticker mechanism end-to-end (the genuinely new, previously-
+impossible capability) for 2 of the target "2-3 removed" companies.
+Scaling the ACTIVE-company count from 9 toward 25 and later 100 is
+mechanically the same, already-proven pipeline the existing 9 companies
+already use (no new engineering risk) — deliberately left as a
+documented next step via `scripts/173`'s `TARGETS` list rather than run
+live in this session, since it doesn't itself reduce survivorship bias
+(the stated goal) and would add ~15-100+ more SEC downloads/parses
+without adding new proof value. A 3rd removed company (e.g. ATVI, SGEN,
+or SPLK from the dataset above) is the natural next addition alongside
+the active-company scale-out.
+
+**Price source for delisted-security coverage — researched, NOT
+adopted (blocked on required user approval, D-010 / explicit task
+instruction)**: Yahoo Finance (the frozen V1 source, D-044/D-045) does
+not reliably cover delisted tickers. Researched candidates: Stooq (free,
+keyless, but its CSV endpoint returned only a bot-challenge page on
+every automated attempt — not currently scriptable), EODHD (has a
+documented delisted-securities data product naming ATVI.US explicitly as
+a worked example; its public `demo` API token returned real, plausible
+AMZN/AAPL daily data without any signup), Tiingo/Polygon.io/Alpha
+Vantage/Nasdaq Data Link (weaker or undocumented delisted coverage, or
+not evaluated). **Recommendation: EODHD**, but adopting it for real
+ingestion requires creating a free API key (still free, no card, but a
+real account) or its $19.99/mo paid tier if the free rate limit (20
+calls/day) proves too slow — both require the user's explicit approval
+before signup, per this task's own instruction ("do not sign up for or
+pay for anything without asking me first"). Not yet requested/approved.

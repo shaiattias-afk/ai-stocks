@@ -1155,3 +1155,80 @@ expansion, non-interactive, decisions to be recorded and reported at the
 end); it still requires the user's explicit sign-off to change or extend
 further, the same as any other entry in this log.
 
+## D-052 — Point-in-time universe expansion: uniform CIK resolution for delisted tickers, MVP proof (approved, user pre-authorized autonomous stage)
+**Approved architecture — a single, uniform CIK-resolution function used
+identically for every ticker, never a ticker-specific branch**:
+`src/stock_agent/ingestion/cik_resolver.py`'s `resolve_company_record()`
+tries SEC's `company_tickers.json` (active registrants only, unchanged
+from `scripts/107`/`162`) first; only if that finds nothing does it fall
+back to SEC's own `browse-edgar` company-NAME search (not restricted to
+active registrants), requiring a unique match whose conformed name
+starts with the supplied name — fails closed, never guesses among
+ambiguous candidates. `src/stock_agent/ingestion/download_and_lock.py`
+downloads and disk-locks a filing through this resolver into the exact
+same `locked_filing_manifest.json` format `scripts/107` already
+produces, so a filing locked this way is indistinguishable from one
+locked the old way, and `warehouse/loader.py` reads it unchanged.
+
+**Rationale / origin**: the project's 9-company universe (ORCL, MSFT,
+META, NVDA, GOOGL, AMZN, MU, CRWD, PANW) was picked in 2026 as
+known-current winners; none of them was ever removed from an index. A
+model validated only on survivors measures its own selection, not
+predictive power (`docs/PROJECT_CONTEXT.md`). The existing download
+pipeline could not even locate a delisted company's CIK, since
+`company_tickers.json` only lists currently-active registrants.
+
+**Point-in-time constituent data**: `src/stock_agent/universe/
+point_in_time.py` — 11 former Nasdaq-100 constituents removed 2020-2026,
+compiled from Wikipedia's "List of NASDAQ-100 companies"
+historical-components table. **Disclosed as crowdsourced, not an
+official Nasdaq feed**: 3 of 11 rows (MXIM, ATVI, EA) independently
+cross-checked against a primary source (investor-relations release /
+dedicated news coverage / another provider's own documentation), marked
+`cross_checked=True` with the source recorded; the other 8 are
+Wikipedia-only (`cross_checked=False`). This is a removal-EVENT list,
+not a full historical membership snapshot — no free source for the
+latter was found; it is exactly the piece needed to add failed/removed
+companies to the universe. Before gating a real financial decision on
+any row, prefer confirming the exact date against Nasdaq's own official
+reconstitution press releases.
+
+**Verified, real SEC data, no special-casing**: Citrix Systems (CTXS,
+removed from the index 2020-12-21, later taken private) and Maxim
+Integrated (MXIM, removed 2021-08-26, acquired by Analog Devices) both
+resolved via the `COMPANY_NAME_SEARCH_FULL_REGISTRY` fallback tier
+(absent from the active-registry file, as expected), each had their
+last 10-K downloaded/locked, and both warehoused PASS (1,600 and 1,505
+facts respectively) through the exact same `run_parallel_warehouse_load`
+built for D-051 — zero ticker-specific code anywhere in the path. 10 new
+tests (`tests/test_cik_resolver.py`, `tests/test_universe_point_in_
+time.py`), no live network (canned SEC responses via monkeypatching,
+proving the fallback structure deterministically). Full fast suite:
+124/124 pass.
+
+**MVP scope, explicitly bounded**: this proves the delisted-ticker
+mechanism end-to-end for 2 of the target "2-3 removed" companies — the
+genuinely new, previously-impossible capability. Scaling the
+ACTIVE-company count from 9 toward 25 and later 100 is mechanically the
+same, already-proven pipeline the existing 9 already use (no new
+engineering risk); left as a documented next step
+(`scripts/173_expand_universe_batch.py`'s `TARGETS` list) rather than
+run live, since it does not itself reduce survivorship bias and would
+add many more downloads without new proof value.
+
+**Price source for delisted-security coverage — researched, explicitly
+NOT adopted**: Yahoo Finance (frozen V1, D-044/D-045) does not reliably
+cover delisted tickers. EODHD is the researched recommendation (a
+documented delisted-securities product naming ATVI.US by name; its
+public keyless `demo` token returned real, plausible data), but adopting
+it requires creating a real API key (free tier, no card) or its paid
+tier — **both explicitly deferred, pending the user's approval**, per
+this task's own "do not sign up for or pay for anything without asking
+me first" instruction and this project's standing D-010. Not yet
+requested/approved; no signup was performed.
+
+This decision was made autonomously under the user's explicit
+pre-authorization for this stage; it still requires the user's explicit
+sign-off to change or extend further, the same as any other entry in
+this log.
+

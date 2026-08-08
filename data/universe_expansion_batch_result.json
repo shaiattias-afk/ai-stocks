@@ -1,0 +1,42 @@
+{
+  "lock_results": [],
+  "warehouse_result": {
+    "target_count": 2,
+    "max_workers": 2,
+    "warm_cache_result": {
+      "representative_count": 1,
+      "warmed": [
+        {
+          "ticker": "CTXS",
+          "report_date": "2021-12-31",
+          "form": "10-K",
+          "parse_elapsed_seconds": 1.169
+        }
+      ],
+      "failed": [],
+      "elapsed_seconds": 1.339
+    },
+    "results": [
+      {
+        "ticker": "MXIM",
+        "report_date": "2021-06-26",
+        "form": "10-K",
+        "status": "PASS",
+        "accession_number": "0000743316-21-000025",
+        "total_elapsed_seconds": 1.373
+      },
+      {
+        "ticker": "CTXS",
+        "report_date": "2021-12-31",
+        "form": "10-K",
+        "status": "PASS",
+        "accession_number": "0000877890-22-000019",
+        "total_elapsed_seconds": 1.514
+      }
+    ],
+    "status_counts": {
+      "PASS": 2
+    },
+    "batch_elapsed_seconds": 2.847
+  }
+}
