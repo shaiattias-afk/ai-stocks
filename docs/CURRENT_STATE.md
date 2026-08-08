@@ -1,6 +1,59 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-08 (**VALUATION V1 IS FROZEN.** `scripts/160_valuation_v1_per_share_inputs.py --execute` succeeded (run exactly once, after a full read-only proof: inventory → micro proof (MSFT/NVDA/AMZN) → 45-company-year proof → historical P/E proof → in-memory load proof): `valuation_v1_per_share_inputs` created and loaded for all 9 approved tickers, **45/45 company-years resolved** using **reported diluted EPS** (`us-gaap:EarningsPerShareDiluted`), extracted directly from the already-locked 10-K filings via the already-built XBRL warehouse — no new filing downloaded, no external/analyst data used. Shares outstanding was evaluated but deliberately **not** stored in production (no required use once diluted EPS is available directly). A real defect was found and fixed before load: pairing `close` (retroactively split-adjusted per D-044 Rule C) with as-reported (never split-adjusted) diluted EPS silently distorted P/E for company-years preceding a later split (NVDA 2024-02 understated 10x); fixed by using `nominal_close`. Independently re-verified read-only, directly from the live database: table exists, exactly 45 rows, exactly 9 distinct tickers, 0 duplicate keys, 0 missing lineage, `availability_date=filing_date` on every row, historical P/E re-derived from the committed table matches the pre-load proof exactly for MSFT/NVDA/AMZN. All pre-existing production data confirmed unchanged: `financial_metric_results`=900, `quarterly_extraction_runs`=45, `quarterly_metric_results`=1,080, `derived_metric_results`=405, `historical_prices_daily`=14,913, unique REVIEW_REQUIRED=0, Annual Data V1 checksum unchanged. **Valuation V1 is now frozen; reported diluted EPS is the approved V1 per-share valuation input; no future changes without a new version and full validation (D-046).** See `data/valuation_v1_release_manifest.json`, `docs/DECISIONS_LOG.md` D-046, `docs/LAST_CLAUDE_REPORT.md` for full detail.)
+**Last updated:** 2026-08-08 (**D-047: the table-freeze policy (D-042/
+D-043/D-045/D-046) has been replaced, for its "no writes without a new
+engine version" restriction only, by code-enforced versioned
+append-only writes.** New shared module
+`scripts/167_versioned_write_guard.py` enforces, INSIDE every future
+write transaction, before COMMIT: append-only (DELETE/UPDATE/DROP/
+TRUNCATE/ALTER and any overwrite-shaped INSERT are rejected by the
+module's only write chokepoint), row count per table never decreases,
+the checksum of every pre-existing row (by primary key) is
+byte-identical after the write, and the actual row-count delta exactly
+equals the caller's own declared delta. Verified by
+`scripts/168_versioned_write_guard_tests.py`, 5/5 required tests PASS
+against an isolated scratch database (DELETE rejected, overwrite
+rejected, declared-100-actual-101 rejected, a crash mid-load — 2 of N
+inserts executed, connection closed without COMMIT — leaves the
+database completely unchanged, a legitimate append succeeds with every
+prior row byte-identical). `scripts/169_versioned_columns_migration.py
+--execute` added `engine_version`/`loaded_at`/`is_active` to all six
+previously-frozen tables (`financial_metric_results`,
+`quarterly_extraction_runs`, `quarterly_metric_results`,
+`derived_metric_results`, `historical_prices_daily`,
+`valuation_v1_per_share_inputs`), backfilling every pre-existing row
+from real, traceable sources (existing `extraction_runs`/`quarterly_
+extraction_runs` foreign keys, each table's own existing `created_at`,
+or — where no per-row engine label existed at all — the exact script
+that produced the rows, per D-045/D-046); independently re-verified
+read-only: all six row counts unchanged (900/45/1,080/405/14,913/45),
+0 NULLs in any new column, `is_active=TRUE` on all 2,933 pre-existing
+rows, every pre-existing column's content byte-identical, every other
+table in the database untouched. **First real use**:
+`scripts/170_historical_prices_append.py --execute` appended 9 new
+rows (one 2026-08-07 close per approved ticker) to
+`historical_prices_daily` through the write guard — bringing it current
+from the D-045 freeze date (2026-08-06) without a new engine version or
+manual regression. A real, honest pre-write finding (not a bug): Yahoo
+had revised `volume` for 2026-08-06 slightly upward for all 9 tickers
+between the original 2026-08-06 load and this run (same-day volume
+finalization, a known data-provider behavior) — every price/nominal/
+dividend/split field matched exactly. Since `volume` carries no defined
+role in any binding price/valuation policy (D-044) and the row was
+never written to, this was treated as informational and reported, not
+blocking; every material field remained a hard, fail-closed gate.
+`historical_prices_daily`: 14,913 → **14,922** rows, 2020-01-02 →
+**2026-08-07**, 1,658 rows per ticker. Independently re-verified: row
+count matches exactly, 0 duplicate keys, all 9 new rows carry
+`engine_version='HISTORICAL_PRICES_APPEND_V1 (scripts/170_...)'` and
+`is_active=TRUE`, and — checked against the pre-append backup file
+directly, not the load script's own report — the SHA-256 checksum of
+all 14,913 pre-existing rows (original columns only) is byte-identical
+before and after:
+`1e2ad3d268c2369676aa8987172620e39e06384bbdc0e39a65279ce323c5da25`.
+See `docs/DECISIONS_LOG.md` D-047 for full detail.)
+
+**Previous update:** 2026-08-08 (**VALUATION V1 IS FROZEN.** `scripts/160_valuation_v1_per_share_inputs.py --execute` succeeded (run exactly once, after a full read-only proof: inventory → micro proof (MSFT/NVDA/AMZN) → 45-company-year proof → historical P/E proof → in-memory load proof): `valuation_v1_per_share_inputs` created and loaded for all 9 approved tickers, **45/45 company-years resolved** using **reported diluted EPS** (`us-gaap:EarningsPerShareDiluted`), extracted directly from the already-locked 10-K filings via the already-built XBRL warehouse — no new filing downloaded, no external/analyst data used. Shares outstanding was evaluated but deliberately **not** stored in production (no required use once diluted EPS is available directly). A real defect was found and fixed before load: pairing `close` (retroactively split-adjusted per D-044 Rule C) with as-reported (never split-adjusted) diluted EPS silently distorted P/E for company-years preceding a later split (NVDA 2024-02 understated 10x); fixed by using `nominal_close`. Independently re-verified read-only, directly from the live database: table exists, exactly 45 rows, exactly 9 distinct tickers, 0 duplicate keys, 0 missing lineage, `availability_date=filing_date` on every row, historical P/E re-derived from the committed table matches the pre-load proof exactly for MSFT/NVDA/AMZN. All pre-existing production data confirmed unchanged: `financial_metric_results`=900, `quarterly_extraction_runs`=45, `quarterly_metric_results`=1,080, `derived_metric_results`=405, `historical_prices_daily`=14,913, unique REVIEW_REQUIRED=0, Annual Data V1 checksum unchanged. **Valuation V1 is now frozen; reported diluted EPS is the approved V1 per-share valuation input; no future changes without a new version and full validation (D-046).** See `data/valuation_v1_release_manifest.json`, `docs/DECISIONS_LOG.md` D-046, `docs/LAST_CLAUDE_REPORT.md` for full detail.)
 
 **Previous update:** 2026-08-07 (**HISTORICAL PRICES V1 IS FROZEN.** `scripts/158_historical_prices_v1_load.py --execute` succeeded (run exactly once, orchestrated by `scripts/159_historical_prices_v1_release.py`): `historical_prices_daily` created and loaded for all 9 approved tickers, **14,913 validated daily price observations** (1,657 per ticker, 2020-01-02 through 2026-08-06). Independently re-verified read-only. **Historical Prices V1 is now frozen (D-045).** See `docs/DECISIONS_LOG.md` D-045.)
 

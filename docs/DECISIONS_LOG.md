@@ -734,3 +734,119 @@ Data V1 checksum unchanged. Full detail in
 `docs/LAST_CLAUDE_REPORT.md`, `data/valuation_v1_release_manifest.json`.
 
 This decision requires the user's explicit sign-off to change or extend to a new context, the same as any other entry in this log.
+
+## D-047 — Table freeze replaced by code-enforced versioned append-only writes (approved, user pre-authorized)
+**Supersedes, for these six tables only, the specific "no writes without
+a new engine version and full regression" restriction stated in
+D-042 (`quarterly_extraction_runs`, `quarterly_metric_results`), D-043
+(`derived_metric_results`), D-045 (`historical_prices_daily`), and D-046
+(`valuation_v1_per_share_inputs`)** — every other rule in those four
+decisions (the approved engine versions, the approved data content as of
+the freeze, the accounting/price/valuation policies governing what a
+correct value IS) remains fully binding and unchanged. `financial_metric_results`
+(Annual Data V1) is included in this decision even though its own
+freeze was never given a separate D-number in this log.
+
+**Rationale / origin:** the freeze existed only because rows carried no
+version column, so a future engine change could silently rewrite a
+previously verified number — a missing schema feature that had been
+patched with an all-or-nothing policy instead. That policy was also
+actively harmful for `historical_prices_daily` specifically: real
+market data continues to accrue daily, but the table could not be kept
+current without invoking the full "new engine version + regression"
+ritual for a plain, mechanically safe daily append — despite the table
+already having a primary key on `(ticker, price_date)` that would
+reject a duplicate/overwrite attempt on its own.
+
+**Approved replacement mechanism:**
+1. **Schema** (`scripts/169_versioned_columns_migration.py`, run once):
+   every one of the six tables now carries `engine_version`, `loaded_at`,
+   and `is_active` on every row (where an equivalent per-row
+   `engine_version` already existed — `quarterly_extraction_runs`,
+   `derived_metric_results` — only `loaded_at`/`is_active` were added,
+   to avoid a duplicate column with different semantics). Every
+   backfilled value for the 2,933 pre-existing rows is a real, traceable
+   fact (copied from `extraction_runs`/`quarterly_extraction_runs` via
+   existing foreign keys, or from each table's own existing
+   `created_at`, or — where no per-row engine label existed at all,
+   `historical_prices_daily` and `valuation_v1_per_share_inputs` — the
+   exact script that produced every one of those rows, per D-045/D-046)
+   — nothing was invented. `is_active = TRUE` on every pre-existing row.
+2. **Write guard** (`scripts/167_versioned_write_guard.py`, a shared
+   module every future loader into any of these six tables must use):
+   enforced INSIDE the write transaction, before COMMIT —
+   - Append-only: DELETE/UPDATE/DROP/TRUNCATE/ALTER, and any INSERT
+     variant that could silently overwrite (`ON CONFLICT`, `OR REPLACE`,
+     `OR IGNORE`), are rejected by the module's only write chokepoint
+     (`execute_write_statement`) before ever reaching the database —
+     never merely "the API doesn't expose delete", but conducted by
+     inspecting the literal SQL of every write attempt.
+   - Row count per table can never decrease.
+   - The checksum of every pre-existing row (identified by primary key,
+     captured before the write, re-selected by that same key after the
+     write) must be byte-identical after the write — catches silent
+     modification of a prior row even if some future INSERT-shaped
+     statement managed to alter one.
+   - The actual post-write row-count delta must exactly equal the
+     caller's own separately-declared intended delta — catches a
+     caller's own counting bug even when every individual INSERT was
+     itself legitimate.
+   - Any violation raises before COMMIT and rolls back; DuckDB's own
+     transaction semantics (verified empirically, not assumed —
+     scripts/168 test 4) guarantee a connection closed or crashed
+     without COMMIT leaves the on-disk database exactly as it was.
+3. **Not provided, by design:** any mechanism to flip a row's
+   `is_active` from TRUE to FALSE. That is reserved for a future,
+   separately authorized supersession procedure — never an ordinary
+   load through the write guard. Nothing in this codebase can currently
+   change `is_active` on an existing row.
+4. Every future load into any of these six tables must go through
+   `scripts/167_versioned_write_guard.py`'s `guarded_versioned_append()`
+   (or its `execute_write_statement()` chokepoint directly, for a
+   caller with an unusual write shape) — a direct, un-guarded write is
+   no longer the approved path for these six tables, the same way a
+   direct HTML-scrape was never the approved path for fundamentals.
+
+**Verified** (`scripts/168_versioned_write_guard_tests.py`, 5/5 PASS,
+isolated scratch database only): attempted DELETE rejected; attempted
+overwrite rejected (both a plain duplicate-primary-key INSERT, which
+DuckDB's own constraint correctly raises on and the guard rolls back
+after, and an explicit `ON CONFLICT ... DO UPDATE`, rejected by the
+guard itself before reaching DuckDB); a load declaring 100 rows while
+actually writing 101 rejected; a crash mid-load (connection closed with
+2 of N inserts done, no COMMIT) leaves the database completely
+unchanged; a legitimate append succeeds with every prior row
+byte-identical (checksum equal before/after).
+
+**Migration applied** (`scripts/169 --execute`, `--check-only` proof
+first): PID lock → backup (SHA-256-verified,
+`data/database/backups/ai_stock_agent_pre_d047_versioned_columns_migration_20260808T083442Z.duckdb`)
+→ transaction 1 (ADD COLUMN + backfill, in-transaction validated: 0
+NULLs in any new column, every table's row count unchanged, every
+pre-existing column's content byte-identical before/after) → COMMIT →
+transaction 2 (NOT NULL enforcement only, no data change — split into
+its own transaction because DuckDB 1.5.5 cannot run `ALTER COLUMN ...
+SET NOT NULL` in the same transaction as a preceding `UPDATE` on a
+primary-keyed table: "Cannot create index with outstanding updates",
+confirmed by direct reproduction before working around it) → COMMIT →
+independent post-commit re-verification, reopening the database
+read-only: all six tables' row counts unchanged
+(`financial_metric_results`=900, `quarterly_extraction_runs`=45,
+`quarterly_metric_results`=1,080, `derived_metric_results`=405,
+`historical_prices_daily`=14,913, `valuation_v1_per_share_inputs`=45),
+0 NULLs in any new column on any table, `is_active=TRUE` on all 2,933
+pre-existing rows across all six tables, every pre-existing column's
+content byte-identical, every other table in the database
+(`companies`, `sec_filings`, `extraction_runs`,
+`historical_review_items`) confirmed completely untouched.
+
+**First real use** (immediately following, same task): appending
+current prices to `historical_prices_daily` through this exact
+mechanism, bringing it up to date from 2026-08-06 — see the
+`scripts/170_historical_prices_append.py` entry below in
+`docs/CURRENT_STATE.md` for the full result.
+
+This decision was explicitly pre-authorized by the user as a superseding
+entry for D-042/D-043/D-045/D-046; it still requires the user's explicit
+sign-off to change or extend further.
+

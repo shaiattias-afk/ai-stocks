@@ -1,0 +1,45 @@
+{
+  "status": "PASS",
+  "per_table_post_checks": {
+    "financial_metric_results": {
+      "row_count_unchanged": true,
+      "new_columns_null_free": true,
+      "all_rows_active": true,
+      "pre_existing_columns_byte_identical": true
+    },
+    "quarterly_extraction_runs": {
+      "row_count_unchanged": true,
+      "new_columns_null_free": true,
+      "all_rows_active": true,
+      "pre_existing_columns_byte_identical": true
+    },
+    "quarterly_metric_results": {
+      "row_count_unchanged": true,
+      "new_columns_null_free": true,
+      "all_rows_active": true,
+      "pre_existing_columns_byte_identical": true
+    },
+    "derived_metric_results": {
+      "row_count_unchanged": true,
+      "new_columns_null_free": true,
+      "all_rows_active": true,
+      "pre_existing_columns_byte_identical": true
+    },
+    "historical_prices_daily": {
+      "row_count_unchanged": true,
+      "new_columns_null_free": true,
+      "all_rows_active": true,
+      "pre_existing_columns_byte_identical": true
+    },
+    "valuation_v1_per_share_inputs": {
+      "row_count_unchanged": true,
+      "new_columns_null_free": true,
+      "all_rows_active": true,
+      "pre_existing_columns_byte_identical": true
+    }
+  },
+  "untouched_tables_unchanged": true,
+  "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\ai_stock_agent_pre_d047_versioned_columns_migration_20260808T083442Z.duckdb",
+  "backup_checksum": "ddc7fcc85bbcd5fab8c6c06c0a9f2db11f7a989402a3b7a09d9d4c275ecb7d1f",
+  "completed_at": "2026-08-08T08:34:43.097Z"
+}
