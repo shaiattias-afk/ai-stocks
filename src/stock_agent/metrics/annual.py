@@ -21,6 +21,20 @@ engine unchanged):
       fallback).
   Otherwise: REVIEW_REQUIRED.
 
+total_debt resolution is SCOPE-gated, reproducing exactly which of the
+two historical resolvers production actually used for each accession
+(see policies/debt_total_aggregate.py's module docstring for the full
+evidence): scripts/92's Policy C tier (PASS_DIRECT_AGGREGATE-capable)
+is applied only within its own original 12-filing TARGET_FILINGS scope
+(POLICY_C_APPLIED_SCOPE); scripts/79's narrower, pre-Policy-C 2-tier
+precedence (resolve_total_debt_maturity_basis_d022) is applied within
+ITS own original 10-filing scope (D022_APPLIED_SCOPE — AMZN/GOOGL
+2021-2025); outside both scopes, scripts/92's resolver is used as the
+default (safe because tier 1, GAAP_CARRYING_VALUE, is byte-identical
+between the two, and it is the only tier that ever actually fires for
+every accession outside both scopes — verified empirically against the
+full 45+5 dataset, not assumed).
+
 ``compute_full_company_year`` is new orchestration glue (not a copy of
 any single script) that composes ``compute_company_year``'s 8 metrics
 with the cross-company-year policies (prior-fiscal-year average_
@@ -56,7 +70,12 @@ from stock_agent.policies.debt_current_long_term import (
     resolve_current_debt_with_facility_policy,
     resolve_long_term_debt,
 )
-from stock_agent.policies.debt_total_aggregate import resolve_total_debt_with_aggregate_policy
+from stock_agent.policies.debt_total_aggregate import (
+    D022_APPLIED_SCOPE,
+    POLICY_C_APPLIED_SCOPE,
+    resolve_total_debt_maturity_basis_d022,
+    resolve_total_debt_with_aggregate_policy,
+)
 from stock_agent.policies.manual_fact_recovery import recovered_current_debt_zero
 from stock_agent.policies.prior_fiscal_year_lookup import combine_current_and_prior_invested_capital
 from stock_agent.policies.roic_nopat import combine_average_invested_capital_and_nopat_into_roic
@@ -193,9 +212,17 @@ def compute_company_year(
     ltd = resolve_long_term_debt(connection, accession_number, presentation, report_date)
     cd = _resolve_current_debt(connection, accession_number, presentation, report_date, ltd)
 
-    total_debt = resolve_total_debt_with_aggregate_policy(
-        connection, accession_number, presentation, report_date, cd, ltd
-    )
+    # Scope-gated resolver selection -- see module docstring and
+    # policies/debt_total_aggregate.py for the full evidence: production
+    # never applied Policy C outside scripts/92's own original scope.
+    if accession_number in D022_APPLIED_SCOPE and accession_number not in POLICY_C_APPLIED_SCOPE:
+        total_debt = resolve_total_debt_maturity_basis_d022(
+            connection, accession_number, presentation, report_date, cd, ltd
+        )
+    else:
+        total_debt = resolve_total_debt_with_aggregate_policy(
+            connection, accession_number, presentation, report_date, cd, ltd
+        )
 
     cash = _reconstruct_simple_metric(connection, accession_number, presentation, "cash_and_equivalents", report_date)
     sti = _reconstruct_simple_metric(connection, accession_number, presentation, "short_term_investments", report_date)
