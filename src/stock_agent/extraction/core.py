@@ -1,0 +1,566 @@
+"""
+extraction/core.py — shared row-identification, fact-matching, and
+presentation/calculation reconstruction engine used by BOTH the annual
+and quarterly pipelines.
+
+Ported byte-exact (via AST line-range extraction, no retyping) from
+scripts/92_groups_1_3_4_debt_facility_aggregate_policy.py, which is the
+most complete, most-reused snapshot of this shared engine (confirmed
+logic-identical, modulo comments/docstrings, to its predecessors
+scripts/79, 82, 84, 87, 89 -- diffed function-by-function before this
+port; only explanatory comments differ). No formula, regex, threshold,
+or precedence order was changed during this move.
+
+BUILT_IN_METRICS is kept here as the single literal dict, byte-exact
+from scripts/89_panw_zero_long_term_debt_policy.py rather than
+scripts/92 -- 92 trimmed its own copy to only the 5 metrics its own
+compute_company_year needs (cash_and_equivalents,
+short_term_investments, current_debt, long_term_debt,
+stockholders_equity); 89's copy is a confirmed-byte-identical superset
+for all 5 of those (diffed programmatically before this port) PLUS the
+6 income-statement/cash-flow metrics scripts/148's quarterly engine
+resolves through this same identify_canonical_row mechanism (revenue,
+net_income, operating_income, operating_cash_flow, capex,
+pretax_income, income_tax_expense). Kept as one literal dict (not split
+across policy modules) to avoid any risk of mis-splitting a dict
+literal; policies/cash_label_variants.py and policies/
+debt_current_long_term.py re-export the specific entries they document
+(D-023/D-025 cash label broadening; current_debt/long_term_debt label
+vocabulary) directly from this module.
+"""
+
+from __future__ import annotations
+
+import datetime as _datetime_module
+import re
+from dataclasses import dataclass
+from pathlib import Path
+from typing import Any
+
+import duckdb
+import pandas as pd
+
+STANDARD_LABEL_ROLE = "http://www.xbrl.org/2003/role/label"
+
+class TargetRowNotFound(Exception):
+    pass
+
+
+def _strip_parenthetical_asides(label: str) -> str:
+    stripped = re.sub(r"\s*\([^)]*\)", " ", label)
+    return re.sub(r"\s+", " ", stripped).strip()
+
+
+@dataclass(frozen=True)
+class MetricDefinition:
+    name: str
+    role_include_pattern: str
+    role_exclude_pattern: str | None
+    mention_pattern: str
+    exclude_label_pattern: str | None
+    attributable_pattern: str | None
+    plain_pattern: str
+
+
+BUILT_IN_METRICS: dict[str, MetricDefinition] = {
+    "revenue": MetricDefinition(
+        "revenue", r"operations|income", r"comprehensive",
+        r"revenues?|net\s+sales", None, None,
+        r"^\s*(?:total\s+)?(?:revenues?|net\s+sales)\s*$",
+    ),
+    "net_income": MetricDefinition(
+        "net_income", r"operations|income", r"comprehensive",
+        r"net\s+(?:income|loss)", r"per\s+share|weighted\s+average",
+        r"attributable\s+to.*(?:common|stockholders|shareholders|"
+        r"corporation|company|\binc\.?\b|\bcorp\.?\b)",
+        r"^\s*net\s+(?:income\s*\(loss\)|income|loss)\s*$",
+    ),
+    "operating_income": MetricDefinition(
+        "operating_income", r"operations|income", r"comprehensive",
+        r"operating\s+(?:income|loss)|"
+        r"(?:income|loss)\s*(?:\(loss\)|\(income\))?\s*from\s+operations",
+        r"per\s+share|weighted\s+average|margin|percentage", None,
+        r"^\s*(?:"
+        r"operating\s+(?:income\s*\(loss\)|income|loss)"
+        r"|(?:income|loss)\s*(?:\(loss\)|\(income\))?\s*from\s+operations"
+        r")\s*$",
+    ),
+    "operating_cash_flow": MetricDefinition(
+        "operating_cash_flow", r"cash\s*flows?", None,
+        r"net\s+cash.*(?:from\s+operations|operating\s+activities)", None, None,
+        r"^\s*net\s+cash\s+(?:provided\s+by|used\s+in|from)\s+"
+        r"operat(?:ing\s+activities|ions)\s*$",
+    ),
+    "capex": MetricDefinition(
+        "capex", r"cash\s*flows?", None,
+        r"capital\s+expenditures?|"
+        r"(?:additions|purchases|expenditures)\s+"
+        r"(?:related\s+to\s+|for\s+|to\s+|of\s+)?property",
+        r"unpaid|incurred\s+but\s+not\s+yet\s+paid|"
+        r"accounts\s+payable|accrued", None,
+        r"^\s*capital\s+expenditures?\s*$|"
+        r"^\s*(?:additions|purchases|expenditures)\s+"
+        r"(?:related\s+to\s+|for\s+|to\s+|of\s+)?property.*$",
+    ),
+    # Broadened (D-023, this script) from requiring the literal doubled
+    # phrase "cash and CASH equivalents" to also accept the shortened
+    # "cash and equivalents" — a genuine, general SEC-filer label
+    # variant, not a company-specific tag: confirmed by direct
+    # comparison against MU 2025-08-28 (control year, already resolves
+    # via "Cash and cash equivalents") that MU 2024-08-29's row is the
+    # SAME standard concept (us-gaap:CashAndCashEquivalentsAtCarryingValue),
+    # same balance-sheet role, same structural position — only the
+    # label wording differs. The optional "(?:cash\s+)?" makes "cash"
+    # appear once or twice; still fully anchored (^...$) so it cannot
+    # match a longer label like "Restricted cash and cash equivalents"
+    # or "Cash, cash equivalents, and restricted cash" — those still
+    # correctly fall through to REVIEW_REQUIRED, exactly as before.
+    # D-025 (this script): role_exclude_pattern broadened from just
+    # "parenthetical" to also exclude any role whose OWN title contains
+    # "reconciliation" — a general, ticker-agnostic SEC-filer
+    # convention: the ASC 230 / ASU 2016-18 supplemental disclosure
+    # "Reconciliation of Cash, Cash Equivalents, and Restricted Cash to
+    # the [Consolidated] Balance Sheet(s)" is a STANDARD table required
+    # of any filer holding restricted cash, and its own descriptive
+    # title routinely mentions "balance sheet(s)" as part of the
+    # reconciliation description — which previously caused it to be
+    # mistaken for the actual primary balance sheet role by the
+    # role_include_pattern's substring match, producing a genuine
+    # second, structurally-different candidate. Confirmed on PANW
+    # 2023-07-31 vs. its own 2024-07-31 control (whose equivalent role
+    # is titled without "balance sheets" in the description, so it was
+    # never a false candidate there) — the reconciliation-table role
+    # never has any legitimate reason to be selected as the
+    # cash_and_equivalents source (the true balance sheet role never
+    # itself contains "reconciliation" in its title), so this exclusion
+    # cannot remove a genuine candidate anywhere.
+    "cash_and_equivalents": MetricDefinition(
+        "cash_and_equivalents", r"balance\s+sheets?|financial\s+position",
+        r"parenthetical|reconciliation", r"cash\s+and\s+(?:cash\s+)?equivalents", None, None,
+        r"^\s*cash\s+and\s+(?:cash\s+)?equivalents\s*$",
+    ),
+    "short_term_investments": MetricDefinition(
+        "short_term_investments", r"balance\s+sheets?|financial\s+position",
+        r"parenthetical", r"marketable\s+securities|short-?term\s+investments",
+        None, None,
+        r"^\s*(?:marketable\s+securities|short-?term\s+investments)\s*$",
+    ),
+    "current_debt": MetricDefinition(
+        "current_debt", r"balance\s+sheets?|financial\s+position",
+        r"parenthetical",
+        r"short-?term\s+debt|commercial\s+paper|"
+        r"notes?\s+payable.*current|current.*notes?\s+payable|"
+        r"current\s+portion\s+of\s+(?:long-?term\s+)?debt|"
+        r"current\s+maturities\s+of\s+long-?term\s+debt|"
+        r"current\s+debt",
+        r"non-?current", None,
+        r"^\s*short-?term\s+debt\s*$"
+        r"|^\s*commercial\s+paper\s*$"
+        r"|^\s*notes?\s+payable(?:\s+and\s+other\s+borrowings)?,?\s*current\s*$"
+        r"|^\s*current\s+portion\s+of\s+long-?term\s+debt\s*$"
+        r"|^\s*current\s+maturities\s+of\s+long-?term\s+debt\s*$"
+        r"|^\s*current\s+debt\s*$",
+    ),
+    "long_term_debt": MetricDefinition(
+        "long_term_debt", r"balance\s+sheets?|financial\s+position",
+        r"parenthetical",
+        r"long-?term\s+debt|"
+        r"notes?\s+payable.*non-?current|non-?current.*notes?\s+payable",
+        r"current\s+portion|current\s+maturities", None,
+        r"^\s*long-?term\s+debt\s*$"
+        r"|^\s*notes?\s+payable(?:\s+and\s+other\s+borrowings)?,?\s*non-?current\s*$",
+    ),
+    "stockholders_equity": MetricDefinition(
+        "stockholders_equity", r"balance\s+sheets?|financial\s+position",
+        r"parenthetical",
+        r"stockholders.?\s+equity|shareholders.?\s+equity|total\s+equity",
+        None, None,
+        r"^\s*total\s+(?:stockholders|shareholders).?\s+equity\s*$"
+        r"|^\s*total\s+equity\s*$",
+    ),
+    "pretax_income": MetricDefinition(
+        "pretax_income", r"operations|income", r"comprehensive",
+        r"income\s*(?:\(loss\))?\s*before.*tax", None, None,
+        r"^\s*income\s*(?:\(loss\))?\s*before\s+"
+        r"(?:(?:provision\s+for|benefit\s+from)\s+)?"
+        r"income\s+tax(?:es)?(?:\s+and\s+.*)?\s*$",
+    ),
+    "income_tax_expense": MetricDefinition(
+        "income_tax_expense", r"operations|income", r"comprehensive",
+        r"(?:provision|benefit).*income\s+tax|"
+        r"income\s+tax.*(?:provision|expense|benefit)", None, None,
+        r"^\s*(?:provision|benefit)\s+(?:for|from)\s+income\s+tax(?:es)?\s*$"
+        r"|^\s*income\s+tax\s+(?:expense|provision|benefit)"
+        r"(?:\s*\((?:expense|benefit|provision)\))?\s*$",
+    ),
+}
+
+
+ANNUAL_DURATION_MIN_DAYS = 350
+
+
+def identify_canonical_row(
+    presentation: pd.DataFrame, metric: MetricDefinition
+) -> tuple[dict[str, str], pd.DataFrame]:
+    is_statement_role = presentation["role_definition"].str.match(
+        r"^\d+\s*-\s*Statement\s*-", na=False
+    )
+    is_role_include = presentation["role_definition"].str.contains(
+        metric.role_include_pattern, case=False, regex=True, na=False
+    )
+
+    if metric.role_exclude_pattern:
+        is_role_exclude = presentation["role_definition"].str.contains(
+            metric.role_exclude_pattern, case=False, regex=True, na=False
+        )
+    else:
+        is_role_exclude = pd.Series(False, index=presentation.index)
+
+    is_target_role = is_statement_role & is_role_include & ~is_role_exclude
+    is_not_abstract = ~presentation["is_abstract"].astype(bool)
+
+    label_stripped_all = presentation["label"].map(_strip_parenthetical_asides)
+    mentions_metric = presentation["label"].str.contains(
+        metric.mention_pattern, case=False, regex=True, na=False
+    ) | label_stripped_all.str.contains(
+        metric.mention_pattern, case=False, regex=True, na=False
+    )
+
+    if metric.exclude_label_pattern:
+        is_excluded_label = presentation["label"].str.contains(
+            metric.exclude_label_pattern, case=False, regex=True, na=False
+        )
+    else:
+        is_excluded_label = pd.Series(False, index=presentation.index)
+
+    base_candidates = presentation[
+        is_target_role & is_not_abstract & mentions_metric & ~is_excluded_label
+    ].copy()
+
+    if base_candidates.empty:
+        raise TargetRowNotFound(
+            f"לא נמצאה אף שורת '{metric.name}' בתוך Statement role ראשי."
+        )
+
+    if metric.attributable_pattern:
+        is_tier_a = base_candidates["label"].str.contains(
+            metric.attributable_pattern, case=False, regex=True, na=False
+        )
+        tier_a = base_candidates[is_tier_a]
+
+        if len(tier_a) == 1:
+            row = tier_a.iloc[0]
+            return (
+                {
+                    "role_uri": str(row["role_uri"]),
+                    "role_definition": str(row["role_definition"]),
+                    "concept_qname": str(row["concept_qname"]),
+                    "label": str(row["label"]),
+                    "period_type": str(row["period_type"]),
+                    "selection_tier": "attributable_to_shareholders",
+                },
+                base_candidates,
+            )
+
+    label_stripped = base_candidates["label"].map(_strip_parenthetical_asides)
+    is_tier_b = base_candidates["label"].str.match(
+        metric.plain_pattern, case=False, na=False
+    ) | label_stripped.str.match(metric.plain_pattern, case=False, na=False)
+    tier_b = base_candidates[is_tier_b]
+
+    if len(tier_b) == 1:
+        row = tier_b.iloc[0]
+        return (
+            {
+                "role_uri": str(row["role_uri"]),
+                "role_definition": str(row["role_definition"]),
+                "concept_qname": str(row["concept_qname"]),
+                "label": str(row["label"]),
+                "period_type": str(row["period_type"]),
+                "selection_tier": "plain",
+            },
+            base_candidates,
+        )
+
+    raise TargetRowNotFound(
+        f"לא ניתן לזהות שורת '{metric.name}' יחידה וחד-משמעית "
+        f"(מועמדים: {len(base_candidates)}, tier-B: {len(tier_b)})."
+    )
+
+
+def reconstruct_presentation_dataframe(
+    connection: duckdb.DuckDBPyConnection, accession_number: str
+) -> pd.DataFrame:
+    df = connection.execute(
+        """
+        SELECT
+            p.role_uri AS role_uri,
+            p.role_definition AS role_definition,
+            p.depth AS depth,
+            p.parent_concept AS parent_qname,
+            p.child_concept AS concept_qname,
+            COALESCE(l_pref.label_text, l_std.label_text, p.child_concept) AS label,
+            COALESCE(c.is_abstract, FALSE) AS is_abstract,
+            COALESCE(c.period_type, '') AS period_type,
+            COALESCE(c.balance_type, '') AS balance
+        FROM xbrl_presentation_relationships p
+        LEFT JOIN xbrl_concepts c
+            ON c.accession_number = p.accession_number
+           AND c.qname = p.child_concept
+        LEFT JOIN xbrl_labels l_pref
+            ON l_pref.accession_number = p.accession_number
+           AND l_pref.concept_qname = p.child_concept
+           AND l_pref.label_role = p.preferred_label
+           AND l_pref.language IN ('en-US', 'en')
+           AND p.preferred_label IS NOT NULL
+           AND p.preferred_label != ''
+        LEFT JOIN xbrl_labels l_std
+            ON l_std.accession_number = p.accession_number
+           AND l_std.concept_qname = p.child_concept
+           AND l_std.label_role = ?
+           AND l_std.language IN ('en-US', 'en')
+        WHERE p.accession_number = ?
+        """,
+        [STANDARD_LABEL_ROLE, accession_number],
+    ).fetchdf()
+
+    df = df.drop_duplicates(
+        subset=["role_uri", "parent_qname", "concept_qname", "depth"]
+    ).reset_index(drop=True)
+
+    return df
+
+
+def reconstruct_calculation_children_by_parent(
+    connection: duckdb.DuckDBPyConnection, accession_number: str, role_uri: str
+) -> dict[str, list[str]]:
+    edges = connection.execute(
+        """
+        SELECT parent_concept, child_concept
+        FROM xbrl_calculation_relationships
+        WHERE accession_number = ? AND role_uri = ?
+        """,
+        [accession_number, role_uri],
+    ).fetchdf()
+
+    children_by_parent: dict[str, list[str]] = {}
+
+    for parent, child in zip(edges["parent_concept"], edges["child_concept"]):
+        if not parent or not child:
+            continue
+        children_by_parent.setdefault(parent, []).append(child)
+
+    return children_by_parent
+
+
+def usd_unit_ids_for_accession(
+    connection: duckdb.DuckDBPyConnection, accession_number: str
+) -> set[str]:
+    units = connection.execute(
+        """
+        SELECT unit_id FROM xbrl_units
+        WHERE accession_number = ?
+          AND numerator_measures = 'iso4217:USD'
+          AND denominator_measures IS NULL
+        """,
+        [accession_number],
+    ).fetchdf()
+
+    return set(units["unit_id"].tolist())
+
+
+PRIOR_PERIOD_DATE_TOLERANCE_DAYS = 10
+
+
+def match_facts_from_warehouse(
+    connection: duckdb.DuckDBPyConnection,
+    accession_number: str,
+    concept_qname: str,
+    report_date: str,
+    expected_period_type: str,
+    date_tolerance_days: int = 0,
+) -> dict[str, object]:
+    facts = connection.execute(
+        """
+        SELECT value_numeric, context_id, unit_id, period_start,
+               period_end, instant_date, dimensions_json, is_nil,
+               period_type, decimals
+        FROM xbrl_facts
+        WHERE accession_number = ? AND concept_qname = ?
+        """,
+        [accession_number, concept_qname],
+    ).fetchdf()
+
+    if facts.empty:
+        return {"status": "REVIEW_REQUIRED", "error": "no facts for concept", "value": None}
+
+    usd_unit_ids = usd_unit_ids_for_accession(connection, accession_number)
+    requested_date = _datetime_module.date.fromisoformat(report_date)
+
+    if expected_period_type == "instant":
+        base = facts[
+            (facts["dimensions_json"] == "{}")
+            & (facts["unit_id"].isin(usd_unit_ids))
+            & (~facts["is_nil"])
+            & facts["value_numeric"].notna()
+            & facts["instant_date"].notna()
+        ].copy()
+        base["_date_diff_days"] = base["instant_date"].map(
+            lambda d: abs((_datetime_module.date.fromisoformat(str(d)) - requested_date).days)
+        )
+        candidates = base[base["_date_diff_days"] <= date_tolerance_days]
+    else:
+        base = facts[
+            (facts["dimensions_json"] == "{}")
+            & (facts["unit_id"].isin(usd_unit_ids))
+            & (~facts["is_nil"])
+            & facts["value_numeric"].notna()
+            & facts["period_end"].notna()
+        ].copy()
+        base["_date_diff_days"] = base["period_end"].map(
+            lambda d: abs((_datetime_module.date.fromisoformat(str(d)) - requested_date).days)
+        )
+        candidates = base[base["_date_diff_days"] <= date_tolerance_days]
+
+        if not candidates.empty:
+            starts = pd.to_datetime(candidates["period_start"])
+            ends = pd.to_datetime(candidates["period_end"])
+            duration_days = (ends - starts).dt.days
+            candidates = candidates[
+                (duration_days >= ANNUAL_DURATION_MIN_DAYS)
+                & (duration_days <= ANNUAL_DURATION_MAX_DAYS)
+            ]
+
+    date_field = "instant_date" if expected_period_type == "instant" else "period_end"
+    matched_dates = sorted(set(str(d) for d in candidates[date_field].tolist())) if not candidates.empty else []
+
+    if candidates.empty:
+        return {
+            "status": "REVIEW_REQUIRED",
+            "error": "no fact passed unit/dimension/period filters",
+            "value": None,
+            "requested_date": report_date,
+            "date_tolerance_days": date_tolerance_days,
+            "matched_dates": [],
+        }
+
+    if len(matched_dates) > 1:
+        return {
+            "status": "REVIEW_REQUIRED",
+            "error": (
+                f"more than one candidate date within tolerance "
+                f"({date_tolerance_days} days): {matched_dates} — cannot "
+                "select unambiguously"
+            ),
+            "value": None,
+            "requested_date": report_date,
+            "date_tolerance_days": date_tolerance_days,
+            "matched_dates": matched_dates,
+        }
+
+    candidates, _notes = _reconcile_same_context_precision_duplicates_from_warehouse(
+        candidates
+    )
+
+    distinct_values = sorted(set(candidates["value_numeric"].tolist()))
+
+    if len(distinct_values) == 1:
+        matched_date = matched_dates[0]
+        actual_diff_days = abs(
+            (_datetime_module.date.fromisoformat(matched_date) - requested_date).days
+        )
+        return {
+            "status": "PASS",
+            "value": distinct_values[0],
+            "context_id": str(candidates.iloc[0]["context_id"]),
+            "unit_id": str(candidates.iloc[0]["unit_id"]),
+            "requested_date": report_date,
+            "matched_date": matched_date,
+            "date_diff_days": actual_diff_days,
+            "date_tolerance_days": date_tolerance_days,
+        }
+
+    return {
+        "status": "REVIEW_REQUIRED",
+        "error": f"multiple distinct values: {distinct_values}",
+        "value": None,
+        "requested_date": report_date,
+        "matched_dates": matched_dates,
+        "date_tolerance_days": date_tolerance_days,
+    }
+
+
+def _decimals_precision_rank(decimals_value: object) -> float:
+    if decimals_value is None:
+        return float("-inf")
+
+    text = str(decimals_value).strip()
+
+    if text.upper() == "INF":
+        return float("inf")
+
+    try:
+        return float(int(text))
+    except ValueError:
+        return float("-inf")
+
+
+def _round_to_xbrl_decimals(value: float, decimals_value: object) -> float | None:
+    rank = _decimals_precision_rank(decimals_value)
+
+    if rank == float("inf"):
+        return value
+
+    if rank == float("-inf"):
+        return None
+
+    factor = 10 ** (-rank)
+
+    return round(value / factor) * factor
+
+
+def _reconcile_same_context_precision_duplicates_from_warehouse(
+    filtered: pd.DataFrame,
+) -> tuple[pd.DataFrame, list[str]]:
+    reconciled_rows: list[pd.Series] = []
+    notes: list[str] = []
+
+    for context_id, group in filtered.groupby("context_id", sort=False):
+        if len(group) == 1 or group["value_numeric"].nunique() == 1:
+            for _, row in group.iterrows():
+                reconciled_rows.append(row)
+            continue
+
+        group_by_precision = group.assign(
+            _precision_rank=group["decimals"].map(_decimals_precision_rank)
+        ).sort_values("_precision_rank", ascending=False)
+
+        most_precise = group_by_precision.iloc[0]
+        all_consistent = True
+
+        for _, other_row in group_by_precision.iloc[1:].iterrows():
+            rounded = _round_to_xbrl_decimals(
+                most_precise["value_numeric"], other_row["decimals"]
+            )
+
+            if rounded is None or rounded != other_row["value_numeric"]:
+                all_consistent = False
+                break
+
+        if all_consistent:
+            reconciled_rows.append(most_precise)
+            notes.append(
+                f"context {context_id}: {len(group)} facts at different "
+                "rounding precision reconciled to the most precise value "
+                f"({most_precise['value_numeric']}, decimals="
+                f"{most_precise['decimals']})."
+            )
+        else:
+            for _, row in group.iterrows():
+                reconciled_rows.append(row)
+
+    return pd.DataFrame(reconciled_rows), notes
+
+
+SUCCESSFUL_STATUSES = {"PASS", "PASS_MATURITY_BASIS", "PASS_DIRECT_AGGREGATE", "PASS_NORMALIZED_TAX"}
+
