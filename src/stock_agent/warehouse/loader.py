@@ -140,22 +140,22 @@ def detect_entry_point(locked_dir: Path, primary_document_path: Path) -> dict:
             "candidate_count": len(candidates), "candidates": [c.name for c in candidates]}
 
 
-def run_production_warehouse_load(ticker: str, report_date: str, warehouse_db_path: Path, form: str = "10-Q") -> dict:
-    """Loads exactly one filing into `warehouse_db_path` (the caller
-    decides which database -- production or otherwise; this function has
-    no hardcoded database path). PASS requires: locked package complete;
-    entry point resolved unambiguously; Arelle DTS load succeeds;
-    xbrl_facts/xbrl_contexts/xbrl_concepts all > 0; xbrl_units > 0
-    whenever at least one extracted fact carries a monetary (iso4217)
-    unit; the exact counts written match the counts computed in memory
-    (verified by re-querying immediately after the write, inside the same
-    transaction); complete accession + selected-entry-point lineage is
-    present in the returned result. Arelle completing without a Python
-    exception is NOT sufficient for PASS -- this function never sets
-    status="PASS" without passing every one of these checks."""
+def parse_locked_filing(ticker: str, report_date: str, form: str = "10-Q") -> dict:
+    """Phase 1 of the warehouse load: locate the locked package, run
+    Arelle exactly once, and extract every warehouse DataFrame -- no
+    database is opened or written to. This is the CPU/IO-heavy, purely
+    read-only half of the load, safe to run concurrently in a separate
+    worker process per filing (see warehouse/parallel_loader.py); the
+    write half (write_parsed_filing, below) must still run serialized
+    against a single writer, which is why the two are split.
+
+    Same validation as before the split (D-041, unchanged): PASS-shaped
+    output requires xbrl_facts/xbrl_contexts/xbrl_concepts all > 0, and
+    xbrl_units > 0 whenever at least one extracted fact carries a
+    monetary (iso4217) unit. Raises WarehouseLoaderError otherwise --
+    Arelle completing without a Python exception is NOT sufficient."""
     from arelle.RuntimeOptions import RuntimeOptions
     from arelle.api.Session import Session
-    from arelle import Version as ArelleVersion
 
     total_start = time.perf_counter()
     started_at_utc = datetime.now(timezone.utc).isoformat()
@@ -179,12 +179,11 @@ def run_production_warehouse_load(ticker: str, report_date: str, warehouse_db_pa
     primary_document_checksum = _sha256_of_file(primary_document_path)
 
     CACHE_DIR.mkdir(parents=True, exist_ok=True)
-    warehouse_db_path.parent.mkdir(parents=True, exist_ok=True)
 
     options = RuntimeOptions(
         entrypointFile=str(entry_point), internetConnectivity="offline",
         cacheDirectory=str(CACHE_DIR), httpUserAgent=sec_user_agent, keepOpen=True,
-        logFile=str(warehouse_db_path.parent / f"{warehouse_db_path.stem}_production_load_arelle.log"),
+        logFile=str(CACHE_DIR / f"{accession_number}_parse_arelle.log"),
         logFormat="[%(levelname)s] [%(messageCode)s] %(message)s - %(file)s",
     )
 
@@ -240,18 +239,44 @@ def run_production_warehouse_load(ticker: str, report_date: str, warehouse_db_pa
     if not all(lineage.get(k) for k in ("accession_number", "ticker", "form", "report_date", "selected_entry_point", "detected_format")):
         raise WarehouseLoaderError("INCOMPLETE_LINEAGE", f"lineage is missing required fields: {lineage}")
 
-    # --- atomic write ---
-    connection = duckdb.connect(database=str(warehouse_db_path))
+    total_elapsed_seconds = time.perf_counter() - total_start
+    return {
+        "accession_number": accession_number, "ticker": ticker, "form": form, "report_date": report_date,
+        "lineage": lineage, "computed_counts": computed_counts,
+        "tables": {
+            "xbrl_facts": facts_df, "xbrl_contexts": contexts_df, "xbrl_units": units_df,
+            "xbrl_concepts": concepts_df, "xbrl_labels": labels_df,
+            "xbrl_presentation_relationships": presentation_df, "xbrl_calculation_relationships": calculation_df,
+            "xbrl_definition_relationships": definition_df, "xbrl_roles": roles_df,
+        },
+        "started_at_utc": started_at_utc, "dts_seconds": round(dts_seconds, 6),
+        "parse_elapsed_seconds": round(total_elapsed_seconds, 3),
+    }
+
+
+def write_parsed_filing(connection: "duckdb.DuckDBPyConnection", parsed: dict, script_name: str = "warehouse-loader-v2-production") -> dict:
+    """Phase 2 of the warehouse load: the atomic write, unchanged from
+    the pre-split run_production_warehouse_load (D-041) -- verifies
+    inserted physical counts equal the computed counts BEFORE commit,
+    never sets status="PASS" otherwise. Must be called against a single
+    writer connection; never call this concurrently from more than one
+    process/thread against the same warehouse_db_path (DuckDB itself
+    only supports one read-write connection to a file at a time, and the
+    D-041 count-verification logic assumes no concurrent writer)."""
+    from arelle import Version as ArelleVersion
+
+    accession_number = parsed["accession_number"]
+    ticker = parsed["ticker"]
+    report_date = parsed["report_date"]
+    computed_counts = parsed["computed_counts"]
+    started_at_utc = parsed["started_at_utc"]
+    write_start = time.perf_counter()
+
+    connection.execute("BEGIN TRANSACTION")
     try:
-        connection.execute("BEGIN TRANSACTION")
         s121.create_warehouse_schema(connection)
-        for table, df in (
-            ("xbrl_facts", facts_df), ("xbrl_contexts", contexts_df), ("xbrl_units", units_df),
-            ("xbrl_concepts", concepts_df), ("xbrl_labels", labels_df),
-            ("xbrl_presentation_relationships", presentation_df), ("xbrl_calculation_relationships", calculation_df),
-            ("xbrl_definition_relationships", definition_df), ("xbrl_roles", roles_df),
-        ):
-            s121.write_table(connection, table, df, accession_number)
+        for table in WAREHOUSE_TABLES:
+            s121.write_table(connection, table, parsed["tables"][table], accession_number)
 
         # verify inserted physical counts equal computed counts BEFORE commit
         inserted_counts = {
@@ -264,13 +289,13 @@ def run_production_warehouse_load(ticker: str, report_date: str, warehouse_db_pa
             raise WarehouseLoaderError("INSERTED_COUNT_MISMATCH", f"computed vs. inserted count mismatch: {mismatches}")
 
         completed_at_utc = datetime.now(timezone.utc).isoformat()
-        total_elapsed_seconds = time.perf_counter() - total_start
-        warehouse_run_id = f"{accession_number}::144_warehouse_loader_v2_production.py::{started_at_utc}"
+        total_elapsed_seconds = parsed["parse_elapsed_seconds"] + (time.perf_counter() - write_start)
+        warehouse_run_id = f"{accession_number}::{script_name}::{started_at_utc}"
         connection.execute(
             "INSERT INTO warehouse_runs VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)",
             [warehouse_run_id, accession_number, ticker, report_date, "warehouse-loader-v2-production",
-             ArelleVersion.getVersion(), "144_warehouse_loader_v2_production.py", started_at_utc, completed_at_utc,
-             0.0, round(dts_seconds, 6), 0.0, 0.0, 0.0, round(total_elapsed_seconds, 6),
+             ArelleVersion.getVersion(), script_name, started_at_utc, completed_at_utc,
+             0.0, parsed["dts_seconds"], 0.0, 0.0, 0.0, round(total_elapsed_seconds, 6),
              json.dumps(inserted_counts), "PASS"],
         )
         connection.execute("COMMIT")
@@ -286,13 +311,27 @@ def run_production_warehouse_load(ticker: str, report_date: str, warehouse_db_pa
         except duckdb.TransactionException:
             pass
         raise WarehouseLoaderError("INSERTED_COUNT_MISMATCH", f"unexpected error during atomic write: {exc}") from exc
-    finally:
-        connection.close()
 
     return {
         "status": "PASS", "warehouse_run_id": warehouse_run_id, "accession_number": accession_number,
-        "ticker": ticker, "report_date": report_date, "lineage": lineage,
+        "ticker": ticker, "report_date": report_date, "lineage": parsed["lineage"],
         "computed_counts": computed_counts, "inserted_counts": inserted_counts,
         "started_at_utc": started_at_utc, "completed_at_utc": completed_at_utc,
         "total_elapsed_seconds": round(total_elapsed_seconds, 3),
     }
+
+
+def run_production_warehouse_load(ticker: str, report_date: str, warehouse_db_path: Path, form: str = "10-Q") -> dict:
+    """Loads exactly one filing into `warehouse_db_path` (the caller
+    decides which database -- production or otherwise; this function has
+    no hardcoded database path). Unchanged behavior from before the
+    parse/write split: this is simply parse_locked_filing() followed by
+    write_parsed_filing() against a fresh connection, preserving the
+    exact same PASS criteria and lineage (D-041)."""
+    warehouse_db_path.parent.mkdir(parents=True, exist_ok=True)
+    parsed = parse_locked_filing(ticker, report_date, form)
+    connection = duckdb.connect(database=str(warehouse_db_path))
+    try:
+        return write_parsed_filing(connection, parsed, script_name="144_warehouse_loader_v2_production.py")
+    finally:
+        connection.close()

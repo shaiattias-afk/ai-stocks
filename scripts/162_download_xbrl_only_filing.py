@@ -28,7 +28,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import time
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
@@ -42,6 +41,9 @@ import sys
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_DIR / "data"
+
+sys.path.insert(0, str(PROJECT_DIR / "src"))
+from stock_agent.ingestion.rate_limiter import SEC_RATE_LIMITER
 
 _spec161 = _importlib_util.spec_from_file_location("s161", PROJECT_DIR / "scripts" / "161_filings_archive_core.py")
 s161 = _importlib_util.module_from_spec(_spec161)
@@ -77,6 +79,7 @@ def build_headers() -> dict[str, str]:
 
 
 def sec_get_bytes(url: str) -> bytes:
+    SEC_RATE_LIMITER.acquire()
     request = Request(url, headers=build_headers())
     try:
         with urlopen(request, timeout=REQUEST_TIMEOUT_SECONDS) as response:
@@ -91,7 +94,6 @@ def sec_get_bytes(url: str) -> bytes:
     except URLError as error:
         raise RuntimeError(f"Could not connect to SEC.\nURL: {url}\nError: {error}") from error
 
-    time.sleep(REQUEST_DELAY_SECONDS)
     return content
 
 

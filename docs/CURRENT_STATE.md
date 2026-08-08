@@ -4178,3 +4178,119 @@ of the 45 approved company-years. The next stage (not started) would
 be building the full Scoring Model V1 (per
 `docs/SCORING_MODEL_V1_BLUEPRINT.md`) and the point-in-time backtest
 engine on top of these five frozen releases.
+
+## 2026-08-08 — Documentation catch-up: Stage 1 filings archive (never logged here)
+
+`scripts/161`-`166` (XBRL-only download + compressed DuckDB filing
+archive: gzip BLOB storage, SHA-256 integrity, a leaner downloader that
+fetches only the ~7 XBRL-relevant files per accession instead of ~106)
+were built and committed (`7cfe17f`, "feat: XBRL-only download +
+compressed filing archive (#4)") without a corresponding entry in this
+file — a real documentation gap, noted here rather than silently
+carried forward. Per that commit's own message: 185 accessions / 1,277
+files archived, 828MB -> 59.7MB (13.9x), integrity tests PASS, but
+**Stage 1 acceptance is explicitly NOT complete** — the archive-rebuild
+proof (`scripts/166`) covered only 77 of 185 accessions, and
+`data/sec_filings_locked/` (the original on-disk filing packages) must
+NOT be deleted until a full rebuild reproduces the production warehouse
+exactly for all 185. The parallel-ingestion work below (and its
+warehouse loader) deliberately targets `data/sec_filings_locked/`
+directly, not the not-yet-fully-verified compressed archive, so it does
+not depend on closing that gap.
+
+## 2026-08-08 — Parallel warehouse ingestion (D-051)
+
+**Goal**: remove the sequential, single-process bottleneck from XBRL
+warehouse loading so the pipeline can absorb the ~2,000-filing scale the
+point-in-time universe expansion (next section) will require, inside a
+roughly 1-hour ingestion budget.
+
+**Baseline measured before this work**: 187 sequential warehouse parses
+(the existing 9-company universe) took 305.9s total (1.64s average,
+10.11s worst case). There was previously zero real concurrency anywhere
+in the ingestion path — `multiprocessing`/`subprocess` appeared only as
+a single bounded child process per filing for *timeout enforcement*
+(`scripts/121`'s `warehouse_10q_in_child_process`), never to run N
+filings at once. Downloading (not parsing) was already the larger
+bottleneck, addressed separately by the Stage 1 archive work above.
+
+**What changed:**
+1. `src/stock_agent/warehouse/loader.py` split into two phases, with
+   zero behavior change for the existing single-filing caller: `parse_
+   locked_filing()` (Arelle DTS load + DataFrame extraction, no database
+   access — safe to run in a separate process) and `write_parsed_
+   filing()` (the atomic transaction + pre-commit count verification,
+   D-041, unchanged). `run_production_warehouse_load()` is now exactly
+   `parse_locked_filing()` followed by `write_parsed_filing()`; the only
+   observable difference is the Arelle log file path (per-accession,
+   under `data/arelle_cache/`, instead of per-warehouse-db), which
+   carries no correctness meaning. Verified with a real smoke test
+   (CRWD 2021-04-30, still PASS, 1.61s, identical computed_counts) and
+   the full pytest suite (119/119 pass, including both golden-regression
+   tests reproducing 900/1,080 production rows byte-identical — proof
+   this refactor did not change any accounting/policy output).
+2. `src/stock_agent/warehouse/parallel_loader.py` (new): runs N of the
+   existing subprocess-per-filing pattern (unchanged from `scripts/121`)
+   **concurrently** via a `ThreadPoolExecutor` whose threads each block
+   on `subprocess.run(..., timeout=...)` — real OS-level parallelism
+   across filings (each child is its own process/core; Python's GIL
+   never applies to a blocked `subprocess.run` call) with a REAL,
+   hard-kill timeout per filing (`subprocess.run`'s own `.kill()` on
+   `TimeoutExpired`), which a `concurrent.futures.ProcessPoolExecutor`
+   cannot provide once a future is already running — this is why a
+   thread pool of subprocesses was chosen over a process pool. Each
+   child parses exactly one filing and pickles the full result (Arelle
+   DataFrames) to a temp file; the DuckDB **write** happens serially,
+   under a lock, in the calling process, reusing `write_parsed_filing`
+   unchanged (DuckDB only supports one read-write connection per file —
+   a structural requirement, not a style choice). `warm_taxonomy_
+   cache()` pre-parses one representative filing per (form, fiscal-year)
+   group, sequentially, before the pool starts, so N concurrent children
+   never simultaneously hit the network for the same missing taxonomy
+   file.
+3. `src/stock_agent/ingestion/rate_limiter.py` (new): a thread-safe
+   `RateLimiter`, extracted from the inline `time.sleep(0.1)` pattern
+   `scripts/162` already used for SEC's documented 10 req/s fair-access
+   limit. A single shared singleton (`SEC_RATE_LIMITER`) is used by every
+   SEC-facing request in the project (`scripts/162`'s downloader now
+   imports it instead of sleeping inline) so the aggregate rate across
+   every component making SEC requests in one process — not just each
+   one individually — stays under 10/s.
+4. `scripts/172_parallel_warehouse_ingest_batch.py` (new, thin entry
+   point): enumerates every locked filing on disk, skips whatever the
+   target warehouse already has as `PASS` (idempotent, same pattern as
+   every other batch runner in this project), and loads the rest via
+   `run_parallel_warehouse_load`.
+
+**Verification (real Arelle, real locked filings, no synthetic
+fixtures):**
+
+| Check | Result |
+|---|---|
+| Sequential vs. parallel content, 9 real filings (MSFT/AMZN/CRWD, mixed 10-K/10-Q) | Byte-identical across all 9 warehouse tables and every accession |
+| Full 185-filing batch, parallel, `max_workers=8`, scratch database | **143.6s total, 185/185 PASS** |
+| Same 185-filing batch vs. production warehouse content | All 9 table row counts identical (225,780 facts, 55,923 contexts, ... 24,477 roles) and all 185 accessions identical |
+| Speedup vs. the 305.9s sequential baseline | **2.13x** at `max_workers=8` on this machine (14 cores) |
+| Extrapolated to the ~2,000-filing target | ~1,552s (~26 min) parsing alone at the same worker count — comfortably inside the 1-hour ingestion budget alongside download time |
+| `tests/test_parallel_warehouse.py` (3 required tests, real Arelle, `@pytest.mark.golden`) | `test_parallel_matches_sequential`, `test_validation_failure_does_not_corrupt_warehouse` (one filing fails validation — PACKAGE_INCOMPLETE — mid-batch; the other 2 commit normally, warehouse stays valid), `test_worker_timeout_kills_child_and_leaves_no_partial_write` (a 0.01s timeout always fires before the child can even start; zero rows/tables written; the same database file then loads normally afterward, proving no corruption) — **3/3 PASS** |
+| `tests/test_rate_limiter.py` (4 tests) | single-thread and multi-thread (4 threads × 5 calls) aggregate-rate enforcement, sliding-window check, and a guard that `scripts/162`'s shared limiter is still wired to exactly 10/s — **4/4 PASS** |
+| Full project test suite | **119/119 pass** (110 pre-existing + 2 golden regression + 7 new), including both golden-regression tests reproducing the 900 annual and 1,080 quarterly production rows byte-identical |
+
+**Honest limitation, disclosed rather than hidden**: raw speedup at
+small N (9 filings: 1.37x) is modest because each child process pays a
+fixed ~1s Python+Arelle import cost — parsing was genuinely not the
+bottleneck at the current 187-filing scale (matching the user's own
+baseline observation), so the win is real but only becomes load-bearing
+at the ~2,000-filing scale the next section targets. A further
+optimization (persistent long-lived worker processes instead of a fresh
+subprocess per filing) was considered and explicitly deferred — not
+needed to clear the 1-hour target at the current design's measured
+throughput, and it would trade away the real per-filing hard-kill
+timeout this design deliberately chose.
+
+**Files**: `src/stock_agent/warehouse/parallel_loader.py`,
+`src/stock_agent/ingestion/rate_limiter.py`,
+`scripts/172_parallel_warehouse_ingest_batch.py`,
+`tests/test_parallel_warehouse.py`, `tests/test_rate_limiter.py`,
+`data/parallel_warehouse_ingest_batch_result.json` (185-filing benchmark
+result, scratch database only — not a change to production).

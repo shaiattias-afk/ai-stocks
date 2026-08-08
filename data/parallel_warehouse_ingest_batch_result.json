@@ -1,0 +1,1587 @@
+{
+  "target_count": 185,
+  "max_workers": 8,
+  "warm_cache_result": {
+    "representative_count": 15,
+    "warmed": [
+      {
+        "ticker": "AMZN",
+        "report_date": "2020-12-31",
+        "form": "10-K",
+        "parse_elapsed_seconds": 1.076
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2021-03-31",
+        "form": "10-Q",
+        "parse_elapsed_seconds": 0.956
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2021-12-31",
+        "form": "10-K",
+        "parse_elapsed_seconds": 1.379
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2022-03-31",
+        "form": "10-Q",
+        "parse_elapsed_seconds": 1.063
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2022-12-31",
+        "form": "10-K",
+        "parse_elapsed_seconds": 1.225
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2023-03-31",
+        "form": "10-Q",
+        "parse_elapsed_seconds": 0.849
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2023-12-31",
+        "form": "10-K",
+        "parse_elapsed_seconds": 1.655
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2024-03-31",
+        "form": "10-Q",
+        "parse_elapsed_seconds": 0.887
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2024-12-31",
+        "form": "10-K",
+        "parse_elapsed_seconds": 1.383
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2025-03-31",
+        "form": "10-Q",
+        "parse_elapsed_seconds": 1.085
+      },
+      {
+        "ticker": "AMZN",
+        "report_date": "2025-12-31",
+        "form": "10-K",
+        "parse_elapsed_seconds": 1.313
+      },
+      {
+        "ticker": "CRWD",
+        "report_date": "2026-01-31",
+        "form": "10-K",
+        "parse_elapsed_seconds": 1.517
+      },
+      {
+        "ticker": "META",
+        "report_date": "2019-12-31",
+        "form": "10-K",
+        "parse_elapsed_seconds": 2.078
+      },
+      {
+        "ticker": "META",
+        "report_date": "2020-03-31",
+        "form": "10-Q",
+        "parse_elapsed_seconds": 1.684
+      },
+      {
+        "ticker": "MSFT",
+        "report_date": "2019-09-30",
+        "form": "10-Q",
+        "parse_elapsed_seconds": 1.759
+      }
+    ],
+    "failed": [],
+    "elapsed_seconds": 20.103
+  },
+  "results": [
+    {
+      "ticker": "AMZN",
+      "report_date": "2021-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001018724-21-000010",
+      "total_elapsed_seconds": 1.6
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2021-06-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001018724-21-000020",
+      "total_elapsed_seconds": 1.691
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2022-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001018724-22-000013",
+      "total_elapsed_seconds": 1.704
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2021-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001018724-21-000028",
+      "total_elapsed_seconds": 1.814
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2022-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001018724-22-000023",
+      "total_elapsed_seconds": 1.778
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2022-06-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001018724-22-000019",
+      "total_elapsed_seconds": 1.896
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2020-12-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001018724-21-000004",
+      "total_elapsed_seconds": 2.082
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2021-12-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001018724-22-000005",
+      "total_elapsed_seconds": 2.239
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2023-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001018724-23-000008",
+      "total_elapsed_seconds": 2.02
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2024-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001018724-24-000083",
+      "total_elapsed_seconds": 2.021
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2023-06-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001018724-23-000012",
+      "total_elapsed_seconds": 2.411
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2023-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001018724-23-000018",
+      "total_elapsed_seconds": 2.393
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2022-12-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001018724-23-000004",
+      "total_elapsed_seconds": 2.779
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2024-06-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001018724-24-000130",
+      "total_elapsed_seconds": 2.349
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2023-12-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001018724-24-000008",
+      "total_elapsed_seconds": 2.726
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2024-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001018724-24-000161",
+      "total_elapsed_seconds": 2.329
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2025-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001018724-25-000036",
+      "total_elapsed_seconds": 2.221
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2025-06-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001018724-25-000086",
+      "total_elapsed_seconds": 2.41
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2025-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001018724-25-000123",
+      "total_elapsed_seconds": 2.305
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2024-12-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001018724-25-000004",
+      "total_elapsed_seconds": 2.951
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2021-04-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001535527-21-000013",
+      "total_elapsed_seconds": 1.984
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2021-07-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001535527-21-000022",
+      "total_elapsed_seconds": 2.318
+    },
+    {
+      "ticker": "AMZN",
+      "report_date": "2025-12-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001018724-26-000004",
+      "total_elapsed_seconds": 2.915
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2021-01-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001535527-21-000007",
+      "total_elapsed_seconds": 2.68
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2021-10-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001535527-21-000028",
+      "total_elapsed_seconds": 2.725
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2022-04-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001535527-22-000012",
+      "total_elapsed_seconds": 2.246
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2022-07-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001535527-22-000018",
+      "total_elapsed_seconds": 2.517
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2023-04-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001535527-23-000014",
+      "total_elapsed_seconds": 1.826
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2022-10-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001535527-22-000025",
+      "total_elapsed_seconds": 2.398
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2022-01-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001535527-22-000006",
+      "total_elapsed_seconds": 2.734
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2023-07-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001535527-23-000020",
+      "total_elapsed_seconds": 2.305
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2023-01-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001535527-23-000008",
+      "total_elapsed_seconds": 2.512
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2023-10-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001535527-23-000026",
+      "total_elapsed_seconds": 2.475
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2024-04-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001535527-24-000013",
+      "total_elapsed_seconds": 2.148
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2024-07-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001535527-24-000020",
+      "total_elapsed_seconds": 2.348
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2024-01-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001535527-24-000007",
+      "total_elapsed_seconds": 2.705
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2025-04-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001535527-25-000019",
+      "total_elapsed_seconds": 2.078
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2024-10-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001535527-24-000026",
+      "total_elapsed_seconds": 2.452
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2025-01-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001535527-25-000009",
+      "total_elapsed_seconds": 2.824
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2025-07-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001535527-25-000025",
+      "total_elapsed_seconds": 2.393
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2025-10-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001535527-25-000033",
+      "total_elapsed_seconds": 2.738
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2021-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001652044-21-000020",
+      "total_elapsed_seconds": 2.611
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2026-01-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001535527-26-000010",
+      "total_elapsed_seconds": 3.088
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2021-06-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001652044-21-000047",
+      "total_elapsed_seconds": 2.733
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2021-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001652044-21-000057",
+      "total_elapsed_seconds": 2.803
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2022-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001652044-22-000029",
+      "total_elapsed_seconds": 2.471
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2020-12-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001652044-21-000010",
+      "total_elapsed_seconds": 3.141
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2021-12-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001652044-22-000019",
+      "total_elapsed_seconds": 2.913
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2022-06-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001652044-22-000071",
+      "total_elapsed_seconds": 2.971
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2022-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001652044-22-000090",
+      "total_elapsed_seconds": 2.99
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2023-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001652044-23-000045",
+      "total_elapsed_seconds": 2.628
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2022-12-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001652044-23-000016",
+      "total_elapsed_seconds": 3.074
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2024-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001652044-24-000053",
+      "total_elapsed_seconds": 2.276
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2023-06-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001652044-23-000070",
+      "total_elapsed_seconds": 2.998
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2023-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001652044-23-000094",
+      "total_elapsed_seconds": 2.951
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2023-12-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001652044-24-000022",
+      "total_elapsed_seconds": 2.886
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2024-06-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001652044-24-000079",
+      "total_elapsed_seconds": 3.002
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2025-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001652044-25-000043",
+      "total_elapsed_seconds": 2.702
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2024-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001652044-24-000118",
+      "total_elapsed_seconds": 2.941
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2024-12-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001652044-25-000014",
+      "total_elapsed_seconds": 3.105
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2025-06-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001652044-25-000062",
+      "total_elapsed_seconds": 2.99
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2025-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001652044-25-000091",
+      "total_elapsed_seconds": 2.983
+    },
+    {
+      "ticker": "GOOGL",
+      "report_date": "2025-12-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001652044-26-000018",
+      "total_elapsed_seconds": 3.173
+    },
+    {
+      "ticker": "META",
+      "report_date": "2019-12-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001326801-20-000013",
+      "total_elapsed_seconds": 4.038
+    },
+    {
+      "ticker": "META",
+      "report_date": "2020-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001326801-20-000048",
+      "total_elapsed_seconds": 3.381
+    },
+    {
+      "ticker": "META",
+      "report_date": "2021-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001326801-21-000033",
+      "total_elapsed_seconds": 2.177
+    },
+    {
+      "ticker": "META",
+      "report_date": "2021-06-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001326801-21-000049",
+      "total_elapsed_seconds": 2.226
+    },
+    {
+      "ticker": "META",
+      "report_date": "2020-12-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001326801-21-000014",
+      "total_elapsed_seconds": 2.704
+    },
+    {
+      "ticker": "META",
+      "report_date": "2021-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001326801-21-000065",
+      "total_elapsed_seconds": 2.196
+    },
+    {
+      "ticker": "META",
+      "report_date": "2020-06-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001326801-20-000076",
+      "total_elapsed_seconds": 3.687
+    },
+    {
+      "ticker": "META",
+      "report_date": "2020-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001326801-20-000084",
+      "total_elapsed_seconds": 3.757
+    },
+    {
+      "ticker": "META",
+      "report_date": "2021-12-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001326801-22-000018",
+      "total_elapsed_seconds": 2.334
+    },
+    {
+      "ticker": "META",
+      "report_date": "2022-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001326801-22-000057",
+      "total_elapsed_seconds": 2.232
+    },
+    {
+      "ticker": "META",
+      "report_date": "2022-06-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001326801-22-000082",
+      "total_elapsed_seconds": 2.472
+    },
+    {
+      "ticker": "META",
+      "report_date": "2022-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001326801-22-000108",
+      "total_elapsed_seconds": 2.558
+    },
+    {
+      "ticker": "META",
+      "report_date": "2023-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001326801-23-000067",
+      "total_elapsed_seconds": 2.503
+    },
+    {
+      "ticker": "META",
+      "report_date": "2022-12-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001326801-23-000013",
+      "total_elapsed_seconds": 2.907
+    },
+    {
+      "ticker": "META",
+      "report_date": "2023-06-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001326801-23-000093",
+      "total_elapsed_seconds": 2.648
+    },
+    {
+      "ticker": "META",
+      "report_date": "2023-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001326801-23-000103",
+      "total_elapsed_seconds": 2.686
+    },
+    {
+      "ticker": "META",
+      "report_date": "2023-12-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001326801-24-000012",
+      "total_elapsed_seconds": 2.79
+    },
+    {
+      "ticker": "META",
+      "report_date": "2024-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001326801-24-000049",
+      "total_elapsed_seconds": 2.57
+    },
+    {
+      "ticker": "META",
+      "report_date": "2024-06-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001326801-24-000069",
+      "total_elapsed_seconds": 2.75
+    },
+    {
+      "ticker": "META",
+      "report_date": "2024-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001326801-24-000081",
+      "total_elapsed_seconds": 2.724
+    },
+    {
+      "ticker": "META",
+      "report_date": "2024-12-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001326801-25-000017",
+      "total_elapsed_seconds": 2.955
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2023-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000950170-23-054855",
+      "total_elapsed_seconds": 4.069
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2023-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000950170-23-014423",
+      "total_elapsed_seconds": 4.862
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2023-06-30",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0000950170-23-035122",
+      "total_elapsed_seconds": 5.747
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2023-12-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000950170-24-008814",
+      "total_elapsed_seconds": 5.058
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2019-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-19-037549",
+      "total_elapsed_seconds": 3.527
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2024-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000950170-24-048288",
+      "total_elapsed_seconds": 4.767
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2019-12-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-20-002450",
+      "total_elapsed_seconds": 4.735
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2024-06-30",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0000950170-24-087843",
+      "total_elapsed_seconds": 5.617
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2020-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-20-019706",
+      "total_elapsed_seconds": 4.688
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2020-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-20-047996",
+      "total_elapsed_seconds": 3.862
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2020-06-30",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001564590-20-034944",
+      "total_elapsed_seconds": 5.683
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2020-12-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-21-002316",
+      "total_elapsed_seconds": 4.842
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2021-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-21-020891",
+      "total_elapsed_seconds": 4.93
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2021-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-21-051992",
+      "total_elapsed_seconds": 4.038
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2021-06-30",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001564590-21-039151",
+      "total_elapsed_seconds": 5.581
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2021-12-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-22-002324",
+      "total_elapsed_seconds": 4.634
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2022-03-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-22-015675",
+      "total_elapsed_seconds": 4.933
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2020-12-03",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000723125-21-000012",
+      "total_elapsed_seconds": 2.296
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2022-09-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-22-035087",
+      "total_elapsed_seconds": 4.076
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2022-06-30",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001564590-22-026876",
+      "total_elapsed_seconds": 5.189
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2021-03-04",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000723125-21-000032",
+      "total_elapsed_seconds": 2.573
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2022-12-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-23-000733",
+      "total_elapsed_seconds": 4.836
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2021-06-03",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000723125-21-000052",
+      "total_elapsed_seconds": 2.548
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2021-09-02",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0000723125-21-000065",
+      "total_elapsed_seconds": 3.062
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2021-12-02",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000723125-22-000004",
+      "total_elapsed_seconds": 2.414
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2022-03-03",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000723125-22-000016",
+      "total_elapsed_seconds": 2.623
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2022-06-02",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000723125-22-000036",
+      "total_elapsed_seconds": 2.819
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2022-12-01",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000723125-22-000072",
+      "total_elapsed_seconds": 2.401
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2022-09-01",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0000723125-22-000048",
+      "total_elapsed_seconds": 3.256
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2023-03-02",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000723125-23-000022",
+      "total_elapsed_seconds": 2.662
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2023-06-01",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000723125-23-000041",
+      "total_elapsed_seconds": 2.647
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2023-08-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0000723125-23-000054",
+      "total_elapsed_seconds": 3.352
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2023-11-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000723125-23-000077",
+      "total_elapsed_seconds": 2.547
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2024-02-29",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000723125-24-000007",
+      "total_elapsed_seconds": 2.912
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2024-05-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000723125-24-000019",
+      "total_elapsed_seconds": 2.963
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2024-11-28",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000723125-24-000047",
+      "total_elapsed_seconds": 2.35
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2025-02-27",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000723125-25-000009",
+      "total_elapsed_seconds": 2.43
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2025-05-29",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000723125-25-000021",
+      "total_elapsed_seconds": 2.598
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2024-08-29",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0000723125-24-000027",
+      "total_elapsed_seconds": 3.178
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2019-01-27",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001045810-19-000023",
+      "total_elapsed_seconds": 2.393
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2019-04-28",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001045810-19-000079",
+      "total_elapsed_seconds": 1.85
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2025-08-28",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0000723125-25-000028",
+      "total_elapsed_seconds": 3.209
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2020-04-26",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001045810-20-000065",
+      "total_elapsed_seconds": 2.004
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2019-07-28",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001045810-19-000144",
+      "total_elapsed_seconds": 3.668
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2020-07-26",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001045810-20-000147",
+      "total_elapsed_seconds": 2.367
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2019-10-27",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001045810-19-000170",
+      "total_elapsed_seconds": 3.63
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2020-10-25",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001045810-20-000189",
+      "total_elapsed_seconds": 2.251
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2021-05-02",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001045810-21-000064",
+      "total_elapsed_seconds": 2.197
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2020-01-26",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001045810-20-000010",
+      "total_elapsed_seconds": 4.568
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2021-01-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001045810-21-000010",
+      "total_elapsed_seconds": 2.589
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2021-08-01",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001045810-21-000131",
+      "total_elapsed_seconds": 2.352
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2021-10-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001045810-21-000163",
+      "total_elapsed_seconds": 2.374
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2022-01-30",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001045810-22-000036",
+      "total_elapsed_seconds": 2.914
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2022-05-01",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001045810-22-000079",
+      "total_elapsed_seconds": 2.256
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2022-07-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001045810-22-000147",
+      "total_elapsed_seconds": 2.288
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2022-10-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001045810-22-000166",
+      "total_elapsed_seconds": 2.276
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2023-04-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001045810-23-000093",
+      "total_elapsed_seconds": 2.228
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2023-01-29",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001045810-23-000017",
+      "total_elapsed_seconds": 2.776
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2023-07-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001045810-23-000175",
+      "total_elapsed_seconds": 2.533
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2023-10-29",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001045810-23-000227",
+      "total_elapsed_seconds": 2.506
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2024-01-28",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001045810-24-000029",
+      "total_elapsed_seconds": 2.816
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2023-08-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000950170-23-047713",
+      "total_elapsed_seconds": 2.355
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2024-02-29",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000950170-24-029904",
+      "total_elapsed_seconds": 2.71
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2023-11-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0000950170-23-069682",
+      "total_elapsed_seconds": 2.753
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2023-05-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0000950170-23-028914",
+      "total_elapsed_seconds": 4.473
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2019-08-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-19-034717",
+      "total_elapsed_seconds": 2.682
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2019-11-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-19-045966",
+      "total_elapsed_seconds": 2.886
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2024-05-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0000950170-24-075605",
+      "total_elapsed_seconds": 4.58
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2020-02-29",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-20-010833",
+      "total_elapsed_seconds": 2.99
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2020-08-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-20-043448",
+      "total_elapsed_seconds": 2.821
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2020-11-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-20-056896",
+      "total_elapsed_seconds": 3.087
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2021-02-28",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-21-012539",
+      "total_elapsed_seconds": 3.109
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2020-05-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001564590-20-030125",
+      "total_elapsed_seconds": 4.608
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2021-08-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-21-047772",
+      "total_elapsed_seconds": 2.542
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2021-11-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-21-060022",
+      "total_elapsed_seconds": 2.855
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2022-02-28",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-22-009859",
+      "total_elapsed_seconds": 2.76
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2021-05-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001564590-21-033616",
+      "total_elapsed_seconds": 4.584
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2022-08-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-22-031545",
+      "total_elapsed_seconds": 2.612
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2022-11-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-22-039278",
+      "total_elapsed_seconds": 3.045
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2023-02-28",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001564590-23-003413",
+      "total_elapsed_seconds": 3.11
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2022-05-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001564590-22-023675",
+      "total_elapsed_seconds": 4.301
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2020-10-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001327567-20-000041",
+      "total_elapsed_seconds": 2.359
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2021-01-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001327567-21-000004",
+      "total_elapsed_seconds": 2.714
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2021-04-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001327567-21-000014",
+      "total_elapsed_seconds": 3.062
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2021-10-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001327567-21-000040",
+      "total_elapsed_seconds": 2.817
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2021-07-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001327567-21-000029",
+      "total_elapsed_seconds": 3.839
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2022-01-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001327567-22-000008",
+      "total_elapsed_seconds": 2.994
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2022-04-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001327567-22-000016",
+      "total_elapsed_seconds": 2.889
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2022-10-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001327567-22-000038",
+      "total_elapsed_seconds": 2.667
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2022-07-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001327567-22-000028",
+      "total_elapsed_seconds": 3.411
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2023-01-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001327567-23-000006",
+      "total_elapsed_seconds": 2.738
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2023-04-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001327567-23-000014",
+      "total_elapsed_seconds": 2.721
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2023-10-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001327567-23-000032",
+      "total_elapsed_seconds": 2.779
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2023-07-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001327567-23-000024",
+      "total_elapsed_seconds": 3.646
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2024-04-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001327567-24-000017",
+      "total_elapsed_seconds": 3.238
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2024-01-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001327567-24-000005",
+      "total_elapsed_seconds": 3.147
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2024-07-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001327567-24-000029",
+      "total_elapsed_seconds": 3.792
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2024-10-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001327567-24-000040",
+      "total_elapsed_seconds": 3.062
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2025-01-31",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001327567-25-000010",
+      "total_elapsed_seconds": 3.161
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2025-04-30",
+      "form": "10-Q",
+      "status": "PASS",
+      "accession_number": "0001327567-25-000017",
+      "total_elapsed_seconds": 2.52
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2025-07-31",
+      "form": "10-K",
+      "status": "PASS",
+      "accession_number": "0001327567-25-000027",
+      "total_elapsed_seconds": 2.28
+    }
+  ],
+  "status_counts": {
+    "PASS": 185
+  },
+  "batch_elapsed_seconds": 123.541
+}

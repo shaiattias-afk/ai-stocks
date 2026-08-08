@@ -1089,3 +1089,69 @@ This decision was given directly by the user in a live conversation; it
 still requires the user's explicit sign-off to change or extend
 further.
 
+## D-051 — Parallel warehouse ingestion: subprocess-per-filing concurrency with a serialized single writer (approved, user pre-authorized autonomous stage)
+**Approved architecture**: `src/stock_agent/warehouse/parallel_loader.py`
+runs N of the project's own pre-existing subprocess-per-filing pattern
+(`scripts/121`'s `warehouse_10q_in_child_process`, unchanged) **concurrently**
+via a `ThreadPoolExecutor`, never a `ProcessPoolExecutor` — chosen
+specifically because `subprocess.run(..., timeout=...)` gives a real,
+hard-kill timeout on a hung child (matches this project's own "use
+timeouts for external tools/processes that may hang" rule, `CLAUDE.md`),
+which a `ProcessPoolExecutor` future cannot provide once already
+running. Every DuckDB **write** stays serialized in the calling process,
+one filing at a time, under a lock, reusing the unmodified D-041 atomic
+write/verify logic (`write_parsed_filing`) — DuckDB supports only one
+read-write connection per file, so no filing is ever written
+concurrently with another, and a crashed/timed-out/failed filing writes
+nothing at all (parsing happens before any database is touched).
+
+**`src/stock_agent/warehouse/loader.py` was split into `parse_locked_
+filing()` (pure Arelle parse + extraction, no DB access) and `write_
+parsed_filing()` (the unchanged D-041 atomic write) with zero behavior
+change for the existing single-filing caller — `run_production_
+warehouse_load()` is now exactly the two called in sequence. Verified
+by the full pytest suite (119/119, including both golden-regression
+tests reproducing 900 annual + 1,080 quarterly production rows
+byte-identical) before and after the split.**
+
+**Rationale / origin**: baseline measurement (187 sequential parses,
+305.9s total, 1.64s average) found parsing was NOT yet the bottleneck at
+the current 187-filing/9-company scale — but at the ~2,000-filing scale
+the point-in-time universe expansion (D-052) targets, sequential parsing
+alone (~55 min) would consume nearly the entire 1-hour ingestion budget
+the user set. There was previously zero real concurrency anywhere in
+this project's ingestion path.
+
+**Verified**: sequential vs. parallel content byte-identical across 9
+real filings (all 9 warehouse tables, every accession); a full 185-filing
+parallel batch (`max_workers=8`, scratch database) completed in 143.6s,
+2.13x faster than the 305.9s sequential baseline, with every one of its
+9 table row counts and all 185 accessions identical to the live
+production warehouse. Extrapolated to ~2,000 filings: ~26 minutes of
+parsing alone, comfortably inside the 1-hour target alongside download
+time. 3 required correctness tests added (`tests/test_parallel_
+warehouse.py`, real Arelle, `@pytest.mark.golden`): parallel-matches-
+sequential, a mid-batch validation failure never corrupts the warehouse
+or writes a partial filing, and a forced-timeout child is truly killed
+and leaves zero rows written, with the same database file loading
+normally immediately afterward. A shared `RateLimiter` singleton
+(`src/stock_agent/ingestion/rate_limiter.py`) replaces `scripts/162`'s
+inline `time.sleep(0.1)`, keeping the aggregate SEC request rate under
+10/s across every component that makes SEC requests in one process —
+verified by 4 tests (`tests/test_rate_limiter.py`), including
+multi-thread aggregate-rate enforcement.
+
+**Disclosed limitation, not hidden**: raw speedup at small N (9
+filings: 1.37x) is modest — each child pays a fixed ~1s Python+Arelle
+import cost, so the benefit is real but only becomes load-bearing at the
+~2,000-filing scale. A persistent-worker-pool optimization was
+considered and explicitly deferred (not needed to clear the 1-hour
+target at the current measured throughput; it would also trade away the
+real per-filing hard-kill timeout this design deliberately chose).
+
+This decision was made autonomously under the user's explicit
+pre-authorization for this stage (parallel ingestion + universe
+expansion, non-interactive, decisions to be recorded and reported at the
+end); it still requires the user's explicit sign-off to change or extend
+further, the same as any other entry in this log.
+
