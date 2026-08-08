@@ -30,16 +30,27 @@ Respond in clear, direct Hebrew. Use English technical terms only where standard
 - Continue to the next obvious step after a verified result. Do not wait for “קדימה” unless necessary information is missing.
 
 ## Code workflow — binding
-Until the user explicitly changes this rule:
-1. Create a new, versioned file inside `scripts`.
-2. Put the complete code in that file.
-3. Run it from the VS Code PowerShell terminal.
-4. Do not instruct the user to patch a small block in an existing file.
-5. Do not save project scripts under `.venv\Scripts`.
-6. Preserve older scripts as historical baselines.
-7. Before running a command, show exactly what will be run.
-8. Use timeouts for external tools and processes that may hang.
-9. After every verified milestone, update `docs/CURRENT_STATE.md`.
+As of D-049, the "create a new numbered file per change, never patch in
+place, preserve every old version" convention (formerly this section,
+originally D-011) is retired. It produced 195 numbered scripts, most of
+them full copy-paste duplicates of a predecessor with a small delta —
+real engine logic now lives in `src/stock_agent`, edited normally.
+
+1. Engine/library code lives in `src/stock_agent` (installable package)
+   and is edited in place. Git history is the version record — do not
+   create a new duplicate file for a change.
+2. Tests live in `tests/` (pytest) and must be run and pass before a
+   change is considered done.
+3. `scripts/` is for thin, disposable one-off entry points and
+   exploratory analysis only — call into `src/stock_agent`, don't
+   reimplement its logic. A one-off script does not need to be
+   preserved forever once its result is captured in the repo (data,
+   docs, or a test) — it may be deleted once it's no longer useful,
+   unlike the old convention.
+4. Do not save project scripts under `.venv\Scripts`.
+5. Before running a command, show exactly what will be run.
+6. Use timeouts for external tools and processes that may hang.
+7. After every verified milestone, update `docs/CURRENT_STATE.md`.
 
 ## Data-source architecture — binding
 - The official company 10-K is the primary source of truth for fundamentals.

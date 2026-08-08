@@ -1,6 +1,28 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-08 (**PR2: the project's first real pytest test
+**Last updated:** 2026-08-08 (**D-049: D-011's numbered-script workflow
+fully retired (see `CLAUDE.md`); remaining storage-layer duplication
+integrated into `src/stock_agent`.** `scripts/142_task_marker_guard.py`
+and `scripts/167_versioned_write_guard.py` had been ported into
+`src/stock_agent/storage/` by D-048 but never de-duplicated — their
+test suites (`scripts/168`, 5 tests; `scripts/143`, 12 tests) and one
+live caller (`scripts/170`'s D-047 price-append mechanism) still
+`importlib`-hacked the old script paths. Fixed: both test suites ported
+verbatim to `tests/test_write_guard.py` / `tests/test_task_marker_guard.
+py` (pytest, using `tmp_path`); `scripts/170` rewired to `from
+stock_agent.storage.write_guard import guarded_versioned_append`;
+`scripts/142`, `143`, `167`, `168` archived via `git mv`. **110 fast
+tests pass** (94 prior + 6 + 12, 0 regressions); golden regression
+unaffected (storage-layer only, not `extraction/`/`policies/`/
+`metrics/`); both production databases confirmed byte-identical
+(SHA-256) before/after. `scripts/144_warehouse_loader_v2_production.py`
+deliberately left untouched — an unrelated, uncommitted, in-progress
+filings-archive pipeline already in the working tree (`scripts/165`)
+hardcodes an `importlib` path to it; touching it would silently break
+that separate, not-yet-reviewed work. Full detail in
+`docs/DECISIONS_LOG.md` D-049.)
+
+**Previous update:** 2026-08-08 (**PR2: the project's first real pytest test
 suite, `tests/` (94 tests), merged on top of PR1.** Four categories, all
 under `src/stock_agent`: (1) `tests/test_golden_regression.py` —
 formalizes PR1's throwaway verification into permanent, always-run

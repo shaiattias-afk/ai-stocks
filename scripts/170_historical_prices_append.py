@@ -1,6 +1,6 @@
 """
 First real use of the D-047 versioned append-only write guard
-(scripts/167_versioned_write_guard.py): append current prices to
+(stock_agent.storage.write_guard, D-049): append current prices to
 `historical_prices_daily`, bringing it up to date from its previous
 end date (2026-08-06, D-045) -- without a new engine version, without a
 full manual regression, and without ever touching a pre-existing row.
@@ -30,7 +30,7 @@ Two mutually exclusive modes:
   --execute     Same fetch + validation, then PID lock -> full database
                 backup (SHA-256-verified) -> one guarded, atomic append
                 of only the new rows via
-                scripts/167_versioned_write_guard.py -> independent
+                stock_agent.storage.write_guard -> independent
                 post-commit re-verification, reopening the database
                 read-only.
 """
@@ -40,7 +40,6 @@ from __future__ import annotations
 import argparse
 import csv
 import hashlib
-import importlib.util
 import json
 import os
 import shutil
@@ -52,6 +51,8 @@ from pathlib import Path
 
 import duckdb
 import requests
+
+from stock_agent.storage.write_guard import guarded_versioned_append
 
 PROJECT_DIR = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_DIR / "data"
@@ -65,10 +66,6 @@ RESULT_JSON_PATH = DATA_DIR / "historical_prices_append_result.json"
 RESULT_CSV_PATH = DATA_DIR / "historical_prices_append_result.csv"
 LOG_PATH = LOGS_DIR / "historical_prices_append.log"
 PID_LOCK_PATH = DATA_DIR / "historical_prices_append.pid"
-
-_spec = importlib.util.spec_from_file_location("s167", PROJECT_DIR / "scripts" / "167_versioned_write_guard.py")
-s167 = importlib.util.module_from_spec(_spec)
-_spec.loader.exec_module(s167)
 
 TICKERS = ["ORCL", "MSFT", "META", "NVDA", "GOOGL", "AMZN", "MU", "CRWD", "PANW"]
 PREVIOUS_FROZEN_LAST_DATE = date(2026, 8, 6)  # D-045's frozen end date
@@ -502,7 +499,7 @@ def run_execute() -> int:
         log(f"Backup complete: {backup_info['backup_path']}")
 
         row_tuples = build_row_tuples(result["all_new_rows"])
-        append_result = s167.guarded_versioned_append(
+        append_result = guarded_versioned_append(
             PRODUCTION_DB_PATH, TABLE, ROW_COLUMNS, row_tuples, declared_row_delta=len(row_tuples)
         )
         log(f"Guarded append committed: {append_result}")

@@ -965,3 +965,67 @@ non-interactive stage with pre-authorized D-011 supersession for
 stabilized engine code); it still requires the user's explicit sign-off
 to change or extend further.
 
+## D-049 — D-011's numbered-script workflow fully retired; remaining storage-layer duplication integrated into `src/stock_agent` (approved, live user instruction)
+**Fully supersedes D-011** (not just the "stabilized engine code" scope
+D-048 carved out). The "create a new numbered file per change, never
+patch in place, preserve every old version" convention no longer governs
+any part of this project. `CLAUDE.md`'s "Code workflow — binding"
+section was rewritten accordingly: engine/library code lives in
+`src/stock_agent` and is edited in place (git history is the version
+record); tests live in `tests/` (pytest); `scripts/` is for thin,
+disposable one-off entry points and exploratory analysis only, and no
+longer needs to be preserved forever once its result is captured
+elsewhere in the repo.
+
+**Rationale / origin:** direct user instruction, given after reviewing
+D-048's result — the convention itself was identified as the root cause
+of the 195-script sprawl (most of them full copy-paste duplicates), and
+its scope-limited retirement in D-048 (engine code only) was judged
+insufficient.
+
+**Immediate follow-up work, same decision:** D-048's package port had
+left a real, undone piece of duplication — `scripts/142_task_marker_
+guard.py` and `scripts/167_versioned_write_guard.py` were ported into
+`src/stock_agent/storage/` (per D-048) but the original standalone
+files were never removed, and their remaining callers (`scripts/168`'s
+5-test suite, `scripts/143`'s 12-test suite, `scripts/170`'s production
+append) still `importlib`-hacked the old script paths instead of the
+package. Fixed:
+1. `scripts/168_versioned_write_guard_tests.py`'s 5 required tests
+   ported verbatim (same assertions, same scenarios) to
+   `tests/test_write_guard.py` (6 pytest tests — the overwrite case
+   split into its two independently-asserted sub-checks).
+2. `scripts/143_task_marker_guard_validation.py`'s 12 required tests
+   ported verbatim to `tests/test_task_marker_guard.py`, using pytest's
+   `tmp_path` in place of a hand-rolled scratch directory.
+3. `scripts/170_historical_prices_append.py` (the still-live D-047
+   append mechanism) rewired to `from stock_agent.storage.write_guard
+   import guarded_versioned_append` — no behavior change, confirmed by
+   `py_compile` and by the ported test suite passing unchanged.
+4. `scripts/142`, `143`, `167`, `168` archived to `archive/scripts/`
+   via `git mv` (never deleted) — their logic is now exercised only
+   through `src/stock_agent/storage/` and the two new test modules.
+
+**Explicitly left untouched, and why:** `scripts/144_warehouse_loader_
+v2_production.py` was already ported to `src/stock_agent/warehouse/
+loader.py` in D-048, but was NOT archived and NOT rewired here, because
+an unrelated, uncommitted, in-progress piece of work already present in
+the working tree before this session began (`scripts/161`-`166`, a
+filings-archive pipeline, and specifically `scripts/165_filings_
+archive_arelle_loader.py`) hardcodes an `importlib.util.spec_from_file_
+location` path directly to `scripts/144_warehouse_loader_v2_production.
+py`. Moving or rewriting `scripts/144` would silently break that
+unrelated, not-yet-reviewed work without the user's knowledge. Left
+exactly as-is until that separate work is addressed on its own.
+
+**Verification:** 110 fast tests pass (94 from D-048 + 6 write-guard +
+12 task-marker-guard, zero regressions), golden regression unaffected
+(this change touches only the storage layer, not `extraction/`,
+`policies/`, or `metrics/`, which the golden regression exercises).
+`data/database/ai_stock_agent.duckdb` and `xbrl_warehouse_proof.duckdb`
+confirmed byte-identical (SHA-256) before and after.
+
+This decision was given directly by the user in a live conversation
+(not the earlier autonomous batch instruction); it still requires the
+user's explicit sign-off to change or extend further.
+
