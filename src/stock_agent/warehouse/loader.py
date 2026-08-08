@@ -6,23 +6,19 @@ successful Arelle return with nothing actually extracted is insufficient).
 
 Ported byte-exact from scripts/144_warehouse_loader_v2_production.py.
 
-Scope note: scripts/144 itself reuses (via importlib, unchanged) the pure
-DataFrame-extraction primitives (extract_facts, extract_contexts, ...,
-create_warehouse_schema, write_table) from scripts/121_quarterly_batch_
-runner.py. scripts/121 is NOT part of this PR's module map (it is not
-named in the target package structure, and TASK_PR1 scopes the warehouse
-port to scripts/144's own logic only) — the importlib bridge to
-scripts/121 is therefore preserved here, unchanged, as an explicit,
-disclosed exception: it references a script this PR does not port, not
-a script this PR ports and failed to migrate off of.
+The pure DataFrame-extraction primitives (extract_facts, extract_contexts,
+..., create_warehouse_schema, write_table) now live in
+`stock_agent.warehouse.extract`, imported normally. They were previously
+reached through an `importlib.spec_from_file_location` bridge into
+`scripts/121_quarterly_batch_runner.py` — the last file-path import hack
+inside this package, now removed. The extraction logic itself is
+unchanged, so warehouse output is byte-identical.
 """
 
 from __future__ import annotations
 
 import hashlib
-import importlib.util
 import json
-import sys
 import time
 from datetime import datetime, timezone
 from pathlib import Path
@@ -30,6 +26,7 @@ from pathlib import Path
 import duckdb
 
 from stock_agent import PROJECT_DIR
+from stock_agent.warehouse import extract as wh_extract
 
 DATA_DIR = PROJECT_DIR / "data"
 CACHE_DIR = DATA_DIR / "arelle_cache"
@@ -47,15 +44,6 @@ FAILURE_CATEGORIES = [
     "ZERO_CONCEPTS_EXTRACTED", "ZERO_UNITS_EXTRACTED_WITH_MONETARY_FACTS",
     "INSERTED_COUNT_MISMATCH", "INCOMPLETE_LINEAGE",
 ]
-
-# reuse (not modify, not copy) scripts/121's pure extraction functions,
-# warehouse schema/writer, and Version/RuntimeOptions/Session usage pattern
-# -- scripts/121 is out of scope for this PR's port (see module docstring).
-_spec121 = importlib.util.spec_from_file_location("s121_prod", PROJECT_DIR / "scripts" / "121_quarterly_batch_runner.py")
-s121 = importlib.util.module_from_spec(_spec121)
-sys.modules["s121_prod"] = s121
-_spec121.loader.exec_module(s121)
-
 
 class WarehouseLoaderError(Exception):
     def __init__(self, category: str, message: str) -> None:
@@ -198,16 +186,16 @@ def run_production_warehouse_load(ticker: str, report_date: str, warehouse_db_pa
                 raise WarehouseLoaderError("DTS_LOAD_FAILED", f"Arelle returned {len(models)} model(s), expected exactly 1")
             model_xbrl = models[0]
 
-            facts_df = s121.extract_facts(model_xbrl, accession_number, source_document)
-            contexts_df = s121.extract_contexts(model_xbrl, accession_number)
-            units_df = s121.extract_units(model_xbrl, accession_number)
-            presentation_df = s121.extract_presentation_relationships(model_xbrl, accession_number)
-            calculation_df = s121.extract_calculation_relationships(model_xbrl, accession_number)
-            definition_df = s121.extract_definition_relationships(model_xbrl, accession_number)
-            roles_df = s121.extract_roles(model_xbrl, accession_number)
-            qnames = s121.referenced_concept_qnames(facts_df, presentation_df, calculation_df, definition_df)
-            concepts_df = s121.extract_concepts(model_xbrl, accession_number, qnames)
-            labels_df = s121.extract_labels(model_xbrl, accession_number, qnames)
+            facts_df = wh_extract.extract_facts(model_xbrl, accession_number, source_document)
+            contexts_df = wh_extract.extract_contexts(model_xbrl, accession_number)
+            units_df = wh_extract.extract_units(model_xbrl, accession_number)
+            presentation_df = wh_extract.extract_presentation_relationships(model_xbrl, accession_number)
+            calculation_df = wh_extract.extract_calculation_relationships(model_xbrl, accession_number)
+            definition_df = wh_extract.extract_definition_relationships(model_xbrl, accession_number)
+            roles_df = wh_extract.extract_roles(model_xbrl, accession_number)
+            qnames = wh_extract.referenced_concept_qnames(facts_df, presentation_df, calculation_df, definition_df)
+            concepts_df = wh_extract.extract_concepts(model_xbrl, accession_number, qnames)
+            labels_df = wh_extract.extract_labels(model_xbrl, accession_number, qnames)
     except WarehouseLoaderError:
         raise
     except Exception as exc:  # noqa: BLE001
@@ -244,14 +232,14 @@ def run_production_warehouse_load(ticker: str, report_date: str, warehouse_db_pa
     connection = duckdb.connect(database=str(warehouse_db_path))
     try:
         connection.execute("BEGIN TRANSACTION")
-        s121.create_warehouse_schema(connection)
+        wh_extract.create_warehouse_schema(connection)
         for table, df in (
             ("xbrl_facts", facts_df), ("xbrl_contexts", contexts_df), ("xbrl_units", units_df),
             ("xbrl_concepts", concepts_df), ("xbrl_labels", labels_df),
             ("xbrl_presentation_relationships", presentation_df), ("xbrl_calculation_relationships", calculation_df),
             ("xbrl_definition_relationships", definition_df), ("xbrl_roles", roles_df),
         ):
-            s121.write_table(connection, table, df, accession_number)
+            wh_extract.write_table(connection, table, df, accession_number)
 
         # verify inserted physical counts equal computed counts BEFORE commit
         inserted_counts = {
