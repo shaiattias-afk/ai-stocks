@@ -1,0 +1,173 @@
+# Cleanup — decisions awaiting your sign-off
+
+Collected during the extraction cleanup so the work could run without
+interruption. **Nothing here has been treated as approved.** Each entry
+states what was found, what was done (if anything), and what needs your
+call.
+
+Two categories:
+
+* **IMPLEMENTED, NEEDS RATIFYING** — a fix was applied because it was
+  needed to make progress and is, in my judgement, unambiguously correct.
+  You should still confirm it, because it is an accounting policy and
+  this project's rules say policy is yours, not mine.
+* **PARKED, NOT IMPLEMENTED** — genuinely ambiguous. Left as
+  `REVIEW_REQUIRED` rather than guessed.
+
+---
+
+## D-P1 — Combined filings: which entity's numbers are "the company's"?
+
+**Status: ATTEMPTED, REVERTED — NEEDS A DECISION AND A SAFER DESIGN**
+
+> **Update after testing.** The fix below was implemented and then
+> **backed out**: it regressed the frozen baseline. PANW 2021-07-31's
+> `average_invested_capital` went from `PASS` (698,750,000) to
+> `REVIEW_REQUIRED`, because narrowing to a single statement role dropped
+> a row that a metric legitimately needed from a different role.
+>
+> The frozen 900 rows must not change, so the change is out. The helper
+> is retained unused in `extraction/core.py` with this evidence.
+>
+> The diagnosis stands and is valuable — the *fix* was too blunt. Any
+> retry must narrow per-metric rather than globally, and must be proven
+> against the golden regression before going near production.
+
+### What was found
+
+Utility holding companies file ONE 10-K covering the parent **and every
+subsidiary registrant**. Exelon's filing contains **9 income statements
+and 16 balance sheets** — separate sets for ComEd, PECO, BGE, Pepco, DPL
+and ACE alongside Exelon itself. Constellation Energy's contains two of
+each.
+
+The engine found several equally valid candidate rows and refused to
+choose, which is why **Constellation scored 0 of 100 metrics** and
+**Exelon 8%** — not a wording problem, a genuine structural ambiguity.
+
+Entity identity cannot resolve it: every context in Exelon's filing
+carries the parent's own CIK (0001109357), including the subsidiaries'.
+The only distinguishing signal is the statement role title.
+
+### The decision
+
+For a combined filing, the figures that represent "the company" are the
+**top-level registrant's consolidated statements** — not any subsidiary's.
+
+That is the right answer for equity analysis: you would be buying shares
+in Exelon, not in Baltimore Gas & Electric. A subsidiary's revenue is not
+Exelon's revenue.
+
+### How it is implemented
+
+Two filer conventions, both handled from the role title alone:
+
+| Convention | Example | Rule |
+|---|---|---|
+| Consolidated role unqualified, subsidiaries suffixed | CEG: `Consolidated Statements of Operations` vs `..., Parent` | prefer the unqualified role |
+| Every role suffixed, including the parent's | EXC: `... Cash Flows - Exelon` vs `... - ComEd` | prefer the role naming the registrant |
+
+If neither rule leaves exactly one role, it still fails closed.
+
+### What could be wrong with it
+
+A holding company's *consolidated* figures include subsidiaries it does
+not wholly own, so some of that revenue belongs to minority holders. The
+existing `net_income` logic already prefers an "attributable to common
+shareholders" line where one exists, so the most important metric is
+already handled — but revenue and assets are not adjusted, and for a
+utility group with significant minority interests that overstates what
+shareholders own.
+
+**Your call:** accept consolidated figures as-is (standard practice), or
+require a separate treatment for groups with material minority interests.
+
+---
+
+## D-P2 — Utility capital spending labelled as acquisitions
+
+**Status: PARKED, NOT IMPLEMENTED**
+
+American Electric Power labels its capital expenditure
+`Acquisitions of Assets` and `Acquisitions of Generation Facilities` —
+with no mention of "property".
+
+Matching those would fold genuine **acquisitions of businesses** into
+capital expenditure, which corrupts free cash flow and then the score.
+Left as `REVIEW_REQUIRED`.
+
+**Your call:** is "Acquisitions of Generation Facilities" capital
+expenditure for your purposes? For a utility, buying a power station
+arguably *is* capex in substance. But the same wording at another company
+could mean an acquisition. A rule that reads "acquisitions of
+<physical asset type>" as capex is defensible; I did not want to invent
+it unilaterally.
+
+---
+
+## D-P3 — Loading new companies changed the result of an OLD computation
+
+**Status: FOUND, NOT FIXED — this one needs your decision before anything else**
+
+### What happened
+
+The golden regression started failing on PANW 2021-07-31's
+`average_invested_capital`: recomputes as `REVIEW_REQUIRED`, but the
+frozen row says `PASS` with 698,750,000.
+
+I first assumed my combined-filing fix caused it and reverted that fix.
+**The failure persisted.** The revert was not the answer, and the
+diagnosis I gave at the time was wrong.
+
+### The actual cause
+
+`average_invested_capital` for one year needs the PRIOR year's
+`invested_capital`, and `compute_full_company_year` **reads that from the
+production database** rather than recomputing it.
+
+PANW 2020-07-31 was never part of the frozen 900 rows. The universe
+expansion loaded it for the first time — and it landed as
+`REVIEW_REQUIRED`, because PANW 2020 is one of the company-years the
+engine cannot fully resolve.
+
+So the lookup that previously found nothing (and fell back to
+recomputing) now finds a failed value and propagates the failure.
+
+### Why this matters more than the coverage number
+
+**The frozen 900 rows are intact.** Verified: unchanged, no duplicates,
+every original engine version still present. Nothing was corrupted.
+
+But the *computation* that reproduces them is no longer reproducible,
+because it consults a database that has since grown. Adding unrelated
+companies silently changed the output of an existing calculation.
+
+That is a real architectural weakness, not a test artefact:
+
+* the golden regression is not actually isolated — it depends on
+  production contents that any future load can change
+* the same coupling exists in the live engine, so a future load could
+  change previously-verified figures the same way
+
+### Your decision
+
+1. **Pin the prior-year lookup to the frozen baseline** for the golden
+   regression, so the test measures the engine rather than the database.
+   Narrow, fast, but leaves the live coupling in place.
+2. **Make `compute_full_company_year` recompute the prior year** instead
+   of reading production. Removes the coupling entirely, at the cost of
+   more work per company-year and a change to a core path.
+3. **Accept it** and re-baseline the golden regression against current
+   output. Cheapest, and the one I would argue against: it discards the
+   guarantee that today's engine still reproduces the verified figures.
+
+I did not choose, because option 3 would quietly weaken the protection
+that caught this in the first place, and options 1 and 2 are structural
+changes to how the engine sources prior-year data.
+
+### Status of the coverage cleanup
+
+Halted here. Coverage remains **71.2%**. The combined-filing diagnosis
+(D-P1) is solid and worth acting on, but nothing further should be
+changed in the extraction engine until this coupling is settled --
+otherwise there is no trustworthy baseline to test any fix against.
