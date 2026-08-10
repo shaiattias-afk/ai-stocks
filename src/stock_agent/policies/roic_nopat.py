@@ -54,6 +54,14 @@ def combine_average_invested_capital_and_nopat_into_roic(
         return {"status": "REVIEW_REQUIRED", "value": None, "error": f"nopat not ready (status={nopat_status})"}
     if avg_ic_value is None or avg_ic_value == 0:
         return {"status": "REVIEW_REQUIRED", "value": None, "error": "average_invested_capital value is zero/None"}
+    # Symmetric with the guard above. A caller can present a PASS-family
+    # status alongside a None value (a derived metric whose own combiner
+    # succeeded structurally but produced nothing); without this the
+    # division raises TypeError instead of failing closed, turning a
+    # recoverable REVIEW_REQUIRED into a crash that aborts a whole batch.
+    if nopat_value is None:
+        return {"status": "REVIEW_REQUIRED", "value": None,
+                "error": f"nopat value is None despite status={nopat_status}"}
 
     roic_value = nopat_value / avg_ic_value
     status = (
