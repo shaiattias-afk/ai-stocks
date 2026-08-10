@@ -157,15 +157,34 @@ def _merge_shard(target_connection: duckdb.DuckDBPyConnection, shard_path: Path)
 def _merge_shards_atomically(
     shard_paths_in_order: list[Path],
     warehouse_db_path: Path,
+    append: bool = False,
 ) -> None:
-    """Merges every shard into a temporary database beside the target and
-    atomically renames it into place. The target is either fully replaced
-    or left completely untouched -- never half-merged."""
+    """Merges every shard into a staging database beside the target and
+    atomically renames it into place. The target is either fully written
+    or left completely untouched -- never half-merged.
+
+    `append=False` (default) builds a warehouse containing ONLY these
+    shards. `append=True` starts from a copy of the existing target, so
+    the new filings are added to what is already there.
+
+    The distinction matters: because the merge finishes with a rename,
+    running the default mode against a populated warehouse would discard
+    every accession already in it. That is silent, irreversible data loss,
+    so an existing target must be handled explicitly rather than by
+    whichever mode happens to be the default.
+    """
     warehouse_db_path.parent.mkdir(parents=True, exist_ok=True)
     staging_path = warehouse_db_path.with_suffix(warehouse_db_path.suffix + ".staging")
     staging_path.unlink(missing_ok=True)
 
     try:
+        if append:
+            if not warehouse_db_path.exists():
+                raise FileNotFoundError(
+                    f"append=True but no existing warehouse at {warehouse_db_path}"
+                )
+            shutil.copy2(warehouse_db_path, staging_path)
+
         target = duckdb.connect(database=str(staging_path))
         try:
             wh_extract.create_warehouse_schema(target)
@@ -189,6 +208,7 @@ def load_many(
     warm_cache: bool = True,
     progress: bool = True,
     chunk_size: int = DEFAULT_CHUNK_SIZE,
+    append: bool = False,
 ) -> dict:
     """Ingests many archived filings in parallel into `warehouse_db_path`.
 
@@ -203,6 +223,16 @@ def load_many(
     archive_db_path = archive_db_path or filings_archive.ARCHIVE_DB_PATH
     accession_numbers = list(accession_numbers)
     total_start = time.perf_counter()
+
+    # Refuse to silently discard an existing warehouse. The merge ends in a
+    # rename, so the default (rebuild) mode against a populated target would
+    # delete every accession already there.
+    if warehouse_db_path.exists() and not append:
+        raise FileExistsError(
+            f"{warehouse_db_path} already exists. Pass append=True to add these filings "
+            "to it, or delete/point elsewhere to rebuild from scratch. Refusing to "
+            "replace a populated warehouse implicitly."
+        )
 
     warm_result = None
     if warm_cache and accession_numbers:
@@ -273,6 +303,7 @@ def load_many(
         _merge_shards_atomically(
             [Path(by_accession[a]["shard_path"]) for a in sorted(by_accession)],
             warehouse_db_path,
+            append=append,
         )
         merge_seconds = time.perf_counter() - merge_start
 
@@ -322,15 +353,26 @@ def load_many_sequential(
     }
 
 
-def all_archived_accessions(archive_db_path: Path | None = None) -> list[str]:
+def all_archived_accessions(
+    archive_db_path: Path | None = None,
+    parseable_only: bool = True,
+) -> list[str]:
+    """Archived accessions, in ticker/report-date order.
+
+    `parseable_only` (the default) excludes filings recorded as carrying
+    no XBRL document set. Those are archived deliberately -- the filing
+    genuinely exists and its absence of machine-readable data is a real
+    fact about the company's history -- but handing one to Arelle can only
+    fail, so they are not offered up for parsing.
+    """
     archive_db_path = archive_db_path or filings_archive.ARCHIVE_DB_PATH
     connection = duckdb.connect(database=str(archive_db_path), read_only=True)
     try:
-        return [
-            row[0] for row in connection.execute(
-                "SELECT accession_number FROM filing_archive_manifest ORDER BY ticker, report_date"
-            ).fetchall()
-        ]
+        query = "SELECT accession_number FROM filing_archive_manifest"
+        if parseable_only:
+            query += f" WHERE source IS DISTINCT FROM '{filings_archive.NO_XBRL_DOCUMENT_SET}'"
+        query += " ORDER BY ticker, report_date"
+        return [row[0] for row in connection.execute(query).fetchall()]
     finally:
         connection.close()
 

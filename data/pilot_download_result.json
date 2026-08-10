@@ -1,0 +1,854 @@
+{
+  "filings_considered": 138,
+  "downloaded": 84,
+  "already_archived": 54,
+  "failed": [],
+  "accessions_before": 185,
+  "accessions_after": 269,
+  "files_in_archive": 1843,
+  "new_uncompressed_bytes": 619026995,
+  "new_compressed_bytes": 48662369,
+  "elapsed_seconds": 522.4,
+  "results": [
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000950170-25-087926",
+      "ticker": "ORCL",
+      "report_date": "2025-05-31",
+      "form": "10-K",
+      "file_count": 3,
+      "total_uncompressed_bytes": 9014329,
+      "total_compressed_bytes": 527156
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001193125-26-277521",
+      "ticker": "ORCL",
+      "report_date": "2026-05-31",
+      "form": "10-K",
+      "file_count": 3,
+      "total_uncompressed_bytes": 9616105,
+      "total_compressed_bytes": 555752
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000950170-25-100235",
+      "ticker": "MSFT",
+      "report_date": "2025-06-30",
+      "form": "10-K",
+      "file_count": 3,
+      "total_uncompressed_bytes": 10291767,
+      "total_compressed_bytes": 466134
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001193125-26-323660",
+      "ticker": "MSFT",
+      "report_date": "2026-06-30",
+      "form": "10-K",
+      "file_count": 3,
+      "total_uncompressed_bytes": 10824421,
+      "total_compressed_bytes": 484156
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001628280-26-003942",
+      "ticker": "META",
+      "report_date": "2025-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4489775,
+      "total_compressed_bytes": 410479
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001045810-25-000023",
+      "ticker": "NVDA",
+      "report_date": "2025-01-26",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4282497,
+      "total_compressed_bytes": 370246
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001045810-26-000021",
+      "ticker": "NVDA",
+      "report_date": "2026-01-25",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4105434,
+      "total_compressed_bytes": 354684
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000723125-20-000082",
+      "ticker": "MU",
+      "report_date": "2020-09-03",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6217891,
+      "total_compressed_bytes": 528502
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001535527-20-000006",
+      "ticker": "CRWD",
+      "report_date": "2020-01-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 7452460,
+      "total_compressed_bytes": 550037
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001327567-20-000032",
+      "ticker": "PANW",
+      "report_date": "2020-07-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 7612205,
+      "total_compressed_bytes": 562912
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001097149-21-000007",
+      "ticker": "ALGN",
+      "report_date": "2020-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5093558,
+      "total_compressed_bytes": 461706
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001097149-22-000011",
+      "ticker": "ALGN",
+      "report_date": "2021-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5099028,
+      "total_compressed_bytes": 460969
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001097149-23-000013",
+      "ticker": "ALGN",
+      "report_date": "2022-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5008089,
+      "total_compressed_bytes": 448272
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001097149-24-000011",
+      "ticker": "ALGN",
+      "report_date": "2023-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4709352,
+      "total_compressed_bytes": 386287
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001097149-25-000012",
+      "ticker": "ALGN",
+      "report_date": "2024-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4783519,
+      "total_compressed_bytes": 399678
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001097149-26-000014",
+      "ticker": "ALGN",
+      "report_date": "2025-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4886844,
+      "total_compressed_bytes": 397025
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000899866-21-000014",
+      "ticker": "ALXN",
+      "report_date": "2020-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 7994650,
+      "total_compressed_bytes": 772978
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001013462-21-000009",
+      "ticker": "ANSS",
+      "report_date": "2020-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5634137,
+      "total_compressed_bytes": 479477
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001013462-22-000005",
+      "ticker": "ANSS",
+      "report_date": "2021-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5060808,
+      "total_compressed_bytes": 439662
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001013462-23-000013",
+      "ticker": "ANSS",
+      "report_date": "2022-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4916224,
+      "total_compressed_bytes": 431780
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001013462-24-000007",
+      "ticker": "ANSS",
+      "report_date": "2023-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4386824,
+      "total_compressed_bytes": 374028
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001013462-25-000009",
+      "ticker": "ANSS",
+      "report_date": "2024-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4361089,
+      "total_compressed_bytes": 379244
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001628280-21-002828",
+      "ticker": "ATVI",
+      "report_date": "2020-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6495711,
+      "total_compressed_bytes": 535296
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001628280-22-003992",
+      "ticker": "ATVI",
+      "report_date": "2021-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6728499,
+      "total_compressed_bytes": 552724
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001628280-23-004842",
+      "ticker": "ATVI",
+      "report_date": "2022-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6702854,
+      "total_compressed_bytes": 548121
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000796343-21-000004",
+      "ticker": "ADBE",
+      "report_date": "2020-11-27",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6310504,
+      "total_compressed_bytes": 554985
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000796343-22-000032",
+      "ticker": "ADBE",
+      "report_date": "2021-12-03",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5434919,
+      "total_compressed_bytes": 479806
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000796343-23-000007",
+      "ticker": "ADBE",
+      "report_date": "2022-12-02",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5370529,
+      "total_compressed_bytes": 473630
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000796343-24-000006",
+      "ticker": "ADBE",
+      "report_date": "2023-12-01",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4897542,
+      "total_compressed_bytes": 398547
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000796343-25-000004",
+      "ticker": "ADBE",
+      "report_date": "2024-11-29",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4705700,
+      "total_compressed_bytes": 395132
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000796343-26-000003",
+      "ticker": "ADBE",
+      "report_date": "2025-11-28",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4518598,
+      "total_compressed_bytes": 376555
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001628280-21-001185",
+      "ticker": "AMD",
+      "report_date": "2020-12-26",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4566117,
+      "total_compressed_bytes": 431082
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000002488-22-000016",
+      "ticker": "AMD",
+      "report_date": "2021-12-25",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4474767,
+      "total_compressed_bytes": 419097
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000002488-23-000047",
+      "ticker": "AMD",
+      "report_date": "2022-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5308791,
+      "total_compressed_bytes": 489692
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000002488-24-000012",
+      "ticker": "AMD",
+      "report_date": "2023-12-30",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4921710,
+      "total_compressed_bytes": 422055
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000002488-25-000012",
+      "ticker": "AMD",
+      "report_date": "2024-12-28",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5039857,
+      "total_compressed_bytes": 434297
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000002488-26-000018",
+      "ticker": "AMD",
+      "report_date": "2025-12-27",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5194124,
+      "total_compressed_bytes": 418472
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001559720-21-000010",
+      "ticker": "ABNB",
+      "report_date": "2020-12-31",
+      "form": "10-K",
+      "file_count": 1,
+      "total_uncompressed_bytes": 2521279,
+      "total_compressed_bytes": 252428
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001559720-22-000006",
+      "ticker": "ABNB",
+      "report_date": "2021-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6499714,
+      "total_compressed_bytes": 628336
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001559720-23-000003",
+      "ticker": "ABNB",
+      "report_date": "2022-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5731246,
+      "total_compressed_bytes": 559472
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001559720-24-000006",
+      "ticker": "ABNB",
+      "report_date": "2023-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5004768,
+      "total_compressed_bytes": 461894
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001559720-25-000010",
+      "ticker": "ABNB",
+      "report_date": "2024-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4429064,
+      "total_compressed_bytes": 395660
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001559720-26-000004",
+      "ticker": "ABNB",
+      "report_date": "2025-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4338863,
+      "total_compressed_bytes": 389177
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001178670-21-000010",
+      "ticker": "ALNY",
+      "report_date": "2020-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5996806,
+      "total_compressed_bytes": 579660
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001178670-22-000013",
+      "ticker": "ALNY",
+      "report_date": "2021-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5677764,
+      "total_compressed_bytes": 549036
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001178670-23-000005",
+      "ticker": "ALNY",
+      "report_date": "2022-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5859657,
+      "total_compressed_bytes": 562657
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001178670-24-000008",
+      "ticker": "ALNY",
+      "report_date": "2023-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5275498,
+      "total_compressed_bytes": 481256
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001178670-25-000026",
+      "ticker": "ALNY",
+      "report_date": "2024-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5350803,
+      "total_compressed_bytes": 485297
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001628280-26-007497",
+      "ticker": "ALNY",
+      "report_date": "2025-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5916893,
+      "total_compressed_bytes": 532849
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000004904-21-000010",
+      "ticker": "AEP",
+      "report_date": "2020-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 32263899,
+      "total_compressed_bytes": 2285246
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000004904-22-000024",
+      "ticker": "AEP",
+      "report_date": "2021-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 32902778,
+      "total_compressed_bytes": 2344815
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000004904-23-000011",
+      "ticker": "AEP",
+      "report_date": "2022-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 33153103,
+      "total_compressed_bytes": 2406793
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000004904-24-000020",
+      "ticker": "AEP",
+      "report_date": "2023-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 24971263,
+      "total_compressed_bytes": 1489865
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000004904-25-000027",
+      "ticker": "AEP",
+      "report_date": "2024-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 27239696,
+      "total_compressed_bytes": 1638668
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000004904-26-000013",
+      "ticker": "AEP",
+      "report_date": "2025-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 27757073,
+      "total_compressed_bytes": 1637064
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000318154-21-000010",
+      "ticker": "AMGN",
+      "report_date": "2020-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 7665509,
+      "total_compressed_bytes": 677009
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000318154-22-000010",
+      "ticker": "AMGN",
+      "report_date": "2021-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 7472645,
+      "total_compressed_bytes": 663911
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000318154-23-000017",
+      "ticker": "AMGN",
+      "report_date": "2022-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 7643119,
+      "total_compressed_bytes": 677091
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000318154-24-000011",
+      "ticker": "AMGN",
+      "report_date": "2023-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 7309633,
+      "total_compressed_bytes": 591718
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000318154-25-000010",
+      "ticker": "AMGN",
+      "report_date": "2024-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6952026,
+      "total_compressed_bytes": 575237
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000318154-26-000010",
+      "ticker": "AMGN",
+      "report_date": "2025-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6960953,
+      "total_compressed_bytes": 575108
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000006281-20-000156",
+      "ticker": "ADI",
+      "report_date": "2020-10-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6093973,
+      "total_compressed_bytes": 539150
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000006281-21-000294",
+      "ticker": "ADI",
+      "report_date": "2021-10-30",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6306053,
+      "total_compressed_bytes": 556866
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000006281-22-000250",
+      "ticker": "ADI",
+      "report_date": "2022-10-29",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5849653,
+      "total_compressed_bytes": 523071
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000006281-23-000203",
+      "ticker": "ADI",
+      "report_date": "2023-10-28",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5391660,
+      "total_compressed_bytes": 444751
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000006281-24-000204",
+      "ticker": "ADI",
+      "report_date": "2024-11-02",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4890362,
+      "total_compressed_bytes": 410023
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000006281-25-000153",
+      "ticker": "ADI",
+      "report_date": "2025-11-01",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4708749,
+      "total_compressed_bytes": 399809
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000320193-20-000096",
+      "ticker": "AAPL",
+      "report_date": "2020-09-26",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4562931,
+      "total_compressed_bytes": 393658
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000320193-21-000105",
+      "ticker": "AAPL",
+      "report_date": "2021-09-25",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3875988,
+      "total_compressed_bytes": 340493
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000320193-22-000108",
+      "ticker": "AAPL",
+      "report_date": "2022-09-24",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3813281,
+      "total_compressed_bytes": 331903
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000320193-23-000106",
+      "ticker": "AAPL",
+      "report_date": "2023-09-30",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3423903,
+      "total_compressed_bytes": 273818
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000320193-24-000123",
+      "ticker": "AAPL",
+      "report_date": "2024-09-28",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3279050,
+      "total_compressed_bytes": 271161
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000320193-25-000079",
+      "ticker": "AAPL",
+      "report_date": "2025-09-27",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 3256809,
+      "total_compressed_bytes": 268851
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000006951-20-000048",
+      "ticker": "AMAT",
+      "report_date": "2020-10-25",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6725547,
+      "total_compressed_bytes": 551766
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000006951-21-000043",
+      "ticker": "AMAT",
+      "report_date": "2021-10-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6556771,
+      "total_compressed_bytes": 539875
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000006951-22-000043",
+      "ticker": "AMAT",
+      "report_date": "2022-10-30",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6580279,
+      "total_compressed_bytes": 542009
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000006951-23-000041",
+      "ticker": "AMAT",
+      "report_date": "2023-10-29",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5678516,
+      "total_compressed_bytes": 433585
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0000006951-24-000044",
+      "ticker": "AMAT",
+      "report_date": "2024-10-27",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4355608,
+      "total_compressed_bytes": 354994
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001628280-25-056742",
+      "ticker": "AMAT",
+      "report_date": "2025-10-26",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4462274,
+      "total_compressed_bytes": 363962
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001751008-22-000005",
+      "ticker": "APP",
+      "report_date": "2021-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6577693,
+      "total_compressed_bytes": 614676
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001751008-23-000006",
+      "ticker": "APP",
+      "report_date": "2022-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 6278670,
+      "total_compressed_bytes": 583474
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001751008-24-000012",
+      "ticker": "APP",
+      "report_date": "2023-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 5504812,
+      "total_compressed_bytes": 483947
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001751008-25-000018",
+      "ticker": "APP",
+      "report_date": "2024-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4962963,
+      "total_compressed_bytes": 441658
+    },
+    {
+      "status": "DOWNLOADED",
+      "accession_number": "0001751008-26-000010",
+      "ticker": "APP",
+      "report_date": "2025-12-31",
+      "form": "10-K",
+      "file_count": 7,
+      "total_uncompressed_bytes": 4486170,
+      "total_compressed_bytes": 387967
+    }
+  ]
+}

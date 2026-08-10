@@ -88,6 +88,36 @@ def is_needed_file(file_name: str, primary_document: str) -> bool:
     return False
 
 
+NO_XBRL_DOCUMENT_SET = "NO_XBRL_DOCUMENT_SET"
+
+
+def has_xbrl_document_set(file_names: list[str]) -> bool:
+    """True when a filing carries machine-readable XBRL at all.
+
+    A primary document on its own is not enough. Real XBRL always brings
+    either an extension schema (.xsd), at least one linkbase, or a
+    standalone instance document. Without one of those there is nothing
+    for Arelle to parse, no matter how complete the HTML looks.
+
+    This is not hypothetical: a newly public company's FIRST annual report
+    may legitimately contain no XBRL at all (SEC accommodation). Measured
+    on Airbnb, whose December-2020 IPO was followed by a FY2020 10-K of 11
+    files with zero XBRL, then a FY2021 10-K with 105. Any company that
+    listed during a backtest window will hit this, so it is detected and
+    reported as a coverage gap rather than surfacing later as a confusing
+    parse failure.
+    """
+    for name in file_names:
+        lower = name.lower()
+        if lower.endswith(".xsd"):
+            return True
+        if _LINKBASE_SUFFIX_PATTERN.search(name):
+            return True
+        if lower.endswith(".xml") and lower not in ("filingsummary.xml",):
+            return True
+    return False
+
+
 def create_archive_schema(connection: duckdb.DuckDBPyConnection) -> None:
     connection.execute("""CREATE TABLE IF NOT EXISTS filing_archive_files (
         accession_number VARCHAR,

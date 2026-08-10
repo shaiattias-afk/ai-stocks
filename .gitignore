@@ -36,6 +36,10 @@ data/market_data/raw/
 # Arelle's own local taxonomy/schema cache (rebuilt automatically on first run)
 data/arelle_cache/
 
+# SEC's full CIK lookup file (~40 MB, re-downloaded on demand by
+# filings/cik_lookup.py). A cache of a public SEC file, not project data.
+data/sec_cik_lookup_data.txt
+
 # Per-task scratch/intermediate output (throwaway working files, not project history)
 data/_scratch_*/
 
