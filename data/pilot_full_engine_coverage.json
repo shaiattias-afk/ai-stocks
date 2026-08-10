@@ -1,33 +1,33 @@
 {
   "company_years": 133,
   "metrics_per_company_year": 16,
-  "overall_pass": 1845,
+  "overall_pass": 1944,
   "overall_total": 2128,
-  "pass_rate_pct": 86.7,
+  "pass_rate_pct": 91.4,
   "failures_by_metric": {
     "short_term_investments": 20,
     "adjusted_net_debt": 27,
     "invested_capital": 28,
-    "operating_cash_flow": 19,
-    "capex": 26,
-    "free_cash_flow": 33,
     "current_debt": 10,
     "total_debt": 10,
-    "pretax_income": 44,
+    "capex": 10,
+    "free_cash_flow": 11,
     "long_term_debt": 5,
     "cash_and_equivalents": 5,
     "stockholders_equity": 6,
     "income_tax_expense": 9,
-    "revenue": 25,
+    "revenue": 8,
     "operating_income": 8,
-    "net_income": 8
+    "net_income": 8,
+    "pretax_income": 16,
+    "operating_cash_flow": 3
   },
   "results": [
     {
       "ticker": "AAPL",
       "report_date": "2020-09-26",
       "accession_number": "0000320193-20-000096",
-      "passed": 10,
+      "passed": 13,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -106,21 +106,23 @@
           "concept_qname": "us-gaap:IncomeTaxExpenseBenefit"
         },
         "operating_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 80674000000.0,
+          "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'capex' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 7309000000.0,
+          "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 73365000000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -128,7 +130,7 @@
       "ticker": "AAPL",
       "report_date": "2021-09-25",
       "accession_number": "0000320193-21-000105",
-      "passed": 10,
+      "passed": 13,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -207,21 +209,23 @@
           "concept_qname": "us-gaap:IncomeTaxExpenseBenefit"
         },
         "operating_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 104038000000.0,
+          "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'capex' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 11085000000.0,
+          "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 92953000000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -229,7 +233,7 @@
       "ticker": "AAPL",
       "report_date": "2022-09-24",
       "accession_number": "0000320193-22-000108",
-      "passed": 10,
+      "passed": 13,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -308,21 +312,23 @@
           "concept_qname": "us-gaap:IncomeTaxExpenseBenefit"
         },
         "operating_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 122151000000.0,
+          "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'capex' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 10708000000.0,
+          "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 111443000000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -330,7 +336,7 @@
       "ticker": "AAPL",
       "report_date": "2023-09-30",
       "accession_number": "0000320193-23-000106",
-      "passed": 10,
+      "passed": 13,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -409,21 +415,23 @@
           "concept_qname": "us-gaap:IncomeTaxExpenseBenefit"
         },
         "operating_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 110543000000.0,
+          "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'capex' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 10959000000.0,
+          "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 99584000000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -431,7 +439,7 @@
       "ticker": "AAPL",
       "report_date": "2024-09-28",
       "accession_number": "0000320193-24-000123",
-      "passed": 10,
+      "passed": 13,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -510,21 +518,23 @@
           "concept_qname": "us-gaap:IncomeTaxExpenseBenefit"
         },
         "operating_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 118254000000.0,
+          "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'capex' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 9447000000.0,
+          "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 108807000000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -532,7 +542,7 @@
       "ticker": "AAPL",
       "report_date": "2025-09-27",
       "accession_number": "0000320193-25-000079",
-      "passed": 10,
+      "passed": 13,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -611,21 +621,23 @@
           "concept_qname": "us-gaap:IncomeTaxExpenseBenefit"
         },
         "operating_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 111482000000.0,
+          "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'capex' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 12715000000.0,
+          "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 98767000000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -633,7 +645,7 @@
       "ticker": "ABNB",
       "report_date": "2021-12-31",
       "accession_number": "0001559720-22-000006",
-      "passed": 11,
+      "passed": 12,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -698,10 +710,11 @@
           "concept_qname": "us-gaap:NetIncomeLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": -300207000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -2380,7 +2393,7 @@
       "ticker": "AEP",
       "report_date": "2020-12-31",
       "accession_number": "0000004904-21-000010",
-      "passed": 9,
+      "passed": 11,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -2445,10 +2458,11 @@
           "concept_qname": "us-gaap:ProfitLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 2146100000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -2458,10 +2472,11 @@
           "concept_qname": "us-gaap:IncomeTaxExpenseBenefit"
         },
         "operating_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 3832900000.0,
+          "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
           "status": "REVIEW_REQUIRED",
@@ -2480,7 +2495,7 @@
       "ticker": "AEP",
       "report_date": "2021-12-31",
       "accession_number": "0000004904-22-000024",
-      "passed": 9,
+      "passed": 11,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -2545,10 +2560,11 @@
           "concept_qname": "us-gaap:ProfitLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 2511900000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -2558,10 +2574,11 @@
           "concept_qname": "us-gaap:IncomeTaxExpenseBenefit"
         },
         "operating_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 3839900000.0,
+          "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
           "status": "REVIEW_REQUIRED",
@@ -2580,7 +2597,7 @@
       "ticker": "AEP",
       "report_date": "2022-12-31",
       "accession_number": "0000004904-23-000011",
-      "passed": 8,
+      "passed": 10,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -2645,10 +2662,11 @@
           "concept_qname": "us-gaap:ProfitLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 2420400000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
         },
         "income_tax_expense": {
           "status": "REVIEW_REQUIRED",
@@ -2657,10 +2675,11 @@
           "value": null
         },
         "operating_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 5288000000.0,
+          "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
           "status": "REVIEW_REQUIRED",
@@ -2679,7 +2698,7 @@
       "ticker": "AEP",
       "report_date": "2023-12-31",
       "accession_number": "0000004904-24-000020",
-      "passed": 9,
+      "passed": 11,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -2744,10 +2763,11 @@
           "concept_qname": "us-gaap:ProfitLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 2208700000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -2757,10 +2777,11 @@
           "concept_qname": "us-gaap:IncomeTaxExpenseBenefit"
         },
         "operating_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 5012200000.0,
+          "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
           "status": "REVIEW_REQUIRED",
@@ -2843,7 +2864,7 @@
         "pretax_income": {
           "status": "REVIEW_REQUIRED",
           "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 8, tier-B: 0).",
+          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 8, tier-B: 8).",
           "value": null
         },
         "income_tax_expense": {
@@ -2855,7 +2876,7 @@
         "operating_cash_flow": {
           "status": "REVIEW_REQUIRED",
           "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 8, tier-B: 0).",
+          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 8, tier-B: 8).",
           "value": null
         },
         "capex": {
@@ -2939,7 +2960,7 @@
         "pretax_income": {
           "status": "REVIEW_REQUIRED",
           "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 8, tier-B: 0).",
+          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 8, tier-B: 8).",
           "value": null
         },
         "income_tax_expense": {
@@ -2951,7 +2972,7 @@
         "operating_cash_flow": {
           "status": "REVIEW_REQUIRED",
           "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 8, tier-B: 0).",
+          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 8, tier-B: 8).",
           "value": null
         },
         "capex": {
@@ -2971,7 +2992,7 @@
       "ticker": "ALGN",
       "report_date": "2020-12-31",
       "accession_number": "0001097149-21-000007",
-      "passed": 9,
+      "passed": 13,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -3015,10 +3036,11 @@
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'revenue' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 2, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 2471941000.0,
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
         },
         "operating_income": {
           "status": "PASS",
@@ -3035,10 +3057,11 @@
           "concept_qname": "us-gaap:NetIncomeLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 378949000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -3055,15 +3078,16 @@
           "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'capex' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 154916000.0,
+          "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 507258000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -3071,7 +3095,7 @@
       "ticker": "ALGN",
       "report_date": "2021-12-31",
       "accession_number": "0001097149-22-000011",
-      "passed": 9,
+      "passed": 13,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -3115,10 +3139,11 @@
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'revenue' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 2, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 3952584000.0,
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
         },
         "operating_income": {
           "status": "PASS",
@@ -3135,10 +3160,11 @@
           "concept_qname": "us-gaap:NetIncomeLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 1012423000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -3155,15 +3181,16 @@
           "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'capex' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 401098000.0,
+          "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 771446000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -3171,7 +3198,7 @@
       "ticker": "ALGN",
       "report_date": "2022-12-31",
       "accession_number": "0001097149-23-000013",
-      "passed": 9,
+      "passed": 13,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -3215,10 +3242,11 @@
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'revenue' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 2, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 3734635000.0,
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
         },
         "operating_income": {
           "status": "PASS",
@@ -3235,10 +3263,11 @@
           "concept_qname": "us-gaap:NetIncomeLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 599057000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -3255,15 +3284,16 @@
           "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'capex' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 291900000.0,
+          "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 276832000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -3271,7 +3301,7 @@
       "ticker": "ALGN",
       "report_date": "2023-12-31",
       "accession_number": "0001097149-24-000011",
-      "passed": 9,
+      "passed": 13,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -3315,10 +3345,11 @@
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'revenue' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 2, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 3862260000.0,
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
         },
         "operating_income": {
           "status": "PASS",
@@ -3335,10 +3366,11 @@
           "concept_qname": "us-gaap:NetIncomeLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 641204000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -3355,15 +3387,16 @@
           "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'capex' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 177716000.0,
+          "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 608060000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -3371,7 +3404,7 @@
       "ticker": "ALGN",
       "report_date": "2024-12-31",
       "accession_number": "0001097149-25-000012",
-      "passed": 9,
+      "passed": 13,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -3415,10 +3448,11 @@
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'revenue' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 2, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 3999012000.0,
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
         },
         "operating_income": {
           "status": "PASS",
@@ -3435,10 +3469,11 @@
           "concept_qname": "us-gaap:NetIncomeLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 608959000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -3455,15 +3490,16 @@
           "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'capex' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 115580000.0,
+          "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 622651000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -3471,7 +3507,7 @@
       "ticker": "ALGN",
       "report_date": "2025-12-31",
       "accession_number": "0001097149-26-000014",
-      "passed": 12,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -3515,10 +3551,11 @@
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'revenue' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 2, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 4034964000.0,
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
         },
         "operating_income": {
           "status": "PASS",
@@ -3535,10 +3572,11 @@
           "concept_qname": "us-gaap:NetIncomeLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 585287000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -3555,15 +3593,16 @@
           "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'capex' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 102445000.0,
+          "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 490778000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -4262,7 +4301,7 @@
       "ticker": "AMAT",
       "report_date": "2020-10-25",
       "accession_number": "0000006951-20-000048",
-      "passed": 14,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -4341,10 +4380,11 @@
           "concept_qname": "us-gaap:IncomeTaxExpenseBenefit"
         },
         "operating_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 3804000000.0,
+          "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
           "status": "PASS",
@@ -4354,9 +4394,9 @@
           "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 3382000000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -4364,7 +4404,7 @@
       "ticker": "AMAT",
       "report_date": "2021-10-31",
       "accession_number": "0000006951-21-000043",
-      "passed": 14,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -4443,10 +4483,11 @@
           "concept_qname": "us-gaap:IncomeTaxExpenseBenefit"
         },
         "operating_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 5442000000.0,
+          "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
           "status": "PASS",
@@ -4456,9 +4497,9 @@
           "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 4774000000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -4466,7 +4507,7 @@
       "ticker": "AMAT",
       "report_date": "2022-10-30",
       "accession_number": "0000006951-22-000043",
-      "passed": 14,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -4545,10 +4586,11 @@
           "concept_qname": "us-gaap:IncomeTaxExpenseBenefit"
         },
         "operating_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 5399000000.0,
+          "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
           "status": "PASS",
@@ -4558,9 +4600,9 @@
           "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 4612000000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -4568,7 +4610,7 @@
       "ticker": "AMAT",
       "report_date": "2023-10-29",
       "accession_number": "0000006951-23-000041",
-      "passed": 14,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -4647,10 +4689,11 @@
           "concept_qname": "us-gaap:IncomeTaxExpenseBenefit"
         },
         "operating_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 8700000000.0,
+          "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
           "status": "PASS",
@@ -4660,9 +4703,9 @@
           "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 7594000000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -4670,7 +4713,7 @@
       "ticker": "AMAT",
       "report_date": "2024-10-27",
       "accession_number": "0000006951-24-000044",
-      "passed": 13,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -4714,10 +4757,11 @@
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'revenue' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 27176000000.0,
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
         },
         "operating_income": {
           "status": "PASS",
@@ -4748,10 +4792,11 @@
           "concept_qname": "us-gaap:IncomeTaxExpenseBenefit"
         },
         "operating_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 8677000000.0,
+          "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
           "status": "PASS",
@@ -4761,9 +4806,9 @@
           "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 7487000000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -4771,7 +4816,7 @@
       "ticker": "AMAT",
       "report_date": "2025-10-26",
       "accession_number": "0001628280-25-056742",
-      "passed": 13,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -4815,10 +4860,11 @@
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'revenue' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 28368000000.0,
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
         },
         "operating_income": {
           "status": "PASS",
@@ -4849,10 +4895,11 @@
           "concept_qname": "us-gaap:IncomeTaxExpenseBenefit"
         },
         "operating_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 7958000000.0,
+          "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
           "status": "PASS",
@@ -4862,9 +4909,9 @@
           "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 5698000000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -4872,7 +4919,7 @@
       "ticker": "AMD",
       "report_date": "2020-12-26",
       "accession_number": "0001628280-21-001185",
-      "passed": 11,
+      "passed": 12,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -4916,10 +4963,11 @@
           "basis": null
         },
         "revenue": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'revenue' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 9763000000.0,
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
         },
         "operating_income": {
           "status": "PASS",
@@ -4974,7 +5022,7 @@
       "ticker": "AMD",
       "report_date": "2021-12-25",
       "accession_number": "0000002488-22-000016",
-      "passed": 15,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -5018,10 +5066,11 @@
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'revenue' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 16434000000.0,
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
         },
         "operating_income": {
           "status": "PASS",
@@ -5076,7 +5125,7 @@
       "ticker": "AMD",
       "report_date": "2022-12-31",
       "accession_number": "0000002488-23-000047",
-      "passed": 15,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -5120,10 +5169,11 @@
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'revenue' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 23601000000.0,
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
         },
         "operating_income": {
           "status": "PASS",
@@ -5178,7 +5228,7 @@
       "ticker": "AMD",
       "report_date": "2023-12-30",
       "accession_number": "0000002488-24-000012",
-      "passed": 15,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -5222,10 +5272,11 @@
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'revenue' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 22680000000.0,
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
         },
         "operating_income": {
           "status": "PASS",
@@ -5280,7 +5331,7 @@
       "ticker": "AMD",
       "report_date": "2024-12-28",
       "accession_number": "0000002488-25-000012",
-      "passed": 15,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -5324,10 +5375,11 @@
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'revenue' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 25785000000.0,
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
         },
         "operating_income": {
           "status": "PASS",
@@ -5382,7 +5434,7 @@
       "ticker": "AMD",
       "report_date": "2025-12-27",
       "accession_number": "0000002488-26-000018",
-      "passed": 12,
+      "passed": 13,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -5426,10 +5478,11 @@
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'revenue' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 34639000000.0,
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
         },
         "operating_income": {
           "status": "PASS",
@@ -5461,7 +5514,7 @@
         "operating_cash_flow": {
           "status": "REVIEW_REQUIRED",
           "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
+          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'operating_cash_flow' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 3, tier-B: 0).",
           "value": null
         },
         "capex": {
@@ -6717,7 +6770,7 @@
       "ticker": "ANSS",
       "report_date": "2020-12-31",
       "accession_number": "0001013462-21-000009",
-      "passed": 15,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -6782,10 +6835,11 @@
           "concept_qname": "us-gaap:NetIncomeLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 493925000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -6819,7 +6873,7 @@
       "ticker": "ANSS",
       "report_date": "2021-12-31",
       "accession_number": "0001013462-22-000005",
-      "passed": 15,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -6884,10 +6938,11 @@
           "concept_qname": "us-gaap:NetIncomeLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 515354000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -6921,7 +6976,7 @@
       "ticker": "ANSS",
       "report_date": "2022-12-31",
       "accession_number": "0001013462-23-000013",
-      "passed": 15,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -6986,10 +7041,11 @@
           "concept_qname": "us-gaap:NetIncomeLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 575315000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -7023,7 +7079,7 @@
       "ticker": "ANSS",
       "report_date": "2023-12-31",
       "accession_number": "0001013462-24-000007",
-      "passed": 15,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -7088,10 +7144,11 @@
           "concept_qname": "us-gaap:NetIncomeLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 592138000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -7125,7 +7182,7 @@
       "ticker": "ANSS",
       "report_date": "2024-12-31",
       "accession_number": "0001013462-25-000009",
-      "passed": 15,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -7190,10 +7247,11 @@
           "concept_qname": "us-gaap:NetIncomeLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 718038000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -7227,7 +7285,7 @@
       "ticker": "APP",
       "report_date": "2021-12-31",
       "accession_number": "0001751008-22-000005",
-      "passed": 14,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -7313,15 +7371,16 @@
           "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'capex' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 1390000.0,
+          "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 360461000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -7329,7 +7388,7 @@
       "ticker": "APP",
       "report_date": "2022-12-31",
       "accession_number": "0001751008-23-000006",
-      "passed": 14,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -7415,15 +7474,16 @@
           "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'capex' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 662000.0,
+          "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 412111000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -7431,7 +7491,7 @@
       "ticker": "APP",
       "report_date": "2023-12-31",
       "accession_number": "0001751008-24-000012",
-      "passed": 13,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -7496,10 +7556,11 @@
           "concept_qname": "us-gaap:ProfitLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 380570000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -7516,15 +7577,16 @@
           "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'capex' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 4246000.0,
+          "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 1057264000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -7532,7 +7594,7 @@
       "ticker": "APP",
       "report_date": "2024-12-31",
       "accession_number": "0001751008-25-000018",
-      "passed": 13,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -7597,10 +7659,11 @@
           "concept_qname": "us-gaap:ProfitLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 1576005000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -7617,15 +7680,16 @@
           "concept_qname": "us-gaap:NetCashProvidedByUsedInOperatingActivities"
         },
         "capex": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'capex' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 4776000.0,
+          "concept_qname": "us-gaap:PaymentsToAcquirePropertyPlantAndEquipment"
         },
         "free_cash_flow": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "reason": "COMPONENT_UNRESOLVED"
+          "status": "PASS",
+          "value": 2094235000.0,
+          "basis": "operating_cash_flow - capex"
         }
       }
     },
@@ -7735,7 +7799,7 @@
       "ticker": "ATVI",
       "report_date": "2020-12-31",
       "accession_number": "0001628280-21-002828",
-      "passed": 10,
+      "passed": 12,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -7779,10 +7843,11 @@
           "basis": null
         },
         "revenue": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'revenue' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 2, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 8086000000.0,
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
         },
         "operating_income": {
           "status": "PASS",
@@ -7799,10 +7864,11 @@
           "concept_qname": "us-gaap:NetIncomeLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 2616000000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesMinorityInterestAndIncomeLossFromEquityMethodInvestments"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -7836,7 +7902,7 @@
       "ticker": "ATVI",
       "report_date": "2021-12-31",
       "accession_number": "0001628280-22-003992",
-      "passed": 14,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -7880,10 +7946,11 @@
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'revenue' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 2, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 8803000000.0,
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
         },
         "operating_income": {
           "status": "PASS",
@@ -7900,10 +7967,11 @@
           "concept_qname": "us-gaap:NetIncomeLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 3164000000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -7937,7 +8005,7 @@
       "ticker": "ATVI",
       "report_date": "2022-12-31",
       "accession_number": "0001628280-23-004842",
-      "passed": 14,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -7981,10 +8049,11 @@
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'revenue' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 2, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 7528000000.0,
+          "concept_qname": "us-gaap:RevenueFromContractWithCustomerExcludingAssessedTax"
         },
         "operating_income": {
           "status": "PASS",
@@ -8001,10 +8070,11 @@
           "concept_qname": "us-gaap:NetIncomeLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05d9\u05ea\u05df \u05dc\u05d6\u05d4\u05d5\u05ea \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d9\u05d7\u05d9\u05d3\u05d4 \u05d5\u05d7\u05d3-\u05de\u05e9\u05de\u05e2\u05d9\u05ea (\u05de\u05d5\u05e2\u05de\u05d3\u05d9\u05dd: 1, tier-B: 0).",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": 1744000000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -8038,7 +8108,7 @@
       "ticker": "CRWD",
       "report_date": "2020-01-31",
       "accession_number": "0001535527-20-000006",
-      "passed": 15,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -8103,10 +8173,11 @@
           "concept_qname": "crwd:NetIncomeLossAvailableToCommonStockholdersBasicAndDiluted"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": -139782000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -8140,7 +8211,7 @@
       "ticker": "CRWD",
       "report_date": "2021-01-31",
       "accession_number": "0001535527-21-000007",
-      "passed": 15,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -8205,10 +8276,11 @@
           "concept_qname": "us-gaap:ProfitLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": -87869000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -8242,7 +8314,7 @@
       "ticker": "CRWD",
       "report_date": "2022-01-31",
       "accession_number": "0001535527-22-000006",
-      "passed": 15,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -8307,10 +8379,11 @@
           "concept_qname": "us-gaap:ProfitLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": -160023000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -8344,7 +8417,7 @@
       "ticker": "CRWD",
       "report_date": "2023-01-31",
       "accession_number": "0001535527-23-000008",
-      "passed": 15,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -8409,10 +8482,11 @@
           "concept_qname": "us-gaap:ProfitLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": -159883000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -12972,7 +13046,7 @@
       "ticker": "PANW",
       "report_date": "2020-07-31",
       "accession_number": "0001327567-20-000032",
-      "passed": 11,
+      "passed": 12,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -13037,10 +13111,11 @@
           "concept_qname": "us-gaap:NetIncomeLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": -231800000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -13074,7 +13149,7 @@
       "ticker": "PANW",
       "report_date": "2021-07-31",
       "accession_number": "0001327567-21-000029",
-      "passed": 15,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -13139,10 +13214,11 @@
           "concept_qname": "us-gaap:NetIncomeLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": -465000000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
@@ -13176,7 +13252,7 @@
       "ticker": "PANW",
       "report_date": "2022-07-31",
       "accession_number": "0001327567-22-000028",
-      "passed": 15,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -13241,10 +13317,11 @@
           "concept_qname": "us-gaap:NetIncomeLoss"
         },
         "pretax_income": {
-          "status": "REVIEW_REQUIRED",
-          "reason": "ROW_NOT_FOUND",
-          "error": "\u05dc\u05d0 \u05e0\u05de\u05e6\u05d0\u05d4 \u05d0\u05e3 \u05e9\u05d5\u05e8\u05ea 'pretax_income' \u05d1\u05ea\u05d5\u05da Statement role \u05e8\u05d0\u05e9\u05d9.",
-          "value": null
+          "status": "PASS",
+          "reason": null,
+          "error": null,
+          "value": -207200000.0,
+          "concept_qname": "us-gaap:IncomeLossFromContinuingOperationsBeforeIncomeTaxesExtraordinaryItemsNoncontrollingInterest"
         },
         "income_tax_expense": {
           "status": "PASS",
