@@ -1,0 +1,208 @@
+{
+  "mode": "execute",
+  "tickers_requested": [
+    "AAPL",
+    "ABNB",
+    "ADBE",
+    "ADI",
+    "AEP",
+    "ALGN",
+    "ALNY",
+    "ALXN",
+    "AMAT",
+    "AMD",
+    "AMGN",
+    "ANSS",
+    "APP",
+    "ATVI"
+  ],
+  "per_ticker": [
+    {
+      "ticker": "AAPL",
+      "status": "OK",
+      "rows": 1658,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-07",
+      "splits": 1,
+      "dividends": 26
+    },
+    {
+      "ticker": "ABNB",
+      "status": "OK",
+      "rows": 1420,
+      "first_date": "2020-12-10",
+      "last_date": "2026-08-07",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "ADBE",
+      "status": "OK",
+      "rows": 1658,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-07",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "ADI",
+      "status": "OK",
+      "rows": 1658,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-07",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "AEP",
+      "status": "OK",
+      "rows": 1658,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-07",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "ALGN",
+      "status": "OK",
+      "rows": 1658,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-07",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "ALNY",
+      "status": "OK",
+      "rows": 1658,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-07",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "ALXN",
+      "status": "NO_DATA",
+      "rows": 0,
+      "reason": "Yahoo returned no usable chart after retries",
+      "attempts": [
+        {
+          "attempt": 1,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 2,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 3,
+          "outcome": "http_error",
+          "status_code": 404
+        }
+      ]
+    },
+    {
+      "ticker": "AMAT",
+      "status": "OK",
+      "rows": 1658,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-07",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "AMD",
+      "status": "OK",
+      "rows": 1658,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-07",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "AMGN",
+      "status": "OK",
+      "rows": 1658,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-07",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "ANSS",
+      "status": "NO_DATA",
+      "rows": 0,
+      "reason": "Yahoo returned no usable chart after retries",
+      "attempts": [
+        {
+          "attempt": 1,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 2,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 3,
+          "outcome": "http_error",
+          "status_code": 404
+        }
+      ]
+    },
+    {
+      "ticker": "APP",
+      "status": "OK",
+      "rows": 1335,
+      "first_date": "2021-04-15",
+      "last_date": "2026-08-07",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "ATVI",
+      "status": "NO_DATA",
+      "rows": 0,
+      "reason": "Yahoo returned no usable chart after retries",
+      "attempts": [
+        {
+          "attempt": 1,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 2,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 3,
+          "outcome": "http_error",
+          "status_code": 404
+        }
+      ]
+    }
+  ],
+  "price_rows": 17677,
+  "rows_before": 14922,
+  "engine_version": "v1-prices-new-tickers (scripts/189)",
+  "rows_after": 32599,
+  "tickers_after": 20,
+  "pre_existing_intact": true,
+  "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\ai_stock_agent_pre_new_ticker_prices_20260810T122152Z.duckdb",
+  "guard": {
+    "table": "historical_prices_daily",
+    "pre_count": 14922,
+    "post_count": 32599,
+    "rows_inserted": 17677,
+    "declared_row_delta": 17677,
+    "actual_row_delta": 17677,
+    "pre_existing_checksum_before": "1e40895edc041c74780fe566141309109edf0b08a814f28cb73442ce43ae69e2",
+    "pre_existing_checksum_after": "1e40895edc041c74780fe566141309109edf0b08a814f28cb73442ce43ae69e2",
+    "pre_existing_rows_byte_identical": true
+  },
+  "status": "PASS"
+}
