@@ -329,9 +329,16 @@ def main() -> None:
     verify = duckdb.connect(str(PRODUCTION_DB_PATH), read_only=True)
     rows_after = verify.execute("SELECT COUNT(*) FROM financial_metric_results").fetchone()[0]
     runs_after = verify.execute("SELECT COUNT(*) FROM extraction_runs").fetchone()[0]
+    # Count pre-existing rows by LOAD TIMESTAMP, not engine_version.
+    # engine_version is constant across every run of this script, so a
+    # second run counts the FIRST run's rows as its own and reports a
+    # false failure: after the pilot's 1,660 rows, this read 2,560 - 1,660
+    # = 900 and called a perfectly good load FAIL. loaded_at distinguishes
+    # the runs; the write guard is what actually proves the pre-existing
+    # rows are unchanged, by checksumming them before and after.
     frozen_intact = verify.execute(
-        "SELECT COUNT(*) FROM financial_metric_results WHERE engine_version != ?",
-        [ENGINE_VERSION]).fetchone()[0]
+        "SELECT COUNT(*) FROM financial_metric_results WHERE loaded_at < ?",
+        [loaded_at]).fetchone()[0]
     tickers_now = verify.execute("""
         SELECT COUNT(DISTINCT m.accession_number) FROM financial_metric_results r
         JOIN extraction_runs m USING (extraction_run_id)""").fetchone()[0]

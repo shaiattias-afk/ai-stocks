@@ -1,0 +1,942 @@
+{
+  "window": [
+    "2020-01-01",
+    "2026-12-31"
+  ],
+  "observation_dates": [
+    "2021-01-01",
+    "2022-01-01",
+    "2023-01-01",
+    "2024-01-01",
+    "2025-01-01",
+    "2026-01-01"
+  ],
+  "members_per_date": {
+    "2021-01-01": 102,
+    "2022-01-01": 101,
+    "2023-01-01": 101,
+    "2024-01-01": 101,
+    "2025-01-01": 101,
+    "2026-01-01": 101
+  },
+  "snapshot_date": "2026-08-06",
+  "universe_size": 152,
+  "still_current": [
+    "AAPL",
+    "ABNB",
+    "ADBE",
+    "ADI",
+    "ADP",
+    "ADSK",
+    "AEP",
+    "ALAB",
+    "ALNY",
+    "AMAT",
+    "AMD",
+    "AMGN",
+    "AMZN",
+    "APP",
+    "ARM",
+    "ASML",
+    "AVGO",
+    "AXON",
+    "BKNG",
+    "BKR",
+    "CCEP",
+    "CDNS",
+    "CEG",
+    "CMCSA",
+    "COST",
+    "CPRT",
+    "CRWD",
+    "CRWV",
+    "CSCO",
+    "CSX",
+    "CTAS",
+    "DASH",
+    "DDOG",
+    "DXCM",
+    "EXC",
+    "FANG",
+    "FAST",
+    "FER",
+    "FTNT",
+    "GEHC",
+    "GILD",
+    "GOOG",
+    "GOOGL",
+    "HON",
+    "HONA",
+    "IDXX",
+    "INTC",
+    "INTU",
+    "ISRG",
+    "KDP",
+    "KHC",
+    "KLAC",
+    "LIN",
+    "LITE",
+    "LRCX",
+    "MAR",
+    "MCHP",
+    "MDLZ",
+    "MELI",
+    "META",
+    "MNST",
+    "MPWR",
+    "MRVL",
+    "MSFT",
+    "MSTR",
+    "MU",
+    "NBIS",
+    "NFLX",
+    "NVDA",
+    "NXPI",
+    "ODFL",
+    "ORLY",
+    "PANW",
+    "PAYX",
+    "PCAR",
+    "PDD",
+    "PEP",
+    "PLTR",
+    "PYPL",
+    "QCOM",
+    "REGN",
+    "RKLB",
+    "ROP",
+    "ROST",
+    "SBUX",
+    "SHOP",
+    "SNDK",
+    "SNPS",
+    "SPCX",
+    "STX",
+    "TER",
+    "TMUS",
+    "TRI",
+    "TSLA",
+    "TTWO",
+    "TXN",
+    "VRTX",
+    "WBD",
+    "WDAY",
+    "WDC",
+    "WMT",
+    "XEL"
+  ],
+  "departed": [
+    "ALGN",
+    "ALXN",
+    "ANSS",
+    "ATVI",
+    "AZN",
+    "BIDU",
+    "BIIB",
+    "CDW",
+    "CERN",
+    "CHKP",
+    "CHTR",
+    "CSGP",
+    "CTSH",
+    "DLTR",
+    "DOCU",
+    "EA",
+    "EBAY",
+    "ENPH",
+    "FI",
+    "FOX",
+    "FOXA",
+    "GFS",
+    "ILMN",
+    "INCY",
+    "INSM",
+    "JD",
+    "LCID",
+    "LULU",
+    "MDB",
+    "MRNA",
+    "MTCH",
+    "MXIM",
+    "NTES",
+    "OKTA",
+    "ON",
+    "PTON",
+    "RIVN",
+    "SGEN",
+    "SIRI",
+    "SPLK",
+    "SWKS",
+    "TCOM",
+    "TEAM",
+    "TTD",
+    "VRSK",
+    "VRSN",
+    "WBA",
+    "XLNX",
+    "ZM",
+    "ZS"
+  ],
+  "cohort": [
+    {
+      "ticker": "AAPL",
+      "company": "Apple Inc.",
+      "in_index_today": true
+    },
+    {
+      "ticker": "ABNB",
+      "company": "Airbnb",
+      "in_index_today": true
+    },
+    {
+      "ticker": "ADBE",
+      "company": "Adobe Inc.",
+      "in_index_today": true
+    },
+    {
+      "ticker": "ADI",
+      "company": "Analog Devices",
+      "in_index_today": true
+    },
+    {
+      "ticker": "ADP",
+      "company": "Automatic Data Processing",
+      "in_index_today": true
+    },
+    {
+      "ticker": "ADSK",
+      "company": "Autodesk",
+      "in_index_today": true
+    },
+    {
+      "ticker": "AEP",
+      "company": "American Electric Power",
+      "in_index_today": true
+    },
+    {
+      "ticker": "ALAB",
+      "company": "Astera Labs",
+      "in_index_today": true
+    },
+    {
+      "ticker": "ALGN",
+      "company": "Align Technology",
+      "in_index_today": false
+    },
+    {
+      "ticker": "ALNY",
+      "company": "Alnylam Pharmaceuticals",
+      "in_index_today": true
+    },
+    {
+      "ticker": "ALXN",
+      "company": "Alexion Pharmaceuticals",
+      "in_index_today": false
+    },
+    {
+      "ticker": "AMAT",
+      "company": "Applied Materials",
+      "in_index_today": true
+    },
+    {
+      "ticker": "AMD",
+      "company": "Advanced Micro Devices",
+      "in_index_today": true
+    },
+    {
+      "ticker": "AMGN",
+      "company": "Amgen",
+      "in_index_today": true
+    },
+    {
+      "ticker": "AMZN",
+      "company": "Amazon",
+      "in_index_today": true
+    },
+    {
+      "ticker": "ANSS",
+      "company": "Ansys",
+      "in_index_today": false
+    },
+    {
+      "ticker": "APP",
+      "company": "AppLovin",
+      "in_index_today": true
+    },
+    {
+      "ticker": "ARM",
+      "company": "Arm Holdings",
+      "in_index_today": true
+    },
+    {
+      "ticker": "ASML",
+      "company": "ASML Holding",
+      "in_index_today": true
+    },
+    {
+      "ticker": "ATVI",
+      "company": "Activision Blizzard",
+      "in_index_today": false
+    },
+    {
+      "ticker": "AVGO",
+      "company": "Avago Technologies",
+      "in_index_today": true
+    },
+    {
+      "ticker": "AXON",
+      "company": "Axon Enterprise",
+      "in_index_today": true
+    },
+    {
+      "ticker": "AZN",
+      "company": "AstraZeneca",
+      "in_index_today": false
+    },
+    {
+      "ticker": "BIDU",
+      "company": "Baidu.com, Inc.",
+      "in_index_today": false
+    },
+    {
+      "ticker": "BIIB",
+      "company": "Biogen",
+      "in_index_today": false
+    },
+    {
+      "ticker": "BKNG",
+      "company": "Booking Holdings",
+      "in_index_today": true
+    },
+    {
+      "ticker": "BKR",
+      "company": "Baker Hughes",
+      "in_index_today": true
+    },
+    {
+      "ticker": "CCEP",
+      "company": "Coca-Cola Europacific Partners",
+      "in_index_today": true
+    },
+    {
+      "ticker": "CDNS",
+      "company": "Cadence Design Systems",
+      "in_index_today": true
+    },
+    {
+      "ticker": "CDW",
+      "company": "CDW",
+      "in_index_today": false
+    },
+    {
+      "ticker": "CEG",
+      "company": "Constellation Energy",
+      "in_index_today": true
+    },
+    {
+      "ticker": "CERN",
+      "company": "Cerner",
+      "in_index_today": false
+    },
+    {
+      "ticker": "CHKP",
+      "company": "Check Point",
+      "in_index_today": false
+    },
+    {
+      "ticker": "CHTR",
+      "company": "Charter Communications",
+      "in_index_today": false
+    },
+    {
+      "ticker": "CMCSA",
+      "company": "Comcast Corporation Class A",
+      "in_index_today": true
+    },
+    {
+      "ticker": "COST",
+      "company": "Costco",
+      "in_index_today": true
+    },
+    {
+      "ticker": "CPRT",
+      "company": "Copart",
+      "in_index_today": true
+    },
+    {
+      "ticker": "CRWD",
+      "company": "Crowdstrike",
+      "in_index_today": true
+    },
+    {
+      "ticker": "CRWV",
+      "company": "CoreWeave",
+      "in_index_today": true
+    },
+    {
+      "ticker": "CSCO",
+      "company": "Cisco",
+      "in_index_today": true
+    },
+    {
+      "ticker": "CSGP",
+      "company": "CoStar Group",
+      "in_index_today": false
+    },
+    {
+      "ticker": "CSX",
+      "company": "CSX Corporation",
+      "in_index_today": true
+    },
+    {
+      "ticker": "CTAS",
+      "company": "Cintas",
+      "in_index_today": true
+    },
+    {
+      "ticker": "CTSH",
+      "company": "Cognizant",
+      "in_index_today": false
+    },
+    {
+      "ticker": "DASH",
+      "company": "DoorDash",
+      "in_index_today": true
+    },
+    {
+      "ticker": "DDOG",
+      "company": "Datadog",
+      "in_index_today": true
+    },
+    {
+      "ticker": "DLTR",
+      "company": "Dollar Tree",
+      "in_index_today": false
+    },
+    {
+      "ticker": "DOCU",
+      "company": "DocuSign",
+      "in_index_today": false
+    },
+    {
+      "ticker": "DXCM",
+      "company": "Dexcom",
+      "in_index_today": true
+    },
+    {
+      "ticker": "EA",
+      "company": "Electronic Arts",
+      "in_index_today": false
+    },
+    {
+      "ticker": "EBAY",
+      "company": "EBay",
+      "in_index_today": false
+    },
+    {
+      "ticker": "ENPH",
+      "company": "Enphase Energy",
+      "in_index_today": false
+    },
+    {
+      "ticker": "EXC",
+      "company": "Exelon",
+      "in_index_today": true
+    },
+    {
+      "ticker": "FANG",
+      "company": "Diamondback Energy",
+      "in_index_today": true
+    },
+    {
+      "ticker": "FAST",
+      "company": "Fastenal",
+      "in_index_today": true
+    },
+    {
+      "ticker": "FER",
+      "company": "Ferrovial SE",
+      "in_index_today": true
+    },
+    {
+      "ticker": "FI",
+      "company": "Fiserv",
+      "in_index_today": false
+    },
+    {
+      "ticker": "FOX",
+      "company": "Twenty-First Century Fox, Inc. Class B",
+      "in_index_today": false
+    },
+    {
+      "ticker": "FOXA",
+      "company": "Fox Corporation Class A",
+      "in_index_today": false
+    },
+    {
+      "ticker": "FTNT",
+      "company": "Fortinet",
+      "in_index_today": true
+    },
+    {
+      "ticker": "GEHC",
+      "company": "GE HealthCare",
+      "in_index_today": true
+    },
+    {
+      "ticker": "GFS",
+      "company": "GlobalFoundries",
+      "in_index_today": false
+    },
+    {
+      "ticker": "GILD",
+      "company": "Gilead Sciences",
+      "in_index_today": true
+    },
+    {
+      "ticker": "GOOG",
+      "company": "Google Class C",
+      "in_index_today": true
+    },
+    {
+      "ticker": "GOOGL",
+      "company": "Alphabet Inc. (Class A)",
+      "in_index_today": true
+    },
+    {
+      "ticker": "HON",
+      "company": "Honeywell",
+      "in_index_today": true
+    },
+    {
+      "ticker": "HONA",
+      "company": "Honeywell Aerospace",
+      "in_index_today": true
+    },
+    {
+      "ticker": "IDXX",
+      "company": "Idexx Laboratories",
+      "in_index_today": true
+    },
+    {
+      "ticker": "ILMN",
+      "company": "Illumina",
+      "in_index_today": false
+    },
+    {
+      "ticker": "INCY",
+      "company": "Incyte",
+      "in_index_today": false
+    },
+    {
+      "ticker": "INSM",
+      "company": "Insmed Incorporated",
+      "in_index_today": false
+    },
+    {
+      "ticker": "INTC",
+      "company": "Intel",
+      "in_index_today": true
+    },
+    {
+      "ticker": "INTU",
+      "company": "Intuit",
+      "in_index_today": true
+    },
+    {
+      "ticker": "ISRG",
+      "company": "Intuitive Surgical",
+      "in_index_today": true
+    },
+    {
+      "ticker": "JD",
+      "company": "JD.com",
+      "in_index_today": false
+    },
+    {
+      "ticker": "KDP",
+      "company": "Keurig Dr Pepper",
+      "in_index_today": true
+    },
+    {
+      "ticker": "KHC",
+      "company": "Kraft Heinz",
+      "in_index_today": true
+    },
+    {
+      "ticker": "KLAC",
+      "company": "KLA-Tencor",
+      "in_index_today": true
+    },
+    {
+      "ticker": "LCID",
+      "company": "Lucid Group",
+      "in_index_today": false
+    },
+    {
+      "ticker": "LIN",
+      "company": "Linde",
+      "in_index_today": true
+    },
+    {
+      "ticker": "LITE",
+      "company": "Lumentum",
+      "in_index_today": true
+    },
+    {
+      "ticker": "LRCX",
+      "company": "Lam Research",
+      "in_index_today": true
+    },
+    {
+      "ticker": "LULU",
+      "company": "lululemon Athletica",
+      "in_index_today": false
+    },
+    {
+      "ticker": "MAR",
+      "company": "Marriott International",
+      "in_index_today": true
+    },
+    {
+      "ticker": "MCHP",
+      "company": "Microchip Technology",
+      "in_index_today": true
+    },
+    {
+      "ticker": "MDB",
+      "company": "MongoDB",
+      "in_index_today": false
+    },
+    {
+      "ticker": "MDLZ",
+      "company": "Mondelez International",
+      "in_index_today": true
+    },
+    {
+      "ticker": "MELI",
+      "company": "MercadoLibre",
+      "in_index_today": true
+    },
+    {
+      "ticker": "META",
+      "company": "Facebook, Inc.",
+      "in_index_today": true
+    },
+    {
+      "ticker": "MNST",
+      "company": "Monster Worldwide",
+      "in_index_today": true
+    },
+    {
+      "ticker": "MPWR",
+      "company": "Monolithic Power Systems",
+      "in_index_today": true
+    },
+    {
+      "ticker": "MRNA",
+      "company": "Moderna",
+      "in_index_today": false
+    },
+    {
+      "ticker": "MRVL",
+      "company": "Marvell Technology Group",
+      "in_index_today": true
+    },
+    {
+      "ticker": "MSFT",
+      "company": "Microsoft",
+      "in_index_today": true
+    },
+    {
+      "ticker": "MSTR",
+      "company": "MicroStrategy",
+      "in_index_today": true
+    },
+    {
+      "ticker": "MTCH",
+      "company": "Match Group",
+      "in_index_today": false
+    },
+    {
+      "ticker": "MU",
+      "company": "Micron Technology",
+      "in_index_today": true
+    },
+    {
+      "ticker": "MXIM",
+      "company": "Maxim Integrated Products",
+      "in_index_today": false
+    },
+    {
+      "ticker": "NBIS",
+      "company": "Nebius Group",
+      "in_index_today": true
+    },
+    {
+      "ticker": "NFLX",
+      "company": "Netflix",
+      "in_index_today": true
+    },
+    {
+      "ticker": "NTES",
+      "company": "NetEase",
+      "in_index_today": false
+    },
+    {
+      "ticker": "NVDA",
+      "company": "Nvidia",
+      "in_index_today": true
+    },
+    {
+      "ticker": "NXPI",
+      "company": "NXP Semiconductors",
+      "in_index_today": true
+    },
+    {
+      "ticker": "ODFL",
+      "company": "Old Dominion Freight Line",
+      "in_index_today": true
+    },
+    {
+      "ticker": "OKTA",
+      "company": "Okta",
+      "in_index_today": false
+    },
+    {
+      "ticker": "ON",
+      "company": "Onsemi",
+      "in_index_today": false
+    },
+    {
+      "ticker": "ORLY",
+      "company": "O'Reilly Auto Parts",
+      "in_index_today": true
+    },
+    {
+      "ticker": "PANW",
+      "company": "Palo Alto Networks",
+      "in_index_today": true
+    },
+    {
+      "ticker": "PAYX",
+      "company": "Paychex",
+      "in_index_today": true
+    },
+    {
+      "ticker": "PCAR",
+      "company": "Paccar",
+      "in_index_today": true
+    },
+    {
+      "ticker": "PDD",
+      "company": "Pinduoduo",
+      "in_index_today": true
+    },
+    {
+      "ticker": "PEP",
+      "company": "PepsiCo",
+      "in_index_today": true
+    },
+    {
+      "ticker": "PLTR",
+      "company": "Palantir Technologies",
+      "in_index_today": true
+    },
+    {
+      "ticker": "PTON",
+      "company": "Peloton",
+      "in_index_today": false
+    },
+    {
+      "ticker": "PYPL",
+      "company": "PayPal",
+      "in_index_today": true
+    },
+    {
+      "ticker": "QCOM",
+      "company": "Qualcomm",
+      "in_index_today": true
+    },
+    {
+      "ticker": "REGN",
+      "company": "Regeneron Pharmaceuticals",
+      "in_index_today": true
+    },
+    {
+      "ticker": "RIVN",
+      "company": "Rivian Automotive",
+      "in_index_today": false
+    },
+    {
+      "ticker": "RKLB",
+      "company": "Rocket Lab",
+      "in_index_today": true
+    },
+    {
+      "ticker": "ROP",
+      "company": "Roper Technologies",
+      "in_index_today": true
+    },
+    {
+      "ticker": "ROST",
+      "company": "Ross Stores",
+      "in_index_today": true
+    },
+    {
+      "ticker": "SBUX",
+      "company": "Starbucks",
+      "in_index_today": true
+    },
+    {
+      "ticker": "SGEN",
+      "company": "Seattle Genetics",
+      "in_index_today": false
+    },
+    {
+      "ticker": "SHOP",
+      "company": "Shopify",
+      "in_index_today": true
+    },
+    {
+      "ticker": "SIRI",
+      "company": "Sirius XM Radio",
+      "in_index_today": false
+    },
+    {
+      "ticker": "SNDK",
+      "company": "SanDisk",
+      "in_index_today": true
+    },
+    {
+      "ticker": "SNPS",
+      "company": "Synopsys",
+      "in_index_today": true
+    },
+    {
+      "ticker": "SPCX",
+      "company": "SpaceX",
+      "in_index_today": true
+    },
+    {
+      "ticker": "SPLK",
+      "company": "Splunk",
+      "in_index_today": false
+    },
+    {
+      "ticker": "STX",
+      "company": "Seagate Technology",
+      "in_index_today": true
+    },
+    {
+      "ticker": "SWKS",
+      "company": "Skyworks Solutions",
+      "in_index_today": false
+    },
+    {
+      "ticker": "TCOM",
+      "company": "Ctrip",
+      "in_index_today": false
+    },
+    {
+      "ticker": "TEAM",
+      "company": "Atlassian",
+      "in_index_today": false
+    },
+    {
+      "ticker": "TER",
+      "company": "Teradyne",
+      "in_index_today": true
+    },
+    {
+      "ticker": "TMUS",
+      "company": "T-Mobile US",
+      "in_index_today": true
+    },
+    {
+      "ticker": "TRI",
+      "company": "Thomson Reuters",
+      "in_index_today": true
+    },
+    {
+      "ticker": "TSLA",
+      "company": "Tesla Motors",
+      "in_index_today": true
+    },
+    {
+      "ticker": "TTD",
+      "company": "The Trade Desk",
+      "in_index_today": false
+    },
+    {
+      "ticker": "TTWO",
+      "company": "Take-Two Interactive",
+      "in_index_today": true
+    },
+    {
+      "ticker": "TXN",
+      "company": "Texas Instruments",
+      "in_index_today": true
+    },
+    {
+      "ticker": "VRSK",
+      "company": "Verisk Analytics",
+      "in_index_today": false
+    },
+    {
+      "ticker": "VRSN",
+      "company": "VeriSign",
+      "in_index_today": false
+    },
+    {
+      "ticker": "VRTX",
+      "company": "Vertex Pharmaceuticals",
+      "in_index_today": true
+    },
+    {
+      "ticker": "WBA",
+      "company": "Walgreens Boots Alliance",
+      "in_index_today": false
+    },
+    {
+      "ticker": "WBD",
+      "company": "Warner Bros. Discovery",
+      "in_index_today": true
+    },
+    {
+      "ticker": "WDAY",
+      "company": "Workday",
+      "in_index_today": true
+    },
+    {
+      "ticker": "WDC",
+      "company": "Western Digital",
+      "in_index_today": true
+    },
+    {
+      "ticker": "WMT",
+      "company": "Walmart",
+      "in_index_today": true
+    },
+    {
+      "ticker": "XEL",
+      "company": "Xcel Energy",
+      "in_index_today": true
+    },
+    {
+      "ticker": "XLNX",
+      "company": "Xilinx",
+      "in_index_today": false
+    },
+    {
+      "ticker": "ZM",
+      "company": "Zoom Video Communications",
+      "in_index_today": false
+    },
+    {
+      "ticker": "ZS",
+      "company": "Zscaler",
+      "in_index_today": false
+    }
+  ]
+}

@@ -172,9 +172,16 @@ def main() -> None:
     rows_after = verify.execute("SELECT COUNT(*) FROM historical_prices_daily").fetchone()[0]
     tickers_after = verify.execute(
         "SELECT COUNT(DISTINCT ticker) FROM historical_prices_daily").fetchone()[0]
+    # Count pre-existing rows by LOAD TIMESTAMP, not engine_version.
+    # engine_version is constant across every run of this script, so a
+    # second run counts the FIRST run's rows as its own and reports a
+    # false failure on a perfectly good load. (Measured: after the first
+    # run's 17,677 rows this read 32,599 - 17,677 = 14,922 and called it
+    # FAIL.) The write guard is what actually proves pre-existing rows are
+    # unchanged, by checksumming them before and after the insert.
     original_intact = verify.execute(
-        "SELECT COUNT(*) FROM historical_prices_daily WHERE engine_version IS DISTINCT FROM ?",
-        [ENGINE_VERSION]).fetchone()[0]
+        "SELECT COUNT(*) FROM historical_prices_daily "
+        "WHERE loaded_at IS NULL OR loaded_at < ?", [created_at]).fetchone()[0]
     verify.close()
 
     print(f"\nprice rows : {rows_before} -> {rows_after} (+{rows_after - rows_before})")
