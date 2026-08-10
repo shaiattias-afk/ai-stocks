@@ -76,6 +76,7 @@ from stock_agent.policies.debt_total_aggregate import (
     resolve_total_debt_maturity_basis_d022,
     resolve_total_debt_with_aggregate_policy,
 )
+from stock_agent.policies.current_asset_classification import resolve_current_asset_row
 from stock_agent.policies.manual_fact_recovery import recovered_current_debt_zero
 from stock_agent.policies.prior_fiscal_year_lookup import combine_current_and_prior_invested_capital
 from stock_agent.policies.roic_nopat import combine_average_invested_capital_and_nopat_into_roic
@@ -100,6 +101,31 @@ ALL_20_METRIC_NAMES = [
 ]
 
 
+def _resolve_short_term_investments_by_ancestry(
+    presentation: pd.DataFrame,
+    metric,
+) -> dict[str, object] | None:
+    """Collects the balance-sheet rows whose label matches the metric's
+    own vocabulary, then lets current-assets ancestry choose between
+    them. Returns None whenever the structure does not settle it."""
+    if presentation.empty:
+        return None
+
+    role_mask = presentation["role_definition"].astype(str).str.contains(
+        metric.role_include_pattern, case=False, regex=True, na=False)
+    if metric.role_exclude_pattern:
+        role_mask &= ~presentation["role_definition"].astype(str).str.contains(
+            metric.role_exclude_pattern, case=False, regex=True, na=False)
+
+    candidates = presentation[
+        role_mask
+        & ~presentation["is_abstract"].astype(bool)
+        & presentation["label"].astype(str).str.contains(
+            metric.mention_pattern, case=False, regex=True, na=False)
+    ]
+    return resolve_current_asset_row(presentation, candidates)
+
+
 def _reconstruct_simple_metric(
     connection: duckdb.DuckDBPyConnection,
     accession_number: str,
@@ -107,15 +133,40 @@ def _reconstruct_simple_metric(
     metric_name: str,
     report_date: str,
 ) -> dict[str, object]:
-    """Ported byte-exact from scripts/92, extended with the D-030
-    short_term_investments zero-proof fallback (scripts/99) — tried only
-    for that one metric, only after the standard label-based row
-    identification has already failed."""
+    """Ported byte-exact from scripts/92, extended with two
+    short_term_investments fallbacks — each tried only for that metric,
+    and only after the standard label-based row identification has
+    already failed:
+
+      1. current-assets ancestry (policies.current_asset_classification),
+         for a label that is genuinely ambiguous because the filer uses
+         the SAME text twice. Measured on Apple, whose balance sheet
+         carries two rows both reading "Marketable securities", one under
+         AssetsCurrentAbstract and one under AssetsNoncurrentAbstract.
+         Position settles what the label cannot.
+      2. the D-030 zero-proof (scripts/99), for a filing that genuinely
+         reports no short-term investments at all.
+    """
     metric = BUILT_IN_METRICS[metric_name]
     try:
         row, _candidates = identify_canonical_row(presentation, metric)
     except TargetRowNotFound as exc:
         if metric_name == "short_term_investments":
+            ancestry_row = _resolve_short_term_investments_by_ancestry(presentation, metric)
+            if ancestry_row is not None:
+                decision = match_facts_from_warehouse(
+                    connection, accession_number, ancestry_row["concept_qname"],
+                    report_date, "instant",
+                )
+                if decision["status"] in SUCCESSFUL_STATUSES:
+                    return {
+                        "status": decision["status"], "error": decision.get("error"),
+                        "value": decision.get("value"),
+                        "concept_qname": ancestry_row["concept_qname"],
+                        "selection_tier": ancestry_row["selection_tier"],
+                        "basis": ancestry_row["basis"],
+                    }
+
             zero_proof = attempt_short_term_investments_zero_proof(
                 connection, accession_number, presentation, report_date
             )
