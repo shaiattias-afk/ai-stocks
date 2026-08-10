@@ -1,0 +1,621 @@
+{
+  "mode": "execute",
+  "company_years": 83,
+  "result_rows": 1660,
+  "extraction_runs": 83,
+  "coverage_pass": 1415,
+  "coverage_total": 1660,
+  "rows_before": 900,
+  "runs_before": 172,
+  "engine_version": "v2-pilot-warehouse-native (scripts/188)",
+  "per_company_year": [
+    {
+      "ticker": "AAPL",
+      "report_date": "2020-09-26",
+      "accession_number": "0000320193-20-000096",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "AAPL",
+      "report_date": "2021-09-25",
+      "accession_number": "0000320193-21-000105",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "AAPL",
+      "report_date": "2022-09-24",
+      "accession_number": "0000320193-22-000108",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "AAPL",
+      "report_date": "2023-09-30",
+      "accession_number": "0000320193-23-000106",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "AAPL",
+      "report_date": "2024-09-28",
+      "accession_number": "0000320193-24-000123",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "AAPL",
+      "report_date": "2025-09-27",
+      "accession_number": "0000320193-25-000079",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "ABNB",
+      "report_date": "2021-12-31",
+      "accession_number": "0001559720-22-000006",
+      "passed": 14,
+      "total": 20
+    },
+    {
+      "ticker": "ABNB",
+      "report_date": "2022-12-31",
+      "accession_number": "0001559720-23-000003",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "ABNB",
+      "report_date": "2023-12-31",
+      "accession_number": "0001559720-24-000006",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "ABNB",
+      "report_date": "2024-12-31",
+      "accession_number": "0001559720-25-000010",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "ABNB",
+      "report_date": "2025-12-31",
+      "accession_number": "0001559720-26-000004",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "ADBE",
+      "report_date": "2020-11-27",
+      "accession_number": "0000796343-21-000004",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "ADBE",
+      "report_date": "2021-12-03",
+      "accession_number": "0000796343-22-000032",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "ADBE",
+      "report_date": "2022-12-02",
+      "accession_number": "0000796343-23-000007",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "ADBE",
+      "report_date": "2023-12-01",
+      "accession_number": "0000796343-24-000006",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "ADBE",
+      "report_date": "2024-11-29",
+      "accession_number": "0000796343-25-000004",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "ADBE",
+      "report_date": "2025-11-28",
+      "accession_number": "0000796343-26-000003",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "ADI",
+      "report_date": "2020-10-31",
+      "accession_number": "0000006281-20-000156",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "ADI",
+      "report_date": "2021-10-30",
+      "accession_number": "0000006281-21-000294",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "ADI",
+      "report_date": "2022-10-29",
+      "accession_number": "0000006281-22-000250",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "ADI",
+      "report_date": "2023-10-28",
+      "accession_number": "0000006281-23-000203",
+      "passed": 10,
+      "total": 20
+    },
+    {
+      "ticker": "ADI",
+      "report_date": "2024-11-02",
+      "accession_number": "0000006281-24-000204",
+      "passed": 10,
+      "total": 20
+    },
+    {
+      "ticker": "ADI",
+      "report_date": "2025-11-01",
+      "accession_number": "0000006281-25-000153",
+      "passed": 10,
+      "total": 20
+    },
+    {
+      "ticker": "AEP",
+      "report_date": "2020-12-31",
+      "accession_number": "0000004904-21-000010",
+      "passed": 13,
+      "total": 20
+    },
+    {
+      "ticker": "AEP",
+      "report_date": "2021-12-31",
+      "accession_number": "0000004904-22-000024",
+      "passed": 13,
+      "total": 20
+    },
+    {
+      "ticker": "AEP",
+      "report_date": "2022-12-31",
+      "accession_number": "0000004904-23-000011",
+      "passed": 10,
+      "total": 20
+    },
+    {
+      "ticker": "AEP",
+      "report_date": "2023-12-31",
+      "accession_number": "0000004904-24-000020",
+      "passed": 13,
+      "total": 20
+    },
+    {
+      "ticker": "AEP",
+      "report_date": "2024-12-31",
+      "accession_number": "0000004904-25-000027",
+      "passed": 2,
+      "total": 20
+    },
+    {
+      "ticker": "AEP",
+      "report_date": "2025-12-31",
+      "accession_number": "0000004904-26-000013",
+      "passed": 2,
+      "total": 20
+    },
+    {
+      "ticker": "ALGN",
+      "report_date": "2020-12-31",
+      "accession_number": "0001097149-21-000007",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "ALGN",
+      "report_date": "2021-12-31",
+      "accession_number": "0001097149-22-000011",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "ALGN",
+      "report_date": "2022-12-31",
+      "accession_number": "0001097149-23-000013",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "ALGN",
+      "report_date": "2023-12-31",
+      "accession_number": "0001097149-24-000011",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "ALGN",
+      "report_date": "2024-12-31",
+      "accession_number": "0001097149-25-000012",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "ALGN",
+      "report_date": "2025-12-31",
+      "accession_number": "0001097149-26-000014",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "ALNY",
+      "report_date": "2020-12-31",
+      "accession_number": "0001178670-21-000010",
+      "passed": 7,
+      "total": 20
+    },
+    {
+      "ticker": "ALNY",
+      "report_date": "2021-12-31",
+      "accession_number": "0001178670-22-000013",
+      "passed": 7,
+      "total": 20
+    },
+    {
+      "ticker": "ALNY",
+      "report_date": "2022-12-31",
+      "accession_number": "0001178670-23-000005",
+      "passed": 7,
+      "total": 20
+    },
+    {
+      "ticker": "ALNY",
+      "report_date": "2023-12-31",
+      "accession_number": "0001178670-24-000008",
+      "passed": 9,
+      "total": 20
+    },
+    {
+      "ticker": "ALNY",
+      "report_date": "2024-12-31",
+      "accession_number": "0001178670-25-000026",
+      "passed": 11,
+      "total": 20
+    },
+    {
+      "ticker": "ALNY",
+      "report_date": "2025-12-31",
+      "accession_number": "0001628280-26-007497",
+      "passed": 12,
+      "total": 20
+    },
+    {
+      "ticker": "ALXN",
+      "report_date": "2020-12-31",
+      "accession_number": "0000899866-21-000014",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "AMAT",
+      "report_date": "2020-10-25",
+      "accession_number": "0000006951-20-000048",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "AMAT",
+      "report_date": "2021-10-31",
+      "accession_number": "0000006951-21-000043",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "AMAT",
+      "report_date": "2022-10-30",
+      "accession_number": "0000006951-22-000043",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "AMAT",
+      "report_date": "2023-10-29",
+      "accession_number": "0000006951-23-000041",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "AMAT",
+      "report_date": "2024-10-27",
+      "accession_number": "0000006951-24-000044",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "AMAT",
+      "report_date": "2025-10-26",
+      "accession_number": "0001628280-25-056742",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "AMD",
+      "report_date": "2020-12-26",
+      "accession_number": "0001628280-21-001185",
+      "passed": 14,
+      "total": 20
+    },
+    {
+      "ticker": "AMD",
+      "report_date": "2021-12-25",
+      "accession_number": "0000002488-22-000016",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "AMD",
+      "report_date": "2022-12-31",
+      "accession_number": "0000002488-23-000047",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "AMD",
+      "report_date": "2023-12-30",
+      "accession_number": "0000002488-24-000012",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "AMD",
+      "report_date": "2024-12-28",
+      "accession_number": "0000002488-25-000012",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "AMD",
+      "report_date": "2025-12-27",
+      "accession_number": "0000002488-26-000018",
+      "passed": 14,
+      "total": 20
+    },
+    {
+      "ticker": "AMGN",
+      "report_date": "2020-12-31",
+      "accession_number": "0000318154-21-000010",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "AMGN",
+      "report_date": "2021-12-31",
+      "accession_number": "0000318154-22-000010",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "AMGN",
+      "report_date": "2022-12-31",
+      "accession_number": "0000318154-23-000017",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "AMGN",
+      "report_date": "2023-12-31",
+      "accession_number": "0000318154-24-000011",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "AMGN",
+      "report_date": "2024-12-31",
+      "accession_number": "0000318154-25-000010",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "AMGN",
+      "report_date": "2025-12-31",
+      "accession_number": "0000318154-26-000010",
+      "passed": 16,
+      "total": 20
+    },
+    {
+      "ticker": "ANSS",
+      "report_date": "2020-12-31",
+      "accession_number": "0001013462-21-000009",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "ANSS",
+      "report_date": "2021-12-31",
+      "accession_number": "0001013462-22-000005",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "ANSS",
+      "report_date": "2022-12-31",
+      "accession_number": "0001013462-23-000013",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "ANSS",
+      "report_date": "2023-12-31",
+      "accession_number": "0001013462-24-000007",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "ANSS",
+      "report_date": "2024-12-31",
+      "accession_number": "0001013462-25-000009",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "APP",
+      "report_date": "2021-12-31",
+      "accession_number": "0001751008-22-000005",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "APP",
+      "report_date": "2022-12-31",
+      "accession_number": "0001751008-23-000006",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "APP",
+      "report_date": "2023-12-31",
+      "accession_number": "0001751008-24-000012",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "APP",
+      "report_date": "2024-12-31",
+      "accession_number": "0001751008-25-000018",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "APP",
+      "report_date": "2025-12-31",
+      "accession_number": "0001751008-26-000010",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "ATVI",
+      "report_date": "2020-12-31",
+      "accession_number": "0001628280-21-002828",
+      "passed": 14,
+      "total": 20
+    },
+    {
+      "ticker": "ATVI",
+      "report_date": "2021-12-31",
+      "accession_number": "0001628280-22-003992",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "ATVI",
+      "report_date": "2022-12-31",
+      "accession_number": "0001628280-23-004842",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "CRWD",
+      "report_date": "2020-01-31",
+      "accession_number": "0001535527-20-000006",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "META",
+      "report_date": "2025-12-31",
+      "accession_number": "0001628280-26-003942",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2025-06-30",
+      "accession_number": "0000950170-25-100235",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "MSFT",
+      "report_date": "2026-06-30",
+      "accession_number": "0001193125-26-323660",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "MU",
+      "report_date": "2020-09-03",
+      "accession_number": "0000723125-20-000082",
+      "passed": 15,
+      "total": 20
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2025-01-26",
+      "accession_number": "0001045810-25-000023",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "NVDA",
+      "report_date": "2026-01-25",
+      "accession_number": "0001045810-26-000021",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2025-05-31",
+      "accession_number": "0000950170-25-087926",
+      "passed": 18,
+      "total": 20
+    },
+    {
+      "ticker": "ORCL",
+      "report_date": "2026-05-31",
+      "accession_number": "0001193125-26-277521",
+      "passed": 20,
+      "total": 20
+    },
+    {
+      "ticker": "PANW",
+      "report_date": "2020-07-31",
+      "accession_number": "0001327567-20-000032",
+      "passed": 14,
+      "total": 20
+    }
+  ],
+  "rows_after": 2560,
+  "runs_after": 255,
+  "pre_existing_intact": true,
+  "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\ai_stock_agent_pre_pilot_metrics_20260810T104711Z.duckdb",
+  "guard_runs": {
+    "table": "extraction_runs",
+    "pre_count": 172,
+    "post_count": 255,
+    "rows_inserted": 83,
+    "declared_row_delta": 83,
+    "actual_row_delta": 83,
+    "pre_existing_checksum_before": "efd3b95dd07130fa214e76798ae086c87c46cbe20c0ca2de60cf01523789506e",
+    "pre_existing_checksum_after": "efd3b95dd07130fa214e76798ae086c87c46cbe20c0ca2de60cf01523789506e",
+    "pre_existing_rows_byte_identical": true
+  },
+  "guard_results": {
+    "table": "financial_metric_results",
+    "pre_count": 900,
+    "post_count": 2560,
+    "rows_inserted": 1660,
+    "declared_row_delta": 1660,
+    "actual_row_delta": 1660,
+    "pre_existing_checksum_before": "c620943f5fbee562586351c78dc0ce6d1af96c56c8df79c8d2a35bf3abf9c701",
+    "pre_existing_checksum_after": "c620943f5fbee562586351c78dc0ce6d1af96c56c8df79c8d2a35bf3abf9c701",
+    "pre_existing_rows_byte_identical": true
+  },
+  "status": "PASS"
+}
