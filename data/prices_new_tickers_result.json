@@ -1,82 +1,147 @@
 {
   "mode": "execute",
   "tickers_requested": [
-    "AAPL",
-    "ABNB",
-    "ADBE",
-    "ADI",
-    "AEP",
-    "ALGN",
-    "ALNY",
+    "ADP",
+    "ADSK",
+    "ALAB",
     "ALXN",
-    "AMAT",
-    "AMD",
-    "AMGN",
     "ANSS",
-    "APP",
-    "ATVI"
+    "ATVI",
+    "AVGO",
+    "AXON",
+    "BIIB",
+    "BKNG",
+    "BKR",
+    "CDNS",
+    "CDW",
+    "CEG",
+    "CERN",
+    "CHTR",
+    "CMCSA",
+    "COST",
+    "CPRT",
+    "CRWV",
+    "CSCO",
+    "CSGP",
+    "CSX",
+    "CTAS",
+    "CTSH",
+    "DASH",
+    "DDOG",
+    "DLTR",
+    "DOCU",
+    "DXCM",
+    "EA",
+    "EBAY",
+    "ENPH",
+    "EXC",
+    "FANG",
+    "FAST",
+    "FI",
+    "FOX",
+    "FTNT",
+    "GEHC",
+    "GILD",
+    "HON",
+    "IDXX",
+    "ILMN",
+    "INCY",
+    "INSM",
+    "INTC",
+    "INTU",
+    "ISRG",
+    "KDP",
+    "KHC",
+    "KLAC",
+    "LCID",
+    "LIN",
+    "LITE",
+    "LRCX",
+    "LULU",
+    "MAR",
+    "MCHP",
+    "MDB",
+    "MDLZ",
+    "MELI",
+    "MNST",
+    "MPWR",
+    "MRNA",
+    "MRVL",
+    "MSTR",
+    "MTCH",
+    "MXIM",
+    "NFLX",
+    "NXPI",
+    "ODFL",
+    "OKTA",
+    "ON",
+    "ORLY",
+    "PAYX",
+    "PCAR",
+    "PEP",
+    "PLTR",
+    "PTON",
+    "PYPL",
+    "QCOM",
+    "REGN",
+    "RIVN",
+    "RKLB",
+    "ROP",
+    "ROST",
+    "SBUX",
+    "SGEN",
+    "SHOP",
+    "SIRI",
+    "SNDK",
+    "SNPS",
+    "SPLK",
+    "STX",
+    "SWKS",
+    "TEAM",
+    "TER",
+    "TMUS",
+    "TSLA",
+    "TTD",
+    "TTWO",
+    "TXN",
+    "VRSK",
+    "VRSN",
+    "VRTX",
+    "WBA",
+    "WBD",
+    "WDAY",
+    "WDC",
+    "WMT",
+    "XEL",
+    "XLNX",
+    "ZM",
+    "ZS"
   ],
   "per_ticker": [
     {
-      "ticker": "AAPL",
+      "ticker": "ADP",
       "status": "OK",
-      "rows": 1658,
+      "rows": 1659,
       "first_date": "2020-01-02",
-      "last_date": "2026-08-07",
-      "splits": 1,
-      "dividends": 26
-    },
-    {
-      "ticker": "ABNB",
-      "status": "OK",
-      "rows": 1420,
-      "first_date": "2020-12-10",
-      "last_date": "2026-08-07",
-      "splits": 0,
-      "dividends": 0
-    },
-    {
-      "ticker": "ADBE",
-      "status": "OK",
-      "rows": 1658,
-      "first_date": "2020-01-02",
-      "last_date": "2026-08-07",
-      "splits": 0,
-      "dividends": 0
-    },
-    {
-      "ticker": "ADI",
-      "status": "OK",
-      "rows": 1658,
-      "first_date": "2020-01-02",
-      "last_date": "2026-08-07",
+      "last_date": "2026-08-10",
       "splits": 0,
       "dividends": 26
     },
     {
-      "ticker": "AEP",
+      "ticker": "ADSK",
       "status": "OK",
-      "rows": 1658,
+      "rows": 1659,
       "first_date": "2020-01-02",
-      "last_date": "2026-08-07",
-      "splits": 0,
-      "dividends": 26
-    },
-    {
-      "ticker": "ALGN",
-      "status": "OK",
-      "rows": 1658,
-      "first_date": "2020-01-02",
-      "last_date": "2026-08-07",
+      "last_date": "2026-08-10",
       "splits": 0,
       "dividends": 0
     },
     {
-      "ticker": "ALNY",
+      "ticker": "ALAB",
       "status": "OK",
-      "rows": 1658,
-      "first_date": "2020-01-02",
-      "last_date": "2026-08-07",
+      "rows": 599,
+      "first_date": "2024-03-20",
+      "last_date": "2026-08-10",
       "splits": 0,
       "dividends": 0
     },
@@ -104,33 +169,6 @@
       ]
     },
     {
-      "ticker": "AMAT",
-      "status": "OK",
-      "rows": 1658,
-      "first_date": "2020-01-02",
-      "last_date": "2026-08-07",
-      "splits": 0,
-      "dividends": 26
-    },
-    {
-      "ticker": "AMD",
-      "status": "OK",
-      "rows": 1658,
-      "first_date": "2020-01-02",
-      "last_date": "2026-08-07",
-      "splits": 0,
-      "dividends": 0
-    },
-    {
-      "ticker": "AMGN",
-      "status": "OK",
-      "rows": 1658,
-      "first_date": "2020-01-02",
-      "last_date": "2026-08-07",
-      "splits": 0,
-      "dividends": 26
-    },
-    {
       "ticker": "ANSS",
       "status": "NO_DATA",
       "rows": 0,
@@ -154,15 +192,6 @@
       ]
     },
     {
-      "ticker": "APP",
-      "status": "OK",
-      "rows": 1335,
-      "first_date": "2021-04-15",
-      "last_date": "2026-08-07",
-      "splits": 0,
-      "dividends": 0
-    },
-    {
       "ticker": "ATVI",
       "status": "NO_DATA",
       "rows": 0,
@@ -184,25 +213,1104 @@
           "status_code": 404
         }
       ]
+    },
+    {
+      "ticker": "AVGO",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 26
+    },
+    {
+      "ticker": "AXON",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "BIIB",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "BKNG",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 10
+    },
+    {
+      "ticker": "BKR",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 27
+    },
+    {
+      "ticker": "CDNS",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "CDW",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "CEG",
+      "status": "OK",
+      "rows": 1143,
+      "first_date": "2022-01-19",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 18
+    },
+    {
+      "ticker": "CERN",
+      "status": "NO_DATA",
+      "rows": 0,
+      "reason": "Yahoo returned no usable chart after retries",
+      "attempts": [
+        {
+          "attempt": 1,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 2,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 3,
+          "outcome": "http_error",
+          "status_code": 404
+        }
+      ]
+    },
+    {
+      "ticker": "CHTR",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "CMCSA",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 27
+    },
+    {
+      "ticker": "COST",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 29
+    },
+    {
+      "ticker": "CPRT",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 2,
+      "dividends": 0
+    },
+    {
+      "ticker": "CRWV",
+      "status": "OK",
+      "rows": 343,
+      "first_date": "2025-03-28",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "CSCO",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 27
+    },
+    {
+      "ticker": "CSGP",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 0
+    },
+    {
+      "ticker": "CSX",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 26
+    },
+    {
+      "ticker": "CTAS",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 23
+    },
+    {
+      "ticker": "CTSH",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "DASH",
+      "status": "OK",
+      "rows": 1422,
+      "first_date": "2020-12-09",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "DDOG",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "DLTR",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "DOCU",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "DXCM",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 0
+    },
+    {
+      "ticker": "EA",
+      "status": "OK",
+      "rows": 1647,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-07",
+      "splits": 0,
+      "dividends": 23
+    },
+    {
+      "ticker": "EBAY",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "ENPH",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "EXC",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 26
+    },
+    {
+      "ticker": "FANG",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "FAST",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 29
+    },
+    {
+      "ticker": "FI",
+      "status": "NO_DATA",
+      "rows": 0,
+      "reason": "Yahoo returned no usable chart after retries",
+      "attempts": [
+        {
+          "attempt": 1,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 2,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 3,
+          "outcome": "http_error",
+          "status_code": 404
+        }
+      ]
+    },
+    {
+      "ticker": "FOX",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 13
+    },
+    {
+      "ticker": "FTNT",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 0
+    },
+    {
+      "ticker": "GEHC",
+      "status": "OK",
+      "rows": 914,
+      "first_date": "2022-12-15",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 14
+    },
+    {
+      "ticker": "GILD",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "HON",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 2,
+      "dividends": 26
+    },
+    {
+      "ticker": "IDXX",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "ILMN",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 0
+    },
+    {
+      "ticker": "INCY",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "INSM",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "INTC",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 19
+    },
+    {
+      "ticker": "INTU",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 27
+    },
+    {
+      "ticker": "ISRG",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 0
+    },
+    {
+      "ticker": "KDP",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 27
+    },
+    {
+      "ticker": "KHC",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "KLAC",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 26
+    },
+    {
+      "ticker": "LCID",
+      "status": "OK",
+      "rows": 1479,
+      "first_date": "2020-09-18",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 0
+    },
+    {
+      "ticker": "LIN",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "LITE",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "LRCX",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 26
+    },
+    {
+      "ticker": "LULU",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "MAR",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 18
+    },
+    {
+      "ticker": "MCHP",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 26
+    },
+    {
+      "ticker": "MDB",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "MDLZ",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "MELI",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "MNST",
+      "status": "OK",
+      "rows": 1,
+      "first_date": "2026-08-10",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 0
+    },
+    {
+      "ticker": "MPWR",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "MRNA",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "MRVL",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "MSTR",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 0
+    },
+    {
+      "ticker": "MTCH",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 7
+    },
+    {
+      "ticker": "MXIM",
+      "status": "NO_DATA",
+      "rows": 0,
+      "reason": "Yahoo returned no usable chart after retries",
+      "attempts": [
+        {
+          "attempt": 1,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 2,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 3,
+          "outcome": "http_error",
+          "status_code": 404
+        }
+      ]
+    },
+    {
+      "ticker": "NFLX",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 0
+    },
+    {
+      "ticker": "NXPI",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "ODFL",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 2,
+      "dividends": 26
+    },
+    {
+      "ticker": "OKTA",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "ON",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "ORLY",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 0
+    },
+    {
+      "ticker": "PAYX",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 27
+    },
+    {
+      "ticker": "PCAR",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 32
+    },
+    {
+      "ticker": "PEP",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "PLTR",
+      "status": "OK",
+      "rows": 1471,
+      "first_date": "2020-09-30",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "PTON",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "PYPL",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 3
+    },
+    {
+      "ticker": "QCOM",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "REGN",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 6
+    },
+    {
+      "ticker": "RIVN",
+      "status": "OK",
+      "rows": 1190,
+      "first_date": "2021-11-10",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "RKLB",
+      "status": "OK",
+      "rows": 1432,
+      "first_date": "2020-11-24",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "ROP",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 27
+    },
+    {
+      "ticker": "ROST",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 23
+    },
+    {
+      "ticker": "SBUX",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "SGEN",
+      "status": "NO_DATA",
+      "rows": 0,
+      "reason": "Yahoo returned no usable chart after retries",
+      "attempts": [
+        {
+          "attempt": 1,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 2,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 3,
+          "outcome": "http_error",
+          "status_code": 404
+        }
+      ]
+    },
+    {
+      "ticker": "SHOP",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 0
+    },
+    {
+      "ticker": "SIRI",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 26
+    },
+    {
+      "ticker": "SNDK",
+      "status": "OK",
+      "rows": 373,
+      "first_date": "2025-02-13",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "SNPS",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "SPLK",
+      "status": "NO_DATA",
+      "rows": 0,
+      "reason": "Yahoo returned no usable chart after retries",
+      "attempts": [
+        {
+          "attempt": 1,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 2,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 3,
+          "outcome": "http_error",
+          "status_code": 404
+        }
+      ]
+    },
+    {
+      "ticker": "STX",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "SWKS",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "TEAM",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "TER",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "TMUS",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 11
+    },
+    {
+      "ticker": "TSLA",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 2,
+      "dividends": 0
+    },
+    {
+      "ticker": "TTD",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 0
+    },
+    {
+      "ticker": "TTWO",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "TXN",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 27
+    },
+    {
+      "ticker": "VRSK",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "VRSN",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 5
+    },
+    {
+      "ticker": "VRTX",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "WBA",
+      "status": "NO_DATA",
+      "rows": 0,
+      "reason": "Yahoo returned no usable chart after retries",
+      "attempts": [
+        {
+          "attempt": 1,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 2,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 3,
+          "outcome": "http_error",
+          "status_code": 404
+        }
+      ]
+    },
+    {
+      "ticker": "WBD",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "WDAY",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "WDC",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 7
+    },
+    {
+      "ticker": "WMT",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 1,
+      "dividends": 26
+    },
+    {
+      "ticker": "XEL",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 26
+    },
+    {
+      "ticker": "XLNX",
+      "status": "NO_DATA",
+      "rows": 0,
+      "reason": "Yahoo returned no usable chart after retries",
+      "attempts": [
+        {
+          "attempt": 1,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 2,
+          "outcome": "http_error",
+          "status_code": 404
+        },
+        {
+          "attempt": 3,
+          "outcome": "http_error",
+          "status_code": 404
+        }
+      ]
+    },
+    {
+      "ticker": "ZM",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
+    },
+    {
+      "ticker": "ZS",
+      "status": "OK",
+      "rows": 1659,
+      "first_date": "2020-01-02",
+      "last_date": "2026-08-10",
+      "splits": 0,
+      "dividends": 0
     }
   ],
-  "price_rows": 17677,
-  "rows_before": 14922,
+  "price_rows": 166301,
+  "rows_before": 32599,
   "engine_version": "v1-prices-new-tickers (scripts/189)",
-  "rows_after": 32599,
-  "tickers_after": 20,
-  "pre_existing_intact": true,
-  "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\ai_stock_agent_pre_new_ticker_prices_20260810T122152Z.duckdb",
+  "rows_after": 198900,
+  "tickers_after": 125,
+  "pre_existing_intact": false,
+  "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\ai_stock_agent_pre_new_ticker_prices_20260810T150241Z.duckdb",
   "guard": {
     "table": "historical_prices_daily",
-    "pre_count": 14922,
-    "post_count": 32599,
-    "rows_inserted": 17677,
-    "declared_row_delta": 17677,
-    "actual_row_delta": 17677,
-    "pre_existing_checksum_before": "1e40895edc041c74780fe566141309109edf0b08a814f28cb73442ce43ae69e2",
-    "pre_existing_checksum_after": "1e40895edc041c74780fe566141309109edf0b08a814f28cb73442ce43ae69e2",
+    "pre_count": 32599,
+    "post_count": 198900,
+    "rows_inserted": 166301,
+    "declared_row_delta": 166301,
+    "actual_row_delta": 166301,
+    "pre_existing_checksum_before": "aad0ecbef7d794fb0ecc36e4795e495094957ac7f8b58998752f36026ef57e4c",
+    "pre_existing_checksum_after": "aad0ecbef7d794fb0ecc36e4795e495094957ac7f8b58998752f36026ef57e4c",
     "pre_existing_rows_byte_identical": true
   },
-  "status": "PASS"
+  "status": "FAIL"
 }

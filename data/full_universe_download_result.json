@@ -1,0 +1,80 @@
+{
+  "filings_considered": 787,
+  "downloaded": 638,
+  "already_archived": 138,
+  "no_xbrl": [],
+  "failed": [
+    {
+      "accession_number": "0001402057-22-000020",
+      "ticker": "CDW",
+      "report_date": "2021-12-31",
+      "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/1402057/000140205722000020/cdw-20211231_lab.xml: HTTP Error 503: Service Unavailable"
+    },
+    {
+      "accession_number": "0001418135-22-000005",
+      "ticker": "KDP",
+      "report_date": "2021-12-31",
+      "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/1418135/000141813522000005/kdp-20211231_def.xml: HTTP Error 503: Service Unavailable"
+    },
+    {
+      "accession_number": "0001437749-25-005903",
+      "ticker": "MPWR",
+      "report_date": "2024-12-31",
+      "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/1280452/000143774925005903/mpwr-20241231_lab.xml: HTTP Error 503: Service Unavailable"
+    },
+    {
+      "accession_number": "0000882835-25-000008",
+      "ticker": "ROP",
+      "report_date": "2024-12-31",
+      "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/882835/000088283525000008/rop-20241231.xsd: HTTP Error 503: Service Unavailable"
+    },
+    {
+      "accession_number": "0000829224-23-000058",
+      "ticker": "SBUX",
+      "report_date": "2023-10-01",
+      "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/829224/000082922423000058/sbux-20231001.xsd: HTTP Error 503: Service Unavailable"
+    },
+    {
+      "accession_number": "0001060736-21-000012",
+      "ticker": "SGEN",
+      "report_date": "2020-12-31",
+      "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/1060736/000106073621000012/FilingSummary.xml: HTTP Error 503: Service Unavailable"
+    },
+    {
+      "accession_number": "0000908937-22-000007",
+      "ticker": "SIRI",
+      "report_date": "2021-12-31",
+      "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/908937/000090893722000007/siri-20211231_cal.xml: HTTP Error 503: Service Unavailable"
+    },
+    {
+      "accession_number": "0001628280-21-010627",
+      "ticker": "TTWO",
+      "report_date": "2021-03-31",
+      "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/946581/000162828021010627/ttwo-20210331_def.xml: HTTP Error 503: Service Unavailable"
+    },
+    {
+      "accession_number": "0001618921-22-000064",
+      "ticker": "WBA",
+      "report_date": "2022-08-31",
+      "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/1618921/000161892122000064/wba-20220831.xsd: HTTP Error 503: Service Unavailable"
+    },
+    {
+      "accession_number": "0000743988-21-000016",
+      "ticker": "XLNX",
+      "report_date": "2021-04-03",
+      "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/743988/000074398821000016/xlnx-20210403_def.xml: HTTP Error 503: Service Unavailable"
+    },
+    {
+      "accession_number": "0001585521-22-000037",
+      "ticker": "ZM",
+      "report_date": "2022-01-31",
+      "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/1585521/000158552122000037/zm-20220131_cal.xml: HTTP Error 503: Service Unavailable"
+    }
+  ],
+  "accessions_before": 269,
+  "accessions_after": 907,
+  "files_in_archive": 6283,
+  "new_uncompressed_bytes": 3912253390,
+  "new_compressed_bytes": 311803687,
+  "elapsed_seconds": 4683.5
+}

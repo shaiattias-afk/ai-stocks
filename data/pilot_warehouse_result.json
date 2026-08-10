@@ -1,22 +1,11 @@
 {
   "status": "PASS",
-  "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\xbrl_warehouse_pre_pilot_load_20260810T065230Z.duckdb",
-  "backup_sha256": "55073d0d57cca3051de1fe8f2a42f7851b0d6e03b841c9f4dbdab20e150513ea",
-  "accessions_before": 185,
-  "accessions_after": 268,
-  "parsed_now": 83,
+  "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\xbrl_warehouse_pre_pilot_load_20260810T135734Z.duckdb",
+  "backup_sha256": "19224995cf902df49f3a6d60642bf81faf0f3e630ee39fada8929ec3ccf145e7",
+  "accessions_before": 268,
+  "accessions_after": 917,
+  "parsed_now": 649,
   "counts_before": {
-    "xbrl_facts": 225780,
-    "xbrl_contexts": 55923,
-    "xbrl_units": 1366,
-    "xbrl_concepts": 225553,
-    "xbrl_labels": 260411,
-    "xbrl_presentation_relationships": 142719,
-    "xbrl_calculation_relationships": 29560,
-    "xbrl_definition_relationships": 206403,
-    "xbrl_roles": 24477
-  },
-  "counts_after": {
     "xbrl_facts": 430983,
     "xbrl_contexts": 114163,
     "xbrl_units": 2246,
@@ -27,9 +16,20 @@
     "xbrl_definition_relationships": 343231,
     "xbrl_roles": 39157
   },
+  "counts_after": {
+    "xbrl_facts": 1595164,
+    "xbrl_contexts": 420858,
+    "xbrl_units": 8541,
+    "xbrl_concepts": 1330451,
+    "xbrl_labels": 1707948,
+    "xbrl_presentation_relationships": 1036606,
+    "xbrl_calculation_relationships": 165832,
+    "xbrl_definition_relationships": 1348118,
+    "xbrl_roles": 155890
+  },
   "pre_existing_preserved": true,
   "new_accessions_present": true,
-  "elapsed_seconds": 110.2,
-  "parallel_seconds": 59.095,
-  "merge_seconds": 46.516
+  "elapsed_seconds": 586.5,
+  "parallel_seconds": 407.407,
+  "merge_seconds": 176.051
 }
