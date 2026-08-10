@@ -1,0 +1,16 @@
+{
+  "filings_without_xbrl": [
+    {
+      "accession_number": "0001559720-21-000010",
+      "ticker": "ABNB",
+      "form": "10-K",
+      "report_date": "2020-12-31",
+      "primary_document": "airbnb-10k.htm",
+      "archived_files": [
+        "airbnb-10k.htm"
+      ],
+      "previous_source": "DOWNLOADED"
+    }
+  ],
+  "count": 1
+}

@@ -1,0 +1,35 @@
+{
+  "status": "PASS",
+  "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\xbrl_warehouse_pre_pilot_load_20260810T065230Z.duckdb",
+  "backup_sha256": "55073d0d57cca3051de1fe8f2a42f7851b0d6e03b841c9f4dbdab20e150513ea",
+  "accessions_before": 185,
+  "accessions_after": 268,
+  "parsed_now": 83,
+  "counts_before": {
+    "xbrl_facts": 225780,
+    "xbrl_contexts": 55923,
+    "xbrl_units": 1366,
+    "xbrl_concepts": 225553,
+    "xbrl_labels": 260411,
+    "xbrl_presentation_relationships": 142719,
+    "xbrl_calculation_relationships": 29560,
+    "xbrl_definition_relationships": 206403,
+    "xbrl_roles": 24477
+  },
+  "counts_after": {
+    "xbrl_facts": 430983,
+    "xbrl_contexts": 114163,
+    "xbrl_units": 2246,
+    "xbrl_concepts": 354323,
+    "xbrl_labels": 435223,
+    "xbrl_presentation_relationships": 250684,
+    "xbrl_calculation_relationships": 45151,
+    "xbrl_definition_relationships": 343231,
+    "xbrl_roles": 39157
+  },
+  "pre_existing_preserved": true,
+  "new_accessions_present": true,
+  "elapsed_seconds": 110.2,
+  "parallel_seconds": 59.095,
+  "merge_seconds": 46.516
+}

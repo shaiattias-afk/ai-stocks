@@ -1,0 +1,227 @@
+{
+  "selected_at_window_start": "2021-01-01",
+  "source_revision_id": 1368041570,
+  "source_url": "https://en.wikipedia.org/w/index.php?oldid=1368041570",
+  "snapshot_date": "2026-08-06",
+  "members_in_2021": 102,
+  "members_today": 102,
+  "departed_since_2021": [
+    "ALGN",
+    "ALXN",
+    "ANSS",
+    "ATVI",
+    "BIDU",
+    "BIIB",
+    "CDW",
+    "CERN",
+    "CHKP",
+    "CHTR",
+    "CTSH",
+    "DLTR",
+    "DOCU",
+    "EA",
+    "EBAY",
+    "FI",
+    "FOX",
+    "FOXA",
+    "ILMN",
+    "INCY",
+    "JD",
+    "LULU",
+    "MRNA",
+    "MTCH",
+    "MXIM",
+    "NTES",
+    "OKTA",
+    "PTON",
+    "SGEN",
+    "SIRI",
+    "SPLK",
+    "SWKS",
+    "TCOM",
+    "TEAM",
+    "VRSK",
+    "VRSN",
+    "WBA",
+    "XLNX",
+    "ZM"
+  ],
+  "survivorship_bias_pct": 38.2,
+  "cohort": [
+    {
+      "ticker": "ORCL",
+      "company": "Oracle",
+      "reason": "ALREADY_LOADED_CONTROL",
+      "in_index_2021": false,
+      "in_index_today": false
+    },
+    {
+      "ticker": "MSFT",
+      "company": "Microsoft",
+      "reason": "ALREADY_LOADED_CONTROL",
+      "in_index_2021": true,
+      "in_index_today": true
+    },
+    {
+      "ticker": "META",
+      "company": "Meta Platforms",
+      "reason": "ALREADY_LOADED_CONTROL",
+      "in_index_2021": true,
+      "in_index_today": true
+    },
+    {
+      "ticker": "NVDA",
+      "company": "Nvidia",
+      "reason": "ALREADY_LOADED_CONTROL",
+      "in_index_2021": true,
+      "in_index_today": true
+    },
+    {
+      "ticker": "GOOGL",
+      "company": "Alphabet Inc. (Class A)",
+      "reason": "ALREADY_LOADED_CONTROL",
+      "in_index_2021": true,
+      "in_index_today": true
+    },
+    {
+      "ticker": "AMZN",
+      "company": "Amazon",
+      "reason": "ALREADY_LOADED_CONTROL",
+      "in_index_2021": true,
+      "in_index_today": true
+    },
+    {
+      "ticker": "MU",
+      "company": "Micron Technology",
+      "reason": "ALREADY_LOADED_CONTROL",
+      "in_index_2021": true,
+      "in_index_today": true
+    },
+    {
+      "ticker": "CRWD",
+      "company": "CrowdStrike",
+      "reason": "ALREADY_LOADED_CONTROL",
+      "in_index_2021": false,
+      "in_index_today": true
+    },
+    {
+      "ticker": "PANW",
+      "company": "Palo Alto Networks",
+      "reason": "ALREADY_LOADED_CONTROL",
+      "in_index_2021": false,
+      "in_index_today": true
+    },
+    {
+      "ticker": "ALGN",
+      "company": "Align Technology",
+      "reason": "DEPARTED_SINCE_2021",
+      "in_index_2021": true,
+      "in_index_today": false
+    },
+    {
+      "ticker": "ALXN",
+      "company": "Alexion Pharmaceuticals",
+      "reason": "DEPARTED_SINCE_2021",
+      "in_index_2021": true,
+      "in_index_today": false
+    },
+    {
+      "ticker": "ANSS",
+      "company": "Ansys",
+      "reason": "DEPARTED_SINCE_2021",
+      "in_index_2021": true,
+      "in_index_today": false
+    },
+    {
+      "ticker": "ATVI",
+      "company": "Activision Blizzard",
+      "reason": "DEPARTED_SINCE_2021",
+      "in_index_2021": true,
+      "in_index_today": false
+    },
+    {
+      "ticker": "ADBE",
+      "company": "Adobe Inc.",
+      "reason": "CURRENT_MEMBER",
+      "in_index_2021": true,
+      "in_index_today": true
+    },
+    {
+      "ticker": "AMD",
+      "company": "Advanced Micro Devices",
+      "reason": "CURRENT_MEMBER",
+      "in_index_2021": true,
+      "in_index_today": true
+    },
+    {
+      "ticker": "ABNB",
+      "company": "Airbnb",
+      "reason": "CURRENT_MEMBER",
+      "in_index_2021": false,
+      "in_index_today": true
+    },
+    {
+      "ticker": "ALNY",
+      "company": "Alnylam Pharmaceuticals",
+      "reason": "CURRENT_MEMBER",
+      "in_index_2021": false,
+      "in_index_today": true
+    },
+    {
+      "ticker": "GOOG",
+      "company": "Alphabet Inc. (Class C)",
+      "reason": "CURRENT_MEMBER",
+      "in_index_2021": true,
+      "in_index_today": true
+    },
+    {
+      "ticker": "AEP",
+      "company": "American Electric Power",
+      "reason": "CURRENT_MEMBER",
+      "in_index_2021": true,
+      "in_index_today": true
+    },
+    {
+      "ticker": "AMGN",
+      "company": "Amgen",
+      "reason": "CURRENT_MEMBER",
+      "in_index_2021": true,
+      "in_index_today": true
+    },
+    {
+      "ticker": "ADI",
+      "company": "Analog Devices",
+      "reason": "CURRENT_MEMBER",
+      "in_index_2021": true,
+      "in_index_today": true
+    },
+    {
+      "ticker": "AAPL",
+      "company": "Apple Inc.",
+      "reason": "CURRENT_MEMBER",
+      "in_index_2021": true,
+      "in_index_today": true
+    },
+    {
+      "ticker": "AMAT",
+      "company": "Applied Materials",
+      "reason": "CURRENT_MEMBER",
+      "in_index_2021": true,
+      "in_index_today": true
+    },
+    {
+      "ticker": "APP",
+      "company": "AppLovin",
+      "reason": "CURRENT_MEMBER",
+      "in_index_2021": false,
+      "in_index_today": true
+    },
+    {
+      "ticker": "ARM",
+      "company": "Arm Holdings",
+      "reason": "CURRENT_MEMBER",
+      "in_index_2021": false,
+      "in_index_today": true
+    }
+  ]
+}

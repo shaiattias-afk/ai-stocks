@@ -1,0 +1,2174 @@
+{
+  "window": [
+    "2020-01-01",
+    "2026-12-31"
+  ],
+  "expected_annual_filings": 5,
+  "companies_requested": 25,
+  "companies_resolved": 25,
+  "total_annual_filings": 138,
+  "lookup_failures": [],
+  "results": [
+    {
+      "ticker": "ORCL",
+      "cik": 1341439,
+      "company_name": "ORACLE CORP",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "ORCL",
+          "cik": 1341439,
+          "company_name": "ORACLE CORP",
+          "form": "10-K",
+          "report_date": "2020-05-31",
+          "filing_date": "2020-06-22",
+          "accession_number": "0001564590-20-030125",
+          "primary_document": "orcl-10k_20200531.htm"
+        },
+        {
+          "ticker": "ORCL",
+          "cik": 1341439,
+          "company_name": "ORACLE CORP",
+          "form": "10-K",
+          "report_date": "2021-05-31",
+          "filing_date": "2021-06-21",
+          "accession_number": "0001564590-21-033616",
+          "primary_document": "orcl-10k_20210531.htm"
+        },
+        {
+          "ticker": "ORCL",
+          "cik": 1341439,
+          "company_name": "ORACLE CORP",
+          "form": "10-K",
+          "report_date": "2022-05-31",
+          "filing_date": "2022-06-21",
+          "accession_number": "0001564590-22-023675",
+          "primary_document": "orcl-10k_20220531.htm"
+        },
+        {
+          "ticker": "ORCL",
+          "cik": 1341439,
+          "company_name": "ORACLE CORP",
+          "form": "10-K",
+          "report_date": "2023-05-31",
+          "filing_date": "2023-06-20",
+          "accession_number": "0000950170-23-028914",
+          "primary_document": "orcl-20230531.htm"
+        },
+        {
+          "ticker": "ORCL",
+          "cik": 1341439,
+          "company_name": "ORACLE CORP",
+          "form": "10-K",
+          "report_date": "2024-05-31",
+          "filing_date": "2024-06-20",
+          "accession_number": "0000950170-24-075605",
+          "primary_document": "orcl-20240531.htm"
+        },
+        {
+          "ticker": "ORCL",
+          "cik": 1341439,
+          "company_name": "ORACLE CORP",
+          "form": "10-K",
+          "report_date": "2025-05-31",
+          "filing_date": "2025-06-18",
+          "accession_number": "0000950170-25-087926",
+          "primary_document": "orcl-20250531.htm"
+        },
+        {
+          "ticker": "ORCL",
+          "cik": 1341439,
+          "company_name": "ORACLE CORP",
+          "form": "10-K",
+          "report_date": "2026-05-31",
+          "filing_date": "2026-06-22",
+          "accession_number": "0001193125-26-277521",
+          "primary_document": "orcl-20260531.htm"
+        }
+      ],
+      "filing_count": 7,
+      "report_dates": [
+        "2020-05-31",
+        "2021-05-31",
+        "2022-05-31",
+        "2023-05-31",
+        "2024-05-31",
+        "2025-05-31",
+        "2026-05-31"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "ALREADY_LOADED_CONTROL"
+    },
+    {
+      "ticker": "MSFT",
+      "cik": 789019,
+      "company_name": "MICROSOFT CORP",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "MSFT",
+          "cik": 789019,
+          "company_name": "MICROSOFT CORP",
+          "form": "10-K",
+          "report_date": "2020-06-30",
+          "filing_date": "2020-07-30",
+          "accession_number": "0001564590-20-034944",
+          "primary_document": "msft-10k_20200630.htm"
+        },
+        {
+          "ticker": "MSFT",
+          "cik": 789019,
+          "company_name": "MICROSOFT CORP",
+          "form": "10-K",
+          "report_date": "2021-06-30",
+          "filing_date": "2021-07-29",
+          "accession_number": "0001564590-21-039151",
+          "primary_document": "msft-10k_20210630.htm"
+        },
+        {
+          "ticker": "MSFT",
+          "cik": 789019,
+          "company_name": "MICROSOFT CORP",
+          "form": "10-K",
+          "report_date": "2022-06-30",
+          "filing_date": "2022-07-28",
+          "accession_number": "0001564590-22-026876",
+          "primary_document": "msft-10k_20220630.htm"
+        },
+        {
+          "ticker": "MSFT",
+          "cik": 789019,
+          "company_name": "MICROSOFT CORP",
+          "form": "10-K",
+          "report_date": "2023-06-30",
+          "filing_date": "2023-07-27",
+          "accession_number": "0000950170-23-035122",
+          "primary_document": "msft-20230630.htm"
+        },
+        {
+          "ticker": "MSFT",
+          "cik": 789019,
+          "company_name": "MICROSOFT CORP",
+          "form": "10-K",
+          "report_date": "2024-06-30",
+          "filing_date": "2024-07-30",
+          "accession_number": "0000950170-24-087843",
+          "primary_document": "msft-20240630.htm"
+        },
+        {
+          "ticker": "MSFT",
+          "cik": 789019,
+          "company_name": "MICROSOFT CORP",
+          "form": "10-K",
+          "report_date": "2025-06-30",
+          "filing_date": "2025-07-30",
+          "accession_number": "0000950170-25-100235",
+          "primary_document": "msft-20250630.htm"
+        },
+        {
+          "ticker": "MSFT",
+          "cik": 789019,
+          "company_name": "MICROSOFT CORP",
+          "form": "10-K",
+          "report_date": "2026-06-30",
+          "filing_date": "2026-07-29",
+          "accession_number": "0001193125-26-323660",
+          "primary_document": "msft-20260630.htm"
+        }
+      ],
+      "filing_count": 7,
+      "report_dates": [
+        "2020-06-30",
+        "2021-06-30",
+        "2022-06-30",
+        "2023-06-30",
+        "2024-06-30",
+        "2025-06-30",
+        "2026-06-30"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "ALREADY_LOADED_CONTROL"
+    },
+    {
+      "ticker": "META",
+      "cik": 1326801,
+      "company_name": "Meta Platforms, Inc.",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "META",
+          "cik": 1326801,
+          "company_name": "Meta Platforms, Inc.",
+          "form": "10-K",
+          "report_date": "2020-12-31",
+          "filing_date": "2021-01-28",
+          "accession_number": "0001326801-21-000014",
+          "primary_document": "fb-20201231.htm"
+        },
+        {
+          "ticker": "META",
+          "cik": 1326801,
+          "company_name": "Meta Platforms, Inc.",
+          "form": "10-K",
+          "report_date": "2021-12-31",
+          "filing_date": "2022-02-03",
+          "accession_number": "0001326801-22-000018",
+          "primary_document": "fb-20211231.htm"
+        },
+        {
+          "ticker": "META",
+          "cik": 1326801,
+          "company_name": "Meta Platforms, Inc.",
+          "form": "10-K",
+          "report_date": "2022-12-31",
+          "filing_date": "2023-02-02",
+          "accession_number": "0001326801-23-000013",
+          "primary_document": "meta-20221231.htm"
+        },
+        {
+          "ticker": "META",
+          "cik": 1326801,
+          "company_name": "Meta Platforms, Inc.",
+          "form": "10-K",
+          "report_date": "2023-12-31",
+          "filing_date": "2024-02-02",
+          "accession_number": "0001326801-24-000012",
+          "primary_document": "meta-20231231.htm"
+        },
+        {
+          "ticker": "META",
+          "cik": 1326801,
+          "company_name": "Meta Platforms, Inc.",
+          "form": "10-K",
+          "report_date": "2024-12-31",
+          "filing_date": "2025-01-30",
+          "accession_number": "0001326801-25-000017",
+          "primary_document": "meta-20241231.htm"
+        },
+        {
+          "ticker": "META",
+          "cik": 1326801,
+          "company_name": "Meta Platforms, Inc.",
+          "form": "10-K",
+          "report_date": "2025-12-31",
+          "filing_date": "2026-01-29",
+          "accession_number": "0001628280-26-003942",
+          "primary_document": "meta-20251231.htm"
+        }
+      ],
+      "filing_count": 6,
+      "report_dates": [
+        "2020-12-31",
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "ALREADY_LOADED_CONTROL"
+    },
+    {
+      "ticker": "NVDA",
+      "cik": 1045810,
+      "company_name": "NVIDIA CORP",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "NVDA",
+          "cik": 1045810,
+          "company_name": "NVIDIA CORP",
+          "form": "10-K",
+          "report_date": "2020-01-26",
+          "filing_date": "2020-02-20",
+          "accession_number": "0001045810-20-000010",
+          "primary_document": "nvda-2020x10k.htm"
+        },
+        {
+          "ticker": "NVDA",
+          "cik": 1045810,
+          "company_name": "NVIDIA CORP",
+          "form": "10-K",
+          "report_date": "2021-01-31",
+          "filing_date": "2021-02-26",
+          "accession_number": "0001045810-21-000010",
+          "primary_document": "nvda-20210131.htm"
+        },
+        {
+          "ticker": "NVDA",
+          "cik": 1045810,
+          "company_name": "NVIDIA CORP",
+          "form": "10-K",
+          "report_date": "2022-01-30",
+          "filing_date": "2022-03-18",
+          "accession_number": "0001045810-22-000036",
+          "primary_document": "nvda-20220130.htm"
+        },
+        {
+          "ticker": "NVDA",
+          "cik": 1045810,
+          "company_name": "NVIDIA CORP",
+          "form": "10-K",
+          "report_date": "2023-01-29",
+          "filing_date": "2023-02-24",
+          "accession_number": "0001045810-23-000017",
+          "primary_document": "nvda-20230129.htm"
+        },
+        {
+          "ticker": "NVDA",
+          "cik": 1045810,
+          "company_name": "NVIDIA CORP",
+          "form": "10-K",
+          "report_date": "2024-01-28",
+          "filing_date": "2024-02-21",
+          "accession_number": "0001045810-24-000029",
+          "primary_document": "nvda-20240128.htm"
+        },
+        {
+          "ticker": "NVDA",
+          "cik": 1045810,
+          "company_name": "NVIDIA CORP",
+          "form": "10-K",
+          "report_date": "2025-01-26",
+          "filing_date": "2025-02-26",
+          "accession_number": "0001045810-25-000023",
+          "primary_document": "nvda-20250126.htm"
+        },
+        {
+          "ticker": "NVDA",
+          "cik": 1045810,
+          "company_name": "NVIDIA CORP",
+          "form": "10-K",
+          "report_date": "2026-01-25",
+          "filing_date": "2026-02-25",
+          "accession_number": "0001045810-26-000021",
+          "primary_document": "nvda-20260125.htm"
+        }
+      ],
+      "filing_count": 7,
+      "report_dates": [
+        "2020-01-26",
+        "2021-01-31",
+        "2022-01-30",
+        "2023-01-29",
+        "2024-01-28",
+        "2025-01-26",
+        "2026-01-25"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "ALREADY_LOADED_CONTROL"
+    },
+    {
+      "ticker": "GOOGL",
+      "cik": 1652044,
+      "company_name": "Alphabet Inc.",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "GOOGL",
+          "cik": 1652044,
+          "company_name": "Alphabet Inc.",
+          "form": "10-K",
+          "report_date": "2020-12-31",
+          "filing_date": "2021-02-03",
+          "accession_number": "0001652044-21-000010",
+          "primary_document": "goog-20201231.htm"
+        },
+        {
+          "ticker": "GOOGL",
+          "cik": 1652044,
+          "company_name": "Alphabet Inc.",
+          "form": "10-K",
+          "report_date": "2021-12-31",
+          "filing_date": "2022-02-02",
+          "accession_number": "0001652044-22-000019",
+          "primary_document": "goog-20211231.htm"
+        },
+        {
+          "ticker": "GOOGL",
+          "cik": 1652044,
+          "company_name": "Alphabet Inc.",
+          "form": "10-K",
+          "report_date": "2022-12-31",
+          "filing_date": "2023-02-03",
+          "accession_number": "0001652044-23-000016",
+          "primary_document": "goog-20221231.htm"
+        },
+        {
+          "ticker": "GOOGL",
+          "cik": 1652044,
+          "company_name": "Alphabet Inc.",
+          "form": "10-K",
+          "report_date": "2023-12-31",
+          "filing_date": "2024-01-31",
+          "accession_number": "0001652044-24-000022",
+          "primary_document": "goog-20231231.htm"
+        },
+        {
+          "ticker": "GOOGL",
+          "cik": 1652044,
+          "company_name": "Alphabet Inc.",
+          "form": "10-K",
+          "report_date": "2024-12-31",
+          "filing_date": "2025-02-05",
+          "accession_number": "0001652044-25-000014",
+          "primary_document": "goog-20241231.htm"
+        },
+        {
+          "ticker": "GOOGL",
+          "cik": 1652044,
+          "company_name": "Alphabet Inc.",
+          "form": "10-K",
+          "report_date": "2025-12-31",
+          "filing_date": "2026-02-05",
+          "accession_number": "0001652044-26-000018",
+          "primary_document": "goog-20251231.htm"
+        }
+      ],
+      "filing_count": 6,
+      "report_dates": [
+        "2020-12-31",
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "ALREADY_LOADED_CONTROL"
+    },
+    {
+      "ticker": "AMZN",
+      "cik": 1018724,
+      "company_name": "AMAZON COM INC",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "AMZN",
+          "cik": 1018724,
+          "company_name": "AMAZON COM INC",
+          "form": "10-K",
+          "report_date": "2020-12-31",
+          "filing_date": "2021-02-03",
+          "accession_number": "0001018724-21-000004",
+          "primary_document": "amzn-20201231.htm"
+        },
+        {
+          "ticker": "AMZN",
+          "cik": 1018724,
+          "company_name": "AMAZON COM INC",
+          "form": "10-K",
+          "report_date": "2021-12-31",
+          "filing_date": "2022-02-04",
+          "accession_number": "0001018724-22-000005",
+          "primary_document": "amzn-20211231.htm"
+        },
+        {
+          "ticker": "AMZN",
+          "cik": 1018724,
+          "company_name": "AMAZON COM INC",
+          "form": "10-K",
+          "report_date": "2022-12-31",
+          "filing_date": "2023-02-03",
+          "accession_number": "0001018724-23-000004",
+          "primary_document": "amzn-20221231.htm"
+        },
+        {
+          "ticker": "AMZN",
+          "cik": 1018724,
+          "company_name": "AMAZON COM INC",
+          "form": "10-K",
+          "report_date": "2023-12-31",
+          "filing_date": "2024-02-02",
+          "accession_number": "0001018724-24-000008",
+          "primary_document": "amzn-20231231.htm"
+        },
+        {
+          "ticker": "AMZN",
+          "cik": 1018724,
+          "company_name": "AMAZON COM INC",
+          "form": "10-K",
+          "report_date": "2024-12-31",
+          "filing_date": "2025-02-07",
+          "accession_number": "0001018724-25-000004",
+          "primary_document": "amzn-20241231.htm"
+        },
+        {
+          "ticker": "AMZN",
+          "cik": 1018724,
+          "company_name": "AMAZON COM INC",
+          "form": "10-K",
+          "report_date": "2025-12-31",
+          "filing_date": "2026-02-06",
+          "accession_number": "0001018724-26-000004",
+          "primary_document": "amzn-20251231.htm"
+        }
+      ],
+      "filing_count": 6,
+      "report_dates": [
+        "2020-12-31",
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "ALREADY_LOADED_CONTROL"
+    },
+    {
+      "ticker": "MU",
+      "cik": 723125,
+      "company_name": "MICRON TECHNOLOGY INC",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "MU",
+          "cik": 723125,
+          "company_name": "MICRON TECHNOLOGY INC",
+          "form": "10-K",
+          "report_date": "2020-09-03",
+          "filing_date": "2020-10-19",
+          "accession_number": "0000723125-20-000082",
+          "primary_document": "mu-20200903.htm"
+        },
+        {
+          "ticker": "MU",
+          "cik": 723125,
+          "company_name": "MICRON TECHNOLOGY INC",
+          "form": "10-K",
+          "report_date": "2021-09-02",
+          "filing_date": "2021-10-08",
+          "accession_number": "0000723125-21-000065",
+          "primary_document": "mu-20210902.htm"
+        },
+        {
+          "ticker": "MU",
+          "cik": 723125,
+          "company_name": "MICRON TECHNOLOGY INC",
+          "form": "10-K",
+          "report_date": "2022-09-01",
+          "filing_date": "2022-10-07",
+          "accession_number": "0000723125-22-000048",
+          "primary_document": "mu-20220901.htm"
+        },
+        {
+          "ticker": "MU",
+          "cik": 723125,
+          "company_name": "MICRON TECHNOLOGY INC",
+          "form": "10-K",
+          "report_date": "2023-08-31",
+          "filing_date": "2023-10-06",
+          "accession_number": "0000723125-23-000054",
+          "primary_document": "mu-20230831.htm"
+        },
+        {
+          "ticker": "MU",
+          "cik": 723125,
+          "company_name": "MICRON TECHNOLOGY INC",
+          "form": "10-K",
+          "report_date": "2024-08-29",
+          "filing_date": "2024-10-04",
+          "accession_number": "0000723125-24-000027",
+          "primary_document": "mu-20240829.htm"
+        },
+        {
+          "ticker": "MU",
+          "cik": 723125,
+          "company_name": "MICRON TECHNOLOGY INC",
+          "form": "10-K",
+          "report_date": "2025-08-28",
+          "filing_date": "2025-10-03",
+          "accession_number": "0000723125-25-000028",
+          "primary_document": "mu-20250828.htm"
+        }
+      ],
+      "filing_count": 6,
+      "report_dates": [
+        "2020-09-03",
+        "2021-09-02",
+        "2022-09-01",
+        "2023-08-31",
+        "2024-08-29",
+        "2025-08-28"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "ALREADY_LOADED_CONTROL"
+    },
+    {
+      "ticker": "CRWD",
+      "cik": 1535527,
+      "company_name": "CrowdStrike Holdings, Inc.",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "CRWD",
+          "cik": 1535527,
+          "company_name": "CrowdStrike Holdings, Inc.",
+          "form": "10-K",
+          "report_date": "2020-01-31",
+          "filing_date": "2020-03-23",
+          "accession_number": "0001535527-20-000006",
+          "primary_document": "crwd-20200131.htm"
+        },
+        {
+          "ticker": "CRWD",
+          "cik": 1535527,
+          "company_name": "CrowdStrike Holdings, Inc.",
+          "form": "10-K",
+          "report_date": "2021-01-31",
+          "filing_date": "2021-03-18",
+          "accession_number": "0001535527-21-000007",
+          "primary_document": "crwd-20210131.htm"
+        },
+        {
+          "ticker": "CRWD",
+          "cik": 1535527,
+          "company_name": "CrowdStrike Holdings, Inc.",
+          "form": "10-K",
+          "report_date": "2022-01-31",
+          "filing_date": "2022-03-16",
+          "accession_number": "0001535527-22-000006",
+          "primary_document": "crwd-20220131.htm"
+        },
+        {
+          "ticker": "CRWD",
+          "cik": 1535527,
+          "company_name": "CrowdStrike Holdings, Inc.",
+          "form": "10-K",
+          "report_date": "2023-01-31",
+          "filing_date": "2023-03-09",
+          "accession_number": "0001535527-23-000008",
+          "primary_document": "crwd-20230131.htm"
+        },
+        {
+          "ticker": "CRWD",
+          "cik": 1535527,
+          "company_name": "CrowdStrike Holdings, Inc.",
+          "form": "10-K",
+          "report_date": "2024-01-31",
+          "filing_date": "2024-03-07",
+          "accession_number": "0001535527-24-000007",
+          "primary_document": "crwd-20240131.htm"
+        },
+        {
+          "ticker": "CRWD",
+          "cik": 1535527,
+          "company_name": "CrowdStrike Holdings, Inc.",
+          "form": "10-K",
+          "report_date": "2025-01-31",
+          "filing_date": "2025-03-10",
+          "accession_number": "0001535527-25-000009",
+          "primary_document": "crwd-20250131.htm"
+        },
+        {
+          "ticker": "CRWD",
+          "cik": 1535527,
+          "company_name": "CrowdStrike Holdings, Inc.",
+          "form": "10-K",
+          "report_date": "2026-01-31",
+          "filing_date": "2026-03-05",
+          "accession_number": "0001535527-26-000010",
+          "primary_document": "crwd-20260131.htm"
+        }
+      ],
+      "filing_count": 7,
+      "report_dates": [
+        "2020-01-31",
+        "2021-01-31",
+        "2022-01-31",
+        "2023-01-31",
+        "2024-01-31",
+        "2025-01-31",
+        "2026-01-31"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "ALREADY_LOADED_CONTROL"
+    },
+    {
+      "ticker": "PANW",
+      "cik": 1327567,
+      "company_name": "Palo Alto Networks Inc",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "PANW",
+          "cik": 1327567,
+          "company_name": "Palo Alto Networks Inc",
+          "form": "10-K",
+          "report_date": "2020-07-31",
+          "filing_date": "2020-09-04",
+          "accession_number": "0001327567-20-000032",
+          "primary_document": "panw-20200731.htm"
+        },
+        {
+          "ticker": "PANW",
+          "cik": 1327567,
+          "company_name": "Palo Alto Networks Inc",
+          "form": "10-K",
+          "report_date": "2021-07-31",
+          "filing_date": "2021-09-03",
+          "accession_number": "0001327567-21-000029",
+          "primary_document": "panw-20210731.htm"
+        },
+        {
+          "ticker": "PANW",
+          "cik": 1327567,
+          "company_name": "Palo Alto Networks Inc",
+          "form": "10-K",
+          "report_date": "2022-07-31",
+          "filing_date": "2022-09-06",
+          "accession_number": "0001327567-22-000028",
+          "primary_document": "panw-20220731.htm"
+        },
+        {
+          "ticker": "PANW",
+          "cik": 1327567,
+          "company_name": "Palo Alto Networks Inc",
+          "form": "10-K",
+          "report_date": "2023-07-31",
+          "filing_date": "2023-09-01",
+          "accession_number": "0001327567-23-000024",
+          "primary_document": "panw-20230731.htm"
+        },
+        {
+          "ticker": "PANW",
+          "cik": 1327567,
+          "company_name": "Palo Alto Networks Inc",
+          "form": "10-K",
+          "report_date": "2024-07-31",
+          "filing_date": "2024-09-06",
+          "accession_number": "0001327567-24-000029",
+          "primary_document": "panw-20240731.htm"
+        },
+        {
+          "ticker": "PANW",
+          "cik": 1327567,
+          "company_name": "Palo Alto Networks Inc",
+          "form": "10-K",
+          "report_date": "2025-07-31",
+          "filing_date": "2025-08-29",
+          "accession_number": "0001327567-25-000027",
+          "primary_document": "panw-20250731.htm"
+        }
+      ],
+      "filing_count": 6,
+      "report_dates": [
+        "2020-07-31",
+        "2021-07-31",
+        "2022-07-31",
+        "2023-07-31",
+        "2024-07-31",
+        "2025-07-31"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "ALREADY_LOADED_CONTROL"
+    },
+    {
+      "ticker": "ALGN",
+      "cik": 1097149,
+      "company_name": "ALIGN TECHNOLOGY INC",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "ALGN",
+          "cik": 1097149,
+          "company_name": "ALIGN TECHNOLOGY INC",
+          "form": "10-K",
+          "report_date": "2020-12-31",
+          "filing_date": "2021-02-26",
+          "accession_number": "0001097149-21-000007",
+          "primary_document": "algn-20201231.htm"
+        },
+        {
+          "ticker": "ALGN",
+          "cik": 1097149,
+          "company_name": "ALIGN TECHNOLOGY INC",
+          "form": "10-K",
+          "report_date": "2021-12-31",
+          "filing_date": "2022-02-25",
+          "accession_number": "0001097149-22-000011",
+          "primary_document": "algn-20211231.htm"
+        },
+        {
+          "ticker": "ALGN",
+          "cik": 1097149,
+          "company_name": "ALIGN TECHNOLOGY INC",
+          "form": "10-K",
+          "report_date": "2022-12-31",
+          "filing_date": "2023-02-27",
+          "accession_number": "0001097149-23-000013",
+          "primary_document": "algn-20221231.htm"
+        },
+        {
+          "ticker": "ALGN",
+          "cik": 1097149,
+          "company_name": "ALIGN TECHNOLOGY INC",
+          "form": "10-K",
+          "report_date": "2023-12-31",
+          "filing_date": "2024-02-28",
+          "accession_number": "0001097149-24-000011",
+          "primary_document": "algn-20231231.htm"
+        },
+        {
+          "ticker": "ALGN",
+          "cik": 1097149,
+          "company_name": "ALIGN TECHNOLOGY INC",
+          "form": "10-K",
+          "report_date": "2024-12-31",
+          "filing_date": "2025-02-28",
+          "accession_number": "0001097149-25-000012",
+          "primary_document": "algn-20241231.htm"
+        },
+        {
+          "ticker": "ALGN",
+          "cik": 1097149,
+          "company_name": "ALIGN TECHNOLOGY INC",
+          "form": "10-K",
+          "report_date": "2025-12-31",
+          "filing_date": "2026-02-27",
+          "accession_number": "0001097149-26-000014",
+          "primary_document": "algn-20251231.htm"
+        }
+      ],
+      "filing_count": 6,
+      "report_dates": [
+        "2020-12-31",
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "DEPARTED_SINCE_2021"
+    },
+    {
+      "ticker": "ALXN",
+      "cik": 899866,
+      "company_name": "ALEXION PHARMACEUTICALS, INC.",
+      "cik_resolution_method": "NAME_MATCH_CONFIRMED_BY_SUBMISSIONS",
+      "cik_resolution_evidence": {
+        "name": "ALEXION PHARMACEUTICALS INC",
+        "match": "EXACT",
+        "sec_tickers": [],
+        "ticker_matches": false,
+        "annual_filings_in_window": 1
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "ALXN",
+          "cik": 899866,
+          "company_name": "ALEXION PHARMACEUTICALS, INC.",
+          "form": "10-K",
+          "report_date": "2020-12-31",
+          "filing_date": "2021-02-08",
+          "accession_number": "0000899866-21-000014",
+          "primary_document": "alxn-20201231.htm"
+        }
+      ],
+      "filing_count": 1,
+      "report_dates": [
+        "2020-12-31"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "DEPARTED_SINCE_2021"
+    },
+    {
+      "ticker": "ANSS",
+      "cik": 1013462,
+      "company_name": "ANSYS INC",
+      "cik_resolution_method": "NAME_MATCH_CONFIRMED_BY_SUBMISSIONS",
+      "cik_resolution_evidence": {
+        "name": "ANSYS INC",
+        "match": "EXACT",
+        "sec_tickers": [],
+        "ticker_matches": false,
+        "annual_filings_in_window": 5
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "ANSS",
+          "cik": 1013462,
+          "company_name": "ANSYS INC",
+          "form": "10-K",
+          "report_date": "2020-12-31",
+          "filing_date": "2021-02-24",
+          "accession_number": "0001013462-21-000009",
+          "primary_document": "anss-20201231.htm"
+        },
+        {
+          "ticker": "ANSS",
+          "cik": 1013462,
+          "company_name": "ANSYS INC",
+          "form": "10-K",
+          "report_date": "2021-12-31",
+          "filing_date": "2022-02-23",
+          "accession_number": "0001013462-22-000005",
+          "primary_document": "anss-20211231.htm"
+        },
+        {
+          "ticker": "ANSS",
+          "cik": 1013462,
+          "company_name": "ANSYS INC",
+          "form": "10-K",
+          "report_date": "2022-12-31",
+          "filing_date": "2023-02-22",
+          "accession_number": "0001013462-23-000013",
+          "primary_document": "anss-20221231.htm"
+        },
+        {
+          "ticker": "ANSS",
+          "cik": 1013462,
+          "company_name": "ANSYS INC",
+          "form": "10-K",
+          "report_date": "2023-12-31",
+          "filing_date": "2024-02-21",
+          "accession_number": "0001013462-24-000007",
+          "primary_document": "anss-20231231.htm"
+        },
+        {
+          "ticker": "ANSS",
+          "cik": 1013462,
+          "company_name": "ANSYS INC",
+          "form": "10-K",
+          "report_date": "2024-12-31",
+          "filing_date": "2025-02-19",
+          "accession_number": "0001013462-25-000009",
+          "primary_document": "anss-20241231.htm"
+        }
+      ],
+      "filing_count": 5,
+      "report_dates": [
+        "2020-12-31",
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "DEPARTED_SINCE_2021"
+    },
+    {
+      "ticker": "ATVI",
+      "cik": 718877,
+      "company_name": "Activision Blizzard, Inc.",
+      "cik_resolution_method": "NAME_MATCH_CONFIRMED_BY_SUBMISSIONS",
+      "cik_resolution_evidence": {
+        "name": "ACTIVISION BLIZZARD, INC.",
+        "match": "EXACT",
+        "sec_tickers": [],
+        "ticker_matches": false,
+        "annual_filings_in_window": 3
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "ATVI",
+          "cik": 718877,
+          "company_name": "Activision Blizzard, Inc.",
+          "form": "10-K",
+          "report_date": "2020-12-31",
+          "filing_date": "2021-02-23",
+          "accession_number": "0001628280-21-002828",
+          "primary_document": "atvi-20201231.htm"
+        },
+        {
+          "ticker": "ATVI",
+          "cik": 718877,
+          "company_name": "Activision Blizzard, Inc.",
+          "form": "10-K",
+          "report_date": "2021-12-31",
+          "filing_date": "2022-02-25",
+          "accession_number": "0001628280-22-003992",
+          "primary_document": "atvi-20211231.htm"
+        },
+        {
+          "ticker": "ATVI",
+          "cik": 718877,
+          "company_name": "Activision Blizzard, Inc.",
+          "form": "10-K",
+          "report_date": "2022-12-31",
+          "filing_date": "2023-02-23",
+          "accession_number": "0001628280-23-004842",
+          "primary_document": "atvi-20221231.htm"
+        }
+      ],
+      "filing_count": 3,
+      "report_dates": [
+        "2020-12-31",
+        "2021-12-31",
+        "2022-12-31"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "DEPARTED_SINCE_2021"
+    },
+    {
+      "ticker": "ADBE",
+      "cik": 796343,
+      "company_name": "ADOBE INC.",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "ADBE",
+          "cik": 796343,
+          "company_name": "ADOBE INC.",
+          "form": "10-K",
+          "report_date": "2020-11-27",
+          "filing_date": "2021-01-15",
+          "accession_number": "0000796343-21-000004",
+          "primary_document": "adbe-20201127.htm"
+        },
+        {
+          "ticker": "ADBE",
+          "cik": 796343,
+          "company_name": "ADOBE INC.",
+          "form": "10-K",
+          "report_date": "2021-12-03",
+          "filing_date": "2022-01-21",
+          "accession_number": "0000796343-22-000032",
+          "primary_document": "adbe-20211203.htm"
+        },
+        {
+          "ticker": "ADBE",
+          "cik": 796343,
+          "company_name": "ADOBE INC.",
+          "form": "10-K",
+          "report_date": "2022-12-02",
+          "filing_date": "2023-01-17",
+          "accession_number": "0000796343-23-000007",
+          "primary_document": "adbe-20221202.htm"
+        },
+        {
+          "ticker": "ADBE",
+          "cik": 796343,
+          "company_name": "ADOBE INC.",
+          "form": "10-K",
+          "report_date": "2023-12-01",
+          "filing_date": "2024-01-17",
+          "accession_number": "0000796343-24-000006",
+          "primary_document": "adbe-20231201.htm"
+        },
+        {
+          "ticker": "ADBE",
+          "cik": 796343,
+          "company_name": "ADOBE INC.",
+          "form": "10-K",
+          "report_date": "2024-11-29",
+          "filing_date": "2025-01-13",
+          "accession_number": "0000796343-25-000004",
+          "primary_document": "adbe-20241129.htm"
+        },
+        {
+          "ticker": "ADBE",
+          "cik": 796343,
+          "company_name": "ADOBE INC.",
+          "form": "10-K",
+          "report_date": "2025-11-28",
+          "filing_date": "2026-01-15",
+          "accession_number": "0000796343-26-000003",
+          "primary_document": "adbe-20251128.htm"
+        }
+      ],
+      "filing_count": 6,
+      "report_dates": [
+        "2020-11-27",
+        "2021-12-03",
+        "2022-12-02",
+        "2023-12-01",
+        "2024-11-29",
+        "2025-11-28"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "CURRENT_MEMBER"
+    },
+    {
+      "ticker": "AMD",
+      "cik": 2488,
+      "company_name": "ADVANCED MICRO DEVICES INC",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "AMD",
+          "cik": 2488,
+          "company_name": "ADVANCED MICRO DEVICES INC",
+          "form": "10-K",
+          "report_date": "2020-12-26",
+          "filing_date": "2021-01-29",
+          "accession_number": "0001628280-21-001185",
+          "primary_document": "amd-20201226.htm"
+        },
+        {
+          "ticker": "AMD",
+          "cik": 2488,
+          "company_name": "ADVANCED MICRO DEVICES INC",
+          "form": "10-K",
+          "report_date": "2021-12-25",
+          "filing_date": "2022-02-03",
+          "accession_number": "0000002488-22-000016",
+          "primary_document": "amd-20211225.htm"
+        },
+        {
+          "ticker": "AMD",
+          "cik": 2488,
+          "company_name": "ADVANCED MICRO DEVICES INC",
+          "form": "10-K",
+          "report_date": "2022-12-31",
+          "filing_date": "2023-02-27",
+          "accession_number": "0000002488-23-000047",
+          "primary_document": "amd-20221231.htm"
+        },
+        {
+          "ticker": "AMD",
+          "cik": 2488,
+          "company_name": "ADVANCED MICRO DEVICES INC",
+          "form": "10-K",
+          "report_date": "2023-12-30",
+          "filing_date": "2024-01-31",
+          "accession_number": "0000002488-24-000012",
+          "primary_document": "amd-20231230.htm"
+        },
+        {
+          "ticker": "AMD",
+          "cik": 2488,
+          "company_name": "ADVANCED MICRO DEVICES INC",
+          "form": "10-K",
+          "report_date": "2024-12-28",
+          "filing_date": "2025-02-05",
+          "accession_number": "0000002488-25-000012",
+          "primary_document": "amd-20241228.htm"
+        },
+        {
+          "ticker": "AMD",
+          "cik": 2488,
+          "company_name": "ADVANCED MICRO DEVICES INC",
+          "form": "10-K",
+          "report_date": "2025-12-27",
+          "filing_date": "2026-02-04",
+          "accession_number": "0000002488-26-000018",
+          "primary_document": "amd-20251227.htm"
+        }
+      ],
+      "filing_count": 6,
+      "report_dates": [
+        "2020-12-26",
+        "2021-12-25",
+        "2022-12-31",
+        "2023-12-30",
+        "2024-12-28",
+        "2025-12-27"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "CURRENT_MEMBER"
+    },
+    {
+      "ticker": "ABNB",
+      "cik": 1559720,
+      "company_name": "Airbnb, Inc.",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "ABNB",
+          "cik": 1559720,
+          "company_name": "Airbnb, Inc.",
+          "form": "10-K",
+          "report_date": "2020-12-31",
+          "filing_date": "2021-02-26",
+          "accession_number": "0001559720-21-000010",
+          "primary_document": "airbnb-10k.htm"
+        },
+        {
+          "ticker": "ABNB",
+          "cik": 1559720,
+          "company_name": "Airbnb, Inc.",
+          "form": "10-K",
+          "report_date": "2021-12-31",
+          "filing_date": "2022-02-25",
+          "accession_number": "0001559720-22-000006",
+          "primary_document": "abnb-20211231.htm"
+        },
+        {
+          "ticker": "ABNB",
+          "cik": 1559720,
+          "company_name": "Airbnb, Inc.",
+          "form": "10-K",
+          "report_date": "2022-12-31",
+          "filing_date": "2023-02-17",
+          "accession_number": "0001559720-23-000003",
+          "primary_document": "abnb-20221231.htm"
+        },
+        {
+          "ticker": "ABNB",
+          "cik": 1559720,
+          "company_name": "Airbnb, Inc.",
+          "form": "10-K",
+          "report_date": "2023-12-31",
+          "filing_date": "2024-02-16",
+          "accession_number": "0001559720-24-000006",
+          "primary_document": "abnb-20231231.htm"
+        },
+        {
+          "ticker": "ABNB",
+          "cik": 1559720,
+          "company_name": "Airbnb, Inc.",
+          "form": "10-K",
+          "report_date": "2024-12-31",
+          "filing_date": "2025-02-13",
+          "accession_number": "0001559720-25-000010",
+          "primary_document": "abnb-20241231.htm"
+        },
+        {
+          "ticker": "ABNB",
+          "cik": 1559720,
+          "company_name": "Airbnb, Inc.",
+          "form": "10-K",
+          "report_date": "2025-12-31",
+          "filing_date": "2026-02-12",
+          "accession_number": "0001559720-26-000004",
+          "primary_document": "abnb-20251231.htm"
+        }
+      ],
+      "filing_count": 6,
+      "report_dates": [
+        "2020-12-31",
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "CURRENT_MEMBER"
+    },
+    {
+      "ticker": "ALNY",
+      "cik": 1178670,
+      "company_name": "ALNYLAM PHARMACEUTICALS, INC.",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "ALNY",
+          "cik": 1178670,
+          "company_name": "ALNYLAM PHARMACEUTICALS, INC.",
+          "form": "10-K",
+          "report_date": "2020-12-31",
+          "filing_date": "2021-02-11",
+          "accession_number": "0001178670-21-000010",
+          "primary_document": "alny-20201231.htm"
+        },
+        {
+          "ticker": "ALNY",
+          "cik": 1178670,
+          "company_name": "ALNYLAM PHARMACEUTICALS, INC.",
+          "form": "10-K",
+          "report_date": "2021-12-31",
+          "filing_date": "2022-02-10",
+          "accession_number": "0001178670-22-000013",
+          "primary_document": "alny-20211231.htm"
+        },
+        {
+          "ticker": "ALNY",
+          "cik": 1178670,
+          "company_name": "ALNYLAM PHARMACEUTICALS, INC.",
+          "form": "10-K",
+          "report_date": "2022-12-31",
+          "filing_date": "2023-02-23",
+          "accession_number": "0001178670-23-000005",
+          "primary_document": "alny-20221231.htm"
+        },
+        {
+          "ticker": "ALNY",
+          "cik": 1178670,
+          "company_name": "ALNYLAM PHARMACEUTICALS, INC.",
+          "form": "10-K",
+          "report_date": "2023-12-31",
+          "filing_date": "2024-02-15",
+          "accession_number": "0001178670-24-000008",
+          "primary_document": "alny-20231231.htm"
+        },
+        {
+          "ticker": "ALNY",
+          "cik": 1178670,
+          "company_name": "ALNYLAM PHARMACEUTICALS, INC.",
+          "form": "10-K",
+          "report_date": "2024-12-31",
+          "filing_date": "2025-02-13",
+          "accession_number": "0001178670-25-000026",
+          "primary_document": "alny-20241231.htm"
+        },
+        {
+          "ticker": "ALNY",
+          "cik": 1178670,
+          "company_name": "ALNYLAM PHARMACEUTICALS, INC.",
+          "form": "10-K",
+          "report_date": "2025-12-31",
+          "filing_date": "2026-02-12",
+          "accession_number": "0001628280-26-007497",
+          "primary_document": "alny-20251231.htm"
+        }
+      ],
+      "filing_count": 6,
+      "report_dates": [
+        "2020-12-31",
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "CURRENT_MEMBER"
+    },
+    {
+      "ticker": "GOOG",
+      "cik": 1652044,
+      "company_name": "Alphabet Inc.",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "GOOG",
+          "cik": 1652044,
+          "company_name": "Alphabet Inc.",
+          "form": "10-K",
+          "report_date": "2020-12-31",
+          "filing_date": "2021-02-03",
+          "accession_number": "0001652044-21-000010",
+          "primary_document": "goog-20201231.htm"
+        },
+        {
+          "ticker": "GOOG",
+          "cik": 1652044,
+          "company_name": "Alphabet Inc.",
+          "form": "10-K",
+          "report_date": "2021-12-31",
+          "filing_date": "2022-02-02",
+          "accession_number": "0001652044-22-000019",
+          "primary_document": "goog-20211231.htm"
+        },
+        {
+          "ticker": "GOOG",
+          "cik": 1652044,
+          "company_name": "Alphabet Inc.",
+          "form": "10-K",
+          "report_date": "2022-12-31",
+          "filing_date": "2023-02-03",
+          "accession_number": "0001652044-23-000016",
+          "primary_document": "goog-20221231.htm"
+        },
+        {
+          "ticker": "GOOG",
+          "cik": 1652044,
+          "company_name": "Alphabet Inc.",
+          "form": "10-K",
+          "report_date": "2023-12-31",
+          "filing_date": "2024-01-31",
+          "accession_number": "0001652044-24-000022",
+          "primary_document": "goog-20231231.htm"
+        },
+        {
+          "ticker": "GOOG",
+          "cik": 1652044,
+          "company_name": "Alphabet Inc.",
+          "form": "10-K",
+          "report_date": "2024-12-31",
+          "filing_date": "2025-02-05",
+          "accession_number": "0001652044-25-000014",
+          "primary_document": "goog-20241231.htm"
+        },
+        {
+          "ticker": "GOOG",
+          "cik": 1652044,
+          "company_name": "Alphabet Inc.",
+          "form": "10-K",
+          "report_date": "2025-12-31",
+          "filing_date": "2026-02-05",
+          "accession_number": "0001652044-26-000018",
+          "primary_document": "goog-20251231.htm"
+        }
+      ],
+      "filing_count": 6,
+      "report_dates": [
+        "2020-12-31",
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "CURRENT_MEMBER"
+    },
+    {
+      "ticker": "AEP",
+      "cik": 4904,
+      "company_name": "AMERICAN ELECTRIC POWER CO INC",
+      "cik_resolution_method": "NAME_MATCH_CONFIRMED_BY_SUBMISSIONS",
+      "cik_resolution_evidence": {
+        "name": "AMERICAN ELECTRIC POWER CO INC",
+        "match": "EXACT",
+        "sec_tickers": [
+          "AEP"
+        ],
+        "ticker_matches": true,
+        "annual_filings_in_window": 6
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "AEP",
+          "cik": 4904,
+          "company_name": "AMERICAN ELECTRIC POWER CO INC",
+          "form": "10-K",
+          "report_date": "2020-12-31",
+          "filing_date": "2021-02-25",
+          "accession_number": "0000004904-21-000010",
+          "primary_document": "aep-20201231.htm"
+        },
+        {
+          "ticker": "AEP",
+          "cik": 4904,
+          "company_name": "AMERICAN ELECTRIC POWER CO INC",
+          "form": "10-K",
+          "report_date": "2021-12-31",
+          "filing_date": "2022-02-24",
+          "accession_number": "0000004904-22-000024",
+          "primary_document": "aep-20211231.htm"
+        },
+        {
+          "ticker": "AEP",
+          "cik": 4904,
+          "company_name": "AMERICAN ELECTRIC POWER CO INC",
+          "form": "10-K",
+          "report_date": "2022-12-31",
+          "filing_date": "2023-02-23",
+          "accession_number": "0000004904-23-000011",
+          "primary_document": "aep-20221231.htm"
+        },
+        {
+          "ticker": "AEP",
+          "cik": 4904,
+          "company_name": "AMERICAN ELECTRIC POWER CO INC",
+          "form": "10-K",
+          "report_date": "2023-12-31",
+          "filing_date": "2024-02-26",
+          "accession_number": "0000004904-24-000020",
+          "primary_document": "aep-20231231.htm"
+        },
+        {
+          "ticker": "AEP",
+          "cik": 4904,
+          "company_name": "AMERICAN ELECTRIC POWER CO INC",
+          "form": "10-K",
+          "report_date": "2024-12-31",
+          "filing_date": "2025-02-13",
+          "accession_number": "0000004904-25-000027",
+          "primary_document": "aep-20241231.htm"
+        },
+        {
+          "ticker": "AEP",
+          "cik": 4904,
+          "company_name": "AMERICAN ELECTRIC POWER CO INC",
+          "form": "10-K",
+          "report_date": "2025-12-31",
+          "filing_date": "2026-02-12",
+          "accession_number": "0000004904-26-000013",
+          "primary_document": "aep-20251231.htm"
+        }
+      ],
+      "filing_count": 6,
+      "report_dates": [
+        "2020-12-31",
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "CURRENT_MEMBER"
+    },
+    {
+      "ticker": "AMGN",
+      "cik": 318154,
+      "company_name": "AMGEN INC",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "AMGN",
+          "cik": 318154,
+          "company_name": "AMGEN INC",
+          "form": "10-K",
+          "report_date": "2020-12-31",
+          "filing_date": "2021-02-09",
+          "accession_number": "0000318154-21-000010",
+          "primary_document": "amgn-20201231.htm"
+        },
+        {
+          "ticker": "AMGN",
+          "cik": 318154,
+          "company_name": "AMGEN INC",
+          "form": "10-K",
+          "report_date": "2021-12-31",
+          "filing_date": "2022-02-16",
+          "accession_number": "0000318154-22-000010",
+          "primary_document": "amgn-20211231.htm"
+        },
+        {
+          "ticker": "AMGN",
+          "cik": 318154,
+          "company_name": "AMGEN INC",
+          "form": "10-K",
+          "report_date": "2022-12-31",
+          "filing_date": "2023-02-09",
+          "accession_number": "0000318154-23-000017",
+          "primary_document": "amgn-20221231.htm"
+        },
+        {
+          "ticker": "AMGN",
+          "cik": 318154,
+          "company_name": "AMGEN INC",
+          "form": "10-K",
+          "report_date": "2023-12-31",
+          "filing_date": "2024-02-14",
+          "accession_number": "0000318154-24-000011",
+          "primary_document": "amgn-20231231.htm"
+        },
+        {
+          "ticker": "AMGN",
+          "cik": 318154,
+          "company_name": "AMGEN INC",
+          "form": "10-K",
+          "report_date": "2024-12-31",
+          "filing_date": "2025-02-14",
+          "accession_number": "0000318154-25-000010",
+          "primary_document": "amgn-20241231.htm"
+        },
+        {
+          "ticker": "AMGN",
+          "cik": 318154,
+          "company_name": "AMGEN INC",
+          "form": "10-K",
+          "report_date": "2025-12-31",
+          "filing_date": "2026-02-13",
+          "accession_number": "0000318154-26-000010",
+          "primary_document": "amgn-20251231.htm"
+        }
+      ],
+      "filing_count": 6,
+      "report_dates": [
+        "2020-12-31",
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "CURRENT_MEMBER"
+    },
+    {
+      "ticker": "ADI",
+      "cik": 6281,
+      "company_name": "ANALOG DEVICES INC",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "ADI",
+          "cik": 6281,
+          "company_name": "ANALOG DEVICES INC",
+          "form": "10-K",
+          "report_date": "2020-10-31",
+          "filing_date": "2020-11-24",
+          "accession_number": "0000006281-20-000156",
+          "primary_document": "adi-20201031.htm"
+        },
+        {
+          "ticker": "ADI",
+          "cik": 6281,
+          "company_name": "ANALOG DEVICES INC",
+          "form": "10-K",
+          "report_date": "2021-10-30",
+          "filing_date": "2021-12-03",
+          "accession_number": "0000006281-21-000294",
+          "primary_document": "adi-20211030.htm"
+        },
+        {
+          "ticker": "ADI",
+          "cik": 6281,
+          "company_name": "ANALOG DEVICES INC",
+          "form": "10-K",
+          "report_date": "2022-10-29",
+          "filing_date": "2022-11-22",
+          "accession_number": "0000006281-22-000250",
+          "primary_document": "adi-20221029.htm"
+        },
+        {
+          "ticker": "ADI",
+          "cik": 6281,
+          "company_name": "ANALOG DEVICES INC",
+          "form": "10-K",
+          "report_date": "2023-10-28",
+          "filing_date": "2023-11-21",
+          "accession_number": "0000006281-23-000203",
+          "primary_document": "adi-20231028.htm"
+        },
+        {
+          "ticker": "ADI",
+          "cik": 6281,
+          "company_name": "ANALOG DEVICES INC",
+          "form": "10-K",
+          "report_date": "2024-11-02",
+          "filing_date": "2024-11-26",
+          "accession_number": "0000006281-24-000204",
+          "primary_document": "adi-20241102.htm"
+        },
+        {
+          "ticker": "ADI",
+          "cik": 6281,
+          "company_name": "ANALOG DEVICES INC",
+          "form": "10-K",
+          "report_date": "2025-11-01",
+          "filing_date": "2025-11-25",
+          "accession_number": "0000006281-25-000153",
+          "primary_document": "adi-20251101.htm"
+        }
+      ],
+      "filing_count": 6,
+      "report_dates": [
+        "2020-10-31",
+        "2021-10-30",
+        "2022-10-29",
+        "2023-10-28",
+        "2024-11-02",
+        "2025-11-01"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "CURRENT_MEMBER"
+    },
+    {
+      "ticker": "AAPL",
+      "cik": 320193,
+      "company_name": "Apple Inc.",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "AAPL",
+          "cik": 320193,
+          "company_name": "Apple Inc.",
+          "form": "10-K",
+          "report_date": "2020-09-26",
+          "filing_date": "2020-10-30",
+          "accession_number": "0000320193-20-000096",
+          "primary_document": "aapl-20200926.htm"
+        },
+        {
+          "ticker": "AAPL",
+          "cik": 320193,
+          "company_name": "Apple Inc.",
+          "form": "10-K",
+          "report_date": "2021-09-25",
+          "filing_date": "2021-10-29",
+          "accession_number": "0000320193-21-000105",
+          "primary_document": "aapl-20210925.htm"
+        },
+        {
+          "ticker": "AAPL",
+          "cik": 320193,
+          "company_name": "Apple Inc.",
+          "form": "10-K",
+          "report_date": "2022-09-24",
+          "filing_date": "2022-10-28",
+          "accession_number": "0000320193-22-000108",
+          "primary_document": "aapl-20220924.htm"
+        },
+        {
+          "ticker": "AAPL",
+          "cik": 320193,
+          "company_name": "Apple Inc.",
+          "form": "10-K",
+          "report_date": "2023-09-30",
+          "filing_date": "2023-11-03",
+          "accession_number": "0000320193-23-000106",
+          "primary_document": "aapl-20230930.htm"
+        },
+        {
+          "ticker": "AAPL",
+          "cik": 320193,
+          "company_name": "Apple Inc.",
+          "form": "10-K",
+          "report_date": "2024-09-28",
+          "filing_date": "2024-11-01",
+          "accession_number": "0000320193-24-000123",
+          "primary_document": "aapl-20240928.htm"
+        },
+        {
+          "ticker": "AAPL",
+          "cik": 320193,
+          "company_name": "Apple Inc.",
+          "form": "10-K",
+          "report_date": "2025-09-27",
+          "filing_date": "2025-10-31",
+          "accession_number": "0000320193-25-000079",
+          "primary_document": "aapl-20250927.htm"
+        }
+      ],
+      "filing_count": 6,
+      "report_dates": [
+        "2020-09-26",
+        "2021-09-25",
+        "2022-09-24",
+        "2023-09-30",
+        "2024-09-28",
+        "2025-09-27"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "CURRENT_MEMBER"
+    },
+    {
+      "ticker": "AMAT",
+      "cik": 6951,
+      "company_name": "APPLIED MATERIALS INC /DE",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "AMAT",
+          "cik": 6951,
+          "company_name": "APPLIED MATERIALS INC /DE",
+          "form": "10-K",
+          "report_date": "2020-10-25",
+          "filing_date": "2020-12-11",
+          "accession_number": "0000006951-20-000048",
+          "primary_document": "amat-20201025.htm"
+        },
+        {
+          "ticker": "AMAT",
+          "cik": 6951,
+          "company_name": "APPLIED MATERIALS INC /DE",
+          "form": "10-K",
+          "report_date": "2021-10-31",
+          "filing_date": "2021-12-17",
+          "accession_number": "0000006951-21-000043",
+          "primary_document": "amat-20211031.htm"
+        },
+        {
+          "ticker": "AMAT",
+          "cik": 6951,
+          "company_name": "APPLIED MATERIALS INC /DE",
+          "form": "10-K",
+          "report_date": "2022-10-30",
+          "filing_date": "2022-12-16",
+          "accession_number": "0000006951-22-000043",
+          "primary_document": "amat-20221030.htm"
+        },
+        {
+          "ticker": "AMAT",
+          "cik": 6951,
+          "company_name": "APPLIED MATERIALS INC /DE",
+          "form": "10-K",
+          "report_date": "2023-10-29",
+          "filing_date": "2023-12-15",
+          "accession_number": "0000006951-23-000041",
+          "primary_document": "amat-20231029.htm"
+        },
+        {
+          "ticker": "AMAT",
+          "cik": 6951,
+          "company_name": "APPLIED MATERIALS INC /DE",
+          "form": "10-K",
+          "report_date": "2024-10-27",
+          "filing_date": "2024-12-13",
+          "accession_number": "0000006951-24-000044",
+          "primary_document": "amat-20241027.htm"
+        },
+        {
+          "ticker": "AMAT",
+          "cik": 6951,
+          "company_name": "APPLIED MATERIALS INC /DE",
+          "form": "10-K",
+          "report_date": "2025-10-26",
+          "filing_date": "2025-12-12",
+          "accession_number": "0001628280-25-056742",
+          "primary_document": "amat-20251026.htm"
+        }
+      ],
+      "filing_count": 6,
+      "report_dates": [
+        "2020-10-25",
+        "2021-10-31",
+        "2022-10-30",
+        "2023-10-29",
+        "2024-10-27",
+        "2025-10-26"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "CURRENT_MEMBER"
+    },
+    {
+      "ticker": "APP",
+      "cik": 1751008,
+      "company_name": "AppLovin Corp",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [
+        {
+          "ticker": "APP",
+          "cik": 1751008,
+          "company_name": "AppLovin Corp",
+          "form": "10-K",
+          "report_date": "2021-12-31",
+          "filing_date": "2022-03-11",
+          "accession_number": "0001751008-22-000005",
+          "primary_document": "app-20211231.htm"
+        },
+        {
+          "ticker": "APP",
+          "cik": 1751008,
+          "company_name": "AppLovin Corp",
+          "form": "10-K",
+          "report_date": "2022-12-31",
+          "filing_date": "2023-02-28",
+          "accession_number": "0001751008-23-000006",
+          "primary_document": "app-20221231.htm"
+        },
+        {
+          "ticker": "APP",
+          "cik": 1751008,
+          "company_name": "AppLovin Corp",
+          "form": "10-K",
+          "report_date": "2023-12-31",
+          "filing_date": "2024-02-26",
+          "accession_number": "0001751008-24-000012",
+          "primary_document": "app-20231231.htm"
+        },
+        {
+          "ticker": "APP",
+          "cik": 1751008,
+          "company_name": "AppLovin Corp",
+          "form": "10-K",
+          "report_date": "2024-12-31",
+          "filing_date": "2025-02-27",
+          "accession_number": "0001751008-25-000018",
+          "primary_document": "app-20241231.htm"
+        },
+        {
+          "ticker": "APP",
+          "cik": 1751008,
+          "company_name": "AppLovin Corp",
+          "form": "10-K",
+          "report_date": "2025-12-31",
+          "filing_date": "2026-02-19",
+          "accession_number": "0001751008-26-000010",
+          "primary_document": "app-20251231.htm"
+        }
+      ],
+      "filing_count": 5,
+      "report_dates": [
+        "2021-12-31",
+        "2022-12-31",
+        "2023-12-31",
+        "2024-12-31",
+        "2025-12-31"
+      ],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [],
+      "note": "",
+      "cohort_reason": "CURRENT_MEMBER"
+    },
+    {
+      "ticker": "ARM",
+      "cik": 1973239,
+      "company_name": "ARM HOLDINGS PLC /UK",
+      "cik_resolution_method": "TICKER_FILE",
+      "cik_resolution_evidence": {
+        "source": "company_tickers.json"
+      },
+      "forms_requested": [
+        "10-K"
+      ],
+      "window": [
+        "2020-01-01",
+        "2026-12-31"
+      ],
+      "filings": [],
+      "filing_count": 0,
+      "report_dates": [],
+      "duplicate_report_dates": [],
+      "foreign_annual_forms_present": [
+        "20-F"
+      ],
+      "note": "no filings of the requested form in window; company files ['20-F'] instead",
+      "cohort_reason": "CURRENT_MEMBER"
+    }
+  ]
+}

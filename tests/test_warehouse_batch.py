@@ -160,15 +160,50 @@ def test_batch_survives_more_filings_than_one_chunk(tmp_path: Path) -> None:
     assert loaded == len(accessions), "not every filing survived the chunked merge"
 
 
-def test_all_archived_accessions_matches_the_manifest() -> None:
+def test_all_archived_accessions_excludes_filings_without_xbrl() -> None:
+    """`all_archived_accessions` offers up only filings that can actually
+    be parsed.
+
+    A filing with no XBRL document set is still archived on purpose -- the
+    filing is real, and its lack of machine-readable data is a true fact
+    about that company's history that a backtest should see. But handing
+    one to Arelle can only fail, so it is excluded from the parse list.
+
+    Measured example: Airbnb's FY2020 10-K, their first after a December
+    2020 IPO, contains 11 files and zero XBRL (their FY2021 filing has
+    105). SEC permits a newly public company to omit XBRL from its first
+    annual report, so this recurs for any company that lists mid-window.
+    """
     _require_archive()
 
-    accessions = batch.all_archived_accessions()
     connection = duckdb.connect(database=str(archive.ARCHIVE_DB_PATH), read_only=True)
     try:
-        expected = connection.execute("SELECT COUNT(*) FROM filing_archive_manifest").fetchone()[0]
+        total = connection.execute("SELECT COUNT(*) FROM filing_archive_manifest").fetchone()[0]
+        without_xbrl = connection.execute(
+            "SELECT COUNT(*) FROM filing_archive_manifest WHERE source = ?",
+            [archive.NO_XBRL_DOCUMENT_SET],
+        ).fetchone()[0]
     finally:
         connection.close()
 
-    assert len(accessions) == expected
-    assert len(set(accessions)) == len(accessions), "duplicate accession numbers returned"
+    parseable = batch.all_archived_accessions()
+    everything = batch.all_archived_accessions(parseable_only=False)
+
+    assert len(everything) == total, "parseable_only=False must return every archived filing"
+    assert len(parseable) == total - without_xbrl, (
+        "the parse list must exclude filings that carry no XBRL document set"
+    )
+    assert set(parseable) <= set(everything)
+    assert len(set(parseable)) == len(parseable), "duplicate accession numbers returned"
+
+
+def test_has_xbrl_document_set_distinguishes_real_filings() -> None:
+    """A primary document alone is not XBRL; a schema, linkbase or
+    instance document is what makes a filing machine-readable."""
+    assert not archive.has_xbrl_document_set(["airbnb-10k.htm"])
+    assert not archive.has_xbrl_document_set([])
+    assert not archive.has_xbrl_document_set(["abnb-20201231.htm", "FilingSummary.xml"])
+
+    assert archive.has_xbrl_document_set(["msft-20240630.htm", "msft-20240630.xsd"])
+    assert archive.has_xbrl_document_set(["x.htm", "x_cal.xml"])
+    assert archive.has_xbrl_document_set(["x.htm", "nvda-20190428.xml"])  # standalone instance
