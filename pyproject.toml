@@ -24,4 +24,6 @@ where = ["src"]
 testpaths = ["tests"]
 markers = [
     "golden: slow, real-warehouse/production-database golden regression tests (read-only; still collected and run by default with a plain `pytest` invocation -- not deselected by default, only usable to filter with -m 'not golden' when a fast subset is explicitly wanted).",
+    "network: tests that reach an external site (currently Wikipedia, to check the constituent page still has the structure the parser expects). DESELECTED by default via addopts -- run deliberately with `pytest -m network`. Kept out of the default run so the suite never fails because a third-party site is down or was edited.",
 ]
+addopts = "-m 'not network'"
