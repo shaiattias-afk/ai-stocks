@@ -1,19 +1,19 @@
 {
   "company_years": 133,
   "metrics_per_company_year": 16,
-  "overall_pass": 1944,
+  "overall_pass": 1977,
   "overall_total": 2128,
-  "pass_rate_pct": 91.4,
+  "pass_rate_pct": 92.9,
   "failures_by_metric": {
-    "short_term_investments": 20,
-    "adjusted_net_debt": 27,
-    "invested_capital": 28,
     "current_debt": 10,
     "total_debt": 10,
+    "adjusted_net_debt": 16,
+    "invested_capital": 17,
     "capex": 10,
     "free_cash_flow": 11,
     "long_term_debt": 5,
     "cash_and_equivalents": 5,
+    "short_term_investments": 9,
     "stockholders_equity": 6,
     "income_tax_expense": 9,
     "revenue": 8,
@@ -27,7 +27,7 @@
       "ticker": "AAPL",
       "report_date": "2020-09-26",
       "accession_number": "0000320193-20-000096",
-      "passed": 13,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -51,9 +51,9 @@
           "basis": null
         },
         "short_term_investments": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "basis": null
+          "status": "PASS",
+          "value": 52927000000.0,
+          "basis": "AMBIGUOUS_LABEL_RESOLVED_BY_CURRENT_ASSETS_ANCESTRY"
         },
         "stockholders_equity": {
           "status": "PASS",
@@ -61,13 +61,13 @@
           "basis": null
         },
         "adjusted_net_debt": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": -85947000000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "invested_capital": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": -20608000000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
@@ -130,7 +130,7 @@
       "ticker": "AAPL",
       "report_date": "2021-09-25",
       "accession_number": "0000320193-21-000105",
-      "passed": 13,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -154,9 +154,9 @@
           "basis": null
         },
         "short_term_investments": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "basis": null
+          "status": "PASS",
+          "value": 27699000000.0,
+          "basis": "AMBIGUOUS_LABEL_RESOLVED_BY_CURRENT_ASSETS_ANCESTRY"
         },
         "stockholders_equity": {
           "status": "PASS",
@@ -164,13 +164,13 @@
           "basis": null
         },
         "adjusted_net_debt": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": -56639000000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "invested_capital": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": 6451000000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
@@ -233,7 +233,7 @@
       "ticker": "AAPL",
       "report_date": "2022-09-24",
       "accession_number": "0000320193-22-000108",
-      "passed": 13,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -257,9 +257,9 @@
           "basis": null
         },
         "short_term_investments": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "basis": null
+          "status": "PASS",
+          "value": 24658000000.0,
+          "basis": "AMBIGUOUS_LABEL_RESOLVED_BY_CURRENT_ASSETS_ANCESTRY"
         },
         "stockholders_equity": {
           "status": "PASS",
@@ -267,13 +267,13 @@
           "basis": null
         },
         "adjusted_net_debt": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": -38322000000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "invested_capital": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": 12350000000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
@@ -336,7 +336,7 @@
       "ticker": "AAPL",
       "report_date": "2023-09-30",
       "accession_number": "0000320193-23-000106",
-      "passed": 13,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -360,9 +360,9 @@
           "basis": null
         },
         "short_term_investments": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "basis": null
+          "status": "PASS",
+          "value": 31590000000.0,
+          "basis": "AMBIGUOUS_LABEL_RESOLVED_BY_CURRENT_ASSETS_ANCESTRY"
         },
         "stockholders_equity": {
           "status": "PASS",
@@ -370,13 +370,13 @@
           "basis": null
         },
         "adjusted_net_debt": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": -55570000000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "invested_capital": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": 6576000000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
@@ -439,7 +439,7 @@
       "ticker": "AAPL",
       "report_date": "2024-09-28",
       "accession_number": "0000320193-24-000123",
-      "passed": 13,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -463,9 +463,9 @@
           "basis": null
         },
         "short_term_investments": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "basis": null
+          "status": "PASS",
+          "value": 35228000000.0,
+          "basis": "AMBIGUOUS_LABEL_RESOLVED_BY_CURRENT_ASSETS_ANCESTRY"
         },
         "stockholders_equity": {
           "status": "PASS",
@@ -473,13 +473,13 @@
           "basis": null
         },
         "adjusted_net_debt": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": -55204000000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "invested_capital": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": 1746000000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
@@ -542,7 +542,7 @@
       "ticker": "AAPL",
       "report_date": "2025-09-27",
       "accession_number": "0000320193-25-000079",
-      "passed": 13,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -566,9 +566,9 @@
           "basis": null
         },
         "short_term_investments": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
-          "basis": null
+          "status": "PASS",
+          "value": 18763000000.0,
+          "basis": "AMBIGUOUS_LABEL_RESOLVED_BY_CURRENT_ASSETS_ANCESTRY"
         },
         "stockholders_equity": {
           "status": "PASS",
@@ -576,13 +576,13 @@
           "basis": null
         },
         "adjusted_net_debt": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": -46718000000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "invested_capital": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": 27015000000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
@@ -2992,7 +2992,7 @@
       "ticker": "ALGN",
       "report_date": "2020-12-31",
       "accession_number": "0001097149-21-000007",
-      "passed": 13,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -3016,8 +3016,8 @@
           "basis": null
         },
         "short_term_investments": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": 0.0,
           "basis": null
         },
         "stockholders_equity": {
@@ -3026,13 +3026,13 @@
           "basis": null
         },
         "adjusted_net_debt": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": -960843000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "invested_capital": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": 2273022000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
@@ -3095,7 +3095,7 @@
       "ticker": "ALGN",
       "report_date": "2021-12-31",
       "accession_number": "0001097149-22-000011",
-      "passed": 13,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -3119,8 +3119,8 @@
           "basis": null
         },
         "short_term_investments": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": 71972000.0,
           "basis": null
         },
         "stockholders_equity": {
@@ -3129,13 +3129,13 @@
           "basis": null
         },
         "adjusted_net_debt": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": -1171342000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "invested_capital": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": 2451372000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
@@ -3198,7 +3198,7 @@
       "ticker": "ALGN",
       "report_date": "2022-12-31",
       "accession_number": "0001097149-23-000013",
-      "passed": 13,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -3222,8 +3222,8 @@
           "basis": null
         },
         "short_term_investments": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": 57534000.0,
           "basis": null
         },
         "stockholders_equity": {
@@ -3232,13 +3232,13 @@
           "basis": null
         },
         "adjusted_net_debt": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": -999584000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "invested_capital": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": 2601774000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
@@ -3301,7 +3301,7 @@
       "ticker": "ALGN",
       "report_date": "2023-12-31",
       "accession_number": "0001097149-24-000011",
-      "passed": 13,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -3325,8 +3325,8 @@
           "basis": null
         },
         "short_term_investments": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": 35304000.0,
           "basis": null
         },
         "stockholders_equity": {
@@ -3335,13 +3335,13 @@
           "basis": null
         },
         "adjusted_net_debt": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": -972742000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "invested_capital": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": 2657747000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {
@@ -3404,7 +3404,7 @@
       "ticker": "ALGN",
       "report_date": "2024-12-31",
       "accession_number": "0001097149-25-000012",
-      "passed": 13,
+      "passed": 16,
       "total": 16,
       "metrics": {
         "current_debt": {
@@ -3428,8 +3428,8 @@
           "basis": null
         },
         "short_term_investments": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": 0.0,
           "basis": null
         },
         "stockholders_equity": {
@@ -3438,13 +3438,13 @@
           "basis": null
         },
         "adjusted_net_debt": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": -1043887000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "invested_capital": {
-          "status": "REVIEW_REQUIRED",
-          "value": null,
+          "status": "PASS",
+          "value": 2808098000.0,
           "basis": "GAAP_CARRYING_VALUE"
         },
         "revenue": {

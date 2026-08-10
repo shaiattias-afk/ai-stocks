@@ -155,11 +155,17 @@ BUILT_IN_METRICS: dict[str, MetricDefinition] = {
         r"parenthetical|reconciliation", r"cash\s+and\s+(?:cash\s+)?equivalents", None, None,
         r"^\s*cash\s+and\s+(?:cash\s+)?equivalents\s*$",
     ),
+    # A trailing current-qualifier is allowed: ALGN writes "Marketable
+    # securities, short-term". The qualifier is restricted to explicit
+    # current wording -- a bare trailing clause is NOT accepted, because
+    # "Marketable securities, non-current" must keep failing here rather
+    # than being read as a current asset.
     "short_term_investments": MetricDefinition(
         "short_term_investments", r"balance\s+sheets?|financial\s+position",
         r"parenthetical", r"marketable\s+securities|short-?term\s+investments",
         None, None,
-        r"^\s*(?:marketable\s+securities|short-?term\s+investments)\s*$",
+        r"^\s*(?:marketable\s+securities|short-?term\s+investments)"
+        r"(?:\s*[,\-–]\s*(?:short-?term|current))?\s*$",
     ),
     "current_debt": MetricDefinition(
         "current_debt", r"balance\s+sheets?|financial\s+position",
