@@ -387,24 +387,32 @@ def compute_full_company_year(
             else {"status": "REVIEW_REQUIRED", "value": None, "error": "no prior fiscal year in the dataset (this ticker's first locked filing)"}
         )
     else:
-        prior_ic_lookup = production_lookup.latest_metric(production_connection, ticker, prior_report_date, "invested_capital")
-        if prior_ic_lookup is not None and prior_ic_lookup["status"] in {"PASS", "PASS_MATURITY_BASIS", "PASS_DIRECT_AGGREGATE", "PASS_NORMALIZED_TAX"}:
-            prior_ic_status, prior_ic_value = prior_ic_lookup["status"], prior_ic_lookup["value"]
+        # ALWAYS recompute the prior year from the warehouse; never read it
+        # from production (D-P3, option B).
+        #
+        # This previously preferred a stored production value and only
+        # recomputed when none was available. That made the engine's output
+        # depend on what happened to be in the database, so loading
+        # unrelated companies could silently change an already-verified
+        # figure. Measured: PANW 2021-07-31's average_invested_capital was
+        # PASS 698,750,000 until the universe expansion loaded PANW
+        # 2020-07-31 for the first time as REVIEW_REQUIRED -- a lookup that
+        # had found nothing (and so recomputed) then found a failed value
+        # and propagated it.
+        #
+        # Recomputing unconditionally makes the result a function of the
+        # filings alone. Production is still consulted for the prior
+        # ACCESSION -- which filing to read -- but never for its value.
+        prior_accession_row = production_connection.execute(
+            "SELECT accession_number FROM sec_filings WHERE ticker = ? AND report_date = ?",
+            [ticker, prior_report_date],
+        ).fetchone()
+        if prior_accession_row is None:
+            prior_ic_status, prior_ic_value = "REVIEW_REQUIRED", None
         else:
-            # Supplementary-accession pattern (scripts/98/101/105): the prior
-            # fiscal year's own invested_capital was never part of the frozen
-            # 900-row dataset (or isn't otherwise available) — recompute it
-            # fresh from the warehouse via this same engine.
-            prior_accession_row = production_connection.execute(
-                "SELECT accession_number FROM sec_filings WHERE ticker = ? AND report_date = ?",
-                [ticker, prior_report_date],
-            ).fetchone()
-            if prior_accession_row is None:
-                prior_ic_status, prior_ic_value = "REVIEW_REQUIRED", None
-            else:
-                prior_core = compute_company_year(warehouse_connection, ticker, prior_report_date, prior_accession_row[0])
-                prior_ic_status = prior_core["invested_capital"]["status"]
-                prior_ic_value = prior_core["invested_capital"]["value"]
+            prior_core = compute_company_year(warehouse_connection, ticker, prior_report_date, prior_accession_row[0])
+            prior_ic_status = prior_core["invested_capital"]["status"]
+            prior_ic_value = prior_core["invested_capital"]["value"]
 
         result["average_invested_capital"] = combine_current_and_prior_invested_capital(
             core["invested_capital"]["status"], core["invested_capital"]["value"],

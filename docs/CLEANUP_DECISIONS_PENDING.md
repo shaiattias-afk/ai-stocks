@@ -165,6 +165,59 @@ I did not choose, because option 3 would quietly weaken the protection
 that caught this in the first place, and options 1 and 2 are structural
 changes to how the engine sources prior-year data.
 
+### Option B implemented — and it revealed the deeper problem
+
+Option B was applied: the prior year is now ALWAYS recomputed from the
+filings, never read from production. Production is still consulted for
+which ACCESSION to read, never for a value.
+
+**The golden regression still fails on PANW, identically.** That is the
+useful result, because it rules out the explanation and exposes the real
+one.
+
+Tracing why the test used to pass:
+
+* PANW 2020-07-31 was not in `sec_filings` before the universe expansion
+* so `prior_report_date_for(...)` found **no prior year**
+* that branch does not compute anything — it **reads the stored
+  `average_invested_capital` straight out of production** and returns it
+* the test then compared that stored value against itself
+
+So for this metric the golden regression was **partly circular**: it was
+reading the answer from the database rather than reproducing it. It only
+looked like a passing independent check.
+
+Now that PANW 2020 exists as a real filing, the honest computation runs
+for the first time — and reports `REVIEW_REQUIRED`, because PANW 2020's
+`invested_capital` genuinely cannot be resolved from that filing.
+
+### What this means about the frozen value
+
+`698,750,000` does not rest on a calculation today's engine can redo. It
+rests on D-027 item 7, which permitted using the prior filing's
+*previously approved* result. That approval was valid when made, but it
+is not reproducible from the filings alone.
+
+**This is not corruption.** The number may well be correct. But it is an
+approved figure, not a derived one, and the distinction was invisible
+until the circularity broke.
+
+### Your decision (this supersedes the earlier three options)
+
+1. **Accept that some frozen values are approvals, not derivations.**
+   Mark them explicitly in the data so nobody later mistakes them for
+   computed figures, and exclude them from the golden regression — which
+   should only test what the engine can actually reproduce.
+2. **Re-derive PANW 2020's invested capital properly**, which means
+   resolving why its components fail — real extraction work, and it may
+   end up genuinely unresolvable.
+3. **Drop the value** and let PANW 2021's ROIC be `REVIEW_REQUIRED`,
+   losing a figure that is probably right.
+
+My recommendation is **1**: the honest description of what that number
+is. It also fixes a real weakness — a regression test that reads its own
+expected answer is not testing anything.
+
 ### Status of the coverage cleanup
 
 Halted here. Coverage remains **71.2%**. The combined-filing diagnosis
