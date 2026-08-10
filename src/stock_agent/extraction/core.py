@@ -234,6 +234,64 @@ ANNUAL_DURATION_MIN_DAYS = 350
 ANNUAL_DURATION_MAX_DAYS = 380
 
 
+# A statement role that is scoped to one entity within a combined filing
+# carries that entity's name as a trailing qualifier: " - ComEd",
+# ", Parent", " - BGE (Parentheticals)". The registrant's own consolidated
+# statement is either unqualified, or qualified with its own name.
+_ENTITY_QUALIFIER_PATTERN = re.compile(
+    r"^(?P<base>\d+\s*-\s*Statement\s*-\s*[^-,]+?)"
+    r"\s*(?:[-,]\s*(?P<qualifier>[^-,()]+?))?"
+    r"\s*(?:\((?:Parenthetical|Parentheticals)\))?\s*$",
+    re.IGNORECASE,
+)
+
+
+def _narrow_to_registrant_statements(candidates: pd.DataFrame) -> pd.DataFrame:
+    """Keeps only the registrant's own statements when a combined filing
+    repeats the same statement for several subsidiary registrants.
+
+    Two filer conventions, both resolved from the role title:
+
+      * the consolidated role is unqualified and subsidiary roles carry a
+        trailing qualifier (Constellation: `Consolidated Statements of
+        Operations` vs `..., Parent`)
+      * every role is qualified, including the parent's (Exelon:
+        `... Cash Flows - Exelon` vs `... - ComEd`)
+
+    Returns the input unchanged when the filing is not a combined one, or
+    when the titles do not settle it -- in which case the caller's
+    existing ambiguity handling fails closed, as before. This narrows
+    candidates on structural evidence; it never picks between genuine
+    alternatives.
+    """
+    if candidates.empty or candidates["role_definition"].nunique() <= 1:
+        return candidates
+
+    qualifiers: dict[str, str | None] = {}
+    for role_definition in candidates["role_definition"].unique():
+        match = _ENTITY_QUALIFIER_PATTERN.match(str(role_definition))
+        qualifiers[str(role_definition)] = (
+            (match.group("qualifier") or "").strip() or None if match else None
+        )
+
+    unqualified = [role for role, qualifier in qualifiers.items() if qualifier is None]
+    if len(unqualified) == 1:
+        return candidates[candidates["role_definition"] == unqualified[0]].copy()
+
+    # Every role qualified (the Exelon convention, where even the parent's
+    # own statement is suffixed "- Exelon"). Identifying the registrant's
+    # role needs the registrant's NAME, which this function is not given --
+    # it receives only the presentation tree. Nothing in the titles alone
+    # distinguishes "- Exelon" from "- ComEd".
+    #
+    # So this case is left unresolved on purpose: the caller's existing
+    # ambiguity handling fails closed, exactly as it did before. Solving it
+    # requires passing the registrant name down, which changes an API the
+    # golden regression covers -- see docs/CLEANUP_DECISIONS_PENDING.md,
+    # D-P1, for the scope of what is and is not fixed here.
+    return candidates
+
+
 def identify_canonical_row(
     presentation: pd.DataFrame, metric: MetricDefinition
 ) -> tuple[dict[str, str], pd.DataFrame]:
@@ -271,6 +329,12 @@ def identify_canonical_row(
     base_candidates = presentation[
         is_target_role & is_not_abstract & mentions_metric & ~is_excluded_label
     ].copy()
+
+    # NOTE: combined-filing narrowing was attempted here and REVERTED --
+    # it regressed the frozen baseline (PANW 2021-07-31
+    # average_invested_capital went PASS -> REVIEW_REQUIRED). The helper
+    # `_narrow_to_registrant_statements` is retained, unused, with the
+    # evidence; see docs/CLEANUP_DECISIONS_PENDING.md, D-P1.
 
     if base_candidates.empty:
         raise TargetRowNotFound(

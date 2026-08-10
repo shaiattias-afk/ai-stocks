@@ -69,12 +69,27 @@ EXPECTED_QUARTERLY_TOTAL_ROWS = EXPECTED_QUARTERLY_RUNS * EXPECTED_ROWS_PER_COMP
 
 
 def _load_target_company_years(prod: duckdb.DuckDBPyConnection) -> list[tuple[str, str, str]]:
+    """The 45 ORIGINAL frozen company-years, and only those.
+
+    This test guards the frozen baseline: those 900 rows must stay
+    byte-identical no matter what else changes. It originally selected
+    every company-year present in the table, which was the same thing when
+    the table held only the frozen 9 companies -- but the universe
+    expansion added 732 more, and the test then demanded that 777
+    company-years reproduce a 900-row baseline.
+
+    Scoping by engine_version is exactly right HERE (unlike in the load
+    scripts, where it silently conflated two runs of the same script):
+    the frozen rows were written by the historical engines and never by
+    the expansion loader, so the version genuinely identifies them.
+    """
     rows = prod.execute(
         """
         SELECT DISTINCT sf.ticker, sf.report_date, sf.accession_number
         FROM sec_filings sf
         JOIN extraction_runs er ON er.accession_number = sf.accession_number
         JOIN financial_metric_results fmr ON fmr.extraction_run_id = er.extraction_run_id
+        WHERE fmr.engine_version NOT LIKE '%scripts/188%'
         ORDER BY 1, 2
         """
     ).fetchall()
