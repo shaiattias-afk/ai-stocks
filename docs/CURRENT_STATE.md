@@ -1,6 +1,25 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-11 (**D-062: built and honestly out-of-sample
+**Last updated:** 2026-08-11 (**D-063: tested a 5-year hold (user
+request) and found the composite score's relationship to returns is
+NEGATIVE (-0.117) over that horizon; characterizing actual winners vs.
+losers (user's fallback instruction) found entry P/E is a real, moderate
+predictor (-0.247 correlation) — stronger than the current 9-factor
+quality score.** Sample caveat stated up front: only 133 company-years
+have a full 5-year forward price window, 109 of them FY2020 (one
+overlapping entry window near the pandemic bottom, not many independent
+periods). The worst 5-year performers (LCID, PTON, ZM, DOCU, MTCH...)
+were 2020-2021 pandemic-demand names at ~162x P/E with cash-rich
+balance sheets; the best (NVDA, AVGO, KLAC, STX...) were at ~68x.
+**Important limit**: several of the best performers (CRWD, PLTR, PANW,
+RKLB) had no computable P/E at entry (not yet profitable) — a
+naive "buy cheap P/E" rule would have excluded them. Honest overall
+read: no validated 5%/year predictor exists yet, but starting
+valuation looks like a more promising direction than continuing to
+tune the current quality/growth composite's weights. Full detail in
+`docs/DECISIONS_LOG.md` D-063.
+
+**Previous update, same day:** D-062: built and honestly out-of-sample
 tested a Scoring Model V2 candidate (train-selected factors + a new
 valuation/P-E factor) — still no measurable predictive power for
 beating Nasdaq-100.** Direct answer to "build weighted indicators that

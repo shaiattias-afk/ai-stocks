@@ -1727,3 +1727,79 @@ valuation extensions (D-057, D-058-extension, D-061) are all additive.
 No new production table for this analysis (model research, not a
 lineage-tracked fact).
 
+## D-063 — 5-year hold tested (user-requested); composite score is NEGATIVELY related to 5-year returns; entry P/E characterizes actual winners/losers better (result, user-directed: "test over 5 years back", then "characterize what worked" if still inconclusive)
+
+**Two follow-up requests, both answered directly.**
+
+**1. "Test over 5 years back"**: added CAGR-based (annualized)
+excess-return support to `predictive_analysis_v1` (identical to the
+raw 12-month figure at 12 months — verified by test — so this is a
+strict generalization, not a different metric) and re-ran the
+predictive check at a 60-month horizon.
+
+**Sample-size reality, checked before trusting anything**: a 60-month
+forward return needs 5 full years of price data past the entry date.
+With price data ending 2026-08-10, only 133 company-years qualify at
+all, and 109 of them are fiscal year 2020 (entered near the pandemic
+bottom) — one overlapping entry window, not many independent 5-year
+periods. Stated plainly rather than glossed over.
+
+**Result**: composite_score's correlation with 5-year annualized
+excess return is **-0.117 — negative**, and the highest-scoring
+quintile was the single WORST-performing bucket (-14.0% mean
+annualized excess, vs. -3% to -4.5% for the other four). The 12-month
+test (D-061/D-062) found near-zero; this longer, out-of-sample-by-
+construction window (the model's factors were never fit to this
+specific outcome at all) finds the relationship actually runs
+backward.
+
+**2. "If still no conclusion, characterize what worked"**: per the
+user's own fallback instruction, stopped trying to validate the
+composite score and instead compared the 30 best vs. 30 worst
+company-years by REALIZED 5-year annualized excess return — a
+descriptive comparison, not a predictive claim.
+
+**What characterized them**: the worst performers (LCID, PTON, ZM,
+DOCU, MTCH, ENPH, ILMN, OKTA, TTD, MRNA...) are overwhelmingly 2020–
+2021 pandemic-demand names — remote work, home fitness, EV hype,
+vaccine — averaging **P/E ~162x** at entry with net-CASH-rich balance
+sheets (`balance_sheet_strength_ratio` avg -0.68, i.e. more cash than
+debt, typical of a company freshly flush with IPO/secondary-offering
+proceeds). The best performers (NVDA, AVGO, KLAC, STX, MU, PANW,
+CRWD, PLTR, RKLB...) averaged **P/E ~68x**, with more conventional,
+more-leveraged balance sheets (avg +0.25).
+
+**Formal check**: entry-date raw P/E alone correlates **-0.247** with
+5-year annualized excess return (n=102) — negative (cheaper at entry →
+better forward return, the classical value-investing direction) and
+**clearly stronger than the composite score's own -0.117**. Raw P/E,
+a single number the current model doesn't weight into the composite
+at all in a way that helped, characterizes the actual winners/losers
+better than the 9/10-factor quality-and-growth score this project has
+built so far.
+
+**A real, important limitation of this specific finding, stated
+plainly**: several of the biggest winners — CRWD, PLTR, PANW, RKLB —
+had **no computable P/E at entry** (not yet profitable, so diluted EPS
+was ≤ 0). A strategy that simply bought the cheapest P/E would have
+**excluded some of the best performers in the whole dataset entirely**.
+Any future use of this valuation signal needs an explicit rule for
+not-yet-profitable companies (e.g. a separate growth-stage bucket, or
+a different valuation ratio such as EV/Sales that doesn't require
+positive earnings) — not a reason to ignore the finding, but a reason
+not to oversimplify it into "always buy the lowest P/E."
+
+**Honest overall conclusion**: this session did not produce a working,
+validated 5%/year-beats-Nasdaq predictor. It DID produce a real,
+economically coherent, characterizable pattern — starting valuation,
+not current quality/growth-factor scoring, appears to be the more
+important variable in this dataset — worth pursuing directly (build a
+proper valuation-tiered model, decide how to handle unprofitable
+growth companies, and test on more independent time windows once more
+price history exists) rather than continuing to tune the current
+9/10-factor composite's weights.
+
+Both scripts (`scripts/200`, `scripts/201`) are read-only; no
+production table (model research, not a lineage-tracked fact). 2 new
+tests for the annualization logic.
+
