@@ -1,7 +1,52 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-11 (**D-056: the coverage-cleanup improvement
-is now LIVE IN PRODUCTION**, not just measured. `financial_metric_
+**Last updated:** 2026-08-11 (**Scoring Model V1 built, loaded, and
+backtested — the project's first real scoring/decision layer, not just
+a data-extraction pipeline.** Executes `docs/SCORING_MODEL_V1_
+BLUEPRINT.md` Stage 3–6 for the 9-company/45-company-year frozen
+universe. Full detail in `docs/DECISIONS_LOG.md` D-057 through D-060.
+
+1. **D-057 — Scoring Model V1** (`src/stock_agent/scoring/inputs_v1.py`
+   + `composite_v1.py`): the blueprint's 9 quality/growth factors,
+   combined into a 0–100 composite via within-fiscal-year percentile
+   rank. A real, pre-existing data bug was found and fixed via a small
+   proof before scaling to all 45 company-years: `sec_filings.
+   prior_report_date` is off by one day for every non-first fiscal year
+   of MU and NVDA. Loaded to `scoring_inputs_v1` / `scoring_composite_v1`
+   (45 rows each).
+2. **D-058 — Entry Price Method 1** (`entry_price_v1.py`): each fiscal
+   year's own P/E vs. its own trailing P/E history. Supersedes the
+   blueprint's own "blocked on shares outstanding" assessment — D-046
+   (already on record) had already unblocked this via diluted EPS
+   directly, unrecognized until this session re-read both documents
+   together. Loaded to `entry_price_v1` (45 rows, 37 resolved).
+3. **D-059 — QQQ (Nasdaq-100 benchmark)** loaded into the existing
+   `historical_prices_daily` table via the same Historical Price Policy
+   V1 pipeline (D-044) already proven on the 9 approved tickers.
+4. **D-060 — First backtest run**: top-3-by-score beat QQQ on average
+   at every horizon (6/12/24/36mo), but **did NOT reliably beat
+   bottom-3 within the same universe** — the spread is negative in most
+   fiscal years. Combined with the 9-company universe being a
+   hand-picked, not point-in-time-selected, watchlist, **the positive
+   excess-return numbers are better explained by survivorship bias than
+   by validated stock-picking skill.** Stated prominently in the
+   backtest module's own docstring, not buried in a report.
+
+**Explicit next step, not attempted this session**: rerun Scoring Model
+V1 + the backtest against the survivorship-free ~150-company universe
+already loaded from an earlier session (D-051–D-056), to find out
+whether the top-minus-bottom spread problem is a small-sample artifact
+of 9 hand-picked companies or a genuine gap in the current 9 factors.
+
+**Verification**: 179 fast tests pass (0 regressions). Every write went
+through the append-only guard with a backup taken first and independent
+post-write verification. Nothing in `src/stock_agent/extraction`,
+`policies`, or `metrics` (the golden-regression-covered engine) was
+touched this stage — only new, additive `src/stock_agent/scoring/`
+modules and new production tables.
+
+**Previous update, same day:** D-056: the coverage-cleanup improvement
+is now LIVE IN PRODUCTION, not just measured. `financial_metric_
 results` grew 15,540 → 30,180 (+14,640, a new `v3-vocabulary-cleanup`
 engine version for exactly the 732 accessions scripts/188 had loaded);
 the 900 frozen rows and every other pre-existing row confirmed present

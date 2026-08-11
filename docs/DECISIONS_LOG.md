@@ -1389,3 +1389,148 @@ Backup taken before the write:
 
 This is a load result, not a new policy or engine change.
 
+## D-057 — Scoring Model V1 built and loaded per the existing blueprint (approved, user-directed: "enter option B, build work that runs unattended")
+
+Implements `docs/SCORING_MODEL_V1_BLUEPRINT.md` Stage 3 exactly (no
+weights or formulas invented fresh — the blueprint itself, an
+already-existing planning document, specified all 9 factors and their
+20/15/10/15/10/10/5/5/10... weights before this session began). New
+package `src/stock_agent/scoring/`:
+
+- `inputs_v1.py` — the 9 raw factors (revenue growth, ROIC level/trend,
+  operating margin, FCF growth/margin, balance-sheet strength ratio,
+  CapEx discipline, distance from high), each read only from
+  already-frozen, point-in-time-gated data (Annual Data V1, Derived
+  Metrics V1, Historical Prices V1) — no new extraction, no external
+  data. A factor genuinely unavailable (e.g. a ticker's first fiscal
+  year, no prior year to compute growth against) is `None`, never
+  fabricated.
+- `composite_v1.py` — combines the 9 factors into one 0–100 score via
+  continuous percentile rank **within the same fiscal year** (never
+  across years), weights renormalized over only the factors actually
+  available for a given company-year rather than scoring a missing one
+  as 0.
+
+**A real bug found and fixed before scaling past the small proof**
+(per CLAUDE.md's own discipline — proof on 3 companies before the full
+45): `sec_filings.prior_report_date` is off by one calendar day for
+every non-first fiscal year of MU and NVDA (8 of 45 rows) — a
+pre-existing data quirk, not something this session introduced. An
+exact-match lookup keyed on it silently found nothing and produced a
+false `NO_PRIOR_YEAR`/`REVIEW_REQUIRED` for 4 of the 9 factors on those
+company-years. Fixed by deriving the prior year the same way
+`metrics.annual.compute_full_company_year` already does —
+`production_lookup.prior_report_date_for` across the ticker's own known
+dates — never the unreliable stored column.
+
+**Manual plausibility review** (blueprint Stage 6 step 4's own success
+criterion) across all 45 company-years found no unexplained anomaly:
+NVDA scores highest in FY2024 (93.8/100 — the AI-boom year), Micron
+lowest in FY2023 (4.4/100 — the memory-industry downturn year), both
+matching public knowledge independently of this project's own data.
+
+**Loaded** into two new production tables, `scoring_inputs_v1` and
+`scoring_composite_v1` (45 rows each, 9 distinct tickers, 0 duplicate
+keys), via the write guard, backed up first, independently re-verified
+after. 12 new tests. Full detail: this commit's own message and
+`data/scoring_model_v1_load_result.json`.
+
+## D-058 — Entry Price Method 1 built and loaded; supersedes the blueprint's own "blocked on shares outstanding" assessment (approved, same directive)
+
+Implements `docs/SCORING_MODEL_V1_BLUEPRINT.md` Stage 4 Method 1: each
+fiscal year's own P/E (that year's own filing-date price ÷ that year's
+own as-reported diluted EPS), positioned against the SAME company's own
+trailing (up to 5-year) P/E history. No peer comparison, no external
+estimate, no hard-coded buy/entry threshold — the percentile position
+is reported as data, not a trading signal.
+
+**The blueprint's own Stage 6 step 1 ("extend XBRL extraction to add
+diluted weighted-average shares outstanding — the single highest-
+leverage next step") turns out to be unnecessary for this method.**
+D-046, a decision already on record before this session, resolved
+reported diluted EPS directly for all 45 company-years from each
+filing's own per-share fact — a share count was only ever a transient
+cross-check during that resolution, never a required stored input.
+P/E = price ÷ diluted_eps needs no shares count at all. This was not
+recognized until this session re-read D-046 while re-reading the
+blueprint it was itself written to support.
+
+**Reuses D-046's own measured pitfall as a hard rule**: diluted EPS is
+always as-reported, never retroactively split-adjusted, so this module
+reads `nominal_close` only, never `close`. Verified by independently
+reproducing D-046's own already-validated MSFT (35.84) and NVDA (56.56)
+P/E figures exactly, and by correctly handling GOOGL's 2021 pre-split
+diluted EPS (112.20, vs. 4.56–10.81 in adjacent post-split years)
+without distortion.
+
+**Loaded** into a new production table, `entry_price_v1` (45 rows, 37
+with a resolved P/E — 8 correctly `UNDEFINED_NONPOSITIVE_EPS` for
+loss-making fiscal years, never guessed). 5 new tests. Full detail in
+`data/entry_price_v1_load_result.json`.
+
+## D-059 — QQQ (Nasdaq-100 benchmark) loaded, closing blueprint Stage 5 gap #4 (approved, same directive)
+
+Loads QQQ (the Nasdaq-100 tracking ETF) into the existing
+`historical_prices_daily` table (a new ticker value, not a new table)
+via the exact same Historical Price Policy V1 pipeline (D-044) already
+proven on the 9 approved tickers — same free Yahoo source, same Rule
+A/C reconstruction, no new provider, no signup. 1,659 rows,
+2020-01-02 → 2026-08-10, no splits found.
+
+QQQ (the ETF) was chosen over `^NDX` (the raw index) deliberately: an
+index cannot itself be bought or held, and "excess return over
+Nasdaq-100" (the user's stated goal for this project stage) can only
+mean something concrete against an investable alternative — QQQ's own
+expense ratio and tracking difference are the honest cost of that,
+not a reason to prefer an un-investable figure that would silently
+overstate what a real comparison portfolio could have earned.
+
+Full detail in `data/nasdaq100_benchmark_load_result.json`.
+
+## D-060 — Scoring Model V1's first backtest run: real result, with a prominent survivorship-bias caveat (result, not a new policy)
+
+Implements `docs/SCORING_MODEL_V1_BLUEPRINT.md` Stage 6 step 5:
+`stock_agent.scoring.backtest_v1` ranks each fiscal year's companies by
+`scoring_composite_v1`'s composite score, "enters" the top-3 and
+bottom-3 at their own filing_date, and measures forward return at
+6/12/24/36-month horizons against QQQ over the exact same dates
+(`adj_close` used consistently for entry and exit — the correct total-
+return basis, distinct from Entry Price V1's `nominal_close`).
+
+**Result** (`data/scoring_model_v1_backtest_result.json`): top-3 beat
+QQQ on average at every horizon — mean excess return 9.1% (6mo) /
+15.8% (12mo) / 42.5% (24mo) / 97.0% (36mo), hit rate 67%–100% across
+4–6 independent annual entry points.
+
+**The load-bearing caveat, stated in the backtest module's own
+docstring before any number, not buried in a report**: **top-3 did NOT
+reliably beat bottom-3 within the same universe** — the spread is
+negative in most fiscal years (e.g. FY2023 36mo: top +257% vs. bottom
++729%; FY2022 12mo: top +19.6% vs. bottom +100.0%). Combined with the
+9-company universe being a hand-picked watchlist of already-successful
+companies (`docs/PROJECT_CONTEXT.md`), not a point-in-time-selected
+one, **the positive excess-return numbers are better explained by
+survivorship bias in which 9 companies were ever in this dataset than
+by validated evidence that Scoring Model V1's factors themselves pick
+winners.** This is exactly the CLAUDE.md-mandated warning against
+survivorship bias, applied to a real result rather than left as a
+generic caveat.
+
+**Deliberately not built, and why**: no compounded multi-year equity
+curve (each fiscal-year entry is reported as an independent
+observation — overlapping holding periods were not given the careful
+handling a true continuous curve requires); no max-drawdown or
+volatility figure (both need a genuinely continuous daily-return path,
+which 4–6 independent annual points cannot honestly provide).
+
+**The obvious next step, not attempted this session**: rerun Scoring
+Model V1 and this backtest against the survivorship-free ~150-company
+universe already loaded in production from an earlier session
+(D-051–D-056) — the only way to find out whether the top-minus-bottom
+spread problem is a small-sample artifact of 9 hand-picked companies,
+or a genuine sign the current 9 factors don't yet differentiate
+winners from losers.
+
+8 new tests. Read-only script (`scripts/195`) — no production table,
+matching this project's existing pattern for exploratory result JSON.
+
