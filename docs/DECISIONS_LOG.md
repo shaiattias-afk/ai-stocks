@@ -1534,3 +1534,106 @@ winners from losers.
 8 new tests. Read-only script (`scripts/195`) — no production table,
 matching this project's existing pattern for exploratory result JSON.
 
+## D-061 — Scoring Model V1 extended to the full universe; the composite score shows no measurable predictive power there (result, user-directed: "extend to 152 companies, find concrete conclusions")
+
+**Two prerequisite fixes, before the extension could be trusted:**
+
+1. `revenue_growth`/`operating_margin` (Scoring Inputs V1) previously
+   read `derived_metric_results` (Derived Metrics V1, D-043), frozen at
+   exactly the original 9 tickers. Recomputed directly from
+   `financial_metric_results` instead (same formulas D-043 used) so
+   the model works universe-wide. Verified before trusting: 88 of 90
+   (factor, company-year) pairs for the original 9 tickers match
+   D-043's stored values exactly; the 2 differences are a genuine
+   improvement (MU/PANW's first frozen year now resolves `revenue_
+   growth` from a supplementary accession D-043's narrower scope never
+   reached), not a regression.
+2. Extended `scoring_inputs_v1`/`scoring_composite_v1` to the 732
+   company-years not already covered by the frozen 45 (`scripts/196`)
+   — appended, the original 45 rows untouched. Data quality here is
+   genuinely lower than the frozen 9 (mean `weight_covered` 60% vs.
+   ~90%+), a real, expected consequence of the wider universe's own
+   ~79% metric-level coverage (D-051–D-056), not a bug — every row
+   still states exactly how much of the full weighting it rests on.
+
+**The predictive-power question, answered directly** (`scripts/197`,
+`stock_agent.scoring.predictive_analysis_v1`): does `composite_score`
+predict beating QQQ by ≥5% over the next 12 months, tested on the full,
+survivorship-free universe rather than the 9-company hand-picked one
+D-060's backtest used?
+
+**No, essentially not.** Spearman rank correlation between
+`composite_score` and 12-month excess return: **-0.022** (all 613
+resolvable company-years) / **-0.041** (262 company-years with
+`weight_covered ≥ 70%`, the higher-confidence subset) — indistinguishable
+from zero. Decile buckets are not monotonic: in the quality subset, the
+**lowest**-scoring quintile had the **highest** mean excess return
+(+11.8%), not the highest-scoring one. This directly confirms, with
+measured evidence rather than a generic caveat, D-060's survivorship-
+bias warning — the 9-company backtest's apparent outperformance is
+attributable to which 9 companies were ever in that dataset, not to
+the scoring methodology picking winners.
+
+**No individual factor shows strong standalone signal either**
+(strongest: `capex_discipline_deviation`, +0.11 in the quality subset —
+still weak). One result is a genuine, explainable finding rather than
+noise: `balance_sheet_strength_ratio` correlates **negatively** with
+excess return (-0.12 to -0.15) — the OPPOSITE of the factor's own
+assumption (lower leverage = better). In this specific 2020–2026
+window (COVID recovery, 2022 rate-hike bear market, 2023–2025 AI boom),
+more-leveraged, growth-oriented companies tended to outperform more
+conservative ones. This may be a real regime effect (leverage/growth
+factors are well documented to invert across macro regimes in the
+broader factor-investing literature) rather than a flaw in the ratio
+itself — but it is not evidence the ratio works as intended over this
+window.
+
+**Concrete conclusions:**
+
+1. **Scoring Model V1, as currently weighted, should not be trusted to
+   pick market-beating stocks yet.** The positive-looking 9-company
+   backtest (D-060) was misleading on its own; this wider test is the
+   one that matters, and it shows no measurable edge.
+2. **The model has no valuation dimension at all** — all 9 factors are
+   quality/growth/risk, zero are "is this cheap for what it is."
+   Equity-factor research consistently finds valuation-at-a-reasonable-
+   quality combinations outperform pure quality alone; Entry Price V1's
+   P/E-vs-own-history percentile (D-058) already exists for the
+   original 9 tickers and was never tested here as a candidate factor.
+   **Recommended next step**: extend diluted-EPS resolution (D-046's
+   method) to the wide universe, add a valuation factor to the
+   composite, and rerun this same predictive-power analysis to see if
+   it moves the correlation.
+3. **The weights (20/15/10/15/10/10/10/5/5) came from the blueprint's
+   own a priori reasoning, never calibrated against actual predictive
+   power** — this analysis is the first time they were checked against
+   real outcomes. Re-weighting toward the (weakly) positive factors
+   and away from the negative/zero ones is tempting but **must not be
+   done directly on this same dataset** — that would be in-sample
+   curve-fitting on the exact data just used to diagnose the problem,
+   precisely what CLAUDE.md's overfitting warning exists to prevent.
+   Any reweighting needs a genuine out-of-sample split (fit on one
+   period, test on another) before being trusted.
+4. **No sector-neutrality and no regime control** — factors are ranked
+   against the WHOLE universe regardless of industry, and the entire
+   test window sits inside one unusual macro regime. Both are
+   candidate explanations for the weak correlations that a longer
+   history or a sector-relative ranking (already flagged as
+   out-of-scope for V1 in the blueprint) could help distinguish from a
+   genuinely broken model.
+5. **A real, separate data gap surfaced along the way**: 10 tickers
+   (ATVI, SPLK, CERN, XLNX, ANSS, MXIM, ALXN, SGEN, WBA, FI) have no
+   `historical_prices_daily` rows at all — several are exactly the
+   kind of acquired/delisted companies a survivorship-free backtest
+   most needs (Activision, Splunk, Cerner, Xilinx, ANSYS, Maxim,
+   Alexion, Seagen were all acquisition targets in this window). They
+   are silently excluded from every return-based number above,
+   reintroducing a mild survivorship bias this analysis does not
+   correct. This is the same delisted-company price-history gap
+   already tracked as pending (EODHD signup) — not solved here.
+
+Nothing production-frozen was changed. `scoring_inputs_v1`/`scoring_
+composite_v1` grew by 732 rows (appended, D-057's original 45
+untouched); no new production table for the analysis itself (matches
+this project's pattern for exploratory result JSON).
+

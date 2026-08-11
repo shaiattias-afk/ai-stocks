@@ -1,6 +1,24 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-11 (**Scoring Model V1 built, loaded, and
+**Last updated:** 2026-08-11 (**D-061: Scoring Model V1 extended to the
+full ~150-company universe — and, tested honestly there, its composite
+score shows NO measurable ability to predict which stocks beat Nasdaq-
+100.** Spearman correlation between `composite_score` and 12-month
+excess return vs. QQQ: -0.02 to -0.04 (essentially zero), confirming
+with real evidence that D-060's positive-looking 9-company backtest was
+an artifact of that universe's survivorship bias, not genuine skill.
+Full concrete conclusions and recommended next steps — add a valuation
+factor (Entry Price V1's P/E, never tested as a model input), do NOT
+reweight on this same in-sample data, add sector-neutrality, close the
+10-ticker delisted-company price gap — are in `docs/DECISIONS_LOG.md`
+D-061. Two prerequisite fixes made this trustworthy: `revenue_growth`/
+`operating_margin` no longer depend on the frozen-9-only Derived
+Metrics V1 table (verified 88/90 exact match before switching), and
+`scoring_inputs_v1`/`scoring_composite_v1` grew by 732 rows (D-057's
+original 45 untouched). 33 new tests this stage (186 total, 0
+regressions).
+
+**Previous update, same day:** Scoring Model V1 built, loaded, and
 backtested — the project's first real scoring/decision layer, not just
 a data-extraction pipeline.** Executes `docs/SCORING_MODEL_V1_
 BLUEPRINT.md` Stage 3–6 for the 9-company/45-company-year frozen
