@@ -61,7 +61,31 @@ SUPPLEMENTARY_ACCESSIONS = {
 }
 
 EXPECTED_TARGET_COMPANY_YEARS = 45
-EXPECTED_ANNUAL_COMPARED_PAIRS = 45 * 20  # 900
+
+# PANW 2021-07-31's average_invested_capital (and the roic that combines it
+# with nopat) are APPROVED VALUES, not values today's engine can re-derive.
+# D-P3 (docs/CLEANUP_DECISIONS_PENDING.md) traced why: average_invested_
+# capital needs PANW 2020-07-31's own invested_capital, and D-P3's option B
+# (metrics/annual.py's compute_full_company_year) now ALWAYS recomputes
+# that prior year from the filings rather than reading a stored production
+# value. PANW 2020-07-31 genuinely cannot be resolved from its own filing
+# by the current engine, so the honest recomputation reports
+# REVIEW_REQUIRED. The frozen 698,750,000 rests on D-027 item 7, which
+# permitted reusing the prior filing's own previously-approved result --
+# valid when made, but not reproducible from the filings alone.
+#
+# D-P3 option 1 (ratified, see docs/DECISIONS_LOG.md D-051): accept that
+# this frozen value is an approval, not a derivation, and exclude it from a
+# regression test that should only cover what the engine can actually
+# reproduce -- comparing it here would either force a permanent, silent
+# REVIEW_REQUIRED mismatch or tempt a future change that fakes
+# reproducibility just to make the test pass.
+APPROVED_NOT_REPRODUCIBLE = {
+    ("PANW", "2021-07-31", "average_invested_capital"),
+    ("PANW", "2021-07-31", "roic"),
+}
+
+EXPECTED_ANNUAL_COMPARED_PAIRS = 45 * 20 - len(APPROVED_NOT_REPRODUCIBLE)  # 898
 
 EXPECTED_QUARTERLY_RUNS = 45
 EXPECTED_ROWS_PER_COMPANY_YEAR = 24
@@ -138,6 +162,11 @@ def test_annual_golden_regression_900_rows_byte_identical():
             live_rows = _load_live_annual_rows(production, accession_number)
 
             for metric_name in ALL_20_METRIC_NAMES:
+                if (ticker, report_date, metric_name) in APPROVED_NOT_REPRODUCIBLE:
+                    # An approved value, not a derivation -- see
+                    # APPROVED_NOT_REPRODUCIBLE's definition above.
+                    continue
+
                 live = live_rows.get(metric_name)
                 if live is None:
                     # Supplementary accessions carry no ground-truth row by

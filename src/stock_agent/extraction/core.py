@@ -62,25 +62,37 @@ class MetricDefinition:
     plain_pattern: str
 
 
+# Excludes a role titled e.g. "Statement of Comprehensive Income" (a
+# separate statement some filers add alongside the income statement,
+# starting from net income and adding OCI items -- not a source of
+# revenue/net_income/operating_income/pretax_income/income_tax_expense).
+# Deliberately does NOT exclude a role that names BOTH words, e.g.
+# "Consolidated Statements of Operations and Comprehensive Income" -- a
+# common single combined statement (measured: CEG, EXC) -- which used to
+# be excluded entirely by a bare "comprehensive" match, leaving these five
+# metrics with zero candidate rows for every filer using that convention.
+COMPREHENSIVE_STANDALONE_EXCLUDE_PATTERN = r"^(?!.*operations).*comprehensive"
+
+
 BUILT_IN_METRICS: dict[str, MetricDefinition] = {
     # "net revenue(s)" added from measured filer wording (AMAT, AMD, ALGN,
     # ALNY, ATVI). Bare "sales" is deliberately NOT accepted -- it appears
     # on segment and product lines too, where it would be ambiguous.
     "revenue": MetricDefinition(
-        "revenue", r"operations|income", r"comprehensive",
+        "revenue", r"operations|income", COMPREHENSIVE_STANDALONE_EXCLUDE_PATTERN,
         r"revenues?|net\s+sales", None, None,
         r"^\s*(?:total\s+)?(?:net\s+)?revenues?\s*$"
         r"|^\s*(?:total\s+)?net\s+sales\s*$",
     ),
     "net_income": MetricDefinition(
-        "net_income", r"operations|income", r"comprehensive",
+        "net_income", r"operations|income", COMPREHENSIVE_STANDALONE_EXCLUDE_PATTERN,
         r"net\s+(?:income|loss)", r"per\s+share|weighted\s+average",
         r"attributable\s+to.*(?:common|stockholders|shareholders|"
         r"corporation|company|\binc\.?\b|\bcorp\.?\b)",
         r"^\s*net\s+(?:income\s*\(loss\)|income|loss)\s*$",
     ),
     "operating_income": MetricDefinition(
-        "operating_income", r"operations|income", r"comprehensive",
+        "operating_income", r"operations|income", COMPREHENSIVE_STANDALONE_EXCLUDE_PATTERN,
         r"operating\s+(?:income|loss)|"
         r"(?:income|loss)\s*(?:\(loss\)|\(income\))?\s*from\s+operations",
         r"per\s+share|weighted\s+average|margin|percentage", None,
@@ -212,7 +224,7 @@ BUILT_IN_METRICS: dict[str, MetricDefinition] = {
     # expense" as an ending, and "provision for (benefit from)" -- all
     # from measured wording (ALGN, AEP, AMD).
     "pretax_income": MetricDefinition(
-        "pretax_income", r"operations|income", r"comprehensive",
+        "pretax_income", r"operations|income", COMPREHENSIVE_STANDALONE_EXCLUDE_PATTERN,
         r"(?:income|loss)\s*(?:\(loss\))?\s*before.*tax", None, None,
         r"^\s*(?:net\s+)?(?:income|loss)\s*(?:\(loss\))?\s*before\s+"
         r"(?:(?:provision\s+for|benefit\s+from|"
@@ -220,7 +232,7 @@ BUILT_IN_METRICS: dict[str, MetricDefinition] = {
         r"income\s+tax(?:es|\s+expense|\s+provision)?(?:\s+and\s+.*)?\s*$",
     ),
     "income_tax_expense": MetricDefinition(
-        "income_tax_expense", r"operations|income", r"comprehensive",
+        "income_tax_expense", r"operations|income", COMPREHENSIVE_STANDALONE_EXCLUDE_PATTERN,
         r"(?:provision|benefit).*income\s+tax|"
         r"income\s+tax.*(?:provision|expense|benefit)", None, None,
         r"^\s*(?:provision|benefit)\s+(?:for|from)\s+income\s+tax(?:es)?\s*$"
@@ -330,11 +342,15 @@ def identify_canonical_row(
         is_target_role & is_not_abstract & mentions_metric & ~is_excluded_label
     ].copy()
 
-    # NOTE: combined-filing narrowing was attempted here and REVERTED --
-    # it regressed the frozen baseline (PANW 2021-07-31
-    # average_invested_capital went PASS -> REVIEW_REQUIRED). The helper
-    # `_narrow_to_registrant_statements` is retained, unused, with the
-    # evidence; see docs/CLEANUP_DECISIONS_PENDING.md, D-P1.
+    # Combined filings (utility holding companies filing one 10-K that
+    # covers the parent AND every subsidiary registrant) repeat the same
+    # statement for each registrant under its own role. D-P1 (docs/
+    # CLEANUP_DECISIONS_PENDING.md): the approved figures are the
+    # registrant's own consolidated statements, as presented -- not any
+    # subsidiary's. `_narrow_to_registrant_statements` is a no-op unless
+    # `base_candidates` already spans more than one distinct role, so it
+    # never touches a single-registrant filing.
+    base_candidates = _narrow_to_registrant_statements(base_candidates)
 
     if base_candidates.empty:
         raise TargetRowNotFound(

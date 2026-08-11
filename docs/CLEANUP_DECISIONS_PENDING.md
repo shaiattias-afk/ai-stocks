@@ -1,5 +1,16 @@
 # Cleanup — decisions awaiting your sign-off
 
+> **2026-08-11 update: D-P1, D-P2, and D-P3 are all resolved.** Formal
+> decisions recorded as `docs/DECISIONS_LOG.md` D-051 (D-P3), D-052
+> (D-P1), D-053 (two further defects found while verifying D-P1 — the
+> `comprehensive` role-exclude bug and a `current_debt` exception-
+> isolation gap), D-054 (D-P2, implemented as a component aggregator,
+> not the literal label match originally asked about), and D-055 (the
+> resulting full-universe re-measurement: 74.36% → 79.86%, zero
+> unintended regressions). The section-by-section history below is left
+> as-is — it is the evidence trail these decisions were made from, not
+> superseded text.
+
 Collected during the extraction cleanup so the work could run without
 interruption. **Nothing here has been treated as approved.** Each entry
 states what was found, what was done (if anything), and what needs your
@@ -18,7 +29,13 @@ Two categories:
 
 ## D-P1 — Combined filings: which entity's numbers are "the company's"?
 
-**Status: ATTEMPTED, REVERTED — NEEDS A DECISION AND A SAFER DESIGN**
+**Status: RESOLVED — see DECISIONS_LOG.md D-052.** The "REVERTED"
+finding below was itself a misdiagnosis (D-P3 already retracts it, see
+that section's own update) — re-implemented and verified safe. Fixes
+the `identify_canonical_row`-based metrics for the Constellation-style
+combined-filing convention; does NOT fix Exelon's "every role qualified"
+convention or the separate multi-instrument current_debt gap (D-052 has
+the full evidence for both).
 
 > **Update after testing.** The fix below was implemented and then
 > **backed out**: it regressed the frozen baseline. PANW 2021-07-31's
@@ -86,7 +103,13 @@ require a separate treatment for groups with material minority interests.
 
 ## D-P2 — Utility capital spending labelled as acquisitions
 
-**Status: PARKED, NOT IMPLEMENTED**
+**Status: RESOLVED — see DECISIONS_LOG.md D-054.** Implemented as a
+GAAP-concept-based component aggregator, not the literal label match
+this section originally asked about — evidence showed AEP's dominant
+capex line ("Construction Expenditures") isn't reachable by any label
+wording, and a label-only fix for "Generation Facilities" alone would
+have produced a confidently-wrong, understated `PASS` rather than a
+correct number.
 
 American Electric Power labels its capital expenditure
 `Acquisitions of Assets` and `Acquisitions of Generation Facilities` —
@@ -107,7 +130,11 @@ it unilaterally.
 
 ## D-P3 — Loading new companies changed the result of an OLD computation
 
-**Status: FOUND, NOT FIXED — this one needs your decision before anything else**
+**Status: RESOLVED — see DECISIONS_LOG.md D-051.** Option 1 (below) was
+taken: the golden regression now explicitly excludes PANW 2021-07-31's
+`average_invested_capital`/`roic` as approved-not-reproducible values,
+with the exclusion named and documented in the test itself rather than
+silently comparing them against themselves.
 
 ### What happened
 
@@ -220,7 +247,12 @@ expected answer is not testing anything.
 
 ### Status of the coverage cleanup
 
-Halted here. Coverage remains **71.2%**. The combined-filing diagnosis
-(D-P1) is solid and worth acting on, but nothing further should be
-changed in the extraction engine until this coupling is settled --
-otherwise there is no trustworthy baseline to test any fix against.
+**No longer halted — see DECISIONS_LOG.md D-051 through D-055.** The
+coupling was settled (D-051), D-P1 and D-P2 were implemented and
+verified against the now-honest baseline (D-052/D-054), two further
+defects were found and fixed along the way (D-053), and re-measuring
+the full universe moved coverage from 74.36% to **79.86%** with zero
+unintended regressions (D-055). The vocabulary loop continues from
+there — D-055 lists what's still open (Exelon's "every role qualified"
+convention, the multi-instrument current_debt gap, and the remaining
+~20% of REVIEW_REQUIRED rows, not yet diagnosed).

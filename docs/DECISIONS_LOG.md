@@ -1089,3 +1089,241 @@ This decision was given directly by the user in a live conversation; it
 still requires the user's explicit sign-off to change or extend
 further.
 
+## D-051 — D-P3 ratified: some frozen values are approvals, not derivations; the golden regression must only test what the engine can reproduce (approved, user-directed)
+
+**Ratifies D-P3's option 1** (docs/CLEANUP_DECISIONS_PENDING.md, the
+recommended option). PANW 2021-07-31's `average_invested_capital`
+(698,750,000, `PASS`) and the `roic` combined from it rest on D-027 item
+7 — reuse of the prior filing's own previously-approved result — not on
+a calculation today's engine (D-P3 option B: prior-year invested_capital
+is always recomputed from the filings, never read from production) can
+redo, because PANW 2020-07-31's own `invested_capital` is a real,
+unresolved extraction gap (a D-017 zero-inference failure on an
+unclaimed `us-gaap:ConvertibleDebtNoncurrent` candidate — confirmed by
+direct recomputation, nothing to do with combined filings).
+
+**Implemented in `tests/test_golden_regression.py`**: a named,
+documented `APPROVED_NOT_REPRODUCIBLE` set — currently exactly
+`{(PANW, 2021-07-31, average_invested_capital), (PANW, 2021-07-31,
+roic)}` — is excluded from the annual comparison loop, and
+`EXPECTED_ANNUAL_COMPARED_PAIRS` is derived from it (900 − 2 = 898)
+rather than hard-coded, so the test's own arithmetic stays honest if the
+set ever changes. No production data was modified — the frozen
+`financial_metric_results` row for these two metrics is untouched,
+still exactly 698,750,000 / `PASS`. Only the test's claim about what it
+verifies changed: it no longer silently compares a passthrough value
+against itself for these two cells.
+
+**Verification**: `test_annual_golden_regression_900_rows_byte_identical`
+passes — 898/898 pairs byte-identical, read-only, independently
+re-run by the orchestrating session, not merely trusted on report.
+
+## D-052 — D-P1 ratified and safely re-implemented: combined filings use the registrant's own consolidated statements (approved, user-directed)
+
+**Ratifies D-P1's decision** (docs/CLEANUP_DECISIONS_PENDING.md): for a
+combined filing (a utility holding company's 10-K covering the parent
+and its subsidiary registrants), the figures that represent "the
+company" are the registrant's own consolidated statements, never a
+subsidiary's.
+
+**The earlier "REVERTED" status was itself a misdiagnosis, now
+corrected.** D-P1's own text records this fix being backed out after
+appearing to regress PANW 2021-07-31's `average_invested_capital`
+(`PASS` → `REVIEW_REQUIRED`) — but D-P3's later, more careful diagnosis
+explicitly retracts that: "I first assumed my combined-filing fix caused
+it and reverted that fix. The failure persisted... the diagnosis I gave
+at the time was wrong." The real cause was the D-P3 prior-year-lookup
+circularity (see D-051), unrelated to statement-role selection. This was
+independently re-confirmed this session: PANW's own presentation tree
+carries no role duplication for any metric this fix touches (checked
+directly for `cash_and_equivalents`/`short_term_investments`/
+`stockholders_equity` on both PANW 2020-07-31 and 2021-07-31 — each
+resolves to exactly one role).
+
+**Implemented**: `_narrow_to_registrant_statements` (already written,
+previously retained unused) is now wired into
+`extraction/core.py`'s `identify_canonical_row`, narrowing
+`base_candidates` before the tier-A/tier-B row selection. It is a no-op
+whenever candidates already span at most one distinct role (i.e. every
+single-registrant filing, including all of the frozen 45), so it can
+only ever change behavior for a genuine multi-role combined filing.
+
+**What this fix does and does not reach, measured directly against
+Exelon/Constellation** (not assumed): it resolves the
+`identify_canonical_row`-based simple metrics (revenue, net_income,
+operating_income, pretax_income, income_tax_expense, cash_and_
+equivalents, short_term_investments, stockholders_equity) for any
+combined filing whose registrant role is identifiable from the title
+alone (the Constellation "unqualified vs. `, Parent`" convention). It
+does **not** resolve two separately-diagnosed problems it was tempting
+to conflate with it:
+1. Exelon's filings (2023 onward) use the convention where **every**
+   role is qualified, including the parent's own ("... - Exelon" vs.
+   "... - ComEd") — `_narrow_to_registrant_statements`'s own docstring
+   already documents this as unresolved by design (needs the
+   registrant's legal name, not just role titles); confirmed unchanged
+   by this fix.
+2. The `current_debt`/`total_debt`/`cash`/`equity` family's "multiple
+   ancestry-classified current-debt candidates" failure on both
+   Constellation (single-registrant filing, no role duplication at all)
+   and Exelon is a **different, genuine multi-instrument-debt
+   classification gap** (measured: Constellation legitimately reports 3
+   distinct current-debt line items — "Long-term debt due within one
+   year", "Borrowings from money pool with Exelon", "Short-term
+   borrowings" — with no shared calculation/sibling grouping to sum
+   them by), not a combined-filing artifact. An attempt to extend the
+   registrant-narrowing fix into this path
+   (`resolve_debt_classification_by_ancestry_from_warehouse`) was
+   prototyped and measured to make **zero difference** for either
+   company (confirmed: identical candidate counts and identical error
+   before/after), so it was reverted rather than kept as dead code.
+
+**Verification**: fast suite unaffected (110→148 unrelated to this
+change); `test_annual_golden_regression_900_rows_byte_identical` and
+`test_quarterly_golden_regression_1080_rows_reproduced` both pass with
+this fix live (both engines share `identify_canonical_row`/
+`BUILT_IN_METRICS`).
+
+## D-053 — Two further engine defects found and fixed while verifying D-P1 (approved, user-directed: "fix now")
+
+Found during direct measurement of D-P1's actual effect on Exelon/
+Constellation, not part of D-P1/D-P2/D-P3's original scope, but clearly
+in-scope for "continue the vocabulary loop":
+
+**1. The `comprehensive` role-exclude pattern rejected combined
+income-statement titles wholesale.** `revenue`, `net_income`,
+`operating_income`, `pretax_income`, and `income_tax_expense` all
+excluded any statement role whose title contained "comprehensive" — added
+to avoid picking up a filer's *separate* "Statement of Comprehensive
+Income". Measured: Constellation and Exelon (and, per a direct count
+against the wider universe, hundreds of other REVIEW_REQUIRED rows
+project-wide) title their PRIMARY income statement "...Statements of
+Operations **and** Comprehensive Income" — a single common combined
+statement, not a separate one — so the exclusion left these five metrics
+with **zero** candidate rows, independent of any combined-filing
+ambiguity.
+
+Fixed with `COMPREHENSIVE_STANDALONE_EXCLUDE_PATTERN =
+r"^(?!.*operations).*comprehensive"` (`extraction/core.py`), applied to
+all five metrics in place of the bare `r"comprehensive"`: excludes a role
+only when it contains "comprehensive" **without** also containing
+"operations" anywhere — i.e. only a genuinely standalone comprehensive-
+income statement, never a combined one.
+
+**2. `_resolve_current_debt` did not catch `TargetRowNotFound` from
+`resolve_current_debt_components_from_warehouse`.** Every other raise
+site in the same tier chain (e.g. the D-017 zero-inference attempt) was
+already caught and converted to `REVIEW_REQUIRED` for `current_debt`
+alone; this one, the first tier tried, was not — so a single ambiguous
+debt candidate (see D-052's Constellation evidence) crashed the entire
+`compute_company_year` call with an uncaught exception instead of
+failing closed for `current_debt` alone. Fixed in `metrics/annual.py`'s
+`_resolve_current_debt` with a `try/except TargetRowNotFound`, mirroring
+the pattern already used at every other tier in the same function.
+
+**Verification**: fast suite (154 passed, incl. new tests), annual golden
+regression (898/898) and quarterly golden regression (1080/1080) all
+pass with both fixes live — the frozen 45 never exercises either crash
+site, so this could only ever add coverage, never regress it, and the
+golden regression confirms exactly that.
+
+## D-054 — D-P2 implemented as a capex component aggregator, not a label broaden (approved, user-directed: "build the aggregator")
+
+**Supersedes the literal wording of D-P2's original question**
+("is 'Acquisitions of Generation Facilities' capex?") with a more
+robust implementation, after evidence showed the literal question was
+the wrong shape for a correct fix.
+
+**What a label-only fix would have gotten wrong, measured directly
+against AEP's own filings (2020-2025):** AEP's real, dominant capex line
+every single year is `us-gaap:PaymentsForConstructionInProcess`
+("Construction Expenditures") — never matched by any wording in scope.
+"Acquisitions of Generation/Renewable Facilities" is a real but
+*smaller*, separate line reported *alongside* it, and its own label
+drifted three times in three years for the identical underlying concept:
+"Acquisition of Assets" (2020-2022) → "Acquisitions of Renewable Energy
+Facilities" (2023) → "Acquisitions of Generation Facilities" (2025).
+Recognizing only the generation-facilities wording would have resolved
+`capex` to a single clean `PASS` that **silently omits the larger
+construction-spend line** — understating capex and overstating free
+cash flow. A confidently-wrong `PASS` is worse than the honest
+`REVIEW_REQUIRED` it would have replaced.
+
+**Implemented**: new module `policies/capex_components.py`,
+`resolve_capex_by_component_aggregate`. Matches by GAAP **concept**, not
+label wording — `PaymentsForConstructionInProcess`,
+`PaymentsToAcquireProductiveAssets`, and
+`PaymentsToAcquirePropertyPlantAndEquipment` are all taxonomy-defined
+for a physical asset acquisition, never a business combination
+("ProductiveAssets" is literally the taxonomy's term for physical
+operating assets — D-P2's own "scoped to physical operating assets
+only" framing, made structural instead of wording-dependent).
+Deliberately excludes `PaymentsForNuclearFuel` (an operating/inventory
+cost) and every `PaymentsToAcquireBusinesses*` concept (genuine M&A,
+D-P2's explicit non-goal). Sums whichever of the three concepts are
+present as distinct rows in the registrant's own cash-flow statement
+(reusing D-052's registrant-narrowing for combined filings); a single
+match behaves exactly like the existing label-based lookup; a component
+identified but unresolvable fails closed to `REVIEW_REQUIRED` rather
+than silently dropping out of the sum. Tried only as a fallback, after
+the existing single-row `identify_canonical_row` lookup has already
+failed to find exactly one candidate — never overrides an
+already-working label match, and never touches the 45 frozen
+company-years (their `capex` is a production passthrough in
+`metrics/annual.py`, never routed through this module).
+
+**Verification**: 6 new synthetic-fixture unit tests
+(`tests/policies/test_capex_components.py`), covering no-match,
+single-match, two-component sum, the nuclear-fuel/business-acquisition
+exclusion, a missing-component fail-closed case, and combined-filing
+narrowing. Golden regression unaffected by construction (capex is
+passthrough for the frozen 45); confirmed unaffected by the same
+annual/quarterly golden regression runs covering D-053.
+
+## D-055 — Full-universe coverage re-measured after D-051 through D-054: 74.36% → 79.86%, zero unintended regressions (result, not a new policy)
+
+Read-only re-measurement (`scripts/190_remeasure_full_universe_coverage.py`,
+never writes production) of all 782 company-years currently in the
+warehouse, using the engine as fixed by D-051-D-054. Compared against
+the exact same 777 of those company-years' CURRENT stored production
+coverage (5 have no stored baseline yet to compare against).
+
+| | Pass rate |
+|---|---:|
+| Before (current production, same 777 company-years) | 74.36% (11,555/15,540) |
+| After (this session's engine) | **79.86%** (12,411/15,540) |
+
+**204 company-years improved, exactly 1 regressed** — PANW 2021-07-31,
+which is D-051's own correct, intended outcome (an honestly-unreproducible
+approved value now correctly reporting `REVIEW_REQUIRED` in a fresh
+recomputation instead of a passthrough coincidence). No other
+company-year regressed.
+
+**A measurement-script pitfall found and fixed before trusting this
+number**: the first two re-measurement passes showed additional false
+"regressions" for GOOGL/MSFT/MU/ORCL — all among the frozen 9 — because
+the script initially recomputed their 8 "out of scope" flow metrics (and,
+separately, `average_invested_capital` for a ticker's true first fiscal
+year) via `identify_canonical_row` directly, instead of reading the
+already-approved production value the way `metrics.annual.compute_full_
+company_year` correctly does for those specific cases. Fixed by adding
+the same passthrough-for-the-frozen-9 special cases the real engine
+already has; re-running then reproduced the golden regression's own
+guarantee (byte-identical for the frozen 45) in this wider measurement
+too, leaving only the one expected, correct regression.
+
+**Largest single-company gains**: AEP (2/20 → 15/20, D-054's capex
+aggregator plus D-053's comprehensive-statement fix), Constellation
+Energy (0/20 → 8-11/20 depending on year, D-052's registrant narrowing
+plus D-053), Walmart (8/20 → 17/20, D-053), DocuSign (12/20 → 20/20,
+D-053).
+
+**Not yet resolved, carried forward into the vocabulary loop**: Exelon's
+"every role qualified" convention (D-052), the genuine multi-instrument
+current-debt classification gap measured on Constellation (D-052), and
+whatever the remaining ~20% of REVIEW_REQUIRED rows turn out to need —
+none diagnosed yet as part of this session's work.
+
+This is a result entry, not a new policy — D-051 through D-054 are the
+decisions; this records what re-measuring them, honestly, produced.
+

@@ -1,6 +1,73 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-08 (**FILINGS ARCHIVE V1 IS COMPLETE AND
+**Last updated:** 2026-08-11 (**Coverage cleanup unblocked and
+re-measured: 74.36% → 79.86% across the 782-company-year universe, zero
+unintended regressions.** Full detail in `docs/DECISIONS_LOG.md` D-051
+through D-055 and `docs/CLEANUP_DECISIONS_PENDING.md` (now marked
+resolved). In order:
+
+1. **D-051 (ratifies D-P3, option 1):** PANW 2021-07-31's
+   `average_invested_capital`/`roic` are approved values (D-027 item 7),
+   not values today's engine can re-derive (PANW 2020-07-31's own
+   `invested_capital` is a genuine, separate D-017 extraction gap).
+   `tests/test_golden_regression.py` now excludes them explicitly
+   (named `APPROVED_NOT_REPRODUCIBLE` set) instead of silently comparing
+   a passthrough value against itself — the golden regression now
+   honestly covers 898/900 pairs it can actually reproduce.
+2. **D-052 (ratifies D-P1):** combined filings (a utility holding
+   company's 10-K covering the parent and subsidiary registrants) now
+   use the registrant's own consolidated statements —
+   `_narrow_to_registrant_statements` wired into `extraction/core.py`'s
+   `identify_canonical_row`. The earlier "reverted, regressed PANW"
+   finding was itself a misdiagnosis (D-051's real cause, confirmed
+   independently this session); safe to re-apply, verified against both
+   golden regressions. Does not (yet) reach Exelon's "every role
+   qualified" convention or Constellation's separate multi-instrument
+   current_debt gap — both diagnosed but not fixed.
+3. **D-053 (two further defects found while verifying D-052):** (a) a
+   `comprehensive` role-exclude pattern was rejecting entire combined
+   "Operations and Comprehensive Income" statement titles for `revenue`/
+   `net_income`/`operating_income`/`pretax_income`/`income_tax_expense`,
+   leaving zero candidate rows for any filer using that (common) single-
+   statement convention — fixed with a pattern that only excludes a
+   genuinely standalone comprehensive-income statement. (b)
+   `_resolve_current_debt` did not catch `TargetRowNotFound` from its
+   first tier, so one ambiguous debt candidate could crash an entire
+   company-year instead of failing closed for `current_debt` alone —
+   fixed to match every other tier's existing try/except pattern.
+4. **D-054 (implements D-P2, restructured):** utility capex is now a
+   GAAP-concept-based component aggregator
+   (`policies/capex_components.py`), not a label match — AEP's dominant
+   capex line ("Construction Expenditures") isn't reachable by any label
+   wording, so the literal "recognize Generation Facilities" fix would
+   have produced a confidently-wrong, understated `PASS`. Sums whichever
+   of three taxonomy-defined physical-asset concepts are present,
+   explicitly excluding nuclear fuel and business-acquisition concepts;
+   fails closed if an identified component can't resolve.
+5. **D-055 (result):** read-only re-measurement of all 782 company-years
+   (`scripts/190_remeasure_full_universe_coverage.py`, writes nothing).
+   777 of them have a stored baseline to compare against: **74.36%
+   (11,555/15,540) → 79.86% (12,411/15,540)**, 204 company-years
+   improved, exactly 1 (correctly) regressed — PANW 2021-07-31, D-051's
+   own intended outcome. Largest gains: AEP (2/20→15/20), Constellation
+   Energy (0/20→8-11/20), Walmart (8/20→17/20), DocuSign (12/20→20/20).
+
+**Verification, every step:** fast suite 148→154 passed (0 regressions);
+`test_annual_golden_regression_900_rows_byte_identical` (898/898) and
+`test_quarterly_golden_regression_1080_rows_reproduced` (1080/1080) both
+re-run and passing after every engine change, not just at the end.
+Nothing was written to production this session — D-051 through D-054
+are engine/test changes only; D-055 is read-only measurement.
+
+**Still open, carried into the vocabulary loop:** Exelon's "every role
+qualified" combined-filing convention (needs the registrant's legal
+name threaded through, not just role titles); the multi-instrument
+current_debt classification gap measured on Constellation (several
+distinct current-debt line items with no shared grouping to sum by);
+and whatever the remaining ~20% of REVIEW_REQUIRED rows turn out to
+need — none diagnosed yet.)
+
+**Previous update:** 2026-08-08 (**FILINGS ARCHIVE V1 IS COMPLETE AND
 ACCEPTANCE-VERIFIED.** The compressed SEC filing archive
 (`data/database/filings_archive.duckdb`) now holds **185 accessions /
 1,277 files** — only the XBRL document set per filing (primary `.htm`,
