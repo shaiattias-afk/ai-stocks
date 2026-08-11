@@ -2,10 +2,10 @@
 scoring/inputs_v1.py -- computes the 9 raw factor values from Scoring
 Model V1's Stage 3 table (docs/SCORING_MODEL_V1_BLUEPRINT.md) for one
 company-fiscal-year, reading ONLY already-frozen, point-in-time-gated
-production data (Annual Data V1, Derived Metrics V1, Historical Prices
-V1). No new extraction, no external data, nothing invented: a factor
-that cannot be resolved from what is already on hand is returned as
-None/REVIEW_REQUIRED, never guessed.
+production data (Annual Data V1, Historical Prices V1). No new
+extraction, no external data, nothing invented: a factor that cannot be
+resolved from what is already on hand is returned as None/REVIEW_
+REQUIRED, never guessed.
 
 Every factor's own "earliest knowable date" (the blueprint's Stage 1
 column) is the 10-K's own `filing_date` -- that is the single date used
@@ -14,6 +14,19 @@ for "distance from high" (computed only from prices on or before that
 same filing_date, never a later one). This keeps every one of the 9
 factors for one company-year anchored to the same, single, defensible
 "as of" date.
+
+**revenue_growth / operating_margin, universe-wide (2026-08-11
+revision)**: originally read from `derived_metric_results` (Derived
+Metrics V1, D-043), which is frozen at exactly the 9 original tickers.
+Extending Scoring Model V1 to the wider ~150-company universe (D-051-
+D-056) needed these computed directly from `financial_metric_results`
+(`revenue`, `operating_income`) instead -- the SAME formula D-043 used
+(`revenue_yoy_growth` = current/prior revenue - 1;
+`operating_margin` = operating_income/revenue), just not gated to the
+frozen 9. Verified byte-identical against the original 9 tickers'
+`derived_metric_results` values before this replaced the old lookup
+(see tests/scoring/test_inputs_v1.py) -- this is a widening of scope,
+not a formula change, and D-043's own frozen table is untouched.
 """
 
 from __future__ import annotations
@@ -36,24 +49,6 @@ def _metric(connection: duckdb.DuckDBPyConnection, ticker: str, report_date: str
     if looked_up is None:
         return None, None
     return looked_up["status"], looked_up["value"]
-
-
-def _derived_metric(
-    connection: duckdb.DuckDBPyConnection, ticker: str, fiscal_year_end: str, derived_metric: str, frequency: str = "annual"
-) -> tuple[str | None, float | None]:
-    row = connection.execute(
-        """
-        SELECT reconciliation_status, value
-        FROM derived_metric_results
-        WHERE ticker = ? AND fiscal_year_end = ? AND derived_metric = ? AND frequency = ?
-        ORDER BY loaded_at DESC
-        LIMIT 1
-        """,
-        [ticker, fiscal_year_end, derived_metric, frequency],
-    ).fetchone()
-    if row is None:
-        return None, None
-    return row[0], (float(row[1]) if row[1] is not None else None)
 
 
 def _filing_info(connection: duckdb.DuckDBPyConnection, ticker: str, report_date: str) -> dict | None:
@@ -126,12 +121,23 @@ def compute_scoring_inputs_v1(
         "prior_report_date": prior_report_date,
     }
 
-    # 1. Revenue growth (already computed, Derived Metrics V1). Absent
-    # for a ticker's first fiscal year in the dataset (no prior year to
-    # grow from) -- 36 of 45 rows, by design, not a defect.
-    status, value = _derived_metric(connection, ticker, report_date, "revenue_yoy_growth")
-    result["revenue_growth"] = value if status == "PASS" else None
-    result["revenue_growth_status"] = status or "NO_PRIOR_YEAR"
+    # 1. Revenue growth: current_fy_revenue / prior_fy_revenue - 1 (same
+    # formula as Derived Metrics V1's revenue_yoy_growth, D-043, computed
+    # directly here so it works universe-wide -- see module docstring).
+    # Absent for a ticker's first fiscal year in the dataset (no prior
+    # year to grow from), by design, not a defect.
+    rev_status, rev_value = _metric(connection, ticker, report_date, "revenue")
+    if prior_report_date and _successful(rev_status):
+        prior_rev_status, prior_rev_value = _metric(connection, ticker, prior_report_date, "revenue")
+        if _successful(prior_rev_status) and prior_rev_value:
+            result["revenue_growth"] = rev_value / prior_rev_value - 1
+            result["revenue_growth_status"] = "PASS"
+        else:
+            result["revenue_growth"] = None
+            result["revenue_growth_status"] = "REVIEW_REQUIRED"
+    else:
+        result["revenue_growth"] = None
+        result["revenue_growth_status"] = "REVIEW_REQUIRED" if prior_report_date else "NO_PRIOR_YEAR"
 
     # 2. ROIC (level).
     roic_status, roic_value = _metric(connection, ticker, report_date, "roic")
@@ -151,14 +157,18 @@ def compute_scoring_inputs_v1(
         result["roic_trend"] = None
         result["roic_trend_status"] = "REVIEW_REQUIRED" if prior_report_date else "NO_PRIOR_YEAR"
 
-    # 4. Operating margin (already computed, Derived Metrics V1).
-    status, value = _derived_metric(connection, ticker, report_date, "operating_margin")
-    result["operating_margin"] = value
-    result["operating_margin_status"] = status or "UNAVAILABLE"
+    # 4. Operating margin: operating_income / revenue (same formula as
+    # Derived Metrics V1's operating_margin, D-043; see module docstring).
+    op_income_status, op_income_value = _metric(connection, ticker, report_date, "operating_income")
+    if _successful(op_income_status) and _successful(rev_status) and rev_value:
+        result["operating_margin"] = op_income_value / rev_value
+        result["operating_margin_status"] = "PASS"
+    else:
+        result["operating_margin"] = None
+        result["operating_margin_status"] = "REVIEW_REQUIRED"
 
     # 5/6. FCF growth (new) and FCF margin (new).
     fcf_status, fcf_value = _metric(connection, ticker, report_date, "free_cash_flow")
-    rev_status, rev_value = _metric(connection, ticker, report_date, "revenue")
 
     if _successful(fcf_status) and _successful(rev_status) and rev_value:
         result["fcf_margin"] = fcf_value / rev_value
