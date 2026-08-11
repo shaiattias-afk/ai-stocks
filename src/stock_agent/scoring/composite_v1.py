@@ -66,16 +66,31 @@ def _percentile_ranks(values: dict[str, float], invert: bool) -> dict[str, float
     return percentiles
 
 
-def compute_composite_scores_v1(all_inputs: list[dict[str, object]]) -> list[dict[str, object]]:
+def compute_composite_scores_v1(
+    all_inputs: list[dict[str, object]],
+    factor_weights: dict[str, tuple[float, bool]] | None = None,
+) -> list[dict[str, object]]:
     """`all_inputs`: one dict per company-fiscal-year, each shaped like
     inputs_v1.compute_scoring_inputs_v1's return value, PLUS a
     `fiscal_year` key (sec_filings.fiscal_year -- the label already used
     consistently across companies with different fiscal year-ends).
 
+    `factor_weights`: optional override of the module-level FACTOR_
+    WEIGHTS (same `{factor_name: (weight, invert)}` shape) -- lets a
+    caller test an alternative weighting/factor-selection (e.g. a
+    candidate V2 model) through the exact same ranking mechanism,
+    without duplicating it. Weights need not sum to 1.0 here (unlike the
+    module-level default, which is asserted); this function always
+    renormalizes by whatever weight was actually covered per row.
+
     Returns one dict per input row: ticker, report_date, fiscal_year,
     composite_score (0-100 or None if zero factors were rankable),
-    weight_covered (0-1), factor_scores (per-factor percentile, only for
-    factors that were rankable), factors_used (count)."""
+    weight_covered (0-1, as a fraction of THIS call's total weight),
+    factor_scores (per-factor percentile, only for factors that were
+    rankable), factors_used (count)."""
+
+    weights = factor_weights if factor_weights is not None else FACTOR_WEIGHTS
+    total_weight = sum(w for w, _ in weights.values())
 
     by_year: dict[int, list[dict]] = defaultdict(list)
     for row in all_inputs:
@@ -84,7 +99,7 @@ def compute_composite_scores_v1(all_inputs: list[dict[str, object]]) -> list[dic
     results: list[dict[str, object]] = []
     for fiscal_year, rows in by_year.items():
         factor_ranks: dict[str, dict[str, float]] = {}
-        for factor, (_weight, invert) in FACTOR_WEIGHTS.items():
+        for factor, (_weight, invert) in weights.items():
             raw_values = {
                 row["ticker"]: row[factor]
                 for row in rows
@@ -97,7 +112,7 @@ def compute_composite_scores_v1(all_inputs: list[dict[str, object]]) -> list[dic
             factor_scores: dict[str, float] = {}
             weighted_sum = 0.0
             weight_covered = 0.0
-            for factor, (weight, _invert) in FACTOR_WEIGHTS.items():
+            for factor, (weight, _invert) in weights.items():
                 score = factor_ranks[factor].get(ticker)
                 if score is None:
                     continue
@@ -112,7 +127,7 @@ def compute_composite_scores_v1(all_inputs: list[dict[str, object]]) -> list[dic
                 "report_date": row["report_date"],
                 "fiscal_year": fiscal_year,
                 "composite_score": composite,
-                "weight_covered": weight_covered,
+                "weight_covered": weight_covered / total_weight,
                 "factors_used": len(factor_scores),
                 "factor_scores": factor_scores,
             })

@@ -109,3 +109,27 @@ def test_full_composite_matches_manual_weighted_average():
     w_roic, _ = FACTOR_WEIGHTS["roic_level"]
     expected_a = (100 * w_rev + 0 * w_roic) / (w_rev + w_roic)
     assert results["A"]["composite_score"] == pytest.approx(expected_a)
+
+
+def test_custom_factor_weights_override_the_module_default():
+    rows = [
+        _row("A", 2023, revenue_growth=0.30, roic_level=0.10),
+        _row("B", 2023, revenue_growth=0.10, roic_level=0.20),
+    ]
+    custom = {"revenue_growth": (1.0, False), "roic_level": (1.0, True)}
+    results = {r["ticker"]: r for r in compute_composite_scores_v1(rows, factor_weights=custom)}
+    # equal weights now, roic_level inverted -- A has revenue_growth=100, roic_level(inverted)=100 -> composite 100
+    assert results["A"]["composite_score"] == pytest.approx(100.0)
+    assert results["A"]["weight_covered"] == pytest.approx(1.0)
+
+
+def test_custom_factor_weights_neednt_sum_to_one():
+    """weight_covered must still be reported as a 0-1 FRACTION even when
+    the caller's own weights sum to something else (e.g. unnormalized
+    correlation-derived weights)."""
+    rows = [_row("A", 2023, revenue_growth=0.30)]
+    custom = {"revenue_growth": (3.0, False), "roic_level": (7.0, False)}
+    results = compute_composite_scores_v1(rows, factor_weights=custom)
+    # only revenue_growth is present, but it's unrankable alone (1 company) -> composite None
+    assert results[0]["composite_score"] is None
+    assert results[0]["weight_covered"] == 0.0
