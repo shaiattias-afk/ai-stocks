@@ -1,10 +1,23 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-11 (**Coverage cleanup unblocked and
-re-measured: 74.36% → 79.86% across the 782-company-year universe, zero
-unintended regressions.** Full detail in `docs/DECISIONS_LOG.md` D-051
-through D-055 and `docs/CLEANUP_DECISIONS_PENDING.md` (now marked
-resolved). In order:
+**Last updated:** 2026-08-11 (**D-056: the coverage-cleanup improvement
+is now LIVE IN PRODUCTION**, not just measured. `financial_metric_
+results` grew 15,540 → 30,180 (+14,640, a new `v3-vocabulary-cleanup`
+engine version for exactly the 732 accessions scripts/188 had loaded);
+the 900 frozen rows and every other pre-existing row confirmed present
+and unmodified. Any reader using `production_lookup.latest_metric` (the
+project's standard read path) now sees the improved values. Two further
+bugs were found and fixed in the loader script while getting this load
+to run cleanly — see D-056 for both; one of them (a second uncaught-
+exception site in `resolve_long_term_debt`, same shape as D-053) is
+confirmed to also exist in `compute_full_company_year` itself and is
+flagged there as a future fix, deliberately not made this session.
+
+**Previous update, same day:** coverage cleanup unblocked and
+re-measured (read-only): 74.36% → 79.86% across the 782-company-year
+universe, zero unintended regressions. Full detail in `docs/DECISIONS_
+LOG.md` D-051 through D-056 and `docs/CLEANUP_DECISIONS_PENDING.md`
+(now marked resolved). In order:
 
 1. **D-051 (ratifies D-P3, option 1):** PANW 2021-07-31's
    `average_invested_capital`/`roic` are approved values (D-027 item 7),
@@ -64,8 +77,11 @@ qualified" combined-filing convention (needs the registrant's legal
 name threaded through, not just role titles); the multi-instrument
 current_debt classification gap measured on Constellation (several
 distinct current-debt line items with no shared grouping to sum by);
-and whatever the remaining ~20% of REVIEW_REQUIRED rows turn out to
-need — none diagnosed yet.)
+D-056's second uncaught-exception site (`resolve_long_term_debt` calling
+`resolve_current_debt_components_from_warehouse` unwrapped — confirmed
+present in `compute_full_company_year` itself, not just the loader
+script); and whatever the remaining ~20% of REVIEW_REQUIRED rows turn
+out to need — none diagnosed yet.)
 
 **Previous update:** 2026-08-08 (**FILINGS ARCHIVE V1 IS COMPLETE AND
 ACCEPTANCE-VERIFIED.** The compressed SEC filing archive

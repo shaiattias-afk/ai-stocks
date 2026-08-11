@@ -5,11 +5,15 @@
 > (D-P1), D-053 (two further defects found while verifying D-P1 — the
 > `comprehensive` role-exclude bug and a `current_debt` exception-
 > isolation gap), D-054 (D-P2, implemented as a component aggregator,
-> not the literal label match originally asked about), and D-055 (the
+> not the literal label match originally asked about), D-055 (the
 > resulting full-universe re-measurement: 74.36% → 79.86%, zero
-> unintended regressions). The section-by-section history below is left
-> as-is — it is the evidence trail these decisions were made from, not
-> superseded text.
+> unintended regressions), and D-056 (the improved results LOADED into
+> production — `financial_metric_results` 15,540 → 30,180, the 900
+> frozen rows confirmed untouched; also found and worked around a
+> second uncaught-exception site, same shape as D-053's, still present
+> in the real engine and flagged for a future fix). The section-by-
+> section history below is left as-is — it is the evidence trail these
+> decisions were made from, not superseded text.
 
 Collected during the extraction cleanup so the work could run without
 interruption. **Nothing here has been treated as approved.** Each entry
@@ -247,12 +251,16 @@ expected answer is not testing anything.
 
 ### Status of the coverage cleanup
 
-**No longer halted — see DECISIONS_LOG.md D-051 through D-055.** The
-coupling was settled (D-051), D-P1 and D-P2 were implemented and
-verified against the now-honest baseline (D-052/D-054), two further
-defects were found and fixed along the way (D-053), and re-measuring
-the full universe moved coverage from 74.36% to **79.86%** with zero
-unintended regressions (D-055). The vocabulary loop continues from
-there — D-055 lists what's still open (Exelon's "every role qualified"
-convention, the multi-instrument current_debt gap, and the remaining
-~20% of REVIEW_REQUIRED rows, not yet diagnosed).
+**No longer halted, and no longer just measured — see DECISIONS_LOG.md
+D-051 through D-056.** The coupling was settled (D-051), D-P1 and D-P2
+were implemented and verified against the now-honest baseline
+(D-052/D-054), two further defects were found and fixed along the way
+(D-053), re-measuring the full universe moved coverage from 74.36% to
+**79.86%** with zero unintended regressions (D-055), and that
+improvement is now loaded into production, live (D-056) — not just
+proven possible. The vocabulary loop continues from there, deliberately
+paused for now at the user's request — D-055/D-056 list what's still
+open (Exelon's "every role qualified" convention, the multi-instrument
+current_debt gap, a second uncaught-exception site confirmed present in
+the real engine, and the remaining ~20% of REVIEW_REQUIRED rows, not
+yet diagnosed).

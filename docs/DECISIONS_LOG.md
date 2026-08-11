@@ -1327,3 +1327,65 @@ none diagnosed yet as part of this session's work.
 This is a result entry, not a new policy — D-051 through D-054 are the
 decisions; this records what re-measuring them, honestly, produced.
 
+## D-056 — D-055's improved results loaded into production as a new engine version (result, user-directed: "LOAD")
+
+`scripts/191_reload_universe_metrics_v3.py --execute`, engine version
+`v3-vocabulary-cleanup (scripts/191, D-051-D-054)`, appended through the
+write guard — never an UPDATE, never touched an existing row. Scope:
+exactly the 732 accessions `engine_version = 'v2-pilot-warehouse-native
+(scripts/188)'` (scripts/188's original pilot/universe-expansion load).
+The frozen 900 rows and every other pre-scripts/188 engine version are
+untouched and unreachable by this script by construction — it never
+queries or writes anything outside this one engine-version's accessions.
+
+**Two further bugs found and fixed before this could run cleanly**
+(both in the loader script itself, not the core engine — kept there
+deliberately, since further engine changes were explicitly deferred by
+the user this session):
+1. The script's own prior-fiscal-year tracking only knew about a
+   ticker's prior year if that year was ALSO in its own 732-accession
+   target list. For a frozen ticker's newest fiscal year (whose earlier
+   years are frozen and so never in this script's scope, e.g. META/MSFT/
+   NVDA/ORCL's 2025), that made a genuinely resolvable prior year look
+   missing, silently passing through a stale, pre-fix `REVIEW_REQUIRED`
+   for `average_invested_capital`/`roic` instead of recomputing them
+   correctly. Fixed by replicating `metrics.annual.compute_full_company_
+   year`'s own prior-year mechanism exactly (`production_lookup.
+   prior_report_date_for` across ALL of a ticker's known dates, then an
+   always-fresh recompute of that prior year from the warehouse) instead
+   of the script's own narrower self-tracking. Confirmed: all 4 affected
+   company-years now correctly resolve (18/20 → 20/20 each).
+2. A SECOND, previously-unknown uncaught-exception site of the same
+   D-053 shape — `resolve_long_term_debt` (`policies/debt_current_long_
+   term.py` ~line 726) also calls `resolve_current_debt_components_
+   from_warehouse` internally, and this call site was not wrapped the
+   way D-053 wrapped the one in `_resolve_current_debt`. Hit while
+   recomputing a prior year for the fix above. Given the user deferred
+   further engine changes this session, patched narrowly in the loader
+   script only (fails closed to `REVIEW_REQUIRED` for that prior year
+   instead of crashing the whole load) rather than in `metrics/annual.py`
+   itself — **`compute_full_company_year` itself still has this exact
+   latent gap** (it makes the identical unwrapped call for its own
+   prior-year lookup) and should get the same D-053-style fix in a
+   future session.
+
+**Final result (`data/universe_metrics_v3_reload_result.json`):** 732
+company-years, 14,640 result rows, coverage 11,513/14,640 = **78.6%**
+for this exact scope (matches D-055's wider 79.86% measurement, which
+also includes the frozen 45's own already-correct rows via passthrough).
+`financial_metric_results`: 15,540 → 30,180 (+14,640, exactly the
+declared count). `extraction_runs`: 904 → 1,636 (+732). **The 900 frozen
+rows and all 14,640 non-scripts/188 rows confirmed present and
+unmodified** (checksummed by the write guard during the transaction,
+independently re-counted after: 900 before, 900 still present).
+Read verified independently after load: `production_lookup.
+latest_metric` (the standard read path every consumer uses) now returns
+the new `v3` values for a spot-checked case (META 2025-12-31's
+`average_invested_capital`: `REVIEW_REQUIRED` → `PASS_DIRECT_AGGREGATE`,
+$164,236,500,000).
+
+Backup taken before the write:
+`data/database/backups/ai_stock_agent_pre_v3_reload_20260811T110148Z.duckdb`.
+
+This is a load result, not a new policy or engine change.
+
