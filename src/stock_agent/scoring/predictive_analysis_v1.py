@@ -101,6 +101,15 @@ def build_predictive_dataset(
             continue
 
         excess_return = stock_fwd["return"] - bench_fwd["return"]
+        # Annualized (CAGR) versions -- the correct basis for a "beats
+        # by X% PER YEAR, on average" question over a multi-year
+        # horizon; identical to the raw total return when horizon_months
+        # == 12, so this is a strict generalization, not a different
+        # metric for the 12-month case already used elsewhere.
+        years = horizon_months / 12
+        annualized_stock_return = (1 + stock_fwd["return"]) ** (1 / years) - 1
+        annualized_qqq_return = (1 + bench_fwd["return"]) ** (1 / years) - 1
+        annualized_excess_return = annualized_stock_return - annualized_qqq_return
         dataset.append({
             "ticker": ticker, "report_date": report_date, "fiscal_year": fiscal_year,
             "filing_date": filing_date,
@@ -110,6 +119,10 @@ def build_predictive_dataset(
             "stock_return": stock_fwd["return"], "qqq_return": bench_fwd["return"],
             "excess_return": excess_return,
             "beats_by_5pct": excess_return >= 0.05,
+            "annualized_stock_return": annualized_stock_return,
+            "annualized_qqq_return": annualized_qqq_return,
+            "annualized_excess_return": annualized_excess_return,
+            "beats_by_5pct_annualized": annualized_excess_return >= 0.05,
         })
     return dataset
 
