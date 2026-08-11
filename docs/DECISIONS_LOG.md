@@ -1637,3 +1637,93 @@ composite_v1` grew by 732 rows (appended, D-057's original 45
 untouched); no new production table for the analysis itself (matches
 this project's pattern for exploratory result JSON).
 
+## D-062 — Scoring Model V2 candidate built and honestly out-of-sample tested: still no measurable predictive power (result, user-directed: "build weighted indicators that predict beating Nasdaq-100 by 5%/year")
+
+**Direct answer to the user's request, done with the discipline D-061
+demanded** (never select/weight factors on the same data used to
+validate them): built a candidate model, `stock_agent.scoring.
+model_v2_candidate`, that (1) adds a 10th factor — current-year P/E,
+cross-sectionally ranked, using D-046's diluted-EPS resolution
+extended to the wide universe this same day — and (2) selects and
+weights factors using ONLY a **train period's** correlation with
+12-month forward excess return over QQQ, validated **purely on a
+held-out test period it never touched during selection**.
+
+**Split**: train = filings before 2023-01-01 (270 company-years), test
+= filings from 2023-01-01 onward (343 company-years) — a time split,
+not a company split, so it respects the same point-in-time discipline
+this project applies everywhere else (an investor building this
+strategy in early 2023 could only have used what was already filed).
+
+**Prerequisite, same session**: extended D-046's diluted EPS resolution
+to the wide universe (`stock_agent.scoring.valuation_wide_v1`) — 681 of
+732 accessions resolved cleanly, verified against D-046's original 45
+values (0 mismatches) before trusting it further. Two tickers (CDNS,
+ILMN) changed fiscal year-end mid-stream, colliding on `valuation_v1_
+per_share_inputs`'s `(ticker, fiscal_year)` primary key — resolved by
+keeping the later (completed) fiscal year, caught safely by the write
+guard's transactional rollback on the first attempt (no partial write).
+
+**Selected on train** (of 10 candidates, at a `min_abs_correlation` of
+0.03): `revenue_growth` (50%), `fcf_margin` (33%), `operating_margin`
+(17%). **The new valuation factor did not clear the bar** — it showed
+no meaningful positive train-period relationship with returns, even
+in-sample.
+
+**Out-of-sample result on test (same-population comparison, n=270 —
+both V1 and V2 scored the identical company-years)**:
+
+| | Spearman correlation with 12mo excess return |
+|---|---:|
+| V1 (original 9-factor, fixed weights) | 0.031 |
+| V2 (train-selected 3-factor + valuation attempt) | **0.002** |
+
+**V2 is not better than V1 — if anything, marginally worse**, on data
+it never saw during selection. Decile analysis on test is not
+monotonic: bucket 2 outperforms bucket 1, and bucket 4 (the
+second-highest-scoring quintile) is the single worst-performing
+bucket. The train-period relationship these factors showed did not
+generalize.
+
+**This is the textbook overfitting signature, now demonstrated
+empirically rather than left as a warning.** D-061 already showed the
+full-dataset (in-sample) correlation was near zero; this result shows
+that even disciplined, train-only factor selection — exactly the fix
+D-061 recommended — does not produce a model that holds up out of
+sample. That is meaningfully stronger and more credible evidence than
+D-061's in-sample check alone.
+
+**Concrete, direct answer to "build weights that predict beating
+Nasdaq-100 by 5%/year"**: with the current 9 (now 10, including
+valuation) factors, this project's current data window (2020–2026),
+and a 12-month annual-rebalance horizon, **no set of weights this
+session found — including one chosen with proper out-of-sample
+discipline — achieves that.** This is not a methodology failure; it is
+what a real, non-overfit test of this factor set looks like. Concrete
+directions for a future attempt, not pursued this session:
+
+1. **Try other horizons and rebalance frequencies** — 12 months annual
+   was the only one tested here; the blueprint's own 6/24/36-month
+   windows (D-060) were never run through this same train/test
+   discipline, nor was quarterly rebalancing.
+2. **Sector-neutral ranking** — flagged as out-of-scope for V1 from the
+   start (`docs/SCORING_MODEL_V1_BLUEPRINT.md`); ranking within-sector
+   rather than within the whole universe could surface a signal the
+   current whole-universe ranking washes out.
+3. **A genuinely different valuation formulation** — current-year raw
+   P/E (this session) and own-history P/E percentile (D-058) both
+   showed no signal; a cross-sectional P/E-to-growth or EV-based
+   measure was not tried.
+4. **More history** — the entire train+test window sits inside one
+   unusual macro regime (COVID recovery → 2022 rate-hike bear market →
+   2023–2025 AI boom); 2020–2026 may simply be too short and too
+   regime-concentrated a window for annual-rebalance quality/growth
+   factors to show their historically-documented edge.
+5. **The 10-ticker delisted-company price gap** (D-061) is still open
+   and still not corrected for here.
+
+Nothing production-frozen was changed; this session's scoring/
+valuation extensions (D-057, D-058-extension, D-061) are all additive.
+No new production table for this analysis (model research, not a
+lineage-tracked fact).
+

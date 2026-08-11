@@ -1,6 +1,26 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-11 (**D-061: Scoring Model V1 extended to the
+**Last updated:** 2026-08-11 (**D-062: built and honestly out-of-sample
+tested a Scoring Model V2 candidate (train-selected factors + a new
+valuation/P-E factor) — still no measurable predictive power for
+beating Nasdaq-100.** Direct answer to "build weighted indicators that
+predict beating Nasdaq-100 by 5%/year": trained factor selection on
+pre-2023 filings only (270 company-years), validated purely on 2023+
+filings the selection never saw (343 company-years). Selected on train:
+revenue_growth/fcf_margin/operating_margin (the new valuation factor
+didn't even clear the selection bar). Out-of-sample on test, same
+company-years both models scored: V2's correlation with 12-month excess
+return is 0.002 — not better than V1's original 0.031, and decile
+buckets aren't monotonic. **This is D-061's in-sample near-zero finding
+now confirmed with proper train/test discipline — the textbook
+overfitting signature, demonstrated rather than just warned about.**
+Concrete next directions (not attempted): other horizons/rebalance
+frequencies, sector-neutral ranking, a different valuation formulation,
+more history (the whole window sits in one macro regime). Full
+reasoning and the extended D-046 diluted-EPS resolution (needed for the
+valuation factor) in `docs/DECISIONS_LOG.md` D-062.
+
+**Previous update, same day:** D-061: Scoring Model V1 extended to the
 full ~150-company universe — and, tested honestly there, its composite
 score shows NO measurable ability to predict which stocks beat Nasdaq-
 100.** Spearman correlation between `composite_score` and 12-month
