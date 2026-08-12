@@ -1,0 +1,427 @@
+{
+  "60mo": {
+    "year_spread": {
+      "2020": 43,
+      "2021": 94
+    },
+    "n": 137,
+    "factors": {
+      "raw_pe": {
+        "pooled": {
+          "n": 102,
+          "n_groups": 84,
+          "plain_spearman": -0.24657480025558237,
+          "bootstrap": {
+            "observed_correlation": -0.24657480025558237,
+            "n_groups": 84,
+            "n_rows": 102,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": -0.24433374336896577,
+            "ci_95_low": -0.45611535362267797,
+            "ci_95_high": -0.0227785256018041,
+            "ci_95_crosses_zero": false
+          }
+        },
+        "pre_2022_only": {
+          "n": 102,
+          "n_groups": 84,
+          "plain_spearman": -0.24657480025558237,
+          "bootstrap": {
+            "observed_correlation": -0.24657480025558237,
+            "n_groups": 84,
+            "n_rows": 102,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": -0.24433374336896577,
+            "ci_95_low": -0.45611535362267797,
+            "ci_95_high": -0.0227785256018041,
+            "ci_95_crosses_zero": false
+          }
+        },
+        "2022_onward_only": {
+          "n": 0,
+          "n_groups": 0,
+          "note": "too few rows"
+        }
+      },
+      "size_log_revenue": {
+        "pooled": {
+          "n": 104,
+          "n_groups": 86,
+          "plain_spearman": 0.28235356876133577,
+          "bootstrap": {
+            "observed_correlation": 0.28235356876133577,
+            "n_groups": 86,
+            "n_rows": 104,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.2751745441847628,
+            "ci_95_low": 0.0593108913744349,
+            "ci_95_high": 0.4730373727578679,
+            "ci_95_crosses_zero": false
+          }
+        },
+        "pre_2022_only": {
+          "n": 104,
+          "n_groups": 86,
+          "plain_spearman": 0.28235356876133577,
+          "bootstrap": {
+            "observed_correlation": 0.28235356876133577,
+            "n_groups": 86,
+            "n_rows": 104,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.2751745441847628,
+            "ci_95_low": 0.0593108913744349,
+            "ci_95_high": 0.4730373727578679,
+            "ci_95_crosses_zero": false
+          }
+        },
+        "2022_onward_only": {
+          "n": 0,
+          "n_groups": 0,
+          "note": "too few rows"
+        }
+      },
+      "dividend_yield": {
+        "pooled": {
+          "n": 137,
+          "n_groups": 113,
+          "plain_spearman": 0.22644520015680142,
+          "bootstrap": {
+            "observed_correlation": 0.22644520015680142,
+            "n_groups": 113,
+            "n_rows": 137,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.22347745001680597,
+            "ci_95_low": 0.044959771440918804,
+            "ci_95_high": 0.3865547263374973,
+            "ci_95_crosses_zero": false
+          }
+        },
+        "pre_2022_only": {
+          "n": 137,
+          "n_groups": 113,
+          "plain_spearman": 0.22644520015680142,
+          "bootstrap": {
+            "observed_correlation": 0.22644520015680142,
+            "n_groups": 113,
+            "n_rows": 137,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.22347745001680597,
+            "ci_95_low": 0.044959771440918804,
+            "ci_95_high": 0.3865547263374973,
+            "ci_95_crosses_zero": false
+          }
+        },
+        "2022_onward_only": {
+          "n": 0,
+          "n_groups": 0,
+          "note": "too few rows"
+        }
+      }
+    }
+  },
+  "36mo": {
+    "year_spread": {
+      "2020": 43,
+      "2021": 113,
+      "2022": 118,
+      "2023": 99
+    },
+    "n": 373,
+    "factors": {
+      "raw_pe": {
+        "pooled": {
+          "n": 283,
+          "n_groups": 96,
+          "plain_spearman": 0.03342780981042038,
+          "bootstrap": {
+            "observed_correlation": 0.03342780981042038,
+            "n_groups": 96,
+            "n_rows": 283,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.03309304793815443,
+            "ci_95_low": -0.12484860001039355,
+            "ci_95_high": 0.19871319857767858,
+            "ci_95_crosses_zero": true
+          }
+        },
+        "pre_2022_only": {
+          "n": 117,
+          "n_groups": 85,
+          "plain_spearman": -0.06769170825278364,
+          "bootstrap": {
+            "observed_correlation": -0.06769170825278364,
+            "n_groups": 85,
+            "n_rows": 117,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": -0.06717045280440023,
+            "ci_95_low": -0.26325731311957723,
+            "ci_95_high": 0.13267154782814627,
+            "ci_95_crosses_zero": true
+          }
+        },
+        "2022_onward_only": {
+          "n": 166,
+          "n_groups": 96,
+          "plain_spearman": 0.04656232763105305,
+          "bootstrap": {
+            "observed_correlation": 0.04656232763105305,
+            "n_groups": 96,
+            "n_rows": 166,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.044425593113717396,
+            "ci_95_low": -0.1479118531398976,
+            "ci_95_high": 0.23466262445886205,
+            "ci_95_crosses_zero": true
+          }
+        }
+      },
+      "size_log_revenue": {
+        "pooled": {
+          "n": 285,
+          "n_groups": 95,
+          "plain_spearman": 0.18021792884654264,
+          "bootstrap": {
+            "observed_correlation": 0.18021792884654264,
+            "n_groups": 95,
+            "n_rows": 285,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.17916133215740299,
+            "ci_95_low": 0.004962417753636286,
+            "ci_95_high": 0.3432729257076137,
+            "ci_95_crosses_zero": false
+          }
+        },
+        "pre_2022_only": {
+          "n": 118,
+          "n_groups": 86,
+          "plain_spearman": 0.36881662704195106,
+          "bootstrap": {
+            "observed_correlation": 0.36881662704195106,
+            "n_groups": 86,
+            "n_rows": 118,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.3607633830659117,
+            "ci_95_low": 0.16891746393084567,
+            "ci_95_high": 0.5229195587053408,
+            "ci_95_crosses_zero": false
+          }
+        },
+        "2022_onward_only": {
+          "n": 167,
+          "n_groups": 91,
+          "plain_spearman": 0.09745998536489843,
+          "bootstrap": {
+            "observed_correlation": 0.09745998536489843,
+            "n_groups": 91,
+            "n_rows": 167,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.09630867914964863,
+            "ci_95_low": -0.11820911481483784,
+            "ci_95_high": 0.3086288673251817,
+            "ci_95_crosses_zero": true
+          }
+        }
+      },
+      "dividend_yield": {
+        "pooled": {
+          "n": 373,
+          "n_groups": 119,
+          "plain_spearman": 0.10454449105148308,
+          "bootstrap": {
+            "observed_correlation": 0.10454449105148308,
+            "n_groups": 119,
+            "n_rows": 373,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.10504306655080277,
+            "ci_95_low": -0.03311139131986902,
+            "ci_95_high": 0.23659744830685714,
+            "ci_95_crosses_zero": true
+          }
+        },
+        "pre_2022_only": {
+          "n": 156,
+          "n_groups": 113,
+          "plain_spearman": 0.25169345558712763,
+          "bootstrap": {
+            "observed_correlation": 0.25169345558712763,
+            "n_groups": 113,
+            "n_rows": 156,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.2487955417836414,
+            "ci_95_low": 0.08357758872492566,
+            "ci_95_high": 0.4045065269658857,
+            "ci_95_crosses_zero": false
+          }
+        },
+        "2022_onward_only": {
+          "n": 217,
+          "n_groups": 119,
+          "plain_spearman": 0.03634820138460201,
+          "bootstrap": {
+            "observed_correlation": 0.03634820138460201,
+            "n_groups": 119,
+            "n_rows": 217,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.03704129689852322,
+            "ci_95_low": -0.13612688048256213,
+            "ci_95_high": 0.20806992042992423,
+            "ci_95_crosses_zero": true
+          }
+        }
+      }
+    }
+  },
+  "24mo": {
+    "year_spread": {
+      "2020": 43,
+      "2021": 113,
+      "2022": 118,
+      "2023": 120,
+      "2024": 100
+    },
+    "n": 494,
+    "factors": {
+      "raw_pe": {
+        "pooled": {
+          "n": 380,
+          "n_groups": 105,
+          "plain_spearman": 0.06675735471764947,
+          "bootstrap": {
+            "observed_correlation": 0.06675735471764947,
+            "n_groups": 105,
+            "n_rows": 380,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.06725692781106862,
+            "ci_95_low": -0.05681381173493592,
+            "ci_95_high": 0.1931827068722484,
+            "ci_95_crosses_zero": true
+          }
+        },
+        "pre_2022_only": {
+          "n": 117,
+          "n_groups": 85,
+          "plain_spearman": -0.07654842722054879,
+          "bootstrap": {
+            "observed_correlation": -0.07654842722054879,
+            "n_groups": 85,
+            "n_rows": 117,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": -0.07563910629828766,
+            "ci_95_low": -0.27843240624643795,
+            "ci_95_high": 0.12739802635006756,
+            "ci_95_crosses_zero": true
+          }
+        },
+        "2022_onward_only": {
+          "n": 263,
+          "n_groups": 105,
+          "plain_spearman": 0.08851618814633432,
+          "bootstrap": {
+            "observed_correlation": 0.08851618814633432,
+            "n_groups": 105,
+            "n_rows": 263,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.08784871585179586,
+            "ci_95_low": -0.05300480483162342,
+            "ci_95_high": 0.2285644794582502,
+            "ci_95_crosses_zero": true
+          }
+        }
+      },
+      "size_log_revenue": {
+        "pooled": {
+          "n": 381,
+          "n_groups": 98,
+          "plain_spearman": 0.12502804399381187,
+          "bootstrap": {
+            "observed_correlation": 0.12502804399381187,
+            "n_groups": 98,
+            "n_rows": 381,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.12241645297354205,
+            "ci_95_low": -0.027292035930289966,
+            "ci_95_high": 0.2710939548019877,
+            "ci_95_crosses_zero": true
+          }
+        },
+        "pre_2022_only": {
+          "n": 118,
+          "n_groups": 86,
+          "plain_spearman": 0.2643096351969732,
+          "bootstrap": {
+            "observed_correlation": 0.2643096351969732,
+            "n_groups": 86,
+            "n_rows": 118,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.2579678844474213,
+            "ci_95_low": 0.05666400024613113,
+            "ci_95_high": 0.44348448704788135,
+            "ci_95_crosses_zero": false
+          }
+        },
+        "2022_onward_only": {
+          "n": 263,
+          "n_groups": 95,
+          "plain_spearman": 0.09811917684962122,
+          "bootstrap": {
+            "observed_correlation": 0.09811917684962122,
+            "n_groups": 95,
+            "n_rows": 263,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.09727041694265337,
+            "ci_95_low": -0.07752834418314031,
+            "ci_95_high": 0.27523585792516275,
+            "ci_95_crosses_zero": true
+          }
+        }
+      },
+      "dividend_yield": {
+        "pooled": {
+          "n": 494,
+          "n_groups": 120,
+          "plain_spearman": 0.09217089392570682,
+          "bootstrap": {
+            "observed_correlation": 0.09217089392570682,
+            "n_groups": 120,
+            "n_rows": 494,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.09191903030513496,
+            "ci_95_low": -0.021121828024614965,
+            "ci_95_high": 0.19951942868231254,
+            "ci_95_crosses_zero": true
+          }
+        },
+        "pre_2022_only": {
+          "n": 156,
+          "n_groups": 113,
+          "plain_spearman": 0.33838240854343726,
+          "bootstrap": {
+            "observed_correlation": 0.33838240854343726,
+            "n_groups": 113,
+            "n_rows": 156,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.33464676231609286,
+            "ci_95_low": 0.18038677014784793,
+            "ci_95_high": 0.47932704924360614,
+            "ci_95_crosses_zero": false
+          }
+        },
+        "2022_onward_only": {
+          "n": 338,
+          "n_groups": 120,
+          "plain_spearman": 0.010998650067207896,
+          "bootstrap": {
+            "observed_correlation": 0.010998650067207896,
+            "n_groups": 120,
+            "n_rows": 338,
+            "n_resamples_used": 4000,
+            "bootstrap_mean": 0.011117771579035601,
+            "ci_95_low": -0.1293667435234034,
+            "ci_95_high": 0.1484626774415824,
+            "ci_95_crosses_zero": true
+          }
+        }
+      }
+    }
+  }
+}

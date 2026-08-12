@@ -128,6 +128,27 @@ def warm_taxonomy_cache(
         shutil.rmtree(warm_dir, ignore_errors=True)
 
 
+def _replace_with_retry(
+    source: Path, target: Path, attempts: int = 5, initial_delay_seconds: float = 1.0,
+) -> None:
+    """os.replace, retried with exponential backoff on Windows
+    PermissionError (WinError 5, 'Access is denied') -- another process
+    holding even a brief, transient handle on `target` (antivirus,
+    indexing, any other reader) can fail an otherwise-fully-successful
+    merge outright. Never retries on any OTHER exception type; still
+    raises after `attempts` if the conflict doesn't clear."""
+    delay = initial_delay_seconds
+    for attempt in range(1, attempts + 1):
+        try:
+            source.replace(target)
+            return
+        except PermissionError:
+            if attempt == attempts:
+                raise
+            time.sleep(delay)
+            delay *= 2
+
+
 def _merge_shard(target_connection: duckdb.DuckDBPyConnection, shard_path: Path) -> None:
     """Copies every warehouse table out of one shard into the target.
 
@@ -192,8 +213,15 @@ def _merge_shards_atomically(
                 _merge_shard(target, shard_path)
         finally:
             target.close()
-        # atomic on the same volume; the target only ever sees a complete database
-        staging_path.replace(warehouse_db_path)
+        # atomic on the same volume; the target only ever sees a complete
+        # database. Retried on Windows PermissionError: a real conflict
+        # was observed (2026-08-12) where some OTHER process briefly held
+        # a handle on warehouse_db_path (e.g. antivirus/indexing, or any
+        # other reader) at the exact instant of the rename, failing the
+        # whole merge outright even though every shard had already loaded
+        # successfully. The merged content itself never changes -- this
+        # only re-attempts the final, already-computed rename.
+        _replace_with_retry(staging_path, warehouse_db_path)
     except Exception:
         staging_path.unlink(missing_ok=True)
         raise

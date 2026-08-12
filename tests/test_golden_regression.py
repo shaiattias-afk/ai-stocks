@@ -61,10 +61,68 @@ SUPPLEMENTARY_ACCESSIONS = {
 }
 
 EXPECTED_TARGET_COMPANY_YEARS = 45
-EXPECTED_ANNUAL_COMPARED_PAIRS = 45 * 20  # 900
+
+# PANW 2021-07-31's average_invested_capital (and the roic that combines it
+# with nopat) are APPROVED VALUES, not values today's engine can re-derive.
+# D-P3 (docs/CLEANUP_DECISIONS_PENDING.md) traced why: average_invested_
+# capital needs PANW 2020-07-31's own invested_capital, and D-P3's option B
+# (metrics/annual.py's compute_full_company_year) now ALWAYS recomputes
+# that prior year from the filings rather than reading a stored production
+# value. PANW 2020-07-31 genuinely cannot be resolved from its own filing
+# by the current engine, so the honest recomputation reports
+# REVIEW_REQUIRED. The frozen 698,750,000 rests on D-027 item 7, which
+# permitted reusing the prior filing's own previously-approved result --
+# valid when made, but not reproducible from the filings alone.
+#
+# D-P3 option 1 (ratified, see docs/DECISIONS_LOG.md D-051): accept that
+# this frozen value is an approval, not a derivation, and exclude it from a
+# regression test that should only cover what the engine can actually
+# reproduce -- comparing it here would either force a permanent, silent
+# REVIEW_REQUIRED mismatch or tempt a future change that fakes
+# reproducibility just to make the test pass.
+APPROVED_NOT_REPRODUCIBLE = {
+    ("PANW", "2021-07-31", "average_invested_capital"),
+    ("PANW", "2021-07-31", "roic"),
+}
+
+EXPECTED_ANNUAL_COMPARED_PAIRS = 45 * 20 - len(APPROVED_NOT_REPRODUCIBLE)  # 898
 
 EXPECTED_QUARTERLY_RUNS = 45
 EXPECTED_ROWS_PER_COMPANY_YEAR = 24
+
+# The exact 45 (ticker, fiscal_year_end) pairs of the frozen Quarterly Data
+# V1 baseline (D-042/D-043). quarterly_extraction_runs now also holds runs
+# for the wider universe AND, as of the 2026-08-12 full-universe extension
+# (scripts/212), 7 NEWER fiscal years for these same 9 tickers (e.g. MSFT
+# 2025-06-30/2026-06-30, NVDA 2025-01-26/2026-01-25) -- real new data, not
+# part of the frozen 1,080-row baseline and not what this regression guards.
+# A ticker-only filter let those 7 leak in (52 rows found, not 45) the first
+# time the universe grew past the original 9 tickers' original fiscal years,
+# so the guard must be exact pairs, not just tickers -- mirroring the annual
+# test's own accession-number-level precision. Unlike the annual table there
+# is no engine_version that separates old from new (the expansion reused
+# QUARTERLY_ENGINE_V5_*), so this list is the only exact guard available.
+FROZEN_BASELINE_QUARTERLY_RUNS = (
+    ("AMZN", "2021-12-31"), ("AMZN", "2022-12-31"), ("AMZN", "2023-12-31"),
+    ("AMZN", "2024-12-31"), ("AMZN", "2025-12-31"),
+    ("CRWD", "2022-01-31"), ("CRWD", "2023-01-31"), ("CRWD", "2024-01-31"),
+    ("CRWD", "2025-01-31"), ("CRWD", "2026-01-31"),
+    ("GOOGL", "2021-12-31"), ("GOOGL", "2022-12-31"), ("GOOGL", "2023-12-31"),
+    ("GOOGL", "2024-12-31"), ("GOOGL", "2025-12-31"),
+    ("META", "2020-12-31"), ("META", "2021-12-31"), ("META", "2022-12-31"),
+    ("META", "2023-12-31"), ("META", "2024-12-31"),
+    ("MSFT", "2020-06-30"), ("MSFT", "2021-06-30"), ("MSFT", "2022-06-30"),
+    ("MSFT", "2023-06-30"), ("MSFT", "2024-06-30"),
+    ("MU", "2021-09-02"), ("MU", "2022-09-01"), ("MU", "2023-08-31"),
+    ("MU", "2024-08-29"), ("MU", "2025-08-28"),
+    ("NVDA", "2020-01-26"), ("NVDA", "2021-01-31"), ("NVDA", "2022-01-30"),
+    ("NVDA", "2023-01-29"), ("NVDA", "2024-01-28"),
+    ("ORCL", "2020-05-31"), ("ORCL", "2021-05-31"), ("ORCL", "2022-05-31"),
+    ("ORCL", "2023-05-31"), ("ORCL", "2024-05-31"),
+    ("PANW", "2021-07-31"), ("PANW", "2022-07-31"), ("PANW", "2023-07-31"),
+    ("PANW", "2024-07-31"), ("PANW", "2025-07-31"),
+)
+FROZEN_BASELINE_TICKERS = tuple(sorted({t for t, _ in FROZEN_BASELINE_QUARTERLY_RUNS}))
 EXPECTED_QUARTERLY_TOTAL_ROWS = EXPECTED_QUARTERLY_RUNS * EXPECTED_ROWS_PER_COMPANY_YEAR  # 1080
 
 
@@ -82,6 +140,20 @@ def _load_target_company_years(prod: duckdb.DuckDBPyConnection) -> list[tuple[st
     scripts, where it silently conflated two runs of the same script):
     the frozen rows were written by the historical engines and never by
     the expansion loader, so the version genuinely identifies them.
+
+    BOTH expansion engines must be excluded. Excluding only scripts/188
+    left 55 company-years, not 45: D-056 reloaded the pilot rows under
+    'v3-vocabulary-cleanup (scripts/191, D-051-D-054)', so 10 later fiscal
+    years of the original 9 tickers (e.g. MSFT 2026-06-30, NVDA 2026-01-25)
+    still matched. Those 10 were never part of the frozen 45 and have no
+    900-row baseline to reproduce -- they are new data, not a regression.
+
+    The ticker scope is the second half of the guard, and it is what makes
+    this test stable over time. engine_version alone only excludes the
+    expansion engines that exist TODAY: the universe keeps growing, and
+    every future loader will write rows under a version this filter has
+    never heard of. Pinning to the 9 frozen companies means new tickers
+    can never leak into the baseline, whatever engine loads them.
     """
     rows = prod.execute(
         """
@@ -90,8 +162,11 @@ def _load_target_company_years(prod: duckdb.DuckDBPyConnection) -> list[tuple[st
         JOIN extraction_runs er ON er.accession_number = sf.accession_number
         JOIN financial_metric_results fmr ON fmr.extraction_run_id = er.extraction_run_id
         WHERE fmr.engine_version NOT LIKE '%scripts/188%'
+          AND fmr.engine_version NOT LIKE '%scripts/191%'
+          AND sf.ticker IN ?
         ORDER BY 1, 2
-        """
+        """,
+        [list(FROZEN_BASELINE_TICKERS)],
     ).fetchall()
     return [(t, str(rd), acc) for t, rd, acc in rows]
 
@@ -138,6 +213,11 @@ def test_annual_golden_regression_900_rows_byte_identical():
             live_rows = _load_live_annual_rows(production, accession_number)
 
             for metric_name in ALL_20_METRIC_NAMES:
+                if (ticker, report_date, metric_name) in APPROVED_NOT_REPRODUCIBLE:
+                    # An approved value, not a derivation -- see
+                    # APPROVED_NOT_REPRODUCIBLE's definition above.
+                    continue
+
                 live = live_rows.get(metric_name)
                 if live is None:
                     # Supplementary accessions carry no ground-truth row by
@@ -178,14 +258,18 @@ def test_annual_golden_regression_900_rows_byte_identical():
 def _load_quarterly_runs(prod: duckdb.DuckDBPyConnection) -> list[dict]:
     rows = prod.execute(
         "SELECT run_id, ticker, fiscal_year_end, q1_accession, q2_accession, "
-        "q3_accession, fy_accession FROM quarterly_extraction_runs ORDER BY ticker, fiscal_year_end"
+        "q3_accession, fy_accession FROM quarterly_extraction_runs "
+        "WHERE ticker IN ? ORDER BY ticker, fiscal_year_end",
+        [list(FROZEN_BASELINE_TICKERS)],
     ).fetchall()
+    frozen_pairs = set(FROZEN_BASELINE_QUARTERLY_RUNS)
     return [
         {
             "run_id": r[0], "ticker": r[1], "fiscal_year_end": str(r[2]),
             "q1_accession": r[3], "q2_accession": r[4], "q3_accession": r[5], "fy_accession": r[6],
         }
         for r in rows
+        if (r[1], str(r[2])) in frozen_pairs
     ]
 
 

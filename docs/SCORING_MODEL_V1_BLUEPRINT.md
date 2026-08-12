@@ -1,5 +1,16 @@
 # Scoring Model V1 — Blueprint (planning document, no code executed)
 
+> **2026-08-11 update: this blueprint has now been EXECUTED.** Stages
+> 3–6 are built, loaded, and backtested — see `docs/DECISIONS_LOG.md`
+> D-057 (Stage 3, Scoring Model V1), D-058 (Stage 4 Method 1, Entry
+> Price — supersedes this document's own Stage 6 step 1 assessment;
+> see D-058 for why the shares-outstanding gap turned out to already be
+> closed by D-046), D-059 (Stage 5 gap #4, QQQ benchmark), and D-060
+> (Stage 6 step 5, the first backtest run — read its survivorship-bias
+> caveat before trusting any number). This document is left exactly as
+> originally written below, as the planning record; it is no longer
+> current about what has and hasn't been built.
+
 Defines the executable Scoring Model V1 blueprint from the actual
 frozen project data (Annual Data V1, Quarterly Data V1, Derived
 Metrics V1, Historical Prices V1) and the approved project context

@@ -1,0 +1,39 @@
+{
+  "mode": "execute",
+  "company_years": 732,
+  "composites_with_full_coverage": 148,
+  "composites_unrankable": 0,
+  "mean_weight_covered": 0.6043032786885246,
+  "engine_version": "v1-scoring-model-wide-universe (scripts/196)",
+  "scoring_version": "ScoringModelV1",
+  "inputs_rows_written": 732,
+  "composite_rows_written": 732,
+  "inputs_table_total": 777,
+  "composite_table_total": 777,
+  "distinct_tickers": 135,
+  "duplicate_keys": 0,
+  "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\ai_stock_agent_pre_scoring_v1_wide_20260811T134628Z.duckdb",
+  "guard_inputs": {
+    "table": "scoring_inputs_v1",
+    "pre_count": 45,
+    "post_count": 777,
+    "rows_inserted": 732,
+    "declared_row_delta": 732,
+    "actual_row_delta": 732,
+    "pre_existing_checksum_before": "31895922a437f1c38e141187a3ba79b5067fc59b0193fadada2e32c4851dd9b2",
+    "pre_existing_checksum_after": "31895922a437f1c38e141187a3ba79b5067fc59b0193fadada2e32c4851dd9b2",
+    "pre_existing_rows_byte_identical": true
+  },
+  "guard_composite": {
+    "table": "scoring_composite_v1",
+    "pre_count": 45,
+    "post_count": 777,
+    "rows_inserted": 732,
+    "declared_row_delta": 732,
+    "actual_row_delta": 732,
+    "pre_existing_checksum_before": "30a2fd63071f92449eafb98be4756d4ad87a34fe2abe0d1bf7f230a0207e3a89",
+    "pre_existing_checksum_after": "30a2fd63071f92449eafb98be4756d4ad87a34fe2abe0d1bf7f230a0207e3a89",
+    "pre_existing_rows_byte_identical": true
+  },
+  "status": "PASS"
+}

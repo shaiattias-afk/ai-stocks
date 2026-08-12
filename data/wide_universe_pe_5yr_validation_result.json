@@ -1,0 +1,92 @@
+{
+  "60mo_full_universe": {
+    "n": 102,
+    "n_groups": 84,
+    "plain_spearman": -0.24657480025558237,
+    "bootstrap": {
+      "observed_correlation": -0.24657480025558237,
+      "n_groups": 84,
+      "n_rows": 102,
+      "n_resamples_used": 5000,
+      "bootstrap_mean": -0.2456123082165327,
+      "ci_95_low": -0.44934042472072894,
+      "ci_95_high": -0.024868297452743642,
+      "ci_95_crosses_zero": false
+    }
+  },
+  "60mo_original_9_only": {
+    "n": 8,
+    "n_groups": 5,
+    "plain_spearman": 0.38095238095238093,
+    "bootstrap": {
+      "observed_correlation": 0.38095238095238093,
+      "n_groups": 5,
+      "n_rows": 8,
+      "n_resamples_used": 5000,
+      "bootstrap_mean": 0.17998089268644116,
+      "ci_95_low": -1.0,
+      "ci_95_high": 0.8103448275862069,
+      "ci_95_crosses_zero": true
+    }
+  },
+  "60mo_wide_universe_new_tickers_only": {
+    "n": 94,
+    "n_groups": 79,
+    "plain_spearman": -0.25291334031716217,
+    "bootstrap": {
+      "observed_correlation": -0.25291334031716217,
+      "n_groups": 79,
+      "n_rows": 94,
+      "n_resamples_used": 5000,
+      "bootstrap_mean": -0.24815880243748242,
+      "ci_95_low": -0.45356914942109583,
+      "ci_95_high": -0.031242070067021926,
+      "ci_95_crosses_zero": false
+    }
+  },
+  "12mo_full_universe": {
+    "n": 475,
+    "n_groups": 109,
+    "plain_spearman": -0.021180894002902666,
+    "bootstrap": {
+      "observed_correlation": -0.021180894002902666,
+      "n_groups": 109,
+      "n_rows": 475,
+      "n_resamples_used": 5000,
+      "bootstrap_mean": -0.02078102278237479,
+      "ci_95_low": -0.11570245076355197,
+      "ci_95_high": 0.07559807410341292,
+      "ci_95_crosses_zero": true
+    }
+  },
+  "12mo_original_9_only": {
+    "n": 37,
+    "n_groups": 9,
+    "plain_spearman": 0.17140825035561877,
+    "bootstrap": {
+      "observed_correlation": 0.17140825035561877,
+      "n_groups": 9,
+      "n_rows": 37,
+      "n_resamples_used": 5000,
+      "bootstrap_mean": 0.129597192891636,
+      "ci_95_low": -0.368769542026853,
+      "ci_95_high": 0.5733387358184765,
+      "ci_95_crosses_zero": true
+    }
+  },
+  "12mo_wide_universe_new_tickers_only": {
+    "n": 438,
+    "n_groups": 100,
+    "plain_spearman": -0.04022560257876405,
+    "bootstrap": {
+      "observed_correlation": -0.04022560257876405,
+      "n_groups": 100,
+      "n_rows": 438,
+      "n_resamples_used": 5000,
+      "bootstrap_mean": -0.04074380123943675,
+      "ci_95_low": -0.12979260851014832,
+      "ci_95_high": 0.05061073978589168,
+      "ci_95_crosses_zero": true
+    }
+  }
+}

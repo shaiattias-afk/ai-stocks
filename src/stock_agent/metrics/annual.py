@@ -197,9 +197,23 @@ def _resolve_current_debt(
     the two later fallback tiers (D-032/D-033 manual recovery, D-028
     maturity basis) — see module docstring for the full tier list."""
 
-    cd_resolution = resolve_current_debt_with_facility_policy(
-        connection, accession_number, presentation, report_date, ltd
-    )
+    try:
+        cd_resolution = resolve_current_debt_with_facility_policy(
+            connection, accession_number, presentation, report_date, ltd
+        )
+    except TargetRowNotFound as exc:
+        # resolve_current_debt_components_from_warehouse's ancestry tier
+        # raises (rather than returning a "review required" mode) when it
+        # finds more than one current-classified candidate and cannot
+        # choose -- every OTHER raise site downstream of it in this same
+        # tier chain (e.g. the D-017 zero-inference attempt) is already
+        # caught and converted to REVIEW_REQUIRED; this one was not,
+        # so a single ambiguous debt line could crash the entire
+        # company-year instead of failing closed for current_debt alone.
+        # Measured on Constellation Energy's 10-Ks (D-P1): 3 legitimately
+        # distinct current-debt line items with no shared parent to sum
+        # them by.
+        return {"status": "REVIEW_REQUIRED", "error": str(exc), "value": None}
 
     if cd_resolution["mode"] == "components":
         values = []

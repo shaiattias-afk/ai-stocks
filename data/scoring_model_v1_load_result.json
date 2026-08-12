@@ -1,0 +1,37 @@
+{
+  "mode": "execute",
+  "company_years": 45,
+  "composites_with_full_coverage": 35,
+  "composites_unrankable": 1,
+  "engine_version": "v1-scoring-model (scripts/192)",
+  "scoring_version": "ScoringModelV1",
+  "inputs_rows_written": 45,
+  "composite_rows_written": 45,
+  "distinct_tickers": 9,
+  "duplicate_keys": 0,
+  "financial_metric_results_unchanged_at_30180_or_current": 30180,
+  "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\ai_stock_agent_pre_scoring_v1_20260811T131037Z.duckdb",
+  "guard_inputs": {
+    "table": "scoring_inputs_v1",
+    "pre_count": 0,
+    "post_count": 45,
+    "rows_inserted": 45,
+    "declared_row_delta": 45,
+    "actual_row_delta": 45,
+    "pre_existing_checksum_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pre_existing_checksum_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pre_existing_rows_byte_identical": true
+  },
+  "guard_composite": {
+    "table": "scoring_composite_v1",
+    "pre_count": 0,
+    "post_count": 45,
+    "rows_inserted": 45,
+    "declared_row_delta": 45,
+    "actual_row_delta": 45,
+    "pre_existing_checksum_before": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pre_existing_checksum_after": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "pre_existing_rows_byte_identical": true
+  },
+  "status": "PASS"
+}

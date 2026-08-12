@@ -1,0 +1,1282 @@
+{
+  "top_n": 3,
+  "per_year": [
+    {
+      "fiscal_year": 2020,
+      "universe_size": 4,
+      "horizons": {
+        "6": {
+          "top_avg_return": 0.3882325428592855,
+          "bottom_avg_return": 0.3917369724454752,
+          "benchmark_avg_return": 0.19517540655275956,
+          "top_excess_vs_benchmark": 0.19305713630652593,
+          "top_minus_bottom_spread": -0.0035044295861896835,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "MSFT",
+              "composite_score": 76.66666666666669,
+              "filing_date": "2020-07-30",
+              "stock_return": 0.18125654758596133,
+              "benchmark_return": 0.23694852209805606,
+              "excess_return": -0.05569197451209473
+            },
+            {
+              "group": "top",
+              "ticker": "NVDA",
+              "composite_score": 63.33333333333334,
+              "filing_date": "2020-02-20",
+              "stock_return": 0.5748372228513368,
+              "benchmark_return": 0.19692614719251855,
+              "excess_return": 0.3779110756588182
+            },
+            {
+              "group": "top",
+              "ticker": "META",
+              "composite_score": 46.66666666666668,
+              "filing_date": "2021-01-28",
+              "stock_return": 0.40860385814055844,
+              "benchmark_return": 0.14128272083355986,
+              "excess_return": 0.2673211373069986
+            },
+            {
+              "group": "bottom",
+              "ticker": "NVDA",
+              "composite_score": 63.33333333333334,
+              "filing_date": "2020-02-20",
+              "stock_return": 0.5748372228513368,
+              "benchmark_return": 0.19692614719251855,
+              "excess_return": 0.3779110756588182
+            },
+            {
+              "group": "bottom",
+              "ticker": "META",
+              "composite_score": 46.66666666666668,
+              "filing_date": "2021-01-28",
+              "stock_return": 0.40860385814055844,
+              "benchmark_return": 0.14128272083355986,
+              "excess_return": 0.2673211373069986
+            },
+            {
+              "group": "bottom",
+              "ticker": "ORCL",
+              "composite_score": 13.333333333333334,
+              "filing_date": "2020-06-22",
+              "stock_return": 0.19176983634453038,
+              "benchmark_return": 0.25768618116634445,
+              "excess_return": -0.06591634482181408
+            }
+          ]
+        },
+        "12": {
+          "top_avg_return": 0.47086181169311425,
+          "bottom_avg_return": 0.48426057944906115,
+          "benchmark_avg_return": 0.29655253609037097,
+          "top_excess_vs_benchmark": 0.17430927560274329,
+          "top_minus_bottom_spread": -0.013398767755946894,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "MSFT",
+              "composite_score": 76.66666666666669,
+              "filing_date": "2020-07-30",
+              "stock_return": 0.4108322915720237,
+              "benchmark_return": 0.4020458764601462,
+              "excess_return": 0.008786415111877499
+            },
+            {
+              "group": "top",
+              "ticker": "NVDA",
+              "composite_score": 63.33333333333334,
+              "filing_date": "2020-02-20",
+              "stock_return": 0.8632248168912422,
+              "benchmark_return": 0.3811897491430951,
+              "excess_return": 0.4820350677481471
+            },
+            {
+              "group": "top",
+              "ticker": "META",
+              "composite_score": 46.66666666666668,
+              "filing_date": "2021-01-28",
+              "stock_return": 0.13852832661607684,
+              "benchmark_return": 0.10013329956044892,
+              "excess_return": 0.03839502705562792
+            },
+            {
+              "group": "bottom",
+              "ticker": "NVDA",
+              "composite_score": 63.33333333333334,
+              "filing_date": "2020-02-20",
+              "stock_return": 0.8632248168912422,
+              "benchmark_return": 0.3811897491430951,
+              "excess_return": 0.4820350677481471
+            },
+            {
+              "group": "bottom",
+              "ticker": "META",
+              "composite_score": 46.66666666666668,
+              "filing_date": "2021-01-28",
+              "stock_return": 0.13852832661607684,
+              "benchmark_return": 0.10013329956044892,
+              "excess_return": 0.03839502705562792
+            },
+            {
+              "group": "bottom",
+              "ticker": "ORCL",
+              "composite_score": 13.333333333333334,
+              "filing_date": "2020-06-22",
+              "stock_return": 0.45102859483986446,
+              "benchmark_return": 0.4146232426749914,
+              "excess_return": 0.03640535216487306
+            }
+          ]
+        },
+        "24": {
+          "top_avg_return": 0.6604250711497026,
+          "bottom_avg_return": 0.6128597855969202,
+          "benchmark_avg_return": 0.1845018138115199,
+          "top_excess_vs_benchmark": 0.47592325733818275,
+          "top_minus_bottom_spread": 0.04756528555278239,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "MSFT",
+              "composite_score": 76.66666666666669,
+              "filing_date": "2020-07-30",
+              "stock_return": 0.38790524961094364,
+              "benchmark_return": 0.21918653748082773,
+              "excess_return": 0.1687187121301159
+            },
+            {
+              "group": "top",
+              "ticker": "NVDA",
+              "composite_score": 63.33333333333334,
+              "filing_date": "2020-02-20",
+              "stock_return": 2.038426492533975,
+              "benchmark_return": 0.45516110890944717,
+              "excess_return": 1.5832653836245276
+            },
+            {
+              "group": "top",
+              "ticker": "META",
+              "composite_score": 46.66666666666668,
+              "filing_date": "2021-01-28",
+              "stock_return": -0.4450565286958106,
+              "benchmark_return": -0.08559130637297074,
+              "excess_return": -0.35946522232283984
+            },
+            {
+              "group": "bottom",
+              "ticker": "NVDA",
+              "composite_score": 63.33333333333334,
+              "filing_date": "2020-02-20",
+              "stock_return": 2.038426492533975,
+              "benchmark_return": 0.45516110890944717,
+              "excess_return": 1.5832653836245276
+            },
+            {
+              "group": "bottom",
+              "ticker": "META",
+              "composite_score": 46.66666666666668,
+              "filing_date": "2021-01-28",
+              "stock_return": -0.4450565286958106,
+              "benchmark_return": -0.08559130637297074,
+              "excess_return": -0.35946522232283984
+            },
+            {
+              "group": "bottom",
+              "ticker": "ORCL",
+              "composite_score": 13.333333333333334,
+              "filing_date": "2020-06-22",
+              "stock_return": 0.24520939295259647,
+              "benchmark_return": 0.14868474031533885,
+              "excess_return": 0.09652465263725762
+            }
+          ]
+        },
+        "36": {
+          "top_avg_return": 0.964051190121442,
+          "bottom_avg_return": 1.1652132410095246,
+          "benchmark_avg_return": 0.37825603236346167,
+          "top_excess_vs_benchmark": 0.5857951577579803,
+          "top_minus_bottom_spread": -0.2011620508880826,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "MSFT",
+              "composite_score": 76.66666666666669,
+              "filing_date": "2020-07-30",
+              "stock_return": 0.6932190747269993,
+              "benchmark_return": 0.4943146919727017,
+              "excess_return": 0.19890438275429756
+            },
+            {
+              "group": "top",
+              "ticker": "NVDA",
+              "composite_score": 63.33333333333334,
+              "filing_date": "2020-02-20",
+              "stock_return": 1.6856514515973489,
+              "benchmark_return": 0.2748881821060314,
+              "excess_return": 1.4107632694913175
+            },
+            {
+              "group": "top",
+              "ticker": "META",
+              "composite_score": 46.66666666666668,
+              "filing_date": "2021-01-28",
+              "stock_return": 0.5132830440399776,
+              "benchmark_return": 0.35807736671956913,
+              "excess_return": 0.15520567732040846
+            },
+            {
+              "group": "bottom",
+              "ticker": "NVDA",
+              "composite_score": 63.33333333333334,
+              "filing_date": "2020-02-20",
+              "stock_return": 1.6856514515973489,
+              "benchmark_return": 0.2748881821060314,
+              "excess_return": 1.4107632694913175
+            },
+            {
+              "group": "bottom",
+              "ticker": "META",
+              "composite_score": 46.66666666666668,
+              "filing_date": "2021-01-28",
+              "stock_return": 0.5132830440399776,
+              "benchmark_return": 0.35807736671956913,
+              "excess_return": 0.15520567732040846
+            },
+            {
+              "group": "bottom",
+              "ticker": "ORCL",
+              "composite_score": 13.333333333333334,
+              "filing_date": "2020-06-22",
+              "stock_return": 1.2967052273912474,
+              "benchmark_return": 0.5092904045568674,
+              "excess_return": 0.78741482283438
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fiscal_year": 2021,
+      "universe_size": 8,
+      "horizons": {
+        "6": {
+          "top_avg_return": -0.14087409753771932,
+          "bottom_avg_return": 0.1036151962157527,
+          "benchmark_avg_return": -0.049011029099096326,
+          "top_excess_vs_benchmark": -0.09186306843862299,
+          "top_minus_bottom_spread": -0.244489293753472,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "META",
+              "composite_score": 71.76190476190476,
+              "filing_date": "2022-02-03",
+              "stock_return": -0.2900404546180526,
+              "benchmark_return": -0.0838333740606324,
+              "excess_return": -0.2062070805574202
+            },
+            {
+              "group": "top",
+              "ticker": "MSFT",
+              "composite_score": 67.6190476190476,
+              "filing_date": "2021-07-29",
+              "stock_return": 0.08951278199861634,
+              "benchmark_return": -0.006994251455326728,
+              "excess_return": 0.09650703345394307
+            },
+            {
+              "group": "top",
+              "ticker": "GOOGL",
+              "composite_score": 62.85714285714286,
+              "filing_date": "2022-02-02",
+              "stock_return": -0.2220946199937217,
+              "benchmark_return": -0.1442822206705313,
+              "excess_return": -0.0778123993231904
+            },
+            {
+              "group": "bottom",
+              "ticker": "ORCL",
+              "composite_score": 34.904761904761905,
+              "filing_date": "2021-06-21",
+              "stock_return": 0.1817808284787359,
+              "benchmark_return": 0.13293995638202172,
+              "excess_return": 0.04884087209671417
+            },
+            {
+              "group": "bottom",
+              "ticker": "AMZN",
+              "composite_score": 34.2857142857143,
+              "filing_date": "2022-02-04",
+              "stock_return": -0.09559462521858841,
+              "benchmark_return": -0.0910159377805646,
+              "excess_return": -0.00457868743802381
+            },
+            {
+              "group": "bottom",
+              "ticker": "PANW",
+              "composite_score": 27.346938775510207,
+              "filing_date": "2021-09-03",
+              "stock_return": 0.2246593853871106,
+              "benchmark_return": -0.10088034700954462,
+              "excess_return": 0.32553973239665523
+            }
+          ]
+        },
+        "12": {
+          "top_avg_return": -0.16653329026828012,
+          "bottom_avg_return": -0.11266624017698586,
+          "benchmark_avg_return": -0.16042812122458253,
+          "top_excess_vs_benchmark": -0.006105169043697595,
+          "top_minus_bottom_spread": -0.053867050091294263,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "META",
+              "composite_score": 71.76190476190476,
+              "filing_date": "2022-02-03",
+              "stock_return": -0.2154693482156158,
+              "benchmark_return": -0.12760173351001347,
+              "excess_return": -0.08786761470560234
+            },
+            {
+              "group": "top",
+              "ticker": "MSFT",
+              "composite_score": 67.6190476190476,
+              "filing_date": "2021-07-29",
+              "stock_return": -0.012103449374299524,
+              "benchmark_return": -0.13443405373476935,
+              "excess_return": 0.12233060436046983
+            },
+            {
+              "group": "top",
+              "ticker": "GOOGL",
+              "composite_score": 62.85714285714286,
+              "filing_date": "2022-02-02",
+              "stock_return": -0.27202707321492503,
+              "benchmark_return": -0.147827073759063,
+              "excess_return": -0.12419999945586202
+            },
+            {
+              "group": "bottom",
+              "ticker": "ORCL",
+              "composite_score": 34.904761904761905,
+              "filing_date": "2021-06-21",
+              "stock_return": -0.11928634267953608,
+              "benchmark_return": -0.1792264607333639,
+              "excess_return": 0.05994011805382782
+            },
+            {
+              "group": "bottom",
+              "ticker": "AMZN",
+              "composite_score": 34.2857142857143,
+              "filing_date": "2022-02-04",
+              "stock_return": -0.3518121854268226,
+              "benchmark_return": -0.14575735871283624,
+              "excess_return": -0.20605482671398634
+            },
+            {
+              "group": "bottom",
+              "ticker": "PANW",
+              "composite_score": 27.346938775510207,
+              "filing_date": "2021-09-03",
+              "stock_return": 0.13309980757540107,
+              "benchmark_return": -0.22772204689744924,
+              "excess_return": 0.3608218544728503
+            }
+          ]
+        },
+        "24": {
+          "top_avg_return": 0.36258856519467925,
+          "bottom_avg_return": 0.4225148079730127,
+          "benchmark_avg_return": 0.12534007830841953,
+          "top_excess_vs_benchmark": 0.2372484868862597,
+          "top_minus_bottom_spread": -0.05992624277833347,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "META",
+              "composite_score": 71.76190476190476,
+              "filing_date": "2022-02-03",
+              "stock_return": 0.9322427391027059,
+              "benchmark_return": 0.22921678830730774,
+              "excess_return": 0.7030259507953982
+            },
+            {
+              "group": "top",
+              "ticker": "MSFT",
+              "composite_score": 67.6190476190476,
+              "filing_date": "2021-07-29",
+              "stock_return": 0.1934959165509298,
+              "benchmark_return": 0.06025529524057305,
+              "excess_return": 0.13324062131035674
+            },
+            {
+              "group": "top",
+              "ticker": "GOOGL",
+              "composite_score": 62.85714285714286,
+              "filing_date": "2022-02-02",
+              "stock_return": -0.03797296006959794,
+              "benchmark_return": 0.18092091092993678,
+              "excess_return": -0.21889387099953472
+            },
+            {
+              "group": "bottom",
+              "ticker": "ORCL",
+              "composite_score": 34.904761904761905,
+              "filing_date": "2021-06-21",
+              "stock_return": 0.616944540374033,
+              "benchmark_return": 0.06430843826069044,
+              "excess_return": 0.5526361021133426
+            },
+            {
+              "group": "bottom",
+              "ticker": "AMZN",
+              "composite_score": 34.2857142857143,
+              "filing_date": "2022-02-04",
+              "stock_return": 0.08037644145393763,
+              "benchmark_return": 0.21390340593540946,
+              "excess_return": -0.13352696448147183
+            },
+            {
+              "group": "bottom",
+              "ticker": "PANW",
+              "composite_score": 27.346938775510207,
+              "filing_date": "2021-09-03",
+              "stock_return": 0.5702234420910675,
+              "benchmark_return": 0.0034356311765997294,
+              "excess_return": 0.5667878109144677
+            }
+          ]
+        },
+        "36": {
+          "top_avg_return": 0.9457520057780568,
+          "bottom_avg_return": 0.9037627095032713,
+          "benchmark_avg_return": 0.39488324365826194,
+          "top_excess_vs_benchmark": 0.550868762119795,
+          "top_minus_bottom_spread": 0.04198929627478554,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "META",
+              "composite_score": 71.76190476190476,
+              "filing_date": "2022-02-03",
+              "stock_return": 1.9446683866585412,
+              "benchmark_return": 0.49528353032391426,
+              "excess_return": 1.449384856334627
+            },
+            {
+              "group": "top",
+              "ticker": "MSFT",
+              "composite_score": 67.6190476190476,
+              "filing_date": "2021-07-29",
+              "stock_return": 0.5279966631382329,
+              "benchmark_return": 0.2907807230007342,
+              "excess_return": 0.2372159401374987
+            },
+            {
+              "group": "top",
+              "ticker": "GOOGL",
+              "composite_score": 62.85714285714286,
+              "filing_date": "2022-02-02",
+              "stock_return": 0.3645909675373966,
+              "benchmark_return": 0.43465863283549266,
+              "excess_return": -0.07006766529809605
+            },
+            {
+              "group": "bottom",
+              "ticker": "ORCL",
+              "composite_score": 34.904761904761905,
+              "filing_date": "2021-06-21",
+              "stock_return": 0.900738923913692,
+              "benchmark_return": 0.41964593334903366,
+              "excess_return": 0.4810929905646584
+            },
+            {
+              "group": "bottom",
+              "ticker": "AMZN",
+              "composite_score": 34.2857142857143,
+              "filing_date": "2022-02-04",
+              "stock_return": 0.5355288739918509,
+              "benchmark_return": 0.4947821876379548,
+              "excess_return": 0.04074668635389611
+            },
+            {
+              "group": "bottom",
+              "ticker": "PANW",
+              "composite_score": 27.346938775510207,
+              "filing_date": "2021-09-03",
+              "stock_return": 1.2750203306042711,
+              "benchmark_return": 0.23414845480244195,
+              "excess_return": 1.0408718758018292
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fiscal_year": 2022,
+      "universe_size": 9,
+      "horizons": {
+        "6": {
+          "top_avg_return": -0.12851305986944858,
+          "bottom_avg_return": 0.375891258523557,
+          "benchmark_avg_return": 0.06721302391151794,
+          "top_excess_vs_benchmark": -0.1957260837809665,
+          "top_minus_bottom_spread": -0.5044043183930056,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "NVDA",
+              "composite_score": 86.25,
+              "filing_date": "2022-03-18",
+              "stock_return": -0.49386436760495445,
+              "benchmark_return": -0.1678436131176113,
+              "excess_return": -0.32602075448734313
+            },
+            {
+              "group": "top",
+              "ticker": "MSFT",
+              "composite_score": 69.91071428571428,
+              "filing_date": "2022-07-28",
+              "stock_return": -0.11757665857462074,
+              "benchmark_return": -0.059140381895475214,
+              "excess_return": -0.05843627667914553
+            },
+            {
+              "group": "top",
+              "ticker": "GOOGL",
+              "composite_score": 53.39285714285714,
+              "filing_date": "2023-02-03",
+              "stock_return": 0.22590184657122947,
+              "benchmark_return": 0.2243851708706266,
+              "excess_return": 0.0015166757006028764
+            },
+            {
+              "group": "bottom",
+              "ticker": "ORCL",
+              "composite_score": 34.19642857142857,
+              "filing_date": "2022-06-21",
+              "stock_return": 0.2157995277849134,
+              "benchmark_return": -0.023063473086402886,
+              "excess_return": 0.2388630008713163
+            },
+            {
+              "group": "bottom",
+              "ticker": "AMZN",
+              "composite_score": 30.0,
+              "filing_date": "2023-02-03",
+              "stock_return": 0.24683242502287928,
+              "benchmark_return": 0.2243851708706266,
+              "excess_return": 0.022447254152252683
+            },
+            {
+              "group": "bottom",
+              "ticker": "META",
+              "composite_score": 24.017857142857142,
+              "filing_date": "2023-02-02",
+              "stock_return": 0.6650418227628783,
+              "benchmark_return": 0.20455526982734384,
+              "excess_return": 0.4604865529355344
+            }
+          ]
+        },
+        "12": {
+          "top_avg_return": 0.19575219832620971,
+          "bottom_avg_return": 0.999814241018736,
+          "benchmark_avg_return": 0.27089838368700203,
+          "top_excess_vs_benchmark": -0.07514618536079232,
+          "top_minus_bottom_spread": -0.8040620426925262,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "NVDA",
+              "composite_score": 86.25,
+              "filing_date": "2022-03-18",
+              "stock_return": -0.019990135720623914,
+              "benchmark_return": -0.12173314133764024,
+              "excess_return": 0.10174300561701632
+            },
+            {
+              "group": "top",
+              "ticker": "MSFT",
+              "composite_score": 69.91071428571428,
+              "filing_date": "2022-07-28",
+              "stock_return": 0.23599272332072552,
+              "benchmark_return": 0.2466159294979593,
+              "excess_return": -0.01062320617723378
+            },
+            {
+              "group": "top",
+              "ticker": "GOOGL",
+              "composite_score": 53.39285714285714,
+              "filing_date": "2023-02-03",
+              "stock_return": 0.37125400737852754,
+              "benchmark_return": 0.4090087469487389,
+              "excess_return": -0.03775473957021136
+            },
+            {
+              "group": "bottom",
+              "ticker": "ORCL",
+              "composite_score": 34.19642857142857,
+              "filing_date": "2022-06-21",
+              "stock_return": 0.8359480711285006,
+              "benchmark_return": 0.2967138770234401,
+              "excess_return": 0.5392341941050605
+            },
+            {
+              "group": "bottom",
+              "ticker": "AMZN",
+              "composite_score": 30.0,
+              "filing_date": "2023-02-03",
+              "stock_return": 0.6472579414256718,
+              "benchmark_return": 0.4090087469487389,
+              "excess_return": 0.23824919447693294
+            },
+            {
+              "group": "bottom",
+              "ticker": "META",
+              "composite_score": 24.017857142857142,
+              "filing_date": "2023-02-02",
+              "stock_return": 1.5162367105020356,
+              "benchmark_return": 0.38577614304077534,
+              "excess_return": 1.1304605674612602
+            }
+          ]
+        },
+        "24": {
+          "top_avg_return": 1.2821538464529934,
+          "bottom_avg_return": 1.721136385072988,
+          "benchmark_avg_return": 0.6039597473996051,
+          "top_excess_vs_benchmark": 0.6781940990533882,
+          "top_minus_bottom_spread": -0.4389825386199946,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "NVDA",
+              "composite_score": 86.25,
+              "filing_date": "2022-03-18",
+              "stock_return": 2.3480529980828297,
+              "benchmark_return": 0.2641488384314117,
+              "excess_return": 2.083904159651418
+            },
+            {
+              "group": "top",
+              "ticker": "MSFT",
+              "composite_score": 69.91071428571428,
+              "filing_date": "2022-07-28",
+              "stock_return": 0.570946481808644,
+              "benchmark_return": 0.5184520971223994,
+              "excess_return": 0.05249438468624468
+            },
+            {
+              "group": "top",
+              "ticker": "GOOGL",
+              "composite_score": 53.39285714285714,
+              "filing_date": "2023-02-03",
+              "stock_return": 0.9274620594675067,
+              "benchmark_return": 0.7139918633034987,
+              "excess_return": 0.21347019616400797
+            },
+            {
+              "group": "bottom",
+              "ticker": "ORCL",
+              "composite_score": 34.19642857142857,
+              "filing_date": "2022-06-21",
+              "stock_return": 1.1581803667001305,
+              "benchmark_return": 0.7296438852274549,
+              "excess_return": 0.42853648147267553
+            },
+            {
+              "group": "bottom",
+              "ticker": "AMZN",
+              "composite_score": 30.0,
+              "filing_date": "2023-02-03",
+              "stock_return": 1.2963536083811618,
+              "benchmark_return": 0.7139918633034987,
+              "excess_return": 0.582361745077663
+            },
+            {
+              "group": "bottom",
+              "ticker": "META",
+              "composite_score": 24.017857142857142,
+              "filing_date": "2023-02-02",
+              "stock_return": 2.7088751801376714,
+              "benchmark_return": 0.683529937009367,
+              "excess_return": 2.0253452431283043
+            }
+          ]
+        },
+        "36": {
+          "top_avg_return": 2.179429146480686,
+          "bottom_avg_return": 2.089782239882908,
+          "benchmark_avg_return": 0.8868815071061681,
+          "top_excess_vs_benchmark": 1.292547639374518,
+          "top_minus_bottom_spread": 0.0896469065977783,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "NVDA",
+              "composite_score": 86.25,
+              "filing_date": "2022-03-18",
+              "stock_return": 3.3705026226399672,
+              "benchmark_return": 0.37756534966831823,
+              "excess_return": 2.9929372729716492
+            },
+            {
+              "group": "top",
+              "ticker": "MSFT",
+              "composite_score": 69.91071428571428,
+              "filing_date": "2022-07-28",
+              "stock_return": 0.9011618632078324,
+              "benchmark_return": 0.8701498455032419,
+              "excess_return": 0.0310120177045905
+            },
+            {
+              "group": "top",
+              "ticker": "GOOGL",
+              "composite_score": 53.39285714285714,
+              "filing_date": "2023-02-03",
+              "stock_return": 2.266622953594259,
+              "benchmark_return": 1.0498919853539461,
+              "excess_return": 1.216730968240313
+            },
+            {
+              "group": "bottom",
+              "ticker": "ORCL",
+              "composite_score": 34.19642857142857,
+              "filing_date": "2022-06-21",
+              "stock_return": 2.1930734313779507,
+              "benchmark_return": 0.9289121102341915,
+              "excess_return": 1.2641613211437592
+            },
+            {
+              "group": "bottom",
+              "ticker": "AMZN",
+              "composite_score": 30.0,
+              "filing_date": "2023-02-03",
+              "stock_return": 1.3079601172826631,
+              "benchmark_return": 1.0498919853539461,
+              "excess_return": 0.258068131928717
+            },
+            {
+              "group": "bottom",
+              "ticker": "META",
+              "composite_score": 24.017857142857142,
+              "filing_date": "2023-02-02",
+              "stock_return": 2.768313170988109,
+              "benchmark_return": 1.0448777665233653,
+              "excess_return": 1.7234354044647437
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fiscal_year": 2023,
+      "universe_size": 9,
+      "horizons": {
+        "6": {
+          "top_avg_return": 0.23053455873035075,
+          "bottom_avg_return": 0.5882202806047179,
+          "benchmark_avg_return": 0.17147923109977323,
+          "top_excess_vs_benchmark": 0.059055327630577525,
+          "top_minus_bottom_spread": -0.3576857218743671,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "CRWD",
+              "composite_score": 75.0,
+              "filing_date": "2023-03-09",
+              "stock_return": 0.41592696296865705,
+              "benchmark_return": 0.29184550634937856,
+              "excess_return": 0.1240814566192785
+            },
+            {
+              "group": "top",
+              "ticker": "META",
+              "composite_score": 74.375,
+              "filing_date": "2024-02-02",
+              "stock_return": 0.02979671826674757,
+              "benchmark_return": 0.049060655523324836,
+              "excess_return": -0.019263937256577268
+            },
+            {
+              "group": "top",
+              "ticker": "PANW",
+              "composite_score": 66.875,
+              "filing_date": "2023-09-01",
+              "stock_return": 0.2458799949556476,
+              "benchmark_return": 0.18483417427748683,
+              "excess_return": 0.06104582067816078
+            },
+            {
+              "group": "bottom",
+              "ticker": "AMZN",
+              "composite_score": 35.0,
+              "filing_date": "2024-02-02",
+              "stock_return": -0.0227577190947571,
+              "benchmark_return": 0.049060655523324836,
+              "excess_return": -0.07181837461808194
+            },
+            {
+              "group": "bottom",
+              "ticker": "NVDA",
+              "composite_score": 27.5,
+              "filing_date": "2023-02-24",
+              "stock_return": 1.0259337456141497,
+              "benchmark_return": 0.24130680407403404,
+              "excess_return": 0.7846269415401157
+            },
+            {
+              "group": "bottom",
+              "ticker": "MU",
+              "composite_score": 4.375,
+              "filing_date": "2023-10-06",
+              "stock_return": 0.7614848152947609,
+              "benchmark_return": 0.2127675908510902,
+              "excess_return": 0.5487172244436707
+            }
+          ]
+        },
+        "12": {
+          "top_avg_return": 0.8483635947600613,
+          "bottom_avg_return": 1.085751956365187,
+          "benchmark_avg_return": 0.3338642890559078,
+          "top_excess_vs_benchmark": 0.5144993057041535,
+          "top_minus_bottom_spread": -0.23738836160512566,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "CRWD",
+              "composite_score": 75.0,
+              "filing_date": "2023-03-09",
+              "stock_return": 1.6082346673341341,
+              "benchmark_return": 0.5048590374244148,
+              "excess_return": 1.1033756299097193
+            },
+            {
+              "group": "top",
+              "ticker": "META",
+              "composite_score": 74.375,
+              "filing_date": "2024-02-02",
+              "stock_return": 0.47397705655350797,
+              "benchmark_return": 0.21486428054334783,
+              "excess_return": 0.25911277601016014
+            },
+            {
+              "group": "top",
+              "ticker": "PANW",
+              "composite_score": 66.875,
+              "filing_date": "2023-09-01",
+              "stock_return": 0.4628790603925417,
+              "benchmark_return": 0.23148622207339842,
+              "excess_return": 0.23139283831914326
+            },
+            {
+              "group": "bottom",
+              "ticker": "AMZN",
+              "composite_score": 35.0,
+              "filing_date": "2024-02-02",
+              "stock_return": 0.38187533637544036,
+              "benchmark_return": 0.21486428054334783,
+              "excess_return": 0.16701105583209253
+            },
+            {
+              "group": "bottom",
+              "ticker": "NVDA",
+              "composite_score": 27.5,
+              "filing_date": "2023-02-24",
+              "stock_return": 2.398054575038893,
+              "benchmark_return": 0.5061370546085875,
+              "excess_return": 1.8919175204303056
+            },
+            {
+              "group": "bottom",
+              "ticker": "MU",
+              "composite_score": 4.375,
+              "filing_date": "2023-10-06",
+              "stock_return": 0.4773259576812272,
+              "benchmark_return": 0.3309748591423507,
+              "excess_return": 0.1463510985388765
+            }
+          ]
+        },
+        "24": {
+          "top_avg_return": 0.8685902210542635,
+          "bottom_avg_return": 2.2552473864869005,
+          "benchmark_avg_return": 0.599207540663138,
+          "top_excess_vs_benchmark": 0.26938268039112556,
+          "top_minus_bottom_spread": -1.386657165432637,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "CRWD",
+              "composite_score": 75.0,
+              "filing_date": "2023-03-09",
+              "stock_return": 1.538297046161536,
+              "benchmark_return": 0.6361133276348663,
+              "excess_return": 0.9021837185266697
+            },
+            {
+              "group": "top",
+              "ticker": "META",
+              "composite_score": 74.375,
+              "filing_date": "2024-02-02",
+              "stock_return": 0.4975988368901356,
+              "benchmark_return": 0.47561911553502356,
+              "excess_return": 0.02197972135511206
+            },
+            {
+              "group": "top",
+              "ticker": "PANW",
+              "composite_score": 66.875,
+              "filing_date": "2023-09-01",
+              "stock_return": 0.569874780111119,
+              "benchmark_return": 0.5168243378705777,
+              "excess_return": 0.05305044224054134
+            },
+            {
+              "group": "bottom",
+              "ticker": "AMZN",
+              "composite_score": 35.0,
+              "filing_date": "2024-02-02",
+              "stock_return": 0.41412030828420554,
+              "benchmark_return": 0.47561911553502356,
+              "excess_return": -0.06149880725081802
+            },
+            {
+              "group": "bottom",
+              "ticker": "NVDA",
+              "composite_score": 27.5,
+              "filing_date": "2023-02-24",
+              "stock_return": 4.598847367192702,
+              "benchmark_return": 0.8042574559256821,
+              "excess_return": 3.7945899112670203
+            },
+            {
+              "group": "bottom",
+              "ticker": "MU",
+              "composite_score": 4.375,
+              "filing_date": "2023-10-06",
+              "stock_return": 1.7527744839837944,
+              "benchmark_return": 0.6868118914776542,
+              "excess_return": 1.0659625925061402
+            }
+          ]
+        },
+        "36": {
+          "top_avg_return": 2.56780082013483,
+          "bottom_avg_return": 7.290091624982566,
+          "benchmark_avg_return": 1.1172437735149936,
+          "top_excess_vs_benchmark": 1.4505570466198363,
+          "top_minus_bottom_spread": -4.722290804847736,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "CRWD",
+              "composite_score": 75.0,
+              "filing_date": "2023-03-09",
+              "stock_return": 2.56780082013483,
+              "benchmark_return": 1.1141184541271092,
+              "excess_return": 1.4536823660077207
+            },
+            {
+              "group": "bottom",
+              "ticker": "NVDA",
+              "composite_score": 27.5,
+              "filing_date": "2023-02-24",
+              "stock_return": 7.290091624982566,
+              "benchmark_return": 1.120369092902878,
+              "excess_return": 6.169722532079687
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fiscal_year": 2024,
+      "universe_size": 9,
+      "horizons": {
+        "6": {
+          "top_avg_return": 0.30111852669904043,
+          "bottom_avg_return": -0.0659136028990021,
+          "benchmark_avg_return": 0.06906202990867717,
+          "top_excess_vs_benchmark": 0.23205649679036328,
+          "top_minus_bottom_spread": 0.36703212959804254,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "NVDA",
+              "composite_score": 93.75,
+              "filing_date": "2024-02-21",
+              "stock_return": 0.9047396810987405,
+              "benchmark_return": 0.13697037650932353,
+              "excess_return": 0.767769304589417
+            },
+            {
+              "group": "top",
+              "ticker": "META",
+              "composite_score": 66.875,
+              "filing_date": "2025-01-30",
+              "stock_return": 0.013630170295881872,
+              "benchmark_return": 0.08881745967088239,
+              "excess_return": -0.07518728937500052
+            },
+            {
+              "group": "top",
+              "ticker": "MSFT",
+              "composite_score": 50.0,
+              "filing_date": "2024-07-30",
+              "stock_return": -0.015014271297501103,
+              "benchmark_return": 0.14665614683974515,
+              "excess_return": -0.16167041813724625
+            },
+            {
+              "group": "bottom",
+              "ticker": "AMZN",
+              "composite_score": 36.25,
+              "filing_date": "2025-02-07",
+              "stock_return": -0.026270954283295067,
+              "benchmark_return": 0.09142744391952773,
+              "excess_return": -0.1176983982028228
+            },
+            {
+              "group": "bottom",
+              "ticker": "MU",
+              "composite_score": 32.5,
+              "filing_date": "2024-10-04",
+              "stock_return": -0.3646795789749362,
+              "benchmark_return": -0.1299702830569317,
+              "excess_return": -0.2347092959180045
+            },
+            {
+              "group": "bottom",
+              "ticker": "ORCL",
+              "composite_score": 31.25,
+              "filing_date": "2024-06-20",
+              "stock_return": 0.19320972456122498,
+              "benchmark_return": 0.08047103556951596,
+              "excess_return": 0.11273868899170902
+            }
+          ]
+        },
+        "12": {
+          "top_avg_return": 0.42068100884892257,
+          "bottom_avg_return": 0.4133417345440818,
+          "benchmark_avg_return": 0.20371458064359185,
+          "top_excess_vs_benchmark": 0.2169664282053307,
+          "top_minus_bottom_spread": 0.0073392743048407705,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "NVDA",
+              "composite_score": 93.75,
+              "filing_date": "2024-02-21",
+              "stock_return": 0.9929467595091481,
+              "benchmark_return": 0.24340689944334004,
+              "excess_return": 0.7495398600658081
+            },
+            {
+              "group": "top",
+              "ticker": "META",
+              "composite_score": 66.875,
+              "filing_date": "2025-01-30",
+              "stock_return": 0.046229047822823555,
+              "benchmark_return": 0.19496014905617853,
+              "excess_return": -0.14873110123335498
+            },
+            {
+              "group": "top",
+              "ticker": "MSFT",
+              "composite_score": 50.0,
+              "filing_date": "2024-07-30",
+              "stock_return": 0.22286721921479602,
+              "benchmark_return": 0.24849923291805354,
+              "excess_return": -0.025632013703257517
+            },
+            {
+              "group": "bottom",
+              "ticker": "AMZN",
+              "composite_score": 36.25,
+              "filing_date": "2025-02-07",
+              "stock_return": -0.0891555453630527,
+              "benchmark_return": 0.1807459318963036,
+              "excess_return": -0.2699014772593563
+            },
+            {
+              "group": "bottom",
+              "ticker": "MU",
+              "composite_score": 32.5,
+              "filing_date": "2024-10-04",
+              "stock_return": 0.8774882958492163,
+              "benchmark_return": 0.25377531306676615,
+              "excess_return": 0.6237129827824501
+            },
+            {
+              "group": "bottom",
+              "ticker": "ORCL",
+              "composite_score": 31.25,
+              "filing_date": "2024-06-20",
+              "stock_return": 0.45169245314608175,
+              "benchmark_return": 0.1008999574809093,
+              "excess_return": 0.35079249566517245
+            }
+          ]
+        },
+        "24": {
+          "top_avg_return": 0.9619658878458125,
+          "bottom_avg_return": 0.251146083989622,
+          "benchmark_avg_return": 0.4965222359807075,
+          "top_excess_vs_benchmark": 0.465443651865105,
+          "top_minus_bottom_spread": 0.7108198038561905,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "NVDA",
+              "composite_score": 93.75,
+              "filing_date": "2024-02-21",
+              "stock_return": 1.8405367966172177,
+              "benchmark_return": 0.42866066273808645,
+              "excess_return": 1.4118761338791312
+            },
+            {
+              "group": "top",
+              "ticker": "MSFT",
+              "composite_score": 50.0,
+              "filing_date": "2024-07-30",
+              "stock_return": 0.0833949790744073,
+              "benchmark_return": 0.5096683598950875,
+              "excess_return": -0.4262733808206802
+            },
+            {
+              "group": "bottom",
+              "ticker": "ORCL",
+              "composite_score": 31.25,
+              "filing_date": "2024-06-20",
+              "stock_return": 0.251146083989622,
+              "benchmark_return": 0.5512376853089485,
+              "excess_return": -0.30009160131932644
+            }
+          ]
+        }
+      }
+    },
+    {
+      "fiscal_year": 2025,
+      "universe_size": 5,
+      "horizons": {
+        "6": {
+          "top_avg_return": 0.4946658670423143,
+          "bottom_avg_return": 0.059387442356916544,
+          "benchmark_avg_return": 0.14366911528832915,
+          "top_excess_vs_benchmark": 0.35099675175398515,
+          "top_minus_bottom_spread": 0.43527842468539774,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "CRWD",
+              "composite_score": 70.0,
+              "filing_date": "2025-03-10",
+              "stock_return": 0.37560712059730106,
+              "benchmark_return": 0.23161033473972914,
+              "excess_return": 0.14399678585757192
+            },
+            {
+              "group": "top",
+              "ticker": "MU",
+              "composite_score": 55.0,
+              "filing_date": "2025-10-03",
+              "stock_return": 1.0128379542086186,
+              "benchmark_return": -0.021848802649866217,
+              "excess_return": 1.0346867568584848
+            },
+            {
+              "group": "top",
+              "ticker": "GOOGL",
+              "composite_score": 52.5,
+              "filing_date": "2026-02-05",
+              "stock_return": 0.09555252632102329,
+              "benchmark_return": 0.20428391164477055,
+              "excess_return": -0.10873138532374726
+            },
+            {
+              "group": "bottom",
+              "ticker": "GOOGL",
+              "composite_score": 52.5,
+              "filing_date": "2026-02-05",
+              "stock_return": 0.09555252632102329,
+              "benchmark_return": 0.20428391164477055,
+              "excess_return": -0.10873138532374726
+            },
+            {
+              "group": "bottom",
+              "ticker": "PANW",
+              "composite_score": 51.25,
+              "filing_date": "2025-08-29",
+              "stock_return": -0.21189381414375663,
+              "benchmark_return": 0.06868742366116742,
+              "excess_return": -0.28058123780492406
+            },
+            {
+              "group": "bottom",
+              "ticker": "AMZN",
+              "composite_score": 21.25,
+              "filing_date": "2026-02-06",
+              "stock_return": 0.294503614893483,
+              "benchmark_return": 0.17499791268940346,
+              "excess_return": 0.11950570220407952
+            }
+          ]
+        },
+        "12": {
+          "top_avg_return": 0.41271128429151904,
+          "bottom_avg_return": null,
+          "benchmark_avg_return": 0.2921802665019766,
+          "top_excess_vs_benchmark": 0.12053101778954245,
+          "top_minus_bottom_spread": null,
+          "detail": [
+            {
+              "group": "top",
+              "ticker": "CRWD",
+              "composite_score": 70.0,
+              "filing_date": "2025-03-10",
+              "stock_return": 0.41271128429151904,
+              "benchmark_return": 0.2921802665019766,
+              "excess_return": 0.12053101778954245
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "horizon_summary": {
+    "6": {
+      "observations": 6,
+      "hit_rate_vs_benchmark": 0.6666666666666666,
+      "mean_excess_return": 0.09126276004364374,
+      "median_excess_return": 0.19305713630652593
+    },
+    "12": {
+      "observations": 6,
+      "hit_rate_vs_benchmark": 0.6666666666666666,
+      "mean_excess_return": 0.15750911214954666,
+      "median_excess_return": 0.17430927560274329
+    },
+    "24": {
+      "observations": 5,
+      "hit_rate_vs_benchmark": 1.0,
+      "mean_excess_return": 0.42523843510681225,
+      "median_excess_return": 0.465443651865105
+    },
+    "36": {
+      "observations": 4,
+      "hit_rate_vs_benchmark": 1.0,
+      "mean_excess_return": 0.9699421514680324,
+      "median_excess_return": 1.292547639374518
+    }
+  }
+}

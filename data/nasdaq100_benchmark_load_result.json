@@ -1,0 +1,27 @@
+{
+  "mode": "execute",
+  "ticker": "QQQ",
+  "rows_fetched": 1659,
+  "date_range": [
+    "2020-01-02",
+    "2026-08-10"
+  ],
+  "splits_found": [],
+  "raw_path": "C:\\AI_Stock_Agent\\data\\market_data\\raw\\yahoo\\QQQ\\qqq_chart_raw_20260811T131525Z.json",
+  "raw_sha256": "d9487a9b983ea64a8f3d7b3bda63713d4b65b60aa614955ae1d945ec71c83446",
+  "rows_written": 1659,
+  "duplicate_keys": 0,
+  "backup_path": "C:\\AI_Stock_Agent\\data\\database\\backups\\ai_stock_agent_pre_nasdaq100_benchmark_20260811T131525Z.duckdb",
+  "guard_result": {
+    "table": "historical_prices_daily",
+    "pre_count": 198900,
+    "post_count": 200559,
+    "rows_inserted": 1659,
+    "declared_row_delta": 1659,
+    "actual_row_delta": 1659,
+    "pre_existing_checksum_before": "ff4fa19e57f372629ee7eee313de3e0a6632ac4707372d075cca902f96dca226",
+    "pre_existing_checksum_after": "ff4fa19e57f372629ee7eee313de3e0a6632ac4707372d075cca902f96dca226",
+    "pre_existing_rows_byte_identical": true
+  },
+  "status": "PASS"
+}

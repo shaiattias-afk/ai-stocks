@@ -1,5 +1,20 @@
 # Cleanup — decisions awaiting your sign-off
 
+> **2026-08-11 update: D-P1, D-P2, and D-P3 are all resolved.** Formal
+> decisions recorded as `docs/DECISIONS_LOG.md` D-051 (D-P3), D-052
+> (D-P1), D-053 (two further defects found while verifying D-P1 — the
+> `comprehensive` role-exclude bug and a `current_debt` exception-
+> isolation gap), D-054 (D-P2, implemented as a component aggregator,
+> not the literal label match originally asked about), D-055 (the
+> resulting full-universe re-measurement: 74.36% → 79.86%, zero
+> unintended regressions), and D-056 (the improved results LOADED into
+> production — `financial_metric_results` 15,540 → 30,180, the 900
+> frozen rows confirmed untouched; also found and worked around a
+> second uncaught-exception site, same shape as D-053's, still present
+> in the real engine and flagged for a future fix). The section-by-
+> section history below is left as-is — it is the evidence trail these
+> decisions were made from, not superseded text.
+
 Collected during the extraction cleanup so the work could run without
 interruption. **Nothing here has been treated as approved.** Each entry
 states what was found, what was done (if anything), and what needs your
@@ -18,7 +33,13 @@ Two categories:
 
 ## D-P1 — Combined filings: which entity's numbers are "the company's"?
 
-**Status: ATTEMPTED, REVERTED — NEEDS A DECISION AND A SAFER DESIGN**
+**Status: RESOLVED — see DECISIONS_LOG.md D-052.** The "REVERTED"
+finding below was itself a misdiagnosis (D-P3 already retracts it, see
+that section's own update) — re-implemented and verified safe. Fixes
+the `identify_canonical_row`-based metrics for the Constellation-style
+combined-filing convention; does NOT fix Exelon's "every role qualified"
+convention or the separate multi-instrument current_debt gap (D-052 has
+the full evidence for both).
 
 > **Update after testing.** The fix below was implemented and then
 > **backed out**: it regressed the frozen baseline. PANW 2021-07-31's
@@ -86,7 +107,13 @@ require a separate treatment for groups with material minority interests.
 
 ## D-P2 — Utility capital spending labelled as acquisitions
 
-**Status: PARKED, NOT IMPLEMENTED**
+**Status: RESOLVED — see DECISIONS_LOG.md D-054.** Implemented as a
+GAAP-concept-based component aggregator, not the literal label match
+this section originally asked about — evidence showed AEP's dominant
+capex line ("Construction Expenditures") isn't reachable by any label
+wording, and a label-only fix for "Generation Facilities" alone would
+have produced a confidently-wrong, understated `PASS` rather than a
+correct number.
 
 American Electric Power labels its capital expenditure
 `Acquisitions of Assets` and `Acquisitions of Generation Facilities` —
@@ -107,7 +134,11 @@ it unilaterally.
 
 ## D-P3 — Loading new companies changed the result of an OLD computation
 
-**Status: FOUND, NOT FIXED — this one needs your decision before anything else**
+**Status: RESOLVED — see DECISIONS_LOG.md D-051.** Option 1 (below) was
+taken: the golden regression now explicitly excludes PANW 2021-07-31's
+`average_invested_capital`/`roic` as approved-not-reproducible values,
+with the exclusion named and documented in the test itself rather than
+silently comparing them against themselves.
 
 ### What happened
 
@@ -220,7 +251,104 @@ expected answer is not testing anything.
 
 ### Status of the coverage cleanup
 
-Halted here. Coverage remains **71.2%**. The combined-filing diagnosis
-(D-P1) is solid and worth acting on, but nothing further should be
-changed in the extraction engine until this coupling is settled --
-otherwise there is no trustworthy baseline to test any fix against.
+**No longer halted, and no longer just measured — see DECISIONS_LOG.md
+D-051 through D-056.** The coupling was settled (D-051), D-P1 and D-P2
+were implemented and verified against the now-honest baseline
+(D-052/D-054), two further defects were found and fixed along the way
+(D-053), re-measuring the full universe moved coverage from 74.36% to
+**79.86%** with zero unintended regressions (D-055), and that
+improvement is now loaded into production, live (D-056) — not just
+proven possible. The vocabulary loop continues from there, deliberately
+paused for now at the user's request — D-055/D-056 list what's still
+open (Exelon's "every role qualified" convention, the multi-instrument
+current_debt gap, a second uncaught-exception site confirmed present in
+the real engine, and the remaining ~20% of REVIEW_REQUIRED rows, not
+yet diagnosed).
+
+---
+
+## 2026-08-12 cleanup session — new open items (D-071 through D-074)
+
+This session picked up a large batch of work two concurrent prior sessions
+had left uncommitted, verified it independently (found and fixed 2 more
+bugs, D-071), wrote up the previously-undocumented parts as D-072/D-073/
+D-074, and updated `CLAUDE.md`'s "Proven" section to state an honest new
+caveat. Full detail: `docs/DECISIONS_LOG.md` D-071–D-074,
+`docs/CURRENT_STATE.md`. What follows is the part that needs your call, not
+mine.
+
+## D-P4 — D-068's flagship P/E finding is regime-untested: what to do about it
+
+**What was found (D-074).** The wide-universe validation of the entry-P/E
+→ 5-year-return finding (D-068, previously called "the strongest
+validation any finding in this project has received") turns out to rest
+entirely on 2020-2021 entries — the only cohort old enough to have a full
+5-year forward return yet. At shorter horizons where later entries ARE
+eligible, the signal is absent, including for the same companies measured
+over a shorter window. This is not proof the effect is false. It is proof
+the effect has only ever been tested in one macro period, and the backtest
+gate this project committed to (warn about regimes) was not actually
+satisfiable until now, because no second cohort had reached 5 years yet.
+
+**Your call — how to treat this finding going forward:**
+1. **Treat it as the working thesis anyway**, with the caveat stated (as
+   `CLAUDE.md` now does), and keep using "avoid P/E > ~80" as the
+   practical rule until a second regime becomes testable naturally
+   (~2027-2028, when 2022-2023 entries reach 5 years).
+2. **Look for an earlier, independent regime test** — e.g. pre-2020
+   history for the same tickers (if point-in-time price/filing data
+   reaches back far enough) or a completely different universe/period, to
+   get a second macro-regime read sooner than 2027-2028, accepting
+   whatever extra work that costs.
+3. **Deprioritize the P/E rule** as a practical output until it can
+   actually be regime-tested, and redirect effort toward the two new
+   unvalidated candidates (D-P5) or another line of work.
+
+I lean toward (1) — it is still the only real signal this project has ever
+found, the caveat is now honestly stated, and (2)'s "different universe"
+approach would itself need the same regime scrutiny before being trusted
+more than the original. But this changes how much weight the flagship
+result should carry in any decision the user makes with it, so it is the
+user's call, not mine.
+
+## D-P5 — Two new unvalidated candidate factors: pursue now or park?
+
+**What was found (D-074, `scripts/210`).** `dividend_yield` (n=137, corr
++0.226, CI [0.045, 0.396]) and `size_log_revenue` (n=104, corr +0.282, CI
+[0.063, 0.477]) both clear a first-pass significance bar at the 60-month
+horizon, wide universe — but neither has been through the robustness
+gauntlet the P/E finding went through (D-063→D-064→D-074's own regime
+check just showed why that gauntlet matters). `scripts/211` already found
+both are ALSO regime-sensitive in the same way as P/E (significant
+pre-2022, not in the shorter-horizon 2022+-eligible subset).
+
+**Your call**: invest the next round of validation effort here (robustness
++ regime checks, same discipline as D-074), or treat this as a lower
+priority than D-P4's open question about the existing flagship finding.
+
+## D-P6 — Ratify the already-applied production changes and engine fixes
+
+Two things happened in this batch of work without a specific up-front
+approval step, both already verified safe by this session but both are
+exactly the kind of accounting/production change `CLAUDE.md` says is the
+user's call, not mine, to finalize:
+
+1. **`extraction/quarterly.py`'s two fixes** (D-068): deduping active
+   `financial_metric_results` rows to the latest `loaded_at` in
+   `resolve_annual_anchor`, and a same-filing exact-value fallback for
+   missing `context_id` in `lookup_annual_fact_decimals`. Both are
+   additive fallback paths, both regression-verified to cause zero change
+   for the original 9 tickers, both necessary for the wider-universe
+   quarterly engine to work at all. I judge these unambiguously correct
+   (same bar as the old D-P1/D-P2 "implemented, needs ratifying"
+   category) — they fix real defects, not policy choices.
+2. **`scripts/212`'s full production load** (D-072): 135-company quarterly
+   extraction, already run and already verified not to have touched the
+   frozen baseline. Not a policy change, but a substantial one-time
+   production write that happened without this session's real-time
+   supervision — flagging it here for visibility, not because I think it
+   needs reverting.
+
+My recommendation: ratify both as-is (same reasoning D-P1/D-P2 used) —
+flagging here rather than treating as silently approved, per this
+project's rule that policy sign-off is yours.
