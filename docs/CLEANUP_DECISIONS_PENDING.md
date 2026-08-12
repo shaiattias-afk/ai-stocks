@@ -277,6 +277,20 @@ caveat. Full detail: `docs/DECISIONS_LOG.md` D-071–D-074,
 `docs/CURRENT_STATE.md`. What follows is the part that needs your call, not
 mine.
 
+## D-P4 and D-P5 — RESOLVED by user redirection, see DECISIONS_LOG.md D-075
+
+**Status: RESOLVED, not by picking one of the options below.** The user
+pointed out (2026-08-12, after already asking once before) that the
+project's analysis scope was supposed to be quarterly cadence / 12-quarter
+lookback throughout, not annual / 5-year — and that D-068 and this
+session's own D-074 had drifted back to the annual framing without a new
+instruction to do so. `CLAUDE.md` now states this as a binding Method rule
+(see D-075). Consequence: the annual P/E finding (D-P4's subject) is
+background reference only, not the active thesis; the two new annual
+candidate factors (D-P5's subject) are parked, not validated further. Both
+questions below are left as-written for the evidence trail; they are not
+open anymore.
+
 ## D-P4 — D-068's flagship P/E finding is regime-untested: what to do about it
 
 **What was found (D-074).** The wide-universe validation of the entry-P/E
