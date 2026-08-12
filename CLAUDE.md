@@ -40,6 +40,16 @@ fundamentally.* Primary benchmark: **Nasdaq-100 (QQQ)**.
   hang. Update `docs/CURRENT_STATE.md` after every verified milestone.
 
 **Method**
+- **Analysis horizon: quarterly cadence, 12 quarters (~3 years) lookback —
+  not annual, no fixed 5-year requirement.** User-directed after D-064,
+  restated 2026-08-12 after the project drifted back to an annual/5-year
+  framing twice despite this rule already being in force (D-068's
+  wide-universe P/E work, and this session's D-074 follow-up on it, both
+  went back to the annual 5-year lens without a new explicit instruction
+  to do so). Any proposal to analyze at annual cadence or a 5-year (or
+  other non-quarterly) horizon needs the user's explicit go-ahead each
+  time — it is not the default, even if an annual finding already exists
+  and looks promising.
 - One topic at a time. Practical steps over theory. After comparing
   alternatives, recommend one leading path.
 - Never invent data, prices, API capabilities, costs, filing dates, accounting
@@ -82,41 +92,39 @@ re-validation:
 Also binding: production tables are versioned append-only, enforced in code
 (D-047); `availability_date = filing_date` governs point-in-time use (D-046).
 
-**Proven, for 2020-2021 entries — regime-untested since** — entry-date raw
-P/E predicts 5-year excess return vs. QQQ: correlation **-0.247**,
-company-grouped block-bootstrap 95% CI **[-0.449, -0.025]**, 84 independent
-tickers. The 94 company-years never in the original sample reproduce it
-independently (-0.253). The effect is **asymmetric**: the cheapest quintile
-barely beats QQQ (+0.1%/yr, 40% win rate), while P/E > ~80 loses **-15.7%/yr
-with an 85% loss rate**. The supported rule is **"avoid richly-valued
-entries," not "buy the cheapest."** (D-063 → D-064 → D-068.) **Caveat found
-in D-074, not yet resolved**: every 5-year-eligible company-year in this
-result is a 2020-2021 entry — a single macro period, not tested against a
-regime change, because no later cohort has reached its 5-year mark yet. At
-shorter horizons where 2022+ entries ARE eligible (24mo, 36mo) the signal
-disappears entirely, including for the SAME pre-2022 companies at the
-shorter horizon. This does not mean the effect is false — it means it is
-unconfirmed outside the one period tested, and will not be retestable at 5
-years for a second regime until roughly 2027-2028.
+**Reference finding, NOT the active line of work (annual cadence — out of
+current scope per the Method rule above)** — entry-date raw P/E predicts
+5-year excess return vs. QQQ: correlation **-0.247**, company-grouped
+block-bootstrap 95% CI **[-0.449, -0.025]**, 84 independent tickers. The
+effect is **asymmetric**: the cheapest quintile barely beats QQQ (+0.1%/yr),
+while P/E > ~80 loses **-15.7%/yr with an 85% loss rate**. (D-063 → D-064 →
+D-068.) **Serious open caveat (D-074)**: every 5-year-eligible company-year
+in this result is a 2020-2021 entry — one macro period, not tested against
+a regime change, and not retestable at 5 years until ~2027-2028. Kept here
+as background context only — do not resume building on this annual/5-year
+finding without the user explicitly asking for annual-cadence work again.
 
-**Tested and not supported** — do not re-propose without new evidence: Scoring
-Model V1 composite (D-061) and V2 candidate (D-062) show no predictive power;
-the composite is *negatively* related to 5-year returns (D-063); the quarterly
-5-factor composite (D-067) is **retracted, not just fragile** — D-073's
-robustness check shows only 1 of 6 (lookback, horizon) cells tested is
-significant, and excluding any ONE of 6 of the 9 tickers erases it; the
-value/growth two-bucket model adds nothing at 12 months (D-066); none of
-Scoring Inputs V1's 9 factors shows a 5-year wide-universe signal (D-074).
-**Nothing tested so far shows signal at a 12-month horizon** — the one real
-effect is multi-year. See also `docs/FAILED_APPROACHES.md`.
+**Tested and not supported at quarterly cadence** — do not re-propose
+without new evidence: the quarterly 5-factor composite (D-067) is
+**retracted, not just fragile** — D-073's robustness check (12-quarter
+lookback, varying the forward horizon and leave-one-ticker-out) shows only
+1 of 6 (lookback, horizon) cells tested is significant, and excluding any
+ONE of 6 of the 9 tickers erases it. The quarterly growth-acceleration
+factor (D-065) was inconclusive on the same 9-ticker universe (CI crosses
+zero). **Also not supported, annual cadence** (background only, see above):
+Scoring Model V1 composite (D-061/D-062), the value/growth two-bucket model
+(D-066), none of Scoring Inputs V1's 9 factors at 5 years (D-074). See also
+`docs/FAILED_APPROACHES.md`.
 
-**Open next step** — two unvalidated candidate factors from D-074's wide-
-universe search (`dividend_yield`: n=137, corr +0.226, CI [0.045, 0.396];
-`size_log_revenue`: n=104, corr +0.282, CI [0.063, 0.477]) need the same
-robustness/regime discipline D-074 applied to the P/E finding before either
-is trusted. Quarterly Data now covers the full 135-company universe (D-072)
-at the same 6-metric scope (98.3% usable) — the 3-ticker pilot this section
-used to reference is superseded by that full load.
+**Open next step** — continue the quarterly-cadence, 12-quarter-lookback
+line of work (D-065/D-067/D-073), now on the full 135-company universe
+(Quarterly Data extended in D-072, same 6-metric scope, 98.3% usable) —
+9 tickers was always the bottleneck for the bootstrap in D-067's retracted
+result; re-running the same composite/factor tests on ~130+ tickers instead
+of 9 is the natural next step before concluding quarterly signals don't
+exist. D-074 also surfaced two unvalidated ANNUAL-cadence candidate factors
+(`dividend_yield`, `size_log_revenue`) — out of scope for now per the
+Method rule above unless the user asks for annual work specifically.
 
 **Traps**
 - Yahoo `close` is retroactively split-adjusted; as-reported EPS is not. Pair

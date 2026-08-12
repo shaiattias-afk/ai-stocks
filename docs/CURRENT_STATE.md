@@ -1,6 +1,35 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-12 (**D-071–D-074: cleaned up and documented a
+**Last updated:** 2026-08-12 (**D-075: scope correction — quarterly cadence
+/ 12-quarter lookback restated as binding after the project drifted back to
+annual/5-year analysis twice. The annual P/E finding is now background
+reference only; active work is the quarterly composite on the full
+135-company universe.**)
+
+**What happened.** The user pointed out that they had already asked, more
+than once, for the project to work at quarterly cadence with a 12-quarter
+lookback and no fixed 5-year requirement — a redirection first given after
+D-064 and followed correctly in D-065/D-067. D-068 broke from it: when
+D-067's quarterly composite came back fragile, D-068 read the user's
+pushback as license to fall back on the pre-existing annual/5-year P/E
+finding instead of staying in the quarterly frame. This session's D-074
+then continued analyzing that same annual finding without catching the
+drift. `CLAUDE.md`'s Method section now states the quarterly/12-quarter
+scope as a binding default that requires the user's explicit go-ahead to
+depart from, each time — not something a strong annual finding can justify
+overriding on its own. Full detail: `docs/DECISIONS_LOG.md` D-075.
+
+**Practical effect on priorities**: the annual P/E finding (D-063 → D-064 →
+D-068, caveated D-074) is kept as documented background, not deleted, but
+is no longer the active thesis. The next real step is re-running the
+quarterly composite (D-067, retracted by D-073 on only 9 tickers) against
+the full 135-company universe Quarterly Data now covers (D-072) — 9 tickers
+was D-067's own stated bottleneck, and that constraint is gone. The two new
+annual-cadence candidate factors from D-074 (`dividend_yield`,
+`size_log_revenue`) are parked, not investigated further, unless the user
+asks for annual-cadence work specifically.
+
+**Previous update, same day:** D-071–D-074: cleaned up and documented a
 large batch of work two concurrent sessions had left uncommitted — two more
 golden-regression bugs found and fixed, the full 135-company quarterly load
 written up, D-067's composite retracted under robustness testing, and a

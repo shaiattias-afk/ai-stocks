@@ -2493,3 +2493,47 @@ Files: `scripts/209_wide_universe_5yr_factor_sweep.py`,
 `data/wide_universe_5yr_factor_sweep_result.json`,
 `data/wide_universe_5yr_new_factor_search_result.json`,
 `data/multi_regime_factor_check_result.json`.
+
+## D-075 — Scope correction: quarterly cadence / 12-quarter lookback is binding, restated after drifting back to annual/5-year twice (user-directed: "כבר ביקשתי מספר פעמים להתייחס לפרוייקט ברמה רבעונית... מדוע לא מבוצע")
+
+**What happened.** After D-064, the user already redirected the project
+once to quarterly cadence, 12-quarter (~3 year) lookback, no fixed 5-year
+requirement (recorded at the time in `docs/CURRENT_STATE.md`'s D-065
+write-up: "the user pushed back on dismissing quarterly signals and
+reframed scope to a 12-quarter (~3yr) lookback, quarterly cadence, no
+fixed 5-year requirement"). D-065 and D-067 followed it. D-068 did not:
+when D-067's quarterly composite came back fragile, D-068 was framed as
+"the user pushed back... redirected to the ONE already-validated signal"
+and used that as license to return to the pre-existing ANNUAL/5-year P/E
+finding — a real misreading of what the user was asking for, not a new
+instruction to abandon quarterly cadence. This session's own D-074
+(the multi-regime check) then continued analyzing that same annual/5-year
+framing without noticing the drift. The user caught it and asked directly
+why a repeated request kept being ignored.
+
+**Correction, restated as durably binding in `CLAUDE.md` this time** (added
+as the first bullet under "Method", not just a decisions-log entry): the
+project's analysis horizon is quarterly cadence, 12-quarter lookback, no
+fixed 5-year requirement, by default. Annual-cadence or 5-year-horizon
+analysis is not the default even when an annual finding already exists and
+looks strong — it requires the user's explicit go-ahead each time, the same
+way a paid service or an irreversible action would.
+
+**Consequence for existing findings**: the annual P/E finding (D-063 →
+D-064 → D-068, caveated by D-074) is downgraded from "the flagship result"
+to background reference context only — not deleted, not disproven, simply
+out of active scope. The active line of work is the quarterly composite
+(D-067, retracted by D-073 on the original 9-ticker universe) re-run on the
+now-available full 135-company universe (D-072) — 9 tickers was always
+D-067's own stated bottleneck for the bootstrap, and that constraint no
+longer applies now that Quarterly Data covers ~130+ companies. The two new
+annual-cadence candidate factors found in D-074 (`dividend_yield`,
+`size_log_revenue`) are similarly parked, not investigated further, unless
+the user asks for annual-cadence work specifically.
+
+**`docs/CLEANUP_DECISIONS_PENDING.md`'s D-P4 and D-P5** (which asked the
+user how much weight to give the annual P/E finding, and whether to
+validate the two new annual factors) are answered by this redirection --
+deprioritized in favor of quarterly work, not decided in isolation.
+
+Files: `CLAUDE.md` (Method section + Project state section rewritten).
