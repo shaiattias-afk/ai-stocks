@@ -1,6 +1,44 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-12 (**D-075: scope correction — quarterly cadence
+**Last updated:** 2026-08-12 (**D-076: correction — quarterly balance-sheet
+data IS present in the 10-Qs (confirmed by direct warehouse query on 4
+tickers); the 6-metric quarterly scope is a fixed list in the extraction
+engine, not a data-availability limit. A prior session's claim to the
+contrary, repeated by this session, was wrong; the user caught it.**)
+
+**What was wrong.** D-067 said `roic_level`, `roic_trend`,
+`balance_sheet_strength_ratio`, and raw P/E were "structurally out of
+scope, not omitted by choice" for quarterly work, because
+`quarterly_metric_results` only has 6 metric families. This session
+repeated that in `CLAUDE.md` and in conversation without checking it.
+The user asked directly why balance-sheet data was described as missing
+when every 10-Q includes a balance sheet — correct. Querying the
+warehouse directly confirmed it: AMZN's 2025-09-30 10-Q has 356 distinct
+XBRL concepts including `StockholdersEquity`, `LongTermDebt`, cash, and
+total assets; MSFT/PANW/CRWD's most recent 10-Qs each have 46-57
+balance-sheet-related concepts. `src/stock_agent/extraction/
+quarterly.py`'s `METRICS` constant is simply a hardcoded 6-item list
+(all income-statement/cash-flow concepts) going back to Quarterly Data
+V1 (D-042) — nothing in that decision explains why balance-sheet items
+were excluded, and nothing since revisited it. The most likely
+explanation is the engine was purpose-built for revenue/margin/cash-flow
+trend work and never extended, not that the data was evaluated and found
+missing.
+
+**Why it matters.** Quarterly ROIC and leverage-based factors are not
+blocked by a data gap — the raw facts already exist in the warehouse for
+every 10-Q archived so far. Building them means extending the quarterly
+engine's metric list and its extraction/resolution logic to also handle
+point-in-time (balance sheet, "as of" a date) concepts alongside the
+existing durational (income statement, "for" a period) ones — real
+engineering work with genuinely new edge cases, but not blocked by
+missing source data. This reopens the quarterly composite's full
+original 9-factor design (matching the annual composite) as buildable,
+not permanently capped at 5. `CLAUDE.md`'s "Open next step" now lists
+this as one of two viable directions. Full detail in
+`docs/DECISIONS_LOG.md` D-076.
+
+**Previous update, same day:** D-075: scope correction — quarterly cadence
 / 12-quarter lookback restated as binding after the project drifted back to
 annual/5-year analysis twice. The annual P/E finding is now background
 reference only; active work is the quarterly composite on the full
