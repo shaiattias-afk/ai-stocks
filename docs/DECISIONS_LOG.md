@@ -2537,3 +2537,52 @@ validate the two new annual factors) are answered by this redirection --
 deprioritized in favor of quarterly work, not decided in isolation.
 
 Files: `CLAUDE.md` (Method section + Project state section rewritten).
+
+## D-076 — Correction: quarterly balance-sheet data IS present in the 10-Qs; the 6-metric quarterly scope is an engine limitation, not a data-availability one (user caught a repeated, unverified claim)
+
+**The error.** D-067 stated that `roic_level`, `roic_trend`,
+`balance_sheet_strength_ratio`, and raw P/E are "structurally out of
+scope, not omitted by choice" for quarterly analysis, because
+`quarterly_metric_results` only has 6 metric families and "no
+balance-sheet or share-count data at all." This session repeated that
+claim verbatim in `CLAUDE.md` and in conversation. **It is wrong.** The
+user asked directly why balance-sheet data was being described as
+missing when 10-Q filings always include a balance sheet, and checking
+the actual warehouse confirmed it: AMZN's 2025-09-30 10-Q alone has 356
+distinct XBRL concepts, including `StockholdersEquity`, `LongTermDebt`,
+`CashAndCashEquivalentsAtCarryingValue`, `Assets`, and
+`LiabilitiesAndStockholdersEquity`. Spot-checked on MSFT, PANW, and CRWD
+too (46-57 balance-sheet-related concepts each) — this is not an AMZN
+peculiarity, it is standard: every 10-Q is required to include a balance
+sheet as of quarter-end.
+
+**What is actually true.** `src/stock_agent/extraction/quarterly.py`'s
+`METRICS` constant is a hardcoded list of exactly 6 names — `revenue`,
+`operating_income`, `pretax_income`, `income_tax_expense`,
+`operating_cash_flow`, `capex` — all income-statement/cash-flow items.
+This scope traces back to Quarterly Data V1 / Engine V5 (D-042), which
+was built and frozen around this exact 6-metric list; nothing in D-042's
+own rationale explains why balance-sheet items were excluded, and no
+later decision revisited the question. The likely explanation is that
+the engine was purpose-built for the metrics needed at the time (revenue/
+margin/cash-flow trend analysis) and simply never extended, not that
+anyone evaluated and rejected extracting balance-sheet items.
+
+**What this changes.** Quarterly ROIC, leverage ratios, and other
+balance-sheet-based factors are not blocked by missing data — the raw
+facts are already sitting in the warehouse for every 10-Q already
+archived. Building them requires extending the quarterly engine's
+`METRICS` list and its extraction/resolution logic to also handle
+point-in-time (instantaneous, not durational) balance-sheet concepts —
+real engineering work, with its own new edge cases (a balance sheet fact
+is "as of" a date, not "for" a period, which the current engine's
+period-matching logic does not yet handle), but not blocked by any data
+gap. This reopens the quarterly composite's original 9-factor design
+(the annual composite's full factor set) as something actually buildable
+at quarterly cadence, not permanently capped at 5.
+
+**Nothing production-facing changed by this entry** — it is a
+documentation correction only. `CLAUDE.md`'s Project state section is
+updated to state this accurately.
+
+Files: `CLAUDE.md`.

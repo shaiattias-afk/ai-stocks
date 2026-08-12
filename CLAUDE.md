@@ -118,12 +118,18 @@ Scoring Model V1 composite (D-061/D-062), the value/growth two-bucket model
 
 **Open next step** — continue the quarterly-cadence, 12-quarter-lookback
 line of work (D-065/D-067/D-073), now on the full 135-company universe
-(Quarterly Data extended in D-072, same 6-metric scope, 98.3% usable) —
-9 tickers was always the bottleneck for the bootstrap in D-067's retracted
-result; re-running the same composite/factor tests on ~130+ tickers instead
-of 9 is the natural next step before concluding quarterly signals don't
-exist. D-074 also surfaced two unvalidated ANNUAL-cadence candidate factors
-(`dividend_yield`, `size_log_revenue`) — out of scope for now per the
+(Quarterly Data extended in D-072, 98.3% usable). Two sub-options:
+(a) re-run the existing 5-factor composite/individual-factor tests on
+~130+ tickers instead of 9 — 9 tickers was always D-067's stated
+bottleneck for the bootstrap; or (b) extend the quarterly engine to also
+extract balance-sheet items (stockholders' equity, debt, cash — **the
+raw XBRL facts already exist in every archived 10-Q, confirmed by direct
+query, D-076**; only the extraction engine's fixed 6-metric list is the
+limit, not the underlying data), which would unlock ROIC/leverage
+factors at quarterly cadence and complete the full 9-factor composite
+instead of the current 5-factor version. D-074 also surfaced two
+unvalidated ANNUAL-cadence candidate factors (`dividend_yield`,
+`size_log_revenue`) — out of scope for now per the
 Method rule above unless the user asks for annual work specifically.
 
 **Traps**
