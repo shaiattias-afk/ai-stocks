@@ -1,6 +1,32 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-11 (**D-063: tested a 5-year hold (user
+**Last updated:** 2026-08-12 (**D-065: quarterly revenue-growth-
+acceleration factor built, tested, and run on real data — result
+inconclusive on this small 9-ticker proof, honestly reported.**
+Following D-064's council (2 proposals: validate the P/E finding with
+a company-grouped block bootstrap — done, survives, CI [-0.444,
+-0.032]; build a valuation metric for unprofitable companies — started,
+`value_growth_model_v1.py`, not yet run), the user pushed back on
+dismissing quarterly signals and reframed scope to a 12-quarter
+(~3yr) lookback, quarterly cadence, no fixed 5-year requirement. Built
+`quarterly_trend_v1.py` (YoY growth-rate acceleration, seasonality-safe,
+fails closed on short history) and ran it against production data: 57
+usable quarterly entries across the 9 tickers Quarterly Data V1 (D-042)
+covers (10-Q was never locked for the other 143 companies). Growth
+**acceleration** vs 12-month excess return: -0.183, 95% CI crosses zero
+— not validated. Raw YoY **growth rate** (reference check): +0.309, CI
+also crosses zero but closer to significant. Root cause: only 9
+independent ticker-groups exist for the bootstrap — too few to settle
+either direction; MU's extreme quarter-to-quarter swings (AI-memory
+demand spike) dominate the pooled number. **Conclusion: does not yet
+justify extending 10-Q coverage to the wider universe** — correctly
+avoided an expensive extraction the evidence doesn't support yet.
+Entry-timing note from the user, applied: this proof uses filing
+`availability_date` as the entry point (earliest point-in-time-safe
+moment); a price-triggered entry rule is a distinct future refinement.
+Full detail in `docs/DECISIONS_LOG.md` D-064/D-065.
+
+**Previous update, same day:** D-063: tested a 5-year hold (user
 request) and found the composite score's relationship to returns is
 NEGATIVE (-0.117) over that horizon; characterizing actual winners vs.
 losers (user's fallback instruction) found entry P/E is a real, moderate

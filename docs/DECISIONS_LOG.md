@@ -1803,3 +1803,100 @@ Both scripts (`scripts/200`, `scripts/201`) are read-only; no
 production table (model research, not a lineage-tracked fact). 2 new
 tests for the annualization logic.
 
+## D-064 — Council convened on the entry-P/E finding; cohort-clustering risk diagnosed and fixed with a company-grouped block bootstrap (result, user-directed: "מועצה" then 2 concrete proposals)
+
+**Trigger**: per CLAUDE.md's binding council mechanism, the user typed
+exactly `מועצה`, then asked for 2 concrete proposals to reliably
+characterize what makes a company beat Nasdaq-100 by ~5%/year, given
+the project's D-063 dead end.
+
+**Diagnosis (stage 1-4, 5 independent advisor perspectives + peer
+review + chair decision)**: the headline P/E finding (D-063: -0.247,
+n=102) looked like 102 independent observations but wasn't — 109 of
+133 5-year-eligible company-years are FY2020 entries, i.e. one
+overlapping cohort dominates the sample. Nominal n overstates the
+real, effective sample size.
+
+**Chair decision, proposal 1 (statistical remedy)**: validate the
+P/E finding with a block bootstrap resampled by TICKER (not by row),
+so a company appearing multiple times can't be double-counted as
+several independent data points. Built `cohort_robustness_v1.py`
+(`block_bootstrap_correlation`, 5 tests, all pass) and ran it
+(`scripts/202`): **the finding survives** — observed correlation
+-0.247, 95% CI [-0.444, -0.032], does not cross zero. The FY2021-only
+subset (n=20, excluding the FY2020 cohort entirely) shows the same
+direction (-0.361), a useful but small independent sanity check, not
+a second validated finding on its own.
+
+**Chair decision, proposal 2 (data remedy)**: build a valuation
+metric usable for NOT-YET-PROFITABLE companies (D-063's stated
+limitation — CRWD/PLTR/PANW/RKLB had no computable P/E at entry).
+Started `value_growth_model_v1.py` (two-bucket: profitable companies
+ranked by low P/E, unprofitable companies ranked by high revenue
+growth) — built and unit-tested (6 tests) in this session, but not
+yet run against real production data or reported on; still open.
+
+## D-065 — Quarterly revenue-growth-acceleration factor: built, tested, and run on real data; result is honest and NOT validated on this small 9-ticker proof (result, user-directed: "quarterly trends can reveal what annual reports have already priced in" + "12 quarters back, avoids COVID")
+
+**Context**: after D-064, the user firmly pushed back on an earlier
+dismissal of quarterly-cadence signals, arguing (correctly) that
+quarterly data can reveal a trend before it's fully priced into an
+annual report. Reframed scope per the user's own instruction: no
+longer necessarily a 5-year hold; view the project in quarters; use a
+12-quarter (~3 year) lookback, which conveniently also exits the
+2020-2021 COVID-distorted window.
+
+**Scope constraint found and disclosed before building anything**:
+Quarterly Data V1 (D-042) covers ONLY the original 9 tickers — 10-Q
+filings were never locked for the wider 143-company expansion
+(confirmed via `sec_filings`: 135 10-Q rows / 9 tickers, vs 782 10-K
+rows across the full universe). Proved the factor on these 9 first,
+per the project's own small-proof-before-scaling principle, rather
+than investing in extending 10-Q coverage on spec.
+
+**Factor built**: `quarterly_trend_v1.py` —
+`compute_revenue_growth_acceleration`: change in YEAR-OVER-YEAR
+revenue growth rate, quarter to quarter (not sequential
+quarter-over-quarter, which would confuse seasonality with trend).
+4 tests, including a dedicated seasonality-safety test. Fails closed
+(`NO_PRIOR_QUARTER` / `INSUFFICIENT_HISTORY`, never a fabricated 0)
+when under 5 quarters of history exist.
+
+**Entry-timing clarification from the user, applied**: real trade
+entries can happen at any moment based on price, not only at a
+filing's availability date. This proof uses `availability_date` as
+the entry point — the earliest moment the factor is legitimately
+knowable without look-ahead — as a first-pass proxy; a price-triggered
+entry rule (e.g. enter only on a pullback) is a distinct, later
+refinement, not built here.
+
+**Run** (`scripts/203`, production DB, 12mo forward return vs QQQ,
+company-grouped block bootstrap): 66 candidate quarterly entries
+across the 9 tickers, 57 with both factor and forward return
+resolved. **Growth acceleration**: correlation -0.183, 95% CI
+[-0.554, +0.314] — crosses zero, NOT a validated signal.
+**Reference check, raw YoY growth rate (not acceleration)**:
+correlation +0.309, 95% CI [-0.087, +0.652] — also crosses zero, but
+directionally positive and closer to significance.
+
+**Why inconclusive rather than negative**: only **9 independent
+groups** exist for the bootstrap (one per ticker) — the same
+cohort-clustering concern D-064 diagnosed for the P/E finding, worse
+here since the entire quarterly universe is 9 companies. MU's extreme
+quarter-to-quarter outcome swings (-24% to +771% excess return across
+quarters, driven by the AI-memory demand spike) dominate the pooled
+correlation.
+
+**Honest conclusion**: neither result justifies extending 10-Q
+coverage to the wider universe yet — the raw-growth-rate direction is
+worth another look once more companies have quarterly data, but this
+proof, as run, does not clear the bar. Not a wasted result: it
+correctly avoided an expensive extraction (locking + running the
+quarterly engine on 143 more companies) that this small proof does not
+support.
+
+Files: `src/stock_agent/scoring/quarterly_trend_v1.py`,
+`tests/scoring/test_quarterly_trend_v1.py` (4 tests),
+`scripts/203_quarterly_trend_predictive_check.py` (read-only),
+`data/quarterly_trend_predictive_check_result.json`.
+
