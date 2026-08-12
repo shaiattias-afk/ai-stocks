@@ -1,6 +1,18 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-12 (**D-065: quarterly revenue-growth-
+**Last updated:** 2026-08-12 (**D-066: the value/growth two-bucket
+model (D-064 proposal 2) run on real data for the first time.** At 12
+months (n=555): no signal (CI crosses zero), matching D-061/D-062. At
+60 months/annualized (n=106, same small FY2020-heavy sample as D-063):
+correlation +0.222, 95% CI [0.004, 0.422] — barely survives, right
+direction. But this is a **structural replication of D-063's P/E
+finding**, not new evidence: the profitable bucket (n=102) drives it
+almost entirely, and the unprofitable bucket this model exists to fix
+has only n=4 at 5 years — none of CRWD/PLTR/PANW/RKLB have 5 years of
+forward price history yet, so the model's actual purpose remains
+untested. Full detail in `docs/DECISIONS_LOG.md` D-066.
+
+**Previous update, same day:** D-065: quarterly revenue-growth-
 acceleration factor built, tested, and run on real data — result
 inconclusive on this small 9-ticker proof, honestly reported.**
 Following D-064's council (2 proposals: validate the P/E finding with

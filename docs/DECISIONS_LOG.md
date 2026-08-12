@@ -1900,3 +1900,48 @@ Files: `src/stock_agent/scoring/quarterly_trend_v1.py`,
 `scripts/203_quarterly_trend_predictive_check.py` (read-only),
 `data/quarterly_trend_predictive_check_result.json`.
 
+## D-066 — Value/growth two-bucket model (D-064 proposal 2) run on real data: structurally reproduces D-063's P/E finding at the 5-year horizon, adds no new signal at 12 months, and the unprofitable bucket is too thin to judge (result)
+
+**What it tests**: `value_growth_model_v1.py` (built, unit-tested, but
+not yet run in D-064) — profitable-at-entry companies ranked by cheap
+P/E, unprofitable-at-entry companies ranked by fast revenue growth,
+both within the same (fiscal_year, bucket) group. Built specifically
+to fix D-063's stated flaw: a raw-P/E-only rule excludes CRWD, PLTR,
+PANW, RKLB entirely (no P/E when unprofitable).
+
+**Run** (`scripts/204`, production DB, company-grouped block
+bootstrap, both horizons already used this session):
+
+- **12 months** (n=555 — the large, representative sample):
+  correlation +0.009, 95% CI [-0.076, +0.094] — crosses zero, **no
+  signal**. Matches D-061/D-062's already-established finding that
+  nothing tested predicts a 12-month outcome in this dataset.
+- **60 months / annualized** (n=106 — the same small,
+  FY2020-cohort-heavy sample D-063 used): correlation **+0.222**, 95%
+  CI **[0.004, 0.422] — does not cross zero** (barely). Positive is
+  the right direction here (higher score = cheaper P/E or faster
+  growth → better excess return).
+
+**Why this is a structural replication, not a new independent
+finding**: the profitable bucket alone (n=102) drives the pooled
+result (its own plain correlation: 0.238) — essentially the same 102
+company-years D-063's raw-P/E check already covered, now expressed as
+a percentile score instead of a raw ratio. The unprofitable bucket at
+60 months has only **n=4** (correlation -0.8, but meaningless at that
+size) — too thin to say anything, and **none of the specific
+unprofitable winners this model was built to rescue (CRWD, PLTR,
+PANW, RKLB) have accumulated 5 years of forward price history yet**,
+so the model's actual reason for existing is untested by this run.
+
+**Honest conclusion**: this does not add new evidence beyond D-063 —
+it confirms the P/E relationship survives being restructured into a
+ranking model, at the same horizon, on largely the same companies. The
+unprofitable-company fix is still unproven; it will only become
+testable as CRWD/PLTR/PANW/RKLB-era entries age into a 5-year forward
+window over the next several years, or if the model is checked at a
+shorter horizon where more unprofitable-bucket rows already have
+forward returns.
+
+Files: `scripts/204_value_growth_model_predictive_check.py`
+(read-only), `data/value_growth_model_predictive_check_result.json`.
+
