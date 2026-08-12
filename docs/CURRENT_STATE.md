@@ -1,6 +1,211 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-12 (**D-066: the value/growth two-bucket
+**Last updated:** 2026-08-12 (**D-071–D-074: cleaned up and documented a
+large batch of work two concurrent sessions had left uncommitted — two more
+golden-regression bugs found and fixed, the full 135-company quarterly load
+written up, D-067's composite retracted under robustness testing, and a
+real regime-dependence caveat found in D-068's flagship P/E finding.**)
+
+This session started by finding a large amount of uncommitted work from
+prior sessions (`CLAUDE.md`/`DECISIONS_LOG.md`/`quarterly.py`/`download.py`/
+`batch.py`/`test_golden_regression.py` all modified, several new scripts and
+a new `src` module, all untracked) plus two live `pytest
+tests/test_golden_regression.py` processes already running. Waited for those
+to exit, then ran the full suite independently rather than trusting the
+prior sessions' own pass/fail claims — it failed, on 2 tests, in ways the
+prior work's own documentation had not anticipated:
+
+1. D-070 had added an `APPROVED_NOT_DERIVED` exception set for PANW
+   2021-07-31, not realizing an identical, older `APPROVED_NOT_REPRODUCIBLE`
+   set already existed and short-circuited the loop before D-070's own check
+   could ever run — a permanent guaranteed-fail, not a real regression.
+2. D-070's `FROZEN_BASELINE_TICKERS` ticker-only scope (added to stop new
+   TICKERS leaking into the quarterly golden baseline) had no defense
+   against new FISCAL YEARS for the same 9 old tickers — which is exactly
+   what `scripts/212`'s full-universe load added (7 more rows, 45→52).
+
+Both fixed (D-071): the annual test now uses only the pre-existing
+`APPROVED_NOT_REPRODUCIBLE` mechanism, and the quarterly test now pins to
+an explicit 45-entry `(ticker, fiscal_year_end)` tuple instead of a ticker
+list. Full suite: 231 passed, 0 failed, ~12 minutes.
+
+**`scripts/212_quarterly_universe_extension_batch.py` had already run to
+completion** (a previous session) but was never written up as its own
+decision — D-070 mentioned it only in passing, as the cause of file-lock
+contention during D-070's own verification. D-072 records it properly: 132
+of 135 tickers loaded OK (3 skipped, insufficient 10-K history), 412 new
+fiscal-years, 7,180 quarterly metric rows (6,824 PASS + 260
+PASS_ROUNDING_TOLERANCE + 96 REVIEW_REQUIRED). Independently verified
+against production: `quarterly_extraction_runs` now 501 rows,
+`quarterly_metric_results` now 9,188 rows, the frozen 9 tickers' original 45
+fiscal-years unchanged and still golden-regression-clean.
+
+**D-067's quarterly composite is retracted, not just caveated (D-073).**
+`scripts/206`'s robustness check — the same discipline D-065 applied to
+MU, extended to every ticker and two more horizons — found the "positive,
+bootstrap-validated" result reported in D-067 survives in only 1 of 6
+(lookback × horizon) cells tested, and that excluding ANY ONE of 6 of the 9
+tickers (not just MU) already erases it. `quarterly_composite_v1.py`
+remains committed as correct, tested scaffolding; its predictive claim does
+not.
+
+**D-068's flagship P/E finding has a real, previously-untested regime
+caveat (D-074).** `scripts/211` found that every 5-year-eligible
+company-year in D-068's result is a 2020-2021 entry — the 60-month dataset
+is structurally 100% pre-2022, so the finding was never actually tested
+against a market-regime change, only assumed to generalize. At shorter
+horizons where 2022+ entries are eligible, the signal is absent (36mo pooled
++0.033, 24mo pooled +0.067, both cross zero) — including for the exact same
+pre-2022 companies measured over a shorter window (36mo: -0.068, crosses
+zero). The effect may still be real and simply untestable again until
+2022+-entry cohorts reach their own 5-year mark (~2027-2028), or it may be
+specific to that one macro period — D-074 cannot yet distinguish the two,
+and says so rather than picking one. `CLAUDE.md`'s "Proven" section is
+rewritten to state this plainly. Two new unvalidated candidate factors
+(`scripts/210`): `dividend_yield` (+0.226, CI excludes 0) and
+`size_log_revenue` (+0.282, CI excludes 0) — neither yet robustness-checked.
+`scripts/209` found zero of Scoring Inputs V1's 9 existing factors show a
+5-year wide-universe signal.
+
+Full detail in `docs/DECISIONS_LOG.md` D-071 through D-074. Open questions
+needing the user's judgment are collected in
+`docs/CLEANUP_DECISIONS_PENDING.md`.
+
+**Previous update, same day:** D-070: `CLAUDE.md` is now the single place for
+project state, and the golden regression is green again.
+
+**D-069 was withdrawn the same day.** It had added `docs/PROJECT_MAP.md`, a
+self-maintaining always-loaded map with a generator and Stop hook. The mechanism
+worked and was verified end-to-end, but the user judged it unnecessary and asked
+for one concise document instead. `docs/PROJECT_MAP.md`,
+`src/stock_agent/projectmap.py`, `tests/test_projectmap.py`, and
+`.claude/settings.json` were all removed; none had ever been committed, so
+nothing was lost from history.
+
+**`CLAUDE.md` was rewritten** to be as concise as possible while keeping every
+binding rule, and it absorbed the content a generator could not produce anyway:
+frozen releases, what is proven vs. what has been tested and NOT supported, the
+open next step, and the traps. The original problem stands and is now handled by
+a one-line instruction rather than a mechanism: this file (~290KB) and
+`DECISIONS_LOG.md` (~155KB) are too large to read in full — use `grep`.
+
+**Golden regression fixed — the baseline was wrong, not the engine.** Both tests
+had been comparing the frozen 9-ticker baseline against a production database
+that now also holds the wide universe (D-051–D-068). The annual test found 777
+company-years instead of 45 because its filter excluded only `scripts/188` while
+D-056 had reloaded rows under `scripts/191`; excluding both yields exactly 45.
+The quarterly test found 78 runs instead of 45 and is now scoped by a documented
+`FROZEN_BASELINE_TICKERS` constant, since the expansion reused the same
+`QUARTERLY_ENGINE_V5_*` version and no engine_version separates them. Neither fix
+weakens the test — both still recompute every frozen company-year from the
+filings and compare byte-for-byte. Both pass (7m22s).
+
+Both queries are now scoped by ticker, not by engine_version alone, so future
+loaders writing unknown engine versions cannot leak new tickers into the frozen
+baseline. This was validated live: while a concurrent session ran
+`scripts/212_quarterly_universe_extension_batch.py`, `quarterly_extraction_runs`
+grew 78 → 118 within minutes while the frozen-9 subset stayed at exactly 45.
+
+**Verification caveat, stated plainly:** a full clean `pytest` run has NOT been
+achieved, because a second Claude session was running production loads
+(`scripts/213`, then `scripts/212`) throughout. Those jobs hold
+`filings_archive.duckdb`, and every remaining failure (14 in the last run, 217
+passed) is a test that opens that file — DuckDB named the holding PID, which
+mapped to a `scripts/212` worker. The golden tests themselves passed in a clean
+window before the concurrent jobs started.
+
+**A misdiagnosis worth recording:** the intermittent
+`filings_archive.duckdb` "used by another process" failure was first blamed on
+leaked `ProcessPoolExecutor` workers from `tests/test_warehouse_batch.py`. That
+was wrong — the surviving processes were leftover `_discover_10q_window` scans
+started by Bash-tool commands in earlier sessions. `test_warehouse_batch.py`
+leaks nothing. With those stale scans deliberately left running,
+`tests/test_filings_archive.py` passes 10/10, so the failure is not reproducible
+and no code change was made for it.
+
+Full detail in `docs/DECISIONS_LOG.md` D-070.
+
+**Previous update, same day:** D-068: the entry-P/E → 5-year-excess-return
+finding (D-063/D-064) validated at wide-universe scale — 84 independent
+companies, not the original 9 — and confirmed real: correlation -0.247,
+bootstrap 95% CI [-0.449, -0.025], does not cross zero.** User pushed
+back hard on the quarterly-composite "no signal" conclusion (D-067) as
+premature — right call: that was one narrow model on 9 tickers. Redirected
+to the ONE already-validated signal in this project (raw P/E predicts
+5-year excess return) and tested it at the scale that actually settles
+whether it's real: the wide ~135-company universe (Scoring Inputs V1 /
+Valuation V1 / Historical Prices V1 were all separately extended there in
+earlier sessions — the infrastructure already existed, it had just never
+been pointed at this specific question). Result: n=102, but now spanning
+**84 independent tickers** instead of a small cohort-clustered set. The
+**94 wide-universe company-years that were NEVER part of D-063/D-064**
+independently reproduce almost the identical correlation on their own
+(-0.253, CI [-0.454, -0.031], 79 tickers) — real, out-of-sample
+confirmation, not a re-measurement of the same rows. At 12 months the
+signal is absent (crosses zero) at every scale tested — this is a
+multi-year effect, not a short-term one, consistent with standard
+value-investing mean-reversion timing.
+
+**Quintile breakdown — the practically important nuance**: the effect is
+**asymmetric, not "cheap wins."** Cheapest quintile (P/E 7.7–21.8):
+barely beats QQQ (+0.1%/yr annualized excess, 40% win rate) — not a
+strong buy signal on its own. Most expensive quintile (P/E 81–1697,
+names like NFLX/ISRG/BKNG/MTCH at time of entry): **-15.7%/yr annualized
+excess, only 15% win rate** — a clear, strong AVOID signal. The three
+middle quintiles are all mildly negative too. **The practically
+actionable rule this data actually supports is "avoid richly-valued
+entries (P/E over ~80)," not "buy the statistically cheapest names."**
+
+Two real bugs were found and fixed in the process (both regression-
+verified to cause zero change for the original 9 tickers before being
+trusted): (1) `resolve_annual_anchor` in the quarterly engine counted
+ALL `financial_metric_results` rows for an accession+metric instead of
+deduping to the latest active one — invisible for the original 9 (never
+reloaded) but blocking for any wider-universe ticker (reloaded by a
+later engine version, D-051-D-054, leaving 2 active rows); (2)
+`lookup_annual_fact_decimals` required a `context_id` that some
+wider-universe `financial_metric_results` rows never recorded — added a
+fallback that recovers it by exact-value match against the warehouse,
+accepted only when it identifies exactly one context (never a guess).
+Both changes are additive fallback paths only, activated only when the
+original path already fails; the original 9 tickers' 45 company-years
+are provably untouched (8-company regression sample, 0 differences
+before AND after the second fix).
+
+A 3-ticker quarterly-coverage pilot (COST, CSX, PYPL) was started to
+extend Quarterly Data V1 beyond the original 9, and is what surfaced
+both bugs above — 10-Q filings for all 3 are now locked and warehouse-
+loaded (36/36 accessions), but the actual quarterly metric load was not
+re-run after the fixes; deprioritized in favor of the much stronger
+annual wide-universe finding above. Picking it back up is a clean,
+bounded next step whenever quarterly-cadence work resumes.
+
+Full detail in `docs/DECISIONS_LOG.md` D-068.
+
+**Previous update, same day:** D-067: a quarterly-cadence composite
+score (5 factors, not 9 — Quarterly Data V1 has no balance-sheet data)
+shows a positive, bootstrap-validated signal on the full 9-ticker
+sample (+0.365, 95% CI [0.053, 0.613]) — but the signal is MU-dependent:
+excluding MU alone, the CI crosses zero ([-0.073, 0.619]).** Built
+`quarterly_composite_v1.py`: revenue_growth, operating_margin,
+fcf_margin, fcf_growth, distance_from_high (the 5 of composite_v1's 9
+factors computable without balance-sheet data), ranked cross-sectionally
+within the same CALENDAR quarter (fiscal_quarter labels don't align
+across companies with different fiscal-year-ends, so calendar quarter —
+derived from each row's own period_end — is the closest analogue to
+composite_v1's "same fiscal year" grouping). Run on the last 12 quarters
+(cutoff ~2023-08-13, same convention as D-065) across the 9 tickers
+Quarterly Data V1 covers, 12-month forward excess return vs QQQ (not 60
+months — a quarterly entry from the last 3 years cannot honestly support
+a 5-year-back-capped forward window that far out), company-grouped block
+bootstrap (`scripts/205`). n=57 usable company-quarters. **Honest
+read**: this is directionally the most encouraging quarterly result of
+the session, but it fails the same robustness bar D-065 already applied
+to MU (AI-memory demand spike dominating the pooled number) — not (yet)
+a validated broad signal, an MU-driven one on this small sample. Full
+detail in `docs/DECISIONS_LOG.md` D-067.
+
+**Previous update, same day:** D-066: the value/growth two-bucket
 model (D-064 proposal 2) run on real data for the first time.** At 12
 months (n=555): no signal (CI crosses zero), matching D-061/D-062. At
 60 months/annualized (n=106, same small FY2020-heavy sample as D-063):

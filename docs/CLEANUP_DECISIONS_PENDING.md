@@ -264,3 +264,91 @@ open (Exelon's "every role qualified" convention, the multi-instrument
 current_debt gap, a second uncaught-exception site confirmed present in
 the real engine, and the remaining ~20% of REVIEW_REQUIRED rows, not
 yet diagnosed).
+
+---
+
+## 2026-08-12 cleanup session — new open items (D-071 through D-074)
+
+This session picked up a large batch of work two concurrent prior sessions
+had left uncommitted, verified it independently (found and fixed 2 more
+bugs, D-071), wrote up the previously-undocumented parts as D-072/D-073/
+D-074, and updated `CLAUDE.md`'s "Proven" section to state an honest new
+caveat. Full detail: `docs/DECISIONS_LOG.md` D-071–D-074,
+`docs/CURRENT_STATE.md`. What follows is the part that needs your call, not
+mine.
+
+## D-P4 — D-068's flagship P/E finding is regime-untested: what to do about it
+
+**What was found (D-074).** The wide-universe validation of the entry-P/E
+→ 5-year-return finding (D-068, previously called "the strongest
+validation any finding in this project has received") turns out to rest
+entirely on 2020-2021 entries — the only cohort old enough to have a full
+5-year forward return yet. At shorter horizons where later entries ARE
+eligible, the signal is absent, including for the same companies measured
+over a shorter window. This is not proof the effect is false. It is proof
+the effect has only ever been tested in one macro period, and the backtest
+gate this project committed to (warn about regimes) was not actually
+satisfiable until now, because no second cohort had reached 5 years yet.
+
+**Your call — how to treat this finding going forward:**
+1. **Treat it as the working thesis anyway**, with the caveat stated (as
+   `CLAUDE.md` now does), and keep using "avoid P/E > ~80" as the
+   practical rule until a second regime becomes testable naturally
+   (~2027-2028, when 2022-2023 entries reach 5 years).
+2. **Look for an earlier, independent regime test** — e.g. pre-2020
+   history for the same tickers (if point-in-time price/filing data
+   reaches back far enough) or a completely different universe/period, to
+   get a second macro-regime read sooner than 2027-2028, accepting
+   whatever extra work that costs.
+3. **Deprioritize the P/E rule** as a practical output until it can
+   actually be regime-tested, and redirect effort toward the two new
+   unvalidated candidates (D-P5) or another line of work.
+
+I lean toward (1) — it is still the only real signal this project has ever
+found, the caveat is now honestly stated, and (2)'s "different universe"
+approach would itself need the same regime scrutiny before being trusted
+more than the original. But this changes how much weight the flagship
+result should carry in any decision the user makes with it, so it is the
+user's call, not mine.
+
+## D-P5 — Two new unvalidated candidate factors: pursue now or park?
+
+**What was found (D-074, `scripts/210`).** `dividend_yield` (n=137, corr
++0.226, CI [0.045, 0.396]) and `size_log_revenue` (n=104, corr +0.282, CI
+[0.063, 0.477]) both clear a first-pass significance bar at the 60-month
+horizon, wide universe — but neither has been through the robustness
+gauntlet the P/E finding went through (D-063→D-064→D-074's own regime
+check just showed why that gauntlet matters). `scripts/211` already found
+both are ALSO regime-sensitive in the same way as P/E (significant
+pre-2022, not in the shorter-horizon 2022+-eligible subset).
+
+**Your call**: invest the next round of validation effort here (robustness
++ regime checks, same discipline as D-074), or treat this as a lower
+priority than D-P4's open question about the existing flagship finding.
+
+## D-P6 — Ratify the already-applied production changes and engine fixes
+
+Two things happened in this batch of work without a specific up-front
+approval step, both already verified safe by this session but both are
+exactly the kind of accounting/production change `CLAUDE.md` says is the
+user's call, not mine, to finalize:
+
+1. **`extraction/quarterly.py`'s two fixes** (D-068): deduping active
+   `financial_metric_results` rows to the latest `loaded_at` in
+   `resolve_annual_anchor`, and a same-filing exact-value fallback for
+   missing `context_id` in `lookup_annual_fact_decimals`. Both are
+   additive fallback paths, both regression-verified to cause zero change
+   for the original 9 tickers, both necessary for the wider-universe
+   quarterly engine to work at all. I judge these unambiguously correct
+   (same bar as the old D-P1/D-P2 "implemented, needs ratifying"
+   category) — they fix real defects, not policy choices.
+2. **`scripts/212`'s full production load** (D-072): 135-company quarterly
+   extraction, already run and already verified not to have touched the
+   frozen baseline. Not a policy change, but a substantial one-time
+   production write that happened without this session's real-time
+   supervision — flagging it here for visibility, not because I think it
+   needs reverting.
+
+My recommendation: ratify both as-is (same reasoning D-P1/D-P2 used) —
+flagging here rather than treating as silently approved, per this
+project's rule that policy sign-off is yours.

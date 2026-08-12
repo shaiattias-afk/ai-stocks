@@ -1,0 +1,5444 @@
+{
+  "completed_tickers": [
+    "AAPL",
+    "ABNB",
+    "ADBE",
+    "ADI",
+    "ADP",
+    "ADSK",
+    "ALAB",
+    "ALGN",
+    "ALNY",
+    "ALXN",
+    "AMAT",
+    "AMD",
+    "AMGN",
+    "AMZN",
+    "ANSS",
+    "APP",
+    "ATVI",
+    "AVGO",
+    "AXON",
+    "BIIB",
+    "BKNG",
+    "BKR",
+    "CDNS",
+    "CDW",
+    "CEG",
+    "CERN",
+    "CHTR",
+    "CMCSA",
+    "COST",
+    "CPRT",
+    "CRWD",
+    "CRWV",
+    "CSCO",
+    "CSGP",
+    "CSX",
+    "CTAS",
+    "CTSH",
+    "DASH",
+    "DDOG",
+    "DLTR",
+    "DOCU",
+    "DXCM",
+    "EA",
+    "EBAY",
+    "ENPH",
+    "EXC",
+    "FANG",
+    "FAST",
+    "FI",
+    "FOX",
+    "FTNT",
+    "GEHC",
+    "GILD",
+    "GOOGL",
+    "HON",
+    "IDXX",
+    "ILMN",
+    "INCY",
+    "INSM",
+    "INTC",
+    "INTU",
+    "ISRG",
+    "KDP",
+    "KHC",
+    "KLAC",
+    "LCID",
+    "LIN",
+    "LITE",
+    "LRCX",
+    "LULU",
+    "MAR",
+    "MCHP",
+    "MDB",
+    "MDLZ",
+    "MELI",
+    "META",
+    "MNST",
+    "MPWR",
+    "MRNA",
+    "MRVL",
+    "MSFT",
+    "MSTR",
+    "MTCH",
+    "MU",
+    "MXIM",
+    "NFLX",
+    "NVDA",
+    "NXPI",
+    "ODFL",
+    "OKTA",
+    "ON",
+    "ORCL",
+    "ORLY",
+    "PANW",
+    "PAYX",
+    "PCAR",
+    "PEP",
+    "PLTR",
+    "PTON",
+    "PYPL",
+    "QCOM",
+    "REGN",
+    "RIVN",
+    "RKLB",
+    "ROP",
+    "ROST",
+    "SBUX",
+    "SGEN",
+    "SHOP",
+    "SIRI",
+    "SNDK",
+    "SNPS",
+    "SPLK",
+    "STX",
+    "SWKS",
+    "TEAM",
+    "TER",
+    "TMUS",
+    "TSLA",
+    "TTD",
+    "TTWO",
+    "TXN",
+    "VRSK",
+    "VRSN",
+    "VRTX",
+    "WBA",
+    "WBD",
+    "WDAY",
+    "WDC",
+    "WMT",
+    "XEL",
+    "ZM",
+    "ZS",
+    "AEP",
+    "XLNX"
+  ],
+  "results": {
+    "AAPL": {
+      "ticker": "AAPL",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "warehouse_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "AAPL",
+          "fiscal_year_end": "2022-09-24",
+          "run_id": "6405a1f0-fdf6-46f9-a00b-32396361e15e",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "AAPL",
+          "fiscal_year_end": "2023-09-30",
+          "run_id": "49fd3ddf-ac83-4789-8e22-2fa2c3f61b83",
+          "n_rows": 0,
+          "status_counts": {}
+        },
+        {
+          "ticker": "AAPL",
+          "fiscal_year_end": "2024-09-28",
+          "run_id": "ab6b5e87-0d52-485c-8df2-ad1925b47a52",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "AAPL",
+          "fiscal_year_end": "2025-09-27",
+          "run_id": "5b1093e9-ce39-4bfa-bb66-8cac0af316fe",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "ABNB": {
+      "ticker": "ABNB",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "warehouse_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "ABNB",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "bc29ec98-0415-4d49-9ee8-94c9dccb2082",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "ABNB",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "b0a55859-a4a1-472c-86ed-cb1d17e01adf",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 16,
+            "PASS_ROUNDING_TOLERANCE": 4
+          }
+        },
+        {
+          "ticker": "ABNB",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "78f05c2a-4b8a-4b3e-9ac9-95830a52abd6",
+          "n_rows": 4,
+          "status_counts": {
+            "PASS": 4
+          }
+        },
+        {
+          "ticker": "ABNB",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "65a428ee-62ae-4ede-a05f-d0ad6de0611e",
+          "n_rows": 4,
+          "status_counts": {
+            "PASS": 4
+          }
+        }
+      ]
+    },
+    "ADBE": {
+      "ticker": "ADBE",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "warehouse_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "ADBE",
+          "fiscal_year_end": "2022-12-02",
+          "run_id": "1910a893-a456-4762-86ee-1022aba4e4f4",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "ADBE",
+          "fiscal_year_end": "2023-12-01",
+          "run_id": "d138a38d-232d-4f5a-8c8a-b7aeb1baff83",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "ADBE",
+          "fiscal_year_end": "2024-11-29",
+          "run_id": "f9e292fb-22a1-47f6-9403-0ce07a2d9bbd",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "ADBE",
+          "fiscal_year_end": "2025-11-28",
+          "run_id": "ac699469-36ff-4f63-9a38-276a6cda2943",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "ADI": {
+      "ticker": "ADI",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "warehouse_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "ADI",
+          "fiscal_year_end": "2022-10-29",
+          "run_id": "b940e0f5-932f-4840-beda-f2c196515046",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "ADI",
+          "fiscal_year_end": "2023-10-28",
+          "run_id": "f03ae962-2de0-4a82-a0d9-73adb6c6a1d1",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "ADI",
+          "fiscal_year_end": "2024-11-02",
+          "run_id": "3652af4c-8208-4390-89b5-93cb30a0337c",
+          "n_rows": 0,
+          "status_counts": {}
+        },
+        {
+          "ticker": "ADI",
+          "fiscal_year_end": "2025-11-01",
+          "run_id": "3ebf7740-f5ff-4a05-85f7-883dd9b1b7d9",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "ADP": {
+      "ticker": "ADP",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "warehouse_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "ADP",
+          "fiscal_year_end": "2023-06-30",
+          "run_id": "1eb3d653-2257-4610-a936-2ac5590fef07",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "ADP",
+          "fiscal_year_end": "2024-06-30",
+          "run_id": "7b1d5003-1f25-45c5-ab3e-6a50924d6da0",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "ADP",
+          "fiscal_year_end": "2025-06-30",
+          "run_id": "1c25eac2-851d-43fe-9e2a-ea20702bd693",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "ADP",
+          "fiscal_year_end": "2026-06-30",
+          "run_id": "d437928c-cd82-420c-8544-9bcb76840bae",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        }
+      ]
+    },
+    "ADSK": {
+      "ticker": "ADSK",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "warehouse_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "ADSK",
+          "fiscal_year_end": "2023-01-31",
+          "run_id": "3af850b6-e605-49dc-813d-22ebc9791752",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "ADSK",
+          "fiscal_year_end": "2024-01-31",
+          "run_id": "d28ffe70-c361-45eb-b2bb-91aae792e92f",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "ADSK",
+          "fiscal_year_end": "2025-01-31",
+          "run_id": "4d59673c-1a77-4b41-a5e6-1ca01d5964f5",
+          "n_rows": 12,
+          "status_counts": {
+            "PASS": 12
+          }
+        },
+        {
+          "ticker": "ADSK",
+          "fiscal_year_end": "2026-01-31",
+          "run_id": "0c656f51-834b-4366-9083-158d10cf9195",
+          "n_rows": 12,
+          "status_counts": {
+            "PASS": 12
+          }
+        }
+      ]
+    },
+    "ALAB": {
+      "ticker": "ALAB",
+      "lock_status": "OK",
+      "discovered": 3,
+      "downloaded": 3,
+      "lock_failed": [],
+      "warehouse_failed": [],
+      "usable_fiscal_years": 1,
+      "newly_processed_fiscal_years": 1,
+      "engine_results": [
+        {
+          "ticker": "ALAB",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "72dbfeed-2d3b-4fc9-8e80-317efce84eaa",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "ALGN": {
+      "ticker": "ALGN",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "warehouse_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "ALGN",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "fc1e4bd6-9d2b-4591-951f-4cd423b3d59b",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "ALGN",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "54f4c934-50db-4360-b507-b963a8bef2b6",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "ALGN",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "5dce5b0d-423c-40b2-bd69-8acec4cd8145",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "ALGN",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "16364fb6-f84a-4eb5-81f2-1b02a24a8875",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "ALNY": {
+      "ticker": "ALNY",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 0,
+      "engine_results": []
+    },
+    "ALXN": {
+      "ticker": "ALXN",
+      "lock_status": "SKIPPED_INSUFFICIENT_10K_HISTORY",
+      "discovered": 0,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 0,
+      "newly_processed_fiscal_years": 0,
+      "engine_results": []
+    },
+    "AMAT": {
+      "ticker": "AMAT",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 0,
+      "engine_results": []
+    },
+    "AMD": {
+      "ticker": "AMD",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 0,
+      "engine_results": []
+    },
+    "AMGN": {
+      "ticker": "AMGN",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 0,
+      "engine_results": []
+    },
+    "AMZN": {
+      "ticker": "AMZN",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 5,
+      "newly_processed_fiscal_years": 0,
+      "engine_results": []
+    },
+    "ANSS": {
+      "ticker": "ANSS",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 0,
+      "engine_results": []
+    },
+    "APP": {
+      "ticker": "APP",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 0,
+      "engine_results": []
+    },
+    "ATVI": {
+      "ticker": "ATVI",
+      "lock_status": "OK",
+      "discovered": 6,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 2,
+      "newly_processed_fiscal_years": 2,
+      "engine_results": [
+        {
+          "ticker": "ATVI",
+          "fiscal_year_end": "2021-12-31",
+          "run_id": "5c9db883-ec83-4115-9cee-6665bd36c4fd",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS_ROUNDING_TOLERANCE": 8,
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "ATVI",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "c38e4879-f0ec-4da8-93b0-9467f34acaa1",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "AVGO": {
+      "ticker": "AVGO",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "AVGO",
+          "fiscal_year_end": "2022-10-30",
+          "run_id": "3bf58001-1454-4a12-ba8a-41babab2a2d6",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "AVGO",
+          "fiscal_year_end": "2023-10-29",
+          "run_id": "fda86bf3-6ae7-4ef7-bfc4-80b0be680def",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "AVGO",
+          "fiscal_year_end": "2024-11-03",
+          "run_id": "c771d771-2662-4492-8da4-b3b88d44ec28",
+          "n_rows": 0,
+          "status_counts": {}
+        },
+        {
+          "ticker": "AVGO",
+          "fiscal_year_end": "2025-11-02",
+          "run_id": "59c339e5-da43-4fe4-bf7b-71e661823559",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "AXON": {
+      "ticker": "AXON",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 0,
+      "engine_results": []
+    },
+    "BIIB": {
+      "ticker": "BIIB",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 0,
+      "engine_results": []
+    },
+    "BKNG": {
+      "ticker": "BKNG",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 0,
+      "engine_results": []
+    },
+    "BKR": {
+      "ticker": "BKR",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "BKR",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "4f880c32-ad6b-4191-967d-8b64c2acf670",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS_ROUNDING_TOLERANCE": 12,
+            "PASS": 4
+          }
+        },
+        {
+          "ticker": "BKR",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "4d11d13b-8665-480d-b6cf-a858a3cb5c90",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS_ROUNDING_TOLERANCE": 4,
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "BKR",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "874c34c2-336e-4a90-9e4a-dacabb55cba0",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 12,
+            "PASS_ROUNDING_TOLERANCE": 4
+          }
+        },
+        {
+          "ticker": "BKR",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "a06680ae-6c41-4604-84d5-b72a62e8ecbd",
+          "n_rows": 12,
+          "status_counts": {
+            "PASS": 12
+          }
+        }
+      ]
+    },
+    "CDNS": {
+      "ticker": "CDNS",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 0,
+      "engine_results": []
+    },
+    "CDW": {
+      "ticker": "CDW",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 0,
+      "engine_results": []
+    },
+    "CEG": {
+      "ticker": "CEG",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "CEG",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "2907edfa-b320-4dd2-abde-743b4b5a379d",
+          "n_rows": 4,
+          "status_counts": {
+            "PASS": 4
+          }
+        },
+        {
+          "ticker": "CEG",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "308d51d2-fdc3-4957-8652-12c45c8b5365",
+          "n_rows": 4,
+          "status_counts": {
+            "PASS": 4
+          }
+        },
+        {
+          "ticker": "CEG",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "7ac1f1c4-eae5-4a94-9fb6-68815769586a",
+          "n_rows": 4,
+          "status_counts": {
+            "PASS": 4
+          }
+        },
+        {
+          "ticker": "CEG",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "252daf1d-722d-463c-8c19-9e12207277da",
+          "n_rows": 4,
+          "status_counts": {
+            "PASS": 4
+          }
+        }
+      ]
+    },
+    "CERN": {
+      "ticker": "CERN",
+      "lock_status": "OK",
+      "discovered": 3,
+      "downloaded": 3,
+      "lock_failed": [],
+      "usable_fiscal_years": 1,
+      "newly_processed_fiscal_years": 1,
+      "engine_results": [
+        {
+          "ticker": "CERN",
+          "fiscal_year_end": "2021-12-31",
+          "run_id": "8e6e718e-96fd-4446-afaf-e87c67a94eaf",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        }
+      ]
+    },
+    "CHTR": {
+      "ticker": "CHTR",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "CHTR",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "906cb9fd-b7e3-474e-ac33-090fa4ebad7f",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "CHTR",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "0edb74b9-2f6b-4374-a325-fa823f6605b1",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "CHTR",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "dcbb57ff-928b-4a7c-8b04-cf4a5acb462e",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "CHTR",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "a2f06842-5f71-4326-83d0-9543d755dfa6",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "CMCSA": {
+      "ticker": "CMCSA",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "CMCSA",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "a60aa0db-74ee-4031-9a89-0430d332c277",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS_ROUNDING_TOLERANCE": 12,
+            "PASS": 12
+          }
+        },
+        {
+          "ticker": "CMCSA",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "d0a37eb9-b34e-411a-82ae-fe9f06d566d3",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "CMCSA",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "361e4f60-1c78-4e7a-8c9e-3702742d052c",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS_ROUNDING_TOLERANCE": 8,
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "CMCSA",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "4902a42a-1403-42b3-a2cc-c7baa07e7dd3",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS_ROUNDING_TOLERANCE": 4,
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "COST": {
+      "ticker": "COST",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "COST",
+          "fiscal_year_end": "2022-08-28",
+          "run_id": "ac63ee7a-0609-49bd-b3bd-8f7e36f75470",
+          "n_rows": 0,
+          "status_counts": {}
+        },
+        {
+          "ticker": "COST",
+          "fiscal_year_end": "2023-09-03",
+          "run_id": "c3c6e00e-998e-44c9-b119-b9f5bd788b47",
+          "n_rows": 0,
+          "status_counts": {}
+        },
+        {
+          "ticker": "COST",
+          "fiscal_year_end": "2024-09-01",
+          "run_id": "2cd5f298-d7b4-48a4-8b64-09d03e427af9",
+          "n_rows": 0,
+          "status_counts": {}
+        },
+        {
+          "ticker": "COST",
+          "fiscal_year_end": "2025-08-31",
+          "run_id": "2e7f55b3-c0f5-495d-aa8a-543deaa176a1",
+          "n_rows": 0,
+          "status_counts": {}
+        }
+      ]
+    },
+    "CPRT": {
+      "ticker": "CPRT",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "CPRT",
+          "fiscal_year_end": "2022-07-31",
+          "run_id": "81dfc661-314e-4c29-b850-cfec8062cc59",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "CPRT",
+          "fiscal_year_end": "2023-07-31",
+          "run_id": "1e05cf19-b140-4053-ad73-d44105d89495",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "CPRT",
+          "fiscal_year_end": "2024-07-31",
+          "run_id": "822b5011-7e1f-40e3-800f-950211f20232",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "CPRT",
+          "fiscal_year_end": "2025-07-31",
+          "run_id": "bf984e13-e59a-4f23-9458-18ca05b27452",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "CRWD": {
+      "ticker": "CRWD",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 5,
+      "newly_processed_fiscal_years": 0,
+      "engine_results": []
+    },
+    "CRWV": {
+      "ticker": "CRWV",
+      "lock_status": "SKIPPED_INSUFFICIENT_10K_HISTORY",
+      "discovered": 0,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 0,
+      "newly_processed_fiscal_years": 0,
+      "engine_results": []
+    },
+    "CSCO": {
+      "ticker": "CSCO",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "CSCO",
+          "fiscal_year_end": "2022-07-30",
+          "run_id": "a8991feb-8485-4327-bfe7-e313c9ee4574",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "CSCO",
+          "fiscal_year_end": "2023-07-29",
+          "run_id": "6040ed7b-0899-4e12-b5da-c1cda32896f8",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "CSCO",
+          "fiscal_year_end": "2024-07-27",
+          "run_id": "eb352db6-6755-472f-9f09-0b6fb1af16b8",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "CSCO",
+          "fiscal_year_end": "2025-07-26",
+          "run_id": "a8f14af0-ed7a-4cb3-90c0-f6cb57c2abe1",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "CSGP": {
+      "ticker": "CSGP",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "CSGP",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "7752ae52-2fe3-44d6-bbbe-5140fb7b63ec",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "CSGP",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "eeffdb93-fef1-474e-9d14-1215e3978db4",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "CSGP",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "0b77fd74-d64a-4e16-b4b0-8c6149f0e984",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS_ROUNDING_TOLERANCE": 4,
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "CSGP",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "0867169d-6060-4f2a-9cfa-b2e2efeb3d57",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "CSX": {
+      "ticker": "CSX",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "CSX",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "2caa8729-b7ef-4b55-9228-36469ee8a47e",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "CSX",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "be0d1688-a72b-4290-a84b-24f3c5dece1c",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "CSX",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "eef66f0d-a6a3-4dc3-9e7a-ccb369b433c4",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 8,
+            "REVIEW_REQUIRED": 8
+          }
+        },
+        {
+          "ticker": "CSX",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "e0b86fd2-6c07-459d-8886-3f6f96f02959",
+          "n_rows": 12,
+          "status_counts": {
+            "PASS": 12
+          }
+        }
+      ]
+    },
+    "CTAS": {
+      "ticker": "CTAS",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "CTAS",
+          "fiscal_year_end": "2023-05-31",
+          "run_id": "b39d8939-24e2-42c0-9e8d-30aee613f786",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "CTAS",
+          "fiscal_year_end": "2024-05-31",
+          "run_id": "c7fb40cb-7196-450e-957b-f18ee815224c",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "CTAS",
+          "fiscal_year_end": "2025-05-31",
+          "run_id": "819d89eb-9746-4572-a29d-6ccdfb2531fd",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "CTAS",
+          "fiscal_year_end": "2026-05-31",
+          "run_id": "86ac482e-d134-4b26-b34f-b64934eec07c",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "CTSH": {
+      "ticker": "CTSH",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "CTSH",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "fc0149d9-07b9-4821-af51-909d0f9f319f",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "CTSH",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "a0d55c8c-4bd5-4a84-962d-18a8ab51aea9",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "CTSH",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "3cd34fbd-49c0-4a02-9658-3dddaf73e40a",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "CTSH",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "37f7528a-a424-4dc5-bb46-9b960d060c8c",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "DASH": {
+      "ticker": "DASH",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "DASH",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "4c96bbc7-c7e0-4670-870b-94ed14eddf46",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "DASH",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "01cb79df-9e3f-428b-a36c-40446f26335d",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "DASH",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "34feb877-9119-4fea-be45-d30684842d02",
+          "n_rows": 4,
+          "status_counts": {
+            "PASS": 4
+          }
+        },
+        {
+          "ticker": "DASH",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "2775cec3-0cbb-4500-aa82-33fb002499a1",
+          "n_rows": 4,
+          "status_counts": {
+            "PASS": 4
+          }
+        }
+      ]
+    },
+    "DDOG": {
+      "ticker": "DDOG",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "DDOG",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "8277aae3-ce35-4bd1-af68-01bed1f8e5d4",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "bd9506d3-9d69-4978-8bb2-0526d2907cc7",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "1548d972-8283-4713-bc37-8f8c27c61721",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "DDOG",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "47a6d41f-9381-453d-828f-17e41530b0c4",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "DLTR": {
+      "ticker": "DLTR",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "DLTR",
+          "fiscal_year_end": "2023-01-28",
+          "run_id": "debbcfb5-de99-433b-b244-acfcc9a5367e",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "DLTR",
+          "fiscal_year_end": "2024-02-03",
+          "run_id": "12d1e581-16b6-43d5-800f-0854100deb84",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "DLTR",
+          "fiscal_year_end": "2025-02-01",
+          "run_id": "ab0091ae-9168-4270-bc6f-f54db6f3bd85",
+          "n_rows": 12,
+          "status_counts": {
+            "PASS": 12
+          }
+        },
+        {
+          "ticker": "DLTR",
+          "fiscal_year_end": "2026-01-31",
+          "run_id": "67fe6cf2-a8cc-4605-8e4c-b1b23d1533f8",
+          "n_rows": 12,
+          "status_counts": {
+            "PASS": 12
+          }
+        }
+      ]
+    },
+    "DOCU": {
+      "ticker": "DOCU",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "DOCU",
+          "fiscal_year_end": "2023-01-31",
+          "run_id": "a0003166-a919-4740-93df-e1595e6d940d",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "DOCU",
+          "fiscal_year_end": "2024-01-31",
+          "run_id": "7e94614c-218b-41ef-abae-60cf3c767a51",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "DOCU",
+          "fiscal_year_end": "2025-01-31",
+          "run_id": "eae17042-676b-4965-b09d-7478d5d298c6",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "DOCU",
+          "fiscal_year_end": "2026-01-31",
+          "run_id": "0863f3ff-972d-46c9-8424-dc679ebedf89",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "DXCM": {
+      "ticker": "DXCM",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "DXCM",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "d12120ba-cfe3-46f5-bdb3-b8368c98a7b3",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "DXCM",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "aba85be8-25fd-4f45-aaee-d685102fb2bc",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "DXCM",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "9886928e-8ef7-414c-8731-cf672f695322",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "DXCM",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "1b5cab80-f7c4-4430-9d37-58d9f653cc1b",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "EA": {
+      "ticker": "EA",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "EA",
+          "fiscal_year_end": "2023-03-31",
+          "run_id": "7752f049-fda6-4bfd-859a-cfcce9c986fa",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "EA",
+          "fiscal_year_end": "2024-03-31",
+          "run_id": "370f30f3-19c7-4b94-a9f6-c0ff2764bebe",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "EA",
+          "fiscal_year_end": "2025-03-31",
+          "run_id": "30142766-e52a-4d03-ad48-9294394a38f5",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "EA",
+          "fiscal_year_end": "2026-03-31",
+          "run_id": "31049ba0-8c46-4290-8ca3-fa661fa5c06f",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "EBAY": {
+      "ticker": "EBAY",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "EBAY",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "98ed216b-774b-49ba-a5e6-125a0ecac5ef",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "EBAY",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "048287a1-ac9d-4685-8389-dbd65d9d7558",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "EBAY",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "67d333e9-9591-4ce7-b3e8-8a4f1a3500cf",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "EBAY",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "4db2065b-cf23-4981-8213-a836fa0f9cd7",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "ENPH": {
+      "ticker": "ENPH",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "ENPH",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "75e2c508-8a5d-4fdd-b734-93c728fed832",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "ENPH",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "a37695cb-069c-4238-ab30-f78286750b5c",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "ENPH",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "250424bf-c1b2-4d09-95f2-b9374078b3a5",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "ENPH",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "bf983644-029a-4720-bd9d-c2b2260d6103",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        }
+      ]
+    },
+    "EXC": {
+      "ticker": "EXC",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "EXC",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "76f76a13-1a68-4e4e-97cc-9ead724fe8a3",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS_ROUNDING_TOLERANCE": 4,
+            "PASS": 12
+          }
+        },
+        {
+          "ticker": "EXC",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "caa194f9-360c-4951-92cd-3f633724f3bd",
+          "n_rows": 4,
+          "status_counts": {
+            "PASS": 4
+          }
+        },
+        {
+          "ticker": "EXC",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "460ec104-5788-4651-9571-30cfee9aebb2",
+          "n_rows": 4,
+          "status_counts": {
+            "PASS": 4
+          }
+        },
+        {
+          "ticker": "EXC",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "84e8a6a3-0fbc-478f-b82c-f2e5d0e9a8b7",
+          "n_rows": 4,
+          "status_counts": {
+            "PASS": 4
+          }
+        }
+      ]
+    },
+    "FANG": {
+      "ticker": "FANG",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "FANG",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "ccef1d02-503a-495c-99f1-45a61bcfeacd",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "FANG",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "03c49460-a5d4-4a74-a7e1-8f4543b9b9a6",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "FANG",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "dd0ce784-3e7f-4f36-b6f1-1e4f7d441f8b",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "FANG",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "ea47b0c9-3866-473c-9bb9-55439838611d",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "FAST": {
+      "ticker": "FAST",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "FAST",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "5ff2bae2-18f5-4d97-85bd-5cfbe62809e6",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "FAST",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "f09c5a98-dd48-4e40-b06c-8aec3582d4ec",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "FAST",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "6a9275af-8fdf-4d54-a39d-94d8c6cc95ee",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "FAST",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "0b271b64-1fcf-40e7-ac4c-75d7a239dbb2",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS_ROUNDING_TOLERANCE": 20,
+            "PASS": 4
+          }
+        }
+      ]
+    },
+    "FI": {
+      "ticker": "FI",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "FI",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "915d07d8-5c8c-4fc8-be6c-5085b4ec13a3",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "FI",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "a8ae3408-0166-4502-9fa6-14aa1892b328",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "FI",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "4c9426b3-8415-47de-bf20-5d747586a97f",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "FI",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "ef3097c9-3e49-4fbf-b7be-7260fc1f9e27",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "FOX": {
+      "ticker": "FOX",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "FOX",
+          "fiscal_year_end": "2023-06-30",
+          "run_id": "3f31f3c4-72a9-4353-aea8-7178aade8285",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "FOX",
+          "fiscal_year_end": "2024-06-30",
+          "run_id": "d31a68a4-3efe-43ea-941b-ab3cf3f96b80",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "FOX",
+          "fiscal_year_end": "2025-06-30",
+          "run_id": "817b3412-f0db-46a2-8e9a-141ad8d604ae",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "FOX",
+          "fiscal_year_end": "2026-06-30",
+          "run_id": "d4919ac2-bc18-4774-9dd7-c59c36675489",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "FTNT": {
+      "ticker": "FTNT",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "FTNT",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "ecd65b1c-ba63-46c4-97a6-d48c06763bda",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "FTNT",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "7f11a305-931e-4291-bab9-87e9abc866a5",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "FTNT",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "e43f0e3e-6fb5-4944-a3f1-d7f89b183785",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "FTNT",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "34ab15de-fa81-4faf-95b2-52630a439c54",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "GEHC": {
+      "ticker": "GEHC",
+      "lock_status": "OK",
+      "discovered": 9,
+      "downloaded": 9,
+      "lock_failed": [],
+      "usable_fiscal_years": 3,
+      "newly_processed_fiscal_years": 3,
+      "engine_results": [
+        {
+          "ticker": "GEHC",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "43e77315-462b-4cf1-92dc-f2febfeeea99",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "GEHC",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "e596d0c6-2b15-47bc-9c06-af1e757a1d60",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS_ROUNDING_TOLERANCE": 4,
+            "PASS": 12
+          }
+        },
+        {
+          "ticker": "GEHC",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "65c0f396-eff0-4349-b127-e8a70a880502",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 12,
+            "PASS_ROUNDING_TOLERANCE": 4
+          }
+        }
+      ]
+    },
+    "GILD": {
+      "ticker": "GILD",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "GILD",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "b031f678-bf64-49bd-b092-6b3989886321",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "GILD",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "156ffdb7-5cdf-4078-ba3f-e89772c35da3",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 20,
+            "PASS_ROUNDING_TOLERANCE": 4
+          }
+        },
+        {
+          "ticker": "GILD",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "f6de3a01-6e92-4c8f-929b-ee26a1b4600b",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "GILD",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "632ce498-a75b-4be0-83cc-d9d2bb435b69",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 20,
+            "PASS_ROUNDING_TOLERANCE": 4
+          }
+        }
+      ]
+    },
+    "GOOGL": {
+      "ticker": "GOOGL",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 5,
+      "newly_processed_fiscal_years": 0,
+      "engine_results": []
+    },
+    "HON": {
+      "ticker": "HON",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "HON",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "955e8364-8c08-4cfb-ba05-705090294e22",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "HON",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "5c08cab6-7eaf-457f-b20f-4205d4eb1eb0",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "HON",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "cd6c3f7b-6ffa-48c0-ab77-0a0a183dbcbb",
+          "n_rows": 12,
+          "status_counts": {
+            "PASS": 12
+          }
+        },
+        {
+          "ticker": "HON",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "f3191e21-247c-4049-b876-041086791658",
+          "n_rows": 12,
+          "status_counts": {
+            "PASS": 12
+          }
+        }
+      ]
+    },
+    "IDXX": {
+      "ticker": "IDXX",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "IDXX",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "43df5ae6-b442-4f06-b24a-e56e9aa2f63a",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "IDXX",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "eb6b9840-01b3-42a8-a993-e291a1d7fc62",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "IDXX",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "396dcbc9-ee41-45a1-a745-381c04ff149e",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "IDXX",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "4c33419f-49bc-43ec-a1fc-063daf434a2f",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "ILMN": {
+      "ticker": "ILMN",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "ILMN",
+          "fiscal_year_end": "2023-01-01",
+          "run_id": "8293fa4a-c23d-4165-a001-a47ccd2b1a8b",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS_ROUNDING_TOLERANCE": 12,
+            "PASS": 12
+          }
+        },
+        {
+          "ticker": "ILMN",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "a0f7f74d-2648-45e1-b276-2d78c9e74210",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 16,
+            "PASS_ROUNDING_TOLERANCE": 8
+          }
+        },
+        {
+          "ticker": "ILMN",
+          "fiscal_year_end": "2024-12-29",
+          "run_id": "69c14b4a-d8d5-4b61-b613-612b2396a1c2",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 12,
+            "PASS_ROUNDING_TOLERANCE": 4
+          }
+        },
+        {
+          "ticker": "ILMN",
+          "fiscal_year_end": "2025-12-28",
+          "run_id": "4464d176-01d8-4c05-a50a-7557e7fdfeab",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS_ROUNDING_TOLERANCE": 8,
+            "PASS": 8
+          }
+        }
+      ]
+    },
+    "INCY": {
+      "ticker": "INCY",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "INCY",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "b4a798fe-a24d-4b8b-b870-066288cd79dd",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "INCY",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "3b8bbc83-0ace-4b9d-9202-5e58fc4a9dff",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "INCY",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "26bbcc2a-1361-457e-8e68-4aa8c5e3ab5f",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "INCY",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "c18d0673-f9c1-40dc-b693-290be8b44914",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "INSM": {
+      "ticker": "INSM",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "INSM",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "33fcd82c-3ddb-4799-a079-d084857e263b",
+          "n_rows": 4,
+          "status_counts": {
+            "PASS": 4
+          }
+        },
+        {
+          "ticker": "INSM",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "5c317fde-e59e-4282-8d51-e34158189c46",
+          "n_rows": 4,
+          "status_counts": {
+            "PASS": 4
+          }
+        },
+        {
+          "ticker": "INSM",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "f7e7d2a0-2e85-4278-b657-06ee48b598ec",
+          "n_rows": 4,
+          "status_counts": {
+            "PASS": 4
+          }
+        },
+        {
+          "ticker": "INSM",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "c5ddbb3b-33b8-439b-bbe6-aa6e495e29e9",
+          "n_rows": 4,
+          "status_counts": {
+            "PASS": 4
+          }
+        }
+      ]
+    },
+    "INTC": {
+      "ticker": "INTC",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "INTC",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "47e25487-f841-41ce-9c83-9c627e270cf0",
+          "n_rows": 0,
+          "status_counts": {}
+        },
+        {
+          "ticker": "INTC",
+          "fiscal_year_end": "2023-12-30",
+          "run_id": "6386c6fb-d6ac-4754-b6f7-f1accab4e949",
+          "n_rows": 12,
+          "status_counts": {
+            "PASS": 12
+          }
+        },
+        {
+          "ticker": "INTC",
+          "fiscal_year_end": "2024-12-28",
+          "run_id": "504f89c2-05bd-45a8-b6da-abafe5cc6a77",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "INTC",
+          "fiscal_year_end": "2025-12-27",
+          "run_id": "8b92780c-e076-47b6-adf1-234ba2cb703a",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "INTU": {
+      "ticker": "INTU",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "INTU",
+          "fiscal_year_end": "2022-07-31",
+          "run_id": "b5dc39cb-46a5-4f33-b16f-2db00f74222e",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "INTU",
+          "fiscal_year_end": "2023-07-31",
+          "run_id": "f6dc7705-fe0f-45e2-86ce-5624fb6a7f2a",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "INTU",
+          "fiscal_year_end": "2024-07-31",
+          "run_id": "9b32f4a6-c944-4792-8a97-12d1f18c019a",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "INTU",
+          "fiscal_year_end": "2025-07-31",
+          "run_id": "9417e202-274a-410a-a109-b15bb34fca2f",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "ISRG": {
+      "ticker": "ISRG",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "ISRG",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "1a997d90-3522-40ca-93b7-560a950d7d30",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "ISRG",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "4bed6fe2-d3c4-42ac-b58e-e31d218bc03f",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "ISRG",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "d5299a03-7c00-40fa-9d8f-b689286724d8",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "ISRG",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "409c1656-32dd-4374-acb4-7360a2bfea5f",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "KDP": {
+      "ticker": "KDP",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "KDP",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "4f534e6f-789f-47e7-b293-dd3f2c898967",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "KDP",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "0658ce5a-4e12-4718-aded-ada4ef8f0b9c",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "KDP",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "b1f28bf1-0cd2-40c3-afae-361a6ffa1886",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "KDP",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "99b3f699-03f5-4e1b-ba8b-e54c2def6e59",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "KHC": {
+      "ticker": "KHC",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "KHC",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "6f4bff46-8ab3-4799-900e-d48cbe7e82b6",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "KHC",
+          "fiscal_year_end": "2023-12-30",
+          "run_id": "eb88dd0f-f9b2-4cc2-9ee0-142d05d9b73e",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "KHC",
+          "fiscal_year_end": "2024-12-28",
+          "run_id": "62bb2a21-32b9-4dad-a2c0-2f57b5c2d74c",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "KHC",
+          "fiscal_year_end": "2025-12-27",
+          "run_id": "043a20af-3e31-4162-ad75-1dae984a3fa9",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        }
+      ]
+    },
+    "KLAC": {
+      "ticker": "KLAC",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "KLAC",
+          "fiscal_year_end": "2023-06-30",
+          "run_id": "087e2e70-503d-48a4-997d-c94217c2bcb2",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "KLAC",
+          "fiscal_year_end": "2024-06-30",
+          "run_id": "24f2d445-fa4c-4a84-a76d-f439b9691bd9",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "KLAC",
+          "fiscal_year_end": "2025-06-30",
+          "run_id": "583810d0-e0f7-4d8a-93cc-c41b818e9452",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "KLAC",
+          "fiscal_year_end": "2026-06-30",
+          "run_id": "19d4c186-2cd1-4b1f-aeda-5ce8cfbc3a04",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "LCID": {
+      "ticker": "LCID",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "LCID",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "1fc72580-f5ba-4c52-8909-c7d6d3235535",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "LCID",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "71e71303-f17b-4bc7-af08-19264b1e695a",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "LCID",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "b82299a9-3ffa-48f7-b074-19e4c02aa3d8",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "LCID",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "0c0d0bc7-9505-449c-9774-9570fc27a5c6",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "LIN": {
+      "ticker": "LIN",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "LIN",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "278f9c6c-2154-4020-acd8-ddee4b924d9b",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "LIN",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "baf48293-2166-4e51-8c63-939b525fc13a",
+          "n_rows": 12,
+          "status_counts": {
+            "PASS": 12
+          }
+        },
+        {
+          "ticker": "LIN",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "65090aa0-2663-4e2e-abe0-8f041c0e5ecb",
+          "n_rows": 12,
+          "status_counts": {
+            "PASS": 12
+          }
+        },
+        {
+          "ticker": "LIN",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "6a3c5ad1-87b1-4d00-a645-ebd7423cd467",
+          "n_rows": 12,
+          "status_counts": {
+            "PASS": 12
+          }
+        }
+      ]
+    },
+    "LITE": {
+      "ticker": "LITE",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "LITE",
+          "fiscal_year_end": "2022-07-02",
+          "run_id": "b4e55c3b-51b8-409e-9906-a8f0c3bbf408",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "LITE",
+          "fiscal_year_end": "2023-07-01",
+          "run_id": "d7b025a2-5be3-4aef-8f46-f1b8b85fa507",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "LITE",
+          "fiscal_year_end": "2024-06-29",
+          "run_id": "f552ef54-7020-4fcb-a338-a5f05f561aa0",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "LITE",
+          "fiscal_year_end": "2025-06-28",
+          "run_id": "e82ea89a-e083-47e7-ac49-da92712b4713",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "LRCX": {
+      "ticker": "LRCX",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "LRCX",
+          "fiscal_year_end": "2023-06-25",
+          "run_id": "da0bee59-18eb-478a-95f0-1ff411f28bd1",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "LRCX",
+          "fiscal_year_end": "2024-06-30",
+          "run_id": "5032e4cd-1fba-45da-8a75-b96212433d7b",
+          "n_rows": 10,
+          "status_counts": {
+            "REVIEW_REQUIRED": 10
+          }
+        },
+        {
+          "ticker": "LRCX",
+          "fiscal_year_end": "2025-06-29",
+          "run_id": "9fdbe862-e0ce-448e-889b-80a16496b27c",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "LRCX",
+          "fiscal_year_end": "2026-06-28",
+          "run_id": "680e4e57-5044-41b1-98ab-65ae4177453a",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "LULU": {
+      "ticker": "LULU",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "LULU",
+          "fiscal_year_end": "2023-01-29",
+          "run_id": "4e4989d5-e897-459c-909c-357d49acf95a",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "LULU",
+          "fiscal_year_end": "2024-01-28",
+          "run_id": "ed8336c3-408e-4b00-a887-e6ca511fd7eb",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "LULU",
+          "fiscal_year_end": "2025-02-02",
+          "run_id": "b6c3d45a-4fc6-4340-b930-b00955bc6916",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "LULU",
+          "fiscal_year_end": "2026-02-01",
+          "run_id": "501ad4ca-d022-49b2-ae5b-bbfdd7a1a58d",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "MAR": {
+      "ticker": "MAR",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "MAR",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "cbb98cab-48cd-4fe8-8d7e-7eeac0ee701c",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "MAR",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "2cc7c7cf-e2d5-4311-94bd-7ce21ee9d0b6",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "MAR",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "62a9bdba-6174-4b1e-b73c-238dce8ac989",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "MAR",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "6a4701a6-7907-4035-a3f2-2a10d03c37d2",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "MCHP": {
+      "ticker": "MCHP",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "MCHP",
+          "fiscal_year_end": "2023-03-31",
+          "run_id": "8f4f5b3d-e753-4945-8016-5baceb347f2f",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "MCHP",
+          "fiscal_year_end": "2024-03-31",
+          "run_id": "dbbc978f-c744-4cf6-92a6-8dc9bfa1918d",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "MCHP",
+          "fiscal_year_end": "2025-03-31",
+          "run_id": "08ab8a50-c059-4ab1-8fcc-6af7a5e3ff94",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "MCHP",
+          "fiscal_year_end": "2026-03-31",
+          "run_id": "e9cc71f5-5a80-419d-bf27-3e4756cc1808",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "MDB": {
+      "ticker": "MDB",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "MDB",
+          "fiscal_year_end": "2023-01-31",
+          "run_id": "03486ba9-65c4-48ef-9b36-10507479f25b",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "MDB",
+          "fiscal_year_end": "2024-01-31",
+          "run_id": "3c023192-7a80-4e3f-8131-7c9b47a06229",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "MDB",
+          "fiscal_year_end": "2025-01-31",
+          "run_id": "815f4ee1-10d3-4046-8e22-95a43c3c2da5",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "MDB",
+          "fiscal_year_end": "2026-01-31",
+          "run_id": "ded1ed83-b112-4372-bf89-7b21cef85d7d",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "MDLZ": {
+      "ticker": "MDLZ",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "MDLZ",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "d97e2089-50e1-4fbf-96ed-a66670386cbc",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "MDLZ",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "07641d79-63e2-4d06-b261-032e3ac7d029",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "MDLZ",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "ad5d7dad-f06c-4e54-8571-e2170caf83b0",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "MDLZ",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "18b2ad6c-9e87-4850-9a65-82a5560eabc3",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        }
+      ]
+    },
+    "MELI": {
+      "ticker": "MELI",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "MELI",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "76eb9713-bee1-4882-b939-81acc2905033",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "MELI",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "c41090b4-3713-45e4-837d-296936ca1425",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "MELI",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "15220c40-c820-43ac-8acd-7103299b1cfc",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "MELI",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "6b21176b-b374-4448-b1c5-d39a980b7845",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "META": {
+      "ticker": "META",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 3,
+      "lock_failed": [],
+      "usable_fiscal_years": 6,
+      "newly_processed_fiscal_years": 1,
+      "engine_results": [
+        {
+          "ticker": "META",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "a60c4463-4b7f-4a6c-9ce6-7be252f19740",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS_ROUNDING_TOLERANCE": 12,
+            "PASS": 12
+          }
+        }
+      ]
+    },
+    "MNST": {
+      "ticker": "MNST",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "MNST",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "1f1b978d-caed-458e-8369-6234e3121633",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS_ROUNDING_TOLERANCE": 16,
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "MNST",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "bdf9556c-212f-4abf-ab8b-c76efbd92cb7",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 16,
+            "PASS_ROUNDING_TOLERANCE": 8
+          }
+        },
+        {
+          "ticker": "MNST",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "1f296b3e-0907-49bb-b551-d1d66bcd2558",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 16,
+            "PASS_ROUNDING_TOLERANCE": 8
+          }
+        },
+        {
+          "ticker": "MNST",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "59cca361-bdd9-4606-8b98-2bbed7ddc477",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 12,
+            "PASS_ROUNDING_TOLERANCE": 12
+          }
+        }
+      ]
+    },
+    "MPWR": {
+      "ticker": "MPWR",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "MPWR",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "f4774ffd-e068-4ee9-b938-7bca1e423cf7",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 16,
+            "PASS_ROUNDING_TOLERANCE": 8
+          }
+        },
+        {
+          "ticker": "MPWR",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "52d37ad1-23ca-49e4-891b-328a5558bc24",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "MPWR",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "6be894f6-8102-48fa-a45a-f0aaa6c0f91d",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "MPWR",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "3cd67eb9-7aee-4fd9-8901-3c1f44cd4f1e",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "MRNA": {
+      "ticker": "MRNA",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "MRNA",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "f3eb5292-e3ff-4aa3-b659-11915bf45a0c",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "MRNA",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "6a8395d7-c578-4f21-9be1-41177ecf43d4",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "MRNA",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "02cd0ab1-3235-4942-bc50-2f0a1ce7a6ad",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "MRNA",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "73f88b3f-8402-41f4-a1f9-da9a27000535",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "MRVL": {
+      "ticker": "MRVL",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "MRVL",
+          "fiscal_year_end": "2023-01-28",
+          "run_id": "dc423bf3-1e33-4795-945c-dfa180ad8ff7",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "MRVL",
+          "fiscal_year_end": "2024-02-03",
+          "run_id": "f21535c6-f394-4a98-a547-050da25a5c7b",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "MRVL",
+          "fiscal_year_end": "2025-02-01",
+          "run_id": "17575e4a-566b-483b-aefa-0e04e13df766",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "MRVL",
+          "fiscal_year_end": "2026-01-31",
+          "run_id": "19576969-2a96-44c8-aa89-b9ec63af5e93",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "MSFT": {
+      "ticker": "MSFT",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 6,
+      "lock_failed": [],
+      "usable_fiscal_years": 6,
+      "newly_processed_fiscal_years": 2,
+      "engine_results": [
+        {
+          "ticker": "MSFT",
+          "fiscal_year_end": "2025-06-30",
+          "run_id": "29732311-ebcf-401e-86cd-e883552490a4",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "MSFT",
+          "fiscal_year_end": "2026-06-30",
+          "run_id": "c47e2bdf-3ddd-44b7-9dbd-02ecedcb986e",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "MSTR": {
+      "ticker": "MSTR",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "MSTR",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "6aba0c5b-4953-490e-849a-d190f293e754",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "MSTR",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "5a0a224c-afa0-4907-928f-6c889574edd5",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "MSTR",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "2350f0c1-3f79-4101-a532-9c289541321d",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "MSTR",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "11914e15-06df-40ee-9556-08adc6e0b0e4",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "MTCH": {
+      "ticker": "MTCH",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "MTCH",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "7e96ed85-3aab-4030-845a-ce079d534d7a",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "MTCH",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "6fe9fbf8-b0f2-42f3-afb3-1aad8b8d9ca1",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "MTCH",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "d80cf582-1161-4dfb-9cda-f394a89da27e",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "MTCH",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "49066c0b-ea8e-48c1-945a-0db97ad8dc36",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "MU": {
+      "ticker": "MU",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 5,
+      "newly_processed_fiscal_years": 0,
+      "engine_results": []
+    },
+    "MXIM": {
+      "ticker": "MXIM",
+      "lock_status": "OK",
+      "discovered": 3,
+      "downloaded": 3,
+      "lock_failed": [],
+      "usable_fiscal_years": 1,
+      "newly_processed_fiscal_years": 1,
+      "engine_results": [
+        {
+          "ticker": "MXIM",
+          "fiscal_year_end": "2021-06-26",
+          "run_id": "7f30da56-3220-4913-95ce-fc5e1235d6e0",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "NFLX": {
+      "ticker": "NFLX",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "NFLX",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "c79bc0af-9e82-4bf1-a68f-0dd5dbaa04ab",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "NFLX",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "c34265b9-e938-417a-b963-b147ab24299e",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "NFLX",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "d83c6137-3caf-4eb5-9d0e-6f44181ccf22",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "NFLX",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "ddeee734-a950-418d-9ce7-5ac84611220e",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        }
+      ]
+    },
+    "NVDA": {
+      "ticker": "NVDA",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 6,
+      "lock_failed": [],
+      "usable_fiscal_years": 7,
+      "newly_processed_fiscal_years": 2,
+      "engine_results": [
+        {
+          "ticker": "NVDA",
+          "fiscal_year_end": "2025-01-26",
+          "run_id": "89a62374-a915-4a9d-8320-68f3ed0ca64e",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 20,
+            "PASS_ROUNDING_TOLERANCE": 4
+          }
+        },
+        {
+          "ticker": "NVDA",
+          "fiscal_year_end": "2026-01-25",
+          "run_id": "74e5f06b-1522-4369-89b4-2ba59a280c51",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "NXPI": {
+      "ticker": "NXPI",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "NXPI",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "68c4f470-e358-4d87-978b-a5b1c4480a67",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "NXPI",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "d843a21a-a959-44f8-b047-ff325c182649",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "NXPI",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "72cc9840-2e57-452f-8962-8ee799ae61d5",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "NXPI",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "8f46ed7c-b5cc-42e6-b549-dbc4e27711ac",
+          "n_rows": 13,
+          "status_counts": {
+            "REVIEW_REQUIRED": 13
+          }
+        }
+      ]
+    },
+    "ODFL": {
+      "ticker": "ODFL",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "ODFL",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "2862b5ae-466b-4f8a-8824-acf236ff91e0",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "ODFL",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "105972a5-a7db-4d21-a560-25ee6ff45634",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "ODFL",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "b4789abd-f6bf-4d01-9878-997e6618ef41",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "ODFL",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "82b76258-5c2d-4651-9594-9ea63f0a7b59",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "OKTA": {
+      "ticker": "OKTA",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "OKTA",
+          "fiscal_year_end": "2023-01-31",
+          "run_id": "b76bb21e-24c9-4860-9c6a-bc5e5f85c927",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "fiscal_year_end": "2024-01-31",
+          "run_id": "4c54c9da-742f-4627-904f-b686f4eed693",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "fiscal_year_end": "2025-01-31",
+          "run_id": "d9dd9ceb-b172-4425-a12d-11ce10ccbef2",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "OKTA",
+          "fiscal_year_end": "2026-01-31",
+          "run_id": "4d1ed108-7cba-40cb-b700-c082b5ee6556",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "ON": {
+      "ticker": "ON",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "ON",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "5219a413-7615-46fb-a4a8-03445ce37d72",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "ON",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "57851956-470b-49f7-a7e6-f5a54665a073",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "ON",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "71057330-6c90-4a7c-9a9d-3f4785061165",
+          "n_rows": 14,
+          "status_counts": {
+            "REVIEW_REQUIRED": 14
+          }
+        },
+        {
+          "ticker": "ON",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "b58d0b01-9c69-4ce5-8638-7326e03e79f3",
+          "n_rows": 0,
+          "status_counts": {}
+        }
+      ]
+    },
+    "ORCL": {
+      "ticker": "ORCL",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 6,
+      "lock_failed": [],
+      "usable_fiscal_years": 6,
+      "newly_processed_fiscal_years": 2,
+      "engine_results": [
+        {
+          "ticker": "ORCL",
+          "fiscal_year_end": "2025-05-31",
+          "run_id": "95c171cc-501d-4802-b0e6-7fc39bc45b6b",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 12,
+            "PASS_ROUNDING_TOLERANCE": 8
+          }
+        },
+        {
+          "ticker": "ORCL",
+          "fiscal_year_end": "2026-05-31",
+          "run_id": "97d3f522-fa3d-495a-b609-6d8d34ebc814",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS_ROUNDING_TOLERANCE": 4,
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "ORLY": {
+      "ticker": "ORLY",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "ORLY",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "07c2d25b-c721-4192-94c2-f4510faee0cb",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "ORLY",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "34e65a52-38de-421e-83c6-c933abd94a08",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "ORLY",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "b359105e-8084-4e95-b6f7-88eb2933de0c",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "ORLY",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "c74c05cd-5ce5-47fa-8dcc-5745fb86f1b5",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "PANW": {
+      "ticker": "PANW",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 5,
+      "newly_processed_fiscal_years": 0,
+      "engine_results": []
+    },
+    "PAYX": {
+      "ticker": "PAYX",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "PAYX",
+          "fiscal_year_end": "2023-05-31",
+          "run_id": "48ea7c97-665d-496c-aab9-16f2285641d5",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "PAYX",
+          "fiscal_year_end": "2024-05-31",
+          "run_id": "77ee5ccb-c36e-49a3-9f3c-6c5c7eab2505",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "PAYX",
+          "fiscal_year_end": "2025-05-31",
+          "run_id": "59ffd30d-1bf0-4244-8e9e-4830c18a1411",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "PAYX",
+          "fiscal_year_end": "2026-05-31",
+          "run_id": "1527df53-ec7c-4cb0-9071-b6c030856dc6",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        }
+      ]
+    },
+    "PCAR": {
+      "ticker": "PCAR",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "PCAR",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "cb1f766e-c3a1-41c5-a14e-bdc3c0bf820c",
+          "n_rows": 12,
+          "status_counts": {
+            "PASS": 12
+          }
+        },
+        {
+          "ticker": "PCAR",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "ac888de4-fd53-4c37-97d7-0a9152d75d98",
+          "n_rows": 12,
+          "status_counts": {
+            "PASS": 12
+          }
+        },
+        {
+          "ticker": "PCAR",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "853fb82d-59a1-418c-b91b-708d476298d4",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "PCAR",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "329f35b7-f348-45cc-9649-ceb7d63d2fea",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "PEP": {
+      "ticker": "PEP",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "PEP",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "1b729a13-5af6-48e2-a272-9cfebb066559",
+          "n_rows": 0,
+          "status_counts": {}
+        },
+        {
+          "ticker": "PEP",
+          "fiscal_year_end": "2023-12-30",
+          "run_id": "2cebe71c-d220-41e9-a6a9-e8ad9ad01927",
+          "n_rows": 0,
+          "status_counts": {}
+        },
+        {
+          "ticker": "PEP",
+          "fiscal_year_end": "2024-12-28",
+          "run_id": "37e7d1b0-d79e-4a42-b439-914ed0fbaf47",
+          "n_rows": 0,
+          "status_counts": {}
+        },
+        {
+          "ticker": "PEP",
+          "fiscal_year_end": "2025-12-27",
+          "run_id": "ae7891af-5560-4be2-ae98-09e3aaebc2e9",
+          "n_rows": 0,
+          "status_counts": {}
+        }
+      ]
+    },
+    "PLTR": {
+      "ticker": "PLTR",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "PLTR",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "404d46e9-96b2-48eb-9600-9740cc0a2bbb",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "f02453c2-dbf7-416e-9670-834811a42ee8",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "b95b24fd-f4d4-442e-9eae-aca2ca643f12",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "PLTR",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "3bee2fe0-93c0-437a-b68b-9c94198432c2",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "PTON": {
+      "ticker": "PTON",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "PTON",
+          "fiscal_year_end": "2023-06-30",
+          "run_id": "9e1f94a9-80ef-412b-a5a9-520a584371af",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "PTON",
+          "fiscal_year_end": "2024-06-30",
+          "run_id": "580acc31-ed55-427b-8318-760d189ca740",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS_ROUNDING_TOLERANCE": 8,
+            "PASS": 12
+          }
+        },
+        {
+          "ticker": "PTON",
+          "fiscal_year_end": "2025-06-30",
+          "run_id": "98ad0ef7-a149-4aea-bcba-6aaf22920dbc",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 20,
+            "PASS_ROUNDING_TOLERANCE": 4
+          }
+        },
+        {
+          "ticker": "PTON",
+          "fiscal_year_end": "2026-06-30",
+          "run_id": "34e38155-775e-4f1b-93f0-e917a652dd02",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS_ROUNDING_TOLERANCE": 4,
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "PYPL": {
+      "ticker": "PYPL",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "PYPL",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "7af32a40-cdb4-4351-9978-12cda63998f5",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "PYPL",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "8c5dc00f-2848-44b0-a16c-041ad9f66cf5",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "PYPL",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "e4e87334-990d-499a-9285-ecd137b085b5",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "PYPL",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "df76ec05-9349-4229-b620-d557fcaff6d0",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "QCOM": {
+      "ticker": "QCOM",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 11,
+      "lock_failed": [
+        {
+          "accession_number": "0000804328-25-000011",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/804328/000080432825000011/qcom-20241229.xsd: HTTP Error 503: Service Unavailable"
+        }
+      ],
+      "usable_fiscal_years": 3,
+      "newly_processed_fiscal_years": 3,
+      "engine_results": [
+        {
+          "ticker": "QCOM",
+          "fiscal_year_end": "2022-09-25",
+          "run_id": "fece3b2e-ccda-4149-b496-f65350940933",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 16,
+            "PASS_ROUNDING_TOLERANCE": 4
+          }
+        },
+        {
+          "ticker": "QCOM",
+          "fiscal_year_end": "2023-09-24",
+          "run_id": "4230a5ef-fc33-4fe3-96e8-4df12d77c5b4",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "QCOM",
+          "fiscal_year_end": "2024-09-29",
+          "run_id": "b73e6a0a-64c9-435e-aa9a-91b7d62f0602",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS_ROUNDING_TOLERANCE": 4,
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "REGN": {
+      "ticker": "REGN",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 9,
+      "lock_failed": [
+        {
+          "accession_number": "0001804220-23-000031",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/872589/000180422023000031/regn-20230930.xsd: HTTP Error 503: Service Unavailable"
+        },
+        {
+          "accession_number": "0001804220-24-000040",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/872589/000180422024000040/regn-20240930_def.xml: HTTP Error 503: Service Unavailable"
+        },
+        {
+          "accession_number": "0001804220-25-000022",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/872589/000180422025000022/regn-20250331_cal.xml: HTTP Error 503: Service Unavailable"
+        }
+      ],
+      "usable_fiscal_years": 1,
+      "newly_processed_fiscal_years": 1,
+      "engine_results": [
+        {
+          "ticker": "REGN",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "43428ca6-d88a-48d2-bbab-47ccc665db5f",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "RIVN": {
+      "ticker": "RIVN",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 9,
+      "lock_failed": [
+        {
+          "accession_number": "0001874178-22-000048",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/1874178/000187417822000048/index.json: HTTP Error 503: Service Unavailable"
+        },
+        {
+          "accession_number": "0001874178-22-000029",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/1874178/000187417822000029/FilingSummary.xml: HTTP Error 503: Service Unavailable"
+        },
+        {
+          "accession_number": "0001874178-22-000059",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/1874178/000187417822000059/rivn-20220930_lab.xml: HTTP Error 503: Service Unavailable"
+        }
+      ],
+      "usable_fiscal_years": 3,
+      "newly_processed_fiscal_years": 3,
+      "engine_results": [
+        {
+          "ticker": "RIVN",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "94cbeb70-e0c1-48b7-ae6e-b7defab1fa7b",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "RIVN",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "228d9af9-ee84-44eb-886f-77c66f5438a4",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "RIVN",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "1e4d3f13-850a-4ccd-8d84-acda36e61b3c",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "RKLB": {
+      "ticker": "RKLB",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "RKLB",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "9cc660d7-ec57-4c05-b976-8fde00dcd5c0",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "RKLB",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "bcbeb497-df7c-41e2-9292-f29a5558a405",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "RKLB",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "00a629f9-0694-48da-b51e-acf43c63faee",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "RKLB",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "18ff24e9-f806-487f-878f-d7b518de6f6f",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "ROP": {
+      "ticker": "ROP",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "ROP",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "cdd86627-b569-43a2-b2fb-1851136e48a9",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "ROP",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "ce0b7380-4653-47d0-9223-25772efa8ce7",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "ROP",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "bd5a2662-0378-429b-9481-347dfabd122f",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "ROP",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "61dd1a7c-74c2-47aa-a64b-4e69e8aff0f6",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        }
+      ]
+    },
+    "ROST": {
+      "ticker": "ROST",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "ROST",
+          "fiscal_year_end": "2023-01-28",
+          "run_id": "45a7d6a8-d48f-425b-979c-1f00fcc1ca9c",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "ROST",
+          "fiscal_year_end": "2024-02-03",
+          "run_id": "f6aea2fa-2667-4a7a-9fb9-32e9d0a03f79",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "ROST",
+          "fiscal_year_end": "2025-02-01",
+          "run_id": "f7b5272e-7a68-4020-8377-f4b2c77a6818",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "ROST",
+          "fiscal_year_end": "2026-01-31",
+          "run_id": "bae3a088-9966-4070-899a-11eb653ea47a",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        }
+      ]
+    },
+    "SBUX": {
+      "ticker": "SBUX",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "SBUX",
+          "fiscal_year_end": "2022-10-02",
+          "run_id": "ac121ef7-035b-42e3-8395-6c3296fd020d",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "SBUX",
+          "fiscal_year_end": "2023-10-01",
+          "run_id": "68ea4f77-0701-43b5-88f1-c96b969671e9",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "SBUX",
+          "fiscal_year_end": "2024-09-29",
+          "run_id": "19d265e3-b008-4982-9151-0f83efa8c2b5",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "SBUX",
+          "fiscal_year_end": "2025-09-28",
+          "run_id": "08a1cf53-0176-4018-8341-d9340992c155",
+          "n_rows": 4,
+          "status_counts": {
+            "PASS": 4
+          }
+        }
+      ]
+    },
+    "SGEN": {
+      "ticker": "SGEN",
+      "lock_status": "OK",
+      "discovered": 6,
+      "downloaded": 6,
+      "lock_failed": [],
+      "usable_fiscal_years": 2,
+      "newly_processed_fiscal_years": 2,
+      "engine_results": [
+        {
+          "ticker": "SGEN",
+          "fiscal_year_end": "2021-12-31",
+          "run_id": "05240622-b942-4c2b-b13f-dda28ab74f46",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "SGEN",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "6a91a2e0-4bc0-4a3b-a487-6e4ffd626762",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        }
+      ]
+    },
+    "SHOP": {
+      "ticker": "SHOP",
+      "lock_status": "OK",
+      "discovered": 3,
+      "downloaded": 3,
+      "lock_failed": [],
+      "usable_fiscal_years": 1,
+      "newly_processed_fiscal_years": 1,
+      "engine_results": [
+        {
+          "ticker": "SHOP",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "fba64fba-0f62-4861-ab6d-e311319655a1",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "SIRI": {
+      "ticker": "SIRI",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "SIRI",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "72734c66-7b3a-4d8e-8c04-9405c99631aa",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "SIRI",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "13afffe0-978a-4058-913d-22b2c11f272c",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "SIRI",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "2230937f-b841-4c13-ba8c-7c9d24ccf1d8",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 12,
+            "REVIEW_REQUIRED": 4
+          }
+        },
+        {
+          "ticker": "SIRI",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "1cffe1eb-fe44-4c57-ae21-9e3dd0c431b6",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "SNDK": {
+      "ticker": "SNDK",
+      "lock_status": "SKIPPED_INSUFFICIENT_10K_HISTORY",
+      "discovered": 0,
+      "downloaded": 0,
+      "lock_failed": [],
+      "usable_fiscal_years": 0,
+      "newly_processed_fiscal_years": 0,
+      "engine_results": []
+    },
+    "SNPS": {
+      "ticker": "SNPS",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "SNPS",
+          "fiscal_year_end": "2022-10-31",
+          "run_id": "c032203c-25c3-415c-a18c-0a8653398fe7",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "SNPS",
+          "fiscal_year_end": "2023-10-31",
+          "run_id": "2f20e7fd-78c1-4eb4-8cf9-ebb90fc96de7",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "SNPS",
+          "fiscal_year_end": "2024-10-31",
+          "run_id": "d1524938-d32d-44c3-9f9e-3e62fc7a554d",
+          "n_rows": 24,
+          "status_counts": {
+            "REVIEW_REQUIRED": 16,
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "SNPS",
+          "fiscal_year_end": "2025-10-31",
+          "run_id": "5c7ae75b-3db5-4362-8871-19d61baac919",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "SPLK": {
+      "ticker": "SPLK",
+      "lock_status": "OK",
+      "discovered": 9,
+      "downloaded": 9,
+      "lock_failed": [],
+      "usable_fiscal_years": 3,
+      "newly_processed_fiscal_years": 3,
+      "engine_results": [
+        {
+          "ticker": "SPLK",
+          "fiscal_year_end": "2021-01-31",
+          "run_id": "4c2882b9-8a3d-416f-9556-363134916bc4",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "SPLK",
+          "fiscal_year_end": "2022-01-31",
+          "run_id": "469c14d1-39f9-4cb8-b60e-29b58116a1ee",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "SPLK",
+          "fiscal_year_end": "2023-01-31",
+          "run_id": "b3f2cbc6-f7c2-47b3-ba5c-cd8ae5810c01",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "STX": {
+      "ticker": "STX",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "STX",
+          "fiscal_year_end": "2023-06-30",
+          "run_id": "f3aae7ac-d062-427e-929e-542569843750",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "STX",
+          "fiscal_year_end": "2024-06-28",
+          "run_id": "166c3ece-a7e8-42b4-b2c7-40b1778e60c9",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "STX",
+          "fiscal_year_end": "2025-06-27",
+          "run_id": "5dd725f2-fcb0-4917-8f66-d9c748d5883f",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "STX",
+          "fiscal_year_end": "2026-07-03",
+          "run_id": "3103bc81-6476-4bcc-bfc7-1239d3b3db37",
+          "n_rows": 0,
+          "status_counts": {}
+        }
+      ]
+    },
+    "SWKS": {
+      "ticker": "SWKS",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 11,
+      "lock_failed": [
+        {
+          "accession_number": "0000004127-22-000015",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/4127/000000412722000015/FilingSummary.xml: HTTP Error 503: Service Unavailable"
+        }
+      ],
+      "usable_fiscal_years": 3,
+      "newly_processed_fiscal_years": 3,
+      "engine_results": [
+        {
+          "ticker": "SWKS",
+          "fiscal_year_end": "2023-09-29",
+          "run_id": "ae62640e-79f5-4baa-8005-9d4dcb4d795a",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "SWKS",
+          "fiscal_year_end": "2024-09-27",
+          "run_id": "fee074ee-7960-41b0-865f-d3abcb5b2f91",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 20,
+            "PASS_ROUNDING_TOLERANCE": 4
+          }
+        },
+        {
+          "ticker": "SWKS",
+          "fiscal_year_end": "2025-10-03",
+          "run_id": "af6011d7-8163-4f9f-a682-7cfee67bce89",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 16,
+            "PASS_ROUNDING_TOLERANCE": 8
+          }
+        }
+      ]
+    },
+    "TEAM": {
+      "ticker": "TEAM",
+      "lock_status": "OK",
+      "discovered": 6,
+      "downloaded": 6,
+      "lock_failed": [],
+      "usable_fiscal_years": 2,
+      "newly_processed_fiscal_years": 2,
+      "engine_results": [
+        {
+          "ticker": "TEAM",
+          "fiscal_year_end": "2024-06-30",
+          "run_id": "b418ae77-7a22-4f9c-98cb-368f91fff601",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "TEAM",
+          "fiscal_year_end": "2025-06-30",
+          "run_id": "123ffebe-54f8-4ca0-8925-ca6220bf536f",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "TER": {
+      "ticker": "TER",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "TER",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "1a841fdc-ad2e-4058-bb00-ded556231744",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "TER",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "ced083c7-546b-4746-aa08-03a43f7d1d94",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS_ROUNDING_TOLERANCE": 8,
+            "PASS": 12
+          }
+        },
+        {
+          "ticker": "TER",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "f74309f4-621f-4707-a277-daa3b04f7e9b",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 20,
+            "PASS_ROUNDING_TOLERANCE": 4
+          }
+        },
+        {
+          "ticker": "TER",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "014a40f0-b8e0-43e4-8b5b-26b0d9eb295a",
+          "n_rows": 11,
+          "status_counts": {
+            "REVIEW_REQUIRED": 11
+          }
+        }
+      ]
+    },
+    "TMUS": {
+      "ticker": "TMUS",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "TMUS",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "d1b3ff78-7efc-4795-9a03-754236c9dc74",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "TMUS",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "9738af30-c944-4348-bb59-73ceb231459e",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "TMUS",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "de2051dd-fcbc-4d38-97b4-659f51346cd8",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "TMUS",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "025f9a1e-c462-4567-a08e-c681558b59af",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        }
+      ]
+    },
+    "TSLA": {
+      "ticker": "TSLA",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "TSLA",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "1afd2dcf-8054-4a6b-b306-be160d9422b7",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "a27b21ff-41f0-47ca-b787-feb0a50d06c5",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "76a2b77b-a690-4315-a731-3a65bfcb8ad8",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "TSLA",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "5e006f22-bdcb-4ea3-96a9-85802c4f5246",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "TTD": {
+      "ticker": "TTD",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "TTD",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "88ef1685-3392-45c6-9217-b382cb0626f3",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "TTD",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "e0d90537-a6ff-4433-ab3c-73445914cf82",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "TTD",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "f949a772-cb1f-4218-8bf9-9bb9d8180e38",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "TTD",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "f55e3f88-49fd-4321-940a-747657bff3c3",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "TTWO": {
+      "ticker": "TTWO",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "TTWO",
+          "fiscal_year_end": "2023-03-31",
+          "run_id": "6a47ca9b-920a-4d5a-90ae-0bb80927d461",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "TTWO",
+          "fiscal_year_end": "2024-03-31",
+          "run_id": "efa22d3c-dc2d-45de-afec-e1932e5d7d12",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "TTWO",
+          "fiscal_year_end": "2025-03-31",
+          "run_id": "cf533fe5-d3e7-429a-ab89-84c76494d472",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "TTWO",
+          "fiscal_year_end": "2026-03-31",
+          "run_id": "202a26c6-3211-4996-84db-bfe3968947f3",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "TXN": {
+      "ticker": "TXN",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "TXN",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "7eb8563d-475f-43db-a1af-0e1c95689fa3",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "TXN",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "3d9542f6-7c36-4e17-b162-33d48f6dc2dd",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "TXN",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "5a009276-adf2-480f-a2fd-bf7070b7457d",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "TXN",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "67e06e39-0484-451e-b183-33611d2838a4",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "VRSK": {
+      "ticker": "VRSK",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "VRSK",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "55dd7ce3-341a-4639-b7a3-ce7d12f0993e",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "VRSK",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "9d136c86-1263-488b-8921-cefa8a7fa837",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "VRSK",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "23a8f597-4ad3-4320-a643-668ea89ab70b",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 12,
+            "REVIEW_REQUIRED": 4
+          }
+        },
+        {
+          "ticker": "VRSK",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "9f5f75f7-61c4-4c87-afe6-eb848a14d7ab",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "VRSN": {
+      "ticker": "VRSN",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "VRSN",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "fa2086bd-f750-483f-aaf4-42b45d4171d4",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "VRSN",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "33feb3a9-66b1-487f-a8d1-c1e44ac0e8d1",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "VRSN",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "d3a5cfae-c4cf-4ea2-9f46-120b19bff166",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "VRSN",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "1dd4a3cb-5720-4f78-8a17-9866d776b3bb",
+          "n_rows": 4,
+          "status_counts": {
+            "PASS": 4
+          }
+        }
+      ]
+    },
+    "VRTX": {
+      "ticker": "VRTX",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 11,
+      "lock_failed": [
+        {
+          "accession_number": "0000875320-22-000030",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/875320/000087532022000030/vrtx-20220630_pre.xml: The read operation timed out"
+        }
+      ],
+      "usable_fiscal_years": 3,
+      "newly_processed_fiscal_years": 3,
+      "engine_results": [
+        {
+          "ticker": "VRTX",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "ab753aff-1419-4287-85fb-d0f096451a60",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "VRTX",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "d29aa6dc-43a8-4e05-9cf2-50447213b411",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "VRTX",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "bf067bad-c633-43ca-a992-bb26ca4c7057",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "WBA": {
+      "ticker": "WBA",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 10,
+      "lock_failed": [
+        {
+          "accession_number": "0001618921-23-000043",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/1618921/000161892123000043/wba-20230531.xsd: HTTP Error 503: Service Unavailable"
+        },
+        {
+          "accession_number": "0001618921-21-000034",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/1618921/000161892121000034/wba-20210228.xsd: The read operation timed out"
+        }
+      ],
+      "usable_fiscal_years": 2,
+      "newly_processed_fiscal_years": 2,
+      "engine_results": [
+        {
+          "ticker": "WBA",
+          "fiscal_year_end": "2022-08-31",
+          "run_id": "9b311f39-074c-4b9f-b8f4-158cf86324e1",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "WBA",
+          "fiscal_year_end": "2024-08-31",
+          "run_id": "88029d4b-22c5-4f13-a9ed-2901c9f06760",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        }
+      ]
+    },
+    "WBD": {
+      "ticker": "WBD",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "WBD",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "bb9e9397-fe19-4ba5-a4b3-3554e324707f",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "WBD",
+          "fiscal_year_end": "2023-12-31",
+          "run_id": "b83854b0-a3cd-4b4f-8857-b5ded85565c9",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "WBD",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "583c77dc-f0cb-42b6-8274-43b12fe37920",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "WBD",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "27b557f7-debb-4ab8-bfee-04131342718a",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        }
+      ]
+    },
+    "WDAY": {
+      "ticker": "WDAY",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 8,
+      "lock_failed": [
+        {
+          "accession_number": "0001327811-22-000091",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/1327811/000132781122000091/FilingSummary.xml: HTTP Error 503: Service Unavailable"
+        },
+        {
+          "accession_number": "0001327811-24-000165",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/1327811/000132781124000165/FilingSummary.xml: HTTP Error 503: Service Unavailable"
+        },
+        {
+          "accession_number": "0001327811-25-000184",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/1327811/000132781125000184/wday-20250731_pre.xml: HTTP Error 503: Service Unavailable"
+        },
+        {
+          "accession_number": "0001327811-24-000093",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/1327811/000132781124000093/wday-20240430_def.xml: HTTP Error 503: Service Unavailable"
+        }
+      ],
+      "usable_fiscal_years": 1,
+      "newly_processed_fiscal_years": 1,
+      "engine_results": [
+        {
+          "ticker": "WDAY",
+          "fiscal_year_end": "2024-01-31",
+          "run_id": "02b91fc1-f77e-453f-b7be-c36f60ad1030",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "WDC": {
+      "ticker": "WDC",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "WDC",
+          "fiscal_year_end": "2022-07-01",
+          "run_id": "7801e7ad-8717-4cdd-929a-5dbf86e16a25",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "WDC",
+          "fiscal_year_end": "2023-06-30",
+          "run_id": "ddf1f411-9c32-4a59-8700-0b51dff4d40a",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "WDC",
+          "fiscal_year_end": "2024-06-28",
+          "run_id": "2e6815b3-530e-4573-9d3b-ab0e2d61bd70",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "WDC",
+          "fiscal_year_end": "2025-06-27",
+          "run_id": "fc542ba8-6a41-40ee-82db-aa9ae0445bd7",
+          "n_rows": 12,
+          "status_counts": {
+            "REVIEW_REQUIRED": 4,
+            "PASS": 8
+          }
+        }
+      ]
+    },
+    "WMT": {
+      "ticker": "WMT",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 12,
+      "lock_failed": [],
+      "usable_fiscal_years": 4,
+      "newly_processed_fiscal_years": 4,
+      "engine_results": [
+        {
+          "ticker": "WMT",
+          "fiscal_year_end": "2023-01-31",
+          "run_id": "9abee6cb-6121-4ed6-bacb-654ef0582558",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "WMT",
+          "fiscal_year_end": "2024-01-31",
+          "run_id": "766f7233-513e-4460-8831-9cdd5b4b285f",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "WMT",
+          "fiscal_year_end": "2025-01-31",
+          "run_id": "8915199b-324f-4e55-bb20-1174a65fa985",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        },
+        {
+          "ticker": "WMT",
+          "fiscal_year_end": "2026-01-31",
+          "run_id": "a7d08cde-82b1-492a-a87d-ea02c00e3d97",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "XEL": {
+      "ticker": "XEL",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 10,
+      "lock_failed": [
+        {
+          "accession_number": "0000072903-25-000257",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/72903/000007290325000257/xel-20250930_def.xml: The read operation timed out"
+        },
+        {
+          "accession_number": "0000072903-23-000113",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/72903/000007290323000113/xel-20230630_lab.xml: The read operation timed out"
+        }
+      ],
+      "usable_fiscal_years": 2,
+      "newly_processed_fiscal_years": 2,
+      "engine_results": [
+        {
+          "ticker": "XEL",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "c60848e1-eb53-44d2-b1a4-2f773b87b24c",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        },
+        {
+          "ticker": "XEL",
+          "fiscal_year_end": "2024-12-31",
+          "run_id": "0486be0c-fd6b-4c51-95af-a799054084c3",
+          "n_rows": 8,
+          "status_counts": {
+            "PASS": 8
+          }
+        }
+      ]
+    },
+    "ZM": {
+      "ticker": "ZM",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 11,
+      "lock_failed": [
+        {
+          "accession_number": "0001585521-25-000202",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/1585521/000158552125000202/zm-20251031_lab.xml: HTTP Error 503: Service Unavailable"
+        }
+      ],
+      "usable_fiscal_years": 3,
+      "newly_processed_fiscal_years": 3,
+      "engine_results": [
+        {
+          "ticker": "ZM",
+          "fiscal_year_end": "2023-01-31",
+          "run_id": "e53a1082-1d0d-4c7e-92cc-e99e21566d01",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "ZM",
+          "fiscal_year_end": "2024-01-31",
+          "run_id": "bfcdf477-6176-414d-9601-f669daddd998",
+          "n_rows": 24,
+          "status_counts": {
+            "PASS": 24
+          }
+        },
+        {
+          "ticker": "ZM",
+          "fiscal_year_end": "2025-01-31",
+          "run_id": "2996e7dc-ee0c-4679-982c-deeacddccc80",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "ZS": {
+      "ticker": "ZS",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 9,
+      "lock_failed": [
+        {
+          "accession_number": "0001713683-21-000238",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/1713683/000171368321000238/FilingSummary.xml: HTTP Error 503: Service Unavailable"
+        },
+        {
+          "accession_number": "0001713683-24-000150",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/1713683/000171368324000150/index.json: HTTP Error 503: Service Unavailable"
+        },
+        {
+          "accession_number": "0001713683-24-000075",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/1713683/000171368324000075/zs-20240430_cal.xml: HTTP Error 503: Service Unavailable"
+        }
+      ],
+      "usable_fiscal_years": 1,
+      "newly_processed_fiscal_years": 1,
+      "engine_results": [
+        {
+          "ticker": "ZS",
+          "fiscal_year_end": "2023-07-31",
+          "run_id": "db622007-984b-47f6-9418-7b7b14089f5f",
+          "n_rows": 20,
+          "status_counts": {
+            "PASS": 20
+          }
+        }
+      ]
+    },
+    "AEP": {
+      "ticker": "AEP",
+      "lock_status": "OK",
+      "discovered": 12,
+      "downloaded": 9,
+      "lock_failed": [
+        {
+          "accession_number": "0000004904-24-000046",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/4904/000000490424000046/index.json: HTTP Error 503: Service Unavailable"
+        },
+        {
+          "accession_number": "0000004904-23-000104",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/4904/000000490423000104/aep-20230630.xsd: HTTP Error 503: Service Unavailable"
+        },
+        {
+          "accession_number": "0000004904-23-000121",
+          "error": "SEC request failed for https://www.sec.gov/Archives/edgar/data/4904/000000490423000121/aep-20230930_def.xml: HTTP Error 503: Service Unavailable"
+        }
+      ],
+      "usable_fiscal_years": 2,
+      "newly_processed_fiscal_years": 2,
+      "engine_results": [
+        {
+          "ticker": "AEP",
+          "fiscal_year_end": "2022-12-31",
+          "run_id": "98bd95fe-7f41-4e15-9dbf-4ee89ac7f094",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        },
+        {
+          "ticker": "AEP",
+          "fiscal_year_end": "2025-12-31",
+          "run_id": "cce011d9-be10-48c8-a5d8-b43aebe37aa0",
+          "n_rows": 16,
+          "status_counts": {
+            "PASS": 16
+          }
+        }
+      ]
+    },
+    "XLNX": {
+      "ticker": "XLNX",
+      "lock_status": "OK",
+      "discovered": 3,
+      "downloaded": 1,
+      "lock_failed": [],
+      "usable_fiscal_years": 1,
+      "newly_processed_fiscal_years": 1,
+      "engine_results": [
+        {
+          "ticker": "XLNX",
+          "fiscal_year_end": "2021-04-03",
+          "run_id": "8421be34-2c63-4368-928e-8fa7fa9cb2cb",
+          "n_rows": 12,
+          "status_counts": {
+            "REVIEW_REQUIRED": 12
+          }
+        }
+      ]
+    }
+  }
+}

@@ -197,8 +197,26 @@ def load_filing_metadata(prod_connection, accession_number: str, expected_form: 
             "accession_number": accession_number}
 
 
-def resolve_concept_for_metric(connection, accession_number: str, metric_name: str) -> str:
-    presentation = reconstruct_presentation_dataframe(connection, accession_number)
+def resolve_concept_for_metric(
+    connection, accession_number: str, metric_name: str, presentation_cache: dict | None = None,
+) -> str:
+    """`presentation_cache`, when given, memoizes reconstruct_presentation_
+    dataframe's result per accession_number for the DURATION OF ONE CALLER-
+    OWNED DICT (never global, never cross-run) -- added 2026-08-12 after
+    measuring that a single quarterly engine run calls this 18 times (6
+    metrics x 3 quarters) against only 3 DISTINCT accessions, redundantly
+    re-running the same expensive presentation-tree SQL query 6x per
+    accession. Purely a memoization of a deterministic, read-only function
+    of (connection, accession_number) -- the returned concept_qname is
+    unchanged either way; only redundant identical work is skipped. `None`
+    (the default) preserves the exact original behavior for any other
+    caller that doesn't pass a cache."""
+    if presentation_cache is not None and accession_number in presentation_cache:
+        presentation = presentation_cache[accession_number]
+    else:
+        presentation = reconstruct_presentation_dataframe(connection, accession_number)
+        if presentation_cache is not None:
+            presentation_cache[accession_number] = presentation
     metric = BUILT_IN_METRICS[metric_name]
     row, _candidates = identify_canonical_row(presentation, metric)
     return row["concept_qname"]
@@ -251,15 +269,31 @@ def pick_current_period_fact(facts: pd.DataFrame, expected_end_date: str, durati
 
 
 def resolve_annual_anchor(prod_connection, fy_accession_number: str, metric_name: str) -> dict:
+    # Dedupe active rows to the latest-loaded one per (accession, metric) --
+    # the same ROW_NUMBER()-over-loaded_at mechanism production_lookup.
+    # latest_metric already uses everywhere else this project reads an
+    # "authoritative" financial_metric_results row (see its own docstring:
+    # ported byte-exact from scripts/93). Needed because a ticker whose
+    # annual data was reloaded by a later engine version (the wider-
+    # universe extension, D-051-D-061) can carry more than one is_active=
+    # true row for the same accession+metric; the original 9 tickers never
+    # hit this because their data was never reloaded, so this bounded fix
+    # was invisible until the first non-original-9 quarterly anchor lookup.
     rows = prod_connection.execute(
         """
-        SELECT f.value, f.unit, f.source_concept, f.status, f.extraction_run_id,
-               f.context_id, f.period_start, f.period_end, f.label,
-               f.statement_role_definition, f.selection_tier, f.validation_reason,
-               r.accession_number, r.loaded_at
-        FROM financial_metric_results f
-        JOIN extraction_runs r ON r.extraction_run_id = f.extraction_run_id
-        WHERE r.accession_number = ? AND f.metric_name = ?
+        WITH ranked AS (
+            SELECT f.value, f.unit, f.source_concept, f.status, f.extraction_run_id,
+                   f.context_id, f.period_start, f.period_end, f.label,
+                   f.statement_role_definition, f.selection_tier, f.validation_reason,
+                   r.accession_number, r.loaded_at,
+                   ROW_NUMBER() OVER (PARTITION BY r.accession_number, f.metric_name ORDER BY r.loaded_at DESC) AS rn
+            FROM financial_metric_results f
+            JOIN extraction_runs r ON r.extraction_run_id = f.extraction_run_id
+            WHERE r.accession_number = ? AND f.metric_name = ? AND f.is_active = true
+        )
+        SELECT value, unit, source_concept, status, extraction_run_id, context_id, period_start, period_end,
+               label, statement_role_definition, selection_tier, validation_reason, accession_number, loaded_at
+        FROM ranked WHERE rn = 1
         """,
         [fy_accession_number, metric_name],
     ).fetchall()
@@ -298,15 +332,43 @@ def resolve_annual_anchor(prod_connection, fy_accession_number: str, metric_name
     }
 
 
-def lookup_annual_fact_decimals(warehouse_connection, accession_number: str, concept_qname: str | None, context_id: str | None) -> str | None:
-    """Unchanged from 136, verbatim."""
-    if not concept_qname or not context_id:
+def lookup_annual_fact_decimals(
+    warehouse_connection, accession_number: str, concept_qname: str | None, context_id: str | None,
+    fallback_value: float | None = None,
+) -> str | None:
+    """Unchanged from 136 when context_id is present (the original 9
+    tickers, and any row with lineage recorded). NEW fallback, added
+    2026-08-12: some wider-universe financial_metric_results rows
+    (e.g. the v3-vocabulary-cleanup engine_version, D-051-D-054) never
+    recorded context_id, so the exact-context lookup below can never
+    match for them -- confirmed by direct query (COST FY2022-08-28
+    revenue: context_id=NULL in financial_metric_results, but the
+    warehouse fact IS there under its own real context). When
+    context_id is missing and the caller supplies the already-resolved
+    annual VALUE instead, the fact is recovered deterministically by
+    exact value match -- accepted only when it identifies exactly ONE
+    context (never a guess: if two contexts in the same filing happen
+    to report the identical value for this concept, this stays
+    unresolved, exactly the same fail-closed behavior as before)."""
+    if not concept_qname:
         return None
-    facts = warehouse_connection.execute(
-        "SELECT value_numeric, context_id, decimals FROM xbrl_facts WHERE accession_number = ? AND concept_qname = ? "
-        "AND context_id = ? AND is_nil = FALSE",
-        [accession_number, concept_qname, context_id],
-    ).fetchdf()
+    if context_id:
+        facts = warehouse_connection.execute(
+            "SELECT value_numeric, context_id, decimals FROM xbrl_facts WHERE accession_number = ? AND concept_qname = ? "
+            "AND context_id = ? AND is_nil = FALSE",
+            [accession_number, concept_qname, context_id],
+        ).fetchdf()
+    elif fallback_value is not None:
+        candidates = warehouse_connection.execute(
+            "SELECT value_numeric, context_id, decimals FROM xbrl_facts WHERE accession_number = ? AND concept_qname = ? "
+            "AND is_nil = FALSE AND value_numeric = ?",
+            [accession_number, concept_qname, fallback_value],
+        ).fetchdf()
+        if candidates.empty or candidates["context_id"].nunique() != 1:
+            return None
+        facts = candidates
+    else:
+        return None
     if facts.empty:
         return None
     facts = facts.drop_duplicates(subset=["context_id", "value_numeric", "decimals"])
@@ -484,6 +546,10 @@ def run_quarterly_extraction_engine_v5(
 
     results: dict[str, dict] = {}
     csv_rows: list[dict] = []
+    # Scoped to exactly this run's connection/accessions -- see resolve_
+    # concept_for_metric's own docstring for why (18 calls, 3 distinct
+    # accessions, measured ~1.5s/call redundantly repeated 6x each).
+    presentation_cache: dict = {}
 
     for metric_name in METRICS:
         print(f"--- {metric_name} ---")
@@ -499,7 +565,8 @@ def run_quarterly_extraction_engine_v5(
             continue
 
         annual_decimals = lookup_annual_fact_decimals(
-            connection, filings["FY"]["accession_number"], annual_anchor["concept_qname"], annual_anchor["context_id"]
+            connection, filings["FY"]["accession_number"], annual_anchor["concept_qname"], annual_anchor["context_id"],
+            fallback_value=annual_anchor["value"],
         )
         if annual_decimals is None:
             metric_result["status"] = "REVIEW_REQUIRED"
@@ -537,7 +604,9 @@ def run_quarterly_extraction_engine_v5(
         for label in QUARTER_ORDER:
             info = filings[label]
             try:
-                concept_by_filing[label] = resolve_concept_for_metric(connection, info["accession_number"], metric_name)
+                concept_by_filing[label] = resolve_concept_for_metric(
+                    connection, info["accession_number"], metric_name, presentation_cache=presentation_cache,
+                )
                 metric_result["concept_source_lineage"][label] = {"source": "PRIMARY_PRESENTATION_RESOLVER"}
             except TargetRowNotFound as exc:
                 primary_error = f"{label}: row not found — {exc}"

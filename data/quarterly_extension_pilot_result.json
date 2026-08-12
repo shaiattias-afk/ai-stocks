@@ -1,0 +1,173 @@
+{
+  "pilot_tickers": [
+    "COST",
+    "CSX",
+    "PYPL"
+  ],
+  "lock_results": {
+    "COST": {
+      "ticker": "COST",
+      "status": "OK",
+      "window": [
+        "2021-08-29",
+        "2025-08-31"
+      ],
+      "discovered": 12,
+      "downloaded": [],
+      "already_archived": [
+        "0000909832-21-000021",
+        "0000909832-22-000005",
+        "0000909832-22-000014",
+        "0000909832-22-000035",
+        "0000909832-23-000014",
+        "0000909832-23-000028",
+        "0000909832-23-000065",
+        "0000909832-24-000017",
+        "0000909832-24-000029",
+        "0000909832-24-000079",
+        "0000909832-25-000015",
+        "0000909832-25-000033"
+      ],
+      "failed": [],
+      "inserted_sec_filings": []
+    },
+    "CSX": {
+      "ticker": "CSX",
+      "status": "OK",
+      "window": [
+        "2021-12-31",
+        "2025-12-31"
+      ],
+      "discovered": 12,
+      "downloaded": [],
+      "already_archived": [
+        "0000277948-22-000020",
+        "0000277948-22-000034",
+        "0000277948-22-000045",
+        "0000277948-23-000027",
+        "0000277948-23-000043",
+        "0000277948-23-000053",
+        "0000277948-24-000032",
+        "0000277948-24-000047",
+        "0000277948-24-000054",
+        "0000277948-25-000028",
+        "0000277948-25-000044",
+        "0000277948-25-000054"
+      ],
+      "failed": [],
+      "inserted_sec_filings": []
+    },
+    "PYPL": {
+      "ticker": "PYPL",
+      "status": "OK",
+      "window": [
+        "2021-12-31",
+        "2025-12-31"
+      ],
+      "discovered": 12,
+      "downloaded": [],
+      "already_archived": [
+        "0001633917-22-000088",
+        "0001633917-22-000137",
+        "0001633917-22-000167",
+        "0001633917-23-000072",
+        "0001633917-23-000117",
+        "0001633917-23-000156",
+        "0001633917-24-000048",
+        "0001633917-24-000098",
+        "0001633917-24-000110",
+        "0001633917-25-000064",
+        "0001633917-25-000161",
+        "0001633917-25-000196"
+      ],
+      "failed": [],
+      "inserted_sec_filings": []
+    }
+  },
+  "engine_results": [
+    {
+      "ticker": "COST",
+      "fiscal_year_end": "2022-08-28",
+      "run_id": "7938462c-c41f-4e8f-abfd-5c3250421ac3",
+      "n_rows": 0,
+      "status_counts": {}
+    },
+    {
+      "ticker": "COST",
+      "fiscal_year_end": "2023-09-03",
+      "run_id": "37457d5f-09fb-426f-a759-d0907c22cf09",
+      "n_rows": 0,
+      "status_counts": {}
+    },
+    {
+      "ticker": "COST",
+      "fiscal_year_end": "2024-09-01",
+      "run_id": "2d480425-cec4-4b7e-b83e-85ceab245ef8",
+      "n_rows": 0,
+      "status_counts": {}
+    },
+    {
+      "ticker": "COST",
+      "fiscal_year_end": "2025-08-31",
+      "run_id": "fd7d30fe-9010-4ab9-8ee9-fc42fbc4bdaf",
+      "n_rows": 0,
+      "status_counts": {}
+    },
+    {
+      "ticker": "CSX",
+      "fiscal_year_end": "2022-12-31",
+      "run_id": "38cafb18-6a88-48dd-bc53-51ec090b59aa",
+      "n_rows": 0,
+      "status_counts": {}
+    },
+    {
+      "ticker": "CSX",
+      "fiscal_year_end": "2023-12-31",
+      "run_id": "c3ca3513-d7c2-4a75-b281-f4f31ee3dbaa",
+      "n_rows": 0,
+      "status_counts": {}
+    },
+    {
+      "ticker": "CSX",
+      "fiscal_year_end": "2024-12-31",
+      "run_id": "704648b3-1a90-4860-9af7-6b80d1b034d6",
+      "n_rows": 0,
+      "status_counts": {}
+    },
+    {
+      "ticker": "CSX",
+      "fiscal_year_end": "2025-12-31",
+      "run_id": "86b7e16e-2301-4d47-8081-80bb353401b6",
+      "n_rows": 0,
+      "status_counts": {}
+    },
+    {
+      "ticker": "PYPL",
+      "fiscal_year_end": "2022-12-31",
+      "run_id": "9fe2413a-4032-408f-9305-bba436094986",
+      "n_rows": 0,
+      "status_counts": {}
+    },
+    {
+      "ticker": "PYPL",
+      "fiscal_year_end": "2023-12-31",
+      "run_id": "96d2473d-b96e-4568-82be-f927a03c1ae3",
+      "n_rows": 0,
+      "status_counts": {}
+    },
+    {
+      "ticker": "PYPL",
+      "fiscal_year_end": "2024-12-31",
+      "run_id": "06d360a4-032c-4df9-8833-29bde9544bce",
+      "n_rows": 0,
+      "status_counts": {}
+    },
+    {
+      "ticker": "PYPL",
+      "fiscal_year_end": "2025-12-31",
+      "run_id": "b914ee19-511f-461e-a84b-9116c819a1f9",
+      "n_rows": 0,
+      "status_counts": {}
+    }
+  ]
+}
