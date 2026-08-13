@@ -1,0 +1,3342 @@
+{
+  "lookback_quarters": 12,
+  "horizon_months": 12,
+  "cutoff_date": "2023-08-14",
+  "n": 464,
+  "entry_year_spread": {
+    "2023": 84,
+    "2024": 231,
+    "2025": 149
+  },
+  "pooled": {
+    "n": 464,
+    "n_groups": 86,
+    "bootstrap": {
+      "observed_correlation": 0.23378592004074603,
+      "n_groups": 86,
+      "n_rows": 464,
+      "n_resamples_used": 5000,
+      "bootstrap_mean": 0.23276632426009056,
+      "ci_95_low": 0.05770535281366551,
+      "ci_95_high": 0.39019862180899023,
+      "ci_95_crosses_zero": false
+    }
+  },
+  "pre_2022_only": null,
+  "2022_onward_only": {
+    "n": 464,
+    "n_groups": 86,
+    "bootstrap": {
+      "observed_correlation": 0.23378592004074603,
+      "n_groups": 86,
+      "n_rows": 464,
+      "n_resamples_used": 5000,
+      "bootstrap_mean": 0.23276632426009056,
+      "ci_95_low": 0.05770535281366551,
+      "ci_95_high": 0.39019862180899023,
+      "ci_95_crosses_zero": false
+    }
+  },
+  "quintiles": [
+    {
+      "quintile": 1,
+      "n": 92,
+      "growth_range": [
+        -0.91031149301826,
+        -0.029478619122034422
+      ],
+      "mean_excess_return": -0.0259652580615415,
+      "win_rate": 0.44565217391304346
+    },
+    {
+      "quintile": 2,
+      "n": 92,
+      "growth_range": [
+        -0.02846270928462713,
+        0.033968586892320296
+      ],
+      "mean_excess_return": -0.11982632894784626,
+      "win_rate": 0.20652173913043478
+    },
+    {
+      "quintile": 3,
+      "n": 92,
+      "growth_range": [
+        0.034024455077086735,
+        0.10527914571895125
+      ],
+      "mean_excess_return": -0.025440752569330538,
+      "win_rate": 0.391304347826087
+    },
+    {
+      "quintile": 4,
+      "n": 92,
+      "growth_range": [
+        0.1055015155772645,
+        0.199338686820973
+      ],
+      "mean_excess_return": -0.06667213740961257,
+      "win_rate": 0.33695652173913043
+    },
+    {
+      "quintile": 5,
+      "n": 96,
+      "growth_range": [
+        0.20129205577587306,
+        2.6527846636919516
+      ],
+      "mean_excess_return": 0.8444198836276103,
+      "win_rate": 0.6770833333333334
+    }
+  ],
+  "dataset": [
+    {
+      "ticker": "AAPL",
+      "availability_date": "2024-05-03",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.06707580336766794,
+      "excess_return": -0.032969999959672425
+    },
+    {
+      "ticker": "AAPL",
+      "availability_date": "2024-08-02",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.033968586892320296,
+      "excess_return": -0.33490990733929327
+    },
+    {
+      "ticker": "AAPL",
+      "availability_date": "2024-11-01",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.05306946508996524,
+      "excess_return": -0.09115229306386219
+    },
+    {
+      "ticker": "AAPL",
+      "availability_date": "2025-01-31",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.03951494877691819,
+      "excess_return": -0.05563139046013732
+    },
+    {
+      "ticker": "AAPL",
+      "availability_date": "2025-05-02",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.05075314314678292,
+      "excess_return": -0.02921027567865675
+    },
+    {
+      "ticker": "AAPL",
+      "availability_date": "2025-08-01",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.09628455180293094,
+      "excess_return": 0.2351813796527238
+    },
+    {
+      "ticker": "ABNB",
+      "availability_date": "2023-11-01",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.1777105196556661,
+      "excess_return": -0.23265708068666746
+    },
+    {
+      "ticker": "ABNB",
+      "availability_date": "2024-02-16",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.16641932406578652,
+      "excess_return": -0.2070865121890082
+    },
+    {
+      "ticker": "ADBE",
+      "availability_date": "2023-09-27",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.1030904579291676,
+      "excess_return": -0.3547484458059733
+    },
+    {
+      "ticker": "ADBE",
+      "availability_date": "2024-01-17",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.1155801104972376,
+      "excess_return": -0.5675307175381641
+    },
+    {
+      "ticker": "ADBE",
+      "availability_date": "2024-03-27",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.11321160042964551,
+      "excess_return": -0.3039351419723164
+    },
+    {
+      "ticker": "ADBE",
+      "availability_date": "2024-06-26",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.10236710963455153,
+      "excess_return": -0.4153375461078136
+    },
+    {
+      "ticker": "ADBE",
+      "availability_date": "2024-09-25",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.10593047034764824,
+      "excess_return": -0.5444627639201132
+    },
+    {
+      "ticker": "ADBE",
+      "availability_date": "2025-01-13",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.1105388272583201,
+      "excess_return": -0.4862851088353439
+    },
+    {
+      "ticker": "ADBE",
+      "availability_date": "2025-03-26",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.10266306445387885,
+      "excess_return": -0.5848051294689439
+    },
+    {
+      "ticker": "ADBE",
+      "availability_date": "2025-06-25",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.10623469579958567,
+      "excess_return": -0.8311034968038435
+    },
+    {
+      "ticker": "ADI",
+      "availability_date": "2023-08-23",
+      "entry_year": 2023,
+      "current_yoy_growth": -0.010735140905758445,
+      "excess_return": 0.0009720070413041793
+    },
+    {
+      "ticker": "ADI",
+      "availability_date": "2023-11-21",
+      "entry_year": 2023,
+      "current_yoy_growth": -0.16357095263255772,
+      "excess_return": -0.10777059824333302
+    },
+    {
+      "ticker": "ADSK",
+      "availability_date": "2023-08-29",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.08730800323362975,
+      "excess_return": -0.08754754883482208
+    },
+    {
+      "ticker": "ADSK",
+      "availability_date": "2023-12-04",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.10468750000000004,
+      "excess_return": 0.010915383563975478
+    },
+    {
+      "ticker": "ADSK",
+      "availability_date": "2024-06-10",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.11456752655538693,
+      "excess_return": 0.2073277933738924
+    },
+    {
+      "ticker": "ALGN",
+      "availability_date": "2023-11-03",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.07847044077147358,
+      "excess_return": -0.26322116706646304
+    },
+    {
+      "ticker": "ALGN",
+      "availability_date": "2024-02-28",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.06124246407436362,
+      "excess_return": -0.5559145772861018
+    },
+    {
+      "ticker": "ALGN",
+      "availability_date": "2024-05-03",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.05755624520885938,
+      "excess_return": -0.5056896571155146
+    },
+    {
+      "ticker": "ALGN",
+      "availability_date": "2024-08-02",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.026259937156558832,
+      "excess_return": -0.6188192195058638
+    },
+    {
+      "ticker": "ALGN",
+      "availability_date": "2024-11-05",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.018389650640378008,
+      "excess_return": -0.626363562217572
+    },
+    {
+      "ticker": "ALGN",
+      "availability_date": "2025-02-28",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.0402340900111422,
+      "excess_return": -0.192055792315301
+    },
+    {
+      "ticker": "ALGN",
+      "availability_date": "2025-05-08",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.018215796380902538,
+      "excess_return": -0.5307763141905085
+    },
+    {
+      "ticker": "ALGN",
+      "availability_date": "2025-08-06",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.015596651401569295,
+      "excess_return": -0.030699533888408848
+    },
+    {
+      "ticker": "ALNY",
+      "availability_date": "2024-08-01",
+      "entry_year": 2024,
+      "current_yoy_growth": 1.0700132390495494,
+      "excess_return": 0.2840704931841369
+    },
+    {
+      "ticker": "ALNY",
+      "availability_date": "2024-10-31",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.33257964371843896,
+      "excess_return": 0.4034907846154743
+    },
+    {
+      "ticker": "ALNY",
+      "availability_date": "2025-02-13",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.3489691120217957,
+      "excess_return": 0.058016683222080534
+    },
+    {
+      "ticker": "ALNY",
+      "availability_date": "2025-05-01",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.20200148482905256,
+      "excess_return": -0.2457314548834275
+    },
+    {
+      "ticker": "ALNY",
+      "availability_date": "2025-07-31",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.17256696851437892,
+      "excess_return": -0.6995593144096364
+    },
+    {
+      "ticker": "AMAT",
+      "availability_date": "2023-08-24",
+      "entry_year": 2023,
+      "current_yoy_growth": -0.014570552147239235,
+      "excess_return": 0.062319173682071405
+    },
+    {
+      "ticker": "AMAT",
+      "availability_date": "2023-12-15",
+      "entry_year": 2023,
+      "current_yoy_growth": -0.0038524225811231716,
+      "excess_return": -0.28257435528201924
+    },
+    {
+      "ticker": "AMAT",
+      "availability_date": "2024-02-27",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.0047484790028193835,
+      "excess_return": -0.37134638710202694
+    },
+    {
+      "ticker": "AMAT",
+      "availability_date": "2024-05-23",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.002413273001508287,
+      "excess_return": -0.39985937412316896
+    },
+    {
+      "ticker": "AMAT",
+      "availability_date": "2024-08-22",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.05494163424124521,
+      "excess_return": -0.3912426664718476
+    },
+    {
+      "ticker": "AMAT",
+      "availability_date": "2024-12-13",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.047895284843076036,
+      "excess_return": 0.4012023188107332
+    },
+    {
+      "ticker": "AMAT",
+      "availability_date": "2025-02-20",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.06843596242731476,
+      "excess_return": 1.0128122544076554
+    },
+    {
+      "ticker": "AMAT",
+      "availability_date": "2025-05-22",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.06831176647607573,
+      "excess_return": 1.3092504557374167
+    },
+    {
+      "ticker": "AMD",
+      "availability_date": "2023-11-01",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.04222821203953275,
+      "excess_return": -0.061836354230599966
+    },
+    {
+      "ticker": "AMD",
+      "availability_date": "2024-01-31",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.10162529023039824,
+      "excess_return": -0.5685734043477464
+    },
+    {
+      "ticker": "AMD",
+      "availability_date": "2024-05-01",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.022417336073230043,
+      "excess_return": -0.4797817498884691
+    },
+    {
+      "ticker": "AMD",
+      "availability_date": "2024-07-31",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.08882254151894009,
+      "excess_return": 0.01411950976293963
+    },
+    {
+      "ticker": "AMD",
+      "availability_date": "2024-10-30",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.17568965517241386,
+      "excess_return": 0.4469012268059538
+    },
+    {
+      "ticker": "AMD",
+      "availability_date": "2025-02-05",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.24156939040207526,
+      "excess_return": 0.5796423838947538
+    },
+    {
+      "ticker": "AMD",
+      "availability_date": "2025-05-07",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.3590352640233876,
+      "excess_return": 2.62508186944648
+    },
+    {
+      "ticker": "AMD",
+      "availability_date": "2025-08-06",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.31705227077977716,
+      "excess_return": 1.7337479543716008
+    },
+    {
+      "ticker": "AMGN",
+      "availability_date": "2023-10-31",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.03773301262778106,
+      "excess_return": -0.09870537829600812
+    },
+    {
+      "ticker": "AMGN",
+      "availability_date": "2024-02-14",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.19842082175756692,
+      "excess_return": -0.20714978385019878
+    },
+    {
+      "ticker": "AMZN",
+      "availability_date": "2023-10-27",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.125742519728405,
+      "excess_return": 0.03030019463489264
+    },
+    {
+      "ticker": "AMZN",
+      "availability_date": "2024-02-02",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.13911825420230017,
+      "excess_return": 0.16701105583209253
+    },
+    {
+      "ticker": "AMZN",
+      "availability_date": "2024-05-01",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.12527677884388888,
+      "excess_return": -0.08713637248936412
+    },
+    {
+      "ticker": "AMZN",
+      "availability_date": "2024-08-02",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.10115862869559389,
+      "excess_return": -0.0035704104784561874
+    },
+    {
+      "ticker": "AMZN",
+      "availability_date": "2024-11-01",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.11038348371225104,
+      "excess_return": -0.020477121663739384
+    },
+    {
+      "ticker": "AMZN",
+      "availability_date": "2025-02-07",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.10491230341078239,
+      "excess_return": -0.2699014772593563
+    },
+    {
+      "ticker": "AMZN",
+      "availability_date": "2025-05-02",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.08620292646166083,
+      "excess_return": 0.04881861989556202
+    },
+    {
+      "ticker": "AMZN",
+      "availability_date": "2025-08-01",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.13329774221669588,
+      "excess_return": 0.05253570787136419
+    },
+    {
+      "ticker": "APP",
+      "availability_date": "2023-11-08",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.2119719702313423,
+      "excess_return": 5.840496303247048
+    },
+    {
+      "ticker": "APP",
+      "availability_date": "2024-02-26",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.3573280630835234,
+      "excess_return": 4.4254190188597295
+    },
+    {
+      "ticker": "APP",
+      "availability_date": "2024-05-08",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.4790433390876496,
+      "excess_return": 3.4715921884557335
+    },
+    {
+      "ticker": "APP",
+      "availability_date": "2024-08-07",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.4398419014483481,
+      "excess_return": 5.192324348950248
+    },
+    {
+      "ticker": "APP",
+      "availability_date": "2024-11-06",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.3864352691795023,
+      "excess_return": 2.4701347418395914
+    },
+    {
+      "ticker": "APP",
+      "availability_date": "2025-02-27",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.44008723738829136,
+      "excess_return": 0.136498104156638
+    },
+    {
+      "ticker": "AVGO",
+      "availability_date": "2023-09-06",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.04867674858223059,
+      "excess_return": 0.39264514501341097
+    },
+    {
+      "ticker": "AVGO",
+      "availability_date": "2023-12-14",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.040873460246360516,
+      "excess_return": 0.9509428976333236
+    },
+    {
+      "ticker": "AVGO",
+      "availability_date": "2025-03-12",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.6731351654514863,
+      "excess_return": 0.486705357869208
+    },
+    {
+      "ticker": "AVGO",
+      "availability_date": "2025-06-11",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.7180808427802587,
+      "excess_return": 0.18343527687942274
+    },
+    {
+      "ticker": "AXON",
+      "availability_date": "2023-11-07",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.3266902750245386,
+      "excess_return": 0.7790869771384217
+    },
+    {
+      "ticker": "AXON",
+      "availability_date": "2024-02-27",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.2855935884239398,
+      "excess_return": 0.7830371123357955
+    },
+    {
+      "ticker": "BIIB",
+      "availability_date": "2023-11-08",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.008690452461630471,
+      "excess_return": -0.6412084480496882
+    },
+    {
+      "ticker": "BIIB",
+      "availability_date": "2024-02-14",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.061988993710691775,
+      "excess_return": -0.6274566805007983
+    },
+    {
+      "ticker": "BKNG",
+      "availability_date": "2023-11-02",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.21298744216787835,
+      "excess_return": 0.34835861371035604
+    },
+    {
+      "ticker": "BKNG",
+      "availability_date": "2024-02-22",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.1815263027908125,
+      "excess_return": 0.11166829968936343
+    },
+    {
+      "ticker": "CDNS",
+      "availability_date": "2023-10-23",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.13355433580705411,
+      "excess_return": -0.34426647567937185
+    },
+    {
+      "ticker": "CDNS",
+      "availability_date": "2024-02-14",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.18752118345062718,
+      "excess_return": -0.26804575031080047
+    },
+    {
+      "ticker": "CDW",
+      "availability_date": "2023-11-01",
+      "entry_year": 2023,
+      "current_yoy_growth": -0.09447349368514202,
+      "excess_return": -0.41881989330239
+    },
+    {
+      "ticker": "CDW",
+      "availability_date": "2024-02-26",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.07719324053472587,
+      "excess_return": -0.44477229954082287
+    },
+    {
+      "ticker": "CDW",
+      "availability_date": "2024-05-01",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.04514902706198198,
+      "excess_return": -0.3837100454762361
+    },
+    {
+      "ticker": "CDW",
+      "availability_date": "2024-07-31",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.03602850998027052,
+      "excess_return": -0.39624718975705875
+    },
+    {
+      "ticker": "CDW",
+      "availability_date": "2024-10-30",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.019846134712080077,
+      "excess_return": -0.4528370718617334
+    },
+    {
+      "ticker": "CDW",
+      "availability_date": "2025-02-21",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.03337650692437988,
+      "excess_return": -0.47881928564558696
+    },
+    {
+      "ticker": "CDW",
+      "availability_date": "2025-05-07",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.06698544954542651,
+      "excess_return": -0.8064802010921029
+    },
+    {
+      "ticker": "CDW",
+      "availability_date": "2025-08-06",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.10200243389755514,
+      "excess_return": -0.39141122994976807
+    },
+    {
+      "ticker": "CHTR",
+      "availability_date": "2023-10-27",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.002509225092250933,
+      "excess_return": -0.5582826590967978
+    },
+    {
+      "ticker": "CHTR",
+      "availability_date": "2024-02-02",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.0027058651455316163,
+      "excess_return": -0.14503561245148866
+    },
+    {
+      "ticker": "CHTR",
+      "availability_date": "2024-04-26",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.0019043433677579102,
+      "excess_return": 0.37740687259445793
+    },
+    {
+      "ticker": "CHTR",
+      "availability_date": "2024-07-26",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.0019035068453034931,
+      "excess_return": -0.42273590439334496
+    },
+    {
+      "ticker": "CHTR",
+      "availability_date": "2024-11-01",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.015532979976442984,
+      "excess_return": -0.6974670071264368
+    },
+    {
+      "ticker": "CHTR",
+      "availability_date": "2025-01-31",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.01568084020129823,
+      "excess_return": -0.5866347082693693
+    },
+    {
+      "ticker": "CHTR",
+      "availability_date": "2025-04-25",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.004093866510709754,
+      "excess_return": -0.9450939616415555
+    },
+    {
+      "ticker": "CHTR",
+      "availability_date": "2025-07-25",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.005918889294848295,
+      "excess_return": -0.7852812505765816
+    },
+    {
+      "ticker": "CMCSA",
+      "availability_date": "2023-10-26",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.008911521323997418,
+      "excess_return": -0.35059656613007495
+    },
+    {
+      "ticker": "CMCSA",
+      "availability_date": "2024-01-31",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.022911007102412118,
+      "excess_return": -0.513745501768073
+    },
+    {
+      "ticker": "CMCSA",
+      "availability_date": "2024-04-25",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.01236064800781378,
+      "excess_return": -0.19493333578874006
+    },
+    {
+      "ticker": "CMCSA",
+      "availability_date": "2024-07-23",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.027037656081014605,
+      "excess_return": -0.21821115384843437
+    },
+    {
+      "ticker": "CMCSA",
+      "availability_date": "2024-10-31",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.06491781504233773,
+      "excess_return": -0.6455576115482285
+    },
+    {
+      "ticker": "CMCSA",
+      "availability_date": "2025-01-31",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.02114996960291804,
+      "excess_return": -0.22829561417454847
+    },
+    {
+      "ticker": "CMCSA",
+      "availability_date": "2025-04-24",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.0056890012642224486,
+      "excess_return": -0.502554610161303
+    },
+    {
+      "ticker": "CMCSA",
+      "availability_date": "2025-07-31",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.021052277014281806,
+      "excess_return": -0.4169096007388233
+    },
+    {
+      "ticker": "CRWD",
+      "availability_date": "2023-08-31",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.36713425880075423,
+      "excess_return": 0.40509884509202165
+    },
+    {
+      "ticker": "CRWD",
+      "availability_date": "2023-11-29",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.35313884747676805,
+      "excess_return": 0.15909803540368195
+    },
+    {
+      "ticker": "CRWD",
+      "availability_date": "2024-03-07",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.3262923872745216,
+      "excess_return": -0.09900331043273125
+    },
+    {
+      "ticker": "CRWD",
+      "availability_date": "2024-06-05",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.32986225418002246,
+      "excess_return": 0.21383379112826373
+    },
+    {
+      "ticker": "CRWD",
+      "availability_date": "2024-08-29",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.3174381446258061,
+      "excess_return": 0.3408574855945947
+    },
+    {
+      "ticker": "CRWD",
+      "availability_date": "2024-11-27",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.28519084901795644,
+      "excess_return": 0.23270561972375092
+    },
+    {
+      "ticker": "CRWD",
+      "availability_date": "2025-03-10",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.25221125352670826,
+      "excess_return": 0.12053101778954245
+    },
+    {
+      "ticker": "CRWD",
+      "availability_date": "2025-06-04",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.19803569024446377,
+      "excess_return": 0.15393094384789352
+    },
+    {
+      "ticker": "CSCO",
+      "availability_date": "2023-09-07",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.16035719737444665,
+      "excess_return": -0.3448093632109597
+    },
+    {
+      "ticker": "CSCO",
+      "availability_date": "2023-11-21",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.07599765258215951,
+      "excess_return": -0.06545474678793495
+    },
+    {
+      "ticker": "CSCO",
+      "availability_date": "2024-02-20",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.05893172454384932,
+      "excess_return": 0.11707285322133609
+    },
+    {
+      "ticker": "CSCO",
+      "availability_date": "2024-05-21",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.12826847848466127,
+      "excess_return": 0.2543728861749033
+    },
+    {
+      "ticker": "CSCO",
+      "availability_date": "2024-09-05",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.10267710320331513,
+      "excess_return": 0.142504606589148
+    },
+    {
+      "ticker": "CSCO",
+      "availability_date": "2024-11-19",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.056381238069266426,
+      "excess_return": 0.21255571128512196
+    },
+    {
+      "ticker": "CSCO",
+      "availability_date": "2025-02-18",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.09381596434993345,
+      "excess_return": 0.11097358444955652
+    },
+    {
+      "ticker": "CSCO",
+      "availability_date": "2025-05-20",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.11391906786332862,
+      "excess_return": 0.4671952335074643
+    },
+    {
+      "ticker": "CSGP",
+      "availability_date": "2023-10-25",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.12164741498345366,
+      "excess_return": -0.37317770997837907
+    },
+    {
+      "ticker": "CSGP",
+      "availability_date": "2024-02-22",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.11635926013133457,
+      "excess_return": -0.2541661092479328
+    },
+    {
+      "ticker": "CSX",
+      "availability_date": "2023-10-20",
+      "entry_year": 2023,
+      "current_yoy_growth": -0.08292682926829265,
+      "excess_return": -0.297270109257999
+    },
+    {
+      "ticker": "CSX",
+      "availability_date": "2024-02-14",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.013404825737265424,
+      "excess_return": -0.33534618046897
+    },
+    {
+      "ticker": "CSX",
+      "availability_date": "2024-04-18",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.006745817593092229,
+      "excess_return": -0.2190053453463362
+    },
+    {
+      "ticker": "CSX",
+      "availability_date": "2024-08-05",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.0005406866720736314,
+      "excess_return": -0.19746809779823282
+    },
+    {
+      "ticker": "CSX",
+      "availability_date": "2024-10-17",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.013157894736842035,
+      "excess_return": -0.11266820520153109
+    },
+    {
+      "ticker": "CSX",
+      "availability_date": "2025-02-27",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.03831521739130439,
+      "excess_return": 0.13939295001222707
+    },
+    {
+      "ticker": "CSX",
+      "availability_date": "2025-04-16",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.07008964955175223,
+      "excess_return": 0.13686328272355364
+    },
+    {
+      "ticker": "CSX",
+      "availability_date": "2025-07-23",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.034315049986490154,
+      "excess_return": 0.29827918633308137
+    },
+    {
+      "ticker": "CTAS",
+      "availability_date": "2024-01-08",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.09302630332647,
+      "excess_return": 0.04987649159156571
+    },
+    {
+      "ticker": "CTAS",
+      "availability_date": "2024-04-05",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.09871615617634077,
+      "excess_return": 0.1722801441839048
+    },
+    {
+      "ticker": "CTAS",
+      "availability_date": "2024-07-25",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.08162239748283073,
+      "excess_return": -0.04919481628766942
+    },
+    {
+      "ticker": "CTAS",
+      "availability_date": "2024-10-04",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.06799084672099998,
+      "excess_return": -0.2750596139918987
+    },
+    {
+      "ticker": "CTAS",
+      "availability_date": "2025-01-08",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.07765765864300378,
+      "excess_return": -0.21459579741440493
+    },
+    {
+      "ticker": "CTAS",
+      "availability_date": "2025-04-03",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.08436051771838526,
+      "excess_return": -0.46685924817572966
+    },
+    {
+      "ticker": "CTAS",
+      "availability_date": "2025-07-28",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.07961237345377348,
+      "excess_return": -0.21028807938991734
+    },
+    {
+      "ticker": "CTSH",
+      "availability_date": "2023-11-02",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.008235536339304073,
+      "excess_return": -0.15038023754541308
+    },
+    {
+      "ticker": "CTSH",
+      "availability_date": "2024-02-14",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.01673899566026038,
+      "excess_return": -0.04862368525149141
+    },
+    {
+      "ticker": "CTSH",
+      "availability_date": "2024-05-02",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.010806317539484578,
+      "excess_return": 0.038799849507479056
+    },
+    {
+      "ticker": "CTSH",
+      "availability_date": "2024-08-01",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.007367990176013084,
+      "excess_return": -0.27265884166130194
+    },
+    {
+      "ticker": "CTSH",
+      "availability_date": "2024-10-31",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.03001837859914236,
+      "excess_return": -0.3147281934391458
+    },
+    {
+      "ticker": "CTSH",
+      "availability_date": "2025-02-12",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.06809583858764179,
+      "excess_return": -0.3832214440991244
+    },
+    {
+      "ticker": "CTSH",
+      "availability_date": "2025-05-01",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.07457983193277307,
+      "excess_return": -0.6969853589575433
+    },
+    {
+      "ticker": "CTSH",
+      "availability_date": "2025-07-31",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.0814432989690721,
+      "excess_return": -0.4359082514129504
+    },
+    {
+      "ticker": "DASH",
+      "availability_date": "2023-11-01",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.2721928277483834,
+      "excess_return": 0.6759878379601358
+    },
+    {
+      "ticker": "DASH",
+      "availability_date": "2024-02-20",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.2667766776677667,
+      "excess_return": 0.48670691402912336
+    },
+    {
+      "ticker": "DDOG",
+      "availability_date": "2023-11-07",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.2542831813402424,
+      "excess_return": -0.11738011663773151
+    },
+    {
+      "ticker": "DDOG",
+      "availability_date": "2024-02-23",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.2561786454594066,
+      "excess_return": -0.2899631511779155
+    },
+    {
+      "ticker": "DDOG",
+      "availability_date": "2024-05-08",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.26891267432542953,
+      "excess_return": -0.1851053165745532
+    },
+    {
+      "ticker": "DDOG",
+      "availability_date": "2024-08-09",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.26659404074902837,
+      "excess_return": -0.13161994300190338
+    },
+    {
+      "ticker": "DDOG",
+      "availability_date": "2024-11-08",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.2602203325443442,
+      "excess_return": 0.3860997294124202
+    },
+    {
+      "ticker": "DDOG",
+      "availability_date": "2025-02-20",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.25112906152643344,
+      "excess_return": -0.22279515165671282
+    },
+    {
+      "ticker": "DDOG",
+      "availability_date": "2025-05-07",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.24588836373809198,
+      "excess_return": 0.3352696323082984
+    },
+    {
+      "ticker": "DDOG",
+      "availability_date": "2025-08-08",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.2812442369889614,
+      "excess_return": 0.6402889650336001
+    },
+    {
+      "ticker": "DOCU",
+      "availability_date": "2023-09-07",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.10527914571895125,
+      "excess_return": -0.15489423015371195
+    },
+    {
+      "ticker": "DOCU",
+      "availability_date": "2023-12-08",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.0851450819024484,
+      "excess_return": 0.7151439439779519
+    },
+    {
+      "ticker": "DOCU",
+      "availability_date": "2024-03-21",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.08006658823244028,
+      "excess_return": 0.41676313011844246
+    },
+    {
+      "ticker": "DXCM",
+      "availability_date": "2023-10-26",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.2668918918918919,
+      "excess_return": -0.5622922973155965
+    },
+    {
+      "ticker": "DXCM",
+      "availability_date": "2024-02-08",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.26901373895976444,
+      "excess_return": -0.5353807030590594
+    },
+    {
+      "ticker": "DXCM",
+      "availability_date": "2024-04-25",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.2420768712070127,
+      "excess_return": -0.6009141165214884
+    },
+    {
+      "ticker": "DXCM",
+      "availability_date": "2024-07-25",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.1526454722827959,
+      "excess_return": -0.41773490110335965
+    },
+    {
+      "ticker": "DXCM",
+      "availability_date": "2024-10-24",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.019692307692307676,
+      "excess_return": -0.32060519768438
+    },
+    {
+      "ticker": "DXCM",
+      "availability_date": "2025-02-18",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.07636539391010144,
+      "excess_return": -0.3246865130144233
+    },
+    {
+      "ticker": "DXCM",
+      "availability_date": "2025-05-01",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.12486427795874055,
+      "excess_return": -0.5331701074323857
+    },
+    {
+      "ticker": "DXCM",
+      "availability_date": "2025-07-30",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.15214577317534594,
+      "excess_return": -0.37222257587381136
+    },
+    {
+      "ticker": "EA",
+      "availability_date": "2023-11-07",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.005252100840336116,
+      "excess_return": -0.14728973209302643
+    },
+    {
+      "ticker": "EA",
+      "availability_date": "2024-02-06",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.034024455077086735,
+      "excess_return": -0.26494399065627083
+    },
+    {
+      "ticker": "EA",
+      "availability_date": "2024-05-22",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.05069370330843115,
+      "excess_return": -0.04400539466604991
+    },
+    {
+      "ticker": "EBAY",
+      "availability_date": "2023-11-08",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.050420168067226934,
+      "excess_return": 0.19430141691677316
+    },
+    {
+      "ticker": "EBAY",
+      "availability_date": "2024-02-28",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.02071713147410348,
+      "excess_return": 0.20367586557973083
+    },
+    {
+      "ticker": "EBAY",
+      "availability_date": "2024-05-02",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.018326693227091573,
+      "excess_return": 0.26270249787176936
+    },
+    {
+      "ticker": "EBAY",
+      "availability_date": "2024-08-01",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.012598425196850505,
+      "excess_return": 0.44827853454176947
+    },
+    {
+      "ticker": "EBAY",
+      "availability_date": "2024-10-31",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.030399999999999983,
+      "excess_return": 0.12928609069570585
+    },
+    {
+      "ticker": "EBAY",
+      "availability_date": "2025-02-27",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.006635441061670466,
+      "excess_return": 0.23311508333301156
+    },
+    {
+      "ticker": "EBAY",
+      "availability_date": "2025-05-01",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.011345852895148667,
+      "excess_return": 0.15320597384073698
+    },
+    {
+      "ticker": "EBAY",
+      "availability_date": "2025-07-31",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.06143079315707611,
+      "excess_return": 0.03504585813009631
+    },
+    {
+      "ticker": "ENPH",
+      "availability_date": "2023-10-26",
+      "entry_year": 2023,
+      "current_yoy_growth": -0.1317619144400698,
+      "excess_return": -0.5709953243446897
+    },
+    {
+      "ticker": "ENPH",
+      "availability_date": "2024-02-09",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.582461650557785,
+      "excess_return": -0.7033362467103195
+    },
+    {
+      "ticker": "FAST",
+      "availability_date": "2025-07-17",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.08563824235466022,
+      "excess_return": -0.2313769643710457
+    },
+    {
+      "ticker": "FOX",
+      "availability_date": "2024-02-07",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.08056460369163954,
+      "excess_return": 0.6393445100356019
+    },
+    {
+      "ticker": "FOX",
+      "availability_date": "2024-05-08",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.15597453476983347,
+      "excess_return": 0.4377139003928101
+    },
+    {
+      "ticker": "FOX",
+      "availability_date": "2024-08-08",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.01978891820580464,
+      "excess_return": 0.06773011950440488
+    },
+    {
+      "ticker": "FOX",
+      "availability_date": "2024-11-04",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.11131898971000931,
+      "excess_return": 0.18908557499276046
+    },
+    {
+      "ticker": "FOX",
+      "availability_date": "2025-02-04",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.199338686820973,
+      "excess_return": 0.030686898632917847
+    },
+    {
+      "ticker": "FOX",
+      "availability_date": "2025-05-12",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.26805918189730193,
+      "excess_return": -0.16593891024208962
+    },
+    {
+      "ticker": "FOX",
+      "availability_date": "2025-08-06",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.06306597671410086,
+      "excess_return": -0.13547423694619343
+    },
+    {
+      "ticker": "FTNT",
+      "availability_date": "2023-11-07",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.1610265332753371,
+      "excess_return": 0.30248133464163574
+    },
+    {
+      "ticker": "FTNT",
+      "availability_date": "2024-02-26",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.10296180826188617,
+      "excess_return": 0.40815821410078645
+    },
+    {
+      "ticker": "GEHC",
+      "availability_date": "2024-07-31",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.004567157982146464,
+      "excess_return": -0.3620112479738089
+    },
+    {
+      "ticker": "GEHC",
+      "availability_date": "2024-10-30",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.008502695976773111,
+      "excess_return": -0.4063613875988664
+    },
+    {
+      "ticker": "GEHC",
+      "availability_date": "2025-02-13",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.02170572416442562,
+      "excess_return": -0.2678832991606026
+    },
+    {
+      "ticker": "GEHC",
+      "availability_date": "2025-04-30",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.027311827956989276,
+      "excess_return": -0.5445596844713197
+    },
+    {
+      "ticker": "GEHC",
+      "availability_date": "2025-07-30",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.03471791692498449,
+      "excess_return": -0.2310581436942276
+    },
+    {
+      "ticker": "GILD",
+      "availability_date": "2023-11-07",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.0012780460096564195,
+      "excess_return": -0.12233938013403178
+    },
+    {
+      "ticker": "GILD",
+      "availability_date": "2024-02-23",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.03721748545134662,
+      "excess_return": 0.3739685732687479
+    },
+    {
+      "ticker": "GILD",
+      "availability_date": "2024-05-08",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.052581863979848764,
+      "excess_return": 0.45239877305403264
+    },
+    {
+      "ticker": "GILD",
+      "availability_date": "2024-08-08",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.053796029701469905,
+      "excess_return": 0.3411393288150766
+    },
+    {
+      "ticker": "GILD",
+      "availability_date": "2024-11-12",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.07006098425755214,
+      "excess_return": 0.1294350408352385
+    },
+    {
+      "ticker": "GILD",
+      "availability_date": "2025-02-28",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.06395839190328934,
+      "excess_return": 0.14648020901786118
+    },
+    {
+      "ticker": "GILD",
+      "availability_date": "2025-05-07",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.0028417588991923592,
+      "excess_return": -0.05331359485525056
+    },
+    {
+      "ticker": "GILD",
+      "availability_date": "2025-08-07",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.018406672418751713,
+      "excess_return": -0.036891997353681205
+    },
+    {
+      "ticker": "GOOGL",
+      "availability_date": "2023-10-25",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.11001273664100042,
+      "excess_return": -0.10452591453125404
+    },
+    {
+      "ticker": "GOOGL",
+      "availability_date": "2024-01-31",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.13494108983799702,
+      "excess_return": 0.20149670348776771
+    },
+    {
+      "ticker": "GOOGL",
+      "availability_date": "2024-04-26",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.15406880937710454,
+      "excess_return": -0.16426219746705573
+    },
+    {
+      "ticker": "GOOGL",
+      "availability_date": "2024-07-24",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.1358908369524423,
+      "excess_return": -0.10762268110088957
+    },
+    {
+      "ticker": "GOOGL",
+      "availability_date": "2024-10-30",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.15092642092498654,
+      "excess_return": 0.35251299797509006
+    },
+    {
+      "ticker": "GOOGL",
+      "availability_date": "2025-02-05",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.11770362646275045,
+      "excess_return": 0.5991283103191585
+    },
+    {
+      "ticker": "GOOGL",
+      "availability_date": "2025-04-25",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.12037646357665222,
+      "excess_return": 0.7582240922016055
+    },
+    {
+      "ticker": "GOOGL",
+      "availability_date": "2025-07-24",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.13790092280097244,
+      "excess_return": 0.45174841929864296
+    },
+    {
+      "ticker": "HON",
+      "availability_date": "2025-07-24",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.08092304479482082,
+      "excess_return": -0.0971104350124048
+    },
+    {
+      "ticker": "IDXX",
+      "availability_date": "2023-11-01",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.08776217503246553,
+      "excess_return": -0.3193987415746513
+    },
+    {
+      "ticker": "IDXX",
+      "availability_date": "2024-02-22",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.08814364059437496,
+      "excess_return": -0.3822070633161463
+    },
+    {
+      "ticker": "IDXX",
+      "availability_date": "2024-05-01",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.0709846199990003,
+      "excess_return": -0.1425700535872394
+    },
+    {
+      "ticker": "IDXX",
+      "availability_date": "2024-08-06",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.06352913747973243,
+      "excess_return": 0.03181926464072715
+    },
+    {
+      "ticker": "IDXX",
+      "availability_date": "2024-10-31",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.06555350087982115,
+      "excess_return": 0.23986059012457717
+    },
+    {
+      "ticker": "IDXX",
+      "availability_date": "2025-02-21",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.05843715790022408,
+      "excess_return": 0.22727287288503017
+    },
+    {
+      "ticker": "IDXX",
+      "availability_date": "2025-05-01",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.035610598540600336,
+      "excess_return": -0.20252827575180943
+    },
+    {
+      "ticker": "IDXX",
+      "availability_date": "2025-08-04",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.1055015155772645,
+      "excess_return": -0.4280576315936371
+    },
+    {
+      "ticker": "ILMN",
+      "availability_date": "2024-02-16",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.03442340791738385,
+      "excess_return": -0.5354930320388522
+    },
+    {
+      "ticker": "ILMN",
+      "availability_date": "2024-05-03",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.03842716711349414,
+      "excess_return": -0.44125888532230395
+    },
+    {
+      "ticker": "ILMN",
+      "availability_date": "2024-08-07",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.0026905829596413078,
+      "excess_return": -0.5280752070929648
+    },
+    {
+      "ticker": "ILMN",
+      "availability_date": "2024-11-06",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.03743315508021394,
+      "excess_return": -0.418699186639681
+    },
+    {
+      "ticker": "ILMN",
+      "availability_date": "2025-02-12",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.016042780748663055,
+      "excess_return": -0.037742592599559144
+    },
+    {
+      "ticker": "INCY",
+      "availability_date": "2023-10-31",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.11626582193918877,
+      "excess_return": -0.014084704119283975
+    },
+    {
+      "ticker": "INCY",
+      "availability_date": "2024-02-13",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.09349411891658566,
+      "excess_return": -0.07811581166130921
+    },
+    {
+      "ticker": "INTC",
+      "availability_date": "2025-07-24",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.0020260266500429225,
+      "excess_return": 2.8627031300664316
+    },
+    {
+      "ticker": "ISRG",
+      "availability_date": "2023-10-20",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.11962244766919228,
+      "excess_return": 0.5372454694978015
+    },
+    {
+      "ticker": "ISRG",
+      "availability_date": "2024-01-31",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.16513595166163153,
+      "excess_return": 0.25200219782008126
+    },
+    {
+      "ticker": "ISRG",
+      "availability_date": "2024-04-19",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.11460912628227793,
+      "excess_return": 0.2274713876358052
+    },
+    {
+      "ticker": "ISRG",
+      "availability_date": "2024-07-19",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.1446551625946808,
+      "excess_return": -0.05952187758702876
+    },
+    {
+      "ticker": "ISRG",
+      "availability_date": "2024-10-18",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.16883638240523036,
+      "excess_return": -0.3637057869765813
+    },
+    {
+      "ticker": "ISRG",
+      "availability_date": "2025-01-31",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.2516205984545974,
+      "excess_return": -0.336324684512728
+    },
+    {
+      "ticker": "ISRG",
+      "availability_date": "2025-04-23",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.19189675235375003,
+      "excess_return": -0.45868540398756275
+    },
+    {
+      "ticker": "ISRG",
+      "availability_date": "2025-07-23",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.21399074580824906,
+      "excess_return": -0.5717435176604935
+    },
+    {
+      "ticker": "KDP",
+      "availability_date": "2023-10-26",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.05052457205963545,
+      "excess_return": -0.27366897317564254
+    },
+    {
+      "ticker": "KDP",
+      "availability_date": "2024-02-22",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.016828819353142288,
+      "excess_return": -0.03983606738416712
+    },
+    {
+      "ticker": "KHC",
+      "availability_date": "2023-11-01",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.009992313604919367,
+      "excess_return": -0.28599699066471285
+    },
+    {
+      "ticker": "KHC",
+      "availability_date": "2024-02-15",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.07058664137650728,
+      "excess_return": -0.36992595282739027
+    },
+    {
+      "ticker": "KHC",
+      "availability_date": "2024-05-01",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.012020342117429528,
+      "excess_return": -0.32511876137973594
+    },
+    {
+      "ticker": "KHC",
+      "availability_date": "2024-07-31",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.03645290879333429,
+      "excess_return": -0.3848323854956579
+    },
+    {
+      "ticker": "KHC",
+      "availability_date": "2024-10-30",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.02846270928462713,
+      "excess_return": -0.4981313005235012
+    },
+    {
+      "ticker": "KHC",
+      "availability_date": "2025-02-13",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.04139941690962101,
+      "excess_return": -0.23029826582896185
+    },
+    {
+      "ticker": "KHC",
+      "availability_date": "2025-04-29",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.06426454531274373,
+      "excess_return": -0.5717975961489741
+    },
+    {
+      "ticker": "KHC",
+      "availability_date": "2025-07-30",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.01914762198888198,
+      "excess_return": -0.2211276293098995
+    },
+    {
+      "ticker": "KLAC",
+      "availability_date": "2024-01-26",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.16661522369982507,
+      "excess_return": -0.03767556068263511
+    },
+    {
+      "ticker": "KLAC",
+      "availability_date": "2024-04-26",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.029917685052421095,
+      "excess_return": -0.11176553077229956
+    },
+    {
+      "ticker": "KLAC",
+      "availability_date": "2024-08-05",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.09069451161439868,
+      "excess_return": -0.02669256452800206
+    },
+    {
+      "ticker": "KLAC",
+      "availability_date": "2024-10-31",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.18547899919731536,
+      "excess_return": 0.5246579320771427
+    },
+    {
+      "ticker": "KLAC",
+      "availability_date": "2025-01-31",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.23731002128903622,
+      "excess_return": 0.7219717599909683
+    },
+    {
+      "ticker": "KLAC",
+      "availability_date": "2025-05-01",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.29798714314166697,
+      "excess_return": 1.16546600600003
+    },
+    {
+      "ticker": "KLAC",
+      "availability_date": "2025-08-08",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.23591612213793955,
+      "excess_return": 0.8775990514882324
+    },
+    {
+      "ticker": "LCID",
+      "availability_date": "2023-11-07",
+      "entry_year": 2023,
+      "current_yoy_growth": -0.2949139708478079,
+      "excess_return": -0.8710618624126947
+    },
+    {
+      "ticker": "LCID",
+      "availability_date": "2024-02-27",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.39020926379344467,
+      "excess_return": -0.44653678013992515
+    },
+    {
+      "ticker": "LITE",
+      "availability_date": "2023-08-23",
+      "entry_year": 2023,
+      "current_yoy_growth": -0.12153518123667373,
+      "excess_return": -0.19676322596565043
+    },
+    {
+      "ticker": "LITE",
+      "availability_date": "2023-11-08",
+      "entry_year": 2023,
+      "current_yoy_growth": -0.37332280978689814,
+      "excess_return": 0.5678447994827496
+    },
+    {
+      "ticker": "LITE",
+      "availability_date": "2024-02-08",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.275098814229249,
+      "excess_return": 0.5671552866173939
+    },
+    {
+      "ticker": "LITE",
+      "availability_date": "2024-05-07",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.04407929055816384,
+      "excess_return": 0.49568010889031755
+    },
+    {
+      "ticker": "LITE",
+      "availability_date": "2024-08-21",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.16855447680690394,
+      "excess_return": 0.9084526761328142
+    },
+    {
+      "ticker": "LRCX",
+      "availability_date": "2024-01-29",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.2878806511103882,
+      "excess_return": -0.3261490087159572
+    },
+    {
+      "ticker": "LULU",
+      "availability_date": "2023-08-31",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.1824288882894225,
+      "excess_return": -0.5532697146788355
+    },
+    {
+      "ticker": "LULU",
+      "availability_date": "2023-12-07",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.1870488758347968,
+      "excess_return": -0.4760030770176985
+    },
+    {
+      "ticker": "LULU",
+      "availability_date": "2024-03-21",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.1563096400294679,
+      "excess_return": -0.409653934598473
+    },
+    {
+      "ticker": "MAR",
+      "availability_date": "2023-11-02",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.11575381140598529,
+      "excess_return": 0.048581188826654964
+    },
+    {
+      "ticker": "MAR",
+      "availability_date": "2024-02-13",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.029039338173223017,
+      "excess_return": -0.0188444021788714
+    },
+    {
+      "ticker": "MAR",
+      "availability_date": "2024-05-01",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.06447016918967052,
+      "excess_return": -0.09607613978047502
+    },
+    {
+      "ticker": "MAR",
+      "availability_date": "2024-07-31",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.05991769547325099,
+      "excess_return": -0.03392361050050163
+    },
+    {
+      "ticker": "MAR",
+      "availability_date": "2024-11-04",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.055161943319838036,
+      "excess_return": -0.20912645350213643
+    },
+    {
+      "ticker": "MAR",
+      "availability_date": "2025-02-11",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.05479901558654632,
+      "excess_return": 0.09071520309584824
+    },
+    {
+      "ticker": "MAR",
+      "availability_date": "2025-05-06",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.04785009201940782,
+      "excess_return": -0.013731121159070492
+    },
+    {
+      "ticker": "MAR",
+      "availability_date": "2025-08-05",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.04736760366516535,
+      "excess_return": 0.11701780150344976
+    },
+    {
+      "ticker": "MCHP",
+      "availability_date": "2023-11-02",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.08735288442986677,
+      "excess_return": -0.31333934084822745
+    },
+    {
+      "ticker": "MCHP",
+      "availability_date": "2024-02-01",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.18601327678406787,
+      "excess_return": -0.6113766120581441
+    },
+    {
+      "ticker": "MCHP",
+      "availability_date": "2024-05-23",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.40618981502217044,
+      "excess_return": -0.5408339938760196
+    },
+    {
+      "ticker": "MCHP",
+      "availability_date": "2024-08-01",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.45761600978764305,
+      "excess_return": -0.40327318462570927
+    },
+    {
+      "ticker": "MCHP",
+      "availability_date": "2024-11-05",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.4837421816084816,
+      "excess_return": -0.43963690835966807
+    },
+    {
+      "ticker": "MCHP",
+      "availability_date": "2025-02-06",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.4189273375998188,
+      "excess_return": 0.31936088380082595
+    },
+    {
+      "ticker": "MCHP",
+      "availability_date": "2025-05-23",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.267989138633278,
+      "excess_return": 0.3513052280289173
+    },
+    {
+      "ticker": "MCHP",
+      "availability_date": "2025-08-07",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.13356964472730204,
+      "excess_return": 0.037325250555702905
+    },
+    {
+      "ticker": "MDB",
+      "availability_date": "2023-09-01",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.3956102219587696,
+      "excess_return": -0.5106554119345531
+    },
+    {
+      "ticker": "MDB",
+      "availability_date": "2023-12-07",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.29769409000032976,
+      "excess_return": -0.43591002987728134
+    },
+    {
+      "ticker": "MDB",
+      "availability_date": "2024-03-15",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.2676080506598175,
+      "excess_return": -0.5760601004152496
+    },
+    {
+      "ticker": "MDB",
+      "availability_date": "2024-05-31",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.2234196806777451,
+      "excess_return": -0.35036429900989163
+    },
+    {
+      "ticker": "MDB",
+      "availability_date": "2024-08-30",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.1281716695257804,
+      "excess_return": -0.09973647005918851
+    },
+    {
+      "ticker": "MDB",
+      "availability_date": "2024-12-10",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.22275013974287305,
+      "excess_return": 0.25721033620734834
+    },
+    {
+      "ticker": "MDB",
+      "availability_date": "2025-03-21",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.19737031716018705,
+      "excess_return": 0.18857401947172847
+    },
+    {
+      "ticker": "MDB",
+      "availability_date": "2025-06-04",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.2185120327769159,
+      "excess_return": 0.4960621947020418
+    },
+    {
+      "ticker": "META",
+      "availability_date": "2023-10-26",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.2320848668542974,
+      "excess_return": 0.5596724665749977
+    },
+    {
+      "ticker": "META",
+      "availability_date": "2024-02-02",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.2470387066687394,
+      "excess_return": 0.25911277601016014
+    },
+    {
+      "ticker": "META",
+      "availability_date": "2024-04-25",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.2726479315761914,
+      "excess_return": 0.1242780922810558
+    },
+    {
+      "ticker": "META",
+      "availability_date": "2024-08-01",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.2210069064658271,
+      "excess_return": 0.30021202869366825
+    },
+    {
+      "ticker": "META",
+      "availability_date": "2024-10-31",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.18868974404029748,
+      "excess_return": -0.16125342225983985
+    },
+    {
+      "ticker": "META",
+      "availability_date": "2025-01-30",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.20627757971628724,
+      "excess_return": -0.14873110123335498
+    },
+    {
+      "ticker": "META",
+      "availability_date": "2025-05-01",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.16071869428062002,
+      "excess_return": -0.3391787268797555
+    },
+    {
+      "ticker": "META",
+      "availability_date": "2025-07-31",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.21614496685521223,
+      "excess_return": -0.5013807946323738
+    },
+    {
+      "ticker": "MPWR",
+      "availability_date": "2023-11-08",
+      "entry_year": 2023,
+      "current_yoy_growth": -0.04148214235251846,
+      "excess_return": 0.16616856930837942
+    },
+    {
+      "ticker": "MPWR",
+      "availability_date": "2024-02-29",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.01304313800509549,
+      "excess_return": -0.3100349307091903
+    },
+    {
+      "ticker": "MPWR",
+      "availability_date": "2024-05-03",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.015119772094930983,
+      "excess_return": -0.22871061170024098
+    },
+    {
+      "ticker": "MPWR",
+      "availability_date": "2024-08-02",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.1503033133240239,
+      "excess_return": -0.21168512243815396
+    },
+    {
+      "ticker": "MPWR",
+      "availability_date": "2024-11-06",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.3058793304230447,
+      "excess_return": 0.014251415025513525
+    },
+    {
+      "ticker": "MPWR",
+      "availability_date": "2025-03-03",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.36926997524294514,
+      "excess_return": 0.6547831910632596
+    },
+    {
+      "ticker": "MPWR",
+      "availability_date": "2025-05-05",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.3923889186149361,
+      "excess_return": 1.1410249315378582
+    },
+    {
+      "ticker": "MPWR",
+      "availability_date": "2025-08-04",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.30968348405990165,
+      "excess_return": 0.32912176961445216
+    },
+    {
+      "ticker": "MRNA",
+      "availability_date": "2023-11-03",
+      "entry_year": 2023,
+      "current_yoy_growth": -0.4557074910820452,
+      "excess_return": -0.6402145631037541
+    },
+    {
+      "ticker": "MRNA",
+      "availability_date": "2024-02-23",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.44708890637293475,
+      "excess_return": -0.8458652374965971
+    },
+    {
+      "ticker": "MRNA",
+      "availability_date": "2024-05-02",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.91031149301826,
+      "excess_return": -0.9322258339597158
+    },
+    {
+      "ticker": "MRNA",
+      "availability_date": "2024-08-01",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.29941860465116277,
+      "excess_return": -0.9186384766779587
+    },
+    {
+      "ticker": "MRNA",
+      "availability_date": "2024-11-07",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.016930638995084735,
+      "excess_return": -0.7056683508341356
+    },
+    {
+      "ticker": "MRNA",
+      "availability_date": "2025-02-21",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.656350053361793,
+      "excess_return": 0.26643481069104347
+    },
+    {
+      "ticker": "MRNA",
+      "availability_date": "2025-05-01",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.3532934131736527,
+      "excess_return": 0.2721499113894843
+    },
+    {
+      "ticker": "MRNA",
+      "availability_date": "2025-08-01",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.4107883817427386,
+      "excess_return": 0.7274388799595319
+    },
+    {
+      "ticker": "MRVL",
+      "availability_date": "2023-08-25",
+      "entry_year": 2023,
+      "current_yoy_growth": -0.11602610587382156,
+      "excess_return": -0.023494245935889335
+    },
+    {
+      "ticker": "MRVL",
+      "availability_date": "2023-12-01",
+      "entry_year": 2023,
+      "current_yoy_growth": -0.07721329603850913,
+      "excess_return": 0.5104840833560735
+    },
+    {
+      "ticker": "MRVL",
+      "availability_date": "2024-03-13",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.005639760310186759,
+      "excess_return": -0.050356025436242735
+    },
+    {
+      "ticker": "MSFT",
+      "availability_date": "2023-10-24",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.12758868361198683,
+      "excess_return": -0.08562824036574512
+    },
+    {
+      "ticker": "MSFT",
+      "availability_date": "2024-01-30",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.17580146738203117,
+      "excess_return": -0.21388762324854138
+    },
+    {
+      "ticker": "MSFT",
+      "availability_date": "2024-04-25",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.17028964943148495,
+      "excess_return": -0.13067302002322245
+    },
+    {
+      "ticker": "MSFT",
+      "availability_date": "2024-07-30",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.15195144957198026,
+      "excess_return": -0.025632013703257517
+    },
+    {
+      "ticker": "MSFT",
+      "availability_date": "2024-10-30",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.1604472990427659,
+      "excess_return": -0.043366677110561413
+    },
+    {
+      "ticker": "MSFT",
+      "availability_date": "2025-01-29",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.12273460174137374,
+      "excess_return": -0.22737516269411018
+    },
+    {
+      "ticker": "MSFT",
+      "availability_date": "2025-04-30",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.13269100197225914,
+      "excess_return": -0.37160308647495977
+    },
+    {
+      "ticker": "MSFT",
+      "availability_date": "2025-07-30",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.18097548163826538,
+      "excess_return": -0.3232399158786391
+    },
+    {
+      "ticker": "MSTR",
+      "availability_date": "2023-11-01",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.03272176132737714,
+      "excess_return": 4.008917685585126
+    },
+    {
+      "ticker": "MSTR",
+      "availability_date": "2024-02-15",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.060880848559832224,
+      "excess_return": 3.4026865189576085
+    },
+    {
+      "ticker": "MTCH",
+      "availability_date": "2023-11-02",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.08900544255669218,
+      "excess_return": -0.10481748840307059
+    },
+    {
+      "ticker": "MTCH",
+      "availability_date": "2024-02-23",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.1018567632509193,
+      "excess_return": -0.30088454428351974
+    },
+    {
+      "ticker": "MTCH",
+      "availability_date": "2024-05-08",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.09213669002596792,
+      "excess_return": -0.18417175012136577
+    },
+    {
+      "ticker": "MTCH",
+      "availability_date": "2024-08-01",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.041605589523019626,
+      "excess_return": -0.3014220138548107
+    },
+    {
+      "ticker": "MTCH",
+      "availability_date": "2024-11-12",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.015748638838475548,
+      "excess_return": -0.12398005883106444
+    },
+    {
+      "ticker": "MTCH",
+      "availability_date": "2025-02-27",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.006986613224231997,
+      "excess_return": -0.2055159876585464
+    },
+    {
+      "ticker": "MTCH",
+      "availability_date": "2025-05-08",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.03311708177891626,
+      "excess_return": -0.08620670664998098
+    },
+    {
+      "ticker": "MTCH",
+      "availability_date": "2025-08-06",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.0003796006323590895,
+      "excess_return": -0.2606989340078272
+    },
+    {
+      "ticker": "MU",
+      "availability_date": "2023-10-06",
+      "entry_year": 2023,
+      "current_yoy_growth": -0.39635706758994427,
+      "excess_return": 0.1463510985388765
+    },
+    {
+      "ticker": "MU",
+      "availability_date": "2023-12-21",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.1569155446756425,
+      "excess_return": -0.23643744302763214
+    },
+    {
+      "ticker": "MU",
+      "availability_date": "2024-03-21",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.5770376387760627,
+      "excess_return": -0.21745696901138312
+    },
+    {
+      "ticker": "MU",
+      "availability_date": "2024-06-27",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.8152985074626866,
+      "excess_return": -0.1966032895370421
+    },
+    {
+      "ticker": "MU",
+      "availability_date": "2024-10-04",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.9326683291770574,
+      "excess_return": 0.6237129827824501
+    },
+    {
+      "ticker": "MU",
+      "availability_date": "2024-12-19",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.8427845958527296,
+      "excess_return": 1.859575111461437
+    },
+    {
+      "ticker": "MU",
+      "availability_date": "2025-03-21",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.38272664835164827,
+      "excess_return": 3.0522765580989866
+    },
+    {
+      "ticker": "MU",
+      "availability_date": "2025-06-26",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.365585082954045,
+      "excess_return": 7.7085557391161
+    },
+    {
+      "ticker": "NFLX",
+      "availability_date": "2023-10-20",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.07773289783257753,
+      "excess_return": 0.5188480636840156
+    },
+    {
+      "ticker": "NFLX",
+      "availability_date": "2024-01-26",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.12490644166563825,
+      "excess_return": 0.4833015104615699
+    },
+    {
+      "ticker": "NFLX",
+      "availability_date": "2024-04-22",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.1481267604753682,
+      "excess_return": 0.8080841957024405
+    },
+    {
+      "ticker": "NFLX",
+      "availability_date": "2024-07-19",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.16757769135396394,
+      "excess_return": 0.7534214068305252
+    },
+    {
+      "ticker": "NFLX",
+      "availability_date": "2024-10-18",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.15020895216250496,
+      "excess_return": 0.377952042263618
+    },
+    {
+      "ticker": "NFLX",
+      "availability_date": "2025-01-27",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.16004936133117087,
+      "excess_return": -0.3530504129278178
+    },
+    {
+      "ticker": "NVDA",
+      "availability_date": "2023-08-28",
+      "entry_year": 2023,
+      "current_yoy_growth": 1.0147673031026252,
+      "excess_return": 1.3887295619219107
+    },
+    {
+      "ticker": "NVDA",
+      "availability_date": "2023-11-21",
+      "entry_year": 2023,
+      "current_yoy_growth": 2.055134041476985,
+      "excess_return": 1.628741982728889
+    },
+    {
+      "ticker": "NVDA",
+      "availability_date": "2024-02-21",
+      "entry_year": 2024,
+      "current_yoy_growth": 2.6527846636919516,
+      "excess_return": 0.7495398600658081
+    },
+    {
+      "ticker": "NVDA",
+      "availability_date": "2024-05-29",
+      "entry_year": 2024,
+      "current_yoy_growth": 2.621245828698554,
+      "excess_return": 0.06653008308914932
+    },
+    {
+      "ticker": "NVDA",
+      "availability_date": "2024-08-28",
+      "entry_year": 2024,
+      "current_yoy_growth": 1.2240319834160065,
+      "excess_return": 0.20359013864835962
+    },
+    {
+      "ticker": "NVDA",
+      "availability_date": "2024-11-20",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.9360927152317882,
+      "excess_return": 0.06830595368518688
+    },
+    {
+      "ticker": "NVDA",
+      "availability_date": "2025-02-26",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.7794417047459621,
+      "excess_return": 0.2187422103947727
+    },
+    {
+      "ticker": "NXPI",
+      "availability_date": "2023-11-07",
+      "entry_year": 2023,
+      "current_yoy_growth": -0.0031930333817126177,
+      "excess_return": -0.09485440506561349
+    },
+    {
+      "ticker": "NXPI",
+      "availability_date": "2024-02-22",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.033212560386473466,
+      "excess_return": -0.203767458739744
+    },
+    {
+      "ticker": "NXPI",
+      "availability_date": "2024-04-30",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.001602050624799789,
+      "excess_return": -0.3945917740111833
+    },
+    {
+      "ticker": "NXPI",
+      "availability_date": "2024-07-23",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.052137011215519835,
+      "excess_return": -0.3070180529485468
+    },
+    {
+      "ticker": "NXPI",
+      "availability_date": "2024-11-05",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.053581828771112394,
+      "excess_return": -0.31869260180610326
+    },
+    {
+      "ticker": "NXPI",
+      "availability_date": "2025-02-20",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.09088252483927528,
+      "excess_return": -0.1765113653417033
+    },
+    {
+      "ticker": "NXPI",
+      "availability_date": "2025-04-29",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.09309021113243765,
+      "excess_return": 0.21612211929545322
+    },
+    {
+      "ticker": "NXPI",
+      "availability_date": "2025-07-24",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.06427886152862172,
+      "excess_return": 0.004146791583931719
+    },
+    {
+      "ticker": "OKTA",
+      "availability_date": "2023-08-31",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.23061395684440478,
+      "excess_return": -0.31963343211154815
+    },
+    {
+      "ticker": "OKTA",
+      "availability_date": "2023-12-01",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.2140312072542523,
+      "excess_return": -0.2324649665488372
+    },
+    {
+      "ticker": "OKTA",
+      "availability_date": "2024-03-01",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.18579089312594088,
+      "excess_return": -0.31867386994536395
+    },
+    {
+      "ticker": "OKTA",
+      "availability_date": "2024-05-30",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.19111969111969107,
+      "excess_return": 0.005048902516844089
+    },
+    {
+      "ticker": "OKTA",
+      "availability_date": "2024-08-29",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.1618705035971224,
+      "excess_return": -0.05198384602214645
+    },
+    {
+      "ticker": "OKTA",
+      "availability_date": "2024-12-04",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.13869863013698636,
+      "excess_return": -0.19936153217741814
+    },
+    {
+      "ticker": "OKTA",
+      "availability_date": "2025-03-05",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.1272727272727272,
+      "excess_return": -0.5342874654266073
+    },
+    {
+      "ticker": "OKTA",
+      "availability_date": "2025-05-28",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.11507293354943271,
+      "excess_return": -0.5242824484688526
+    },
+    {
+      "ticker": "ON",
+      "availability_date": "2023-10-30",
+      "entry_year": 2023,
+      "current_yoy_growth": -0.0053817385752075175,
+      "excess_return": -0.30435197262192726
+    },
+    {
+      "ticker": "ON",
+      "availability_date": "2024-02-05",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.040644609241300644,
+      "excess_return": -0.5703918038544546
+    },
+    {
+      "ticker": "ON",
+      "availability_date": "2024-04-29",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.04949737204674187,
+      "excess_return": -0.5568578795715875
+    },
+    {
+      "ticker": "ON",
+      "availability_date": "2024-07-29",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.17150496562261264,
+      "excess_return": -0.48382831475388166
+    },
+    {
+      "ticker": "ON",
+      "availability_date": "2024-10-28",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.19208547322083636,
+      "excess_return": -0.5674346399171473
+    },
+    {
+      "ticker": "ORCL",
+      "availability_date": "2023-09-12",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.08807339449541285,
+      "excess_return": 0.2142524190527737
+    },
+    {
+      "ticker": "ORCL",
+      "availability_date": "2023-12-12",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.05425661914460278,
+      "excess_return": 0.430681720226616
+    },
+    {
+      "ticker": "ORCL",
+      "availability_date": "2024-03-12",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.07114050653331172,
+      "excess_return": 0.11450208195250688
+    },
+    {
+      "ticker": "ORCL",
+      "availability_date": "2024-06-20",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.03259612604799078,
+      "excess_return": 0.35079249566517245
+    },
+    {
+      "ticker": "PANW",
+      "availability_date": "2023-09-01",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.2597871654305064,
+      "excess_return": 0.23139283831914326
+    },
+    {
+      "ticker": "PANW",
+      "availability_date": "2023-11-17",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.20129205577587306,
+      "excess_return": 0.25824352439510245
+    },
+    {
+      "ticker": "PANW",
+      "availability_date": "2024-02-21",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.19334179203673485,
+      "excess_return": 0.215004352907336
+    },
+    {
+      "ticker": "PANW",
+      "availability_date": "2024-05-21",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.1533499912836307,
+      "excess_return": 0.030729201806154016
+    },
+    {
+      "ticker": "PANW",
+      "availability_date": "2024-09-06",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.12092356524855363,
+      "excess_return": -0.1219041732876498
+    },
+    {
+      "ticker": "PANW",
+      "availability_date": "2024-11-21",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.13881049997337724,
+      "excess_return": -0.25501925235279765
+    },
+    {
+      "ticker": "PANW",
+      "availability_date": "2025-02-14",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.14292947192547212,
+      "excess_return": -0.3056358883479111
+    },
+    {
+      "ticker": "PANW",
+      "availability_date": "2025-05-21",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.15326481257557445,
+      "excess_return": -0.004095956890288521
+    },
+    {
+      "ticker": "PCAR",
+      "availability_date": "2023-11-02",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.23197665358625286,
+      "excess_return": -0.04736735801428282
+    },
+    {
+      "ticker": "PCAR",
+      "availability_date": "2024-02-21",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.11650162986653556,
+      "excess_return": -0.24291101339548793
+    },
+    {
+      "ticker": "PCAR",
+      "availability_date": "2024-05-02",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.03198281661218183,
+      "excess_return": -0.2731505308156743
+    },
+    {
+      "ticker": "PCAR",
+      "availability_date": "2024-07-31",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.012273254439202352,
+      "excess_return": -0.16366572606639274
+    },
+    {
+      "ticker": "PCAR",
+      "availability_date": "2024-10-30",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.05249298560323812,
+      "excess_return": -0.28685963548481486
+    },
+    {
+      "ticker": "PCAR",
+      "availability_date": "2025-02-19",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.1288037370821673,
+      "excess_return": 0.07068088903422409
+    },
+    {
+      "ticker": "PCAR",
+      "availability_date": "2025-05-01",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.14896561188431323,
+      "excess_return": -0.08025374144782571
+    },
+    {
+      "ticker": "PCAR",
+      "availability_date": "2025-07-31",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.143819609899568,
+      "excess_return": 0.15393517834114
+    },
+    {
+      "ticker": "PTON",
+      "availability_date": "2024-02-01",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.061940204364829055,
+      "excess_return": 0.5033213393098313
+    },
+    {
+      "ticker": "PTON",
+      "availability_date": "2024-05-02",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.04166110295099479,
+      "excess_return": 1.026845523830617
+    },
+    {
+      "ticker": "PTON",
+      "availability_date": "2024-08-22",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.002336084722005971,
+      "excess_return": 0.5271354738998102
+    },
+    {
+      "ticker": "PTON",
+      "availability_date": "2024-10-31",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.015952980688497043,
+      "excess_return": -0.45303340647018364
+    },
+    {
+      "ticker": "PTON",
+      "availability_date": "2025-02-06",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.09373318988703605,
+      "excess_return": -0.6122314996648381
+    },
+    {
+      "ticker": "PTON",
+      "availability_date": "2025-05-08",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.13055594259439873,
+      "excess_return": -0.5895833859772924
+    },
+    {
+      "ticker": "PTON",
+      "availability_date": "2025-08-07",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.057022995649471775,
+      "excess_return": -0.4774098197785386
+    },
+    {
+      "ticker": "PYPL",
+      "availability_date": "2023-11-02",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.08355243938066015,
+      "excess_return": 0.07257617554788531
+    },
+    {
+      "ticker": "PYPL",
+      "availability_date": "2024-02-08",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.08709196803467423,
+      "excess_return": 0.163760301169116
+    },
+    {
+      "ticker": "QCOM",
+      "availability_date": "2023-11-01",
+      "entry_year": 2023,
+      "current_yoy_growth": -0.24256252742430895,
+      "excess_return": 0.14662476291641569
+    },
+    {
+      "ticker": "QCOM",
+      "availability_date": "2024-01-31",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.04987847405685297,
+      "excess_return": -0.07263159903679717
+    },
+    {
+      "ticker": "QCOM",
+      "availability_date": "2024-05-01",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.012291105121293722,
+      "excess_return": -0.3092987579125577
+    },
+    {
+      "ticker": "QCOM",
+      "availability_date": "2024-07-31",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.11146609868654589,
+      "excess_return": -0.3773109043372942
+    },
+    {
+      "ticker": "QCOM",
+      "availability_date": "2024-11-06",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.1868844861545591,
+      "excess_return": -0.19261803132915012
+    },
+    {
+      "ticker": "RIVN",
+      "availability_date": "2024-08-06",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.033006244424620856,
+      "excess_return": -0.5115406446885654
+    },
+    {
+      "ticker": "RIVN",
+      "availability_date": "2024-11-07",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.3462976813762154,
+      "excess_return": 0.32168760459521284
+    },
+    {
+      "ticker": "RIVN",
+      "availability_date": "2025-02-24",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.31863117870722424,
+      "excess_return": 0.08901085701269817
+    },
+    {
+      "ticker": "RIVN",
+      "availability_date": "2025-05-06",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.029900332225913706,
+      "excess_return": -0.3796785714669215
+    },
+    {
+      "ticker": "RIVN",
+      "availability_date": "2025-08-05",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.12521588946459405,
+      "excess_return": -0.005783175370270621
+    },
+    {
+      "ticker": "RKLB",
+      "availability_date": "2023-11-08",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.07301330542207851,
+      "excess_return": 1.7105553711307444
+    },
+    {
+      "ticker": "RKLB",
+      "availability_date": "2024-02-28",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.1589776283760287,
+      "excess_return": 3.2896316430549937
+    },
+    {
+      "ticker": "RKLB",
+      "availability_date": "2024-05-06",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.6898988978959832,
+      "excess_return": 4.409676378864635
+    },
+    {
+      "ticker": "RKLB",
+      "availability_date": "2024-08-08",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.7124828753324199,
+      "excess_return": 8.079458135339983
+    },
+    {
+      "ticker": "RKLB",
+      "availability_date": "2024-11-12",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.5490164200942935,
+      "excess_return": 2.1911650332895034
+    },
+    {
+      "ticker": "RKLB",
+      "availability_date": "2025-02-27",
+      "entry_year": 2025,
+      "current_yoy_growth": 1.2067976863196148,
+      "excess_return": 2.2645383088767637
+    },
+    {
+      "ticker": "RKLB",
+      "availability_date": "2025-05-08",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.3212564812918386,
+      "excess_return": 3.1021775406531957
+    },
+    {
+      "ticker": "RKLB",
+      "availability_date": "2025-08-07",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.3599683767682187,
+      "excess_return": 0.5972734939392403
+    },
+    {
+      "ticker": "SIRI",
+      "availability_date": "2025-07-31",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.018365472910927494,
+      "excess_return": 0.24781322829518682
+    },
+    {
+      "ticker": "SNPS",
+      "availability_date": "2025-05-28",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.10280660364388283,
+      "excess_return": -0.3850698022435797
+    },
+    {
+      "ticker": "STX",
+      "availability_date": "2024-01-26",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.17594064652888186,
+      "excess_return": -0.04283614478408526
+    },
+    {
+      "ticker": "STX",
+      "availability_date": "2024-04-26",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.11021505376344087,
+      "excess_return": -0.11988496742096943
+    },
+    {
+      "ticker": "STX",
+      "availability_date": "2024-08-02",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.17790262172284654,
+      "excess_return": 0.41858744503647616
+    },
+    {
+      "ticker": "STX",
+      "availability_date": "2024-10-25",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.4910591471801926,
+      "excess_return": 1.015318434333969
+    },
+    {
+      "ticker": "STX",
+      "availability_date": "2025-01-24",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.495176848874598,
+      "excess_return": 2.189010134675863
+    },
+    {
+      "ticker": "STX",
+      "availability_date": "2025-05-02",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.30513595166163143,
+      "excess_return": 6.6544179663150285
+    },
+    {
+      "ticker": "STX",
+      "availability_date": "2025-08-01",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.2951775304716482,
+      "excess_return": 4.14255698643302
+    },
+    {
+      "ticker": "SWKS",
+      "availability_date": "2025-05-07",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.08871892925430214,
+      "excess_return": -0.429968994896073
+    },
+    {
+      "ticker": "SWKS",
+      "availability_date": "2025-08-05",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.06570955273329648,
+      "excess_return": -0.2542451487816839
+    },
+    {
+      "ticker": "TEAM",
+      "availability_date": "2025-01-31",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.21351840846704584,
+      "excess_return": -0.8342921177801482
+    },
+    {
+      "ticker": "TEAM",
+      "availability_date": "2025-05-02",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.1409335243977099,
+      "excess_return": -0.9363207474869537
+    },
+    {
+      "ticker": "TSLA",
+      "availability_date": "2024-07-24",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.022987122397400306,
+      "excess_return": 0.18728611780515214
+    },
+    {
+      "ticker": "TSLA",
+      "availability_date": "2024-10-24",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.07845824411134905,
+      "excess_return": 0.4048619872853598
+    },
+    {
+      "ticker": "TSLA",
+      "availability_date": "2025-01-30",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.021456669448086885,
+      "excess_return": -0.1196878272447024
+    },
+    {
+      "ticker": "TSLA",
+      "availability_date": "2025-04-23",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.09229613633162759,
+      "excess_return": 0.05045346353555491
+    },
+    {
+      "ticker": "TSLA",
+      "availability_date": "2025-07-24",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.1178039215686274,
+      "excess_return": -0.1915180457850878
+    },
+    {
+      "ticker": "TTD",
+      "availability_date": "2023-11-09",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.24949274646442388,
+      "excess_return": 0.2858782397505286
+    },
+    {
+      "ticker": "TTD",
+      "availability_date": "2024-02-15",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.2344636740249868,
+      "excess_return": -0.19164622776847562
+    },
+    {
+      "ticker": "TTD",
+      "availability_date": "2024-05-10",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.2833049897728075,
+      "excess_return": -0.24592371481687014
+    },
+    {
+      "ticker": "TTD",
+      "availability_date": "2024-08-08",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.25911677659212407,
+      "excess_return": -0.6751493259472664
+    },
+    {
+      "ticker": "TTD",
+      "availability_date": "2024-11-07",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.27317917715796347,
+      "excess_return": -0.8692803632657395
+    },
+    {
+      "ticker": "TTD",
+      "availability_date": "2025-02-21",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.2232018316366704,
+      "excess_return": -0.8135739049847875
+    },
+    {
+      "ticker": "TTD",
+      "availability_date": "2025-05-08",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.253979110560139,
+      "excess_return": -1.0783144656018768
+    },
+    {
+      "ticker": "TTD",
+      "availability_date": "2025-08-07",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.1873047643486443,
+      "excess_return": -1.12005229525065
+    },
+    {
+      "ticker": "TTWO",
+      "availability_date": "2023-11-09",
+      "entry_year": 2023,
+      "current_yoy_growth": -0.06767133118048085,
+      "excess_return": -0.1720056760807982
+    },
+    {
+      "ticker": "TTWO",
+      "availability_date": "2024-02-09",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.029478619122034422,
+      "excess_return": 0.15367254467396907
+    },
+    {
+      "ticker": "TTWO",
+      "availability_date": "2024-05-22",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.03236066934034021,
+      "excess_return": 0.36582613512122997
+    },
+    {
+      "ticker": "TTWO",
+      "availability_date": "2024-08-09",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.041643963571261766,
+      "excess_return": 0.2585444514576256
+    },
+    {
+      "ticker": "TTWO",
+      "availability_date": "2024-11-07",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.04148706896551735,
+      "excess_return": 0.10112443708380514
+    },
+    {
+      "ticker": "TTWO",
+      "availability_date": "2025-02-07",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.004757373929590858,
+      "excess_return": -0.19866040915177685
+    },
+    {
+      "ticker": "TTWO",
+      "availability_date": "2025-05-20",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.13084178933828783,
+      "excess_return": -0.38107069689814677
+    },
+    {
+      "ticker": "TTWO",
+      "availability_date": "2025-08-07",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.123748318636975,
+      "excess_return": -0.18793635977391432
+    },
+    {
+      "ticker": "WBD",
+      "availability_date": "2023-11-08",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.015881095388374122,
+      "excess_return": -0.41147262290981534
+    },
+    {
+      "ticker": "WBD",
+      "availability_date": "2024-02-23",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.06577034883720934,
+      "excess_return": 0.09073096669909231
+    },
+    {
+      "ticker": "WBD",
+      "availability_date": "2024-05-09",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.06934579439252342,
+      "excess_return": 0.014888471254390634
+    },
+    {
+      "ticker": "WBD",
+      "availability_date": "2024-08-07",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.06227070863100981,
+      "excess_return": 0.22158226911133205
+    },
+    {
+      "ticker": "WBD",
+      "availability_date": "2024-11-07",
+      "entry_year": 2024,
+      "current_yoy_growth": -0.03567491732638539,
+      "excess_return": 1.225688523660468
+    },
+    {
+      "ticker": "WBD",
+      "availability_date": "2025-02-27",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.024990276157137337,
+      "excess_return": 1.3408282065211417
+    },
+    {
+      "ticker": "WBD",
+      "availability_date": "2025-05-08",
+      "entry_year": 2025,
+      "current_yoy_growth": -0.09831291423980715,
+      "excess_return": 1.5452557120211328
+    },
+    {
+      "ticker": "WBD",
+      "availability_date": "2025-08-07",
+      "entry_year": 2025,
+      "current_yoy_growth": 0.010192525481313774,
+      "excess_return": 0.9817256364799596
+    },
+    {
+      "ticker": "ZM",
+      "availability_date": "2023-08-23",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.03567030300384366,
+      "excess_return": -0.28050115353432425
+    },
+    {
+      "ticker": "ZM",
+      "availability_date": "2023-11-21",
+      "entry_year": 2023,
+      "current_yoy_growth": 0.031607252570335476,
+      "excess_return": -0.07741333581900744
+    },
+    {
+      "ticker": "ZM",
+      "availability_date": "2024-03-04",
+      "entry_year": 2024,
+      "current_yoy_growth": 0.02563421282641043,
+      "excess_return": -0.0478040091202514
+    }
+  ]
+}

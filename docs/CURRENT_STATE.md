@@ -1,6 +1,43 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-13 (**D-079: a new, single-factor quarterly
+**Last updated:** 2026-08-13 (**D-080: the quintile breakdown of D-079's
+growth-rate finding shows it is NOT a smooth "more growth is better"
+effect — quintiles 1-4 (bottom 80%) all show negative median excess
+return, only quintile 5 (growth above ~20%/yr) is positive. The regime
+check that would test this against a different macro period could not
+run at all: every one of the 464 entries is from 2023-2025. Company- and
+quintile-level results published as an interactive artifact.**)
+
+**What happened.** Following D-079, the user asked to strengthen the
+finding using the same two checks this project already learned it needed
+for the P/E finding: a regime split (D-074) and a quintile breakdown
+(D-068). `scripts/218` ran both.
+
+**Regime split**: could not run as designed — every one of the 464
+entries in the baseline dataset falls in 2023-2025 (the 12-quarter
+lookback window structurally cannot reach earlier data, unlike the P/E
+finding's 5-year-horizon check which had real pre-2022 entries
+available). This is an honest gap, not a null result, and is stated as
+such rather than glossed over.
+
+**Quintile breakdown**: the real news. Sorting the 464 entries into 5
+buckets by growth rate shows quintiles 1-4 (growth from -91% up to
++20%/yr) ALL have negative median excess return (-4% to -22%). Only
+quintile 5 (growth above ~20%/yr) is positive — median +26%/yr, mean
++84%/yr (the mean is skewed by a handful of 2023-2025 AI/hardware-cycle
+names — `RKLB`, `MU`, `STX`, `APP` — appearing repeatedly among the
+biggest individual winners, up to +808% on one entry). The practically
+supported rule, tentatively, is a threshold ("require growth above
+~20%/yr"), not a continuous ranking — the same asymmetric shape the P/E
+finding turned out to have, pointing the opposite direction.
+
+Company-level (86 tickers, sortable) and quintile-level results were
+published as an interactive artifact at the user's request, since a
+document table isn't practical at that size.
+
+Full detail: `docs/DECISIONS_LOG.md` D-080.
+
+**Previous update, same day:** D-079: a new, single-factor quarterly
 finding — raw YoY revenue growth rate predicts 6-12 month forward excess
 return, and is the most robust result this project has produced (0 of 86
 leave-one-out exclusions flip it). Found while retesting D-065's

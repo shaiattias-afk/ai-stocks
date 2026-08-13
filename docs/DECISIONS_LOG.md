@@ -2765,3 +2765,80 @@ Files: `scripts/216_quarterly_trend_full_universe_check.py`,
 `scripts/217_quarterly_growth_rate_robustness_check.py` (both
 read-only), `data/quarterly_trend_full_universe_check_result.json`,
 `data/quarterly_growth_rate_robustness_check_result.json`.
+
+## D-080 — D-079's quarterly growth-rate finding: the effect is NOT smooth, driven almost entirely by one extreme quintile; the regime check could not run at all (data limitation, not a null result)
+
+**User-directed follow-up**: before treating D-079 as usable, apply the
+same two checks this project already learned it needed for the P/E
+finding the hard way — a regime split (D-074) and a quintile breakdown
+(D-068). `scripts/218` ran both on D-079's baseline cell (12-quarter
+lookback, 12-month horizon, raw YoY growth rate), same dataset as
+D-079's 464-row/86-ticker result.
+
+**1. Regime split — could not run as designed, a data-availability
+limit, not a finding.** Every one of the 464 entries falls in
+2023-2025 (`entry_year_spread`: 2023=84, 2024=231, 2025=149) — there
+are ZERO pre-2022 entries. Unlike the P/E finding's regime check
+(D-074), which had a real pre-/post-2022 split available, the
+12-quarter lookback window used throughout D-065/D-079 cannot reach
+earlier than ~2023 by construction (12 quarters back from "today" is
+always ~3 years back). This is not evidence the finding is regime-
+independent — it is evidence the check was never actually possible
+with this lookback choice. A genuine regime split would need either the
+full-history lookback (which D-079's own grid already showed holds the
+same direction and significance pattern as the 12-quarter window — a
+partial, weaker substitute) or waiting for the universe to accumulate
+quarterly coverage further back, neither of which is a substitute for
+an actual pre-2022-vs-post-2022 comparison.
+
+**2. Quintile breakdown — the real finding, and it changes the honest
+read of D-079 materially.**
+
+| Quintile | Growth range | N | Mean excess | Median excess | Win rate |
+|---|---|---|---|---|---|
+| Q1 (lowest growth) | -91% to -3% | 92 | -2.6%/yr | -4.4%/yr | 44.6% |
+| Q2 | -3% to +3% | 92 | -12.0%/yr | -22.1%/yr | 20.7% |
+| Q3 | +3% to +11% | 92 | -2.5%/yr | -7.3%/yr | 39.1% |
+| Q4 | +11% to +20% | 92 | -6.7%/yr | -13.1%/yr | 33.7% |
+| Q5 (highest growth) | +20% to +265% | 96 | **+84.4%/yr** | **+25.9%/yr** | 67.7% |
+
+**Quintiles 1-4 (80% of the sample) all show a NEGATIVE median excess
+return** — a company growing revenue anywhere from -91% to +20% YoY
+shows no positive edge over QQQ at the median, several buckets clearly
+negative. **Only Q5 (growth above ~20%/yr) is positive**, and strongly
+so. This is the same asymmetric, tail-concentrated shape the P/E
+finding turned out to have (D-068: "avoid the worst decile" rather
+than "buy the best decile") — except here it points the opposite
+direction: the practical rule this data actually supports, if it holds
+up, is closer to **"only companies with growth above ~20%/yr show an
+edge"**, not "any growth level, more is better."
+
+**Q5's mean (+84.4%) is itself heavily skewed** — its median is only
++25.9%. Inspected the individual entries: 4 tickers (`RKLB`, `MU`,
+`STX`, `APP`) supply most of the extreme top results (single entries up
+to +808%, +771%, +665%, +584%), out of 26 distinct tickers actually
+present in Q5. The pattern is not one company dominating everything
+(D-065's original MU-dominance concern) but is still a small handful of
+2023-2025-era AI/hardware-cycle names doing outsized work — a real,
+open question about whether this generalizes beyond that specific
+group of companies and that specific market period, which is exactly
+what the (currently impossible) regime check would have tested more
+rigorously.
+
+**Company-level and quintile-level detail published as an interactive
+artifact** (sortable by any column) at the user's request, since 86
+companies is unwieldy as a document table.
+
+**Revised honest read of D-079**: still the most leave-one-out-robust
+correlation this project has measured (D-079's own 0/86 result stands —
+that metric is about whether any SINGLE company drives the pooled
+correlation, which this quintile breakdown does not contradict). But
+"correlation is real and not company-driven" and "this is a usable,
+symmetric growth signal" are different claims — the second one is not
+supported. What IS supported, tentatively: avoiding low-to-moderate
+growth (Q1-Q4) and requiring high growth (Q5, >~20%/yr) as a threshold
+rule is more consistent with the data than treating growth rate as a
+continuous ranking factor.
+
+Files: `scripts/218_quarterly_growth_rate_regime_and_quintile_check.py`
+(read-only), `data/quarterly_growth_rate_regime_and_quintile_check_result.json`.
