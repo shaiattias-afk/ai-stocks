@@ -1,0 +1,132 @@
+{
+  "semiconductor_ai_universe": [
+    "AMD",
+    "APP",
+    "AVGO",
+    "ENPH",
+    "MCHP",
+    "MPWR",
+    "MU",
+    "NVDA",
+    "RKLB",
+    "STX"
+  ],
+  "tested_tickers": [
+    "AMD",
+    "APP",
+    "AVGO",
+    "ENPH",
+    "MPWR",
+    "MU",
+    "NVDA",
+    "RKLB",
+    "STX"
+  ],
+  "untested_tickers": [
+    "MCHP"
+  ],
+  "n_entry_signals_now": 7,
+  "candidates": [
+    {
+      "ticker": "AMD",
+      "company_name": "ADVANCED MICRO DEVICES INC",
+      "latest_quarter": "2025-12-27 Q4",
+      "growth_as_of": "2026-02-04",
+      "current_yoy_growth": 0.3410812222512405,
+      "pullback_now": 0.16792617152864436,
+      "entry_signal_now": true,
+      "has_tested_swing_history": true
+    },
+    {
+      "ticker": "APP",
+      "company_name": "AppLovin Corp",
+      "latest_quarter": "2024-12-31 Q4",
+      "growth_as_of": "2025-02-27",
+      "current_yoy_growth": 0.44008723738829136,
+      "pullback_now": 0.5272628144296566,
+      "entry_signal_now": true,
+      "has_tested_swing_history": true
+    },
+    {
+      "ticker": "AVGO",
+      "company_name": "Broadcom Inc.",
+      "latest_quarter": "2025-11-02 Q4",
+      "growth_as_of": "2025-12-18",
+      "current_yoy_growth": 0.9381387842926305,
+      "pullback_now": 0.11566337471164606,
+      "entry_signal_now": false,
+      "has_tested_swing_history": true
+    },
+    {
+      "ticker": "ENPH",
+      "company_name": "Enphase Energy, Inc.",
+      "latest_quarter": "2023-12-31 Q4",
+      "growth_as_of": "2024-02-09",
+      "current_yoy_growth": -0.582461650557785,
+      "pullback_now": 0.43329184790829284,
+      "entry_signal_now": false,
+      "has_tested_swing_history": true
+    },
+    {
+      "ticker": "MCHP",
+      "company_name": "MICROCHIP TECHNOLOGY INC",
+      "latest_quarter": "2026-03-31 Q4",
+      "growth_as_of": "2026-05-21",
+      "current_yoy_growth": 0.35105615662029876,
+      "pullback_now": 0.20180719988910245,
+      "entry_signal_now": true,
+      "has_tested_swing_history": false
+    },
+    {
+      "ticker": "MPWR",
+      "company_name": "MONOLITHIC POWER SYSTEMS, INC.",
+      "latest_quarter": "2025-12-31 Q4",
+      "growth_as_of": "2026-02-27",
+      "current_yoy_growth": 0.20829546459910087,
+      "pullback_now": 0.17810921583211972,
+      "entry_signal_now": true,
+      "has_tested_swing_history": true
+    },
+    {
+      "ticker": "MU",
+      "company_name": "MICRON TECHNOLOGY INC",
+      "latest_quarter": "2025-08-28 Q4",
+      "growth_as_of": "2025-10-03",
+      "current_yoy_growth": 0.45999999999999996,
+      "pullback_now": 0.27686314236385634,
+      "entry_signal_now": true,
+      "has_tested_swing_history": true
+    },
+    {
+      "ticker": "NVDA",
+      "company_name": "NVIDIA CORP",
+      "latest_quarter": "2025-01-26 Q4",
+      "growth_as_of": "2025-02-26",
+      "current_yoy_growth": 0.7794417047459621,
+      "pullback_now": 0.04997029992704598,
+      "entry_signal_now": false,
+      "has_tested_swing_history": true
+    },
+    {
+      "ticker": "RKLB",
+      "company_name": "Rocket Lab Corp",
+      "latest_quarter": "2025-12-31 Q4",
+      "growth_as_of": "2026-02-26",
+      "current_yoy_growth": 0.35701120947517895,
+      "pullback_now": 0.4522398771496301,
+      "entry_signal_now": true,
+      "has_tested_swing_history": true
+    },
+    {
+      "ticker": "STX",
+      "company_name": "Seagate Technology Holdings plc",
+      "latest_quarter": "2025-06-27 Q4",
+      "growth_as_of": "2025-08-01",
+      "current_yoy_growth": 0.2951775304716482,
+      "pullback_now": 0.25980314818302647,
+      "entry_signal_now": true,
+      "has_tested_swing_history": true
+    }
+  ],
+  "group_track_record_reminder": 37
+}

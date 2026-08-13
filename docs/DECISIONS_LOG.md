@@ -3278,3 +3278,14 @@ Files: `scripts/234_swing_stoploss_full_risk_profile.py`,
 Files: `scripts/238_swing_6month_hard_cap_no_stoploss.py` (read-only),
 `data/swing_6month_hard_cap_no_stoploss_result.json`. Council transcript
 not separately filed (standard practice per D-083); summarized above.
+
+## D-096 — Current-day SWING entry screen on the 10-ticker universe: 7 of 10 show an active signal today; ENPH's "no" is stale data, not a real current read
+
+**Trigger**: direct user follow-up — since the SWING work is staying focused on the same 10 semiconductor/AI tickers, what does "finding entry points for them" concretely mean? Answered by building the practical screen: apply the exact same, already-validated definitions (growth>20%, pullback>=15% from the 252-day high) to each ticker's latest actual data (`scripts/239`), same pattern as the long-term track's `scripts/224`.
+
+**Result**: 7 of 10 currently show an active entry signal: `AMD, APP, MCHP, MPWR, MU, RKLB, STX`. `NVDA` and `AVGO` genuinely do not qualify right now — both are near their highs (pullback only +5.0% and +11.6%, well under the 15% trigger) — a real, current "no." **`ENPH`'s "no" is NOT a real current read** — its quarterly extraction stops at FY2023 (last availability 2024-02-09), the same kind of coverage gap already flagged for `AXON`/`DASH` in D-084; its displayed -58.2% growth is nearly two years stale and should not be trusted either way until re-extracted. `MCHP` shows a signal but has no tested 6-month track record yet (D-095) — its only qualifying history is too recent to have a determinable outcome.
+
+**Reminder surfaced alongside every candidate, per the council's product-lead recommendation (D-095) — this substitutes for the stop-loss the user declined**: entering today carries the same group-level track record already measured — 80% chance of reaching +30% within 6 months (median ~2 months), 17% chance of a real loss at the 6-month mark (historical median -33%, worst -44%), blended expected outcome +22.7% average / +31.8% median. This is the same 9-10 companies' own history repeating, not independent confirmation for each new entry.
+
+Files: `scripts/239_swing_current_entry_screen.py` (read-only),
+`data/swing_current_entry_screen_result.json`.
