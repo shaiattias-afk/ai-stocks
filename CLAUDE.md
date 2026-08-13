@@ -252,7 +252,14 @@ neither headline quarterly-cadence finding — the growth-rate correlation
 (D-079/D-080) or the entry-timing signal (D-081/D-088) — has been shown
 to work as a sector-neutral edge. Both are substantially or (for entry-
 timing specifically) entirely explained by AI/semiconductor exposure
-during the 2023-2025 rally. Combined with D-088's separate 3-5-year-
+during the 2023-2025 rally. **D-092**: deliberately scoping TO that
+10-ticker semiconductor/AI universe instead (the mirror image) shows the
+growth+pullback rule strong there (12mo mean +145.6%, beat-QQQ 77%) and
+adds real value over just timing sector dips generically (Group B alone
+gets +56.9%/58% on the same 10 tickers) — but on only 9-10 distinct
+tickers, an even MORE 2023-2025-concentrated sample than the rest of
+this session, and as a concentrated sector bet, not a diversified
+strategy. Combined with D-088's separate 3-5-year-
 horizon gap, this is the honest current answer to "why hasn't a reliable
 entry-timing tool been found yet": what has been validated so far is
 closer to "own the AI/semiconductor rally with a growth+pullback timing

@@ -1,0 +1,82 @@
+{
+  "semiconductor_ai_tickers": [
+    "AMD",
+    "APP",
+    "AVGO",
+    "ENPH",
+    "MCHP",
+    "MPWR",
+    "MU",
+    "NVDA",
+    "RKLB",
+    "STX"
+  ],
+  "results_by_horizon": {
+    "6mo": {
+      "group_a": {
+        "observed_mean": 0.5653231614493446,
+        "ci_95_low": 0.3673657417685977,
+        "ci_95_high": 0.751768655373782,
+        "ci_95_crosses_zero": false,
+        "n_groups": 9,
+        "n": 46,
+        "n_beat_qqq": 32,
+        "beat_qqq_rate": 0.6956521739130435
+      },
+      "group_b": {
+        "observed_mean": 0.25272539136108324,
+        "ci_95_low": 0.10174450620918792,
+        "ci_95_high": 0.3753319961512919,
+        "ci_95_crosses_zero": false,
+        "n_groups": 10,
+        "n": 88,
+        "n_beat_qqq": 51,
+        "beat_qqq_rate": 0.5795454545454546
+      }
+    },
+    "12mo": {
+      "group_a": {
+        "observed_mean": 1.4563998787274097,
+        "ci_95_low": 0.39843391307132575,
+        "ci_95_high": 2.6133423365733597,
+        "ci_95_crosses_zero": false,
+        "n_groups": 9,
+        "n": 31,
+        "n_beat_qqq": 24,
+        "beat_qqq_rate": 0.7741935483870968
+      },
+      "group_b": {
+        "observed_mean": 0.5692274567415959,
+        "ci_95_low": 0.08279946861086052,
+        "ci_95_high": 1.1325328683355615,
+        "ci_95_crosses_zero": false,
+        "n_groups": 10,
+        "n": 72,
+        "n_beat_qqq": 42,
+        "beat_qqq_rate": 0.5833333333333334
+      }
+    },
+    "24mo": {
+      "group_a": {
+        "observed_mean": 3.8631394537599246,
+        "ci_95_low": 1.2664721133917247,
+        "ci_95_high": 11.312061715825834,
+        "ci_95_crosses_zero": false,
+        "n_groups": 5,
+        "n": 15,
+        "n_beat_qqq": 14,
+        "beat_qqq_rate": 0.9333333333333333
+      },
+      "group_b": {
+        "observed_mean": 1.3565865582575045,
+        "ci_95_low": 0.2913485524325077,
+        "ci_95_high": 3.0252375229191553,
+        "ci_95_crosses_zero": false,
+        "n_groups": 10,
+        "n": 56,
+        "n_beat_qqq": 37,
+        "beat_qqq_rate": 0.6607142857142857
+      }
+    }
+  }
+}
