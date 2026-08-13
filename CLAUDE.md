@@ -105,32 +105,36 @@ as background context only — do not resume building on this annual/5-year
 finding without the user explicitly asking for annual-cadence work again.
 
 **Tested and not supported at quarterly cadence** — do not re-propose
-without new evidence: the quarterly 5-factor composite (D-067) is
-**retracted, not just fragile** — D-073's robustness check (12-quarter
-lookback, varying the forward horizon and leave-one-ticker-out) shows only
-1 of 6 (lookback, horizon) cells tested is significant, and excluding any
-ONE of 6 of the 9 tickers erases it. The quarterly growth-acceleration
-factor (D-065) was inconclusive on the same 9-ticker universe (CI crosses
-zero). **Also not supported, annual cadence** (background only, see above):
-Scoring Model V1 composite (D-061/D-062), the value/growth two-bucket model
-(D-066), none of Scoring Inputs V1's 9 factors at 5 years (D-074). See also
-`docs/FAILED_APPROACHES.md`.
+without new evidence: the quarterly composite (D-067) is **conclusively
+not supported, in both its 5-factor and full 8-factor forms** (D-078).
+Both of D-067/D-073's own stated bottlenecks — a 9-ticker universe, and
+missing balance-sheet factors — were fixed (full ~99-ticker universe,
+D-072; balance-sheet/ROIC factors added, D-076/D-077) and re-tested
+side by side: the 5-factor version is barely-significant and 58%
+leave-one-out-fragile at its original best cell; the 8-factor version
+is NOT significant there at all (100% leave-one-out-fragile). Adding
+the balance-sheet factors made the composite worse, not better. There
+is no known next lever to pull on this specific composite model — a
+different quarterly approach would need new reasoning, not more data.
+The quarterly growth-acceleration factor (D-065) was separately
+inconclusive on the original 9-ticker universe (CI crosses zero), never
+re-tested wider. **Also not supported, annual cadence** (background
+only, see above): Scoring Model V1 composite (D-061/D-062), the
+value/growth two-bucket model (D-066), none of Scoring Inputs V1's 9
+factors at 5 years (D-074). See also `docs/FAILED_APPROACHES.md`.
 
-**Open next step** — continue the quarterly-cadence, 12-quarter-lookback
-line of work (D-065/D-067/D-073), now on the full 135-company universe
-(Quarterly Data extended in D-072, 98.3% usable). Two sub-options:
-(a) re-run the existing 5-factor composite/individual-factor tests on
-~130+ tickers instead of 9 — 9 tickers was always D-067's stated
-bottleneck for the bootstrap; or (b) extend the quarterly engine to also
-extract balance-sheet items (stockholders' equity, debt, cash — **the
-raw XBRL facts already exist in every archived 10-Q, confirmed by direct
-query, D-076**; only the extraction engine's fixed 6-metric list is the
-limit, not the underlying data), which would unlock ROIC/leverage
-factors at quarterly cadence and complete the full 9-factor composite
-instead of the current 5-factor version. D-074 also surfaced two
-unvalidated ANNUAL-cadence candidate factors (`dividend_yield`,
-`size_log_revenue`) — out of scope for now per the
-Method rule above unless the user asks for annual work specifically.
+**Open next step** — none identified yet within the quarterly-cadence
+composite line of work; both of its known bottlenecks are now closed
+without success (D-078). Options for the next direction: (a) revisit
+D-065's quarterly growth-acceleration factor on the now-full universe
+(never re-tested past the original 9 tickers, unlike the composite);
+(b) investigate individual quarterly factors' correlations one at a
+time rather than a combined composite score, in case the combination
+itself (not any single factor) is what's failing; (c) the two
+unvalidated ANNUAL-cadence candidates from D-074 (`dividend_yield`,
+`size_log_revenue`) remain out of scope per the Method rule above unless
+the user asks for annual work specifically. None of these has been
+tried — recommend discussing with the user before picking one.
 
 **Traps**
 - Yahoo `close` is retroactively split-adjusted; as-reported EPS is not. Pair

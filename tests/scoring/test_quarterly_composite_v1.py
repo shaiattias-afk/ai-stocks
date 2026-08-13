@@ -1,8 +1,11 @@
 """
-tests/scoring/test_quarterly_composite_v1.py -- the 5-factor quarterly
-composite (revenue_growth, operating_margin, fcf_margin, fcf_growth,
-distance_from_high), built because Quarterly Data V1 has no balance-sheet
-data for ROIC/leverage (see module docstring for the full reasoning).
+tests/scoring/test_quarterly_composite_v1.py -- the quarterly composite,
+originally 5 factors (revenue_growth, operating_margin, fcf_margin,
+fcf_growth, distance_from_high) because Quarterly Data V1 had no
+balance-sheet data for ROIC/leverage. D-076/D-077 corrected that: the
+10-Qs always had the data, extraction.quarterly_balance_sheet now
+extracts it, and this module computes the full 8-factor set (see module
+docstring for the full reasoning and QUARTERLY_FACTOR_WEIGHTS_FULL).
 """
 
 from __future__ import annotations
@@ -12,6 +15,7 @@ import pytest
 
 from stock_agent.scoring.quarterly_composite_v1 import (
     QUARTERLY_FACTOR_WEIGHTS,
+    QUARTERLY_FACTOR_WEIGHTS_FULL,
     calendar_quarter_key,
     compute_quarterly_composite_scores,
     compute_quarterly_factors,
@@ -32,15 +36,24 @@ def conn():
     return con
 
 
-def _insert_quarter(con, ticker, fiscal_year_end, fiscal_quarter, revenue, operating_income, ocf, capex):
+def _insert_quarter(
+    con, ticker, fiscal_year_end, fiscal_quarter, revenue, operating_income, ocf, capex,
+    roic=None, adjusted_net_debt=None, stockholders_equity=None,
+):
     run_id = f"{ticker}-{fiscal_year_end}"
     existing = con.execute("SELECT 1 FROM quarterly_extraction_runs WHERE run_id = ?", [run_id]).fetchone()
     if existing is None:
         con.execute("INSERT INTO quarterly_extraction_runs VALUES (?, ?)", [run_id, ticker])
-    for metric_name, value in (
+    metrics = [
         ("revenue", revenue), ("operating_income", operating_income),
         ("operating_cash_flow", ocf), ("capex", capex),
-    ):
+    ]
+    for metric_name, value in [
+        ("roic", roic), ("adjusted_net_debt", adjusted_net_debt), ("stockholders_equity", stockholders_equity),
+    ]:
+        if value is not None:
+            metrics.append((metric_name, value))
+    for metric_name, value in metrics:
         con.execute(
             "INSERT INTO quarterly_metric_results VALUES (?, ?, ?, ?, ?)",
             [run_id, fiscal_year_end, fiscal_quarter, metric_name, value],
@@ -62,6 +75,49 @@ def test_weights_are_the_same_5_factors_from_composite_v1():
     assert set(QUARTERLY_FACTOR_WEIGHTS) == {
         "revenue_growth", "operating_margin", "fcf_margin", "fcf_growth", "distance_from_high",
     }
+
+
+def test_full_weights_are_composite_v1s_9_factors_minus_capex_discipline():
+    assert set(QUARTERLY_FACTOR_WEIGHTS_FULL) == {
+        "revenue_growth", "roic_level", "roic_trend", "operating_margin", "fcf_growth",
+        "fcf_margin", "balance_sheet_strength_ratio", "distance_from_high",
+    }
+    assert abs(sum(w for w, _ in QUARTERLY_FACTOR_WEIGHTS_FULL.values()) - 1.0) < 1e-9
+    assert QUARTERLY_FACTOR_WEIGHTS_FULL["balance_sheet_strength_ratio"][1] is True  # inverted: lower is better
+
+
+def test_roic_level_and_balance_sheet_strength_ratio_read_directly_from_the_quarter(conn):
+    _insert_quarter(
+        conn, TICKER, "2024-12-31", "Q1", revenue=100.0, operating_income=20.0, ocf=30.0, capex=10.0,
+        roic=0.18, adjusted_net_debt=-50.0, stockholders_equity=200.0,
+    )
+    result = compute_quarterly_factors(conn, TICKER, "2024-12-31", "Q1", "2024-03-31", "2024-04-30")
+    assert result["roic_level"] == pytest.approx(0.18)
+    assert result["balance_sheet_strength_ratio"] == pytest.approx(-50.0 / 200.0)
+
+
+def test_roic_trend_is_year_over_year_like_revenue_growth(conn):
+    for q in ("Q1", "Q2", "Q3", "Q4"):
+        _insert_quarter(
+            conn, TICKER, "2023-12-31", q, revenue=100.0, operating_income=10.0, ocf=15.0, capex=5.0, roic=0.10,
+        )
+    _insert_quarter(
+        conn, TICKER, "2024-12-31", "Q1", revenue=120.0, operating_income=12.0, ocf=20.0, capex=5.0, roic=0.15,
+    )
+    result = compute_quarterly_factors(conn, TICKER, "2024-12-31", "Q1", "2024-03-31", "2024-04-30")
+    assert result["roic_trend"] == pytest.approx(0.15 - 0.10)
+
+
+def test_balance_sheet_factors_none_when_not_yet_extracted(conn):
+    """A quarter Engine V5 already loaded but extraction.quarterly_
+    balance_sheet has not yet run for -- the 3 new factors come back
+    None, same graceful degradation as any other missing factor, never
+    a crash."""
+    _insert_quarter(conn, TICKER, "2024-12-31", "Q1", revenue=100.0, operating_income=20.0, ocf=30.0, capex=10.0)
+    result = compute_quarterly_factors(conn, TICKER, "2024-12-31", "Q1", "2024-03-31", "2024-04-30")
+    assert result["roic_level"] is None
+    assert result["roic_trend"] is None
+    assert result["balance_sheet_strength_ratio"] is None
 
 
 def test_operating_margin_and_fcf_margin_computed_from_the_quarter_alone(conn):

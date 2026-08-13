@@ -2586,3 +2586,114 @@ documentation correction only. `CLAUDE.md`'s Project state section is
 updated to state this accurately.
 
 Files: `CLAUDE.md`.
+
+## D-077 — Quarterly engine extended to balance-sheet metrics; loaded for the full universe (implemented, needs ratifying — TTM NOPAT and YoY average_invested_capital are new policy choices, not mechanical ports)
+
+**What was built**, directly following D-076's finding that the balance-sheet data was in the warehouse all along: a new, additive module
+(`src/stock_agent/extraction/quarterly_balance_sheet.py`) that computes,
+for every company-quarter Engine V5 already covers, the 8 balance-sheet
+metrics (`current_debt`, `long_term_debt`, `total_debt`,
+`cash_and_equivalents`, `short_term_investments`, `stockholders_equity`,
+`adjusted_net_debt`, `invested_capital`) plus the derived ROIC chain
+(`effective_tax_rate`, `nopat`, `average_invested_capital`, `roic`).
+
+**Design: reuse, don't reinvent.** The 8 balance-sheet metrics are
+resolved by calling `metrics.annual.compute_company_year` — the SAME
+function the annual engine has always used — directly on each quarter's
+own `(accession_number, period_end)`, already known from Engine V5's own
+output. Nothing about that function assumes an annual filing; it was
+simply never pointed at a 10-Q before. **Proof, not assertion**: Q4's
+`(accession_number, period_end)` already point at the exact same 10-K
+the annual engine itself uses, so Q4's output here is provably byte-
+identical to the already-frozen annual figures — verified on 9
+(ticker, fiscal_year) pairs spanning all 9 frozen-baseline tickers
+(`tests/test_quarterly_balance_sheet.py`), 0 mismatches.
+
+**Two genuine new policy choices, flagged for ratification, not buried
+in code** (same IMPLEMENTED-NEEDS-RATIFYING category as D-P1/D-P2):
+1. **NOPAT is trailing-twelve-month (TTM)**, not single-quarter: sums
+   `pretax_income`/`income_tax_expense`/`operating_income` across the
+   current quarter and the 3 immediately preceding, then applies the
+   existing D-015/D-027 formula to the summed figures. A single
+   quarter's NOPAT divided by an averaged invested-capital base would
+   inject exactly the seasonality this project has already gone out of
+   its way to avoid for growth factors (D-065's YoY-not-sequential
+   rule); TTM is the direct analogue of the annual metric already being
+   a 12-month figure.
+2. **`average_invested_capital` averages the current quarter against
+   the SAME quarter 4 periods earlier (YoY)**, not the immediately
+   preceding quarter — the direct quarterly analogue of the annual
+   metric's "average of fiscal-year start and fiscal-year end," which
+   is also, in effect, a 12-months-apart average.
+
+**Production load, run and independently verified** (`scripts/214`,
+redesigned after a first attempt was silently killed overnight with zero
+progress visible and zero rows written — see the script's own docstring
+for that incident and the incremental/checkpointed/flushed-progress
+redesign): 1,363 of 1,393 company-quarters processed (30 hit a **pre-
+existing, already-documented** engine defect — the same uncaught
+ambiguous-current-debt-candidate exception D-053/D-P1 already flagged
+in the annual engine, now also surfacing at quarterly cadence; not a
+new defect introduced here). 16,356 new rows written (exactly
+1,363 × 12, confirmed by direct count against production): 10,513 PASS,
+142 PASS_MATURITY_BASIS, 336 PASS_NORMALIZED_TAX, 101
+PASS_DIRECT_AGGREGATE, 5,264 REVIEW_REQUIRED — a 67.8% clean-resolution
+rate (lower than the original 6-metric engine's ~98%, expected: balance-
+sheet resolution carries all of the annual engine's own accumulated
+edge-case difficulty, D-016 through D-033). Purely additive: new
+`metric_name` rows under each quarter's existing `run_id`, tagged
+`engine_version='quarterly_balance_sheet_v1'` — the original 9,188
+6-metric rows confirmed byte-unchanged (count identical before/after).
+
+Files: `src/stock_agent/extraction/quarterly_balance_sheet.py`,
+`scripts/214_quarterly_balance_sheet_load.py`,
+`tests/test_quarterly_balance_sheet.py` (16 tests),
+`src/stock_agent/scoring/quarterly_composite_v1.py` (extended to the
+full factor set, `QUARTERLY_FACTOR_WEIGHTS_FULL`),
+`data/quarterly_balance_sheet_load_result.json`.
+
+## D-078 — The quarterly composite still shows no robust signal after fixing BOTH bottlenecks D-067/D-073 named — full universe (90-99 tickers, not 9) AND the full 8-factor set (not 5): honest negative result
+
+**Both of D-067/D-073's stated blockers are now resolved** — the
+9-ticker universe (always the stated bottleneck for the bootstrap) and
+the missing balance-sheet factors (D-076/D-077) — so this is the test
+that actually settles whether the quarterly composite works, not
+another excuse to defer judgment. `scripts/215` ran the identical
+lookback×horizon grid and leave-one-ticker-out check D-073 used, side by
+side for the original 5-factor weights and the new 8-factor
+(`QUARTERLY_FACTOR_WEIGHTS_FULL`) weights, on the SAME full-universe
+dataset (964 candidate company-quarters, 99 distinct tickers — roughly
+10x D-073's 9).
+
+**Lookback × horizon grid**: 5-factor clears significance in 2 of 6
+cells (full-history lookback at 6mo and 12mo horizons only, both barely:
+corr +0.11-0.12, CI lower bound as low as +0.019). 8-factor clears only
+1 of 6 (full-history/6mo). Neither version is significant at D-067's own
+originally-reported cell in the 5-factor case except barely — see next.
+
+**At the exact D-067/D-073 baseline (12-quarter lookback, 12-month
+horizon), now on 90 tickers instead of 9**:
+- 5-factor: corr +0.145, 95% CI **[+0.001, +0.286]** — technically does
+  not cross zero, but the lower bound sits 0.001 from it. Leave-one-out:
+  **52 of 90 tickers (58%)**, excluded one at a time, flip this to
+  crossing zero. Confirms D-073's finding was never a small-sample
+  artifact — a 10x larger universe still shows majority-fragility.
+- 8-factor: corr +0.102, 95% CI **[-0.044, +0.244]** — crosses zero
+  outright. Leave-one-out: **90 of 90 (100%)** of single-ticker
+  exclusions flip it to crossing zero (there is nothing left to flip
+  FROM — the full-sample result is already not significant).
+
+**Honest conclusion**: adding the 3 balance-sheet factors did not fix
+the quarterly composite — it made the already-fragile 5-factor result
+measurably worse (lower correlation, wider/zero-crossing CI, 100% vs 58%
+leave-one-out fragility). This project's two working hypotheses for why
+D-067 failed — "too few tickers" and "missing balance-sheet factors" —
+are both now tested and both rejected as the explanation. The quarterly
+composite approach itself, in either form, does not show a validated
+signal. This closes the "open next step" `CLAUDE.md` has carried since
+D-072/D-076 — there is no known next lever to pull on THIS specific
+model; a different quarterly-cadence approach (not a variant of this
+composite) would need new reasoning, not just more data.
+
+Files: `scripts/215_quarterly_composite_full_universe_check.py`
+(read-only), `data/quarterly_composite_full_universe_check_result.json`.

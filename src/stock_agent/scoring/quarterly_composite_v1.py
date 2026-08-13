@@ -3,23 +3,31 @@ scoring/quarterly_composite_v1.py -- a quarterly-cadence composite score,
 combining every factor from composite_v1's 9-factor model (D-057) that
 CAN be computed at quarterly frequency from Quarterly Data V1 (D-042).
 
-Quarterly Data V1 stores exactly 6 metrics per quarter: revenue,
-operating_income, operating_cash_flow, capex, pretax_income,
-income_tax_expense (confirmed by direct query -- no balance-sheet items,
-no share count). That rules out 4 of the annual composite's 9 factors
-structurally, not by choice:
-  - roic_level / roic_trend: ROIC needs invested_capital (debt + equity
-    - cash), which needs balance-sheet data Quarterly Data V1 never
-    extracted.
-  - balance_sheet_strength_ratio: needs adjusted_net_debt / stockholders_
-    equity -- same balance-sheet gap.
-  - capex_discipline_deviation: could technically be computed (capex and
-    revenue are both quarterly), but is deliberately left out of this
-    quarterly composite -- it is a self-referential "deviation from own
-    trailing average" measure, not a standalone quality/growth signal,
-    and the user's own scope for this build named exactly 5 factors.
+**2026-08-12 correction (D-076): the "structurally out of scope" claim
+below was wrong.** Quarterly Data V1's 6 metrics never included balance-
+sheet items, but the 10-Q filings themselves always have -- confirmed by
+direct warehouse query. `extraction.quarterly_balance_sheet` (D-076/
+D-077) now extracts `roic`, `adjusted_net_debt`, `stockholders_equity`
+(and their supporting metrics) at quarterly cadence, reusing the annual
+engine's own instant-fact resolvers unchanged. This module now computes
+the full 9-factor set, matching `composite_v1`'s annual model exactly
+(`QUARTERLY_FACTOR_WEIGHTS_FULL`). The original 5-factor
+`QUARTERLY_FACTOR_WEIGHTS` is kept for backward comparability with
+D-067/D-073's already-published result, not because the other 4 are
+unavailable.
 
-The remaining 5 -- revenue_growth, operating_margin, fcf_margin,
+Historical note (left for context, no longer accurate as a scope
+description): the original 6 Quarterly Data V1 metrics (revenue,
+operating_income, operating_cash_flow, capex, pretax_income,
+income_tax_expense) ruled out 4 of the annual composite's 9 factors --
+`capex_discipline_deviation` was excluded by the user's own named
+5-factor scope for the ORIGINAL build (D-065's request), not by a data
+gap; it remains excluded from `QUARTERLY_FACTOR_WEIGHTS_FULL` for the
+same reason (a self-referential "deviation from own trailing average"
+measure, not a standalone quality/growth signal) -- this is the one
+factor still deliberately left out of the 9, by choice, not availability.
+
+The original 5 -- revenue_growth, operating_margin, fcf_margin,
 fcf_growth, distance_from_high -- are computed here with formulas
 IDENTICAL to inputs_v1.py's annual versions (fcf = operating_cash_flow -
 capex, verified byte-identical against the annual production
@@ -55,10 +63,10 @@ from stock_agent.scoring.composite_v1 import _percentile_ranks
 from stock_agent.scoring.inputs_v1 import _trailing_high_and_price
 from stock_agent.scoring.quarterly_trend_v1 import _quarters_before
 
+# The original 5-factor set (D-065's requested scope) -- kept for
+# backward comparability with the already-published D-067/D-073 result.
 # Same weights composite_v1.FACTOR_WEIGHTS already assigns these exact 5
-# factors -- reused unchanged, not reinvented. compute_quarterly_composite_
-# scores renormalizes over whatever weight is actually covered per row,
-# the same mechanism composite_v1 itself uses.
+# factors -- reused unchanged, not reinvented.
 QUARTERLY_FACTOR_WEIGHTS: dict[str, tuple[float, bool]] = {
     "revenue_growth": (0.20, False),
     "operating_margin": (0.10, False),
@@ -66,6 +74,27 @@ QUARTERLY_FACTOR_WEIGHTS: dict[str, tuple[float, bool]] = {
     "fcf_margin": (0.10, False),
     "distance_from_high": (0.05, False),
 }
+
+# The full 9-factor set (D-076/D-077) -- byte-identical weights to
+# composite_v1.FACTOR_WEIGHTS, minus capex_discipline_deviation (still
+# deliberately excluded, see module docstring) and renormalized so the
+# remaining 8 weights sum to 1.0 (0.05 of capex_discipline_deviation's
+# weight redistributed proportionally across the other 8, same mechanism
+# compute_quarterly_composite_scores already uses for a row missing any
+# factor -- applied here at the WEIGHT-TABLE level since the exclusion is
+# permanent, not per-row missing data).
+_FULL_MINUS_CAPEX_TOTAL = 1.0 - 0.05  # composite_v1's capex_discipline_deviation weight
+QUARTERLY_FACTOR_WEIGHTS_FULL: dict[str, tuple[float, bool]] = {
+    "revenue_growth": (0.20 / _FULL_MINUS_CAPEX_TOTAL, False),
+    "roic_level": (0.15 / _FULL_MINUS_CAPEX_TOTAL, False),
+    "roic_trend": (0.10 / _FULL_MINUS_CAPEX_TOTAL, False),
+    "operating_margin": (0.10 / _FULL_MINUS_CAPEX_TOTAL, False),
+    "fcf_growth": (0.15 / _FULL_MINUS_CAPEX_TOTAL, False),
+    "fcf_margin": (0.10 / _FULL_MINUS_CAPEX_TOTAL, False),
+    "balance_sheet_strength_ratio": (0.10 / _FULL_MINUS_CAPEX_TOTAL, True),
+    "distance_from_high": (0.05 / _FULL_MINUS_CAPEX_TOTAL, False),
+}
+assert abs(sum(w for w, _ in QUARTERLY_FACTOR_WEIGHTS_FULL.values()) - 1.0) < 1e-9, "full quarterly factor weights must sum to 100%"
 
 
 def _metric(
@@ -111,9 +140,14 @@ def compute_quarterly_factors(
     period_end: str,
     availability_date: str,
 ) -> dict[str, object]:
-    """Returns the 5 quarterly-computable raw factor values (None where
+    """Returns all 8 quarterly-computable raw factor values (None where
     unresolvable -- never guessed) plus the row's own calendar_quarter_key
-    for later cross-sectional grouping."""
+    for later cross-sectional grouping. roic_level/roic_trend/balance_
+    sheet_strength_ratio (D-076/D-077) read from quarterly_metric_results
+    the same way the original 5 do -- they depend on extraction.
+    quarterly_balance_sheet already having been run and loaded for this
+    quarter and its YoY-prior; if not, they come back None, same as any
+    other unresolvable factor."""
     revenue = _metric(connection, ticker, fiscal_year_end, fiscal_quarter, "revenue")
     operating_income = _metric(connection, ticker, fiscal_year_end, fiscal_quarter, "operating_income")
     fcf = _free_cash_flow(connection, ticker, fiscal_year_end, fiscal_quarter)
@@ -134,9 +168,22 @@ def compute_quarterly_factors(
         prior_fcf = _free_cash_flow(connection, ticker, prior_fye, prior_q)
         result["revenue_growth"] = (revenue / prior_revenue - 1) if (revenue is not None and prior_revenue) else None
         result["fcf_growth"] = (fcf / prior_fcf - 1) if (fcf is not None and prior_fcf) else None
+
+        roic = _metric(connection, ticker, fiscal_year_end, fiscal_quarter, "roic")
+        prior_roic = _metric(connection, ticker, prior_fye, prior_q, "roic")
+        result["roic_trend"] = (roic - prior_roic) if (roic is not None and prior_roic is not None) else None
     else:
         result["revenue_growth"] = None
         result["fcf_growth"] = None
+        result["roic_trend"] = None
+
+    result["roic_level"] = _metric(connection, ticker, fiscal_year_end, fiscal_quarter, "roic")
+
+    adjusted_net_debt = _metric(connection, ticker, fiscal_year_end, fiscal_quarter, "adjusted_net_debt")
+    stockholders_equity = _metric(connection, ticker, fiscal_year_end, fiscal_quarter, "stockholders_equity")
+    result["balance_sheet_strength_ratio"] = (
+        (adjusted_net_debt / stockholders_equity) if (adjusted_net_debt is not None and stockholders_equity) else None
+    )
 
     trailing_high, price_at_availability, price_date_used = _trailing_high_and_price(
         connection, ticker, availability_date
@@ -155,7 +202,9 @@ def compute_quarterly_composite_scores(
 ) -> list[dict[str, object]]:
     """`rows`: one dict per company-quarter, shaped like
     compute_quarterly_factors' return value (must carry `ticker` and
-    `calendar_quarter_key` plus the 5 factor values). Cross-sectional
+    `calendar_quarter_key` plus the factor values named in `factor_weights`
+    -- pass QUARTERLY_FACTOR_WEIGHTS_FULL for all 8, or the module default
+    QUARTERLY_FACTOR_WEIGHTS for the original 5). Cross-sectional
     percentile rank WITHIN THE SAME calendar_quarter_key -- see module
     docstring for why calendar quarter, not fiscal_quarter label, is the
     grouping unit. Same renormalize-by-weight-covered mechanism as
