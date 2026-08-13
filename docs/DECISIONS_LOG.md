@@ -3161,3 +3161,26 @@ This is a starker result than D-084's version of this test on the plain growth c
 
 Files: `scripts/231_pullback_excess_return_sector_exclusion_check.py`
 (read-only), `data/pullback_excess_return_sector_exclusion_check_result.json`.
+
+## D-092 — Deliberately scoping to the semiconductor/AI universe (D-091's mirror image): the growth+pullback signal is strong there, and the growth filter adds real value on top of sector timing alone -- but on a much smaller, more concentrated, still-2023-2025-locked sample
+
+**Trigger**: direct user follow-up to D-091 — instead of treating the semiconductor/AI concentration as a confound to remove, what if the universe is deliberately scoped to just those names? How does that change the conclusions?
+
+**Method (`scripts/232`)**: computed the same excess-return-vs-QQQ bootstrap as D-088/D-091, restricted to the 10 SIC-3674/named tickers (`AMD, APP, AVGO, ENPH, MCHP, MPWR, MU, NVDA, RKLB, STX`) — this time for BOTH Group A (growth>20% + pullback>=15%, the full rule) and Group B (pullback>=15% alone, no growth filter — the existing control), to answer a second question: does the growth filter add value within this sector, or does simply buying any dip in these names already capture the edge (a sector-timing bet vs. a real stock-picking refinement).
+
+**Result — strong within-sector, and the growth filter clearly adds value on top of sector timing alone**:
+
+| Horizon | Group A (growth+pullback) | Group B (pullback alone, same 10 tickers) |
+|---|---|---|
+| 6mo | mean +56.5%, CI[+36.7%,+75.2%], beat-QQQ 70% (n=46, 9 groups) | mean +25.3%, CI[+10.2%,+37.5%], beat-QQQ 58% (n=88, 10 groups) |
+| 12mo | mean +145.6%, CI[+39.8%,+261.3%], beat-QQQ 77% (n=31, 9 groups) | mean +56.9%, CI[+8.3%,+113.3%], beat-QQQ 58% (n=72, 10 groups) |
+| 24mo | mean +386.3%, CI[+126.6%,+1131.2%], beat-QQQ 93% (n=15, 5 groups) | mean +135.7%, CI[+29.1%,+302.5%], beat-QQQ 66% (n=56, 10 groups) |
+
+Every cell for both groups excludes zero — even Group B (pullback alone, no fundamental filter at all) already beats QQQ within this sector, confirming this is substantially a sector-timing effect at its base. But Group A roughly **doubles to triples** Group B's mean excess return and beat-rate at every horizon (e.g. 12mo: 58%→77% beat rate, +56.9%→+145.6% mean) — the growth>20% filter is not redundant; it is a real, additive refinement on top of the underlying sector rally, not just noise riding along with it.
+
+**Caveats that must travel with this result, all already flagged elsewhere in the project and all sharper here, not lesser**: (1) n_groups is now only 9-10 tickers (5 at 24mo) — far less independent evidence than the full-universe tests, closer to the small-cohort problem D-063 was built to catch; (2) this is, if anything, MORE concentrated in the single 2023-2025 regime than any other result this session — the already-open regime caveat (D-079, D-087) applies with full force and has not been separately re-tested here; (3) a portfolio that only holds semiconductor/AI names is not a diversified stock-picking strategy — it is a concentrated sector/thematic bet, with correspondingly higher volatility and correlated risk than the project's original framing implied, regardless of how the historical numbers look; (4) still no data at the user's actual 3-5 year horizon (D-088) — if anything this gap is worse here since the universe is smaller.
+
+**Honest summary for the user's decision**: if the plan is to deliberately run this as an AI/semiconductor-focused strategy, the growth+pullback rule does appear to add real value over just timing dips in the sector generically — but this is a much smaller, much more concentrated bet on one theme continuing than a general "find undervalued growth companies" strategy, and it inherits every caveat already on record (regime lock, thin sample, no long-horizon evidence) in a sharper form.
+
+Files: `scripts/232_semiconductor_ai_focused_universe_check.py` (read-only),
+`data/semiconductor_ai_focused_universe_check_result.json`.

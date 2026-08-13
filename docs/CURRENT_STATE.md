@@ -1,6 +1,32 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-13 (**D-091 — the most important result of the
+**Last updated:** 2026-08-13 (**D-092: deliberately scoping to the
+semiconductor/AI universe (D-091's mirror image) — the growth+pullback
+signal is strong there (12mo: mean +145.6%, beat-QQQ 77%, n=31/9 groups)
+and the growth filter adds real value over just timing sector dips
+(Group B alone, no growth filter, gets +56.9%/58% beat-rate on the same
+tickers) — but on a much smaller, more concentrated, still-2023-2025-
+locked sample than any other result this session, with all the same
+open caveats (regime lock, thin n, no 3-5yr evidence) in a sharper
+form.**)
+
+**What happened.** Direct follow-up to D-091: instead of treating the
+semiconductor/AI concentration as a confound, the user asked how
+deliberately scoping to that universe changes the conclusions.
+`scripts/232` re-ran the excess-return bootstrap restricted to the 10
+flagged tickers, for both the full growth+pullback rule and the
+pullback-alone control — Group B (no growth filter) already beats QQQ
+within the sector at every horizon (confirming this is substantially a
+sector-timing effect), but Group A roughly doubles-to-triples Group B's
+mean excess return and beat-rate at every horizon, so the growth filter
+is a real, additive refinement, not redundant. Caveat sharply restated:
+only 9-10 distinct tickers back this (5 at 24mo), the sample is if
+anything MORE concentrated in the 2023-2025 window than other results
+this session, and a semiconductor/AI-only portfolio is a concentrated
+sector bet, not a diversified strategy, regardless of the historical
+numbers. Full detail: `docs/DECISIONS_LOG.md` D-092.
+
+**Previous update, same day:** D-091 — the most important result of the
 session: the growth+pullback entry-timing signal's ENTIRE excess-return
 edge over QQQ is carried by semiconductor/AI names. Excluding the same
 10 tickers D-084 flagged (SIC-3674 semiconductor + RKLB/MU/STX/APP) from
