@@ -1,6 +1,44 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-13 (**D-094: four-part validation pass toward
+**Last updated:** 2026-08-13 (**D-095: user pivoted to focus exclusively
+on a SWING strategy (~30% target, up to 6 months, explicitly no stop-
+loss), setting the long-term track aside for now. Ran the project's
+council process on how to build this correctly, then executed the
+chair's chosen first step: an honest backtest capped at EXACTLY 126
+trading days (~6 months), no extension, no stop-loss, on the 10-ticker
+semiconductor/AI universe. Result was better than the council's most
+skeptical prediction — 80% of entries hit +30% within the window
+(median ~2 months), but the 17% that don't resolve favorably lose
+seriously (median -33%, worst -44%). Blended across all outcomes
+(including the losses), expected value is positive (mean +22.7%, median
++31.8%), and excess return vs QQQ over the same 6 months is
+statistically significant (+56.5% mean, 70% beat-rate). Every prior
+caveat (9 tickers, one regime already shown unfavorable in 2020-2022,
+post-hoc parameter choice) still applies unchanged.**)
+
+**What happened.** The user asked to set aside the long-term investment
+track and focus only on SWING trading, then invoked the council process
+to plan the SWING model properly. Five independent advisors (data
+architect, accountant/valuation, systems engineer, backtesting/model-
+risk, product lead) gave separate answers, anonymous peer review, then a
+chair decision. Two standout points: the accountant proposed pre-entry
+accounting tripwires (margin trend, cash-flow quality, inventory buildup)
+as a genuine substitute for a stop-loss, to be threshold-set before
+checking against known failures (not fit to them). The backtesting
+advisor raised the sharpest concern of the session — that "no stop-loss"
+was only ever validated with a generous 24-month window, where extra
+time is exactly what let bad trades recover, and cutting to a hard
+6-month cap while keeping no stop-loss could be the worst combination
+tested yet, not a neutral variant. The chair's decision was to test that
+concern directly before building anything else. `scripts/238` ran the
+honest version: exactly 126 trading days per entry, no extension,
+classified into hit-target / still-open-positive / still-open-negative,
+with maximum drawdown recorded (not acted on). The result was more
+reassuring than the worst-case fear, though the real risk in the losing
+minority is confirmed severe. Full detail: `docs/DECISIONS_LOG.md`
+D-095.
+
+**Previous update, same day:** D-094: four-part validation pass toward
 "freeze the model" — the user asked what's needed to be able to call
 this a working model. Two results reassuring: the growth>20% threshold
 is NOT fragile (15/20/25/30% all give ~+133-146% mean excess return,
