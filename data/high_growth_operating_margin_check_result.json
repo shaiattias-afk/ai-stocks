@@ -1,0 +1,799 @@
+{
+  "growth_threshold": 0.2,
+  "lookback_quarters": 12,
+  "horizon_months": 12,
+  "n_high_growth": 96,
+  "n_with_margin": 86,
+  "n_missing_margin": 10,
+  "profitable": {
+    "n": 60,
+    "n_tickers": 17,
+    "mean_excess": 0.9276437568957053,
+    "median_excess": 0.2858782397505286,
+    "win_rate": 0.6666666666666666
+  },
+  "unprofitable": {
+    "n": 26,
+    "n_tickers": 10,
+    "mean_excess": 0.8768525105423202,
+    "median_excess": 0.3352696323082984,
+    "win_rate": 0.6923076923076923
+  },
+  "note_ebitda": "EBITDA not available -- quarterly engine does not extract depreciation & amortization.",
+  "rows": [
+    {
+      "ticker": "ALNY",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2024-08-01",
+      "growth": 1.0700132390495494,
+      "operating_margin": 0.0736771113552836,
+      "excess_return": 0.2840704931841369
+    },
+    {
+      "ticker": "ALNY",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2025-02-13",
+      "growth": 0.3489691120217957,
+      "operating_margin": -0.17728426781036,
+      "excess_return": 0.058016683222080534
+    },
+    {
+      "ticker": "ALNY",
+      "fiscal_year_end": "2025-12-31",
+      "fiscal_quarter": "Q1",
+      "availability_date": "2025-05-01",
+      "growth": 0.20200148482905256,
+      "operating_margin": 0.03042297989360288,
+      "excess_return": -0.2457314548834275
+    },
+    {
+      "ticker": "AMD",
+      "fiscal_year_end": "2024-12-28",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2025-02-05",
+      "growth": 0.24156939040207526,
+      "operating_margin": 0.11373726821624446,
+      "excess_return": 0.5796423838947538
+    },
+    {
+      "ticker": "AMD",
+      "fiscal_year_end": "2025-12-27",
+      "fiscal_quarter": "Q1",
+      "availability_date": "2025-05-07",
+      "growth": 0.3590352640233876,
+      "operating_margin": 0.10836246302769562,
+      "excess_return": 2.62508186944648
+    },
+    {
+      "ticker": "AMD",
+      "fiscal_year_end": "2025-12-27",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2025-08-06",
+      "growth": 0.31705227077977716,
+      "operating_margin": -0.017436564736499675,
+      "excess_return": 1.7337479543716008
+    },
+    {
+      "ticker": "APP",
+      "fiscal_year_end": "2023-12-31",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2023-11-08",
+      "growth": 0.2119719702313423,
+      "operating_margin": 0.2155819571978673,
+      "excess_return": 5.840496303247048
+    },
+    {
+      "ticker": "APP",
+      "fiscal_year_end": "2023-12-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2024-02-26",
+      "growth": 0.3573280630835234,
+      "operating_margin": 0.2827284447806005,
+      "excess_return": 4.4254190188597295
+    },
+    {
+      "ticker": "APP",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q1",
+      "availability_date": "2024-05-08",
+      "growth": 0.4790433390876496,
+      "operating_margin": 0.3209093529531289,
+      "excess_return": 3.4715921884557335
+    },
+    {
+      "ticker": "APP",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2024-08-07",
+      "growth": 0.4398419014483481,
+      "operating_margin": 0.36198418877919936,
+      "excess_return": 5.192324348950248
+    },
+    {
+      "ticker": "APP",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2024-11-06",
+      "growth": 0.3864352691795023,
+      "operating_margin": 0.4464349647606688,
+      "excess_return": 2.4701347418395914
+    },
+    {
+      "ticker": "APP",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2025-02-27",
+      "growth": 0.44008723738829136,
+      "operating_margin": 0.4428826489915711,
+      "excess_return": 0.136498104156638
+    },
+    {
+      "ticker": "AVGO",
+      "fiscal_year_end": "2025-11-02",
+      "fiscal_quarter": "Q1",
+      "availability_date": "2025-03-12",
+      "growth": 0.6731351654514863,
+      "operating_margin": 0.41968356127648165,
+      "excess_return": 0.486705357869208
+    },
+    {
+      "ticker": "AVGO",
+      "fiscal_year_end": "2025-11-02",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2025-06-11",
+      "growth": 0.7180808427802587,
+      "operating_margin": 0.3884964009597441,
+      "excess_return": 0.18343527687942274
+    },
+    {
+      "ticker": "AXON",
+      "fiscal_year_end": "2023-12-31",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2023-11-07",
+      "growth": 0.3266902750245386,
+      "operating_margin": 0.13325161206089928,
+      "excess_return": 0.7790869771384217
+    },
+    {
+      "ticker": "AXON",
+      "fiscal_year_end": "2023-12-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2024-02-27",
+      "growth": 0.2855935884239398,
+      "operating_margin": 0.09906234524762694,
+      "excess_return": 0.7830371123357955
+    },
+    {
+      "ticker": "BKNG",
+      "fiscal_year_end": "2023-12-31",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2023-11-02",
+      "growth": 0.21298744216787835,
+      "operating_margin": 0.42269445579621306,
+      "excess_return": 0.34835861371035604
+    },
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2024-01-31",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2023-08-31",
+      "growth": 0.36713425880075423,
+      "operating_margin": -0.021012101811581328,
+      "excess_return": 0.40509884509202165
+    },
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2024-01-31",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2023-11-29",
+      "growth": 0.35313884747676805,
+      "operating_margin": 0.004024101351884317,
+      "excess_return": 0.15909803540368195
+    },
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2024-01-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2024-03-07",
+      "growth": 0.3262923872745216,
+      "operating_margin": 0.03509969420407294,
+      "excess_return": -0.09900331043273125
+    },
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2025-01-31",
+      "fiscal_quarter": "Q1",
+      "availability_date": "2024-06-05",
+      "growth": 0.32986225418002246,
+      "operating_margin": 0.007530650267741978,
+      "excess_return": 0.21383379112826373
+    },
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2025-01-31",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2024-08-29",
+      "growth": 0.3174381446258061,
+      "operating_margin": 0.014169931277182033,
+      "excess_return": 0.3408574855945947
+    },
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2025-01-31",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2024-11-27",
+      "growth": 0.28519084901795644,
+      "operating_margin": -0.05516156558547108,
+      "excess_return": 0.23270561972375092
+    },
+    {
+      "ticker": "CRWD",
+      "fiscal_year_end": "2025-01-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2025-03-10",
+      "growth": 0.25221125352670826,
+      "operating_margin": -0.08058378631659893,
+      "excess_return": 0.12053101778954245
+    },
+    {
+      "ticker": "DASH",
+      "fiscal_year_end": "2023-12-31",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2023-11-01",
+      "growth": 0.2721928277483834,
+      "operating_margin": -0.04990757855822551,
+      "excess_return": 0.6759878379601358
+    },
+    {
+      "ticker": "DASH",
+      "fiscal_year_end": "2023-12-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2024-02-20",
+      "growth": 0.2667766776677667,
+      "operating_margin": -0.03864524533217542,
+      "excess_return": 0.48670691402912336
+    },
+    {
+      "ticker": "DDOG",
+      "fiscal_year_end": "2023-12-31",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2023-11-07",
+      "growth": 0.2542831813402424,
+      "operating_margin": -0.007725519417901288,
+      "excess_return": -0.11738011663773151
+    },
+    {
+      "ticker": "DDOG",
+      "fiscal_year_end": "2023-12-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2024-02-23",
+      "growth": 0.2561786454594066,
+      "operating_margin": 0.04704832875151149,
+      "excess_return": -0.2899631511779155
+    },
+    {
+      "ticker": "DDOG",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q1",
+      "availability_date": "2024-05-08",
+      "growth": 0.26891267432542953,
+      "operating_margin": 0.019625261552908533,
+      "excess_return": -0.1851053165745532
+    },
+    {
+      "ticker": "DDOG",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2024-08-09",
+      "growth": 0.26659404074902837,
+      "operating_margin": 0.019554332312069662,
+      "excess_return": -0.13161994300190338
+    },
+    {
+      "ticker": "DDOG",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2024-11-08",
+      "growth": 0.2602203325443442,
+      "operating_margin": 0.02938772434262394,
+      "excess_return": 0.3860997294124202
+    },
+    {
+      "ticker": "DDOG",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2025-02-20",
+      "growth": 0.25112906152643344,
+      "operating_margin": 0.012730996696609993,
+      "excess_return": -0.22279515165671282
+    },
+    {
+      "ticker": "DDOG",
+      "fiscal_year_end": "2025-12-31",
+      "fiscal_quarter": "Q1",
+      "availability_date": "2025-05-07",
+      "growth": 0.24588836373809198,
+      "operating_margin": -0.01630877955966295,
+      "excess_return": 0.3352696323082984
+    },
+    {
+      "ticker": "DDOG",
+      "fiscal_year_end": "2025-12-31",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2025-08-08",
+      "growth": 0.2812442369889614,
+      "operating_margin": -0.04293870046930185,
+      "excess_return": 0.6402889650336001
+    },
+    {
+      "ticker": "DXCM",
+      "fiscal_year_end": "2023-12-31",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2023-10-26",
+      "growth": 0.2668918918918919,
+      "operating_margin": 0.21076923076923076,
+      "excess_return": -0.5622922973155965
+    },
+    {
+      "ticker": "DXCM",
+      "fiscal_year_end": "2023-12-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2024-02-08",
+      "growth": 0.26901373895976444,
+      "operating_margin": 0.2096665055582407,
+      "excess_return": -0.5353807030590594
+    },
+    {
+      "ticker": "DXCM",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q1",
+      "availability_date": "2024-04-25",
+      "growth": 0.2420768712070127,
+      "operating_margin": 0.10977198697068404,
+      "excess_return": -0.6009141165214884
+    },
+    {
+      "ticker": "ISRG",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2025-01-31",
+      "growth": 0.2516205984545974,
+      "operating_margin": 0.30449554588771494,
+      "excess_return": -0.336324684512728
+    },
+    {
+      "ticker": "ISRG",
+      "fiscal_year_end": "2025-12-31",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2025-07-23",
+      "growth": 0.21399074580824906,
+      "operating_margin": 0.304672131147541,
+      "excess_return": -0.5717435176604935
+    },
+    {
+      "ticker": "MDB",
+      "fiscal_year_end": "2024-01-31",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2023-09-01",
+      "growth": 0.3956102219587696,
+      "operating_margin": -0.11563011012503804,
+      "excess_return": -0.5106554119345531
+    },
+    {
+      "ticker": "MDB",
+      "fiscal_year_end": "2024-01-31",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2023-12-07",
+      "growth": 0.29769409000032976,
+      "operating_margin": -0.10443989670576387,
+      "excess_return": -0.43591002987728134
+    },
+    {
+      "ticker": "MDB",
+      "fiscal_year_end": "2024-01-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2024-03-15",
+      "growth": 0.2676080506598175,
+      "operating_margin": -0.15494692162916318,
+      "excess_return": -0.5760601004152496
+    },
+    {
+      "ticker": "MDB",
+      "fiscal_year_end": "2025-01-31",
+      "fiscal_quarter": "Q1",
+      "availability_date": "2024-05-31",
+      "growth": 0.2234196806777451,
+      "operating_margin": -0.21791943821147414,
+      "excess_return": -0.35036429900989163
+    },
+    {
+      "ticker": "MDB",
+      "fiscal_year_end": "2025-01-31",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2024-12-10",
+      "growth": 0.22275013974287305,
+      "operating_margin": -0.05265832349468713,
+      "excess_return": 0.25721033620734834
+    },
+    {
+      "ticker": "MDB",
+      "fiscal_year_end": "2026-01-31",
+      "fiscal_quarter": "Q1",
+      "availability_date": "2025-06-04",
+      "growth": 0.2185120327769159,
+      "operating_margin": -0.09754578207477405,
+      "excess_return": 0.4960621947020418
+    },
+    {
+      "ticker": "META",
+      "fiscal_year_end": "2023-12-31",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2023-10-26",
+      "growth": 0.2320848668542974,
+      "operating_margin": 0.4026240262402624,
+      "excess_return": 0.5596724665749977
+    },
+    {
+      "ticker": "META",
+      "fiscal_year_end": "2023-12-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2024-02-02",
+      "growth": 0.2470387066687394,
+      "operating_margin": 0.4084665054473835,
+      "excess_return": 0.25911277601016014
+    },
+    {
+      "ticker": "META",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q1",
+      "availability_date": "2024-04-25",
+      "growth": 0.2726479315761914,
+      "operating_margin": 0.3790426553284872,
+      "excess_return": 0.1242780922810558
+    },
+    {
+      "ticker": "META",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2024-08-01",
+      "growth": 0.2210069064658271,
+      "operating_margin": 0.38000051188861306,
+      "excess_return": 0.30021202869366825
+    },
+    {
+      "ticker": "META",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2025-01-30",
+      "growth": 0.20627757971628724,
+      "operating_margin": 0.48287692466673554,
+      "excess_return": -0.14873110123335498
+    },
+    {
+      "ticker": "MPWR",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2024-11-06",
+      "growth": 0.3058793304230447,
+      "operating_margin": 0.264510521367673,
+      "excess_return": 0.014251415025513525
+    },
+    {
+      "ticker": "MPWR",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2025-03-03",
+      "growth": 0.36926997524294514,
+      "operating_margin": 0.2626929294716608,
+      "excess_return": 0.6547831910632596
+    },
+    {
+      "ticker": "MPWR",
+      "fiscal_year_end": "2025-12-31",
+      "fiscal_quarter": "Q1",
+      "availability_date": "2025-05-05",
+      "growth": 0.3923889186149361,
+      "operating_margin": 0.26469757855805154,
+      "excess_return": 1.1410249315378582
+    },
+    {
+      "ticker": "MPWR",
+      "fiscal_year_end": "2025-12-31",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2025-08-04",
+      "growth": 0.30968348405990165,
+      "operating_margin": 0.24791520583110382,
+      "excess_return": 0.32912176961445216
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2024-08-29",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2024-03-21",
+      "growth": 0.5770376387760627,
+      "operating_margin": 0.03279532967032967,
+      "excess_return": -0.21745696901138312
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2024-08-29",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2024-06-27",
+      "growth": 0.8152985074626866,
+      "operating_margin": 0.10556452796946117,
+      "excess_return": -0.1966032895370421
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2024-08-29",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2024-10-04",
+      "growth": 0.9326683291770574,
+      "operating_margin": 0.19638709677419355,
+      "excess_return": 0.6237129827824501
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2025-08-28",
+      "fiscal_quarter": "Q1",
+      "availability_date": "2024-12-19",
+      "growth": 0.8427845958527296,
+      "operating_margin": 0.2496268228269606,
+      "excess_return": 1.859575111461437
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2025-08-28",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2025-03-21",
+      "growth": 0.38272664835164827,
+      "operating_margin": 0.22016639761579535,
+      "excess_return": 3.0522765580989866
+    },
+    {
+      "ticker": "MU",
+      "fiscal_year_end": "2025-08-28",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2025-06-26",
+      "growth": 0.365585082954045,
+      "operating_margin": 0.23320073110418235,
+      "excess_return": 7.7085557391161
+    },
+    {
+      "ticker": "NVDA",
+      "fiscal_year_end": "2024-01-28",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2023-08-28",
+      "growth": 1.0147673031026252,
+      "operating_margin": 0.5034426593618124,
+      "excess_return": 1.3887295619219107
+    },
+    {
+      "ticker": "NVDA",
+      "fiscal_year_end": "2024-01-28",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2023-11-21",
+      "growth": 2.055134041476985,
+      "operating_margin": 0.5748896247240618,
+      "excess_return": 1.628741982728889
+    },
+    {
+      "ticker": "NVDA",
+      "fiscal_year_end": "2024-01-28",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2024-02-21",
+      "growth": 2.6527846636919516,
+      "operating_margin": 0.6159344885309687,
+      "excess_return": 0.7495398600658081
+    },
+    {
+      "ticker": "OKTA",
+      "fiscal_year_end": "2024-01-31",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2023-08-31",
+      "growth": 0.23061395684440478,
+      "operating_margin": -0.29136690647482016,
+      "excess_return": -0.31963343211154815
+    },
+    {
+      "ticker": "OKTA",
+      "fiscal_year_end": "2024-01-31",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2023-12-01",
+      "growth": 0.2140312072542523,
+      "operating_margin": -0.19006849315068494,
+      "excess_return": -0.2324649665488372
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2023-07-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2023-09-01",
+      "growth": 0.2597871654305064,
+      "operating_margin": 0.12978037167869758,
+      "excess_return": 0.23139283831914326
+    },
+    {
+      "ticker": "PANW",
+      "fiscal_year_end": "2024-07-31",
+      "fiscal_quarter": "Q1",
+      "availability_date": "2023-11-17",
+      "growth": 0.20129205577587306,
+      "operating_margin": 0.11458388797188648,
+      "excess_return": 0.25824352439510245
+    },
+    {
+      "ticker": "RIVN",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2025-02-24",
+      "growth": 0.31863117870722424,
+      "operating_margin": -0.381199538638985,
+      "excess_return": 0.08901085701269817
+    },
+    {
+      "ticker": "RKLB",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q1",
+      "availability_date": "2024-05-06",
+      "growth": 0.6898988978959832,
+      "operating_margin": -0.4643784966636843,
+      "excess_return": 4.409676378864635
+    },
+    {
+      "ticker": "RKLB",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2024-08-08",
+      "growth": 0.7124828753324199,
+      "operating_margin": -0.40728087265061036,
+      "excess_return": 8.079458135339983
+    },
+    {
+      "ticker": "RKLB",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2024-11-12",
+      "growth": 0.5490164200942935,
+      "operating_margin": -0.4951816655217159,
+      "excess_return": 2.1911650332895034
+    },
+    {
+      "ticker": "RKLB",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2025-02-27",
+      "growth": 1.2067976863196148,
+      "operating_margin": -0.38937819137686197,
+      "excess_return": 2.2645383088767637
+    },
+    {
+      "ticker": "RKLB",
+      "fiscal_year_end": "2025-12-31",
+      "fiscal_quarter": "Q1",
+      "availability_date": "2025-05-08",
+      "growth": 0.3212564812918386,
+      "operating_margin": -0.482895348742341,
+      "excess_return": 3.1021775406531957
+    },
+    {
+      "ticker": "RKLB",
+      "fiscal_year_end": "2025-12-31",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2025-08-07",
+      "growth": 0.3599683767682187,
+      "operating_margin": -0.4127323561571786,
+      "excess_return": 0.5972734939392403
+    },
+    {
+      "ticker": "STX",
+      "fiscal_year_end": "2025-06-27",
+      "fiscal_quarter": "Q1",
+      "availability_date": "2024-10-25",
+      "growth": 0.4910591471801926,
+      "operating_margin": 0.18588560885608857,
+      "excess_return": 1.015318434333969
+    },
+    {
+      "ticker": "STX",
+      "fiscal_year_end": "2025-06-27",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2025-01-24",
+      "growth": 0.495176848874598,
+      "operating_margin": 0.20989247311827958,
+      "excess_return": 2.189010134675863
+    },
+    {
+      "ticker": "STX",
+      "fiscal_year_end": "2025-06-27",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2025-05-02",
+      "growth": 0.30513595166163143,
+      "operating_margin": 0.19953703703703704,
+      "excess_return": 6.6544179663150285
+    },
+    {
+      "ticker": "STX",
+      "fiscal_year_end": "2025-06-27",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2025-08-01",
+      "growth": 0.2951775304716482,
+      "operating_margin": 0.23240589198036007,
+      "excess_return": 4.14255698643302
+    },
+    {
+      "ticker": "TEAM",
+      "fiscal_year_end": "2025-06-30",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2025-01-31",
+      "growth": 0.21351840846704584,
+      "operating_margin": -0.044679870311077736,
+      "excess_return": -0.8342921177801482
+    },
+    {
+      "ticker": "TTD",
+      "fiscal_year_end": "2023-12-31",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2023-11-09",
+      "growth": 0.24949274646442388,
+      "operating_margin": 0.07638272250672051,
+      "excess_return": 0.2858782397505286
+    },
+    {
+      "ticker": "TTD",
+      "fiscal_year_end": "2023-12-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2024-02-15",
+      "growth": 0.2344636740249868,
+      "operating_margin": 0.23842640356423025,
+      "excess_return": -0.19164622776847562
+    },
+    {
+      "ticker": "TTD",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q1",
+      "availability_date": "2024-05-10",
+      "growth": 0.2833049897728075,
+      "operating_margin": 0.05833450380964594,
+      "excess_return": -0.24592371481687014
+    },
+    {
+      "ticker": "TTD",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q2",
+      "availability_date": "2024-08-08",
+      "growth": 0.25911677659212407,
+      "operating_margin": 0.1620391754340946,
+      "excess_return": -0.6751493259472664
+    },
+    {
+      "ticker": "TTD",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q3",
+      "availability_date": "2024-11-07",
+      "growth": 0.27317917715796347,
+      "operating_margin": 0.17273604494153016,
+      "excess_return": -0.8692803632657395
+    },
+    {
+      "ticker": "TTD",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q4",
+      "availability_date": "2025-02-21",
+      "growth": 0.2232018316366704,
+      "operating_margin": 0.2635706304351347,
+      "excess_return": -0.8135739049847875
+    },
+    {
+      "ticker": "TTD",
+      "fiscal_year_end": "2025-12-31",
+      "fiscal_quarter": "Q1",
+      "availability_date": "2025-05-08",
+      "growth": 0.253979110560139,
+      "operating_margin": 0.08839309049529155,
+      "excess_return": -1.0783144656018768
+    }
+  ]
+}

@@ -130,6 +130,24 @@ interactive artifact, company- and quintile-level, during that
 session). This is a single raw factor, not a composite — the quarterly
 composite itself (D-067) remains dead, see below.
 
+**Proven, entry-timing signal (D-081)** — combining D-080's growth>20%
+threshold with a price pullback (stock down >=15% from its own rolling
+52-week high, entry evaluated at ANY trading day, not just filing
+dates) predicts recovery to that high, clearly beating a pullback-only
+control on the full ~92-company universe: 68.8%/85.1%/95.5% recovery
+within 6/12/24 months (n=136, 32 tickers) vs. 50.6%/67.1%/80.6% for
+pullback alone with no growth filter (n=707, 91 tickers) — a
+consistent 15-18 point gap at every horizon. Operating margin does NOT
+add further discrimination within the growth>20% group (D-081) and
+does NOT explain why some growth<=20% companies still won anyway
+(D-082 — if anything the opposite: winners' average margin is
+NEGATIVE). Whether growth is accelerating or decelerating AT the same
+>20% level shows a real edge for accelerating at 12-24 months but not
+at 6 months (D-081) — directionally supportive of the user's own
+hypothesis, not a clean confirmation. **Same unresolved regime caveat
+as D-079/D-080** — not tested against a different macro period. No
+formal significance test run yet on the Group A vs. Group B gap.
+
 **Tested and not supported at quarterly cadence** — do not re-propose
 without new evidence: the quarterly composite (D-067) is **conclusively
 not supported, in both its 5-factor and full 8-factor forms** (D-078).
@@ -151,14 +169,17 @@ see above): Scoring Model V1 composite (D-061/D-062), the value/growth
 two-bucket model (D-066), none of Scoring Inputs V1's 9 factors at 5
 years (D-074). See also `docs/FAILED_APPROACHES.md`.
 
-**Open next step** — the quintile breakdown (D-080) is done; the regime
-split is NOT (data-limited, not yet possible — see caveat above). Two
-paths forward on the growth-rate finding, not yet decided: (a) wait for
-the universe to accumulate more quarterly history so a genuine pre-/
-post-2022 regime split becomes possible (timeline unknown, depends on
-how far back 10-Q coverage can be extended); (b) treat the >~20%/yr
-threshold as a working hypothesis now, with the regime caveat stated
-plainly each time it's used, rather than waiting. Longer horizons
+**Open next step** — several threads open, none decided without the
+user: (a) the regime split on the growth-rate finding (D-079/D-080)
+remains data-limited, not yet possible; (b) D-081's entry-timing signal
+(growth>20% + pullback>=15%) has no formal significance test on its
+Group A vs. Group B gap yet — a natural next check before trusting the
+15-18pp edge; (c) D-081's trend-at-entry split (accelerating vs.
+decelerating) is only directionally, not cleanly, supportive — could be
+retested with a larger/different pullback threshold or explicit
+statistical testing; (d) EBITDA was requested (D-081) but needs new
+quarterly-engine extraction work (depreciation & amortization is not
+currently extracted) — a bigger task, not started. Longer horizons
 (30+ months) remain untestable until more company-quarters accumulate
 that much forward history. The quarterly composite line of work
 (D-067/D-073/D-078) has no further lever to pull and should not be

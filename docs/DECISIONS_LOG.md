@@ -2842,3 +2842,149 @@ continuous ranking factor.
 
 Files: `scripts/218_quarterly_growth_rate_regime_and_quintile_check.py`
 (read-only), `data/quarterly_growth_rate_regime_and_quintile_check_result.json`.
+
+## D-081 — New entry-timing signal: pullback-from-52-week-high combined with the growth>20% threshold predicts recovery to that high, clearly beating a pullback-only control (2 real bugs found and fixed en route)
+
+**User-directed new line of work**: does a stock trading down from its
+own recent high, while its most recently disclosed quarterly revenue
+growth exceeds the D-080 threshold (~20%/yr), tend to recover to that
+high within 6/12/24 months — evaluated at DAILY resolution (any trading
+day can be an entry point), not just at filing dates. Growth is looked
+up point-in-time-safe: whichever quarter's `availability_date` is most
+recent as of that trading day, never a later one.
+
+**Methodology, stated explicitly**: trailing high = rolling 252-trading-
+day (~1yr) high, not all-time — deliberately different from `inputs_v1.
+_trailing_high_and_price`'s unbounded all-time high, chosen because a
+multi-year-old spike is a much less meaningful recovery target. Uses
+split-ADJUSTED `close`, not `nominal_close` — a genuine, deliberate
+departure from this project's nominal_close convention for EPS/P/E
+work (D-046): this is a pure price-to-its-own-history comparison with
+no EPS involved, and nominal_close would introduce a real distortion
+here (a split between the high date and today makes the two nominal
+prices non-comparable), which adjusted close avoids.
+
+**Bug 1 (scripts/220, 5-company proof): episode flicker.** A naive
+"qualifies today, didn't qualify yesterday" episode boundary produced
+96 "episodes" for just 5 tickers — RKLB alone contributed 4 near-
+identical entries within one 3-week span because pullback hovered a
+fraction of a percent either side of the 15% threshold, causing the
+qualifying flag to flicker daily. **Fixed with hysteresis**: a new
+episode can only start once pullback has meaningfully recovered (below
+half the threshold) since the last one — reduced the same 5-ticker run
+to 47 real, separated episodes.
+
+**Bug 2 (same script): right-censoring of recent entries.** An entry
+from last month cannot yet be known to have "failed" its 24-month
+recovery check — the forward price data simply doesn't reach that far
+yet. The original code silently counted these as non-recoveries,
+identical to a genuine failure. **Fixed**: any horizon whose target
+date exceeds the latest available price data is marked `censored` and
+excluded from the recovered/total denominator, not counted as a no.
+
+**Full ~92-company universe result** (`scripts/221`, every ticker with
+both quarterly revenue and daily price data, full available history,
+15%-pullback / 20%-growth thresholds unchanged from the proof), WITH a
+control group the 5-company proof was missing:
+
+| Group | N (tickers) | 6mo recovery | 12mo recovery | 24mo recovery |
+|---|---|---|---|---|
+| **A: growth>20% AND pullback>=15%** | 136 (32) | 68.8% | 85.1% | 95.5% |
+| **B: pullback>=15% alone (control)** | 707 (91) | 50.6% | 67.1% | 80.6% |
+
+Group A beats the pullback-only control by 15-18 percentage points at
+every single horizon, consistently — the growth condition is adding
+real information beyond "buy any dip," not just riding a general
+market recovery. No formal significance test (proportions test/
+bootstrap) has been run on this gap yet — flagged as the natural next
+step, though the size and horizon-consistency of the gap is already
+suggestive on its own.
+
+**Trend-at-entry split within Group A (user's own hypothesis: does
+accelerating vs. decelerating growth matter at the SAME growth level?)**
+— mixed, not the clean pattern the 5-company proof suggested:
+
+| | N | 6mo | 12mo | 24mo |
+|---|---|---|---|---|
+| Accelerating | 72 | 66.2% | 91.2% | 98.1% |
+| Decelerating | 64 | 71.7% | 78.9% | 92.9% |
+
+Accelerating growth shows a real edge at 12 and 24 months, but is
+LOWER than decelerating at 6 months — the reverse of the 5-company
+proof's finding at that horizon. Directionally supportive at longer
+horizons, not a clean confirmation.
+
+**Caveats carried over from D-079/D-080, unresolved here too**: no
+regime split attempted; not tested against a genuinely different macro
+period; 92 companies is the full available universe, not a larger
+independent sample. This is a NEW methodology (daily entries, absolute
+price-recovery outcome) distinct from D-079/D-080's quarterly-entry,
+relative-excess-return methodology — the two are not directly
+comparable, and this result should be treated with the same "real but
+not yet a system" caution as everything else at quarterly cadence this
+session.
+
+**Operating margin within the growth>20% group** (`scripts/219`, using
+D-079/D-080's quarterly dataset, not the daily pullback mechanism):
+splitting the 96 growth>20% entries by operating margin shows almost no
+difference — profitable (n=60, 17 tickers): mean excess +92.8%/yr,
+median +28.6%, win rate 66.7%; unprofitable (n=26, 10 tickers): mean
++87.7%, median +33.5%, win rate 69.2%. If anything the unprofitable
+subgroup did slightly better on median/win-rate, though n=26 across
+only 10 tickers is too small to trust either direction. Operating
+margin does not appear to add discriminating power within the already-
+validated high-growth group. EBITDA was also requested but is not
+computable — the quarterly engine does not extract depreciation &
+amortization; would need new extraction work, out of scope here.
+
+Files: `scripts/219_high_growth_operating_margin_check.py`,
+`scripts/220_pullback_recovery_proof.py`,
+`scripts/221_pullback_recovery_full_universe.py` (all read-only),
+`data/high_growth_operating_margin_check_result.json`,
+`data/pullback_recovery_proof_result.json`,
+`data/pullback_recovery_full_universe_result.json`.
+
+## D-082 — Companies that beat QQQ despite growth <=20%: not explained by operating margin (goes the WRONG direction), explained by idiosyncratic single-company stories instead
+
+**User-directed follow-up to D-080**: quintiles 1-4 (growth <= ~20%/yr)
+showed a negative MEDIAN excess return in aggregate, but that does not
+mean every entry in that group lost — this finds the 127 individual
+company-quarters (out of 368 in the group, D-079/D-080's own dataset,
+unchanged) that beat QQQ anyway and checks whether operating margin, or
+specific tickers/periods, explain why.
+
+**Operating margin does not explain it, and points the wrong way**:
+winners' average operating margin is **-8.8%** (a LOSS on average);
+losers' average is **+2.5%** (profitable on average). The naive
+expectation — that low-growth companies which still won were the
+"quality" ones (profitable, disciplined) — is not supported; if
+anything the opposite.
+
+**The largest individual winners look driven by company-specific
+stories, not a generalizable factor**: `MSTR` (+400.9%, +340.3% excess
+return on two entries, growth near zero, deeply negative margin) is
+almost certainly explained by its Bitcoin treasury holdings, not its
+software business — a proxy-for-Bitcoin stock, not a growth or value
+story. `RKLB` (+329.0%, +171.1%, margins as low as -79.8%) reads as
+momentum/sentiment-driven re-rating, not the specific quarter's own
+modest growth figure. `WBD` appears as a repeat winner 7 times,
+including quarters with DECLINING revenue (-9.8%, -3.6%), consistent
+with corporate-action-driven moves (spin-off, deleveraging) rather than
+organic business performance.
+
+**Repeat winners** (appeared in 2+ winning low-growth quarters):
+`EBAY` (8), `WBD` (7), `CSCO` (6), `FOX`/`GILD`/`GOOGL`/`NFLX` (5 each)
+— several of these are large, stable, dividend-paying names, suggesting
+some of this group may be capturing a "steady value/stability" pattern
+distinct from both the growth signal and from idiosyncratic single-
+event stories; not investigated further here.
+
+**Practical takeaway**: this does not weaken D-080's growth>20%
+threshold — it reinforces it. The "exceptions" to the rule are not a
+coherent alternative signal waiting to be found; they look like noise
+(company-specific catalysts unrelated to the metrics this project
+tracks), which is exactly what you'd expect around a real but
+imperfect threshold, not evidence the threshold is wrong.
+
+Files: `scripts/222_low_growth_winners_check.py` (read-only),
+`data/low_growth_winners_check_result.json`.
