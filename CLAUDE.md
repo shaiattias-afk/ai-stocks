@@ -5,9 +5,15 @@ Practical working partner for a personal stock-analysis and investment-decision
 system. Respond in clear, direct Hebrew; English technical terms where standard.
 
 ## Goal
-Long-term investment decisions, not trading. The thesis under test: *a strong
+Long-term investment decisions, not trading — user-stated holding horizon is
+**3-5 years minimum** (2026-08-13). The thesis under test: *a strong
 company that is still growing, has corrected in price, but has not broken
-fundamentally.* Primary benchmark: **Nasdaq-100 (QQQ)**.
+fundamentally.* Primary benchmark: **Nasdaq-100 (QQQ)**; success is EXCESS
+RETURN vs QQQ over the hold, not absolute price recovery — a stock that is
+flat while QQQ falls 15% is a win. Every quarterly-cadence finding validated
+so far (D-079 through D-088) is evidence at a 6-24 month forward horizon
+only; none of it has been tested at the actual 3-5 year horizon this
+project is meant to serve (D-088).
 
 ---
 
@@ -181,14 +187,21 @@ failed episodes at the median. Thin sample (n=10 pre-2023) but the
 strongest evidence yet that the rule's headline recovery rates describe
 a strong-market period, not a regime-independent property.
 
-**Proven, entry-timing signal (D-081)** — combining D-080's growth>20%
+**Proven, entry-timing signal (D-081) — headline numbers below use an
+ABSOLUTE metric, not excess return vs QQQ; see D-088's correction.** —
+combining D-080's growth>20%
 threshold with a price pullback (stock down >=15% from its own rolling
 52-week high, entry evaluated at ANY trading day, not just filing
 dates) predicts recovery to that high, clearly beating a pullback-only
 control on the full ~92-company universe: 68.8%/85.1%/95.5% recovery
 within 6/12/24 months (n=136, 32 tickers) vs. 50.6%/67.1%/80.6% for
 pullback alone with no growth filter (n=707, 91 tickers) — a
-consistent 15-18 point gap at every horizon. Operating margin does NOT
+consistent 15-18 point gap at every horizon. **"Recovery" here means the
+stock reclaimed its OWN prior high — not that it beat QQQ.** In a
+falling market a stock can underperform its own old high while still
+beating a QQQ that fell further (or vice versa in a rising market) — see
+D-088 for the corrected, excess-return version of these numbers, and why
+it changes the D-087 regime read substantially. Operating margin does NOT
 add further discrimination within the growth>20% group (D-081) and
 does NOT explain why some growth<=20% companies still won anyway
 (D-082 — if anything the opposite: winners' average margin is
@@ -199,6 +212,44 @@ hypothesis, not a clean confirmation. **Same unresolved regime caveat
 as D-079/D-080, now with concrete (if thin) evidence behind it — see
 D-087 above: 30% vs 90% recovery pre- vs post-2023.** No formal
 significance test run yet on the Group A vs. Group B gap.
+
+**D-088 — corrected to excess return vs QQQ (the user caught the metric
+error directly: "if the market fell 15% and my stock did 0%, that's
+fine").** Re-scored all 136 Group A episodes by forward EXCESS return vs
+QQQ instead of "recovered to own high." Result is more modest but still
+real at 6/12/24 months: beat-QQQ rate is only 53-60% (close to a coin
+flip, NOT the dramatic 68.8-95.5% headline above), BUT the ticker-
+grouped block-bootstrapped MEAN excess return is significantly positive
+at all three horizons (6mo +23.4% CI[+6.9%,+38.7%]; 12mo +49.8%
+CI[+1.3%,+105.5%]; 24mo +108.9% CI[+4.5%,+262.4%] — none cross zero) —
+the edge comes from a skewed payoff (a few big winners), not a high hit
+rate, the same shape as every other asymmetric finding this project has
+measured. **Extending to the user's actual stated investment horizon
+(3-5 years, not 6-24 months) finds almost no usable data yet**: at 36
+months n=18 (13 ticker-groups) and the CI **crosses zero** — not
+confirmed; at 60 months n=2, both `NVDA`, a single ticker-group — a
+spectacular +1317% excess return but statistically meaningless (n=1
+group). **This project currently has no validated signal at the 3-5
+year horizon the user actually wants** — everything proven so far
+(D-079 through D-088) is 6-24 month evidence. This is the same
+structural problem as the P/E finding's 5-year regime lock (D-074): not
+fixable by more analysis, only by more elapsed time.
+
+**New idea, real effect but not yet a usable rule (D-089)** — user's own
+idea: use trading volume to find the exact bottom within a decline, not
+just the 15% pullback trigger. Across 86 full-universe Group A episodes,
+the actual price trough's own volume averaged 1.18x its trailing-20-day
+average and ranked in the top third by volume within its own decline
+window; both a ticker-grouped bootstrap (CI [0.276, 0.388], n=22) and a
+trough-MONTH-grouped bootstrap (CI [0.277, 0.390], n=30 — controlling
+directly for shared macro events, since the April 2025 tariff crash
+alone produced 16 of the 86 troughs) exclude the no-effect value (0.5),
+so the pattern is not just an artifact of a few shared crashes. **But
+this is retrospective** — it says the trough, once you already know
+where it was, tended to have unusually high volume. It does NOT yet show
+volume can trigger a real-time "likely near the bottom" call without
+hindsight; that forward-looking test has not been run and is the natural
+next step if this is pursued.
 
 **Tested and not supported at quarterly cadence** — do not re-propose
 without new evidence: the quarterly composite (D-067) is **conclusively
@@ -221,27 +272,32 @@ see above): Scoring Model V1 composite (D-061/D-062), the value/growth
 two-bucket model (D-066), none of Scoring Inputs V1's 9 factors at 5
 years (D-074). See also `docs/FAILED_APPROACHES.md`.
 
-**Open next step (post-council, D-083 → D-087)** — the placebo test
-(D-083) cleared one concern (the correlation is not pure noise); the
-sector-concentration test (D-084) confirmed a different one (a
-meaningful share of it IS concentration, not a sector-neutral edge); the
-year-split characterization (D-087) turned the long-standing regime
-caveat from a data gap into a concrete, if thin (n=10), warning sign
-(30% vs 90% recovery pre- vs post-2023). This makes (a) below the
-clearest priority now, not just first among equals. Remaining, in rough
-priority order: (a) a genuine walk-forward test — freeze the exact rule
-(growth>20% + pullback>=15%) and score it untouched against new quarters
-as they arrive, the only test not contaminated by having already mined
-all current data; (b) a proper regime split remains data-limited for a
-real statistical test (not just the n=10 characterization above) for
+**Open next step (post-council, D-083 → D-088)** — D-088's two
+corrections (excess return vs QQQ is the real metric; 3-5 years is the
+real horizon) now dominate the priority list, above the items below
+that predate them. In rough priority order: **(0) close the 3-5 year
+horizon gap** — nothing validated so far (D-079-D-088) has been tested
+at the horizon this project is actually meant to serve; the only path is
+elapsed time (more entries becoming 3-5-years-old) or, cheaper and
+available now, extending the SAME excess-return methodology
+(`scripts/227`) to whatever 3+ year-old entries already exist across
+the FULL universe/history (not just Group A's 136 episodes) to enlarge
+the n=18/n=2 samples somewhat — worth trying before concluding nothing
+more can be said; (a) a genuine walk-forward test — freeze the exact
+rule (growth>20% + pullback>=15%) and score it untouched against new
+quarters as they arrive, the only test not contaminated by having
+already mined all current data — should be scored on EXCESS return per
+D-088, not recovery-to-high; (b) a proper regime split remains data-
+limited for a real statistical test (not just the n=10 characterization
+in D-087, itself superseded by D-088's milder corrected version) for
 either the growth-rate or P/E finding; (c) the post-hoc quintile-
 threshold selection (D-080's ~20% cutoff was chosen after seeing the
 data — an uncounted extra degree of freedom, still not permutation-
 tested); (d) D-081's entry-timing signal has no formal significance test
-on its Group A vs. Group B gap yet, and D-084's sector-concentration cut
-has not yet been re-run on the entry-timing (pullback) episodes
-specifically, only on the plain growth-rate correlation. Analyst-
-estimate-revision data was
+on its Group A vs. Group B gap on EXCESS RETURN terms yet (D-088 only
+tested Group A alone), and D-084's sector-concentration cut has not yet
+been re-run on the entry-timing (pullback) episodes specifically, only
+on the plain growth-rate correlation. Analyst-estimate-revision data was
 investigated as a genuinely uncorrelated new data source and found
 impractical for now (enterprise-only pricing, or no confirmed point-in-
 time history at the cheap tiers) — not pursued. EBITDA (D-081) needs new

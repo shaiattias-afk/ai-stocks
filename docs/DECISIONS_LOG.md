@@ -3080,3 +3080,43 @@ Files: none new — pure re-query of `data/pullback_recovery_full_universe_resul
 
 Files: none new — pure re-query of `data/pullback_recovery_full_universe_result.json`
 (already committed in D-081).
+
+## D-088 — Metric correction: D-081/D-085/D-086/D-087 all measured "recovery to own prior high" (absolute), not excess return vs QQQ (the project's actual goal). Corrected version is more modest but still real at 6-24 months; the user's actual stated 3-5 year horizon has almost no usable data yet
+
+**Trigger**: direct user pushback on D-087's "30% vs 90% recovery" framing — "we're looking for excess return over the market; if the market is weak but there's still excess return, that's fine," followed by an explicit example ("the market fell 15%, my stock did 0% — that's fine") and then a statement of the user's actual investment horizon: **3-5 years minimum**, not the 6-24 month windows every quarterly-cadence result this session has used. All three points are correct and expose a real gap: D-081's original "recovery to own 252-day high" metric (and everything built on it since — D-085, D-086, D-087) measures an ABSOLUTE price outcome, not performance relative to QQQ, which is the project's own stated benchmark (`CLAUDE.md` Goal section).
+
+**Method (`scripts/227`)**: re-scored the same 136 Group A episodes (growth>20% AND pullback>=15%, unchanged from D-081) using forward EXCESS return vs QQQ (`backtest_v1._forward_return`, the same helper D-079/D-080/D-083 already used correctly) instead of the recovery-to-high logic, at 6/12/24-month horizons (the ones already computed) plus 36 and 60 months (the user's actual stated horizon, not previously tested by this project at all for this signal).
+
+**Result at 6/12/24 months — real, but much more modest than the absolute framing suggested**:
+
+| Horizon | beat-QQQ rate | mean excess return | 95% CI (ticker-grouped bootstrap) | crosses zero? |
+|---|---|---:|---|---|
+| 6mo | 58% (65/113) | +23.4% | [+6.9%, +38.7%] | no |
+| 12mo | 59% (49/83) | +49.8% | [+1.3%, +105.5%] | no |
+| 24mo | 53% (27/51) | +108.9% | [+4.5%, +262.4%] | no |
+
+The beat-QQQ rate (53-60%) is only modestly above a coin flip — nothing like the 68.8%/85.1%/95.5% "recovery" numbers D-081 headlined. But the ticker-grouped block-bootstrapped MEAN excess return is significantly positive at all three horizons (CI excludes zero at every one) — the edge comes from a skewed payoff (a minority of large winners), not a high win rate, the same asymmetric shape as every other finding this project has measured (the P/E finding, the growth-rate quintiles). **This is a real, if more modest, correction — not a reversal**: the growth+pullback rule does appear to add expected value over QQQ at 6-24 months, just not in the dramatic, near-universal way "recovers to its own high 85-96% of the time" implied.
+
+**Corrected year split (the direct answer to the user's original challenge to D-087)**: pre-2023 entries are NOT catastrophically worse on excess-return terms the way the absolute framing suggested (12mo: 50% beat-QQQ pre-2023 vs 60% post-2023 — a real but much smaller gap than "30% vs 90%"; 24mo: pre-2023 is actually BETTER, 80% vs 46%, though both cells are thin, n=10 and n=41). The absolute "recovery to own high" metric substantially overstated how bad the 2021-2022 period looked, because it ignored that QQQ itself fell hard in that window too.
+
+**At the user's actual stated horizon (3-5 years), the data is critically thin**: 36 months has only 18 episodes (13 independent ticker-groups) and the bootstrapped mean excess return's 95% CI **crosses zero** — not a confirmed result. 60 months has only 2 episodes, both `NVDA` entries from 2021 — a single ticker-group, so no real statistical inference is possible despite an eye-catching +1317.8% raw excess return figure. **This project currently has no validated signal at the 3-5 year horizon it is actually meant to serve.** Every quarterly-cadence result validated this session (D-079 through D-087) is 6-24 month evidence; none of it has been tested at 3-5 years, and the reason is structural (not enough entries are old enough yet to have a determinable 3-5 year forward return), the same underlying limitation already on record for the P/E finding's 5-year regime lock (D-074) — fixable only by the passage of real time, not by more analysis of the existing data.
+
+**Standing correction, recorded in `CLAUDE.md`'s Goal section**: the user's actual holding horizon is 3-5 years minimum, and success is excess return vs QQQ specifically, not absolute price recovery. Both should govern how every future quarterly-cadence result in this project is framed and read.
+
+Files: `scripts/227_pullback_signal_excess_return_check.py` (read-only),
+`data/pullback_signal_excess_return_check_result.json`.
+
+## D-089 — New idea, real but not-yet-usable result: within a decline, the actual price trough tends to fall on an above-average-volume day (capitulation volume), robust even after controlling for shared macro events -- but this is a retrospective characterization, not yet a real-time trigger
+
+**Trigger**: user's own new idea — once a candidate passes the growth+pullback screen, can trading volume be used to estimate the exact BOTTOM of the decline (not just "down >=15%"), i.e. is a change in volume over time ("a derivative of volume") a usable signal for the lowest point of the pullback.
+
+**Method, small proof first (project rule)**: `scripts/228` took 5 known Group A episodes (growth>20%+pullback>=15%, recovered within 12 months) and, for each, found the TRUE trough (lowest close between entry and recovery — the decline usually continues past the 15% trigger), then examined volume in a window around it. Result was genuinely mixed on 5 cases: 2 showed clearly elevated trough-day volume (`AMD` entered 2025-02-05 and 2025-09-05), 2 did not (`ALNY` both episodes, `AMD` entered 2025-11-19) — and 3 of the 5 troughs landed in the exact same week (the April 2025 tariff-driven global selloff), meaning the 5-case sample was really only ~3 independent observations, the same cohort-concentration trap D-063 already taught this project to watch for.
+
+**Scaled to the full pool (`scripts/229`)**: 86 determinable Group A episodes, 22 distinct tickers, 30 distinct trough calendar-months. Raw result: median trough-day volume was **1.18x** the trailing 20-day average, **60% of troughs (52/86) had above-average volume**, and the trough's rank among all days in its own decline window averaged in the **top third by volume** (mean rank-fraction 0.329, median 0.249, where 0.5 = no effect and 0.0 = the single highest-volume day in the window). About half the sample (45/86) clustered into just 5 shared calendar months (April 2025's tariff crash alone accounts for 16), so — following the same discipline D-063 established for the P/E finding — this was tested with a bootstrap grouped by TICKER (95% CI [0.276, 0.388], n=22 groups) and, separately, grouped by TROUGH-MONTH to directly control for shared macro events (95% CI [0.277, 0.390], n=30 groups). **Both exclude 0.5 clearly** — the effect survives controlling for the shared-crash confound, not just an artifact of a few big macro events being overcounted.
+
+**What this DOES and does NOT show**: this is a real, statistically supported RETROSPECTIVE pattern — once you already know where a decline bottomed (because you can see the subsequent recovery), that day tends to have had unusually high volume. It does **NOT** yet show that volume can be used as a real-time trigger to identify the bottom AS IT HAPPENS, without hindsight — a genuinely useful version of this idea would need a forward-looking rule (e.g., "treat a volume-ratio spike above some threshold as a likely-near-bottom signal") tested for how close its trigger dates land to the true trough, and whether it improves entry price versus just buying at the 15%-pullback trigger already in use. That test has not been run. Flagged as the natural next step if this line is pursued further.
+
+Files: `scripts/228_volume_climax_at_trough_proof.py`,
+`data/volume_climax_at_trough_proof_result.json`,
+`scripts/229_volume_climax_at_trough_full_universe.py` (both read-only),
+`data/volume_climax_at_trough_full_universe_result.json`.

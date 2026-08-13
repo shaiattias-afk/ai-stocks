@@ -1,0 +1,5575 @@
+{
+  "n_episodes": 136,
+  "results_by_horizon": {
+    "6mo": {
+      "pre_2023": {
+        "n": 10,
+        "median_excess_return": -0.06783256764115536,
+        "mean_excess_return": 0.06657941754905844,
+        "n_beat_qqq": 4,
+        "beat_qqq_rate": 0.4
+      },
+      "post_2023": {
+        "n": 103,
+        "median_excess_return": 0.09689111711954213,
+        "mean_excess_return": 0.24993596477662042,
+        "n_beat_qqq": 61,
+        "beat_qqq_rate": 0.5922330097087378
+      },
+      "all": {
+        "n": 113,
+        "median_excess_return": 0.08579979235194823,
+        "mean_excess_return": 0.2337097216591371,
+        "n_beat_qqq": 65,
+        "beat_qqq_rate": 0.5752212389380531
+      }
+    },
+    "12mo": {
+      "pre_2023": {
+        "n": 10,
+        "median_excess_return": -0.03071778591801627,
+        "mean_excess_return": 0.031468808503319734,
+        "n_beat_qqq": 5,
+        "beat_qqq_rate": 0.5
+      },
+      "post_2023": {
+        "n": 73,
+        "median_excess_return": 0.08901085701269817,
+        "mean_excess_return": 0.5622261110009485,
+        "n_beat_qqq": 44,
+        "beat_qqq_rate": 0.6027397260273972
+      },
+      "all": {
+        "n": 83,
+        "median_excess_return": 0.06145628671283632,
+        "mean_excess_return": 0.498279448049427,
+        "n_beat_qqq": 49,
+        "beat_qqq_rate": 0.5903614457831325
+      }
+    },
+    "24mo": {
+      "pre_2023": {
+        "n": 10,
+        "median_excess_return": 0.39614119162764627,
+        "mean_excess_return": 0.4465983741009719,
+        "n_beat_qqq": 8,
+        "beat_qqq_rate": 0.8
+      },
+      "post_2023": {
+        "n": 41,
+        "median_excess_return": -0.04446169189895599,
+        "mean_excess_return": 1.2459102925466838,
+        "n_beat_qqq": 19,
+        "beat_qqq_rate": 0.4634146341463415
+      },
+      "all": {
+        "n": 51,
+        "median_excess_return": 0.08349813305568454,
+        "mean_excess_return": 1.0891824654004658,
+        "n_beat_qqq": 27,
+        "beat_qqq_rate": 0.5294117647058824
+      }
+    },
+    "36mo": {
+      "pre_2023": {
+        "n": 10,
+        "median_excess_return": 0.6641203676781954,
+        "mean_excess_return": 1.9761729253452451,
+        "n_beat_qqq": 9,
+        "beat_qqq_rate": 0.9
+      },
+      "post_2023": {
+        "n": 8,
+        "median_excess_return": -0.1848263753097148,
+        "mean_excess_return": -0.25134378388292045,
+        "n_beat_qqq": 4,
+        "beat_qqq_rate": 0.5
+      },
+      "all": {
+        "n": 18,
+        "median_excess_return": 0.6641203676781954,
+        "mean_excess_return": 0.9861654990216161,
+        "n_beat_qqq": 13,
+        "beat_qqq_rate": 0.7222222222222222
+      }
+    },
+    "60mo": {
+      "pre_2023": {
+        "n": 2,
+        "median_excess_return": 13.17840407756412,
+        "mean_excess_return": 13.17840407756412,
+        "n_beat_qqq": 2,
+        "beat_qqq_rate": 1.0
+      },
+      "post_2023": {
+        "n": 0
+      },
+      "all": {
+        "n": 2,
+        "median_excess_return": 13.17840407756412,
+        "mean_excess_return": 13.17840407756412,
+        "n_beat_qqq": 2,
+        "beat_qqq_rate": 1.0
+      }
+    }
+  },
+  "mean_excess_return_bootstrap": {
+    "6mo": {
+      "observed_mean": 0.2337097216591371,
+      "ci_95_low": 0.06940660016153942,
+      "ci_95_high": 0.3865072020068362,
+      "ci_95_crosses_zero": false,
+      "n_groups": 30
+    },
+    "12mo": {
+      "observed_mean": 0.498279448049427,
+      "ci_95_low": 0.012544111929145436,
+      "ci_95_high": 1.0551282201662215,
+      "ci_95_crosses_zero": false,
+      "n_groups": 28
+    },
+    "24mo": {
+      "observed_mean": 1.0891824654004658,
+      "ci_95_low": 0.04517107318607227,
+      "ci_95_high": 2.624434902438498,
+      "ci_95_crosses_zero": false,
+      "n_groups": 19
+    },
+    "36mo": {
+      "observed_mean": 0.9861654990216161,
+      "ci_95_low": -0.5313732059572998,
+      "ci_95_high": 2.3811200759586395,
+      "ci_95_crosses_zero": true,
+      "n_groups": 13
+    },
+    "60mo": {
+      "observed_mean": 13.17840407756412,
+      "ci_95_low": 13.17840407756412,
+      "ci_95_high": 13.17840407756412,
+      "ci_95_crosses_zero": false,
+      "n_groups": 1
+    }
+  },
+  "episodes": [
+    {
+      "ticker": "ALNY",
+      "entry_date": "2025-02-18",
+      "pullback": 0.16819161485972067,
+      "growth_as_of_entry": 0.3489691120217957,
+      "trend_as_of_entry": 0.6815487557402347,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 71,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 71,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 71,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.82747998046875,
+          "qqq_return": 0.07276977080811742,
+          "excess_return": 0.7547102096606326
+        },
+        "12mo": {
+          "stock_return": 0.330719970703125,
+          "qqq_return": 0.1288398769091581,
+          "excess_return": 0.20188009379396687
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "ALNY",
+      "entry_date": "2025-04-04",
+      "pullback": 0.21563794687108248,
+      "growth_as_of_entry": 0.3489691120217957,
+      "trend_as_of_entry": 0.6815487557402347,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 38,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 38,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 38,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.9173665456332867,
+          "qqq_return": 0.4410718262268378,
+          "excess_return": 0.47629471940644885
+        },
+        "12mo": {
+          "stock_return": 0.4012895081037475,
+          "qqq_return": 0.3990788339682989,
+          "excess_return": 0.0022106741354486203
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "ALNY",
+      "entry_date": "2025-12-09",
+      "pullback": 0.154737204463859,
+      "growth_as_of_entry": 1.4934690039707017,
+      "trend_as_of_entry": 1.3209020354563228,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.28303747846199523,
+          "qqq_return": 0.1353262610221464,
+          "excess_return": -0.41836373948414163
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2025-02-05",
+      "pullback": 0.4701012416083159,
+      "growth_as_of_entry": 0.24156939040207526,
+      "trend_as_of_entry": 0.0658797352296614,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 168,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 168,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.5562002877795846,
+          "qqq_return": 0.06621556042269239,
+          "excess_return": 0.48998472735689225
+        },
+        "12mo": {
+          "stock_return": 0.7185965211024172,
+          "qqq_return": 0.13895413720766348,
+          "excess_return": 0.5796423838947538
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2025-09-05",
+      "pullback": 0.1804576461865562,
+      "growth_as_of_entry": 0.31705227077977716,
+      "trend_as_of_entry": -0.041982993243610434,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 21,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 21,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 21,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.31963740739503077,
+          "qqq_return": 0.05961410542058876,
+          "excess_return": 0.260023301974442
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2025-11-19",
+      "pullback": 0.1542767963988032,
+      "growth_as_of_entry": 0.355917289925209,
+      "trend_as_of_entry": 0.038865019145431834,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 100,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 100,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 100,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.8521582739460087,
+          "qqq_return": 0.17245339060981468,
+          "excess_return": 0.679704883336194
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2026-02-04",
+      "pullback": 0.2426511837064087,
+      "growth_as_of_entry": 0.3410812222512405,
+      "trend_as_of_entry": -0.0148360676739685,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 49,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 49,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 49,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 1.5904391366478317,
+          "qqq_return": 0.19778645661058847,
+          "excess_return": 1.3926526800372432
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2026-06-10",
+      "pullback": 0.16611373293216247,
+      "growth_as_of_entry": 0.3410812222512405,
+      "trend_as_of_entry": -0.0148360676739685,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 3,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 3,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 3,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2026-07-28",
+      "pullback": 0.21740025798442028,
+      "growth_as_of_entry": 0.3410812222512405,
+      "trend_as_of_entry": -0.0148360676739685,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2023-12-04",
+      "pullback": 0.15087479306718402,
+      "growth_as_of_entry": 0.2119719702313423,
+      "trend_as_of_entry": 0.24555218024614456,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 33,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 33,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 33,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 1.1846401317392519,
+          "qqq_return": 0.18067740614062733,
+          "excess_return": 1.0039627255986245
+        },
+        "12mo": {
+          "stock_return": 9.000000612474826,
+          "qqq_return": 0.36376273465244435,
+          "excess_return": 8.636237877822381
+        },
+        "24mo": {
+          "stock_return": 17.297566198575975,
+          "qqq_return": 0.6323187131893342,
+          "excess_return": 16.66524748538664
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2024-08-02",
+      "pullback": 0.21846922572274696,
+      "growth_as_of_entry": 0.4790433390876496,
+      "trend_as_of_entry": 0.12171527600412624,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 13,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 13,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 13,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 4.317811349678948,
+          "qqq_return": 0.1580496076628779,
+          "excess_return": 4.1597617420160695
+        },
+        "12mo": {
+          "stock_return": 4.74810830542624,
+          "qqq_return": 0.26414218886084995,
+          "excess_return": 4.48396611656539
+        },
+        "24mo": {
+          "stock_return": 4.910360833051709,
+          "qqq_return": 0.5764055121946594,
+          "excess_return": 4.33395532085705
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2024-12-10",
+      "pullback": 0.20034869848419987,
+      "growth_as_of_entry": 0.3864352691795023,
+      "trend_as_of_entry": -0.05340663226884579,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 43,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 43,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 43,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.19482336095624397,
+          "qqq_return": 0.029330229370002847,
+          "excess_return": 0.16549313158624113
+        },
+        "12mo": {
+          "stock_return": 1.19049409656999,
+          "qqq_return": 0.21205749682740094,
+          "excess_return": 0.978436599742589
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2025-02-21",
+      "pullback": 0.1858742015106539,
+      "growth_as_of_entry": 0.3864352691795023,
+      "trend_as_of_entry": -0.05340663226884579,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 136,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 136,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.008307077188876244,
+          "qqq_return": 0.07351278694656127,
+          "excess_return": -0.06520570975768503
+        },
+        "12mo": {
+          "stock_return": -0.08352797343028573,
+          "qqq_return": 0.1489888494085745,
+          "excess_return": -0.23251682283886022
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2025-10-06",
+      "pullback": 0.18306563594202416,
+      "growth_as_of_entry": 0.44008723738829136,
+      "trend_as_of_entry": 0.053651968208789036,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 45,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 45,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 45,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.29696764450463164,
+          "qqq_return": -0.029140110502673067,
+          "excess_return": -0.2678275340019586
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2026-01-02",
+      "pullback": 0.15714281910879682,
+      "growth_as_of_entry": 0.44008723738829136,
+      "trend_as_of_entry": 0.053651968208789036,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.1475934931501779,
+          "qqq_return": 0.16499634043941658,
+          "excess_return": -0.31258983358959447
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "AVGO",
+      "entry_date": "2025-03-12",
+      "pullback": 0.22308001708984376,
+      "growth_as_of_entry": 0.6731351654514863,
+      "trend_as_of_entry": 0.6322617052051258,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 57,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 57,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 57,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.8627839509743322,
+          "qqq_return": 0.23331946685418314,
+          "excess_return": 0.6294644841201491
+        },
+        "12mo": {
+          "stock_return": 0.7453841718552574,
+          "qqq_return": 0.2586788139860494,
+          "excess_return": 0.486705357869208
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "AVGO",
+      "entry_date": "2025-12-15",
+      "pullback": 0.17715573394158127,
+      "growth_as_of_entry": 0.797205948625507,
+      "trend_as_of_entry": 0.07912510584524823,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 87,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 87,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 87,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.16394962809902425,
+          "qqq_return": 0.22170196661235897,
+          "excess_return": -0.05775233851333472
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "AVGO",
+      "entry_date": "2026-06-05",
+      "pullback": 0.19901570878637798,
+      "growth_as_of_entry": 0.9381387842926305,
+      "trend_as_of_entry": 0.14093283566712356,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "AXON",
+      "entry_date": "2023-08-08",
+      "pullback": 0.22766230092588183,
+      "growth_as_of_entry": 0.31158245598064505,
+      "trend_as_of_entry": -0.02620310398597292,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 65,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 65,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 65,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.5307574491555307,
+          "qqq_return": 0.1680394801354801,
+          "excess_return": 0.3627179690200506
+        },
+        "12mo": {
+          "stock_return": 1.0967393183481189,
+          "qqq_return": 0.21280161288680133,
+          "excess_return": 0.8839377054613176
+        },
+        "24mo": {
+          "stock_return": 3.7942868063700175,
+          "qqq_return": 0.5639250963189701,
+          "excess_return": 3.2303617100510476
+        },
+        "36mo": {
+          "stock_return": 2.3671828443727647,
+          "qqq_return": 0.9716586261047739,
+          "excess_return": 1.3955242182679908
+        },
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "AXON",
+      "entry_date": "2023-09-25",
+      "pullback": 0.1507053727864428,
+      "growth_as_of_entry": 0.31158245598064505,
+      "trend_as_of_entry": -0.02620310398597292,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 32,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 32,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 32,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.6325294569082538,
+          "qqq_return": 0.2415461548788036,
+          "excess_return": 0.3909833020294502
+        },
+        "12mo": {
+          "stock_return": 1.045435719984015,
+          "qqq_return": 0.3602292174771644,
+          "excess_return": 0.6852065025068506
+        },
+        "24mo": {
+          "stock_return": 2.685313621248345,
+          "qqq_return": 0.6707713401072903,
+          "excess_return": 2.014542281141055
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "AXON",
+      "entry_date": "2024-06-04",
+      "pullback": 0.15694057846661005,
+      "growth_as_of_entry": 0.2855935884239398,
+      "trend_as_of_entry": -0.04109668660059884,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 44,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 44,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 44,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 1.488559885636973,
+          "qqq_return": 0.15506803768718025,
+          "excess_return": 1.3334918479497928
+        },
+        "12mo": {
+          "stock_return": 1.8238360602162569,
+          "qqq_return": 0.17085647633443823,
+          "excess_return": 1.6529795838818186
+        },
+        "24mo": {
+          "stock_return": 0.8579393597097924,
+          "qqq_return": 0.6478721785104655,
+          "excess_return": 0.21006718119932688
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "AXON",
+      "entry_date": "2025-01-06",
+      "pullback": 0.172620259020245,
+      "growth_as_of_entry": 0.2855935884239398,
+      "trend_as_of_entry": -0.04109668660059884,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 28,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 28,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 28,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.4055473747803997,
+          "qqq_return": 0.05516100652302214,
+          "excess_return": 0.35038636825737757
+        },
+        "12mo": {
+          "stock_return": 0.09801825846346612,
+          "qqq_return": 0.19453564275712432,
+          "excess_return": -0.09651738429365819
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "AXON",
+      "entry_date": "2025-02-19",
+      "pullback": 0.16420899036896006,
+      "growth_as_of_entry": 0.2855935884239398,
+      "trend_as_of_entry": -0.04109668660059884,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 58,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 58,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 58,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.27783020434980665,
+          "qqq_return": 0.05792055843895483,
+          "excess_return": 0.21990964591085183
+        },
+        "12mo": {
+          "stock_return": -0.2566478921826718,
+          "qqq_return": 0.12420407028673819,
+          "excess_return": -0.38085196246941
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "AXON",
+      "entry_date": "2025-09-03",
+      "pullback": 0.16726178579747739,
+      "growth_as_of_entry": 0.2855935884239398,
+      "trend_as_of_entry": -0.04109668660059884,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.20157448138124312,
+          "qqq_return": 0.05785852766447919,
+          "excess_return": -0.2594330090457223
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "BKNG",
+      "entry_date": "2023-10-26",
+      "pullback": 0.1542763883785128,
+      "growth_as_of_entry": 0.27200745225896594,
+      "trend_as_of_entry": -0.1298478353106074,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 30,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 30,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 30,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.2870903633586228,
+          "qqq_return": 0.25897506455355646,
+          "excess_return": 0.028115298805066358
+        },
+        "12mo": {
+          "stock_return": 0.5965636724328693,
+          "qqq_return": 0.4514278470779929,
+          "excess_return": 0.14513582535487646
+        },
+        "24mo": {
+          "stock_return": 0.9434120826842973,
+          "qqq_return": 0.8501159347589549,
+          "excess_return": 0.09329614792534247
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2022-08-31",
+      "pullback": 0.3771403057087379,
+      "growth_as_of_entry": 0.5847463650093281,
+      "trend_as_of_entry": -0.026101500056068927,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 348,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.33908328110172115,
+          "qqq_return": -0.014964327433377722,
+          "excess_return": -0.3241189536683434
+        },
+        "12mo": {
+          "stock_return": -0.10722305331367898,
+          "qqq_return": 0.2720451571422615,
+          "excess_return": -0.3792682104559405
+        },
+        "24mo": {
+          "stock_return": 0.45994198133967346,
+          "qqq_return": 0.5648483969471552,
+          "excess_return": -0.1049064156074817
+        },
+        "36mo": {
+          "stock_return": 1.2643885801321226,
+          "qqq_return": 0.9274272752892672,
+          "excess_return": 0.33696130484285547
+        },
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2024-04-19",
+      "pullback": 0.15516357805594946,
+      "growth_as_of_entry": 0.3262923872745216,
+      "trend_as_of_entry": -0.026846460202246458,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 18,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 18,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 18,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.0952093537710974,
+          "qqq_return": 0.19837148855805098,
+          "excess_return": -0.10316213478695357
+        },
+        "12mo": {
+          "stock_return": 0.2832224159503358,
+          "qqq_return": 0.05090392493112428,
+          "excess_return": 0.23231849101921154
+        },
+        "24mo": {
+          "stock_return": 0.5325147588718431,
+          "qqq_return": 0.5769764507707991,
+          "excess_return": -0.04446169189895599
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2024-07-19",
+      "pullback": 0.22233840060806362,
+      "growth_as_of_entry": 0.32986225418002246,
+      "trend_as_of_entry": 0.0035698669055008736,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 131,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 131,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.2015018819807486,
+          "qqq_return": 0.10761918530632975,
+          "excess_return": 0.09388269667441884
+        },
+        "12mo": {
+          "stock_return": 0.5791579225670471,
+          "qqq_return": 0.1938265830660142,
+          "excess_return": 0.38533133950103293
+        },
+        "24mo": {
+          "stock_return": 1.603489127161816,
+          "qqq_return": 0.4800096606044342,
+          "excess_return": 1.1234794665573817
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2025-02-25",
+      "pullback": 0.1660444215211126,
+      "growth_as_of_entry": 0.28519084901795644,
+      "trend_as_of_entry": -0.03224729560784967,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 62,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 62,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 62,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.10290977372551846,
+          "qqq_return": 0.1139484085272251,
+          "excess_return": -0.011038634801706637
+        },
+        "12mo": {
+          "stock_return": -0.04329164566532262,
+          "qqq_return": 0.20744865439199534,
+          "excess_return": -0.25074030005731796
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2025-08-29",
+      "pullback": 0.17584121313344606,
+      "growth_as_of_entry": 0.21276684041034488,
+      "trend_as_of_entry": 0.014731150165881113,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 38,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 38,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 38,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.09166869420926627,
+          "qqq_return": 0.06868742366116742,
+          "excess_return": -0.1603561178704337
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2025-12-17",
+      "pullback": 0.15696022758373354,
+      "growth_as_of_entry": 0.22180843376117876,
+      "trend_as_of_entry": 0.009041593350833876,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 100,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 100,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 100,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.45304463200774725,
+          "qqq_return": 0.206430748687217,
+          "excess_return": 0.24661388332053025
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2026-06-08",
+      "pullback": 0.15774065430606599,
+      "growth_as_of_entry": 0.23318671601775276,
+      "trend_as_of_entry": 0.011378282256574002,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 18,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 18,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 18,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2023-08-21",
+      "pullback": 0.15629477143203122,
+      "growth_as_of_entry": 0.32649253731343286,
+      "trend_as_of_entry": -0.07117229785140222,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 53,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 53,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 53,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.4972585473373563,
+          "qqq_return": 0.17422922767002835,
+          "excess_return": 0.32302931966732795
+        },
+        "12mo": {
+          "stock_return": 0.6899477745025828,
+          "qqq_return": 0.33506384709224446,
+          "excess_return": 0.35488392741033836
+        },
+        "24mo": {
+          "stock_return": 2.2007832579606905,
+          "qqq_return": 0.5673766798829418,
+          "excess_return": 1.6334065780777487
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2023-09-21",
+      "pullback": 0.16719903240555672,
+      "growth_as_of_entry": 0.32649253731343286,
+      "trend_as_of_entry": -0.07117229785140222,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 31,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 31,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 31,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.8087553683753375,
+          "qqq_return": 0.2507310383595214,
+          "excess_return": 0.5580243300158161
+        },
+        "12mo": {
+          "stock_return": 0.8451262184983503,
+          "qqq_return": 0.3590594432307883,
+          "excess_return": 0.48606677526756203
+        },
+        "24mo": {
+          "stock_return": 2.4750694072078554,
+          "qqq_return": 0.7034665817348105,
+          "excess_return": 1.771602825473045
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2024-05-02",
+      "pullback": 0.18900319238340124,
+      "growth_as_of_entry": 0.2667766776677667,
+      "trend_as_of_entry": -0.0054161500806166885,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 99,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 99,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 99,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.3755577714238423,
+          "qqq_return": 0.14187516414631984,
+          "excess_return": 0.23368260727752244
+        },
+        "12mo": {
+          "stock_return": 0.7941562480811382,
+          "qqq_return": 0.1520681893657061,
+          "excess_return": 0.6420880587154321
+        },
+        "24mo": {
+          "stock_return": 0.5096667921435456,
+          "qqq_return": 0.593510983966296,
+          "excess_return": -0.08384419182275038
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2025-03-06",
+      "pullback": 0.15591903416973255,
+      "growth_as_of_entry": 0.2667766776677667,
+      "trend_as_of_entry": -0.0054161500806166885,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 61,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 61,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 61,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.39137196854305456,
+          "qqq_return": 0.18882487261102177,
+          "excess_return": 0.2025470959320328
+        },
+        "12mo": {
+          "stock_return": -0.005219046350679046,
+          "qqq_return": 0.2347227532304843,
+          "excess_return": -0.23994179958116335
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2025-04-03",
+      "pullback": 0.18460023661205405,
+      "growth_as_of_entry": 0.2667766776677667,
+      "trend_as_of_entry": -0.0054161500806166885,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 41,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 41,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 41,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.5588251776413626,
+          "qqq_return": 0.34149352869446026,
+          "excess_return": 0.21733164894690238
+        },
+        "12mo": {
+          "stock_return": -0.10874186776026429,
+          "qqq_return": 0.3121835013299423,
+          "excess_return": -0.4209253690902066
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2025-05-07",
+      "pullback": 0.17054081243288793,
+      "growth_as_of_entry": 0.2667766776677667,
+      "trend_as_of_entry": -0.0054161500806166885,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 18,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 18,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 18,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.15435895371213415,
+          "qqq_return": 0.2644991467736675,
+          "excess_return": -0.11014019306153333
+        },
+        "12mo": {
+          "stock_return": -0.0318662026928197,
+          "qqq_return": 0.4448662071874274,
+          "excess_return": -0.4767324098802471
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2025-11-05",
+      "pullback": 0.15524949155421067,
+      "growth_as_of_entry": 0.2667766776677667,
+      "trend_as_of_entry": -0.0054161500806166885,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.3019327756737461,
+          "qqq_return": 0.09637515964914778,
+          "excess_return": -0.3983079353228939
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2023-08-09",
+      "pullback": 0.2632472778332468,
+      "growth_as_of_entry": 0.2544012133806737,
+      "trend_as_of_entry": -0.07252493597337417,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 80,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 80,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 80,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.554979257034524,
+          "qqq_return": 0.1926493047725404,
+          "excess_return": 0.3623299522619836
+        },
+        "12mo": {
+          "stock_return": 0.2941447212391135,
+          "qqq_return": 0.2326884345262772,
+          "excess_return": 0.06145628671283632
+        },
+        "24mo": {
+          "stock_return": 0.4849008605228702,
+          "qqq_return": 0.5766323362802461,
+          "excess_return": -0.09173147575737595
+        },
+        "36mo": {
+          "stock_return": 1.8683724583085168,
+          "qqq_return": 0.9935774000099926,
+          "excess_return": 0.8747950582985242
+        },
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2024-05-07",
+      "pullback": 0.17443990771430165,
+      "growth_as_of_entry": 0.2561786454594066,
+      "trend_as_of_entry": 0.0018954641191641919,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 138,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 138,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.1547152270834271,
+          "qqq_return": 0.16978322533905366,
+          "excess_return": -0.015067998255626547
+        },
+        "12mo": {
+          "stock_return": -0.05676160850712775,
+          "qqq_return": 0.10431978053875124,
+          "excess_return": -0.161081389045879
+        },
+        "24mo": {
+          "stock_return": 0.6790924658847624,
+          "qqq_return": 0.5955943328290778,
+          "excess_return": 0.08349813305568454
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2024-07-30",
+      "pullback": 0.15769368016007665,
+      "growth_as_of_entry": 0.26891267432542953,
+      "trend_as_of_entry": 0.012734028866022928,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 81,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 81,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 81,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.24354726395928727,
+          "qqq_return": 0.14665614683974515,
+          "excess_return": 0.09689111711954213
+        },
+        "12mo": {
+          "stock_return": 0.2982211762000946,
+          "qqq_return": 0.24849923291805354,
+          "excess_return": 0.04972194328204105
+        },
+        "24mo": {
+          "stock_return": 1.3418206910004078,
+          "qqq_return": 0.5096683598950875,
+          "excess_return": 0.8321523311053203
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2024-12-31",
+      "pullback": 0.15274233880285318,
+      "growth_as_of_entry": 0.2602203325443442,
+      "trend_as_of_entry": -0.006373708204684192,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 213,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 213,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.0599062047390132,
+          "qqq_return": 0.08186753447804396,
+          "excess_return": -0.14177373921705716
+        },
+        "12mo": {
+          "stock_return": -0.048288851045962256,
+          "qqq_return": 0.2077254825855681,
+          "excess_return": -0.25601433363153037
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2025-11-20",
+      "pullback": 0.20103141223254908,
+      "growth_as_of_entry": 0.2835224110745258,
+      "trend_as_of_entry": 0.0022781740855644106,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 115,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 115,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 115,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.33007454879618425,
+          "qqq_return": 0.22077150249014332,
+          "excess_return": 0.10930304630604093
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2026-06-05",
+      "pullback": 0.1563299259457381,
+      "growth_as_of_entry": 0.2920687462977498,
+      "trend_as_of_entry": 0.00854633522322401,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 40,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 40,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 40,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2026-08-06",
+      "pullback": 0.20426861654384262,
+      "growth_as_of_entry": 0.2920687462977498,
+      "trend_as_of_entry": 0.00854633522322401,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "DXCM",
+      "entry_date": "2023-08-08",
+      "pullback": 0.20111644825198188,
+      "growth_as_of_entry": 0.25150818730249935,
+      "trend_as_of_entry": 0.07227790740428053,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 158,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 158,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.15300844211630626,
+          "qqq_return": 0.1680394801354801,
+          "excess_return": -0.015031038019173826
+        },
+        "12mo": {
+          "stock_return": -0.35112080573716054,
+          "qqq_return": 0.21280161288680133,
+          "excess_return": -0.5639224186239619
+        },
+        "24mo": {
+          "stock_return": -0.284327081739693,
+          "qqq_return": 0.5639250963189701,
+          "excess_return": -0.8482521780586632
+        },
+        "36mo": {
+          "stock_return": -0.2039659279930296,
+          "qqq_return": 0.9716586261047739,
+          "excess_return": -1.1756245540978036
+        },
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "DXCM",
+      "entry_date": "2024-02-13",
+      "pullback": 0.15152610024138824,
+      "growth_as_of_entry": 0.26901373895976444,
+      "trend_as_of_entry": 0.002121847067872551,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 28,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 28,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 28,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.393147078664841,
+          "qqq_return": 0.08255244843814236,
+          "excess_return": -0.47569952710298335
+        },
+        "12mo": {
+          "stock_return": -0.28146631449195125,
+          "qqq_return": 0.2579271017894782,
+          "excess_return": -0.5393934162814294
+        },
+        "24mo": {
+          "stock_return": -0.4016918963221142,
+          "qqq_return": 0.4200625852977449,
+          "excess_return": -0.8217544816198591
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "DXCM",
+      "entry_date": "2024-05-30",
+      "pullback": 0.15699534283713099,
+      "growth_as_of_entry": 0.2420768712070127,
+      "trend_as_of_entry": -0.026936867752751725,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.3301520562796715,
+          "qqq_return": 0.14457806272268914,
+          "excess_return": -0.4747301190023606
+        },
+        "12mo": {
+          "stock_return": -0.2753378214019334,
+          "qqq_return": 0.15664461178459854,
+          "excess_return": -0.43198243318653196
+        },
+        "24mo": {
+          "stock_return": -0.3676520119789225,
+          "qqq_return": 0.6629322710144403,
+          "excess_return": -1.0305842829933627
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "DXCM",
+      "entry_date": "2025-10-30",
+      "pullback": 0.24848488211303374,
+      "growth_as_of_entry": 0.21635485817742905,
+      "trend_as_of_entry": 0.06420908500208311,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.12683281668980473,
+          "qqq_return": 0.06931289654969297,
+          "excess_return": -0.1961457132394977
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "ENPH",
+      "entry_date": "2023-07-27",
+      "pullback": 0.503571419488816,
+      "growth_as_of_entry": 0.34123607118876786,
+      "trend_as_of_entry": -0.30396937101276755,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.34550362007445523,
+          "qqq_return": 0.14134174470292882,
+          "excess_return": -0.48684536477738405
+        },
+        "12mo": {
+          "stock_return": -0.31822542481959093,
+          "qqq_return": 0.2402459103771637,
+          "excess_return": -0.5584713351967546
+        },
+        "24mo": {
+          "stock_return": -0.7904676251588886,
+          "qqq_return": 0.5275066642361879,
+          "excess_return": -1.3179742893950763
+        },
+        "36mo": {
+          "stock_return": -0.7721223163902535,
+          "qqq_return": 0.8427867666196978,
+          "excess_return": -1.6149090830099513
+        },
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "FOX",
+      "entry_date": "2026-08-06",
+      "pullback": 0.18285128119441005,
+      "growth_as_of_entry": 0.2814116215393976,
+      "trend_as_of_entry": 0.3676619075151468,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "FTNT",
+      "entry_date": "2023-08-07",
+      "pullback": 0.281265550070991,
+      "growth_as_of_entry": 0.25502378409863113,
+      "trend_as_of_entry": -0.06703319118415063,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 296,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.21369147059486604,
+          "qqq_return": 0.15596757889976876,
+          "excess_return": 0.057723891695097285
+        },
+        "12mo": {
+          "stock_return": 0.2119583948097905,
+          "qqq_return": 0.1667965435104255,
+          "excess_return": 0.04516185129936501
+        },
+        "24mo": {
+          "stock_return": 0.30502603216814506,
+          "qqq_return": 0.5362972950471405,
+          "excess_return": -0.23127126287899546
+        },
+        "36mo": {
+          "stock_return": 1.7667243895806801,
+          "qqq_return": 0.9607525861023061,
+          "excess_return": 0.805971803478374
+        },
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "ISRG",
+      "entry_date": "2025-03-07",
+      "pullback": 0.1510197405158548,
+      "growth_as_of_entry": 0.2516205984545974,
+      "trend_as_of_entry": 0.08278421604936703,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.09311930084563125,
+          "qqq_return": 0.1801466726948826,
+          "excess_return": -0.27326597354051385
+        },
+        "12mo": {
+          "stock_return": -0.04765949859454033,
+          "qqq_return": 0.24207958945448982,
+          "excess_return": -0.28973908804903015
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "ISRG",
+      "entry_date": "2025-07-23",
+      "pullback": 0.1777377309040052,
+      "growth_as_of_entry": 0.21399074580824906,
+      "trend_as_of_entry": 0.022093993454499028,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.04390871100975935,
+          "qqq_return": 0.10719057493337192,
+          "excess_return": -0.06328186392361257
+        },
+        "12mo": {
+          "stock_return": -0.3385397331622557,
+          "qqq_return": 0.23320378449823775,
+          "excess_return": -0.5717435176604935
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "ISRG",
+      "entry_date": "2026-01-29",
+      "pullback": 0.16587233091551934,
+      "growth_as_of_entry": 0.22913497865659194,
+      "trend_as_of_entry": 0.015144232848342876,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.3043049658242801,
+          "qqq_return": 0.05379864949348234,
+          "excess_return": -0.35810361531776247
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "KLAC",
+      "entry_date": "2025-01-31",
+      "pullback": 0.1727013280370308,
+      "growth_as_of_entry": 0.23731002128903622,
+      "trend_as_of_entry": 0.05183102209172086,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 93,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 93,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 93,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.1962729015843836,
+          "qqq_return": 0.08462374983267518,
+          "excess_return": 0.11164915175170842
+        },
+        "12mo": {
+          "stock_return": 0.926887769161246,
+          "qqq_return": 0.20491600917027775,
+          "excess_return": 0.7219717599909683
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "LCID",
+      "entry_date": "2023-08-07",
+      "pullback": 0.6613840600066178,
+      "growth_as_of_entry": 0.5500328758116215,
+      "trend_as_of_entry": -1.0408990704389203,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.47269890730642494,
+          "qqq_return": 0.15596757889976876,
+          "excess_return": -0.6286664862061937
+        },
+        "12mo": {
+          "stock_return": -0.5460218241156716,
+          "qqq_return": 0.1667965435104255,
+          "excess_return": -0.7128183676260971
+        },
+        "24mo": {
+          "stock_return": -0.6614664386973375,
+          "qqq_return": 0.5362972950471405,
+          "excess_return": -1.197763733744478
+        },
+        "36mo": {
+          "stock_return": -0.8901716048449632,
+          "qqq_return": 0.9607525861023061,
+          "excess_return": -1.8509241909472691
+        },
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "MCHP",
+      "entry_date": "2026-07-02",
+      "pullback": 0.17761367182780044,
+      "growth_as_of_entry": 0.35105615662029876,
+      "trend_as_of_entry": 0.19511073751698493,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "MDB",
+      "entry_date": "2023-09-14",
+      "pullback": 0.1514110974261723,
+      "growth_as_of_entry": 0.3956102219587696,
+      "trend_as_of_entry": 0.1054232520484184,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 55,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 55,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 55,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.008253139765115103,
+          "qqq_return": 0.1686219247390317,
+          "excess_return": -0.1603687849739166
+        },
+        "12mo": {
+          "stock_return": -0.20734046472084866,
+          "qqq_return": 0.2630369353532349,
+          "excess_return": -0.4703774000740836
+        },
+        "24mo": {
+          "stock_return": -0.08731419718681521,
+          "qqq_return": 0.5880558300588408,
+          "excess_return": -0.675370027245656
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "MDB",
+      "entry_date": "2024-01-04",
+      "pullback": 0.16731384666970092,
+      "growth_as_of_entry": 0.29769409000032976,
+      "trend_as_of_entry": -0.09791613195843984,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 20,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 20,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 20,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.26398281631577614,
+          "qqq_return": 0.2556922548621734,
+          "excess_return": -0.5196750711779495
+        },
+        "12mo": {
+          "stock_return": -0.3022819512286312,
+          "qqq_return": 0.3315260824774451,
+          "excess_return": -0.6338080337060763
+        },
+        "24mo": {
+          "stock_return": 0.16117105784024544,
+          "qqq_return": 0.5767015265507445,
+          "excess_return": -0.41553046871049903
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "MDB",
+      "entry_date": "2024-03-05",
+      "pullback": 0.1914553704632366,
+      "growth_as_of_entry": 0.29769409000032976,
+      "trend_as_of_entry": -0.09791613195843984,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.28424690152391974,
+          "qqq_return": 0.060390757970484765,
+          "excess_return": -0.3446376594944045
+        },
+        "12mo": {
+          "stock_return": -0.34782714843749996,
+          "qqq_return": 0.15810869210122536,
+          "excess_return": -0.5059358405387253
+        },
+        "24mo": {
+          "stock_return": -0.34832100573881175,
+          "qqq_return": 0.41184490284529285,
+          "excess_return": -0.7601659085841046
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "MDB",
+      "entry_date": "2026-03-11",
+      "pullback": 0.38590557517911067,
+      "growth_as_of_entry": 0.2674590352262407,
+      "trend_as_of_entry": 0.08057072353792893,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "META",
+      "entry_date": "2021-10-12",
+      "pullback": 0.1528337557734503,
+      "growth_as_of_entry": 0.5560014983678494,
+      "trend_as_of_entry": 0.08049831293626575,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.3386046533298368,
+          "qqq_return": -0.04714194836042673,
+          "excess_return": -0.29146270496941007
+        },
+        "12mo": {
+          "stock_return": -0.6062019976909638,
+          "qqq_return": -0.25995169217663217,
+          "excess_return": -0.34625030551433167
+        },
+        "24mo": {
+          "stock_return": 0.0012043424790209034,
+          "qqq_return": 0.049348016767984504,
+          "excess_return": -0.0481436742889636
+        },
+        "36mo": {
+          "stock_return": 0.829068754016139,
+          "qqq_return": 0.42089336667604504,
+          "excess_return": 0.40817538734009395
+        },
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "META",
+      "entry_date": "2024-04-25",
+      "pullback": 0.16300682215464715,
+      "growth_as_of_entry": 0.2726479315761914,
+      "trend_as_of_entry": 0.02560922490745199,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 48,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 48,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 48,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.3012972211223326,
+          "qqq_return": 0.17046615866410786,
+          "excess_return": 0.13083106245822473
+        },
+        "12mo": {
+          "stock_return": 0.24442999240060015,
+          "qqq_return": 0.12015190011954435,
+          "excess_return": 0.1242780922810558
+        },
+        "24mo": {
+          "stock_return": 0.5479191042587923,
+          "qqq_return": 0.5821058480643693,
+          "excess_return": -0.03418674380557696
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "META",
+      "entry_date": "2024-07-25",
+      "pullback": 0.16021183861196478,
+      "growth_as_of_entry": 0.2726479315761914,
+      "trend_as_of_entry": 0.02560922490745199,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 39,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 39,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 39,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.45793497476330214,
+          "qqq_return": 0.12545646276992506,
+          "excess_return": 0.3324785119933771
+        },
+        "12mo": {
+          "stock_return": 0.5772042387081955,
+          "qqq_return": 0.24286238485685208,
+          "excess_return": 0.3343418538513434
+        },
+        "24mo": {
+          "stock_return": 0.31857812602696667,
+          "qqq_return": 0.5040776230471953,
+          "excess_return": -0.1854994970202286
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "META",
+      "entry_date": "2025-03-07",
+      "pullback": 0.15069164258205386,
+      "growth_as_of_entry": 0.20627757971628724,
+      "trend_as_of_entry": 0.01758783567598976,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 78,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 78,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 78,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.2044060058458521,
+          "qqq_return": 0.1801466726948826,
+          "excess_return": 0.02425933315096951
+        },
+        "12mo": {
+          "stock_return": 0.03799431296533129,
+          "qqq_return": 0.24207958945448982,
+          "excess_return": -0.20408527648915853
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "META",
+      "entry_date": "2025-10-30",
+      "pullback": 0.15636712569224684,
+      "growth_as_of_entry": 0.2624602724876197,
+      "trend_as_of_entry": 0.04631530563240749,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.08032857600110477,
+          "qqq_return": 0.06931289654969297,
+          "excess_return": -0.14964147255079774
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "META",
+      "entry_date": "2026-02-04",
+      "pullback": 0.15317722755142404,
+      "growth_as_of_entry": 0.23784230649994842,
+      "trend_as_of_entry": -0.024617965987671298,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.11958507350417669,
+          "qqq_return": 0.19778645661058847,
+          "excess_return": -0.31737153011476515
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "MPWR",
+      "entry_date": "2024-11-06",
+      "pullback": 0.17090037555090712,
+      "growth_as_of_entry": 0.3058793304230447,
+      "trend_as_of_entry": 0.1555760170990208,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 227,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 227,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.20288455946129424,
+          "qqq_return": -0.044848850154580844,
+          "excess_return": -0.1580357093067134
+        },
+        "12mo": {
+          "stock_return": 0.23061904103670883,
+          "qqq_return": 0.2163676260111953,
+          "excess_return": 0.014251415025513525
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "MPWR",
+      "entry_date": "2026-03-06",
+      "pullback": 0.16947926969657756,
+      "growth_as_of_entry": 0.20829546459910087,
+      "trend_as_of_entry": 0.01953008247083199,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 22,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 22,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 22,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "MPWR",
+      "entry_date": "2026-06-23",
+      "pullback": 0.15748362471872338,
+      "growth_as_of_entry": 0.20829546459910087,
+      "trend_as_of_entry": 0.01953008247083199,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "MSFT",
+      "entry_date": "2022-01-25",
+      "pullback": 0.15919092258775838,
+      "growth_as_of_entry": 0.2008543040208004,
+      "trend_as_of_entry": -0.018852860752844425,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 349,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.09886218705806415,
+          "qqq_return": -0.1271794980875448,
+          "excess_return": 0.028317311029480652
+        },
+        "12mo": {
+          "stock_return": -0.15815267154112533,
+          "qqq_return": -0.16012146849362086,
+          "excess_return": 0.0019687969524955218
+        },
+        "24mo": {
+          "stock_return": 0.4291215849523875,
+          "qqq_return": 0.2531063875585604,
+          "excess_return": 0.1760151973938271
+        },
+        "36mo": {
+          "stock_return": 0.5453925999331009,
+          "qqq_return": 0.5203211659404627,
+          "excess_return": 0.025071433992638115
+        },
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2022-03-30",
+      "pullback": 0.1869350537607445,
+      "growth_as_of_entry": 0.248556767158435,
+      "trend_as_of_entry": -0.08298662449235317,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 486,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.36499900420403364,
+          "qqq_return": -0.269239488283025,
+          "excess_return": -0.09575951592100862
+        },
+        "12mo": {
+          "stock_return": -0.19684446061380467,
+          "qqq_return": -0.1334400918252766,
+          "excess_return": -0.06340436878852806
+        },
+        "24mo": {
+          "stock_return": 0.594878552329571,
+          "qqq_return": 0.22957522615764003,
+          "excess_return": 0.36530332617193095
+        },
+        "36mo": {
+          "stock_return": 0.12001451298675692,
+          "qqq_return": 0.30373448169554473,
+          "excess_return": -0.18371996870878782
+        },
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2024-04-19",
+      "pullback": 0.16592452757769066,
+      "growth_as_of_entry": 0.5770376387760627,
+      "trend_as_of_entry": 0.42012209410042023,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 21,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 21,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 21,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.023680055663420463,
+          "qqq_return": 0.19837148855805098,
+          "excess_return": -0.17469143289463052
+        },
+        "12mo": {
+          "stock_return": -0.3720366734888134,
+          "qqq_return": 0.05090392493112428,
+          "excess_return": -0.4229405984199377
+        },
+        "24mo": {
+          "stock_return": 3.2293280533304856,
+          "qqq_return": 0.5769764507707991,
+          "excess_return": 2.6523516025596865
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2024-07-11",
+      "pullback": 0.1513196590582866,
+      "growth_as_of_entry": 0.8152985074626866,
+      "trend_as_of_entry": 0.23826086868662388,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 294,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.2682892895664071,
+          "qqq_return": 0.030811047835526795,
+          "excess_return": -0.29910033740193387
+        },
+        "12mo": {
+          "stock_return": -0.039296699653312395,
+          "qqq_return": 0.13294143496237054,
+          "excess_return": -0.17223813461568294
+        },
+        "24mo": {
+          "stock_return": 6.240213304105495,
+          "qqq_return": 0.4620053014415195,
+          "excess_return": 5.778208002663976
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2025-11-20",
+      "pullback": 0.20501384646236756,
+      "growth_as_of_entry": 0.45999999999999996,
+      "trend_as_of_entry": 0.09441491704595495,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 13,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 13,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 13,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 2.638046105274783,
+          "qqq_return": 0.22077150249014332,
+          "excess_return": 2.4172746027846395
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-03-06",
+      "pullback": 0.15417999516235728,
+      "growth_as_of_entry": 0.45999999999999996,
+      "trend_as_of_entry": 0.09441491704595495,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 6,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 6,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 6,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-03-25",
+      "pullback": 0.17248178102678202,
+      "growth_as_of_entry": 0.45999999999999996,
+      "trend_as_of_entry": 0.09441491704595495,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 13,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 13,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 13,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-05-18",
+      "pullback": 0.1519231812073421,
+      "growth_as_of_entry": 0.45999999999999996,
+      "trend_as_of_entry": 0.09441491704595495,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 5,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 5,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 5,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-06-05",
+      "pullback": 0.1996720428022362,
+      "growth_as_of_entry": 0.45999999999999996,
+      "trend_as_of_entry": 0.09441491704595495,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 6,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 6,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 6,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-07-02",
+      "pullback": 0.19611724969833477,
+      "growth_as_of_entry": 0.45999999999999996,
+      "trend_as_of_entry": 0.09441491704595495,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2021-03-03",
+      "pullback": 0.16473960822975797,
+      "growth_as_of_entry": 0.6112721417069242,
+      "trend_as_of_entry": 0.04325621602676488,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 28,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 28,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 28,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.7852868720309116,
+          "qqq_return": 0.23720762734459666,
+          "excess_return": 0.548079244686315
+        },
+        "12mo": {
+          "stock_return": 0.8539021619419489,
+          "qqq_return": 0.11239769257521837,
+          "excess_return": 0.7415044693667305
+        },
+        "24mo": {
+          "stock_return": 0.8690891176651816,
+          "qqq_return": -0.018815603920831703,
+          "excess_return": 0.8879047215860133
+        },
+        "36mo": {
+          "stock_return": 5.671672452543941,
+          "qqq_return": 0.46381299732652037,
+          "excess_return": 5.20785945521742
+        },
+        "60mo": {
+          "stock_return": 13.100728703474937,
+          "qqq_return": 1.0051493619834058,
+          "excess_return": 12.095579341491531
+        }
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2021-05-13",
+      "pullback": 0.15318600987380632,
+      "growth_as_of_entry": 0.6112721417069242,
+      "trend_as_of_entry": 0.04325621602676488,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 11,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 11,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 11,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 1.1980696662062562,
+          "qqq_return": 0.23851010128394745,
+          "excess_return": 0.9595595649223088
+        },
+        "12mo": {
+          "stock_return": 0.2966001001233436,
+          "qqq_return": -0.04995759872123817,
+          "excess_return": 0.34655769884458176
+        },
+        "24mo": {
+          "stock_return": 1.1221929267697979,
+          "qqq_return": 0.036132277793540446,
+          "excess_return": 1.0860606489762574
+        },
+        "36mo": {
+          "stock_return": 5.6281793486883345,
+          "qqq_return": 0.41423298837232925,
+          "excess_return": 5.2139463603160054
+        },
+        "60mo": {
+          "stock_return": 15.567510374295576,
+          "qqq_return": 1.3062815606588694,
+          "excess_return": 14.261228813636707
+        }
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2021-12-13",
+      "pullback": 0.15625000714341392,
+      "growth_as_of_entry": 0.502962336013542,
+      "trend_as_of_entry": -0.18017268726633384,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 364,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.4441612495955627,
+          "qqq_return": -0.2961233136729978,
+          "excess_return": -0.14803793592256487
+        },
+        "12mo": {
+          "stock_return": -0.3576612901581997,
+          "qqq_return": -0.2595389302189415,
+          "excess_return": -0.09812235993925822
+        },
+        "24mo": {
+          "stock_return": 0.7099650509057698,
+          "qqq_return": 0.042716547160782437,
+          "excess_return": 0.6672485037449873
+        },
+        "36mo": {
+          "stock_return": 3.7751597400132004,
+          "qqq_return": 0.3795674726187068,
+          "excess_return": 3.395592267394494
+        },
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2022-01-05",
+      "pullback": 0.1729386221874665,
+      "growth_as_of_entry": 0.502962336013542,
+      "trend_as_of_entry": -0.18017268726633384,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 348,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.457697826507217,
+          "qqq_return": -0.25091202197162954,
+          "excess_return": -0.20678580453558748
+        },
+        "12mo": {
+          "stock_return": -0.4827438326716861,
+          "qqq_return": -0.31429972247299365,
+          "excess_return": -0.16844411019869243
+        },
+        "24mo": {
+          "stock_return": 0.7810717237299758,
+          "qqq_return": 0.04721779523050618,
+          "excess_return": 0.7338539284994696
+        },
+        "36mo": {
+          "stock_return": 4.4223483387354054,
+          "qqq_return": 0.39274606103406384,
+          "excess_return": 4.029602277701342
+        },
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2023-09-21",
+      "pullback": 0.16893934411012052,
+      "growth_as_of_entry": 1.0147673031026252,
+      "trend_as_of_entry": 1.1470066853420073,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 38,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 38,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 38,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 1.2294983627984881,
+          "qqq_return": 0.2507310383595214,
+          "excess_return": 0.9787673244389667
+        },
+        "12mo": {
+          "stock_return": 1.835292365931822,
+          "qqq_return": 0.3590594432307883,
+          "excess_return": 1.4762329227010338
+        },
+        "24mo": {
+          "stock_return": 3.479075481968607,
+          "qqq_return": 0.7034665817348105,
+          "excess_return": 2.775608900233797
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2023-10-20",
+      "pullback": 0.16144258086396962,
+      "growth_as_of_entry": 1.0147673031026252,
+      "trend_as_of_entry": 1.1470066853420073,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 17,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 17,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 17,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.9215870273129421,
+          "qqq_return": 0.18565278799467788,
+          "excess_return": 0.7359342393182642
+        },
+        "12mo": {
+          "stock_return": 2.473396993596544,
+          "qqq_return": 0.40670559352944013,
+          "excess_return": 2.0666914000671035
+        },
+        "24mo": {
+          "stock_return": 3.4155804628100155,
+          "qqq_return": 0.7457903141485089,
+          "excess_return": 2.6697901486615065
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2024-04-19",
+      "pullback": 0.19791164576069165,
+      "growth_as_of_entry": 2.6527846636919516,
+      "trend_as_of_entry": 0.5976506222149665,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 22,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 22,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 22,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.8862743473628478,
+          "qqq_return": 0.19837148855805098,
+          "excess_return": 0.6879028588047968
+        },
+        "12mo": {
+          "stock_return": 0.27220272178750915,
+          "qqq_return": 0.05090392493112428,
+          "excess_return": 0.22129879685638487
+        },
+        "24mo": {
+          "stock_return": 1.6532023233093285,
+          "qqq_return": 0.5769764507707991,
+          "excess_return": 1.0762258725385294
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2024-07-24",
+      "pullback": 0.15732410047931594,
+      "growth_as_of_entry": 2.621245828698554,
+      "trend_as_of_entry": -0.031538834993397824,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 57,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 57,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 57,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.2485079431330468,
+          "qqq_return": 0.14642289382028273,
+          "excess_return": 0.10208504931276408
+        },
+        "12mo": {
+          "stock_return": 0.5211807628390936,
+          "qqq_return": 0.22620515507057948,
+          "excess_return": 0.29497560776851417
+        },
+        "24mo": {
+          "stock_return": 0.8133996328510364,
+          "qqq_return": 0.4920923427812083,
+          "excess_return": 0.32130729006982817
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2024-09-03",
+      "pullback": 0.20342234443558968,
+      "growth_as_of_entry": 1.2240319834160065,
+      "trend_as_of_entry": -1.3972138452825473,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 29,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 29,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 29,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.056274262369483186,
+          "qqq_return": 0.07955902744042209,
+          "excess_return": -0.023284765070938906
+        },
+        "12mo": {
+          "stock_return": 0.5803139179657191,
+          "qqq_return": 0.24139257796132152,
+          "excess_return": 0.33892134000439755
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2025-01-27",
+      "pullback": 0.2075218900272479,
+      "growth_as_of_entry": 0.9360927152317882,
+      "trend_as_of_entry": -0.28793926818421833,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 103,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 103,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 103,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.4928099020298744,
+          "qqq_return": 0.10776994863473899,
+          "excess_return": 0.3850399533951354
+        },
+        "12mo": {
+          "stock_return": 0.5923963238006922,
+          "qqq_return": 0.23360273055189995,
+          "excess_return": 0.35879359324879223
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2025-02-25",
+      "pullback": 0.15257978009697495,
+      "growth_as_of_entry": 0.9360927152317882,
+      "trend_as_of_entry": -0.28793926818421833,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 83,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 83,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 83,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.42019299707100033,
+          "qqq_return": 0.1139484085272251,
+          "excess_return": 0.30624458854377523
+        },
+        "12mo": {
+          "stock_return": 0.5447642397278352,
+          "qqq_return": 0.20744865439199534,
+          "excess_return": 0.33731558533583983
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2025-12-12",
+      "pullback": 0.15465605705183588,
+      "growth_as_of_entry": 0.7794417047459621,
+      "trend_as_of_entry": -0.15665101048582608,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 90,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 90,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 90,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.17381023168540732,
+          "qqq_return": 0.17854716615149036,
+          "excess_return": -0.0047369344660830315
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2026-02-04",
+      "pullback": 0.15866495319736276,
+      "growth_as_of_entry": 0.7794417047459621,
+      "trend_as_of_entry": -0.15665101048582608,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 55,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 55,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 55,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.21820132066750797,
+          "qqq_return": 0.19778645661058847,
+          "excess_return": 0.0204148640569195
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2026-03-20",
+      "pullback": 0.1658616569332678,
+      "growth_as_of_entry": 0.7794417047459621,
+      "trend_as_of_entry": -0.15665101048582608,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 24,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 24,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 24,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2026-06-23",
+      "pullback": 0.15143807319571168,
+      "growth_as_of_entry": 0.7794417047459621,
+      "trend_as_of_entry": -0.15665101048582608,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "OKTA",
+      "entry_date": "2023-10-05",
+      "pullback": 0.15313529081715513,
+      "growth_as_of_entry": 0.23061395684440478,
+      "trend_as_of_entry": -0.017750276315330327,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 56,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 56,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 56,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.318524234525873,
+          "qqq_return": 0.23272444217392474,
+          "excess_return": 0.08579979235194823
+        },
+        "12mo": {
+          "stock_return": -0.06716037377093953,
+          "qqq_return": 0.3532759883027894,
+          "excess_return": -0.4204363620737289
+        },
+        "24mo": {
+          "stock_return": 0.21732911143127653,
+          "qqq_return": 0.7150752426617983,
+          "excess_return": -0.4977461312305218
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "OKTA",
+      "entry_date": "2023-10-20",
+      "pullback": 0.16864688199911956,
+      "growth_as_of_entry": 0.23061395684440478,
+      "trend_as_of_entry": -0.017750276315330327,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 45,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 45,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 45,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.2338229223276751,
+          "qqq_return": 0.18565278799467788,
+          "excess_return": 0.048170134332997216
+        },
+        "12mo": {
+          "stock_return": -0.020246113344918548,
+          "qqq_return": 0.40670559352944013,
+          "excess_return": -0.4269517068743587
+        },
+        "24mo": {
+          "stock_return": 0.16871774581829513,
+          "qqq_return": 0.7457903141485089,
+          "excess_return": -0.5770725683302138
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "PANW",
+      "entry_date": "2022-02-23",
+      "pullback": 0.1596403453500389,
+      "growth_as_of_entry": 0.2950142590225193,
+      "trend_as_of_entry": -0.023590392140271366,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 2,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 2,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 2,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.19241638751910894,
+          "qqq_return": -0.04349220171158763,
+          "excess_return": 0.23590858923069657
+        },
+        "12mo": {
+          "stock_return": 0.18552793632081133,
+          "qqq_return": -0.09232156804934899,
+          "excess_return": 0.2778495043701603
+        },
+        "24mo": {
+          "stock_return": 0.7718849289072272,
+          "qqq_return": 0.34490587182386556,
+          "excess_return": 0.4269790570833616
+        },
+        "36mo": {
+          "stock_return": 1.3917840044855296,
+          "qqq_return": 0.6102642308359649,
+          "excess_return": 0.7815197736495647
+        },
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "PANW",
+      "entry_date": "2022-05-05",
+      "pullback": 0.15797842839347226,
+      "growth_as_of_entry": 0.2950142590225193,
+      "trend_as_of_entry": -0.023590392140271366,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 266,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.18180272670339448,
+          "qqq_return": -0.14189710734209238,
+          "excess_return": -0.0399056193613021
+        },
+        "12mo": {
+          "stock_return": 0.04182084918084983,
+          "qqq_return": 0.03952387878486974,
+          "excess_return": 0.0022969703959800913
+        },
+        "24mo": {
+          "stock_return": 0.7024961275390957,
+          "qqq_return": 0.42682768008877847,
+          "excess_return": 0.27566844745031727
+        },
+        "36mo": {
+          "stock_return": 1.1312213260281059,
+          "qqq_return": 0.5845003643212798,
+          "excess_return": 0.546720961706826
+        },
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "PANW",
+      "entry_date": "2023-08-04",
+      "pullback": 0.15340467197746044,
+      "growth_as_of_entry": 0.24100382202350912,
+      "trend_as_of_entry": -0.015811425907237275,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 47,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 47,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 47,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.5778673480656034,
+          "qqq_return": 0.15620179145096436,
+          "excess_return": 0.421665556614639
+        },
+        "12mo": {
+          "stock_return": 0.34747152256598146,
+          "qqq_return": 0.17829931339174854,
+          "excess_return": 0.16917220917423292
+        },
+        "24mo": {
+          "stock_return": 0.566507825790372,
+          "qqq_return": 0.5353149060458049,
+          "excess_return": 0.03119291974456706
+        },
+        "36mo": {
+          "stock_return": 2.355991059434631,
+          "qqq_return": 0.9795960472036078,
+          "excess_return": 1.3763950122310231
+        },
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "RIVN",
+      "entry_date": "2025-02-24",
+      "pullback": 0.3395914061255905,
+      "growth_as_of_entry": 0.31863117870722424,
+      "trend_as_of_entry": 0.6649288600834397,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 203,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 203,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.09615381395169709,
+          "qqq_return": 0.09991345546871666,
+          "excess_return": -0.003759641517019574
+        },
+        "12mo": {
+          "stock_return": 0.2642140332218348,
+          "qqq_return": 0.1752031762091366,
+          "excess_return": 0.08901085701269817
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "RIVN",
+      "entry_date": "2025-11-04",
+      "pullback": 0.2612293177519935,
+      "growth_as_of_entry": 0.7826086956521738,
+      "trend_as_of_entry": 0.6573928061875798,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 5,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 5,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 5,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.1608000183105469,
+          "qqq_return": 0.08937657510217756,
+          "excess_return": 0.07142344320836935
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "RIVN",
+      "entry_date": "2025-11-14",
+      "pullback": 0.16148727675712635,
+      "growth_as_of_entry": 0.7826086956521738,
+      "trend_as_of_entry": 0.6573928061875798,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 13,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 13,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 13,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.03904693661940939,
+          "qqq_return": 0.18520861267597777,
+          "excess_return": -0.22425554929538716
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "RIVN",
+      "entry_date": "2026-01-13",
+      "pullback": 0.1603563589811819,
+      "growth_as_of_entry": 0.7826086956521738,
+      "trend_as_of_entry": 0.6573928061875798,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.08169765964785991,
+          "qqq_return": 0.13921274667242933,
+          "excess_return": -0.22091040632028924
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2024-05-06",
+      "pullback": 0.488020172677591,
+      "growth_as_of_entry": 0.6898988978959832,
+      "trend_as_of_entry": 0.5309212695199546,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 98,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 98,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 98,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 2.214285806565954,
+          "qqq_return": 0.15183457866765604,
+          "excess_return": 2.062451227898298
+        },
+        "12mo": {
+          "stock_return": 4.50985250111076,
+          "qqq_return": 0.10017612224612549,
+          "excess_return": 4.409676378864635
+        },
+        "24mo": {
+          "stock_return": 19.849754364263898,
+          "qqq_return": 0.597754020419629,
+          "excess_return": 19.25200034384427
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2024-08-28",
+      "pullback": 0.152990249774464,
+      "growth_as_of_entry": 0.7124828753324199,
+      "trend_as_of_entry": 0.022583977436436697,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 11,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 11,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 11,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 2.3645318978212377,
+          "qqq_return": 0.08137207841543481,
+          "excess_return": 2.283159819405803
+        },
+        "12mo": {
+          "stock_return": 6.8669948517247885,
+          "qqq_return": 0.23122318309070944,
+          "excess_return": 6.635771668634079
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2024-12-03",
+      "pullback": 0.15652493952663216,
+      "growth_as_of_entry": 0.5490164200942935,
+      "trend_as_of_entry": -0.16346645523812642,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 16,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 16,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 16,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.1612342045879651,
+          "qqq_return": 0.023347747759341342,
+          "excess_return": 0.13788645682862377
+        },
+        "12mo": {
+          "stock_return": 0.943502858577602,
+          "qqq_return": 0.21284853580436414,
+          "excess_return": 0.7306543227732378
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2024-12-18",
+      "pullback": 0.15982406527159407,
+      "growth_as_of_entry": 0.5490164200942935,
+      "trend_as_of_entry": -0.16346645523812642,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 5,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 5,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 5,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.21509599863722761,
+          "qqq_return": 0.02742299607890275,
+          "excess_return": 0.18767300255832486
+        },
+        "12mo": {
+          "stock_return": 1.6143105571330385,
+          "qqq_return": 0.18573651464343155,
+          "excess_return": 1.428574042489607
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-01-13",
+      "pullback": 0.16979164997184673,
+      "growth_as_of_entry": 0.5490164200942935,
+      "trend_as_of_entry": -0.16346645523812642,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 5,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 5,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 5,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.8071936160697832,
+          "qqq_return": 0.10306401129035425,
+          "excess_return": 0.704129604779429
+        },
+        "12mo": {
+          "stock_return": 2.621079146114074,
+          "qqq_return": 0.24498766128523686,
+          "excess_return": 2.3760914848288373
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-02-19",
+      "pullback": 0.17865060006868147,
+      "growth_as_of_entry": 0.5490164200942935,
+      "trend_as_of_entry": -0.16346645523812642,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 85,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 85,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 85,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.5780947816177788,
+          "qqq_return": 0.05792055843895483,
+          "excess_return": 0.520174223178824
+        },
+        "12mo": {
+          "stock_return": 1.9533359402147354,
+          "qqq_return": 0.12420407028673819,
+          "excess_return": 1.8291318699279973
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-06-12",
+      "pullback": 0.16376307020178868,
+      "growth_as_of_entry": 0.3212564812918386,
+      "trend_as_of_entry": -0.8855412050277762,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 6,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 6,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 6,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 1.3291667639005076,
+          "qqq_return": 0.1524591989658315,
+          "excess_return": 1.176707564934676
+        },
+        "12mo": {
+          "stock_return": 2.878409123831216,
+          "qqq_return": 0.3582275230463974,
+          "excess_return": 2.5201816007848183
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-08-12",
+      "pullback": 0.15489393226332768,
+      "growth_as_of_entry": 0.3599683767682187,
+      "trend_as_of_entry": 0.0387118954763801,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 22,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 22,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 22,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.5199171464975494,
+          "qqq_return": 0.03803303620178,
+          "excess_return": 0.4818841102957694
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-09-03",
+      "pullback": 0.15294805806000483,
+      "growth_as_of_entry": 0.3599683767682187,
+      "trend_as_of_entry": 0.0387118954763801,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 7,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 7,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 7,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.6110728054229171,
+          "qqq_return": 0.05785852766447919,
+          "excess_return": 0.5532142777584379
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-11-04",
+      "pullback": 0.18334051629427062,
+      "growth_as_of_entry": 0.3599683767682187,
+      "trend_as_of_entry": 0.0387118954763801,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 32,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 32,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 32,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.41965702654832415,
+          "qqq_return": 0.08937657510217756,
+          "excess_return": 0.3302804514461466
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2026-01-26",
+      "pullback": 0.16427828861356872,
+      "growth_as_of_entry": 0.47965804137088774,
+      "trend_as_of_entry": 0.11968966460266905,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 72,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 72,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 72,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.16824056101832696,
+          "qqq_return": 0.09316443448298051,
+          "excess_return": -0.26140499550130747
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2026-04-24",
+      "pullback": 0.17258569283377254,
+      "growth_as_of_entry": 0.35701120947517895,
+      "trend_as_of_entry": -0.1226468318957088,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 10,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 10,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 10,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2026-06-01",
+      "pullback": 0.18531582992508333,
+      "growth_as_of_entry": 0.35701120947517895,
+      "trend_as_of_entry": -0.1226468318957088,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "SNPS",
+      "entry_date": "2025-12-22",
+      "pullback": 0.2542961053071411,
+      "growth_as_of_entry": 0.37828807825983835,
+      "trend_as_of_entry": 0.23803696225058646,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.0346189094842172,
+          "qqq_return": 0.19457451746515586,
+          "excess_return": -0.22919342694937306
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2024-12-16",
+      "pullback": 0.15145594505535442,
+      "growth_as_of_entry": 0.4910591471801926,
+      "trend_as_of_entry": 0.31315652545734607,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 108,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 108,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 108,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.3822254767280493,
+          "qqq_return": -0.004125826492814011,
+          "excess_return": 0.3863513032208633
+        },
+        "12mo": {
+          "stock_return": 2.0649993641532354,
+          "qqq_return": 0.1428573717391184,
+          "excess_return": 1.922141992414117
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2025-02-03",
+      "pullback": 0.17009939751895664,
+      "growth_as_of_entry": 0.495176848874598,
+      "trend_as_of_entry": 0.004117701694405396,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 77,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 77,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 77,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.6785042469933429,
+          "qqq_return": 0.09161315758491817,
+          "excess_return": 0.5868910894084247
+        },
+        "12mo": {
+          "stock_return": 3.8467547753132765,
+          "qqq_return": 0.1959753305964027,
+          "excess_return": 3.650779444716874
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2025-10-10",
+      "pullback": 0.16531689791499254,
+      "growth_as_of_entry": 0.2951775304716482,
+      "trend_as_of_entry": -0.009958421189983246,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 13,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 13,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 13,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 1.3571692650901284,
+          "qqq_return": 0.03923469667160151,
+          "excess_return": 1.3179345684185269
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2025-11-20",
+      "pullback": 0.18194493694064773,
+      "growth_as_of_entry": 0.2951775304716482,
+      "trend_as_of_entry": -0.009958421189983246,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 13,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 13,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 13,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 2.1366074743988324,
+          "qqq_return": 0.22077150249014332,
+          "excess_return": 1.915835971908689
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2026-03-02",
+      "pullback": 0.15014447278333948,
+      "growth_as_of_entry": 0.2951775304716482,
+      "trend_as_of_entry": -0.009958421189983246,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 24,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 24,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 24,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2026-03-26",
+      "pullback": 0.15177911115308565,
+      "growth_as_of_entry": 0.2951775304716482,
+      "trend_as_of_entry": -0.009958421189983246,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 6,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 6,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 6,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2026-06-26",
+      "pullback": 0.17745238539423028,
+      "growth_as_of_entry": 0.2951775304716482,
+      "trend_as_of_entry": -0.009958421189983246,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": null,
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "TEAM",
+      "entry_date": "2025-03-03",
+      "pullback": 0.1508639402129899,
+      "growth_as_of_entry": 0.21351840846704584,
+      "trend_as_of_entry": -0.0012610653382774117,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.3775800746991784,
+          "qqq_return": 0.14990708836421707,
+          "excess_return": -0.5274871630633955
+        },
+        "12mo": {
+          "stock_return": -0.7141711147819059,
+          "qqq_return": 0.21643901944791888,
+          "excess_return": -0.9306101342298247
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2023-08-10",
+      "pullback": 0.15527071517253793,
+      "growth_as_of_entry": 0.23156710755991328,
+      "trend_as_of_entry": 0.017564323113488545,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 185,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 185,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.041250393395313334,
+          "qqq_return": 0.18579128451380145,
+          "excess_return": -0.22704167790911478
+        },
+        "12mo": {
+          "stock_return": 0.2587885007828319,
+          "qqq_return": 0.2330638684234425,
+          "excess_return": 0.025724632359389377
+        },
+        "24mo": {
+          "stock_return": -0.3102217957828023,
+          "qqq_return": 0.5737233720106825,
+          "excess_return": -0.8839451677934848
+        },
+        "36mo": {
+          "stock_return": -0.832079383710366,
+          "qqq_return": 0.9898991515738855,
+          "excess_return": -1.8219785352842517
+        },
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2023-09-21",
+      "pullback": 0.17028271479031581,
+      "growth_as_of_entry": 0.23156710755991328,
+      "trend_as_of_entry": 0.017564323113488545,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 156,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 156,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.12334913084149446,
+          "qqq_return": 0.2507310383595214,
+          "excess_return": -0.12738190751802692
+        },
+        "12mo": {
+          "stock_return": 0.43330688100442005,
+          "qqq_return": 0.3590594432307883,
+          "excess_return": 0.07424743777363174
+        },
+        "24mo": {
+          "stock_return": -0.3905176864516384,
+          "qqq_return": 0.7034665817348105,
+          "excess_return": -1.093984268186449
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2023-10-18",
+      "pullback": 0.15877717679135897,
+      "growth_as_of_entry": 0.23156710755991328,
+      "trend_as_of_entry": 0.017564323113488545,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 137,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 137,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.052624737425883694,
+          "qqq_return": 0.16971730563525167,
+          "excess_return": -0.11709256820936798
+        },
+        "12mo": {
+          "stock_return": 0.5469585427806118,
+          "qqq_return": 0.37012223717165016,
+          "excess_return": 0.17683630560896169
+        },
+        "24mo": {
+          "stock_return": -0.3162042304631789,
+          "qqq_return": 0.7036555788329752,
+          "excess_return": -1.0198598092961542
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2024-03-14",
+      "pullback": 0.15044929909641921,
+      "growth_as_of_entry": 0.2344636740249868,
+      "trend_as_of_entry": -0.015029072439437074,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 36,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 36,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 36,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.35908686193245987,
+          "qqq_return": 0.08079175019353446,
+          "excess_return": 0.2782951117389254
+        },
+        "12mo": {
+          "stock_return": -0.304269321862639,
+          "qqq_return": 0.09876214027104968,
+          "excess_return": -0.4030314621336887
+        },
+        "24mo": {
+          "stock_return": -0.6507158474128942,
+          "qqq_return": 0.3822716265568675,
+          "excess_return": -1.0329874739697618
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2024-04-19",
+      "pullback": 0.15296952397210714,
+      "growth_as_of_entry": 0.2344636740249868,
+      "trend_as_of_entry": -0.015029072439437074,
+      "accelerating": false,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 11,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 11,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 11,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.5292366677569562,
+          "qqq_return": 0.19837148855805098,
+          "excess_return": 0.33086517919890523
+        },
+        "12mo": {
+          "stock_return": -0.38473480600710663,
+          "qqq_return": 0.05090392493112428,
+          "excess_return": -0.4356387309382309
+        },
+        "24mo": {
+          "stock_return": -0.6888745370300002,
+          "qqq_return": 0.5769764507707991,
+          "excess_return": -1.2658509878007993
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2024-08-02",
+      "pullback": 0.1816390407974972,
+      "growth_as_of_entry": 0.2833049897728075,
+      "trend_as_of_entry": 0.04884131574782069,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "days_to_recovery": 11,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "days_to_recovery": 11,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "days_to_recovery": 11,
+          "censored": false
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.41959556863323466,
+          "qqq_return": 0.1580496076628779,
+          "excess_return": 0.26154596097035676
+        },
+        "12mo": {
+          "stock_return": 0.08040443136676534,
+          "qqq_return": 0.26414218886084995,
+          "excess_return": -0.1837377574940846
+        },
+        "24mo": {
+          "stock_return": -0.7797303943941399,
+          "qqq_return": 0.5764055121946594,
+          "excess_return": -1.3561359065887992
+        },
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2024-12-31",
+      "pullback": 0.15755140558379171,
+      "growth_as_of_entry": 0.27317917715796347,
+      "trend_as_of_entry": 0.014062400565839406,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": -0.3874755499746444,
+          "qqq_return": 0.08186753447804396,
+          "excess_return": -0.46934308445268835
+        },
+        "12mo": {
+          "stock_return": -0.677018637975521,
+          "qqq_return": 0.2077254825855681,
+          "excess_return": -0.8847441205610891
+        },
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    },
+    {
+      "ticker": "TTWO",
+      "entry_date": "2026-01-30",
+      "pullback": 0.16008999247095804,
+      "growth_as_of_entry": 0.3109156751163993,
+      "trend_as_of_entry": 0.18716735647942428,
+      "accelerating": true,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      },
+      "excess_return": {
+        "6mo": {
+          "stock_return": 0.12315020085428441,
+          "qqq_return": 0.10178010858541353,
+          "excess_return": 0.021370092268870877
+        },
+        "12mo": null,
+        "24mo": null,
+        "36mo": null,
+        "60mo": null
+      }
+    }
+  ]
+}

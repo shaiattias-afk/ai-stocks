@@ -1,0 +1,808 @@
+{
+  "n_episodes": 86,
+  "n_distinct_tickers": 22,
+  "n_distinct_trough_months": 30,
+  "mean_rank_fraction": 0.32881283052103905,
+  "median_rank_fraction": 0.2493103448275862,
+  "median_trough_volume_ratio": 1.1839358087362344,
+  "n_elevated": 52,
+  "n_total_valid_ratio": 86,
+  "top_trough_months": [
+    [
+      "2025-04",
+      16
+    ],
+    [
+      "2026-03",
+      10
+    ],
+    [
+      "2023-10",
+      8
+    ],
+    [
+      "2024-08",
+      6
+    ],
+    [
+      "2025-11",
+      5
+    ]
+  ],
+  "episodes": [
+    {
+      "ticker": "ALNY",
+      "entry_date": "2025-02-18",
+      "trough_date": "2025-04-08",
+      "trough_month": "2025-04",
+      "n_days_in_window": 72,
+      "trough_volume_ratio": 0.9645356976201587,
+      "trough_rank_fraction": 0.4861111111111111
+    },
+    {
+      "ticker": "ALNY",
+      "entry_date": "2025-04-04",
+      "trough_date": "2025-04-08",
+      "trough_month": "2025-04",
+      "n_days_in_window": 39,
+      "trough_volume_ratio": 0.9645356976201587,
+      "trough_rank_fraction": 0.38461538461538464
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2025-02-05",
+      "trough_date": "2025-04-08",
+      "trough_month": "2025-04",
+      "n_days_in_window": 169,
+      "trough_volume_ratio": 1.9140807188884401,
+      "trough_rank_fraction": 0.08284023668639054
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2025-09-05",
+      "trough_date": "2025-09-05",
+      "trough_month": "2025-09",
+      "n_days_in_window": 22,
+      "trough_volume_ratio": 1.4814338043900084,
+      "trough_rank_fraction": 0.13636363636363635
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2025-11-19",
+      "trough_date": "2026-03-03",
+      "trough_month": "2026-03",
+      "n_days_in_window": 101,
+      "trough_volume_ratio": 0.8836296405774109,
+      "trough_rank_fraction": 0.45544554455445546
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2026-02-04",
+      "trough_date": "2026-03-03",
+      "trough_month": "2026-03",
+      "n_days_in_window": 50,
+      "trough_volume_ratio": 0.8836296405774109,
+      "trough_rank_fraction": 0.44
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2023-12-04",
+      "trough_date": "2023-12-12",
+      "trough_month": "2023-12",
+      "n_days_in_window": 34,
+      "trough_volume_ratio": 1.4857388647454057,
+      "trough_rank_fraction": 0.17647058823529413
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2024-08-02",
+      "trough_date": "2024-08-05",
+      "trough_month": "2024-08",
+      "n_days_in_window": 14,
+      "trough_volume_ratio": 1.3470062326031709,
+      "trough_rank_fraction": 0.5714285714285714
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2024-12-10",
+      "trough_date": "2024-12-18",
+      "trough_month": "2024-12",
+      "n_days_in_window": 44,
+      "trough_volume_ratio": 0.9940263191423527,
+      "trough_rank_fraction": 0.36363636363636365
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2025-02-21",
+      "trough_date": "2025-04-04",
+      "trough_month": "2025-04",
+      "n_days_in_window": 137,
+      "trough_volume_ratio": 1.589614077084526,
+      "trough_rank_fraction": 0.0948905109489051
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2025-10-06",
+      "trough_date": "2025-11-21",
+      "trough_month": "2025-11",
+      "n_days_in_window": 46,
+      "trough_volume_ratio": 1.3173939110008879,
+      "trough_rank_fraction": 0.10869565217391304
+    },
+    {
+      "ticker": "AVGO",
+      "entry_date": "2025-03-12",
+      "trough_date": "2025-04-04",
+      "trough_month": "2025-04",
+      "n_days_in_window": 58,
+      "trough_volume_ratio": 2.131445769032008,
+      "trough_rank_fraction": 0.017241379310344827
+    },
+    {
+      "ticker": "AVGO",
+      "entry_date": "2025-12-15",
+      "trough_date": "2026-03-30",
+      "trough_month": "2026-03",
+      "n_days_in_window": 88,
+      "trough_volume_ratio": 0.9475086714377868,
+      "trough_rank_fraction": 0.42045454545454547
+    },
+    {
+      "ticker": "AXON",
+      "entry_date": "2023-08-08",
+      "trough_date": "2023-08-08",
+      "trough_month": "2023-08",
+      "n_days_in_window": 66,
+      "trough_volume_ratio": 1.2385874114060615,
+      "trough_rank_fraction": 0.21212121212121213
+    },
+    {
+      "ticker": "AXON",
+      "entry_date": "2023-09-25",
+      "trough_date": "2023-09-26",
+      "trough_month": "2023-09",
+      "n_days_in_window": 33,
+      "trough_volume_ratio": 0.9455767124889697,
+      "trough_rank_fraction": 0.42424242424242425
+    },
+    {
+      "ticker": "AXON",
+      "entry_date": "2024-06-04",
+      "trough_date": "2024-06-04",
+      "trough_month": "2024-06",
+      "n_days_in_window": 45,
+      "trough_volume_ratio": 0.6363585617339574,
+      "trough_rank_fraction": 0.8666666666666667
+    },
+    {
+      "ticker": "AXON",
+      "entry_date": "2025-01-06",
+      "trough_date": "2025-01-07",
+      "trough_month": "2025-01",
+      "n_days_in_window": 29,
+      "trough_volume_ratio": 0.7912792615967716,
+      "trough_rank_fraction": 0.5172413793103449
+    },
+    {
+      "ticker": "AXON",
+      "entry_date": "2025-02-19",
+      "trough_date": "2025-02-25",
+      "trough_month": "2025-02",
+      "n_days_in_window": 59,
+      "trough_volume_ratio": 1.6008614501076812,
+      "trough_rank_fraction": 0.13559322033898305
+    },
+    {
+      "ticker": "BKNG",
+      "entry_date": "2023-10-26",
+      "trough_date": "2023-10-26",
+      "trough_month": "2023-10",
+      "n_days_in_window": 31,
+      "trough_volume_ratio": 1.1839358087362344,
+      "trough_rank_fraction": 0.1935483870967742
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2024-04-19",
+      "trough_date": "2024-04-19",
+      "trough_month": "2024-04",
+      "n_days_in_window": 19,
+      "trough_volume_ratio": 1.4200185897319069,
+      "trough_rank_fraction": 0.15789473684210525
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2024-07-19",
+      "trough_date": "2024-08-02",
+      "trough_month": "2024-08",
+      "n_days_in_window": 132,
+      "trough_volume_ratio": 0.7090717605325956,
+      "trough_rank_fraction": 0.6666666666666666
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2025-02-25",
+      "trough_date": "2025-03-10",
+      "trough_month": "2025-03",
+      "n_days_in_window": 63,
+      "trough_volume_ratio": 1.4884969626961004,
+      "trough_rank_fraction": 0.14285714285714285
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2025-08-29",
+      "trough_date": "2025-09-04",
+      "trough_month": "2025-09",
+      "n_days_in_window": 39,
+      "trough_volume_ratio": 0.7778528401733942,
+      "trough_rank_fraction": 0.46153846153846156
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2025-12-17",
+      "trough_date": "2026-02-24",
+      "trough_month": "2026-02",
+      "n_days_in_window": 101,
+      "trough_volume_ratio": 1.6854743030510515,
+      "trough_rank_fraction": 0.09900990099009901
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2026-06-08",
+      "trough_date": "2026-06-09",
+      "trough_month": "2026-06",
+      "n_days_in_window": 19,
+      "trough_volume_ratio": 0.9668781050161034,
+      "trough_rank_fraction": 0.21052631578947367
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2023-08-21",
+      "trough_date": "2023-10-27",
+      "trough_month": "2023-10",
+      "n_days_in_window": 54,
+      "trough_volume_ratio": 0.8405953958212817,
+      "trough_rank_fraction": 0.5740740740740741
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2023-09-21",
+      "trough_date": "2023-10-27",
+      "trough_month": "2023-10",
+      "n_days_in_window": 32,
+      "trough_volume_ratio": 0.8405953958212817,
+      "trough_rank_fraction": 0.6875
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2024-05-02",
+      "trough_date": "2024-07-18",
+      "trough_month": "2024-07",
+      "n_days_in_window": 100,
+      "trough_volume_ratio": 1.4844711020415948,
+      "trough_rank_fraction": 0.13
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2025-03-06",
+      "trough_date": "2025-04-04",
+      "trough_month": "2025-04",
+      "n_days_in_window": 62,
+      "trough_volume_ratio": 0.6466853097573503,
+      "trough_rank_fraction": 0.7096774193548387
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2025-04-03",
+      "trough_date": "2025-04-04",
+      "trough_month": "2025-04",
+      "n_days_in_window": 42,
+      "trough_volume_ratio": 0.6466853097573503,
+      "trough_rank_fraction": 0.7380952380952381
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2025-05-07",
+      "trough_date": "2025-05-07",
+      "trough_month": "2025-05",
+      "n_days_in_window": 19,
+      "trough_volume_ratio": 2.0720483638972302,
+      "trough_rank_fraction": 0.05263157894736842
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2023-08-09",
+      "trough_date": "2023-11-02",
+      "trough_month": "2023-11",
+      "n_days_in_window": 81,
+      "trough_volume_ratio": 1.7812881235241451,
+      "trough_rank_fraction": 0.06172839506172839
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2024-05-07",
+      "trough_date": "2024-08-05",
+      "trough_month": "2024-08",
+      "n_days_in_window": 139,
+      "trough_volume_ratio": 1.6420506535723216,
+      "trough_rank_fraction": 0.11510791366906475
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2024-07-30",
+      "trough_date": "2024-08-05",
+      "trough_month": "2024-08",
+      "n_days_in_window": 82,
+      "trough_volume_ratio": 1.6420506535723216,
+      "trough_rank_fraction": 0.13414634146341464
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2024-12-31",
+      "trough_date": "2025-04-08",
+      "trough_month": "2025-04",
+      "n_days_in_window": 214,
+      "trough_volume_ratio": 1.5547848410216851,
+      "trough_rank_fraction": 0.10747663551401869
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2025-11-20",
+      "trough_date": "2026-02-23",
+      "trough_month": "2026-02",
+      "n_days_in_window": 116,
+      "trough_volume_ratio": 1.6280015352593384,
+      "trough_rank_fraction": 0.1206896551724138
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2026-06-05",
+      "trough_date": "2026-06-23",
+      "trough_month": "2026-06",
+      "n_days_in_window": 41,
+      "trough_volume_ratio": 0.5374828990161302,
+      "trough_rank_fraction": 0.9512195121951219
+    },
+    {
+      "ticker": "DXCM",
+      "entry_date": "2023-08-08",
+      "trough_date": "2023-10-12",
+      "trough_month": "2023-10",
+      "n_days_in_window": 159,
+      "trough_volume_ratio": 1.7274834308460951,
+      "trough_rank_fraction": 0.06289308176100629
+    },
+    {
+      "ticker": "DXCM",
+      "entry_date": "2024-02-13",
+      "trough_date": "2024-02-28",
+      "trough_month": "2024-02",
+      "n_days_in_window": 29,
+      "trough_volume_ratio": 0.834043708839083,
+      "trough_rank_fraction": 0.6551724137931034
+    },
+    {
+      "ticker": "KLAC",
+      "entry_date": "2025-01-31",
+      "trough_date": "2025-04-04",
+      "trough_month": "2025-04",
+      "n_days_in_window": 94,
+      "trough_volume_ratio": 2.0627749139183567,
+      "trough_rank_fraction": 0.05319148936170213
+    },
+    {
+      "ticker": "MDB",
+      "entry_date": "2023-09-14",
+      "trough_date": "2023-09-26",
+      "trough_month": "2023-09",
+      "n_days_in_window": 56,
+      "trough_volume_ratio": 0.96490022538618,
+      "trough_rank_fraction": 0.35714285714285715
+    },
+    {
+      "ticker": "MDB",
+      "entry_date": "2024-01-04",
+      "trough_date": "2024-01-04",
+      "trough_month": "2024-01",
+      "n_days_in_window": 21,
+      "trough_volume_ratio": 0.9241295238780692,
+      "trough_rank_fraction": 0.38095238095238093
+    },
+    {
+      "ticker": "META",
+      "entry_date": "2024-04-25",
+      "trough_date": "2024-04-30",
+      "trough_month": "2024-04",
+      "n_days_in_window": 49,
+      "trough_volume_ratio": 0.8998713388329675,
+      "trough_rank_fraction": 0.3877551020408163
+    },
+    {
+      "ticker": "META",
+      "entry_date": "2024-07-25",
+      "trough_date": "2024-07-25",
+      "trough_month": "2024-07",
+      "n_days_in_window": 40,
+      "trough_volume_ratio": 1.305759465512323,
+      "trough_rank_fraction": 0.15
+    },
+    {
+      "ticker": "META",
+      "entry_date": "2025-03-07",
+      "trough_date": "2025-04-21",
+      "trough_month": "2025-04",
+      "n_days_in_window": 79,
+      "trough_volume_ratio": 0.7515415178340021,
+      "trough_rank_fraction": 0.6962025316455697
+    },
+    {
+      "ticker": "MPWR",
+      "entry_date": "2024-11-06",
+      "trough_date": "2025-04-08",
+      "trough_month": "2025-04",
+      "n_days_in_window": 228,
+      "trough_volume_ratio": 1.5808651500821345,
+      "trough_rank_fraction": 0.10964912280701754
+    },
+    {
+      "ticker": "MPWR",
+      "entry_date": "2026-03-06",
+      "trough_date": "2026-03-30",
+      "trough_month": "2026-03",
+      "n_days_in_window": 23,
+      "trough_volume_ratio": 1.0907209255049806,
+      "trough_rank_fraction": 0.34782608695652173
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2024-04-19",
+      "trough_date": "2024-04-19",
+      "trough_month": "2024-04",
+      "n_days_in_window": 22,
+      "trough_volume_ratio": 1.0318205360611161,
+      "trough_rank_fraction": 0.13636363636363635
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2025-11-20",
+      "trough_date": "2025-11-20",
+      "trough_month": "2025-11",
+      "n_days_in_window": 14,
+      "trough_volume_ratio": 1.858968252568196,
+      "trough_rank_fraction": 0.07142857142857142
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-03-25",
+      "trough_date": "2026-03-30",
+      "trough_month": "2026-03",
+      "n_days_in_window": 14,
+      "trough_volume_ratio": 1.6858829123660877,
+      "trough_rank_fraction": 0.07142857142857142
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2021-03-03",
+      "trough_date": "2021-03-08",
+      "trough_month": "2021-03",
+      "n_days_in_window": 29,
+      "trough_volume_ratio": 1.3737484520061192,
+      "trough_rank_fraction": 0.1724137931034483
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2021-05-13",
+      "trough_date": "2021-05-13",
+      "trough_month": "2021-05",
+      "n_days_in_window": 12,
+      "trough_volume_ratio": 1.033499545541783,
+      "trough_rank_fraction": 0.75
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2023-09-21",
+      "trough_date": "2023-10-26",
+      "trough_month": "2023-10",
+      "n_days_in_window": 39,
+      "trough_volume_ratio": 1.1890377515491528,
+      "trough_rank_fraction": 0.07692307692307693
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2023-10-20",
+      "trough_date": "2023-10-26",
+      "trough_month": "2023-10",
+      "n_days_in_window": 18,
+      "trough_volume_ratio": 1.1890377515491528,
+      "trough_rank_fraction": 0.05555555555555555
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2024-04-19",
+      "trough_date": "2024-04-19",
+      "trough_month": "2024-04",
+      "n_days_in_window": 23,
+      "trough_volume_ratio": 1.9286303762182055,
+      "trough_rank_fraction": 0.043478260869565216
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2024-07-24",
+      "trough_date": "2024-08-07",
+      "trough_month": "2024-08",
+      "n_days_in_window": 58,
+      "trough_volume_ratio": 1.1897265947674693,
+      "trough_rank_fraction": 0.25862068965517243
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2024-09-03",
+      "trough_date": "2024-09-06",
+      "trough_month": "2024-09",
+      "n_days_in_window": 30,
+      "trough_volume_ratio": 1.2019019101274038,
+      "trough_rank_fraction": 0.13333333333333333
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2025-01-27",
+      "trough_date": "2025-04-04",
+      "trough_month": "2025-04",
+      "n_days_in_window": 104,
+      "trough_volume_ratio": 1.9198782355670567,
+      "trough_rank_fraction": 0.04807692307692308
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2025-02-25",
+      "trough_date": "2025-04-04",
+      "trough_month": "2025-04",
+      "n_days_in_window": 84,
+      "trough_volume_ratio": 1.9198782355670567,
+      "trough_rank_fraction": 0.03571428571428571
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2025-12-12",
+      "trough_date": "2026-03-30",
+      "trough_month": "2026-03",
+      "n_days_in_window": 91,
+      "trough_volume_ratio": 1.0268847280720983,
+      "trough_rank_fraction": 0.31868131868131866
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2026-02-04",
+      "trough_date": "2026-03-30",
+      "trough_month": "2026-03",
+      "n_days_in_window": 56,
+      "trough_volume_ratio": 1.0268847280720983,
+      "trough_rank_fraction": 0.30357142857142855
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2026-03-20",
+      "trough_date": "2026-03-30",
+      "trough_month": "2026-03",
+      "n_days_in_window": 25,
+      "trough_volume_ratio": 1.0268847280720983,
+      "trough_rank_fraction": 0.24
+    },
+    {
+      "ticker": "OKTA",
+      "entry_date": "2023-10-05",
+      "trough_date": "2023-10-30",
+      "trough_month": "2023-10",
+      "n_days_in_window": 57,
+      "trough_volume_ratio": 0.593953055620693,
+      "trough_rank_fraction": 0.7719298245614035
+    },
+    {
+      "ticker": "OKTA",
+      "entry_date": "2023-10-20",
+      "trough_date": "2023-10-30",
+      "trough_month": "2023-10",
+      "n_days_in_window": 46,
+      "trough_volume_ratio": 0.593953055620693,
+      "trough_rank_fraction": 0.717391304347826
+    },
+    {
+      "ticker": "PANW",
+      "entry_date": "2023-08-04",
+      "trough_date": "2023-08-17",
+      "trough_month": "2023-08",
+      "n_days_in_window": 48,
+      "trough_volume_ratio": 1.0843225700930557,
+      "trough_rank_fraction": 0.22916666666666666
+    },
+    {
+      "ticker": "RIVN",
+      "entry_date": "2025-02-24",
+      "trough_date": "2025-03-13",
+      "trough_month": "2025-03",
+      "n_days_in_window": 204,
+      "trough_volume_ratio": 0.7584892528264023,
+      "trough_rank_fraction": 0.6764705882352942
+    },
+    {
+      "ticker": "RIVN",
+      "entry_date": "2025-11-14",
+      "trough_date": "2025-11-20",
+      "trough_month": "2025-11",
+      "n_days_in_window": 14,
+      "trough_volume_ratio": 0.7194340756524756,
+      "trough_rank_fraction": 0.2857142857142857
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2024-05-06",
+      "trough_date": "2024-05-07",
+      "trough_month": "2024-05",
+      "n_days_in_window": 99,
+      "trough_volume_ratio": 2.5378425070073276,
+      "trough_rank_fraction": 0.09090909090909091
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2024-08-28",
+      "trough_date": "2024-09-06",
+      "trough_month": "2024-09",
+      "n_days_in_window": 12,
+      "trough_volume_ratio": 0.5025614193692353,
+      "trough_rank_fraction": 0.5833333333333334
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2024-12-03",
+      "trough_date": "2024-12-12",
+      "trough_month": "2024-12",
+      "n_days_in_window": 17,
+      "trough_volume_ratio": 0.40633338205072284,
+      "trough_rank_fraction": 0.8823529411764706
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-02-19",
+      "trough_date": "2025-04-04",
+      "trough_month": "2025-04",
+      "n_days_in_window": 86,
+      "trough_volume_ratio": 1.5512057721942707,
+      "trough_rank_fraction": 0.1744186046511628
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-08-12",
+      "trough_date": "2025-08-20",
+      "trough_month": "2025-08",
+      "n_days_in_window": 23,
+      "trough_volume_ratio": 1.1387224458581597,
+      "trough_rank_fraction": 0.30434782608695654
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-11-04",
+      "trough_date": "2025-11-20",
+      "trough_month": "2025-11",
+      "n_days_in_window": 33,
+      "trough_volume_ratio": 1.3880259312455983,
+      "trough_rank_fraction": 0.2727272727272727
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2026-01-26",
+      "trough_date": "2026-03-30",
+      "trough_month": "2026-03",
+      "n_days_in_window": 73,
+      "trough_volume_ratio": 0.9833679078677952,
+      "trough_rank_fraction": 0.4246575342465753
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2026-04-24",
+      "trough_date": "2026-04-29",
+      "trough_month": "2026-04",
+      "n_days_in_window": 11,
+      "trough_volume_ratio": 0.7327437997220334,
+      "trough_rank_fraction": 0.7272727272727273
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2024-12-16",
+      "trough_date": "2025-04-08",
+      "trough_month": "2025-04",
+      "n_days_in_window": 109,
+      "trough_volume_ratio": 1.5276391910900489,
+      "trough_rank_fraction": 0.1651376146788991
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2025-02-03",
+      "trough_date": "2025-04-08",
+      "trough_month": "2025-04",
+      "n_days_in_window": 78,
+      "trough_volume_ratio": 1.5276391910900489,
+      "trough_rank_fraction": 0.16666666666666666
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2025-10-10",
+      "trough_date": "2025-10-14",
+      "trough_month": "2025-10",
+      "n_days_in_window": 14,
+      "trough_volume_ratio": 0.7393987810169547,
+      "trough_rank_fraction": 0.6428571428571429
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2025-11-20",
+      "trough_date": "2025-11-21",
+      "trough_month": "2025-11",
+      "n_days_in_window": 14,
+      "trough_volume_ratio": 0.831069460042595,
+      "trough_rank_fraction": 0.35714285714285715
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2026-03-02",
+      "trough_date": "2026-03-06",
+      "trough_month": "2026-03",
+      "n_days_in_window": 25,
+      "trough_volume_ratio": 0.6591985154661681,
+      "trough_rank_fraction": 0.88
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2023-08-10",
+      "trough_date": "2023-11-13",
+      "trough_month": "2023-11",
+      "n_days_in_window": 186,
+      "trough_volume_ratio": 1.786657982880536,
+      "trough_rank_fraction": 0.043010752688172046
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2023-09-21",
+      "trough_date": "2023-11-13",
+      "trough_month": "2023-11",
+      "n_days_in_window": 157,
+      "trough_volume_ratio": 1.786657982880536,
+      "trough_rank_fraction": 0.050955414012738856
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2023-10-18",
+      "trough_date": "2023-11-13",
+      "trough_month": "2023-11",
+      "n_days_in_window": 138,
+      "trough_volume_ratio": 1.786657982880536,
+      "trough_rank_fraction": 0.057971014492753624
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2024-03-14",
+      "trough_date": "2024-03-15",
+      "trough_month": "2024-03",
+      "n_days_in_window": 37,
+      "trough_volume_ratio": 0.7243296231392704,
+      "trough_rank_fraction": 0.6486486486486487
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2024-04-19",
+      "trough_date": "2024-04-19",
+      "trough_month": "2024-04",
+      "n_days_in_window": 12,
+      "trough_volume_ratio": 1.1337771879136105,
+      "trough_rank_fraction": 0.6666666666666666
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2024-08-02",
+      "trough_date": "2024-08-02",
+      "trough_month": "2024-08",
+      "n_days_in_window": 12,
+      "trough_volume_ratio": 1.3609600888808222,
+      "trough_rank_fraction": 0.3333333333333333
+    }
+  ]
+}

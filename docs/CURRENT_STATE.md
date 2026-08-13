@@ -1,6 +1,86 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-13 (**D-087: entry YEAR, not growth rate or
+**Last updated:** 2026-08-13 (**D-089: the user's own new idea — use
+trading volume to estimate the exact bottom within a decline, not just
+"down >=15%" — gets a real, statistically-supported result. Across 86
+full-universe episodes, the price trough's own volume averaged 1.18x its
+trailing-20-day average and ranked in the top third by volume within its
+own decline window; a ticker-grouped AND a trough-month-grouped
+bootstrap (the second specifically controlling for shared macro events
+like April 2025's tariff crash, which alone produced 16 of the 86
+troughs) both confirm the effect (95% CI excludes the no-effect value of
+0.5 either way). Important limit: this is a RETROSPECTIVE pattern — it
+does not yet show volume can trigger a real-time "this is likely the
+bottom" call without hindsight; that test has not been run.**)
+
+**What happened.** Direct follow-up to a new user idea: once a candidate
+passes the growth+pullback screen, can trading volume help estimate the
+actual bottom of the decline (not just the 15% pullback trigger) — is
+"capitulation volume" (elevated volume at the true low, before a
+reversal) a real, usable pattern here. Small proof first (project rule):
+`scripts/228` checked 5 known Group A episodes by hand — mixed, 2 of 5
+showed clearly elevated trough-day volume, 2 did not, and 3 of the 5
+troughs landed in the exact same week (the April 2025 tariff crash),
+meaning the small sample was really only ~3 independent cases. Scaled to
+all 86 determinable Group A episodes (`scripts/229`): median trough-day
+volume was 1.18x the trailing 20-day average, 60% of troughs had above-
+average volume, and the trough's rank within its own decline window
+averaged in the top third by volume. Tested for the same shared-event
+confound the small proof surfaced, using a bootstrap grouped by ticker
+(22 groups) and, separately, by the trough's own calendar month (30
+groups, directly controlling for events like the April 2025 crash) — both
+95% CIs exclude the no-effect value, so the pattern survives that
+check. **The honest limit**: this only shows that, looking backward, the
+day a decline actually bottomed tended to have unusually high volume —
+it does not yet show volume can be used forward, in real time, to call
+the bottom before you know it happened. That forward-looking test is the
+natural next step if this is pursued. Full detail:
+`docs/DECISIONS_LOG.md` D-089.
+
+**Previous update, same day:** D-088: important metric correction, user-
+caught. D-081/D-085/D-086/D-087 all measured "recovery to own prior
+high" — an ABSOLUTE outcome, not excess return vs QQQ, the project's own
+stated goal. Corrected: the growth+pullback rule's beat-QQQ rate is a
+modest 53-60% (not 68.8-95.5%), but its mean excess return IS
+statistically significant and positive at 6/12/24 months (skewed-payoff
+edge, not a high win rate). Separately, the user stated their actual
+investment horizon is 3-5 years, not 6-24 months — and at that horizon
+the data is critically thin: 36mo's CI crosses zero (n=18), 60mo has
+only 2 episodes (both `NVDA`, one ticker-group). This project currently
+has no validated signal at the horizon it is actually meant to serve.**)
+
+**What happened.** The user pushed back directly on D-087's "30% vs 90%
+recovery" framing: the project's actual goal is excess return over QQQ,
+so a weak market with the stock merely flat is still a win — exposing
+that D-081's "recovery to own prior 252-day high" metric (used
+unchanged through D-085/D-086/D-087) never actually measured that. The
+user then stated their real investment horizon: 3-5 years minimum, not
+the 6-24 month windows this session's quarterly-cadence work has used
+throughout. Re-scored the same 136 Group A episodes by forward excess
+return vs QQQ (`scripts/227`) instead of recovery-to-high. At 6/12/24
+months the picture is more modest but still real: beat-QQQ rate only
+53-60% (close to a coin flip), but ticker-grouped bootstrapped mean
+excess return is significantly positive at every horizon (6mo +23.4% CI
+[+6.9%,+38.7%]; 12mo +49.8% CI[+1.3%,+105.5%]; 24mo +108.9%
+CI[+4.5%,+262.4%]) — a skewed-payoff edge, the same asymmetric shape as
+every other finding this project has measured, not a high hit rate. The
+corrected year split also changes the D-087 read substantially: pre-2023
+entries are not catastrophically worse on excess-return terms (12mo: 50%
+vs 60% beat-QQQ, a real but much smaller gap than the absolute framing's
+"30% vs 90%"; 24mo: pre-2023 is actually better, 80% vs 46%). At the
+user's actual 3-5 year horizon, though, data is far too thin to draw any
+conclusion: 36 months has 18 episodes across only 13 independent ticker-
+groups and the bootstrap CI crosses zero; 60 months has just 2 episodes,
+both `NVDA`, a single ticker-group — an eye-catching +1317.8% raw number
+but not a statistical result. This is the same structural regime-lock
+problem already on record for the P/E finding's 5-year horizon (D-074),
+now confirmed to also apply to the growth+pullback signal: not fixable
+by more analysis, only by the passage of real time. `CLAUDE.md`'s Goal
+section now records both corrections (3-5 year horizon, excess return
+not absolute recovery) as standing facts. Full detail:
+`docs/DECISIONS_LOG.md` D-088.
+
+**Previous update, same day:** D-087: entry YEAR, not growth rate or
 even acceleration, is what most sharply separates 12-month recoveries
 from failures in the full Group A pullback pool — 90% recovery for
 entries from 2023 onward (94/104) vs. only 30% for 2021-2022 entries
@@ -8,7 +88,9 @@ entries from 2023 onward (94/104) vs. only 30% for 2021-2022 entries
 and failed episodes at the median; acceleration shows a real but modest
 gap (54% vs 29%). This is the strongest evidence yet that the
 growth+pullback rule's headline recovery rates describe "how this
-performed in a strong market," not a regime-independent property.**)
+performed in a strong market," not a regime-independent property.
+**(Superseded by D-088's metric correction above — read the corrected
+numbers there, not the "recovery" framing below.)**
 
 **What happened.** Direct user follow-up — characterize what
 distinguishes episodes that recovered within 12 months from those that
