@@ -1,0 +1,2796 @@
+{
+  "stop0.15_FULL_universe": {
+    "stop_loss": 0.15,
+    "scope": "FULL universe",
+    "n": 127,
+    "n_hit_target": 69,
+    "n_stopped_out": 57,
+    "n_timed_out": 1,
+    "hit_rate": 0.5433070866141733,
+    "stop_rate": 0.44881889763779526,
+    "timeout_rate": 0.007874015748031496,
+    "mean_realized_return": 0.09808240758743805,
+    "expected_value_simple": 0.0956692913385827,
+    "episodes": [
+      {
+        "ticker": "ALNY",
+        "entry_date": "2025-02-18",
+        "outcome": "hit_target",
+        "realized_return": 0.3,
+        "trading_days_held": 87
+      },
+      {
+        "ticker": "ALNY",
+        "entry_date": "2025-04-04",
+        "outcome": "hit_target",
+        "realized_return": 0.30652410631648735,
+        "trading_days_held": 42
+      },
+      {
+        "ticker": "ALNY",
+        "entry_date": "2025-12-09",
+        "outcome": "stopped_out",
+        "realized_return": -0.15806460883278878,
+        "trading_days_held": 33
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2025-02-05",
+        "outcome": "stopped_out",
+        "realized_return": -0.16257475883559952,
+        "trading_days_held": 40
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2025-09-05",
+        "outcome": "hit_target",
+        "realized_return": 0.34782326013307674,
+        "trading_days_held": 21
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2025-11-19",
+        "outcome": "hit_target",
+        "realized_return": 0.35745912463628554,
+        "trading_days_held": 104
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2026-02-04",
+        "outcome": "hit_target",
+        "realized_return": 0.38997955128687867,
+        "trading_days_held": 49
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2026-06-10",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2026-07-28",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2023-12-04",
+        "outcome": "hit_target",
+        "realized_return": 0.5654268576948428,
+        "trading_days_held": 50
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2024-08-02",
+        "outcome": "hit_target",
+        "realized_return": 0.3226134716986327,
+        "trading_days_held": 13
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2024-12-10",
+        "outcome": "hit_target",
+        "realized_return": 0.46910240146517834,
+        "trading_days_held": 43
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2025-02-21",
+        "outcome": "stopped_out",
+        "realized_return": -0.20300497954350094,
+        "trading_days_held": 3
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2025-10-06",
+        "outcome": "stopped_out",
+        "realized_return": -0.19402046788490204,
+        "trading_days_held": 80
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2026-01-02",
+        "outcome": "stopped_out",
+        "realized_return": -0.15587398716062448,
+        "trading_days_held": 13
+      },
+      {
+        "ticker": "AVGO",
+        "entry_date": "2025-03-12",
+        "outcome": "stopped_out",
+        "realized_return": -0.20707409826195294,
+        "trading_days_held": 16
+      },
+      {
+        "ticker": "AVGO",
+        "entry_date": "2025-12-15",
+        "outcome": "hit_target",
+        "realized_return": 0.3147641100130814,
+        "trading_days_held": 113
+      },
+      {
+        "ticker": "AVGO",
+        "entry_date": "2026-06-05",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "AXON",
+        "entry_date": "2023-08-08",
+        "outcome": "hit_target",
+        "realized_return": 0.30643605197036183,
+        "trading_days_held": 65
+      },
+      {
+        "ticker": "AXON",
+        "entry_date": "2023-09-25",
+        "outcome": "hit_target",
+        "realized_return": 0.30987366964312013,
+        "trading_days_held": 57
+      },
+      {
+        "ticker": "AXON",
+        "entry_date": "2024-06-04",
+        "outcome": "hit_target",
+        "realized_return": 0.33393668027926093,
+        "trading_days_held": 45
+      },
+      {
+        "ticker": "AXON",
+        "entry_date": "2025-01-06",
+        "outcome": "hit_target",
+        "realized_return": 0.30069558750412945,
+        "trading_days_held": 91
+      },
+      {
+        "ticker": "AXON",
+        "entry_date": "2025-02-19",
+        "outcome": "stopped_out",
+        "realized_return": -0.1578813902834357,
+        "trading_days_held": 3
+      },
+      {
+        "ticker": "AXON",
+        "entry_date": "2025-09-03",
+        "outcome": "stopped_out",
+        "realized_return": -0.19047548920315832,
+        "trading_days_held": 46
+      },
+      {
+        "ticker": "BKNG",
+        "entry_date": "2023-10-26",
+        "outcome": "hit_target",
+        "realized_return": 0.3004203525899026,
+        "trading_days_held": 41
+      },
+      {
+        "ticker": "CRWD",
+        "entry_date": "2022-08-31",
+        "outcome": "stopped_out",
+        "realized_return": -0.1622035760264295,
+        "trading_days_held": 29
+      },
+      {
+        "ticker": "CRWD",
+        "entry_date": "2024-04-19",
+        "outcome": "hit_target",
+        "realized_return": 0.32525469824266956,
+        "trading_days_held": 35
+      },
+      {
+        "ticker": "CRWD",
+        "entry_date": "2024-07-19",
+        "outcome": "stopped_out",
+        "realized_return": -0.15352825983252757,
+        "trading_days_held": 3
+      },
+      {
+        "ticker": "CRWD",
+        "entry_date": "2025-02-25",
+        "outcome": "stopped_out",
+        "realized_return": -0.1866754829451942,
+        "trading_days_held": 9
+      },
+      {
+        "ticker": "CRWD",
+        "entry_date": "2025-08-29",
+        "outcome": "hit_target",
+        "realized_return": 0.3026197002809461,
+        "trading_days_held": 45
+      },
+      {
+        "ticker": "CRWD",
+        "entry_date": "2025-12-17",
+        "outcome": "stopped_out",
+        "realized_return": -0.19756603447106033,
+        "trading_days_held": 33
+      },
+      {
+        "ticker": "CRWD",
+        "entry_date": "2026-06-08",
+        "outcome": "hit_target",
+        "realized_return": 0.3019020041014989,
+        "trading_days_held": 42
+      },
+      {
+        "ticker": "DASH",
+        "entry_date": "2023-08-21",
+        "outcome": "hit_target",
+        "realized_return": 0.30548305472596676,
+        "trading_days_held": 77
+      },
+      {
+        "ticker": "DASH",
+        "entry_date": "2023-09-21",
+        "outcome": "hit_target",
+        "realized_return": 0.30088612374492374,
+        "trading_days_held": 51
+      },
+      {
+        "ticker": "DASH",
+        "entry_date": "2024-05-02",
+        "outcome": "hit_target",
+        "realized_return": 0.3073222433130168,
+        "trading_days_held": 112
+      },
+      {
+        "ticker": "DASH",
+        "entry_date": "2025-03-06",
+        "outcome": "hit_target",
+        "realized_return": 0.3112542189141039,
+        "trading_days_held": 75
+      },
+      {
+        "ticker": "DASH",
+        "entry_date": "2025-04-03",
+        "outcome": "hit_target",
+        "realized_return": 0.3237542390517819,
+        "trading_days_held": 54
+      },
+      {
+        "ticker": "DASH",
+        "entry_date": "2025-05-07",
+        "outcome": "hit_target",
+        "realized_return": 0.3013164595506748,
+        "trading_days_held": 31
+      },
+      {
+        "ticker": "DASH",
+        "entry_date": "2025-11-05",
+        "outcome": "stopped_out",
+        "realized_return": -0.1745377869165244,
+        "trading_days_held": 1
+      },
+      {
+        "ticker": "DDOG",
+        "entry_date": "2023-08-09",
+        "outcome": "hit_target",
+        "realized_return": 0.30094513563235814,
+        "trading_days_held": 75
+      },
+      {
+        "ticker": "DDOG",
+        "entry_date": "2024-05-07",
+        "outcome": "hit_target",
+        "realized_return": 0.37749110079332804,
+        "trading_days_held": 139
+      },
+      {
+        "ticker": "DDOG",
+        "entry_date": "2024-07-30",
+        "outcome": "hit_target",
+        "realized_return": 0.35010465136933594,
+        "trading_days_held": 82
+      },
+      {
+        "ticker": "DDOG",
+        "entry_date": "2024-12-31",
+        "outcome": "stopped_out",
+        "realized_return": -0.16271257680251855,
+        "trading_days_held": 34
+      },
+      {
+        "ticker": "DDOG",
+        "entry_date": "2025-11-20",
+        "outcome": "stopped_out",
+        "realized_return": -0.16168453887036963,
+        "trading_days_held": 28
+      },
+      {
+        "ticker": "DDOG",
+        "entry_date": "2026-06-05",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "DDOG",
+        "entry_date": "2026-08-06",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "DXCM",
+        "entry_date": "2023-08-08",
+        "outcome": "stopped_out",
+        "realized_return": -0.15936114709976387,
+        "trading_days_held": 30
+      },
+      {
+        "ticker": "DXCM",
+        "entry_date": "2024-02-13",
+        "outcome": "stopped_out",
+        "realized_return": -0.45313166993451354,
+        "trading_days_held": 113
+      },
+      {
+        "ticker": "DXCM",
+        "entry_date": "2024-05-30",
+        "outcome": "stopped_out",
+        "realized_return": -0.4594594664256706,
+        "trading_days_held": 39
+      },
+      {
+        "ticker": "DXCM",
+        "entry_date": "2025-10-30",
+        "outcome": "stopped_out",
+        "realized_return": -0.1935483510103355,
+        "trading_days_held": 6
+      },
+      {
+        "ticker": "ENPH",
+        "entry_date": "2023-07-27",
+        "outcome": "stopped_out",
+        "realized_return": -0.15653477297749008,
+        "trading_days_held": 4
+      },
+      {
+        "ticker": "FOX",
+        "entry_date": "2026-08-06",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "FTNT",
+        "entry_date": "2023-08-07",
+        "outcome": "timed_out",
+        "realized_return": 0.2119583948097904,
+        "trading_days_held": 252
+      },
+      {
+        "ticker": "ISRG",
+        "entry_date": "2025-03-07",
+        "outcome": "stopped_out",
+        "realized_return": -0.16260181751117514,
+        "trading_days_held": 131
+      },
+      {
+        "ticker": "ISRG",
+        "entry_date": "2025-07-23",
+        "outcome": "stopped_out",
+        "realized_return": -0.16314376463180888,
+        "trading_days_held": 201
+      },
+      {
+        "ticker": "ISRG",
+        "entry_date": "2026-01-29",
+        "outcome": "stopped_out",
+        "realized_return": -0.17237709060897946,
+        "trading_days_held": 70
+      },
+      {
+        "ticker": "KLAC",
+        "entry_date": "2025-01-31",
+        "outcome": "stopped_out",
+        "realized_return": -0.15905392776278518,
+        "trading_days_held": 43
+      },
+      {
+        "ticker": "LCID",
+        "entry_date": "2023-08-07",
+        "outcome": "stopped_out",
+        "realized_return": -0.1934477068074792,
+        "trading_days_held": 32
+      },
+      {
+        "ticker": "MCHP",
+        "entry_date": "2026-07-02",
+        "outcome": "stopped_out",
+        "realized_return": -0.15678162498532983,
+        "trading_days_held": 18
+      },
+      {
+        "ticker": "MDB",
+        "entry_date": "2023-09-14",
+        "outcome": "hit_target",
+        "realized_return": 0.3688783764635689,
+        "trading_days_held": 102
+      },
+      {
+        "ticker": "MDB",
+        "entry_date": "2024-01-04",
+        "outcome": "hit_target",
+        "realized_return": 0.3110013253391387,
+        "trading_days_held": 24
+      },
+      {
+        "ticker": "MDB",
+        "entry_date": "2024-03-05",
+        "outcome": "stopped_out",
+        "realized_return": -0.16093825352044752,
+        "trading_days_held": 20
+      },
+      {
+        "ticker": "MDB",
+        "entry_date": "2026-03-11",
+        "outcome": "stopped_out",
+        "realized_return": -0.15182762582339485,
+        "trading_days_held": 20
+      },
+      {
+        "ticker": "META",
+        "entry_date": "2021-10-12",
+        "outcome": "stopped_out",
+        "realized_return": -0.2656515348098059,
+        "trading_days_held": 79
+      },
+      {
+        "ticker": "META",
+        "entry_date": "2024-04-25",
+        "outcome": "hit_target",
+        "realized_return": 0.30606272220278585,
+        "trading_days_held": 109
+      },
+      {
+        "ticker": "META",
+        "entry_date": "2024-07-25",
+        "outcome": "hit_target",
+        "realized_return": 0.3143512441898243,
+        "trading_days_held": 50
+      },
+      {
+        "ticker": "META",
+        "entry_date": "2025-03-07",
+        "outcome": "stopped_out",
+        "realized_return": -0.15030524895927766,
+        "trading_days_held": 19
+      },
+      {
+        "ticker": "META",
+        "entry_date": "2025-10-30",
+        "outcome": "stopped_out",
+        "realized_return": -0.17844763890908732,
+        "trading_days_held": 100
+      },
+      {
+        "ticker": "META",
+        "entry_date": "2026-02-04",
+        "outcome": "stopped_out",
+        "realized_return": -0.18154234589441653,
+        "trading_days_held": 35
+      },
+      {
+        "ticker": "MPWR",
+        "entry_date": "2024-11-06",
+        "outcome": "stopped_out",
+        "realized_return": -0.17570577026254314,
+        "trading_days_held": 3
+      },
+      {
+        "ticker": "MPWR",
+        "entry_date": "2026-03-06",
+        "outcome": "hit_target",
+        "realized_return": 0.30400914417811176,
+        "trading_days_held": 23
+      },
+      {
+        "ticker": "MPWR",
+        "entry_date": "2026-06-23",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "MSFT",
+        "entry_date": "2022-01-25",
+        "outcome": "stopped_out",
+        "realized_return": -0.16024817946016393,
+        "trading_days_held": 96
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2022-03-30",
+        "outcome": "stopped_out",
+        "realized_return": -0.1526023404776178,
+        "trading_days_held": 18
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2024-04-19",
+        "outcome": "hit_target",
+        "realized_return": 0.3182542326991844,
+        "trading_days_held": 37
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2024-07-11",
+        "outcome": "stopped_out",
+        "realized_return": -0.1531904906914119,
+        "trading_days_held": 9
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2025-11-20",
+        "outcome": "hit_target",
+        "realized_return": 0.30957937055921264,
+        "trading_days_held": 13
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-03-06",
+        "outcome": "hit_target",
+        "realized_return": 0.3164461978294032,
+        "trading_days_held": 32
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-03-25",
+        "outcome": "stopped_out",
+        "realized_return": -0.15779007334074793,
+        "trading_days_held": 3
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-05-18",
+        "outcome": "hit_target",
+        "realized_return": 0.314493696284489,
+        "trading_days_held": 5
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-06-05",
+        "outcome": "hit_target",
+        "realized_return": 0.3124732091263456,
+        "trading_days_held": 9
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-07-02",
+        "outcome": "stopped_out",
+        "realized_return": -0.15891382247088026,
+        "trading_days_held": 17
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2021-03-03",
+        "outcome": "hit_target",
+        "realized_return": 0.3103144661770075,
+        "trading_days_held": 63
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2021-05-13",
+        "outcome": "hit_target",
+        "realized_return": 0.3044218623519642,
+        "trading_days_held": 20
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2021-12-13",
+        "outcome": "stopped_out",
+        "realized_return": -0.1699868210679229,
+        "trading_days_held": 27
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2022-01-05",
+        "outcome": "stopped_out",
+        "realized_return": -0.15323864397213852,
+        "trading_days_held": 11
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2023-09-21",
+        "outcome": "hit_target",
+        "realized_return": 0.32506035884215184,
+        "trading_days_held": 76
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2023-10-20",
+        "outcome": "hit_target",
+        "realized_return": 0.31321422455198716,
+        "trading_days_held": 55
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2024-04-19",
+        "outcome": "hit_target",
+        "realized_return": 0.36219170286290536,
+        "trading_days_held": 24
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2024-07-24",
+        "outcome": "hit_target",
+        "realized_return": 0.30310726374452956,
+        "trading_days_held": 75
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2024-09-03",
+        "outcome": "hit_target",
+        "realized_return": 0.33064821031358504,
+        "trading_days_held": 34
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2025-01-27",
+        "outcome": "stopped_out",
+        "realized_return": -0.2035973736121389,
+        "trading_days_held": 48
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2025-02-25",
+        "outcome": "stopped_out",
+        "realized_return": -0.15517645362622787,
+        "trading_days_held": 9
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2025-12-12",
+        "outcome": "hit_target",
+        "realized_return": 0.3469317777308345,
+        "trading_days_held": 104
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2026-02-04",
+        "outcome": "hit_target",
+        "realized_return": 0.3533498030259337,
+        "trading_days_held": 69
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2026-03-20",
+        "outcome": "hit_target",
+        "realized_return": 0.3076433458116125,
+        "trading_days_held": 37
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2026-06-23",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "OKTA",
+        "entry_date": "2023-10-05",
+        "outcome": "hit_target",
+        "realized_return": 0.3938685161422937,
+        "trading_days_held": 100
+      },
+      {
+        "ticker": "OKTA",
+        "entry_date": "2023-10-20",
+        "outcome": "hit_target",
+        "realized_return": 0.41987565813245303,
+        "trading_days_held": 89
+      },
+      {
+        "ticker": "PANW",
+        "entry_date": "2022-02-23",
+        "outcome": "hit_target",
+        "realized_return": 0.3026527883606251,
+        "trading_days_held": 21
+      },
+      {
+        "ticker": "PANW",
+        "entry_date": "2022-05-05",
+        "outcome": "stopped_out",
+        "realized_return": -0.171890333082631,
+        "trading_days_held": 9
+      },
+      {
+        "ticker": "PANW",
+        "entry_date": "2023-08-04",
+        "outcome": "hit_target",
+        "realized_return": 0.3233326949877759,
+        "trading_days_held": 81
+      },
+      {
+        "ticker": "RIVN",
+        "entry_date": "2025-02-24",
+        "outcome": "hit_target",
+        "realized_return": 0.32190638538377697,
+        "trading_days_held": 58
+      },
+      {
+        "ticker": "RIVN",
+        "entry_date": "2025-11-04",
+        "outcome": "hit_target",
+        "realized_return": 0.31279998779296875,
+        "trading_days_held": 4
+      },
+      {
+        "ticker": "RIVN",
+        "entry_date": "2025-11-14",
+        "outcome": "hit_target",
+        "realized_return": 0.3421575875207642,
+        "trading_days_held": 23
+      },
+      {
+        "ticker": "RIVN",
+        "entry_date": "2026-01-13",
+        "outcome": "stopped_out",
+        "realized_return": -0.15384618108843126,
+        "trading_days_held": 7
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2024-05-06",
+        "outcome": "hit_target",
+        "realized_return": 0.31280788148411925,
+        "trading_days_held": 45
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2024-08-28",
+        "outcome": "hit_target",
+        "realized_return": 0.4154350853170489,
+        "trading_days_held": 19
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2024-12-03",
+        "outcome": "hit_target",
+        "realized_return": 0.358974365350679,
+        "trading_days_held": 31
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2024-12-18",
+        "outcome": "hit_target",
+        "realized_return": 0.36431066115510596,
+        "trading_days_held": 20
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-01-13",
+        "outcome": "hit_target",
+        "realized_return": 0.30782102289089597,
+        "trading_days_held": 5
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-02-19",
+        "outcome": "stopped_out",
+        "realized_return": -0.21789431361489417,
+        "trading_days_held": 4
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-06-12",
+        "outcome": "hit_target",
+        "realized_return": 0.36893939060065806,
+        "trading_days_held": 9
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-08-12",
+        "outcome": "hit_target",
+        "realized_return": 0.3469951551676192,
+        "trading_days_held": 38
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-09-03",
+        "outcome": "hit_target",
+        "realized_return": 0.34390079578460603,
+        "trading_days_held": 23
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-11-04",
+        "outcome": "stopped_out",
+        "realized_return": -0.20010605896927244,
+        "trading_days_held": 7
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2026-01-26",
+        "outcome": "stopped_out",
+        "realized_return": -0.1759443721604846,
+        "trading_days_held": 8
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2026-04-24",
+        "outcome": "hit_target",
+        "realized_return": 0.32366968896525095,
+        "trading_days_held": 10
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2026-06-01",
+        "outcome": "stopped_out",
+        "realized_return": -0.1634120442825296,
+        "trading_days_held": 9
+      },
+      {
+        "ticker": "SNPS",
+        "entry_date": "2025-12-22",
+        "outcome": "stopped_out",
+        "realized_return": -0.1647618228666485,
+        "trading_days_held": 64
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2024-12-16",
+        "outcome": "stopped_out",
+        "realized_return": -0.25162170528379063,
+        "trading_days_held": 73
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2025-02-03",
+        "outcome": "stopped_out",
+        "realized_return": -0.2348096254749294,
+        "trading_days_held": 42
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2025-10-10",
+        "outcome": "hit_target",
+        "realized_return": 0.30305998573056275,
+        "trading_days_held": 20
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2025-11-20",
+        "outcome": "hit_target",
+        "realized_return": 0.3738877897203092,
+        "trading_days_held": 30
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2026-03-02",
+        "outcome": "hit_target",
+        "realized_return": 0.3077044744936741,
+        "trading_days_held": 26
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2026-03-26",
+        "outcome": "hit_target",
+        "realized_return": 0.31022460095884763,
+        "trading_days_held": 8
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2026-06-26",
+        "outcome": "stopped_out",
+        "realized_return": -0.17158576507454373,
+        "trading_days_held": 13
+      },
+      {
+        "ticker": "TEAM",
+        "entry_date": "2025-03-03",
+        "outcome": "stopped_out",
+        "realized_return": -0.21271242641454294,
+        "trading_days_held": 5
+      },
+      {
+        "ticker": "TTD",
+        "entry_date": "2023-08-10",
+        "outcome": "stopped_out",
+        "realized_return": -0.16967174501253918,
+        "trading_days_held": 65
+      },
+      {
+        "ticker": "TTD",
+        "entry_date": "2023-09-21",
+        "outcome": "stopped_out",
+        "realized_return": -0.1546486911739635,
+        "trading_days_held": 36
+      },
+      {
+        "ticker": "TTD",
+        "entry_date": "2023-10-18",
+        "outcome": "stopped_out",
+        "realized_return": -0.16621069512562464,
+        "trading_days_held": 17
+      },
+      {
+        "ticker": "TTD",
+        "entry_date": "2024-03-14",
+        "outcome": "hit_target",
+        "realized_return": 0.3094285855989936,
+        "trading_days_held": 79
+      },
+      {
+        "ticker": "TTD",
+        "entry_date": "2024-04-19",
+        "outcome": "hit_target",
+        "realized_return": 0.31332461364964753,
+        "trading_days_held": 54
+      },
+      {
+        "ticker": "TTD",
+        "entry_date": "2024-08-02",
+        "outcome": "hit_target",
+        "realized_return": 0.30019251639796346,
+        "trading_days_held": 32
+      },
+      {
+        "ticker": "TTD",
+        "entry_date": "2024-12-31",
+        "outcome": "stopped_out",
+        "realized_return": -0.30298647987924876,
+        "trading_days_held": 29
+      },
+      {
+        "ticker": "TTWO",
+        "entry_date": "2026-01-30",
+        "outcome": "censored_too_recent"
+      }
+    ]
+  },
+  "stop0.15_Semiconductor_AI_only": {
+    "stop_loss": 0.15,
+    "scope": "Semiconductor/AI only",
+    "n": 59,
+    "n_hit_target": 36,
+    "n_stopped_out": 23,
+    "n_timed_out": 0,
+    "hit_rate": 0.6101694915254238,
+    "stop_rate": 0.3898305084745763,
+    "timeout_rate": 0.0,
+    "mean_realized_return": 0.13907793519669726,
+    "expected_value_simple": 0.12457627118644068,
+    "episodes": [
+      {
+        "ticker": "AMD",
+        "entry_date": "2025-02-05",
+        "outcome": "stopped_out",
+        "realized_return": -0.16257475883559952,
+        "trading_days_held": 40
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2025-09-05",
+        "outcome": "hit_target",
+        "realized_return": 0.34782326013307674,
+        "trading_days_held": 21
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2025-11-19",
+        "outcome": "hit_target",
+        "realized_return": 0.35745912463628554,
+        "trading_days_held": 104
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2026-02-04",
+        "outcome": "hit_target",
+        "realized_return": 0.38997955128687867,
+        "trading_days_held": 49
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2026-06-10",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2026-07-28",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2023-12-04",
+        "outcome": "hit_target",
+        "realized_return": 0.5654268576948428,
+        "trading_days_held": 50
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2024-08-02",
+        "outcome": "hit_target",
+        "realized_return": 0.3226134716986327,
+        "trading_days_held": 13
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2024-12-10",
+        "outcome": "hit_target",
+        "realized_return": 0.46910240146517834,
+        "trading_days_held": 43
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2025-02-21",
+        "outcome": "stopped_out",
+        "realized_return": -0.20300497954350094,
+        "trading_days_held": 3
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2025-10-06",
+        "outcome": "stopped_out",
+        "realized_return": -0.19402046788490204,
+        "trading_days_held": 80
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2026-01-02",
+        "outcome": "stopped_out",
+        "realized_return": -0.15587398716062448,
+        "trading_days_held": 13
+      },
+      {
+        "ticker": "AVGO",
+        "entry_date": "2025-03-12",
+        "outcome": "stopped_out",
+        "realized_return": -0.20707409826195294,
+        "trading_days_held": 16
+      },
+      {
+        "ticker": "AVGO",
+        "entry_date": "2025-12-15",
+        "outcome": "hit_target",
+        "realized_return": 0.3147641100130814,
+        "trading_days_held": 113
+      },
+      {
+        "ticker": "AVGO",
+        "entry_date": "2026-06-05",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "ENPH",
+        "entry_date": "2023-07-27",
+        "outcome": "stopped_out",
+        "realized_return": -0.15653477297749008,
+        "trading_days_held": 4
+      },
+      {
+        "ticker": "MCHP",
+        "entry_date": "2026-07-02",
+        "outcome": "stopped_out",
+        "realized_return": -0.15678162498532983,
+        "trading_days_held": 18
+      },
+      {
+        "ticker": "MPWR",
+        "entry_date": "2024-11-06",
+        "outcome": "stopped_out",
+        "realized_return": -0.17570577026254314,
+        "trading_days_held": 3
+      },
+      {
+        "ticker": "MPWR",
+        "entry_date": "2026-03-06",
+        "outcome": "hit_target",
+        "realized_return": 0.30400914417811176,
+        "trading_days_held": 23
+      },
+      {
+        "ticker": "MPWR",
+        "entry_date": "2026-06-23",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2022-03-30",
+        "outcome": "stopped_out",
+        "realized_return": -0.1526023404776178,
+        "trading_days_held": 18
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2024-04-19",
+        "outcome": "hit_target",
+        "realized_return": 0.3182542326991844,
+        "trading_days_held": 37
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2024-07-11",
+        "outcome": "stopped_out",
+        "realized_return": -0.1531904906914119,
+        "trading_days_held": 9
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2025-11-20",
+        "outcome": "hit_target",
+        "realized_return": 0.30957937055921264,
+        "trading_days_held": 13
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-03-06",
+        "outcome": "hit_target",
+        "realized_return": 0.3164461978294032,
+        "trading_days_held": 32
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-03-25",
+        "outcome": "stopped_out",
+        "realized_return": -0.15779007334074793,
+        "trading_days_held": 3
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-05-18",
+        "outcome": "hit_target",
+        "realized_return": 0.314493696284489,
+        "trading_days_held": 5
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-06-05",
+        "outcome": "hit_target",
+        "realized_return": 0.3124732091263456,
+        "trading_days_held": 9
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-07-02",
+        "outcome": "stopped_out",
+        "realized_return": -0.15891382247088026,
+        "trading_days_held": 17
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2021-03-03",
+        "outcome": "hit_target",
+        "realized_return": 0.3103144661770075,
+        "trading_days_held": 63
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2021-05-13",
+        "outcome": "hit_target",
+        "realized_return": 0.3044218623519642,
+        "trading_days_held": 20
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2021-12-13",
+        "outcome": "stopped_out",
+        "realized_return": -0.1699868210679229,
+        "trading_days_held": 27
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2022-01-05",
+        "outcome": "stopped_out",
+        "realized_return": -0.15323864397213852,
+        "trading_days_held": 11
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2023-09-21",
+        "outcome": "hit_target",
+        "realized_return": 0.32506035884215184,
+        "trading_days_held": 76
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2023-10-20",
+        "outcome": "hit_target",
+        "realized_return": 0.31321422455198716,
+        "trading_days_held": 55
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2024-04-19",
+        "outcome": "hit_target",
+        "realized_return": 0.36219170286290536,
+        "trading_days_held": 24
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2024-07-24",
+        "outcome": "hit_target",
+        "realized_return": 0.30310726374452956,
+        "trading_days_held": 75
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2024-09-03",
+        "outcome": "hit_target",
+        "realized_return": 0.33064821031358504,
+        "trading_days_held": 34
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2025-01-27",
+        "outcome": "stopped_out",
+        "realized_return": -0.2035973736121389,
+        "trading_days_held": 48
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2025-02-25",
+        "outcome": "stopped_out",
+        "realized_return": -0.15517645362622787,
+        "trading_days_held": 9
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2025-12-12",
+        "outcome": "hit_target",
+        "realized_return": 0.3469317777308345,
+        "trading_days_held": 104
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2026-02-04",
+        "outcome": "hit_target",
+        "realized_return": 0.3533498030259337,
+        "trading_days_held": 69
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2026-03-20",
+        "outcome": "hit_target",
+        "realized_return": 0.3076433458116125,
+        "trading_days_held": 37
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2026-06-23",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2024-05-06",
+        "outcome": "hit_target",
+        "realized_return": 0.31280788148411925,
+        "trading_days_held": 45
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2024-08-28",
+        "outcome": "hit_target",
+        "realized_return": 0.4154350853170489,
+        "trading_days_held": 19
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2024-12-03",
+        "outcome": "hit_target",
+        "realized_return": 0.358974365350679,
+        "trading_days_held": 31
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2024-12-18",
+        "outcome": "hit_target",
+        "realized_return": 0.36431066115510596,
+        "trading_days_held": 20
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-01-13",
+        "outcome": "hit_target",
+        "realized_return": 0.30782102289089597,
+        "trading_days_held": 5
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-02-19",
+        "outcome": "stopped_out",
+        "realized_return": -0.21789431361489417,
+        "trading_days_held": 4
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-06-12",
+        "outcome": "hit_target",
+        "realized_return": 0.36893939060065806,
+        "trading_days_held": 9
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-08-12",
+        "outcome": "hit_target",
+        "realized_return": 0.3469951551676192,
+        "trading_days_held": 38
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-09-03",
+        "outcome": "hit_target",
+        "realized_return": 0.34390079578460603,
+        "trading_days_held": 23
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-11-04",
+        "outcome": "stopped_out",
+        "realized_return": -0.20010605896927244,
+        "trading_days_held": 7
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2026-01-26",
+        "outcome": "stopped_out",
+        "realized_return": -0.1759443721604846,
+        "trading_days_held": 8
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2026-04-24",
+        "outcome": "hit_target",
+        "realized_return": 0.32366968896525095,
+        "trading_days_held": 10
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2026-06-01",
+        "outcome": "stopped_out",
+        "realized_return": -0.1634120442825296,
+        "trading_days_held": 9
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2024-12-16",
+        "outcome": "stopped_out",
+        "realized_return": -0.25162170528379063,
+        "trading_days_held": 73
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2025-02-03",
+        "outcome": "stopped_out",
+        "realized_return": -0.2348096254749294,
+        "trading_days_held": 42
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2025-10-10",
+        "outcome": "hit_target",
+        "realized_return": 0.30305998573056275,
+        "trading_days_held": 20
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2025-11-20",
+        "outcome": "hit_target",
+        "realized_return": 0.3738877897203092,
+        "trading_days_held": 30
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2026-03-02",
+        "outcome": "hit_target",
+        "realized_return": 0.3077044744936741,
+        "trading_days_held": 26
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2026-03-26",
+        "outcome": "hit_target",
+        "realized_return": 0.31022460095884763,
+        "trading_days_held": 8
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2026-06-26",
+        "outcome": "stopped_out",
+        "realized_return": -0.17158576507454373,
+        "trading_days_held": 13
+      }
+    ]
+  },
+  "stop0.2_FULL_universe": {
+    "stop_loss": 0.2,
+    "scope": "FULL universe",
+    "n": 124,
+    "n_hit_target": 76,
+    "n_stopped_out": 46,
+    "n_timed_out": 2,
+    "hit_rate": 0.6129032258064516,
+    "stop_rate": 0.3709677419354839,
+    "timeout_rate": 0.016129032258064516,
+    "mean_realized_return": 0.11934542520467822,
+    "expected_value_simple": 0.1096774193548387,
+    "episodes": [
+      {
+        "ticker": "ALNY",
+        "entry_date": "2025-02-18",
+        "outcome": "hit_target",
+        "realized_return": 0.3,
+        "trading_days_held": 87
+      },
+      {
+        "ticker": "ALNY",
+        "entry_date": "2025-04-04",
+        "outcome": "hit_target",
+        "realized_return": 0.30652410631648735,
+        "trading_days_held": 42
+      },
+      {
+        "ticker": "ALNY",
+        "entry_date": "2025-12-09",
+        "outcome": "stopped_out",
+        "realized_return": -0.20223502070948574,
+        "trading_days_held": 39
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2025-02-05",
+        "outcome": "stopped_out",
+        "realized_return": -0.23435407105942052,
+        "trading_days_held": 41
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2025-09-05",
+        "outcome": "hit_target",
+        "realized_return": 0.34782326013307674,
+        "trading_days_held": 21
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2025-11-19",
+        "outcome": "hit_target",
+        "realized_return": 0.35745912463628554,
+        "trading_days_held": 104
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2026-02-04",
+        "outcome": "hit_target",
+        "realized_return": 0.38997955128687867,
+        "trading_days_held": 49
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2026-06-10",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2026-07-28",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2023-12-04",
+        "outcome": "hit_target",
+        "realized_return": 0.5654268576948428,
+        "trading_days_held": 50
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2024-08-02",
+        "outcome": "hit_target",
+        "realized_return": 0.3226134716986327,
+        "trading_days_held": 13
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2024-12-10",
+        "outcome": "hit_target",
+        "realized_return": 0.46910240146517834,
+        "trading_days_held": 43
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2025-02-21",
+        "outcome": "stopped_out",
+        "realized_return": -0.20300497954350094,
+        "trading_days_held": 3
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2025-10-06",
+        "outcome": "stopped_out",
+        "realized_return": -0.2133049258178503,
+        "trading_days_held": 82
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2026-01-02",
+        "outcome": "stopped_out",
+        "realized_return": -0.23484606717006126,
+        "trading_days_held": 19
+      },
+      {
+        "ticker": "AVGO",
+        "entry_date": "2025-03-12",
+        "outcome": "stopped_out",
+        "realized_return": -0.20707409826195294,
+        "trading_days_held": 16
+      },
+      {
+        "ticker": "AVGO",
+        "entry_date": "2025-12-15",
+        "outcome": "hit_target",
+        "realized_return": 0.3147641100130814,
+        "trading_days_held": 113
+      },
+      {
+        "ticker": "AVGO",
+        "entry_date": "2026-06-05",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "AXON",
+        "entry_date": "2023-08-08",
+        "outcome": "hit_target",
+        "realized_return": 0.30643605197036183,
+        "trading_days_held": 65
+      },
+      {
+        "ticker": "AXON",
+        "entry_date": "2023-09-25",
+        "outcome": "hit_target",
+        "realized_return": 0.30987366964312013,
+        "trading_days_held": 57
+      },
+      {
+        "ticker": "AXON",
+        "entry_date": "2024-06-04",
+        "outcome": "hit_target",
+        "realized_return": 0.33393668027926093,
+        "trading_days_held": 45
+      },
+      {
+        "ticker": "AXON",
+        "entry_date": "2025-01-06",
+        "outcome": "hit_target",
+        "realized_return": 0.30069558750412945,
+        "trading_days_held": 91
+      },
+      {
+        "ticker": "AXON",
+        "entry_date": "2025-02-19",
+        "outcome": "hit_target",
+        "realized_return": 0.3144147862612371,
+        "trading_days_held": 73
+      },
+      {
+        "ticker": "AXON",
+        "entry_date": "2025-09-03",
+        "outcome": "stopped_out",
+        "realized_return": -0.21110175238873932,
+        "trading_days_held": 49
+      },
+      {
+        "ticker": "BKNG",
+        "entry_date": "2023-10-26",
+        "outcome": "hit_target",
+        "realized_return": 0.3004203525899026,
+        "trading_days_held": 41
+      },
+      {
+        "ticker": "CRWD",
+        "entry_date": "2022-08-31",
+        "outcome": "stopped_out",
+        "realized_return": -0.20059145041553691,
+        "trading_days_held": 31
+      },
+      {
+        "ticker": "CRWD",
+        "entry_date": "2024-04-19",
+        "outcome": "hit_target",
+        "realized_return": 0.32525469824266956,
+        "trading_days_held": 35
+      },
+      {
+        "ticker": "CRWD",
+        "entry_date": "2024-07-19",
+        "outcome": "stopped_out",
+        "realized_return": -0.23383394398178953,
+        "trading_days_held": 7
+      },
+      {
+        "ticker": "CRWD",
+        "entry_date": "2025-02-25",
+        "outcome": "hit_target",
+        "realized_return": 0.3010928145829905,
+        "trading_days_held": 83
+      },
+      {
+        "ticker": "CRWD",
+        "entry_date": "2025-08-29",
+        "outcome": "hit_target",
+        "realized_return": 0.3026197002809461,
+        "trading_days_held": 45
+      },
+      {
+        "ticker": "CRWD",
+        "entry_date": "2025-12-17",
+        "outcome": "stopped_out",
+        "realized_return": -0.2546487494980234,
+        "trading_days_held": 44
+      },
+      {
+        "ticker": "CRWD",
+        "entry_date": "2026-06-08",
+        "outcome": "hit_target",
+        "realized_return": 0.3019020041014989,
+        "trading_days_held": 42
+      },
+      {
+        "ticker": "DASH",
+        "entry_date": "2023-08-21",
+        "outcome": "hit_target",
+        "realized_return": 0.30548305472596676,
+        "trading_days_held": 77
+      },
+      {
+        "ticker": "DASH",
+        "entry_date": "2023-09-21",
+        "outcome": "hit_target",
+        "realized_return": 0.30088612374492374,
+        "trading_days_held": 51
+      },
+      {
+        "ticker": "DASH",
+        "entry_date": "2024-05-02",
+        "outcome": "hit_target",
+        "realized_return": 0.3073222433130168,
+        "trading_days_held": 112
+      },
+      {
+        "ticker": "DASH",
+        "entry_date": "2025-03-06",
+        "outcome": "hit_target",
+        "realized_return": 0.3112542189141039,
+        "trading_days_held": 75
+      },
+      {
+        "ticker": "DASH",
+        "entry_date": "2025-04-03",
+        "outcome": "hit_target",
+        "realized_return": 0.3237542390517819,
+        "trading_days_held": 54
+      },
+      {
+        "ticker": "DASH",
+        "entry_date": "2025-05-07",
+        "outcome": "hit_target",
+        "realized_return": 0.3013164595506748,
+        "trading_days_held": 31
+      },
+      {
+        "ticker": "DASH",
+        "entry_date": "2025-11-05",
+        "outcome": "stopped_out",
+        "realized_return": -0.21121850534647452,
+        "trading_days_held": 11
+      },
+      {
+        "ticker": "DDOG",
+        "entry_date": "2023-08-09",
+        "outcome": "hit_target",
+        "realized_return": 0.30094513563235814,
+        "trading_days_held": 75
+      },
+      {
+        "ticker": "DDOG",
+        "entry_date": "2024-05-07",
+        "outcome": "hit_target",
+        "realized_return": 0.37749110079332804,
+        "trading_days_held": 139
+      },
+      {
+        "ticker": "DDOG",
+        "entry_date": "2024-07-30",
+        "outcome": "hit_target",
+        "realized_return": 0.35010465136933594,
+        "trading_days_held": 82
+      },
+      {
+        "ticker": "DDOG",
+        "entry_date": "2024-12-31",
+        "outcome": "stopped_out",
+        "realized_return": -0.2065924611180659,
+        "trading_days_held": 37
+      },
+      {
+        "ticker": "DDOG",
+        "entry_date": "2025-11-20",
+        "outcome": "stopped_out",
+        "realized_return": -0.21357402955559507,
+        "trading_days_held": 33
+      },
+      {
+        "ticker": "DDOG",
+        "entry_date": "2026-06-05",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "DDOG",
+        "entry_date": "2026-08-06",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "DXCM",
+        "entry_date": "2023-08-08",
+        "outcome": "stopped_out",
+        "realized_return": -0.2059170699580636,
+        "trading_days_held": 32
+      },
+      {
+        "ticker": "DXCM",
+        "entry_date": "2024-02-13",
+        "outcome": "stopped_out",
+        "realized_return": -0.45313166993451354,
+        "trading_days_held": 113
+      },
+      {
+        "ticker": "DXCM",
+        "entry_date": "2024-05-30",
+        "outcome": "stopped_out",
+        "realized_return": -0.4594594664256706,
+        "trading_days_held": 39
+      },
+      {
+        "ticker": "DXCM",
+        "entry_date": "2025-10-30",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "ENPH",
+        "entry_date": "2023-07-27",
+        "outcome": "stopped_out",
+        "realized_return": -0.20335729945052808,
+        "trading_days_held": 14
+      },
+      {
+        "ticker": "FOX",
+        "entry_date": "2026-08-06",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "FTNT",
+        "entry_date": "2023-08-07",
+        "outcome": "timed_out",
+        "realized_return": 0.2119583948097904,
+        "trading_days_held": 252
+      },
+      {
+        "ticker": "ISRG",
+        "entry_date": "2025-03-07",
+        "outcome": "timed_out",
+        "realized_return": -0.0625361846397647,
+        "trading_days_held": 252
+      },
+      {
+        "ticker": "ISRG",
+        "entry_date": "2025-07-23",
+        "outcome": "stopped_out",
+        "realized_return": -0.20372548516533845,
+        "trading_days_held": 232
+      },
+      {
+        "ticker": "ISRG",
+        "entry_date": "2026-01-29",
+        "outcome": "stopped_out",
+        "realized_return": -0.2073687371320198,
+        "trading_days_held": 85
+      },
+      {
+        "ticker": "KLAC",
+        "entry_date": "2025-01-31",
+        "outcome": "stopped_out",
+        "realized_return": -0.21904798124977845,
+        "trading_days_held": 44
+      },
+      {
+        "ticker": "LCID",
+        "entry_date": "2023-08-07",
+        "outcome": "stopped_out",
+        "realized_return": -0.2028081171522719,
+        "trading_days_held": 33
+      },
+      {
+        "ticker": "MCHP",
+        "entry_date": "2026-07-02",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "MDB",
+        "entry_date": "2023-09-14",
+        "outcome": "hit_target",
+        "realized_return": 0.3688783764635689,
+        "trading_days_held": 102
+      },
+      {
+        "ticker": "MDB",
+        "entry_date": "2024-01-04",
+        "outcome": "hit_target",
+        "realized_return": 0.3110013253391387,
+        "trading_days_held": 24
+      },
+      {
+        "ticker": "MDB",
+        "entry_date": "2024-03-05",
+        "outcome": "stopped_out",
+        "realized_return": -0.2345679012345679,
+        "trading_days_held": 60
+      },
+      {
+        "ticker": "MDB",
+        "entry_date": "2026-03-11",
+        "outcome": "hit_target",
+        "realized_return": 0.492700572679702,
+        "trading_days_held": 56
+      },
+      {
+        "ticker": "META",
+        "entry_date": "2021-10-12",
+        "outcome": "stopped_out",
+        "realized_return": -0.2656515348098059,
+        "trading_days_held": 79
+      },
+      {
+        "ticker": "META",
+        "entry_date": "2024-04-25",
+        "outcome": "hit_target",
+        "realized_return": 0.30606272220278585,
+        "trading_days_held": 109
+      },
+      {
+        "ticker": "META",
+        "entry_date": "2024-07-25",
+        "outcome": "hit_target",
+        "realized_return": 0.3143512441898243,
+        "trading_days_held": 50
+      },
+      {
+        "ticker": "META",
+        "entry_date": "2025-03-07",
+        "outcome": "stopped_out",
+        "realized_return": -0.22536197860598958,
+        "trading_days_held": 30
+      },
+      {
+        "ticker": "META",
+        "entry_date": "2025-10-30",
+        "outcome": "stopped_out",
+        "realized_return": -0.21118730953700574,
+        "trading_days_held": 101
+      },
+      {
+        "ticker": "META",
+        "entry_date": "2026-02-04",
+        "outcome": "stopped_out",
+        "realized_return": -0.2141586894014013,
+        "trading_days_held": 36
+      },
+      {
+        "ticker": "MPWR",
+        "entry_date": "2024-11-06",
+        "outcome": "stopped_out",
+        "realized_return": -0.23407914587930492,
+        "trading_days_held": 5
+      },
+      {
+        "ticker": "MPWR",
+        "entry_date": "2026-03-06",
+        "outcome": "hit_target",
+        "realized_return": 0.30400914417811176,
+        "trading_days_held": 23
+      },
+      {
+        "ticker": "MPWR",
+        "entry_date": "2026-06-23",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "MSFT",
+        "entry_date": "2022-01-25",
+        "outcome": "stopped_out",
+        "realized_return": -0.20534504571977438,
+        "trading_days_held": 178
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2022-03-30",
+        "outcome": "stopped_out",
+        "realized_return": -0.20894396115524216,
+        "trading_days_held": 50
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2024-04-19",
+        "outcome": "hit_target",
+        "realized_return": 0.3182542326991844,
+        "trading_days_held": 37
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2024-07-11",
+        "outcome": "stopped_out",
+        "realized_return": -0.21247023786159952,
+        "trading_days_held": 13
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2025-11-20",
+        "outcome": "hit_target",
+        "realized_return": 0.30957937055921264,
+        "trading_days_held": 13
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-03-06",
+        "outcome": "hit_target",
+        "realized_return": 0.3164461978294032,
+        "trading_days_held": 32
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-03-25",
+        "outcome": "hit_target",
+        "realized_return": 0.30000786720791994,
+        "trading_days_held": 21
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-05-18",
+        "outcome": "hit_target",
+        "realized_return": 0.314493696284489,
+        "trading_days_held": 5
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-06-05",
+        "outcome": "hit_target",
+        "realized_return": 0.3124732091263456,
+        "trading_days_held": 9
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-07-02",
+        "outcome": "stopped_out",
+        "realized_return": -0.24248636490897688,
+        "trading_days_held": 18
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2021-03-03",
+        "outcome": "hit_target",
+        "realized_return": 0.3103144661770075,
+        "trading_days_held": 63
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2021-05-13",
+        "outcome": "hit_target",
+        "realized_return": 0.3044218623519642,
+        "trading_days_held": 20
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2021-12-13",
+        "outcome": "stopped_out",
+        "realized_return": -0.2072724703907501,
+        "trading_days_held": 29
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2022-01-05",
+        "outcome": "stopped_out",
+        "realized_return": -0.20504274122010888,
+        "trading_days_held": 15
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2023-09-21",
+        "outcome": "hit_target",
+        "realized_return": 0.32506035884215184,
+        "trading_days_held": 76
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2023-10-20",
+        "outcome": "hit_target",
+        "realized_return": 0.31321422455198716,
+        "trading_days_held": 55
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2024-04-19",
+        "outcome": "hit_target",
+        "realized_return": 0.36219170286290536,
+        "trading_days_held": 24
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2024-07-24",
+        "outcome": "hit_target",
+        "realized_return": 0.30310726374452956,
+        "trading_days_held": 75
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2024-09-03",
+        "outcome": "hit_target",
+        "realized_return": 0.33064821031358504,
+        "trading_days_held": 34
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2025-01-27",
+        "outcome": "stopped_out",
+        "realized_return": -0.2035973736121389,
+        "trading_days_held": 48
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2025-02-25",
+        "outcome": "stopped_out",
+        "realized_return": -0.25523178074578884,
+        "trading_days_held": 28
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2025-12-12",
+        "outcome": "hit_target",
+        "realized_return": 0.3469317777308345,
+        "trading_days_held": 104
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2026-02-04",
+        "outcome": "hit_target",
+        "realized_return": 0.3533498030259337,
+        "trading_days_held": 69
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2026-03-20",
+        "outcome": "hit_target",
+        "realized_return": 0.3076433458116125,
+        "trading_days_held": 37
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2026-06-23",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "OKTA",
+        "entry_date": "2023-10-05",
+        "outcome": "hit_target",
+        "realized_return": 0.3938685161422937,
+        "trading_days_held": 100
+      },
+      {
+        "ticker": "OKTA",
+        "entry_date": "2023-10-20",
+        "outcome": "hit_target",
+        "realized_return": 0.41987565813245303,
+        "trading_days_held": 89
+      },
+      {
+        "ticker": "PANW",
+        "entry_date": "2022-02-23",
+        "outcome": "hit_target",
+        "realized_return": 0.3026527883606251,
+        "trading_days_held": 21
+      },
+      {
+        "ticker": "PANW",
+        "entry_date": "2022-05-05",
+        "outcome": "stopped_out",
+        "realized_return": -0.21148321000172685,
+        "trading_days_held": 162
+      },
+      {
+        "ticker": "PANW",
+        "entry_date": "2023-08-04",
+        "outcome": "hit_target",
+        "realized_return": 0.3233326949877759,
+        "trading_days_held": 81
+      },
+      {
+        "ticker": "RIVN",
+        "entry_date": "2025-02-24",
+        "outcome": "hit_target",
+        "realized_return": 0.32190638538377697,
+        "trading_days_held": 58
+      },
+      {
+        "ticker": "RIVN",
+        "entry_date": "2025-11-04",
+        "outcome": "hit_target",
+        "realized_return": 0.31279998779296875,
+        "trading_days_held": 4
+      },
+      {
+        "ticker": "RIVN",
+        "entry_date": "2025-11-14",
+        "outcome": "hit_target",
+        "realized_return": 0.3421575875207642,
+        "trading_days_held": 23
+      },
+      {
+        "ticker": "RIVN",
+        "entry_date": "2026-01-13",
+        "outcome": "stopped_out",
+        "realized_return": -0.21750664713514722,
+        "trading_days_held": 12
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2024-05-06",
+        "outcome": "hit_target",
+        "realized_return": 0.31280788148411925,
+        "trading_days_held": 45
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2024-08-28",
+        "outcome": "hit_target",
+        "realized_return": 0.4154350853170489,
+        "trading_days_held": 19
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2024-12-03",
+        "outcome": "hit_target",
+        "realized_return": 0.358974365350679,
+        "trading_days_held": 31
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2024-12-18",
+        "outcome": "hit_target",
+        "realized_return": 0.36431066115510596,
+        "trading_days_held": 20
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-01-13",
+        "outcome": "hit_target",
+        "realized_return": 0.30782102289089597,
+        "trading_days_held": 5
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-02-19",
+        "outcome": "stopped_out",
+        "realized_return": -0.21789431361489417,
+        "trading_days_held": 4
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-06-12",
+        "outcome": "hit_target",
+        "realized_return": 0.36893939060065806,
+        "trading_days_held": 9
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-08-12",
+        "outcome": "hit_target",
+        "realized_return": 0.3469951551676192,
+        "trading_days_held": 38
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-09-03",
+        "outcome": "hit_target",
+        "realized_return": 0.34390079578460603,
+        "trading_days_held": 23
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-11-04",
+        "outcome": "stopped_out",
+        "realized_return": -0.20010605896927244,
+        "trading_days_held": 7
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2026-01-26",
+        "outcome": "stopped_out",
+        "realized_return": -0.24291752281684667,
+        "trading_days_held": 43
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2026-04-24",
+        "outcome": "hit_target",
+        "realized_return": 0.32366968896525095,
+        "trading_days_held": 10
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2026-06-01",
+        "outcome": "stopped_out",
+        "realized_return": -0.22281229495106003,
+        "trading_days_held": 15
+      },
+      {
+        "ticker": "SNPS",
+        "entry_date": "2025-12-22",
+        "outcome": "stopped_out",
+        "realized_return": -0.20939654030953364,
+        "trading_days_held": 65
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2024-12-16",
+        "outcome": "stopped_out",
+        "realized_return": -0.25162170528379063,
+        "trading_days_held": 73
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2025-02-03",
+        "outcome": "stopped_out",
+        "realized_return": -0.2348096254749294,
+        "trading_days_held": 42
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2025-10-10",
+        "outcome": "hit_target",
+        "realized_return": 0.30305998573056275,
+        "trading_days_held": 20
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2025-11-20",
+        "outcome": "hit_target",
+        "realized_return": 0.3738877897203092,
+        "trading_days_held": 30
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2026-03-02",
+        "outcome": "hit_target",
+        "realized_return": 0.3077044744936741,
+        "trading_days_held": 26
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2026-03-26",
+        "outcome": "hit_target",
+        "realized_return": 0.31022460095884763,
+        "trading_days_held": 8
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2026-06-26",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "TEAM",
+        "entry_date": "2025-03-03",
+        "outcome": "stopped_out",
+        "realized_return": -0.21271242641454294,
+        "trading_days_held": 5
+      },
+      {
+        "ticker": "TTD",
+        "entry_date": "2023-08-10",
+        "outcome": "hit_target",
+        "realized_return": 0.31690234097427444,
+        "trading_days_held": 228
+      },
+      {
+        "ticker": "TTD",
+        "entry_date": "2023-09-21",
+        "outcome": "hit_target",
+        "realized_return": 0.31075011093453836,
+        "trading_days_held": 186
+      },
+      {
+        "ticker": "TTD",
+        "entry_date": "2023-10-18",
+        "outcome": "hit_target",
+        "realized_return": 0.3012896430144825,
+        "trading_days_held": 178
+      },
+      {
+        "ticker": "TTD",
+        "entry_date": "2024-03-14",
+        "outcome": "hit_target",
+        "realized_return": 0.3094285855989936,
+        "trading_days_held": 79
+      },
+      {
+        "ticker": "TTD",
+        "entry_date": "2024-04-19",
+        "outcome": "hit_target",
+        "realized_return": 0.31332461364964753,
+        "trading_days_held": 54
+      },
+      {
+        "ticker": "TTD",
+        "entry_date": "2024-08-02",
+        "outcome": "hit_target",
+        "realized_return": 0.30019251639796346,
+        "trading_days_held": 32
+      },
+      {
+        "ticker": "TTD",
+        "entry_date": "2024-12-31",
+        "outcome": "stopped_out",
+        "realized_return": -0.30298647987924876,
+        "trading_days_held": 29
+      },
+      {
+        "ticker": "TTWO",
+        "entry_date": "2026-01-30",
+        "outcome": "censored_too_recent"
+      }
+    ]
+  },
+  "stop0.2_Semiconductor_AI_only": {
+    "stop_loss": 0.2,
+    "scope": "Semiconductor/AI only",
+    "n": 57,
+    "n_hit_target": 37,
+    "n_stopped_out": 20,
+    "n_timed_out": 0,
+    "hit_rate": 0.6491228070175439,
+    "stop_rate": 0.3508771929824561,
+    "timeout_rate": 0.0,
+    "mean_realized_return": 0.14389156788871077,
+    "expected_value_simple": 0.12456140350877193,
+    "episodes": [
+      {
+        "ticker": "AMD",
+        "entry_date": "2025-02-05",
+        "outcome": "stopped_out",
+        "realized_return": -0.23435407105942052,
+        "trading_days_held": 41
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2025-09-05",
+        "outcome": "hit_target",
+        "realized_return": 0.34782326013307674,
+        "trading_days_held": 21
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2025-11-19",
+        "outcome": "hit_target",
+        "realized_return": 0.35745912463628554,
+        "trading_days_held": 104
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2026-02-04",
+        "outcome": "hit_target",
+        "realized_return": 0.38997955128687867,
+        "trading_days_held": 49
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2026-06-10",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2026-07-28",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2023-12-04",
+        "outcome": "hit_target",
+        "realized_return": 0.5654268576948428,
+        "trading_days_held": 50
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2024-08-02",
+        "outcome": "hit_target",
+        "realized_return": 0.3226134716986327,
+        "trading_days_held": 13
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2024-12-10",
+        "outcome": "hit_target",
+        "realized_return": 0.46910240146517834,
+        "trading_days_held": 43
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2025-02-21",
+        "outcome": "stopped_out",
+        "realized_return": -0.20300497954350094,
+        "trading_days_held": 3
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2025-10-06",
+        "outcome": "stopped_out",
+        "realized_return": -0.2133049258178503,
+        "trading_days_held": 82
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2026-01-02",
+        "outcome": "stopped_out",
+        "realized_return": -0.23484606717006126,
+        "trading_days_held": 19
+      },
+      {
+        "ticker": "AVGO",
+        "entry_date": "2025-03-12",
+        "outcome": "stopped_out",
+        "realized_return": -0.20707409826195294,
+        "trading_days_held": 16
+      },
+      {
+        "ticker": "AVGO",
+        "entry_date": "2025-12-15",
+        "outcome": "hit_target",
+        "realized_return": 0.3147641100130814,
+        "trading_days_held": 113
+      },
+      {
+        "ticker": "AVGO",
+        "entry_date": "2026-06-05",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "ENPH",
+        "entry_date": "2023-07-27",
+        "outcome": "stopped_out",
+        "realized_return": -0.20335729945052808,
+        "trading_days_held": 14
+      },
+      {
+        "ticker": "MCHP",
+        "entry_date": "2026-07-02",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "MPWR",
+        "entry_date": "2024-11-06",
+        "outcome": "stopped_out",
+        "realized_return": -0.23407914587930492,
+        "trading_days_held": 5
+      },
+      {
+        "ticker": "MPWR",
+        "entry_date": "2026-03-06",
+        "outcome": "hit_target",
+        "realized_return": 0.30400914417811176,
+        "trading_days_held": 23
+      },
+      {
+        "ticker": "MPWR",
+        "entry_date": "2026-06-23",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2022-03-30",
+        "outcome": "stopped_out",
+        "realized_return": -0.20894396115524216,
+        "trading_days_held": 50
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2024-04-19",
+        "outcome": "hit_target",
+        "realized_return": 0.3182542326991844,
+        "trading_days_held": 37
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2024-07-11",
+        "outcome": "stopped_out",
+        "realized_return": -0.21247023786159952,
+        "trading_days_held": 13
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2025-11-20",
+        "outcome": "hit_target",
+        "realized_return": 0.30957937055921264,
+        "trading_days_held": 13
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-03-06",
+        "outcome": "hit_target",
+        "realized_return": 0.3164461978294032,
+        "trading_days_held": 32
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-03-25",
+        "outcome": "hit_target",
+        "realized_return": 0.30000786720791994,
+        "trading_days_held": 21
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-05-18",
+        "outcome": "hit_target",
+        "realized_return": 0.314493696284489,
+        "trading_days_held": 5
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-06-05",
+        "outcome": "hit_target",
+        "realized_return": 0.3124732091263456,
+        "trading_days_held": 9
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-07-02",
+        "outcome": "stopped_out",
+        "realized_return": -0.24248636490897688,
+        "trading_days_held": 18
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2021-03-03",
+        "outcome": "hit_target",
+        "realized_return": 0.3103144661770075,
+        "trading_days_held": 63
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2021-05-13",
+        "outcome": "hit_target",
+        "realized_return": 0.3044218623519642,
+        "trading_days_held": 20
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2021-12-13",
+        "outcome": "stopped_out",
+        "realized_return": -0.2072724703907501,
+        "trading_days_held": 29
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2022-01-05",
+        "outcome": "stopped_out",
+        "realized_return": -0.20504274122010888,
+        "trading_days_held": 15
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2023-09-21",
+        "outcome": "hit_target",
+        "realized_return": 0.32506035884215184,
+        "trading_days_held": 76
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2023-10-20",
+        "outcome": "hit_target",
+        "realized_return": 0.31321422455198716,
+        "trading_days_held": 55
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2024-04-19",
+        "outcome": "hit_target",
+        "realized_return": 0.36219170286290536,
+        "trading_days_held": 24
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2024-07-24",
+        "outcome": "hit_target",
+        "realized_return": 0.30310726374452956,
+        "trading_days_held": 75
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2024-09-03",
+        "outcome": "hit_target",
+        "realized_return": 0.33064821031358504,
+        "trading_days_held": 34
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2025-01-27",
+        "outcome": "stopped_out",
+        "realized_return": -0.2035973736121389,
+        "trading_days_held": 48
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2025-02-25",
+        "outcome": "stopped_out",
+        "realized_return": -0.25523178074578884,
+        "trading_days_held": 28
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2025-12-12",
+        "outcome": "hit_target",
+        "realized_return": 0.3469317777308345,
+        "trading_days_held": 104
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2026-02-04",
+        "outcome": "hit_target",
+        "realized_return": 0.3533498030259337,
+        "trading_days_held": 69
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2026-03-20",
+        "outcome": "hit_target",
+        "realized_return": 0.3076433458116125,
+        "trading_days_held": 37
+      },
+      {
+        "ticker": "NVDA",
+        "entry_date": "2026-06-23",
+        "outcome": "censored_too_recent"
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2024-05-06",
+        "outcome": "hit_target",
+        "realized_return": 0.31280788148411925,
+        "trading_days_held": 45
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2024-08-28",
+        "outcome": "hit_target",
+        "realized_return": 0.4154350853170489,
+        "trading_days_held": 19
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2024-12-03",
+        "outcome": "hit_target",
+        "realized_return": 0.358974365350679,
+        "trading_days_held": 31
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2024-12-18",
+        "outcome": "hit_target",
+        "realized_return": 0.36431066115510596,
+        "trading_days_held": 20
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-01-13",
+        "outcome": "hit_target",
+        "realized_return": 0.30782102289089597,
+        "trading_days_held": 5
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-02-19",
+        "outcome": "stopped_out",
+        "realized_return": -0.21789431361489417,
+        "trading_days_held": 4
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-06-12",
+        "outcome": "hit_target",
+        "realized_return": 0.36893939060065806,
+        "trading_days_held": 9
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-08-12",
+        "outcome": "hit_target",
+        "realized_return": 0.3469951551676192,
+        "trading_days_held": 38
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-09-03",
+        "outcome": "hit_target",
+        "realized_return": 0.34390079578460603,
+        "trading_days_held": 23
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-11-04",
+        "outcome": "stopped_out",
+        "realized_return": -0.20010605896927244,
+        "trading_days_held": 7
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2026-01-26",
+        "outcome": "stopped_out",
+        "realized_return": -0.24291752281684667,
+        "trading_days_held": 43
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2026-04-24",
+        "outcome": "hit_target",
+        "realized_return": 0.32366968896525095,
+        "trading_days_held": 10
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2026-06-01",
+        "outcome": "stopped_out",
+        "realized_return": -0.22281229495106003,
+        "trading_days_held": 15
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2024-12-16",
+        "outcome": "stopped_out",
+        "realized_return": -0.25162170528379063,
+        "trading_days_held": 73
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2025-02-03",
+        "outcome": "stopped_out",
+        "realized_return": -0.2348096254749294,
+        "trading_days_held": 42
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2025-10-10",
+        "outcome": "hit_target",
+        "realized_return": 0.30305998573056275,
+        "trading_days_held": 20
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2025-11-20",
+        "outcome": "hit_target",
+        "realized_return": 0.3738877897203092,
+        "trading_days_held": 30
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2026-03-02",
+        "outcome": "hit_target",
+        "realized_return": 0.3077044744936741,
+        "trading_days_held": 26
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2026-03-26",
+        "outcome": "hit_target",
+        "realized_return": 0.31022460095884763,
+        "trading_days_held": 8
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2026-06-26",
+        "outcome": "censored_too_recent"
+      }
+    ]
+  }
+}

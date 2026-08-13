@@ -3211,3 +3211,42 @@ The 7 full-universe failures by name: `DXCM` (three separate entries, -27% to -3
 
 Files: `scripts/233_swing_30pct_exit_check.py` (read-only),
 `data/swing_30pct_exit_check_result.json`.
+
+## D-094 — Four-part validation pass toward "freeze the model": stop-loss makes the swing numbers much more sober, the growth threshold is NOT fragile, the growth-filter's added value is only proven at 6 months, and — decisively — the same pullback rule did NOT work in the 2020-2022 regime
+
+**Trigger**: user asked what it would take to be able to say "this is the model and it works." Proposed and agreed on one path: accept the semiconductor/AI scope (D-091/D-092), then close the cheapest remaining gaps before freezing the rule and starting a genuine walk-forward clock. Four checks run in this pass, all read-only.
+
+**1) Real stop-loss added to the swing rule (`scripts/234`)** — D-093 only tested the profit-target side. Added a stop-loss (-15% and -20%, both tested) and a 12-month max hold, full three-way outcome:
+
+| Stop-loss | Scope | Hit +30% | Stopped out | Timed out | Mean realized return/trade |
+|---|---|---|---|---|---|
+| -15% | Full universe | 54% | 45% | 1% | +9.8% |
+| -15% | Semi/AI only | 61% | 39% | 0% | +13.9% |
+| -20% | Full universe | 61% | 37% | 2% | +11.9% |
+| -20% | Semi/AI only | 65% | 35% | 0% | +14.4% |
+
+Much more sober than D-093's "93-98% eventually hit +30%" headline (which allowed up to 24 months and no stop) — with real risk management, roughly a third to a half of trades get stopped out. Still net-positive expected value per trade in every cut tested.
+
+**2) Growth-threshold sensitivity (`scripts/235`)** — tested growth>15%/20%/25%/30% (all pre-decided round numbers, not fit to data) within the semiconductor/AI universe, 12-month excess return. **Result is reassuring**: all four thresholds give essentially the same answer — mean excess return +133% to +146%, beat-QQQ rate 77-79%, all CIs excluding zero. The 20% cutoff is not a fragile, overfit choice; nearby thresholds behave the same way.
+
+**3) Formal significance test on Group A vs Group B gap, within the sector (`scripts/236`)** — this specific test was flagged as open since the "Open next step" list first appeared and never run. Resampled both groups (grouped by ticker) together and tested the DIFFERENCE (growth filter's added value) directly: **significant at 6 months** (gap +31.3%, CI [+7.7%, +56.4%], excludes zero) but **NOT significant at 12 or 24 months** (gaps +88.7% and +250.7% respectively, both CIs cross zero — large point estimates, too little data to prove them, only 9-5 ticker groups). Honest reading: the growth filter's value is established at the shortest horizon; at longer horizons it looks similarly large but is not yet statistically provable, not disproven.
+
+**4) Partial regime check using 2020-2022 (`scripts/237`) — the most important result of this pass, and decisively negative.** Quarterly growth data cannot reach before 2023 (D-079's structural limit), but daily price data goes back to 2020 — so the PULLBACK half of the rule (no growth filter, since fundamentals aren't available that far back) was tested on the same 10 semiconductor/AI tickers in a genuinely different regime:
+
+| Period | n / groups | Mean excess return | 95% CI | Beat-QQQ rate |
+|---|---|---:|---|---|
+| 2020-2022 (COVID crash/recovery + 2022 bear market) | 33 / 10 | **-7.9%** | [-26.5%, +7.7%] crosses zero | **42%** |
+| 2023-2025 (this session's usual window) | 49 / 10 | +96.7% | [+27.9%, +162.9%] excludes zero | 71% |
+
+In 2020-2022, buying a >=15% pullback in these exact same names did NOT beat QQQ — the point estimate is negative and the beat-rate is below a coin flip. This is the first genuinely different-regime test this project has ever run with real data (every prior "regime caveat" was a data-availability gap, not a tested comparison) and it confirms the concern directly: the sector-timing component this strategy leans on hardest is not regime-independent. It worked well specifically during 2023-2025's AI/semiconductor rally and did not work in the prior downturn/recovery cycle for the same names.
+
+**Where this leaves "freeze the model"**: two of the four checks are reassuring (threshold isn't fragile; stop-loss produces a sober but still positive risk profile) and two are cautionary (the growth filter's value is proven short-horizon only; the underlying sector-timing effect demonstrably failed in the one different regime this project could actually test). The walk-forward test (council's original top priority, still not run) remains the only way to know whether the current 2023-2025-favorable period continues or whether this reverts to something closer to the 2020-2022 pattern.
+
+Files: `scripts/234_swing_stoploss_full_risk_profile.py`,
+`data/swing_stoploss_full_risk_profile_result.json`,
+`scripts/235_growth_threshold_sensitivity_check.py`,
+`data/growth_threshold_sensitivity_check_result.json`,
+`scripts/236_group_a_vs_b_significance_within_sector.py`,
+`data/group_a_vs_b_significance_within_sector_result.json`,
+`scripts/237_semi_ai_pullback_regime_check_2020_2022.py` (all read-only),
+`data/semi_ai_pullback_regime_check_2020_2022_result.json`.

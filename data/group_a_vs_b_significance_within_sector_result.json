@@ -1,0 +1,38 @@
+{
+  "6mo": {
+    "group_a_mean": 0.5653231614493446,
+    "group_a_n": 46,
+    "group_a_tickers": 9,
+    "group_b_mean": 0.25272539136108324,
+    "group_b_n": 88,
+    "group_b_tickers": 10,
+    "observed_diff": 0.31259777008826134,
+    "ci_95_low": 0.07736109241529104,
+    "ci_95_high": 0.5636597016182596,
+    "ci_95_crosses_zero": false
+  },
+  "12mo": {
+    "group_a_mean": 1.4563998787274097,
+    "group_a_n": 31,
+    "group_a_tickers": 9,
+    "group_b_mean": 0.5692274567415959,
+    "group_b_n": 72,
+    "group_b_tickers": 10,
+    "observed_diff": 0.8871724219858138,
+    "ci_95_low": -0.29295580419241873,
+    "ci_95_high": 2.156488077965175,
+    "ci_95_crosses_zero": true
+  },
+  "24mo": {
+    "group_a_mean": 3.8631394537599246,
+    "group_a_n": 15,
+    "group_a_tickers": 5,
+    "group_b_mean": 1.3565865582575045,
+    "group_b_n": 56,
+    "group_b_tickers": 10,
+    "observed_diff": 2.50655289550242,
+    "ci_95_low": -0.570046716112782,
+    "ci_95_high": 10.19384992026274,
+    "ci_95_crosses_zero": true
+  }
+}

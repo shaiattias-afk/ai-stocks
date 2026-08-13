@@ -270,6 +270,31 @@ entry-timing tool been found yet": what has been validated so far is
 closer to "own the AI/semiconductor rally with a growth+pullback timing
 overlay" than a demonstrated general-purpose signal.
 
+**D-093/D-094 — swing-trading track (stock only, no options) and a
+4-part validation pass toward freezing the model.** D-093: exiting at
++30% instead of holding long-term, on the same trigger, hits eventually
+93-98% of the time — but D-094 added a real stop-loss (-15%/-20%, 12mo
+max hold) and the picture is far more sober: only 54-65% hit the target
+before either a stop-out (35-45%) or timeout; still net-positive
+expected value per trade (+9.8% to +14.4% mean realized return) in every
+cut. Threshold sensitivity (15/20/25/30% growth cutoffs, semi/AI
+universe): **reassuring, the 20% choice is not fragile** — all four
+give ~+133-146% mean 12mo excess return, none cross zero. Formal Group A
+vs Group B significance test, within the sector: the growth filter's
+added value is **proven at 6 months** (gap CI excludes zero) but **not
+yet provable at 12/24 months** (large point estimates, too little data,
+9-5 ticker groups). **Most important: a genuine different-regime test,
+the first this project has run with real data** — daily prices reach
+back to 2020 even though quarterly growth doesn't, so the pullback-only
+component (no growth filter) was tested on the same 10 tickers in
+2020-2022 vs 2023-2025. **It did not work in 2020-2022**: mean excess
+return -7.9% (CI crosses zero), beat-rate 42% (below a coin flip) —
+sharply worse than 2023-2025's +96.7%/71%. This turns the standing
+regime caveat from a data-availability gap into a directly confirmed
+concern: the sector-timing component this strategy leans on hardest is
+not regime-independent. **The walk-forward test remains the only way to
+know if the current favorable period continues.**
+
 **Tested and not supported for practical use, but the underlying
 pattern is real (D-089 → D-090)** — user's own idea: use trading volume
 to find the exact bottom within a decline, not just the 15% pullback
