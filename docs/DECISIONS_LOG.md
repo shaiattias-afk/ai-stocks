@@ -3250,3 +3250,31 @@ Files: `scripts/234_swing_stoploss_full_risk_profile.py`,
 `data/group_a_vs_b_significance_within_sector_result.json`,
 `scripts/237_semi_ai_pullback_regime_check_2020_2022.py` (all read-only),
 `data/semi_ai_pullback_regime_check_2020_2022_result.json`.
+
+## D-095 — Council held on the SWING project; honest 6-month hard-cap, no-stop-loss backtest run as the agreed first step — better than the council's own most-skeptical prediction, but still small-sample/single-regime
+
+**Trigger**: user asked to focus exclusively on a SWING strategy (30% target, up to 6 months, explicitly no stop-loss), setting the long-term track aside for now. Invoked the project's council process (`.claude/skills/council/SKILL.md`) on how to build this correctly. Full 5-advisor session run (separate subagents, no cross-visibility, anonymous peer review, chair decision) — not reproduced in full here; key points:
+
+- **Data architect**: the quarterly growth filter can only update ~1-2 times within any 6-month window — it should function as a coarse quarterly eligibility gate, not a timing signal. Faster point-in-time sources exist (Form 4 insider filings, cheap/structured; 8-K, unstructured/expensive to parse) but recommended NOT building new data infrastructure before testing the horizon change on existing data first.
+- **Accountant/valuation analyst**: proposed a concrete alternative to stop-loss — pre-entry accounting tripwires (quarter-over-quarter gross/operating margin change, operating-cash-flow-to-net-income ratio, inventory/receivables growth) that might have flagged the known failure cases (`ENPH`, `LCID`, `DXCM`) before entry rather than exiting after the fact. Explicitly warned this must be threshold-set BEFORE checking against the known failures, with leave-one-out, to avoid curve-fitting to just 7 cases.
+- **Data/systems engineer**: proposed concrete features and a `swing_screen` module/table design; most importantly, flagged a specific replicable bug risk — reusing D-093's generous 24-month watch-window logic for a "6-month" test would silently let losing trades "wait out" their losses past the stated horizon, the same trap already caught once. Recommended a rule-based screen, not a trained model (10 tickers is too little independent data for ML).
+- **Backtesting/model-risk expert (most skeptical by design)**: sharpest single point raised all session — "no stop-loss" was previously validated with a 24-month window, where extra time is exactly what let bad trades recover; a hard 6-month cap with no stop-loss removes that healing mechanism while keeping the no-safety-net policy, and could plausibly be the WORST combination tested yet, not a neutral variant. Also flagged that the user's own chosen parameters (30%/6mo/no-stop) were themselves selected after seeing the 24-month results — a real post-hoc-parameter concern, structurally the same issue as D-080's threshold selection, regardless of the user's legitimate personal reasons for the preference.
+- **Product lead**: recommended a small, disposable script (not a dashboard) that always surfaces the historical worst-case drawdown-before-target and the named failure cases alongside any candidate list — the substitute for a stop-loss is information, not automation.
+
+**Chair's decision**: run the honest 6-month hard-cap backtest FIRST (cheapest, most direct test of the backtesting advisor's specific worst-case-combination warning) before building any screen, model, or new data source. Exact simulation rule: from each entry (growth>20% + pullback>=15%, the 10-ticker semiconductor/AI universe, D-092), track forward EXACTLY 126 trading days, no extension under any circumstance; classify into hit-target / still-open-positive / still-open-negative at day 126; always record max drawdown within the window even though nothing acts on it.
+
+**Result (`scripts/238`) — better than the council's most-skeptical prediction, though still thin**: 46 determinable entries (of 64 in the universe; 18 too recent to have 126 days of forward data yet), 9 independent tickers.
+
+| Outcome at day 126 | n | Detail |
+|---|---|---|
+| Hit +30% within 126 days | 37/46 (80%) | median 45 trading days (~2.1 months) to hit |
+| Still open, positive | 1/46 (2%) | +6.3% |
+| Still open, negative | 8/46 (17%) | median **-33.4%**, range [-43.8%, -9.7%] |
+
+**True expected value, blending ALL outcomes including the open losses** (not conditional on winning): mean **+22.7%**, median **+31.8%** per trade. **Excess return vs QQQ at the 6-month mark** (same ticker-grouped bootstrap as D-088/D-091/D-092/D-094): mean **+56.5%**, 95% CI **[+36.7%, +75.2%]** — clearly excludes zero — beat-QQQ rate **70%**. Max drawdown within the 6-month window: median 6.3%, worst 54.7%, 39% of entries saw a drawdown deeper than 15% at some point along the way.
+
+**Honest reading**: the backtesting advisor's specific fear — that removing the healing time (24mo → 6mo) while keeping no stop-loss would be the worst combination yet — did NOT materialize as starkly as warned; the hit rate stayed high (80%) mainly because the typical winning trade resolves in ~2 months, well inside the 6-month window, so the hard cap rarely binds on trades that were going to work anyway. But the real risk is concentrated and severe in the minority that doesn't resolve favorably: 17% of entries are real, substantial open losses (up to -44%) at the 6-month mark with no mechanism to have exited earlier. **Every standing caveat from D-091/D-092/D-094 still applies unchanged**: only 9 independent tickers, entirely 2023-2025 data (the one regime already shown NOT to favor this rule's pullback component in 2020-2022, D-094), and the 30%/6-month/no-stop-loss parameters were chosen after seeing earlier results, not derived independently.
+
+Files: `scripts/238_swing_6month_hard_cap_no_stoploss.py` (read-only),
+`data/swing_6month_hard_cap_no_stoploss_result.json`. Council transcript
+not separately filed (standard practice per D-083); summarized above.

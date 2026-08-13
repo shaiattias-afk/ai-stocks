@@ -1,0 +1,480 @@
+{
+  "hard_cap_trading_days": 126,
+  "target_gain": 0.3,
+  "n_determinable": 46,
+  "n_censored": 18,
+  "n_hit": 37,
+  "n_open_gain": 1,
+  "n_open_loss": 8,
+  "mean_return_all_blended": 0.22725183556901543,
+  "median_return_all_blended": 0.3182520571479249,
+  "excess_return_vs_qqq_6mo": {
+    "observed_mean": 0.5653231614493446,
+    "ci_95_low": 0.3673657417685977,
+    "ci_95_high": 0.751768655373782,
+    "ci_95_crosses_zero": false,
+    "n_groups": 9,
+    "n": 46,
+    "beat_qqq_rate": 0.6956521739130435
+  },
+  "hard_cap_episodes": [
+    {
+      "ticker": "AMD",
+      "entry_date": "2025-02-05",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 107,
+      "return_at_126d_or_hit": 0.307204672586866,
+      "max_drawdown_within_window": 0.3017587930285821
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2025-09-05",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 21,
+      "return_at_126d_or_hit": 0.34782326013307674,
+      "max_drawdown_within_window": 0.0
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2025-11-19",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 104,
+      "return_at_126d_or_hit": 0.35745912463628554,
+      "max_drawdown_within_window": 0.14582869898672224
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2026-02-04",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 49,
+      "return_at_126d_or_hit": 0.38997955128687867,
+      "max_drawdown_within_window": 0.04615617853278425
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2026-06-10",
+      "outcome": "censored_too_recent"
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2026-07-28",
+      "outcome": "censored_too_recent"
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2023-12-04",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 50,
+      "return_at_126d_or_hit": 0.5654268576948428,
+      "max_drawdown_within_window": 0.029702987478666735
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2024-08-02",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 13,
+      "return_at_126d_or_hit": 0.3226134716986327,
+      "max_drawdown_within_window": 0.02299187722625773
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2024-12-10",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 43,
+      "return_at_126d_or_hit": 0.46910240146517834,
+      "max_drawdown_within_window": 0.0248862838570128
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2025-02-21",
+      "outcome": "open_gain_at_126d",
+      "trading_days_to_hit": null,
+      "return_at_126d_or_hit": 0.06349472748598378,
+      "max_drawdown_within_window": 0.47179216390947143
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2025-10-06",
+      "outcome": "open_loss_at_126d",
+      "trading_days_to_hit": null,
+      "return_at_126d_or_hit": -0.33356045620607966,
+      "max_drawdown_within_window": 0.37494036854836565
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2026-01-02",
+      "outcome": "open_loss_at_126d",
+      "trading_days_to_hit": null,
+      "return_at_126d_or_hit": -0.14610561810285813,
+      "max_drawdown_within_window": 0.4066017607130113
+    },
+    {
+      "ticker": "AVGO",
+      "entry_date": "2025-03-12",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 57,
+      "return_at_126d_or_hit": 0.322401337349656,
+      "max_drawdown_within_window": 0.24682079748719798
+    },
+    {
+      "ticker": "AVGO",
+      "entry_date": "2025-12-15",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 113,
+      "return_at_126d_or_hit": 0.3147641100130814,
+      "max_drawdown_within_window": 0.1365468768719307
+    },
+    {
+      "ticker": "AVGO",
+      "entry_date": "2026-06-05",
+      "outcome": "censored_too_recent"
+    },
+    {
+      "ticker": "ENPH",
+      "entry_date": "2023-07-27",
+      "outcome": "open_loss_at_126d",
+      "trading_days_to_hit": null,
+      "return_at_126d_or_hit": -0.36828536679411294,
+      "max_drawdown_within_window": 0.5470024210062658
+    },
+    {
+      "ticker": "MCHP",
+      "entry_date": "2026-07-02",
+      "outcome": "censored_too_recent"
+    },
+    {
+      "ticker": "MPWR",
+      "entry_date": "2024-11-06",
+      "outcome": "open_loss_at_126d",
+      "trading_days_to_hit": null,
+      "return_at_126d_or_hit": -0.09685593817160028,
+      "max_drawdown_within_window": 0.4203542447022588
+    },
+    {
+      "ticker": "MPWR",
+      "entry_date": "2026-03-06",
+      "outcome": "censored_too_recent"
+    },
+    {
+      "ticker": "MPWR",
+      "entry_date": "2026-06-23",
+      "outcome": "censored_too_recent"
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2022-03-30",
+      "outcome": "open_loss_at_126d",
+      "trading_days_to_hit": null,
+      "return_at_126d_or_hit": -0.36824158655931283,
+      "max_drawdown_within_window": 0.3825164375085537
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2024-04-19",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 37,
+      "return_at_126d_or_hit": 0.3182542326991844,
+      "max_drawdown_within_window": 0.0
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2024-07-11",
+      "outcome": "open_loss_at_126d",
+      "trading_days_to_hit": null,
+      "return_at_126d_or_hit": -0.2371957337253931,
+      "max_drawdown_within_window": 0.35375868522498544
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2025-11-20",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 13,
+      "return_at_126d_or_hit": 0.30957937055921264,
+      "max_drawdown_within_window": 0.0
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-03-06",
+      "outcome": "censored_too_recent"
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-03-25",
+      "outcome": "censored_too_recent"
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-05-18",
+      "outcome": "censored_too_recent"
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-06-05",
+      "outcome": "censored_too_recent"
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-07-02",
+      "outcome": "censored_too_recent"
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2021-03-03",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 63,
+      "return_at_126d_or_hit": 0.3103144661770075,
+      "max_drawdown_within_window": 0.09461333692417392
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2021-05-13",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 20,
+      "return_at_126d_or_hit": 0.3044218623519642,
+      "max_drawdown_within_window": 0.0
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2021-12-13",
+      "outcome": "open_loss_at_126d",
+      "trading_days_to_hit": null,
+      "return_at_126d_or_hit": -0.4376619851137264,
+      "max_drawdown_within_window": 0.44437339928262937
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2022-01-05",
+      "outcome": "open_loss_at_126d",
+      "trading_days_to_hit": null,
+      "return_at_126d_or_hit": -0.42624256466391375,
+      "max_drawdown_within_window": 0.4738806073278836
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2023-09-21",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 76,
+      "return_at_126d_or_hit": 0.32506035884215184,
+      "max_drawdown_within_window": 0.016846627159060896
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2023-10-20",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 55,
+      "return_at_126d_or_hit": 0.31321422455198716,
+      "max_drawdown_within_window": 0.025636088563429676
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2024-04-19",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 24,
+      "return_at_126d_or_hit": 0.36219170286290536,
+      "max_drawdown_within_window": 0.0
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2024-07-24",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 75,
+      "return_at_126d_or_hit": 0.30310726374452956,
+      "max_drawdown_within_window": 0.1342669263710339
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2024-09-03",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 34,
+      "return_at_126d_or_hit": 0.33064821031358504,
+      "max_drawdown_within_window": 0.0478703534161603
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2025-01-27",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 103,
+      "return_at_126d_or_hit": 0.3030738046326055,
+      "max_drawdown_within_window": 0.2035973736121389
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2025-02-25",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 94,
+      "return_at_126d_or_hit": 0.3023770176579849,
+      "max_drawdown_within_window": 0.25523178074578884
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2025-12-12",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 104,
+      "return_at_126d_or_hit": 0.3469317777308345,
+      "max_drawdown_within_window": 0.056279315867126305
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2026-02-04",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 69,
+      "return_at_126d_or_hit": 0.3533498030259337,
+      "max_drawdown_within_window": 0.05178256011274282
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2026-03-20",
+      "outcome": "censored_too_recent"
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2026-06-23",
+      "outcome": "censored_too_recent"
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2024-05-06",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 45,
+      "return_at_126d_or_hit": 0.31280788148411925,
+      "max_drawdown_within_window": 0.02216746685658723
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2024-08-28",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 19,
+      "return_at_126d_or_hit": 0.4154350853170489,
+      "max_drawdown_within_window": 0.04597704479356475
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2024-12-03",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 31,
+      "return_at_126d_or_hit": 0.358974365350679,
+      "max_drawdown_within_window": 0.018687540238963178
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2024-12-18",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 20,
+      "return_at_126d_or_hit": 0.36431066115510596,
+      "max_drawdown_within_window": 0.0
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-01-13",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 5,
+      "return_at_126d_or_hit": 0.30782102289089597,
+      "max_drawdown_within_window": 0.0
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-02-19",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 88,
+      "return_at_126d_or_hit": 0.39375237039371264,
+      "max_drawdown_within_window": 0.36868489600573395
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-06-12",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 9,
+      "return_at_126d_or_hit": 0.36893939060065806,
+      "max_drawdown_within_window": 0.037499991872093776
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-08-12",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 38,
+      "return_at_126d_or_hit": 0.3469951551676192,
+      "max_drawdown_within_window": 0.06309006813753709
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-09-03",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 23,
+      "return_at_126d_or_hit": 0.34390079578460603,
+      "max_drawdown_within_window": 0.01240517151328072
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-11-04",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 33,
+      "return_at_126d_or_hit": 0.37086801255282886,
+      "max_drawdown_within_window": 0.3021035928015307
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2026-01-26",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 72,
+      "return_at_126d_or_hit": 0.31051188893391823,
+      "max_drawdown_within_window": 0.28702784946924614
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2026-04-24",
+      "outcome": "censored_too_recent"
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2026-06-01",
+      "outcome": "censored_too_recent"
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2024-12-16",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 115,
+      "return_at_126d_or_hit": 0.3354257893326092,
+      "max_drawdown_within_window": 0.303829256739897
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2025-02-03",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 83,
+      "return_at_126d_or_hit": 0.3182498815966654,
+      "max_drawdown_within_window": 0.2881900029308039
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2025-10-10",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 20,
+      "return_at_126d_or_hit": 0.30305998573056275,
+      "max_drawdown_within_window": 0.012827688857938243
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2025-11-20",
+      "outcome": "hit_target_by_126d",
+      "trading_days_to_hit": 30,
+      "return_at_126d_or_hit": 0.3738877897203092,
+      "max_drawdown_within_window": 0.012515569674993503
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2026-03-02",
+      "outcome": "censored_too_recent"
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2026-03-26",
+      "outcome": "censored_too_recent"
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2026-06-26",
+      "outcome": "censored_too_recent"
+    }
+  ]
+}

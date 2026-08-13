@@ -6,10 +6,22 @@ system. Respond in clear, direct Hebrew; English technical terms where standard.
 
 ## Goal
 **Current active focus (set 2026-08-13): swing trading**, targeting ~30%
-moves on the stock itself — explicitly NOT options (no options data
-exists in this project at all; would need a new, likely paid, data
-source and explicit approval before ever being considered). Primary
-benchmark: **Nasdaq-100 (QQQ)**.
+moves on the stock itself within **up to 6 months**, explicitly NOT
+options (no options data exists in this project at all; would need a
+new, likely paid, data source and explicit approval before ever being
+considered) and explicitly **no stop-loss mechanism** (user-directed —
+do not propose one without the user raising it again). Primary
+benchmark: **Nasdaq-100 (QQQ)**. Council-directed first backtest
+(D-095): 6-month hard cap, no stop-loss, on the 10-ticker
+semiconductor/AI universe (D-092) — 80% hit +30% within the window
+(median ~2 months), 17% end in a serious open loss (median -33%, worst
+-44%) with no exit mechanism to have avoided it, blended expected value
+positive (mean +22.7%, median +31.8%), excess return vs QQQ significant
+(+56.5% mean, 70% beat-rate). Same caveats as the rest of this session
+apply: 9 independent tickers, one favorable regime only (2023-2025 —
+2020-2022 already shown unfavorable for this rule, D-094), and the
+30%/6-month/no-stop-loss parameters were chosen after seeing earlier
+results, not independently derived.
 
 **Long-term investment track — set aside for now (2026-08-13), not
 deleted.** User-stated holding horizon for this track is 3-5 years
