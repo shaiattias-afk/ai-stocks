@@ -130,6 +130,19 @@ interactive artifact, company- and quintile-level, during that
 session). This is a single raw factor, not a composite — the quarterly
 composite itself (D-067) remains dead, see below.
 
+**Placebo/permutation test result (D-083)**: the correlation itself is
+NOT explained by pure statistical noise — 0 of 200 random permutations
+of the growth values (real tickers, real returns, growth shuffled)
+produced a correlation as strong as the real +0.234; the strongest
+noise-driven correlation across 200 tries was 0.129. This clears one
+specific concern (is the discovery pipeline just finding shapes in
+noise) but does NOT touch the still-open regime caveat above, nor two
+other flagged risks: the growth>20% threshold was chosen AFTER seeing
+the data (an uncounted extra degree of freedom, not yet permutation-
+tested itself), and the signal may partly reflect AI/semiconductor
+sector concentration (`RKLB`/`MU`/`STX`/`APP`-heavy) rather than a
+sector-neutral fundamental edge — neither tested yet.
+
 **Proven, entry-timing signal (D-081)** — combining D-080's growth>20%
 threshold with a price pullback (stock down >=15% from its own rolling
 52-week high, entry evaluated at ANY trading day, not just filing
@@ -169,21 +182,26 @@ see above): Scoring Model V1 composite (D-061/D-062), the value/growth
 two-bucket model (D-066), none of Scoring Inputs V1's 9 factors at 5
 years (D-074). See also `docs/FAILED_APPROACHES.md`.
 
-**Open next step** — several threads open, none decided without the
-user: (a) the regime split on the growth-rate finding (D-079/D-080)
-remains data-limited, not yet possible; (b) D-081's entry-timing signal
-(growth>20% + pullback>=15%) has no formal significance test on its
-Group A vs. Group B gap yet — a natural next check before trusting the
-15-18pp edge; (c) D-081's trend-at-entry split (accelerating vs.
-decelerating) is only directionally, not cleanly, supportive — could be
-retested with a larger/different pullback threshold or explicit
-statistical testing; (d) EBITDA was requested (D-081) but needs new
-quarterly-engine extraction work (depreciation & amortization is not
-currently extracted) — a bigger task, not started. Longer horizons
-(30+ months) remain untestable until more company-quarters accumulate
-that much forward history. The quarterly composite line of work
-(D-067/D-073/D-078) has no further lever to pull and should not be
-revisited without new reasoning. The two unvalidated ANNUAL-cadence
+**Open next step (post-council, D-083)** — the placebo test cleared one
+concern (the correlation is not pure noise); several remain, in rough
+priority order per the council's backtesting advisor: (a) test whether
+the growth>20% signal survives with AI/semiconductor names excluded
+(sector-concentration confound, flagged by the accountant advisor) —
+cheap, usable now; (b) a genuine walk-forward test — freeze the exact
+rule (growth>20% + pullback>=15%) and score it untouched against new
+quarters as they arrive, the only test not contaminated by having
+already mined all current data; (c) the regime split itself remains
+data-limited, not yet possible, for either the growth-rate or P/E
+finding; (d) D-081's entry-timing signal has no formal significance
+test on its Group A vs. Group B gap yet. Analyst-estimate-revision data
+was investigated as a genuinely uncorrelated new data source and found
+impractical for now (enterprise-only pricing, or no confirmed point-in-
+time history at the cheap tiers) — not pursued. EBITDA (D-081) needs new
+quarterly-engine extraction work (depreciation & amortization not
+currently extracted) — a bigger task, not started. The quarterly
+composite line of work (D-067/D-073/D-078) has no further lever to pull
+and should not be revisited without new reasoning. The two unvalidated
+ANNUAL-cadence
 candidates from D-074 (`dividend_yield`, `size_log_revenue`) remain out
 of scope per the Method rule above unless the user asks for annual work
 specifically.

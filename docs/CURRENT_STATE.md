@@ -1,6 +1,56 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-13 (**D-081/D-082: a new entry-timing signal —
+**Last updated:** 2026-08-13 (**D-083: council review of the project's
+core unmet goal (a reliable entry-timing tool), followed by a placebo/
+permutation test that clears the growth-rate finding of being pure
+statistical noise (0 of 200 random shuffles matched its strength), and
+a research pass on analyst-estimate-revision data as a new, uncorrelated
+signal source — found impractical for now (no affordable point-in-time
+source exists).**)
+
+**What happened.** The user invoked the project's council process,
+stating the core frustration plainly: despite extensive search, no
+reliable entry-timing tool exists yet — only the growth-rate/pullback
+signal, itself unconfirmed against a different market regime. Five
+independent advisors (XBRL data architect, valuation analyst, systems
+engineer, backtesting/model-risk expert, product lead) each gave a
+full, non-overlapping answer; full detail in `docs/DECISIONS_LOG.md`
+D-083. Two points worth surfacing here: the accountant/valuation
+advisor flagged that the growth>20% signal may partly be re-expressing
+concentrated exposure to 2023-2025's AI/semiconductor rally rather than
+a sector-neutral fundamental edge (untested); the backtesting advisor
+noted that ~20-30 hypotheses have been tested across this project's
+history with no multiple-testing correction, which is exactly the
+condition under which one "significant-looking" survivor is expected by
+chance alone.
+
+**Chair's decision**: pursue two things in parallel rather than picking
+one — a placebo/permutation test (cheapest, most direct check on
+whether the discovery process is fooling itself), and an investigation
+into analyst-estimate-revision data as a genuinely independent data
+source (everything tested so far derives from the same SEC filings).
+
+**Placebo test result (`scripts/223`)**: reassuring. The real growth-
+rate correlation (+0.234) was compared against 200 random permutations
+of the same data (real tickers, real returns, growth values shuffled to
+destroy any true relationship) — 0 of 200 permutations produced a
+correlation as strong as the real one (strongest noise result: 0.129,
+barely half the real value). This means the correlation itself is very
+unlikely to be pure noise. It does NOT resolve the two other open
+concerns (the regime caveat, and the post-hoc threshold selection /
+sector-concentration risks named above) — those remain open.
+
+**Analyst-estimate-revision data**: investigated, not pursued. Every
+institutional-grade source (I/B/E/S, FactSet, Visible Alpha, full
+Zacks) is enterprise-only with no accessible retail pricing. Cheaper
+retail APIs either don't clearly offer this data or don't confirm true
+point-in-time historical snapshots (only current-state data), which
+would risk exactly the look-ahead-bias problem this project has
+otherwise been careful to avoid. Not pursued for now.
+
+Full detail: `docs/DECISIONS_LOG.md` D-083.
+
+**Previous update, same day:** D-081/D-082: a new entry-timing signal —
 growth>20% combined with a 15%+ pullback from the 52-week high predicts
 recovery to that high, clearly beating a pullback-only control (15-18
 point gap at every horizon, full 92-company universe). Operating margin
