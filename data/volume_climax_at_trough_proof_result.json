@@ -1,0 +1,317 @@
+{
+  "episodes": [
+    {
+      "ticker": "ALNY",
+      "entry_date": "2025-02-18",
+      "trough_date": "2025-04-08",
+      "trough_close": 224.32000732421875,
+      "days_entry_to_trough": 35,
+      "days_entry_to_recovery": 71,
+      "n_days_in_window": 72,
+      "trough_volume_vs_trailing20_ratio": 0.9645356976201587,
+      "trough_volume_rank_in_window": 35,
+      "around_trough": [
+        {
+          "date": "2025-04-03",
+          "close": 262.1600036621094,
+          "volume": 1028400,
+          "volume_vs_trailing20_ratio": 1.1074736161964247,
+          "day_over_day_volume_change": 0.1595444807757358,
+          "is_trough": false
+        },
+        {
+          "date": "2025-04-04",
+          "close": 235.74000549316406,
+          "volume": 1881600,
+          "volume_vs_trailing20_ratio": 1.9775403711041162,
+          "day_over_day_volume_change": 0.8296382730455076,
+          "is_trough": false
+        },
+        {
+          "date": "2025-04-07",
+          "close": 232.9499969482422,
+          "volume": 1561100,
+          "volume_vs_trailing20_ratio": 1.5278538991544002,
+          "day_over_day_volume_change": -0.17033375850340138,
+          "is_trough": false
+        },
+        {
+          "date": "2025-04-08",
+          "close": 224.32000732421875,
+          "volume": 1033500,
+          "volume_vs_trailing20_ratio": 0.9645356976201587,
+          "day_over_day_volume_change": -0.3379668182691692,
+          "is_trough": true
+        },
+        {
+          "date": "2025-04-09",
+          "close": 243.27000427246094,
+          "volume": 2100100,
+          "volume_vs_trailing20_ratio": 1.9213738083475143,
+          "day_over_day_volume_change": 1.032027092404451,
+          "is_trough": false
+        },
+        {
+          "date": "2025-04-10",
+          "close": 226.27999877929688,
+          "volume": 1655800,
+          "volume_vs_trailing20_ratio": 1.4171819835241253,
+          "day_over_day_volume_change": -0.21156135422122757,
+          "is_trough": false
+        },
+        {
+          "date": "2025-04-11",
+          "close": 237.77000427246094,
+          "volume": 1577300,
+          "volume_vs_trailing20_ratio": 1.2850741404595079,
+          "day_over_day_volume_change": -0.04740910738011839,
+          "is_trough": false
+        }
+      ]
+    },
+    {
+      "ticker": "ALNY",
+      "entry_date": "2025-04-04",
+      "trough_date": "2025-04-08",
+      "trough_close": 224.32000732421875,
+      "days_entry_to_trough": 2,
+      "days_entry_to_recovery": 38,
+      "n_days_in_window": 39,
+      "trough_volume_vs_trailing20_ratio": 0.9645356976201587,
+      "trough_volume_rank_in_window": 15,
+      "around_trough": [
+        {
+          "date": "2025-04-04",
+          "close": 235.74000549316406,
+          "volume": 1881600,
+          "volume_vs_trailing20_ratio": 1.9775403711041162,
+          "day_over_day_volume_change": null,
+          "is_trough": false
+        },
+        {
+          "date": "2025-04-07",
+          "close": 232.9499969482422,
+          "volume": 1561100,
+          "volume_vs_trailing20_ratio": 1.5278538991544002,
+          "day_over_day_volume_change": -0.17033375850340138,
+          "is_trough": false
+        },
+        {
+          "date": "2025-04-08",
+          "close": 224.32000732421875,
+          "volume": 1033500,
+          "volume_vs_trailing20_ratio": 0.9645356976201587,
+          "day_over_day_volume_change": -0.3379668182691692,
+          "is_trough": true
+        },
+        {
+          "date": "2025-04-09",
+          "close": 243.27000427246094,
+          "volume": 2100100,
+          "volume_vs_trailing20_ratio": 1.9213738083475143,
+          "day_over_day_volume_change": 1.032027092404451,
+          "is_trough": false
+        },
+        {
+          "date": "2025-04-10",
+          "close": 226.27999877929688,
+          "volume": 1655800,
+          "volume_vs_trailing20_ratio": 1.4171819835241253,
+          "day_over_day_volume_change": -0.21156135422122757,
+          "is_trough": false
+        },
+        {
+          "date": "2025-04-11",
+          "close": 237.77000427246094,
+          "volume": 1577300,
+          "volume_vs_trailing20_ratio": 1.2850741404595079,
+          "day_over_day_volume_change": -0.04740910738011839,
+          "is_trough": false
+        }
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2025-02-05",
+      "trough_date": "2025-04-08",
+      "trough_close": 78.20999908447266,
+      "days_entry_to_trough": 43,
+      "days_entry_to_recovery": 168,
+      "n_days_in_window": 169,
+      "trough_volume_vs_trailing20_ratio": 1.9140807188884401,
+      "trough_volume_rank_in_window": 14,
+      "around_trough": [
+        {
+          "date": "2025-04-03",
+          "close": 93.80000305175781,
+          "volume": 50472500,
+          "volume_vs_trailing20_ratio": 1.5659589122910982,
+          "day_over_day_volume_change": 1.4272626719245936,
+          "is_trough": false
+        },
+        {
+          "date": "2025-04-04",
+          "close": 85.76000213623047,
+          "volume": 65847000,
+          "volume_vs_trailing20_ratio": 1.9770652979206842,
+          "day_over_day_volume_change": 0.3046114220615186,
+          "is_trough": false
+        },
+        {
+          "date": "2025-04-07",
+          "close": 83.63999938964844,
+          "volume": 70515400,
+          "volume_vs_trailing20_ratio": 2.0184711316469945,
+          "day_over_day_volume_change": 0.07089768706243271,
+          "is_trough": false
+        },
+        {
+          "date": "2025-04-08",
+          "close": 78.20999908447266,
+          "volume": 69910200,
+          "volume_vs_trailing20_ratio": 1.9140807188884401,
+          "day_over_day_volume_change": -0.008582522399362413,
+          "is_trough": true
+        },
+        {
+          "date": "2025-04-09",
+          "close": 96.83999633789062,
+          "volume": 97827400,
+          "volume_vs_trailing20_ratio": 2.5531896013546382,
+          "day_over_day_volume_change": 0.39932942546295114,
+          "is_trough": false
+        },
+        {
+          "date": "2025-04-10",
+          "close": 88.69999694824219,
+          "volume": 65210600,
+          "volume_vs_trailing20_ratio": 1.5715266381676953,
+          "day_over_day_volume_change": -0.3334117026518133,
+          "is_trough": false
+        },
+        {
+          "date": "2025-04-11",
+          "close": 93.4000015258789,
+          "volume": 57892600,
+          "volume_vs_trailing20_ratio": 1.336183453049363,
+          "day_over_day_volume_change": -0.11222101928214123,
+          "is_trough": false
+        }
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2025-09-05",
+      "trough_date": "2025-09-05",
+      "trough_close": 151.13999938964844,
+      "days_entry_to_trough": 0,
+      "days_entry_to_recovery": 21,
+      "n_days_in_window": 22,
+      "trough_volume_vs_trailing20_ratio": 1.4814338043900084,
+      "trough_volume_rank_in_window": 3,
+      "around_trough": [
+        {
+          "date": "2025-09-05",
+          "close": 151.13999938964844,
+          "volume": 78256000,
+          "volume_vs_trailing20_ratio": 1.4814338043900084,
+          "day_over_day_volume_change": null,
+          "is_trough": true
+        },
+        {
+          "date": "2025-09-08",
+          "close": 151.41000366210938,
+          "volume": 41849000,
+          "volume_vs_trailing20_ratio": 0.8053322931437258,
+          "day_over_day_volume_change": -0.46522950316908607,
+          "is_trough": false
+        },
+        {
+          "date": "2025-09-09",
+          "close": 155.82000732421875,
+          "volume": 42802500,
+          "volume_vs_trailing20_ratio": 0.845665230963765,
+          "day_over_day_volume_change": 0.02278429592104958,
+          "is_trough": false
+        },
+        {
+          "date": "2025-09-10",
+          "close": 159.5399932861328,
+          "volume": 52465300,
+          "volume_vs_trailing20_ratio": 1.0659004714903983,
+          "day_over_day_volume_change": 0.22575316862332806,
+          "is_trough": false
+        }
+      ]
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2025-11-19",
+      "trough_date": "2026-03-03",
+      "trough_close": 190.9499969482422,
+      "days_entry_to_trough": 69,
+      "days_entry_to_recovery": 100,
+      "n_days_in_window": 101,
+      "trough_volume_vs_trailing20_ratio": 0.8836296405774109,
+      "trough_volume_rank_in_window": 46,
+      "around_trough": [
+        {
+          "date": "2026-02-26",
+          "close": 203.67999267578125,
+          "volume": 35020500,
+          "volume_vs_trailing20_ratio": 0.8205678895421732,
+          "day_over_day_volume_change": -0.2145774320951106,
+          "is_trough": false
+        },
+        {
+          "date": "2026-02-27",
+          "close": 200.2100067138672,
+          "volume": 31312400,
+          "volume_vs_trailing20_ratio": 0.7269049235502509,
+          "day_over_day_volume_change": -0.10588369669193753,
+          "is_trough": false
+        },
+        {
+          "date": "2026-03-02",
+          "close": 198.6199951171875,
+          "volume": 34120200,
+          "volume_vs_trailing20_ratio": 0.7924297851986736,
+          "day_over_day_volume_change": 0.08967054585403855,
+          "is_trough": false
+        },
+        {
+          "date": "2026-03-03",
+          "close": 190.9499969482422,
+          "volume": 37785700,
+          "volume_vs_trailing20_ratio": 0.8836296405774109,
+          "day_over_day_volume_change": 0.10742903031049056,
+          "is_trough": true
+        },
+        {
+          "date": "2026-03-04",
+          "close": 202.07000732421875,
+          "volume": 40912600,
+          "volume_vs_trailing20_ratio": 0.9551029746146914,
+          "day_over_day_volume_change": 0.08275352845123951,
+          "is_trough": false
+        },
+        {
+          "date": "2026-03-05",
+          "close": 199.4499969482422,
+          "volume": 36000700,
+          "volume_vs_trailing20_ratio": 0.852560265662086,
+          "day_over_day_volume_change": -0.12005836832662797,
+          "is_trough": false
+        },
+        {
+          "date": "2026-03-06",
+          "close": 192.42999267578125,
+          "volume": 33913800,
+          "volume_vs_trailing20_ratio": 0.8770520388399229,
+          "day_over_day_volume_change": -0.05796831728271945,
+          "is_trough": false
+        }
+      ]
+    }
+  ]
+}
