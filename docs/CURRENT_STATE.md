@@ -1,6 +1,23 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-13 (**D-095: user pivoted to focus exclusively
+**Last updated:** 2026-08-13 (**D-096: current-day SWING entry screen on
+the 10-ticker universe — 7 of 10 show an active signal today (`AMD, APP,
+MCHP, MPWR, MU, RKLB, STX`). `NVDA`/`AVGO` genuinely don't qualify right
+now (too close to their highs). `ENPH`'s "no" is stale 2023 data, not a
+real current read — same coverage gap as `AXON`/`DASH` (D-084). `MCHP`
+has a signal but no tested 6-month track record yet. Every candidate is
+shown alongside the group's own tested track record (D-095) as the
+substitute for the stop-loss the user declined.**)
+
+**What happened.** Direct follow-up: the user confirmed staying focused
+on the same 10 semiconductor/AI tickers and asked what "finding entry
+points for them" concretely means. Built the practical screen
+(`scripts/239`) — applies the exact same already-validated growth>20%/
+pullback>=15% definitions to each ticker's latest actual data, same
+pattern as the long-term track's `scripts/224`. Full detail:
+`docs/DECISIONS_LOG.md` D-096.
+
+**Previous update, same day:** D-095: user pivoted to focus exclusively
 on a SWING strategy (~30% target, up to 6 months, explicitly no stop-
 loss), setting the long-term track aside for now. Ran the project's
 council process on how to build this correctly, then executed the
