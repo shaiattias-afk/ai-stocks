@@ -2697,3 +2697,71 @@ composite) would need new reasoning, not just more data.
 
 Files: `scripts/215_quarterly_composite_full_universe_check.py`
 (read-only), `data/quarterly_composite_full_universe_check_result.json`.
+
+## D-079 — New quarterly-cadence finding: raw YoY revenue growth rate (not acceleration) predicts forward excess return, robustly, on the full universe — the strongest-validated result of the quarterly line of work so far
+
+**Context**: user asked to retest D-065's quarterly growth-acceleration
+factor on the full universe (the same "was 9 tickers the bottleneck"
+question D-078 already answered for the composite). `scripts/216`
+reused D-065's own factor code and script 203's methodology unchanged —
+neither had any ticker-count assumption baked in, so this is a direct
+scale-up, not a rebuild.
+
+**Growth acceleration itself: still not significant, worse than the
+small-sample result.** n=464, 86 tickers (vs D-065's 57 rows/9 tickers):
+corr +0.081, 95% CI [-0.021, +0.180] — crosses zero. Leave-one-out: 85
+of 86 single-ticker exclusions flip it. Confirms D-065's inconclusive
+finding was not just a small-sample artifact — acceleration has no real
+signal at scale either.
+
+**But D-065's own "reference check" — the raw YoY growth rate itself,
+not acceleration — turns out to be real.** At the same baseline (12-
+quarter lookback, 12-month horizon): n=464, 86 tickers, corr **+0.235**,
+95% CI **[+0.059, +0.383]** — does not cross zero. Leave-one-out:
+**0 of 86** single-ticker exclusions flip it — every one of the 86
+groups can be individually removed without the result crossing zero.
+No other finding in this project, at any cadence, has cleared leave-
+one-out at 0 flips.
+
+**Robustness grid** (`scripts/217`, same lookback×horizon discipline
+D-073/D-078 already applied to the composite): 4 of 6 cells clear
+significance (12-quarter and full-history lookback, both at 6- and
+12-month horizons — corr +0.124 to +0.235, all positive, all CIs
+excluding zero). The 2 cells that cross zero are both at the 24-month
+horizon, where n drops sharply (252-373 vs 464-666) because fewer
+company-quarters yet have 24 months of forward price history — reduced
+statistical power from a smaller, still-accumulating sample, not a sign
+change or instability. **Every one of the 6 cells is directionally
+positive; none flips sign.** The full-history lookback (spanning a much
+wider, more varied macro window than the 12-quarter cut) shows the same
+pattern as the recent-only window — a partial, encouraging answer to
+the regime-dependence concern D-074 raised for the P/E finding, though
+not a full regime-split test (see caveat below).
+
+**Honest caveats, not yet resolved**:
+- Not yet tested for regime-splitting the way D-074 split the P/E
+  finding pre-/post-2022 explicitly (the lookback grid here is
+  suggestive, not a direct substitute).
+- 12-month-and-under horizons only look meaningful so far; this project
+  has repeatedly found multi-year effects for OTHER findings (the P/E
+  result) and near-zero effects at 12 months — this factor is the
+  reverse pattern, positive at 6-12mo, inconclusive at 24mo (likely a
+  power issue, but not yet confirmed as such with more data).
+- The economic magnitude (correlation ~0.13-0.24) is more modest than
+  the P/E finding's quintile spread (Q5 losing 15.7%/yr); not yet
+  translated into a quintile/practical-rule breakdown the way D-068 did
+  for P/E.
+- This is a single raw factor, not yet a portfolio rule — no
+  stated position-sizing, holding-period, or transaction-cost model.
+
+**Why this matters**: the quarterly composite (D-067→D-073→D-078) is
+conclusively dead. This is a DIFFERENT, single-factor quarterly signal
+that is, by the leave-one-out metric this project has used all session
+to judge robustness, the most robust finding yet — annual P/E included.
+It reopens the quarterly-cadence line of work on a new, narrower basis:
+one factor, not a 5-9-factor composite.
+
+Files: `scripts/216_quarterly_trend_full_universe_check.py`,
+`scripts/217_quarterly_growth_rate_robustness_check.py` (both
+read-only), `data/quarterly_trend_full_universe_check_result.json`,
+`data/quarterly_growth_rate_robustness_check_result.json`.
