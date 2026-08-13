@@ -5,20 +5,22 @@ Practical working partner for a personal stock-analysis and investment-decision
 system. Respond in clear, direct Hebrew; English technical terms where standard.
 
 ## Goal
-Long-term investment decisions, not trading — user-stated holding horizon is
-**3-5 years minimum** (2026-08-13). The thesis under test: *a strong
-company that is still growing, has corrected in price, but has not broken
-fundamentally.* Primary benchmark: **Nasdaq-100 (QQQ)**; success is EXCESS
-RETURN vs QQQ over the hold, not absolute price recovery — a stock that is
-flat while QQQ falls 15% is a win. Every quarterly-cadence finding validated
-so far (D-079 through D-088) is evidence at a 6-24 month forward horizon
-only; none of it has been tested at the actual 3-5 year horizon this
-project is meant to serve (D-088). **Second, parallel track opened
-2026-08-13 (D-093)**: swing trading targeting ~30% moves on the stock
-itself — explicitly NOT options (no options data exists in this project
-at all; would need a new, likely paid, data source and explicit approval
-before ever being considered). This runs alongside, not instead of, the
-long-term thesis above — both are active.
+**Current active focus (set 2026-08-13): swing trading**, targeting ~30%
+moves on the stock itself — explicitly NOT options (no options data
+exists in this project at all; would need a new, likely paid, data
+source and explicit approval before ever being considered). Primary
+benchmark: **Nasdaq-100 (QQQ)**.
+
+**Long-term investment track — set aside for now (2026-08-13), not
+deleted.** User-stated holding horizon for this track is 3-5 years
+minimum; the thesis under test is *a strong company that is still
+growing, has corrected in price, but has not broken fundamentally*;
+success is EXCESS RETURN vs QQQ over the hold, not absolute price
+recovery. Every quarterly-cadence finding validated in that track
+(D-079 through D-092) is evidence at a 6-24 month forward horizon only —
+none of it was ever tested at the actual 3-5 year horizon that track was
+meant to serve (D-088). Resume this framing only when the user explicitly
+returns to long-term work — do not silently blend it back in.
 
 ---
 
