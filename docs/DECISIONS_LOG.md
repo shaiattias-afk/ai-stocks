@@ -3184,3 +3184,30 @@ Every cell for both groups excludes zero — even Group B (pullback alone, no fu
 
 Files: `scripts/232_semiconductor_ai_focused_universe_check.py` (read-only),
 `data/semiconductor_ai_focused_universe_check_result.json`.
+
+## D-093 — New track opened: swing exit at +30% (stock only, no options) on the same growth+pullback trigger. High eventual hit-rate (93-98%) but real path risk (30% of winners dip >15% deeper first, worst -60%) and severe rare failures (-27% to -81%); the "annualized if repeated" framing is explicitly not a real strategy yet
+
+**Trigger**: user opened a second, parallel track alongside the long-term (3-5 year) thesis — swing trading targeting ~30% moves. First clarified this excludes options (stock only), which removes the options-data blocker (no options data exists in the warehouse at all) and makes this testable with the existing daily price data.
+
+**Method (`scripts/233`)**: kept the same already-validated entry trigger (growth>20% + pullback>=15%, D-081) — the only trigger this project has ever tested — but instead of holding for a fixed 6-24 month horizon, scanned forward day-by-day for the first close price reaching entry_price × 1.30, with a 24-month watch window. Also tracked the maximum drawdown BELOW the entry price at any point before the target was reached (the project's own backtest gate requires checking drawdown and risk, not just predictive value) and what happened to episodes that never reached +30%. Run on both the full 32-ticker Group A universe and the D-092 semiconductor/AI-focused 10-ticker subset.
+
+**Result — genuinely promising on the surface, but incomplete as a strategy**:
+
+| | Full universe (136 episodes) | Semiconductor/AI subset (64 episodes) |
+|---|---|---|
+| Eventually hit +30% (of determinable) | 100/107 (93%) | 52/53 (98%) |
+| Median days to hit | 58 trading days (~2.8mo) | 43 trading days (~2.0mo) |
+| Hit within 1 month | 16% | 27% |
+| Median drawdown before hit | 6.6% | 4.8% |
+| **>15% deeper dip before eventually hitting** | **30/100 (30%)** | **16/52 (31%)** |
+| Worst drawdown before eventual hit | 60.1% | 60.1% |
+| Never hit within 24mo | 7 (median return -38% at 24mo) | 1 (`ENPH` 2023-07-27, **-81%**) |
+
+The 7 full-universe failures by name: `DXCM` (three separate entries, -27% to -39% — a real recurring pattern worth flagging on its own), `ENPH` (-81%, the solar-sector 2023-2024 collapse), `LCID` (-66%, Lucid Motors), `MDB` (-33%), and `META`'s already-known 2021-10-12 failure (-3%, the same one flagged in D-086).
+
+**What this does NOT yet show — stated plainly per this project's own backtest-gate rule (must check drawdown/risk, not just hit-rate)**: (1) no stop-loss or defined exit-on-failure rule was tested — a real swing strategy needs one, and this only measures the profit-target side; (2) the "median annualized return if this exact trade could be repeated back-to-back" figures (+222% full universe, +471% semi/AI) are explicitly illustrative, not a real projected return — they assume instant, frictionless re-entry into an equally good new trade the moment one closes, ignore taxes (short-term gains are typically taxed as ordinary income, a real and large drag not modeled at all) and slippage, and were reported as MEDIAN specifically because the raw MEAN explodes to millions of percent from a handful of 1-2-day hits — a red flag about the shape of this distribution, not a usable number either way; (3) same underlying entry trigger as D-091/D-092, so the same regime-lock (2023-2025) and small-ticker-count concentration caveats apply, arguably more sharply given the shorter, choppier holding windows involved.
+
+**Honest next step if this track continues**: define an actual stop-loss/max-hold exit rule (not just the profit target), re-test with that complete rule, and separately investigate the `DXCM` pattern (3 of 7 full-universe failures on one ticker) before treating any of these numbers as more than a promising first look.
+
+Files: `scripts/233_swing_30pct_exit_check.py` (read-only),
+`data/swing_30pct_exit_check_result.json`.
