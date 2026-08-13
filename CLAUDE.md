@@ -187,9 +187,11 @@ failed episodes at the median. Thin sample (n=10 pre-2023) but the
 strongest evidence yet that the rule's headline recovery rates describe
 a strong-market period, not a regime-independent property.
 
-**Proven, entry-timing signal (D-081) — headline numbers below use an
-ABSOLUTE metric, not excess return vs QQQ; see D-088's correction.** —
-combining D-080's growth>20%
+**Entry-timing signal (D-081) — headline numbers below use an ABSOLUTE
+metric, not excess return vs QQQ (see D-088), and D-091 shows its
+excess-return edge does not survive removing semiconductor/AI names at
+all — read this whole block with those two corrections, not as
+"Proven."** — combining D-080's growth>20%
 threshold with a price pullback (stock down >=15% from its own rolling
 52-week high, entry evaluated at ANY trading day, not just filing
 dates) predicts recovery to that high, clearly beating a pullback-only
@@ -234,6 +236,27 @@ year horizon the user actually wants** — everything proven so far
 (D-079 through D-088) is 6-24 month evidence. This is the same
 structural problem as the P/E finding's 5-year regime lock (D-074): not
 fixable by more analysis, only by more elapsed time.
+
+**D-091 — decisive: the entry-timing signal's excess-return edge does
+NOT survive excluding semiconductor/AI names, at all.** Combined D-084's
+sector exclusion (10 tickers: `AMD, APP, AVGO, ENPH, MCHP, MPWR, MU,
+NVDA, RKLB, STX`) with D-088's excess-return bootstrap, on the same 32-
+ticker/136-episode Group A pool. Result is starker than D-084's version
+of this test on the plain growth correlation: with those 10 tickers
+removed, mean excess return vs QQQ is +0.6% at 6mo (CI crosses zero,
+essentially flat) and **flips NEGATIVE** at 12mo (+49.8% → **-7.3%**) and
+24mo (+108.9% → **-6.7%**) — none individually significant (n shrinks to
+18-21 ticker-groups, wide CIs), but there is no remaining positive
+signal to point to. **Plain statement of where this leaves the project**:
+neither headline quarterly-cadence finding — the growth-rate correlation
+(D-079/D-080) or the entry-timing signal (D-081/D-088) — has been shown
+to work as a sector-neutral edge. Both are substantially or (for entry-
+timing specifically) entirely explained by AI/semiconductor exposure
+during the 2023-2025 rally. Combined with D-088's separate 3-5-year-
+horizon gap, this is the honest current answer to "why hasn't a reliable
+entry-timing tool been found yet": what has been validated so far is
+closer to "own the AI/semiconductor rally with a growth+pullback timing
+overlay" than a demonstrated general-purpose signal.
 
 **Tested and not supported for practical use, but the underlying
 pattern is real (D-089 → D-090)** — user's own idea: use trading volume
@@ -280,32 +303,33 @@ see above): Scoring Model V1 composite (D-061/D-062), the value/growth
 two-bucket model (D-066), none of Scoring Inputs V1's 9 factors at 5
 years (D-074). See also `docs/FAILED_APPROACHES.md`.
 
-**Open next step (post-council, D-083 → D-088)** — D-088's two
-corrections (excess return vs QQQ is the real metric; 3-5 years is the
-real horizon) now dominate the priority list, above the items below
-that predate them. In rough priority order: **(0) close the 3-5 year
-horizon gap** — nothing validated so far (D-079-D-088) has been tested
-at the horizon this project is actually meant to serve; the only path is
-elapsed time (more entries becoming 3-5-years-old) or, cheaper and
-available now, extending the SAME excess-return methodology
-(`scripts/227`) to whatever 3+ year-old entries already exist across
-the FULL universe/history (not just Group A's 136 episodes) to enlarge
-the n=18/n=2 samples somewhat — worth trying before concluding nothing
-more can be said; (a) a genuine walk-forward test — freeze the exact
-rule (growth>20% + pullback>=15%) and score it untouched against new
-quarters as they arrive, the only test not contaminated by having
-already mined all current data — should be scored on EXCESS return per
-D-088, not recovery-to-high; (b) a proper regime split remains data-
-limited for a real statistical test (not just the n=10 characterization
-in D-087, itself superseded by D-088's milder corrected version) for
-either the growth-rate or P/E finding; (c) the post-hoc quintile-
-threshold selection (D-080's ~20% cutoff was chosen after seeing the
-data — an uncounted extra degree of freedom, still not permutation-
-tested); (d) D-081's entry-timing signal has no formal significance test
-on its Group A vs. Group B gap on EXCESS RETURN terms yet (D-088 only
-tested Group A alone), and D-084's sector-concentration cut has not yet
-been re-run on the entry-timing (pullback) episodes specifically, only
-on the plain growth-rate correlation. Analyst-estimate-revision data was
+**Open next step (post-council, D-083 → D-091)** — D-091 is now the
+dominant fact: neither headline finding has a demonstrated sector-
+neutral edge. Two honest paths forward, not mutually exclusive: **(A)
+find a genuinely sector-neutral version** — re-run the whole growth+
+pullback discovery process (D-079-D-081) restricted to a non-tech/semi
+universe from the start, rather than excluding after the fact, to see if
+a smaller but real effect exists outside the names already tested; or
+**(B) accept the AI/semiconductor concentration and stop pretending
+otherwise** — if the only thing that has ever worked is "growth+pullback
+timing on AI/semi names during a rally," say that plainly and decide
+whether it's still useful knowing its actual scope. Underneath both:
+**(0) close the 3-5 year horizon gap** (D-088) — nothing validated so
+far has been tested at the horizon this project is actually meant to
+serve; only elapsed time fixes this, or extending `scripts/227`'s
+methodology to whatever 3+ year-old entries exist across the full
+universe (not just Group A) to enlarge the n=18/n=2 samples somewhat;
+(a) a genuine walk-forward test — freeze the exact rule and score it
+untouched against new quarters as they arrive, scored on EXCESS return
+(D-088) — the only test not contaminated by already-mined data, and
+now the only way to know if path (A) or (B) is closer to true; (b) a
+proper regime split remains data-limited for a real statistical test
+(not just D-087's n=10 characterization) for either the growth-rate or
+P/E finding; (c) the post-hoc quintile-threshold selection (D-080's
+~20% cutoff was chosen after seeing the data — still not permutation-
+tested); (d) D-081's entry-timing signal still has no formal
+significance test on its Group A vs. Group B gap on excess-return terms.
+Analyst-estimate-revision data was
 investigated as a genuinely uncorrelated new data source and found
 impractical for now (enterprise-only pricing, or no confirmed point-in-
 time history at the cheap tiers) — not pursued. EBITDA (D-081) needs new

@@ -3140,3 +3140,24 @@ At both thresholds, only 28% of episodes got a genuinely better (lower) entry pr
 
 Files: `scripts/230_volume_trigger_realtime_entry_test.py` (read-only),
 `data/volume_trigger_realtime_entry_test_result.json`.
+
+## D-091 — Decisive: the growth+pullback entry-timing signal's ENTIRE excess-return edge over QQQ is carried by semiconductor/AI names. With them excluded, the mean excess return is not just insignificant, it flips negative at 12 and 24 months
+
+**Trigger**: direct continuation, user asked to keep looking for genuinely solid ("real footholds") findings. D-084 tested whether the plain growth-RATE correlation (D-079/D-080) survives excluding semiconductor/AI names (it weakens substantially but stays positive). D-088 separately corrected the growth+PULLBACK entry-timing signal (D-081) to excess return vs QQQ (real, significant at 6/12/24 months). Those two corrections had never been combined — flagged explicitly as open in `CLAUDE.md`'s "Open next step" list. This closes that gap.
+
+**Method (`scripts/231`)**: same 32 Group A tickers (136 episodes) and the same SIC-3674-semiconductor + named-RKLB/MU/STX/APP exclusion definition D-084 already established, re-run against D-088's excess-return-vs-QQQ bootstrap (ticker-grouped, unchanged methodology). 10 of the 32 tickers are excluded: `AMD, APP, AVGO, ENPH, MCHP, MPWR, MU, NVDA, RKLB, STX`.
+
+**Result — the edge does not survive, at all, at any horizon**:
+
+| Horizon | Baseline (32 tickers) | Sector-excluded (18 tickers remain) |
+|---|---|---|
+| 6mo | mean +23.4%, CI [+6.9%, +38.7%] — significant | mean **+0.6%**, CI [-9.9%, +10.7%] — crosses zero |
+| 12mo | mean +49.8%, CI [+1.3%, +105.5%] — significant | mean **-7.3%**, CI [-23.1%, +9.1%] — crosses zero, point estimate NEGATIVE |
+| 24mo | mean +108.9%, CI [+4.5%, +262.4%] — significant | mean **-6.7%**, CI [-54.4%, +50.1%] — crosses zero, point estimate NEGATIVE |
+
+This is a starker result than D-084's version of this test on the plain growth correlation (which weakened to +0.044 but stayed positive). Here, once the 10 semiconductor/AI names are removed from the 32-ticker Group A universe, the growth+pullback rule's excess-return edge over QQQ does not just become statistically insignificant — the point estimate flips negative at both the 12- and 24-month horizons. None of the differences are individually significant (all three excluded-group CIs are wide and cross zero, so "negative" is not itself proven either — n shrinks to 18-21 ticker-groups), but there is no remaining positive signal to point to once the concentration is removed.
+
+**What this means, stated plainly**: neither of this project's two headline quarterly-cadence findings — the raw growth-rate correlation (D-079/D-080) and the growth+pullback entry-timing signal (D-081/D-088) — has been shown to work as a sector-neutral fundamental edge. Both are, on current evidence, substantially or (for the entry-timing signal specifically) entirely explained by exposure to semiconductor/AI names during the 2023-2025 rally. This is the most direct, load-bearing answer this session has produced to the user's original council-session question ("why haven't we found a reliable entry-timing tool") — the honest current answer is: everything validated so far is closer to "own the AI/semiconductor rally, with a growth+pullback timing overlay," not a demonstrated general-purpose signal. Should be read together with D-088's separate finding that nothing has been tested at the user's actual 3-5 year investment horizon either — both gaps are open at once.
+
+Files: `scripts/231_pullback_excess_return_sector_exclusion_check.py`
+(read-only), `data/pullback_excess_return_sector_exclusion_check_result.json`.

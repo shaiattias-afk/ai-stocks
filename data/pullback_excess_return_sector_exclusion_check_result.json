@@ -1,0 +1,1163 @@
+{
+  "excluded_tickers": [
+    "AMD",
+    "APP",
+    "AVGO",
+    "ENPH",
+    "MCHP",
+    "MPWR",
+    "MU",
+    "NVDA",
+    "RKLB",
+    "STX"
+  ],
+  "semiconductor_tickers": [
+    "AMD",
+    "AVGO",
+    "ENPH",
+    "MCHP",
+    "MPWR",
+    "MU",
+    "NVDA"
+  ],
+  "results_by_horizon": {
+    "6mo": {
+      "baseline": {
+        "observed_mean": 0.2337097216591371,
+        "ci_95_low": 0.06940660016153942,
+        "ci_95_high": 0.3865072020068362,
+        "ci_95_crosses_zero": false,
+        "n_groups": 30
+      },
+      "sector_excluded": {
+        "observed_mean": 0.006034822698696061,
+        "ci_95_low": -0.09867601845116505,
+        "ci_95_high": 0.10739721097617771,
+        "ci_95_crosses_zero": true,
+        "n_groups": 21
+      }
+    },
+    "12mo": {
+      "baseline": {
+        "observed_mean": 0.498279448049427,
+        "ci_95_low": 0.012544111929145436,
+        "ci_95_high": 1.0551282201662215,
+        "ci_95_crosses_zero": false,
+        "n_groups": 28
+      },
+      "sector_excluded": {
+        "observed_mean": -0.07290773177783197,
+        "ci_95_low": -0.2307986950166482,
+        "ci_95_high": 0.09144258134936098,
+        "ci_95_crosses_zero": true,
+        "n_groups": 19
+      }
+    },
+    "24mo": {
+      "baseline": {
+        "observed_mean": 1.0891824654004658,
+        "ci_95_low": 0.04517107318607227,
+        "ci_95_high": 2.624434902438498,
+        "ci_95_crosses_zero": false,
+        "n_groups": 19
+      },
+      "sector_excluded": {
+        "observed_mean": -0.06663294641597527,
+        "ci_95_low": -0.5436527205565118,
+        "ci_95_high": 0.5006165703950982,
+        "ci_95_crosses_zero": true,
+        "n_groups": 14
+      }
+    }
+  },
+  "episodes": [
+    {
+      "ticker": "ALNY",
+      "entry_date": "2025-02-18",
+      "excluded": false,
+      "excess_return_6mo": 0.7547102096606326,
+      "excess_return_12mo": 0.20188009379396687,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "ALNY",
+      "entry_date": "2025-04-04",
+      "excluded": false,
+      "excess_return_6mo": 0.47629471940644885,
+      "excess_return_12mo": 0.0022106741354486203,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "ALNY",
+      "entry_date": "2025-12-09",
+      "excluded": false,
+      "excess_return_6mo": -0.41836373948414163,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2025-02-05",
+      "excluded": true,
+      "excess_return_6mo": 0.48998472735689225,
+      "excess_return_12mo": 0.5796423838947538,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2025-09-05",
+      "excluded": true,
+      "excess_return_6mo": 0.260023301974442,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2025-11-19",
+      "excluded": true,
+      "excess_return_6mo": 0.679704883336194,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2026-02-04",
+      "excluded": true,
+      "excess_return_6mo": 1.3926526800372432,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2026-06-10",
+      "excluded": true,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2026-07-28",
+      "excluded": true,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2023-12-04",
+      "excluded": true,
+      "excess_return_6mo": 1.0039627255986245,
+      "excess_return_12mo": 8.636237877822381,
+      "excess_return_24mo": 16.66524748538664
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2024-08-02",
+      "excluded": true,
+      "excess_return_6mo": 4.1597617420160695,
+      "excess_return_12mo": 4.48396611656539,
+      "excess_return_24mo": 4.33395532085705
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2024-12-10",
+      "excluded": true,
+      "excess_return_6mo": 0.16549313158624113,
+      "excess_return_12mo": 0.978436599742589,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2025-02-21",
+      "excluded": true,
+      "excess_return_6mo": -0.06520570975768503,
+      "excess_return_12mo": -0.23251682283886022,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2025-10-06",
+      "excluded": true,
+      "excess_return_6mo": -0.2678275340019586,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2026-01-02",
+      "excluded": true,
+      "excess_return_6mo": -0.31258983358959447,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "AVGO",
+      "entry_date": "2025-03-12",
+      "excluded": true,
+      "excess_return_6mo": 0.6294644841201491,
+      "excess_return_12mo": 0.486705357869208,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "AVGO",
+      "entry_date": "2025-12-15",
+      "excluded": true,
+      "excess_return_6mo": -0.05775233851333472,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "AVGO",
+      "entry_date": "2026-06-05",
+      "excluded": true,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "AXON",
+      "entry_date": "2023-08-08",
+      "excluded": false,
+      "excess_return_6mo": 0.3627179690200506,
+      "excess_return_12mo": 0.8839377054613176,
+      "excess_return_24mo": 3.2303617100510476
+    },
+    {
+      "ticker": "AXON",
+      "entry_date": "2023-09-25",
+      "excluded": false,
+      "excess_return_6mo": 0.3909833020294502,
+      "excess_return_12mo": 0.6852065025068506,
+      "excess_return_24mo": 2.014542281141055
+    },
+    {
+      "ticker": "AXON",
+      "entry_date": "2024-06-04",
+      "excluded": false,
+      "excess_return_6mo": 1.3334918479497928,
+      "excess_return_12mo": 1.6529795838818186,
+      "excess_return_24mo": 0.21006718119932688
+    },
+    {
+      "ticker": "AXON",
+      "entry_date": "2025-01-06",
+      "excluded": false,
+      "excess_return_6mo": 0.35038636825737757,
+      "excess_return_12mo": -0.09651738429365819,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "AXON",
+      "entry_date": "2025-02-19",
+      "excluded": false,
+      "excess_return_6mo": 0.21990964591085183,
+      "excess_return_12mo": -0.38085196246941,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "AXON",
+      "entry_date": "2025-09-03",
+      "excluded": false,
+      "excess_return_6mo": -0.2594330090457223,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "BKNG",
+      "entry_date": "2023-10-26",
+      "excluded": false,
+      "excess_return_6mo": 0.028115298805066358,
+      "excess_return_12mo": 0.14513582535487646,
+      "excess_return_24mo": 0.09329614792534247
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2022-08-31",
+      "excluded": false,
+      "excess_return_6mo": -0.3241189536683434,
+      "excess_return_12mo": -0.3792682104559405,
+      "excess_return_24mo": -0.1049064156074817
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2024-04-19",
+      "excluded": false,
+      "excess_return_6mo": -0.10316213478695357,
+      "excess_return_12mo": 0.23231849101921154,
+      "excess_return_24mo": -0.04446169189895599
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2024-07-19",
+      "excluded": false,
+      "excess_return_6mo": 0.09388269667441884,
+      "excess_return_12mo": 0.38533133950103293,
+      "excess_return_24mo": 1.1234794665573817
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2025-02-25",
+      "excluded": false,
+      "excess_return_6mo": -0.011038634801706637,
+      "excess_return_12mo": -0.25074030005731796,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2025-08-29",
+      "excluded": false,
+      "excess_return_6mo": -0.1603561178704337,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2025-12-17",
+      "excluded": false,
+      "excess_return_6mo": 0.24661388332053025,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "CRWD",
+      "entry_date": "2026-06-08",
+      "excluded": false,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2023-08-21",
+      "excluded": false,
+      "excess_return_6mo": 0.32302931966732795,
+      "excess_return_12mo": 0.35488392741033836,
+      "excess_return_24mo": 1.6334065780777487
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2023-09-21",
+      "excluded": false,
+      "excess_return_6mo": 0.5580243300158161,
+      "excess_return_12mo": 0.48606677526756203,
+      "excess_return_24mo": 1.771602825473045
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2024-05-02",
+      "excluded": false,
+      "excess_return_6mo": 0.23368260727752244,
+      "excess_return_12mo": 0.6420880587154321,
+      "excess_return_24mo": -0.08384419182275038
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2025-03-06",
+      "excluded": false,
+      "excess_return_6mo": 0.2025470959320328,
+      "excess_return_12mo": -0.23994179958116335,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2025-04-03",
+      "excluded": false,
+      "excess_return_6mo": 0.21733164894690238,
+      "excess_return_12mo": -0.4209253690902066,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2025-05-07",
+      "excluded": false,
+      "excess_return_6mo": -0.11014019306153333,
+      "excess_return_12mo": -0.4767324098802471,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "DASH",
+      "entry_date": "2025-11-05",
+      "excluded": false,
+      "excess_return_6mo": -0.3983079353228939,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2023-08-09",
+      "excluded": false,
+      "excess_return_6mo": 0.3623299522619836,
+      "excess_return_12mo": 0.06145628671283632,
+      "excess_return_24mo": -0.09173147575737595
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2024-05-07",
+      "excluded": false,
+      "excess_return_6mo": -0.015067998255626547,
+      "excess_return_12mo": -0.161081389045879,
+      "excess_return_24mo": 0.08349813305568454
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2024-07-30",
+      "excluded": false,
+      "excess_return_6mo": 0.09689111711954213,
+      "excess_return_12mo": 0.04972194328204105,
+      "excess_return_24mo": 0.8321523311053203
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2024-12-31",
+      "excluded": false,
+      "excess_return_6mo": -0.14177373921705716,
+      "excess_return_12mo": -0.25601433363153037,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2025-11-20",
+      "excluded": false,
+      "excess_return_6mo": 0.10930304630604093,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2026-06-05",
+      "excluded": false,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "DDOG",
+      "entry_date": "2026-08-06",
+      "excluded": false,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "DXCM",
+      "entry_date": "2023-08-08",
+      "excluded": false,
+      "excess_return_6mo": -0.015031038019173826,
+      "excess_return_12mo": -0.5639224186239619,
+      "excess_return_24mo": -0.8482521780586632
+    },
+    {
+      "ticker": "DXCM",
+      "entry_date": "2024-02-13",
+      "excluded": false,
+      "excess_return_6mo": -0.47569952710298335,
+      "excess_return_12mo": -0.5393934162814294,
+      "excess_return_24mo": -0.8217544816198591
+    },
+    {
+      "ticker": "DXCM",
+      "entry_date": "2024-05-30",
+      "excluded": false,
+      "excess_return_6mo": -0.4747301190023606,
+      "excess_return_12mo": -0.43198243318653196,
+      "excess_return_24mo": -1.0305842829933627
+    },
+    {
+      "ticker": "DXCM",
+      "entry_date": "2025-10-30",
+      "excluded": false,
+      "excess_return_6mo": -0.1961457132394977,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "ENPH",
+      "entry_date": "2023-07-27",
+      "excluded": true,
+      "excess_return_6mo": -0.48684536477738405,
+      "excess_return_12mo": -0.5584713351967546,
+      "excess_return_24mo": -1.3179742893950763
+    },
+    {
+      "ticker": "FOX",
+      "entry_date": "2026-08-06",
+      "excluded": false,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "FTNT",
+      "entry_date": "2023-08-07",
+      "excluded": false,
+      "excess_return_6mo": 0.057723891695097285,
+      "excess_return_12mo": 0.04516185129936501,
+      "excess_return_24mo": -0.23127126287899546
+    },
+    {
+      "ticker": "ISRG",
+      "entry_date": "2025-03-07",
+      "excluded": false,
+      "excess_return_6mo": -0.27326597354051385,
+      "excess_return_12mo": -0.28973908804903015,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "ISRG",
+      "entry_date": "2025-07-23",
+      "excluded": false,
+      "excess_return_6mo": -0.06328186392361257,
+      "excess_return_12mo": -0.5717435176604935,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "ISRG",
+      "entry_date": "2026-01-29",
+      "excluded": false,
+      "excess_return_6mo": -0.35810361531776247,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "KLAC",
+      "entry_date": "2025-01-31",
+      "excluded": false,
+      "excess_return_6mo": 0.11164915175170842,
+      "excess_return_12mo": 0.7219717599909683,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "LCID",
+      "entry_date": "2023-08-07",
+      "excluded": false,
+      "excess_return_6mo": -0.6286664862061937,
+      "excess_return_12mo": -0.7128183676260971,
+      "excess_return_24mo": -1.197763733744478
+    },
+    {
+      "ticker": "MCHP",
+      "entry_date": "2026-07-02",
+      "excluded": true,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "MDB",
+      "entry_date": "2023-09-14",
+      "excluded": false,
+      "excess_return_6mo": -0.1603687849739166,
+      "excess_return_12mo": -0.4703774000740836,
+      "excess_return_24mo": -0.675370027245656
+    },
+    {
+      "ticker": "MDB",
+      "entry_date": "2024-01-04",
+      "excluded": false,
+      "excess_return_6mo": -0.5196750711779495,
+      "excess_return_12mo": -0.6338080337060763,
+      "excess_return_24mo": -0.41553046871049903
+    },
+    {
+      "ticker": "MDB",
+      "entry_date": "2024-03-05",
+      "excluded": false,
+      "excess_return_6mo": -0.3446376594944045,
+      "excess_return_12mo": -0.5059358405387253,
+      "excess_return_24mo": -0.7601659085841046
+    },
+    {
+      "ticker": "MDB",
+      "entry_date": "2026-03-11",
+      "excluded": false,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "META",
+      "entry_date": "2021-10-12",
+      "excluded": false,
+      "excess_return_6mo": -0.29146270496941007,
+      "excess_return_12mo": -0.34625030551433167,
+      "excess_return_24mo": -0.0481436742889636
+    },
+    {
+      "ticker": "META",
+      "entry_date": "2024-04-25",
+      "excluded": false,
+      "excess_return_6mo": 0.13083106245822473,
+      "excess_return_12mo": 0.1242780922810558,
+      "excess_return_24mo": -0.03418674380557696
+    },
+    {
+      "ticker": "META",
+      "entry_date": "2024-07-25",
+      "excluded": false,
+      "excess_return_6mo": 0.3324785119933771,
+      "excess_return_12mo": 0.3343418538513434,
+      "excess_return_24mo": -0.1854994970202286
+    },
+    {
+      "ticker": "META",
+      "entry_date": "2025-03-07",
+      "excluded": false,
+      "excess_return_6mo": 0.02425933315096951,
+      "excess_return_12mo": -0.20408527648915853,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "META",
+      "entry_date": "2025-10-30",
+      "excluded": false,
+      "excess_return_6mo": -0.14964147255079774,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "META",
+      "entry_date": "2026-02-04",
+      "excluded": false,
+      "excess_return_6mo": -0.31737153011476515,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "MPWR",
+      "entry_date": "2024-11-06",
+      "excluded": true,
+      "excess_return_6mo": -0.1580357093067134,
+      "excess_return_12mo": 0.014251415025513525,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "MPWR",
+      "entry_date": "2026-03-06",
+      "excluded": true,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "MPWR",
+      "entry_date": "2026-06-23",
+      "excluded": true,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "MSFT",
+      "entry_date": "2022-01-25",
+      "excluded": false,
+      "excess_return_6mo": 0.028317311029480652,
+      "excess_return_12mo": 0.0019687969524955218,
+      "excess_return_24mo": 0.1760151973938271
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2022-03-30",
+      "excluded": true,
+      "excess_return_6mo": -0.09575951592100862,
+      "excess_return_12mo": -0.06340436878852806,
+      "excess_return_24mo": 0.36530332617193095
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2024-04-19",
+      "excluded": true,
+      "excess_return_6mo": -0.17469143289463052,
+      "excess_return_12mo": -0.4229405984199377,
+      "excess_return_24mo": 2.6523516025596865
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2024-07-11",
+      "excluded": true,
+      "excess_return_6mo": -0.29910033740193387,
+      "excess_return_12mo": -0.17223813461568294,
+      "excess_return_24mo": 5.778208002663976
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2025-11-20",
+      "excluded": true,
+      "excess_return_6mo": 2.4172746027846395,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-03-06",
+      "excluded": true,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-03-25",
+      "excluded": true,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-05-18",
+      "excluded": true,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-06-05",
+      "excluded": true,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-07-02",
+      "excluded": true,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2021-03-03",
+      "excluded": true,
+      "excess_return_6mo": 0.548079244686315,
+      "excess_return_12mo": 0.7415044693667305,
+      "excess_return_24mo": 0.8879047215860133
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2021-05-13",
+      "excluded": true,
+      "excess_return_6mo": 0.9595595649223088,
+      "excess_return_12mo": 0.34655769884458176,
+      "excess_return_24mo": 1.0860606489762574
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2021-12-13",
+      "excluded": true,
+      "excess_return_6mo": -0.14803793592256487,
+      "excess_return_12mo": -0.09812235993925822,
+      "excess_return_24mo": 0.6672485037449873
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2022-01-05",
+      "excluded": true,
+      "excess_return_6mo": -0.20678580453558748,
+      "excess_return_12mo": -0.16844411019869243,
+      "excess_return_24mo": 0.7338539284994696
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2023-09-21",
+      "excluded": true,
+      "excess_return_6mo": 0.9787673244389667,
+      "excess_return_12mo": 1.4762329227010338,
+      "excess_return_24mo": 2.775608900233797
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2023-10-20",
+      "excluded": true,
+      "excess_return_6mo": 0.7359342393182642,
+      "excess_return_12mo": 2.0666914000671035,
+      "excess_return_24mo": 2.6697901486615065
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2024-04-19",
+      "excluded": true,
+      "excess_return_6mo": 0.6879028588047968,
+      "excess_return_12mo": 0.22129879685638487,
+      "excess_return_24mo": 1.0762258725385294
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2024-07-24",
+      "excluded": true,
+      "excess_return_6mo": 0.10208504931276408,
+      "excess_return_12mo": 0.29497560776851417,
+      "excess_return_24mo": 0.32130729006982817
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2024-09-03",
+      "excluded": true,
+      "excess_return_6mo": -0.023284765070938906,
+      "excess_return_12mo": 0.33892134000439755,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2025-01-27",
+      "excluded": true,
+      "excess_return_6mo": 0.3850399533951354,
+      "excess_return_12mo": 0.35879359324879223,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2025-02-25",
+      "excluded": true,
+      "excess_return_6mo": 0.30624458854377523,
+      "excess_return_12mo": 0.33731558533583983,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2025-12-12",
+      "excluded": true,
+      "excess_return_6mo": -0.0047369344660830315,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2026-02-04",
+      "excluded": true,
+      "excess_return_6mo": 0.0204148640569195,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2026-03-20",
+      "excluded": true,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "NVDA",
+      "entry_date": "2026-06-23",
+      "excluded": true,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "OKTA",
+      "entry_date": "2023-10-05",
+      "excluded": false,
+      "excess_return_6mo": 0.08579979235194823,
+      "excess_return_12mo": -0.4204363620737289,
+      "excess_return_24mo": -0.4977461312305218
+    },
+    {
+      "ticker": "OKTA",
+      "entry_date": "2023-10-20",
+      "excluded": false,
+      "excess_return_6mo": 0.048170134332997216,
+      "excess_return_12mo": -0.4269517068743587,
+      "excess_return_24mo": -0.5770725683302138
+    },
+    {
+      "ticker": "PANW",
+      "entry_date": "2022-02-23",
+      "excluded": false,
+      "excess_return_6mo": 0.23590858923069657,
+      "excess_return_12mo": 0.2778495043701603,
+      "excess_return_24mo": 0.4269790570833616
+    },
+    {
+      "ticker": "PANW",
+      "entry_date": "2022-05-05",
+      "excluded": false,
+      "excess_return_6mo": -0.0399056193613021,
+      "excess_return_12mo": 0.0022969703959800913,
+      "excess_return_24mo": 0.27566844745031727
+    },
+    {
+      "ticker": "PANW",
+      "entry_date": "2023-08-04",
+      "excluded": false,
+      "excess_return_6mo": 0.421665556614639,
+      "excess_return_12mo": 0.16917220917423292,
+      "excess_return_24mo": 0.03119291974456706
+    },
+    {
+      "ticker": "RIVN",
+      "entry_date": "2025-02-24",
+      "excluded": false,
+      "excess_return_6mo": -0.003759641517019574,
+      "excess_return_12mo": 0.08901085701269817,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "RIVN",
+      "entry_date": "2025-11-04",
+      "excluded": false,
+      "excess_return_6mo": 0.07142344320836935,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "RIVN",
+      "entry_date": "2025-11-14",
+      "excluded": false,
+      "excess_return_6mo": -0.22425554929538716,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "RIVN",
+      "entry_date": "2026-01-13",
+      "excluded": false,
+      "excess_return_6mo": -0.22091040632028924,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2024-05-06",
+      "excluded": true,
+      "excess_return_6mo": 2.062451227898298,
+      "excess_return_12mo": 4.409676378864635,
+      "excess_return_24mo": 19.25200034384427
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2024-08-28",
+      "excluded": true,
+      "excess_return_6mo": 2.283159819405803,
+      "excess_return_12mo": 6.635771668634079,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2024-12-03",
+      "excluded": true,
+      "excess_return_6mo": 0.13788645682862377,
+      "excess_return_12mo": 0.7306543227732378,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2024-12-18",
+      "excluded": true,
+      "excess_return_6mo": 0.18767300255832486,
+      "excess_return_12mo": 1.428574042489607,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-01-13",
+      "excluded": true,
+      "excess_return_6mo": 0.704129604779429,
+      "excess_return_12mo": 2.3760914848288373,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-02-19",
+      "excluded": true,
+      "excess_return_6mo": 0.520174223178824,
+      "excess_return_12mo": 1.8291318699279973,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-06-12",
+      "excluded": true,
+      "excess_return_6mo": 1.176707564934676,
+      "excess_return_12mo": 2.5201816007848183,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-08-12",
+      "excluded": true,
+      "excess_return_6mo": 0.4818841102957694,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-09-03",
+      "excluded": true,
+      "excess_return_6mo": 0.5532142777584379,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-11-04",
+      "excluded": true,
+      "excess_return_6mo": 0.3302804514461466,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2026-01-26",
+      "excluded": true,
+      "excess_return_6mo": -0.26140499550130747,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2026-04-24",
+      "excluded": true,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2026-06-01",
+      "excluded": true,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "SNPS",
+      "entry_date": "2025-12-22",
+      "excluded": false,
+      "excess_return_6mo": -0.22919342694937306,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2024-12-16",
+      "excluded": true,
+      "excess_return_6mo": 0.3863513032208633,
+      "excess_return_12mo": 1.922141992414117,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2025-02-03",
+      "excluded": true,
+      "excess_return_6mo": 0.5868910894084247,
+      "excess_return_12mo": 3.650779444716874,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2025-10-10",
+      "excluded": true,
+      "excess_return_6mo": 1.3179345684185269,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2025-11-20",
+      "excluded": true,
+      "excess_return_6mo": 1.915835971908689,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2026-03-02",
+      "excluded": true,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2026-03-26",
+      "excluded": true,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2026-06-26",
+      "excluded": true,
+      "excess_return_6mo": null,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "TEAM",
+      "entry_date": "2025-03-03",
+      "excluded": false,
+      "excess_return_6mo": -0.5274871630633955,
+      "excess_return_12mo": -0.9306101342298247,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2023-08-10",
+      "excluded": false,
+      "excess_return_6mo": -0.22704167790911478,
+      "excess_return_12mo": 0.025724632359389377,
+      "excess_return_24mo": -0.8839451677934848
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2023-09-21",
+      "excluded": false,
+      "excess_return_6mo": -0.12738190751802692,
+      "excess_return_12mo": 0.07424743777363174,
+      "excess_return_24mo": -1.093984268186449
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2023-10-18",
+      "excluded": false,
+      "excess_return_6mo": -0.11709256820936798,
+      "excess_return_12mo": 0.17683630560896169,
+      "excess_return_24mo": -1.0198598092961542
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2024-03-14",
+      "excluded": false,
+      "excess_return_6mo": 0.2782951117389254,
+      "excess_return_12mo": -0.4030314621336887,
+      "excess_return_24mo": -1.0329874739697618
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2024-04-19",
+      "excluded": false,
+      "excess_return_6mo": 0.33086517919890523,
+      "excess_return_12mo": -0.4356387309382309,
+      "excess_return_24mo": -1.2658509878007993
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2024-08-02",
+      "excluded": false,
+      "excess_return_6mo": 0.26154596097035676,
+      "excess_return_12mo": -0.1837377574940846,
+      "excess_return_24mo": -1.3561359065887992
+    },
+    {
+      "ticker": "TTD",
+      "entry_date": "2024-12-31",
+      "excluded": false,
+      "excess_return_6mo": -0.46934308445268835,
+      "excess_return_12mo": -0.8847441205610891,
+      "excess_return_24mo": null
+    },
+    {
+      "ticker": "TTWO",
+      "entry_date": "2026-01-30",
+      "excluded": false,
+      "excess_return_6mo": 0.021370092268870877,
+      "excess_return_12mo": null,
+      "excess_return_24mo": null
+    }
+  ]
+}
