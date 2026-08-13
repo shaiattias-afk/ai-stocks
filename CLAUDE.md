@@ -104,22 +104,31 @@ a regime change, and not retestable at 5 years until ~2027-2028. Kept here
 as background context only — do not resume building on this annual/5-year
 finding without the user explicitly asking for annual-cadence work again.
 
-**Proven at quarterly cadence (D-079)** — raw YoY quarterly revenue
-growth rate (current quarter vs. the same quarter a year earlier)
-predicts 6-12 month forward excess return vs. QQQ: correlation
-**+0.235** at the 12-quarter-lookback/12-month-horizon baseline, 95% CI
-**[+0.059, +0.383]**, 86 independent tickers. **The most robust finding
-this project has produced by its own leave-one-out standard**: 0 of 86
-single-ticker exclusions flip the result (every other finding in this
-project, including the P/E result, has SOME fragile exclusions). Holds
-directionally across a full lookback×horizon grid (4 of 6 cells
-significant, all 6 positive-signed; the 2 non-significant cells are both
-at the 24-month horizon, where n is smallest — a power issue, not a
-sign flip). **Caveats, not yet resolved**: not regime-split the way
-D-074 split the P/E finding; not yet translated into a quintile/
-practical entry rule; horizon tested only up to 24 months so far. This
-is a single raw factor, not a composite — the quarterly composite itself
-(D-067) remains dead, see below.
+**Proven at quarterly cadence, but asymmetric not linear (D-079 →
+D-080)** — raw YoY quarterly revenue growth rate (current quarter vs.
+the same quarter a year earlier) correlates with 6-12 month forward
+excess return vs. QQQ: correlation **+0.235** at the 12-quarter-
+lookback/12-month-horizon baseline, 95% CI **[+0.059, +0.383]**, 86
+independent tickers, **0 of 86 leave-one-out exclusions flip it** — the
+most robust correlation this project has measured by that standard.
+**But D-080's quintile breakdown shows this is NOT "more growth is
+better."** Quintiles 1-4 (bottom 80% by growth, i.e. anywhere from -91%
+to +20% YoY) all show a NEGATIVE median excess return. Only quintile 5
+(growth above ~20%/yr) is positive. The tentative practical read is a
+**threshold rule — "require growth above ~20%/yr," not a continuous
+ranking** — same asymmetric shape as the P/E finding (D-068), just
+pointing the opposite direction (require a high bar, vs. avoid a high
+bar). Quintile 5's own average (+84%/yr) is itself skewed by a handful
+of 2023-2025 AI/hardware-cycle names (`RKLB`, `MU`, `STX`, `APP`); its
+median (+26%/yr) is the more honest number. **Serious open caveat**:
+the regime check that would test this against a different macro period
+(the way D-074 tested P/E) **could not run at all** — every one of the
+464 entries is from 2023-2025; the 12-quarter lookback structurally
+cannot reach earlier data yet. Not yet a usable rule — see quintile
+table in `docs/DECISIONS_LOG.md` D-080 (also published as an
+interactive artifact, company- and quintile-level, during that
+session). This is a single raw factor, not a composite — the quarterly
+composite itself (D-067) remains dead, see below.
 
 **Tested and not supported at quarterly cadence** — do not re-propose
 without new evidence: the quarterly composite (D-067) is **conclusively
@@ -142,17 +151,21 @@ see above): Scoring Model V1 composite (D-061/D-062), the value/growth
 two-bucket model (D-066), none of Scoring Inputs V1's 9 factors at 5
 years (D-074). See also `docs/FAILED_APPROACHES.md`.
 
-**Open next step** — validate the new quarterly growth-rate finding
-(D-079) further before building on it: (a) a regime split (pre-/post-
-2022) the way D-074 split the P/E finding; (b) a quintile/practical-rule
-breakdown the way D-068 did for P/E, to see if the effect is symmetric
-or (like P/E) concentrated in one tail; (c) test longer horizons as more
-company-quarters accumulate 24+ months of forward history. The
-quarterly composite line of work (D-067/D-073/D-078) has no further
-lever to pull and should not be revisited without new reasoning. The
-two unvalidated ANNUAL-cadence candidates from D-074 (`dividend_yield`,
-`size_log_revenue`) remain out of scope per the Method rule above unless
-the user asks for annual work specifically.
+**Open next step** — the quintile breakdown (D-080) is done; the regime
+split is NOT (data-limited, not yet possible — see caveat above). Two
+paths forward on the growth-rate finding, not yet decided: (a) wait for
+the universe to accumulate more quarterly history so a genuine pre-/
+post-2022 regime split becomes possible (timeline unknown, depends on
+how far back 10-Q coverage can be extended); (b) treat the >~20%/yr
+threshold as a working hypothesis now, with the regime caveat stated
+plainly each time it's used, rather than waiting. Longer horizons
+(30+ months) remain untestable until more company-quarters accumulate
+that much forward history. The quarterly composite line of work
+(D-067/D-073/D-078) has no further lever to pull and should not be
+revisited without new reasoning. The two unvalidated ANNUAL-cadence
+candidates from D-074 (`dividend_yield`, `size_log_revenue`) remain out
+of scope per the Method rule above unless the user asks for annual work
+specifically.
 
 **Traps**
 - Yahoo `close` is retroactively split-adjusted; as-reported EPS is not. Pair
