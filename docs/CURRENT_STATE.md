@@ -1,6 +1,36 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-13 (**D-089: the user's own new idea — use
+**Last updated:** 2026-08-13 (**D-090: closes the loop on D-089 — the
+real, bootstrap-confirmed "trough tends to have elevated volume" pattern
+does NOT translate into a usable real-time entry improvement. A genuine
+no-look-ahead test (wait for volume to cross 1.5x/2.0x trailing-20-day
+average, then buy) got a BETTER entry price than the plain pullback
+trigger only 28% of the time at either threshold — average price change
+was actually worse (-1.1% / -3.5%), the average remaining gap to the
+true trough stayed a substantial 16-19%, and subsequent 12-month excess
+return was not improved either. Tested and not supported as a practical
+refinement — the retrospective correlation from D-089 stands, but a
+volume spike does not reliably tell you in the moment that the bottom
+has arrived.**)
+
+**What happened.** Direct continuation of D-089's own flagged next step:
+built a genuine forward-looking rule with no hindsight — within each of
+the same 86 decline windows, watch daily volume from entry onward
+(trailing-20-day average always computed from data strictly before that
+day), and treat the first day volume crosses a fixed threshold as a
+real-time "likely near the bottom" trigger (`scripts/230`). Result was a
+clean negative: only 28% of episodes got a genuinely better entry price
+by waiting, at both the 1.5x and 2.0x thresholds tested; the average
+price change was negative (worse) at both; the average remaining gap
+between the trigger price and the eventual true low stayed 16-19%; and
+mean 12-month excess return vs QQQ was not improved (directionally
+slightly worse) for volume-triggered entries versus just buying on the
+original pullback trigger. Reading this together with D-089: volume
+spikes happen almost as often on the way down as exactly at the low, so
+by the time one is confirmed, the best of the decline has often already
+passed. Full detail: `docs/DECISIONS_LOG.md` D-090.
+
+**Previous update, same day:** D-089: the user's own new idea — use
 trading volume to estimate the exact bottom within a decline, not just
 "down >=15%" — gets a real, statistically-supported result. Across 86
 full-universe episodes, the price trough's own volume averaged 1.18x its
@@ -9,9 +39,8 @@ own decline window; a ticker-grouped AND a trough-month-grouped
 bootstrap (the second specifically controlling for shared macro events
 like April 2025's tariff crash, which alone produced 16 of the 86
 troughs) both confirm the effect (95% CI excludes the no-effect value of
-0.5 either way). Important limit: this is a RETROSPECTIVE pattern — it
-does not yet show volume can trigger a real-time "this is likely the
-bottom" call without hindsight; that test has not been run.**)
+0.5 either way). **(Superseded by D-090 above for practical use — the
+pattern is real but does not translate into a better entry.)**
 
 **What happened.** Direct follow-up to a new user idea: once a candidate
 passes the growth+pullback screen, can trading volume help estimate the

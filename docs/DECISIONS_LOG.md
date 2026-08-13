@@ -3120,3 +3120,23 @@ Files: `scripts/228_volume_climax_at_trough_proof.py`,
 `data/volume_climax_at_trough_proof_result.json`,
 `scripts/229_volume_climax_at_trough_full_universe.py` (both read-only),
 `data/volume_climax_at_trough_full_universe_result.json`.
+
+## D-090 — The volume-at-trough pattern (D-089) does NOT translate into a usable real-time entry improvement: waiting for a volume spike gets a WORSE average entry price, not a better one, and does not improve subsequent excess return
+
+**Trigger**: direct continuation of D-089's own flagged next step — a real, bootstrap-confirmed retrospective pattern (troughs tend to fall on high-volume days) is not automatically a usable trading rule; it needs a genuine forward-looking test with no hindsight.
+
+**Method (`scripts/230`)**: a real, no-look-ahead rule — within each of the same 86 Group A decline windows, watch daily volume from the entry date onward (trailing-20-day average always computed from data strictly before the day in question, same as D-089). The FIRST day the volume ratio crosses a fixed, round threshold — 2.0x, with 1.5x reported alongside for transparency — is the "volume trigger" day, a genuine real-time signal (nothing about it requires knowing the future). Compared against simply buying on the original pullback-trigger day (the existing baseline) and against the TRUE trough price (only knowable in hindsight, an upper bound on how good any rule could possibly do).
+
+**Result — clean negative**:
+
+| Threshold | Triggered within 60 days | Avg price change vs plain entry | Got a BETTER price | Avg remaining gap to true trough | 12mo excess return: plain entry vs volume-trigger entry |
+|---|---|---:|---|---:|---|
+| 1.5x | 78/86 (91%) | **-1.1%** (worse) | 22/78 (28%) | +16.2% | +55.2% vs +52.7% |
+| 2.0x | 68/86 (79%) | **-3.5%** (worse) | 19/68 (28%) | +19.4% | +57.5% vs +50.6% |
+
+At both thresholds, only 28% of episodes got a genuinely better (lower) entry price by waiting for the volume trigger — most of the time the trigger fires AFTER the price has already moved against the waiter, so the average price change is negative (worse), not positive. Even when triggered, the average remaining gap to the true trough is a substantial 16-19% — the rule does not reliably get you close to the actual bottom. Subsequent 12-month excess return vs QQQ is not improved either; if anything it is mildly worse for the volume-trigger entries at both thresholds (differences not formally significance-tested, but directionally consistent and not favorable at either threshold).
+
+**Reading this together with D-089**: the retrospective correlation (elevated volume AT the trough) is real and stands — but a volume spike, when it happens, does not reliably tell you IN THE MOMENT that the bottom has arrived, because volume spikes happen on the way down almost as often as they happen exactly at the low, and by the time a spike is confirmed, the best of the decline has often already passed. **Tested and not supported** as a practical entry-timing refinement — do not re-propose a volume-trigger entry rule without new evidence or a materially different design (e.g., a volume DECELERATION signal instead of a spike, or combining volume with a price-stabilization confirmation, neither tried here).
+
+Files: `scripts/230_volume_trigger_realtime_entry_test.py` (read-only),
+`data/volume_trigger_realtime_entry_test_result.json`.
