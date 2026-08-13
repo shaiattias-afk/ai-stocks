@@ -235,21 +235,29 @@ year horizon the user actually wants** — everything proven so far
 structural problem as the P/E finding's 5-year regime lock (D-074): not
 fixable by more analysis, only by more elapsed time.
 
-**New idea, real effect but not yet a usable rule (D-089)** — user's own
-idea: use trading volume to find the exact bottom within a decline, not
-just the 15% pullback trigger. Across 86 full-universe Group A episodes,
-the actual price trough's own volume averaged 1.18x its trailing-20-day
-average and ranked in the top third by volume within its own decline
-window; both a ticker-grouped bootstrap (CI [0.276, 0.388], n=22) and a
-trough-MONTH-grouped bootstrap (CI [0.277, 0.390], n=30 — controlling
-directly for shared macro events, since the April 2025 tariff crash
-alone produced 16 of the 86 troughs) exclude the no-effect value (0.5),
-so the pattern is not just an artifact of a few shared crashes. **But
-this is retrospective** — it says the trough, once you already know
-where it was, tended to have unusually high volume. It does NOT yet show
-volume can trigger a real-time "likely near the bottom" call without
-hindsight; that forward-looking test has not been run and is the natural
-next step if this is pursued.
+**Tested and not supported for practical use, but the underlying
+pattern is real (D-089 → D-090)** — user's own idea: use trading volume
+to find the exact bottom within a decline, not just the 15% pullback
+trigger. Across 86 full-universe Group A episodes, the actual price
+trough's own volume averaged 1.18x its trailing-20-day average and
+ranked in the top third by volume within its own decline window; both a
+ticker-grouped bootstrap (CI [0.276, 0.388], n=22) and a trough-MONTH-
+grouped bootstrap (CI [0.277, 0.390], n=30 — controlling directly for
+shared macro events, since the April 2025 tariff crash alone produced 16
+of the 86 troughs) exclude the no-effect value (0.5), so the retrospective
+pattern is real, not just an artifact of a few shared crashes (D-089).
+**But it does not translate into a usable entry improvement (D-090)**: a
+genuine no-look-ahead test — buy on the first day volume crosses a fixed
+1.5x or 2.0x trailing-20-day threshold, instead of on the plain pullback
+trigger — got a BETTER entry price only 28% of the time at either
+threshold; the average price change was actually worse (-1.1% / -3.5%);
+the average remaining gap to the true trough stayed 16-19%; and
+subsequent 12-month excess return vs QQQ was not improved either. Volume
+spikes happen almost as often on the way down as exactly at the low, so
+by the time one is confirmed, the best of the decline has often already
+passed. Do not re-propose a volume-spike entry trigger without new
+evidence or a materially different design (e.g. volume DECELERATION
+instead of a spike, untested).
 
 **Tested and not supported at quarterly cadence** — do not re-propose
 without new evidence: the quarterly composite (D-067) is **conclusively
