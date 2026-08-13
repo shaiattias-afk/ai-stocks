@@ -1,6 +1,42 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-13 (**D-093: new parallel track opened —
+**Last updated:** 2026-08-13 (**D-094: four-part validation pass toward
+"freeze the model" — the user asked what's needed to be able to call
+this a working model. Two results reassuring: the growth>20% threshold
+is NOT fragile (15/20/25/30% all give ~+133-146% mean excess return,
+none cross zero); a real stop-loss on the swing rule gives a much more
+sober but still net-positive picture (54-65% hit +30%, 35-45% stopped
+out at -15/-20%, mean +9.8% to +14.4% per trade). Two results
+cautionary: the growth filter's added value over pullback-alone is only
+statistically proven at 6 months, not 12 or 24 (large point estimates,
+too little data); and — the most important result of this pass — a
+genuine regime check using 2020-2022 price data on the same 10
+semiconductor/AI tickers found the pullback rule did NOT beat QQQ in
+that period (mean -7.9%, beat-rate 42%, vs +96.7%/71% in 2023-2025).
+This is the first real different-regime test this project has run, and
+it confirms the regime concern directly rather than leaving it
+hypothetical.**)
+
+**What happened.** Direct continuation of the plan agreed with the user:
+before freezing the exact growth+pullback rule and starting a genuine
+walk-forward test, close the cheapest available validation gaps.
+`scripts/234` added a real stop-loss (-15%/-20%) and 12-month max hold
+to D-093's swing test, replacing its "eventually hits +30%" framing with
+a full three-way outcome (target/stop/timeout). `scripts/235` tested
+whether the growth>20% threshold is fragile by re-running the excess-
+return bootstrap at 15/25/30% as well — it is not; all four thresholds
+agree closely. `scripts/236` ran the formal significance test that had
+been flagged as open since D-081 — does Group A (growth+pullback)
+significantly beat Group B (pullback alone) within the semiconductor/AI
+universe — finding yes at 6 months, not yet provable at 12/24 (thin
+sample, 9-5 ticker groups). `scripts/237` used the fact that daily price
+data (unlike quarterly growth data) reaches back to 2020 to test the
+pullback-only component of the rule in 2020-2022, a genuinely different
+regime, on the same 10 tickers — and found it did not work then (mean
+excess return -7.9%, CI crosses zero, 42% beat rate), a sharp contrast
+to 2023-2025's +96.7%/71%. Full detail: `docs/DECISIONS_LOG.md` D-094.
+
+**Previous update, same day:** D-093: new parallel track opened —
 swing trading targeting ~30% moves on the stock itself (explicitly not
 options; no options data exists in this project). Using the same
 already-validated growth+pullback entry trigger but exiting at the first

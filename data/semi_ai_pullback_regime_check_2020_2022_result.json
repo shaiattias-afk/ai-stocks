@@ -1,0 +1,20 @@
+{
+  "2020-2022 (COVID crash/recovery + 2022 rate-hike bear market)": {
+    "observed_mean": -0.0793060607212702,
+    "ci_95_low": -0.26474388011209665,
+    "ci_95_high": 0.0766177009399532,
+    "ci_95_crosses_zero": true,
+    "n_groups": 10,
+    "n": 33,
+    "beat_qqq_rate": 0.42424242424242425
+  },
+  "2023-2025 (this session's usual window, for direct comparison)": {
+    "observed_mean": 0.9673764876896992,
+    "ci_95_low": 0.2790350874373184,
+    "ci_95_high": 1.6294782819167535,
+    "ci_95_crosses_zero": false,
+    "n_groups": 10,
+    "n": 49,
+    "beat_qqq_rate": 0.7142857142857143
+  }
+}
