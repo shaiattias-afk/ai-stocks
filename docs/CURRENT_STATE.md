@@ -1,6 +1,40 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-13 (**D-092: deliberately scoping to the
+**Last updated:** 2026-08-13 (**D-093: new parallel track opened —
+swing trading targeting ~30% moves on the stock itself (explicitly not
+options; no options data exists in this project). Using the same
+already-validated growth+pullback entry trigger but exiting at the first
++30% close instead of holding for years: 93% (full universe) to 98%
+(semiconductor/AI subset) of entries eventually hit +30%, median 2-3
+months. But real path risk — 30% of eventual winners first dip more than
+15% deeper below entry (worst case -60%), and the rare failures are
+severe (`ENPH` -81%, `LCID` -66%, three separate `DXCM` entries -27% to
+-39%). No stop-loss rule tested yet — this only checked the profit-
+target side, not a complete strategy.**)
+
+**What happened.** Direct user follow-up, opening a second track
+alongside the long-term (3-5 year) thesis: swing trading on the stock
+itself, targeting roughly 30% gains, confirmed to exclude options
+(removing the immediate blocker, since no options data exists in the
+warehouse). Kept the same entry trigger already validated for the long-
+term work (growth>20% + pullback>=15%) and tested exiting the first day
+the price closes 30% above entry instead of holding for a fixed horizon
+(`scripts/233`). Result is a genuinely promising first look with an
+important gap: eventual hit-rate is high (93-98%) and typically resolves
+in 2-3 months, but nearly a third of the eventual winners first sink
+more than 15% deeper below the entry price before turning around (worst
+single case -60%), and the rare episodes that never hit +30% within 24
+months lost substantially (median -38% in the full universe, one
+semiconductor/AI case at -81%). The "annualized return if this trade
+could be repeated back-to-back" framing was deliberately reported as a
+median, not mean — the mean explodes to millions of percent from a
+handful of very fast hits, a sign the number isn't meaningful as a real
+return projection either way. No stop-loss/failure-exit rule has been
+tested — only the profit-target side has been checked so far, so this
+is not yet a complete, risk-managed strategy. Full detail:
+`docs/DECISIONS_LOG.md` D-093.
+
+**Previous update, same day:** D-092: deliberately scoping to the
 semiconductor/AI universe (D-091's mirror image) — the growth+pullback
 signal is strong there (12mo: mean +145.6%, beat-QQQ 77%, n=31/9 groups)
 and the growth filter adds real value over just timing sector dips

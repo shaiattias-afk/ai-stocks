@@ -13,7 +13,12 @@ RETURN vs QQQ over the hold, not absolute price recovery — a stock that is
 flat while QQQ falls 15% is a win. Every quarterly-cadence finding validated
 so far (D-079 through D-088) is evidence at a 6-24 month forward horizon
 only; none of it has been tested at the actual 3-5 year horizon this
-project is meant to serve (D-088).
+project is meant to serve (D-088). **Second, parallel track opened
+2026-08-13 (D-093)**: swing trading targeting ~30% moves on the stock
+itself — explicitly NOT options (no options data exists in this project
+at all; would need a new, likely paid, data source and explicit approval
+before ever being considered). This runs alongside, not instead of, the
+long-term thesis above — both are active.
 
 ---
 
