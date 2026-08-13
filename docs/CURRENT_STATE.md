@@ -1,6 +1,40 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-13 (**D-077/D-078: quarterly engine extended to
+**Last updated:** 2026-08-13 (**D-079: a new, single-factor quarterly
+finding — raw YoY revenue growth rate predicts 6-12 month forward excess
+return, and is the most robust result this project has produced (0 of 86
+leave-one-out exclusions flip it). Found while retesting D-065's
+acceleration factor at full scale, which itself remains unsupported.**)
+
+**What happened.** Following D-078's closure of the quarterly composite,
+the user asked to retest D-065's quarterly growth-acceleration factor on
+the full universe (same question D-078 already answered for the
+composite: was 9 tickers the bottleneck?). `scripts/216` reused D-065's
+own code unchanged. **Acceleration itself: still not supported, and
+worse than the small-sample result** — corr +0.081, CI crosses zero,
+85 of 86 leave-one-out exclusions flip it (86 tickers now, vs. D-065's
+original 9). **But D-065's own secondary "reference check" — the raw
+YoY growth rate itself, not acceleration — turned out to be real**:
+corr +0.235, 95% CI [+0.059, +0.383], and uniquely among every finding
+this project has tested, **0 of 86** leave-one-out exclusions flip it.
+`scripts/217` then ran the same lookback×horizon robustness grid
+D-073/D-078 used on the composite: 4 of 6 cells clear significance, all
+6 positive-signed, the 2 non-significant cells both at the 24-month
+horizon where sample size is still smallest (a power issue, not
+instability).
+
+**Caveats stated plainly, not yet resolved**: not regime-split the way
+D-074 split the P/E finding (though the full-history vs. 12-quarter
+lookback comparison here shows the same pattern in both windows, a
+partial reassurance); not yet turned into a quintile/practical rule;
+horizons beyond 24 months not yet testable (data still accumulating).
+`CLAUDE.md`'s "Proven" section now includes this finding alongside the
+P/E result, with its own caveats stated separately — not overstated as
+settled, but not buried either.
+
+Full detail: `docs/DECISIONS_LOG.md` D-079.
+
+**Previous update, same day:** D-077/D-078: quarterly engine extended to
 balance-sheet metrics and loaded for the full ~99-ticker universe, then
 the composite re-tested with both of its known bottlenecks fixed — and
 still shows no robust signal. This closes out the quarterly composite line

@@ -104,6 +104,23 @@ a regime change, and not retestable at 5 years until ~2027-2028. Kept here
 as background context only — do not resume building on this annual/5-year
 finding without the user explicitly asking for annual-cadence work again.
 
+**Proven at quarterly cadence (D-079)** — raw YoY quarterly revenue
+growth rate (current quarter vs. the same quarter a year earlier)
+predicts 6-12 month forward excess return vs. QQQ: correlation
+**+0.235** at the 12-quarter-lookback/12-month-horizon baseline, 95% CI
+**[+0.059, +0.383]**, 86 independent tickers. **The most robust finding
+this project has produced by its own leave-one-out standard**: 0 of 86
+single-ticker exclusions flip the result (every other finding in this
+project, including the P/E result, has SOME fragile exclusions). Holds
+directionally across a full lookback×horizon grid (4 of 6 cells
+significant, all 6 positive-signed; the 2 non-significant cells are both
+at the 24-month horizon, where n is smallest — a power issue, not a
+sign flip). **Caveats, not yet resolved**: not regime-split the way
+D-074 split the P/E finding; not yet translated into a quintile/
+practical entry rule; horizon tested only up to 24 months so far. This
+is a single raw factor, not a composite — the quarterly composite itself
+(D-067) remains dead, see below.
+
 **Tested and not supported at quarterly cadence** — do not re-propose
 without new evidence: the quarterly composite (D-067) is **conclusively
 not supported, in both its 5-factor and full 8-factor forms** (D-078).
@@ -113,28 +130,29 @@ D-072; balance-sheet/ROIC factors added, D-076/D-077) and re-tested
 side by side: the 5-factor version is barely-significant and 58%
 leave-one-out-fragile at its original best cell; the 8-factor version
 is NOT significant there at all (100% leave-one-out-fragile). Adding
-the balance-sheet factors made the composite worse, not better. There
-is no known next lever to pull on this specific composite model — a
-different quarterly approach would need new reasoning, not more data.
-The quarterly growth-acceleration factor (D-065) was separately
-inconclusive on the original 9-ticker universe (CI crosses zero), never
-re-tested wider. **Also not supported, annual cadence** (background
-only, see above): Scoring Model V1 composite (D-061/D-062), the
-value/growth two-bucket model (D-066), none of Scoring Inputs V1's 9
-factors at 5 years (D-074). See also `docs/FAILED_APPROACHES.md`.
+the balance-sheet factors made the composite worse, not better. The
+quarterly growth-ACCELERATION factor (D-065) is also not supported, now
+confirmed at full scale too (D-079): CI crosses zero, 85 of 86
+leave-one-out exclusions flip it — worse than the small-sample result,
+not just unconfirmed. (Growth acceleration and the raw growth rate above
+are different factors — acceleration measures whether growth is
+speeding up/slowing down; the validated finding is the plain growth
+rate itself.) **Also not supported, annual cadence** (background only,
+see above): Scoring Model V1 composite (D-061/D-062), the value/growth
+two-bucket model (D-066), none of Scoring Inputs V1's 9 factors at 5
+years (D-074). See also `docs/FAILED_APPROACHES.md`.
 
-**Open next step** — none identified yet within the quarterly-cadence
-composite line of work; both of its known bottlenecks are now closed
-without success (D-078). Options for the next direction: (a) revisit
-D-065's quarterly growth-acceleration factor on the now-full universe
-(never re-tested past the original 9 tickers, unlike the composite);
-(b) investigate individual quarterly factors' correlations one at a
-time rather than a combined composite score, in case the combination
-itself (not any single factor) is what's failing; (c) the two
-unvalidated ANNUAL-cadence candidates from D-074 (`dividend_yield`,
+**Open next step** — validate the new quarterly growth-rate finding
+(D-079) further before building on it: (a) a regime split (pre-/post-
+2022) the way D-074 split the P/E finding; (b) a quintile/practical-rule
+breakdown the way D-068 did for P/E, to see if the effect is symmetric
+or (like P/E) concentrated in one tail; (c) test longer horizons as more
+company-quarters accumulate 24+ months of forward history. The
+quarterly composite line of work (D-067/D-073/D-078) has no further
+lever to pull and should not be revisited without new reasoning. The
+two unvalidated ANNUAL-cadence candidates from D-074 (`dividend_yield`,
 `size_log_revenue`) remain out of scope per the Method rule above unless
-the user asks for annual work specifically. None of these has been
-tried — recommend discussing with the user before picking one.
+the user asks for annual work specifically.
 
 **Traps**
 - Yahoo `close` is retroactively split-adjusted; as-reported EPS is not. Pair
