@@ -1,6 +1,56 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-13 (**D-080: the quintile breakdown of D-079's
+**Last updated:** 2026-08-13 (**D-081/D-082: a new entry-timing signal —
+growth>20% combined with a 15%+ pullback from the 52-week high predicts
+recovery to that high, clearly beating a pullback-only control (15-18
+point gap at every horizon, full 92-company universe). Operating margin
+does not explain low-growth "exceptions" that still beat QQQ — those
+look like idiosyncratic single-company stories (MSTR/Bitcoin, RKLB
+momentum, WBD corporate actions), not a real alternative factor.**)
+
+**What happened.** Following D-080, the user asked three follow-up
+questions in sequence: (1) does operating margin add anything within the
+growth>20% group, (2) can entry timing be evaluated at ANY trading day
+using a price pullback from the stock's own high, combined with the
+growth threshold, rather than only at filing dates, and (3) what explains
+the companies that beat QQQ despite growth <=20%.
+
+**Operating margin (`scripts/219`)**: within the growth>20% group, almost
+no difference between profitable and unprofitable companies (mean/median
+excess return and win rate all close) — doesn't add discriminating power.
+
+**Entry-timing / pullback-recovery (`scripts/220`-`221`)**: built as a
+5-company small proof first, per this project's own discipline. Two real
+bugs found and fixed there before trusting it: (1) episode "flicker" at
+the pullback threshold boundary inflated 47 real episodes into 96 near-
+duplicates — fixed with hysteresis (a new episode only starts after
+pullback meaningfully recovers, not just dips below/above the threshold
+by a fraction of a percent); (2) very recent entries were being counted
+as "did not recover" when the truth was "not enough time has passed yet
+to know" — fixed by marking those horizons censored and excluding them
+from the denominator rather than counting them as failures. Scaled to
+the full ~92-company universe with a proper control group: growth>20%
+AND pullback>=15% recovers 68.8%/85.1%/95.5% within 6/12/24 months
+(n=136, 32 tickers) vs. 50.6%/67.1%/80.6% for pullback alone with no
+growth filter (n=707, 91 tickers) — the growth condition adds a real,
+consistent 15-18 point edge at every horizon, not just "buy any dip."
+The user's own hypothesis (does accelerating vs. decelerating growth
+matter at the same growth level) is directionally supported at 12-24
+months but reversed at 6 months — mixed, not a clean confirmation.
+
+**Low-growth winners (`scripts/222`)**: of 368 low-growth (<=20%)
+company-quarters in D-079/D-080's own dataset, 127 still beat QQQ.
+Operating margin does not explain this — winners' average margin is
+actually NEGATIVE (-8.8%) vs. losers' positive (+2.5%), the opposite of
+what "quality" would predict. The largest individual winners (`MSTR`,
+`RKLB`, repeat-winner `WBD`) look driven by company-specific stories
+(Bitcoin exposure, momentum, corporate actions) rather than any
+generalizable factor — reinforcing, not weakening, the growth>20%
+threshold's value.
+
+Full detail: `docs/DECISIONS_LOG.md` D-081, D-082.
+
+**Previous update, same day:** D-080: the quintile breakdown of D-079's
 growth-rate finding shows it is NOT a smooth "more growth is better"
 effect — quintiles 1-4 (bottom 80%) all show negative median excess
 return, only quintile 5 (growth above ~20%/yr) is positive. The regime
