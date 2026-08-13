@@ -1,0 +1,196 @@
+{
+  "total_quarters": 1393,
+  "distinct_accessions_cached": 1369,
+  "n_processed": 1363,
+  "skipped_already_loaded": 0,
+  "status_counts": {
+    "PASS": 10513,
+    "PASS_MATURITY_BASIS": 142,
+    "PASS_NORMALIZED_TAX": 336,
+    "REVIEW_REQUIRED": 5264,
+    "PASS_DIRECT_AGGREGATE": 101
+  },
+  "errors": [
+    {
+      "ticker": "FOX",
+      "fiscal_year_end": "2024-06-30",
+      "fiscal_quarter": "Q2",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "FOX",
+      "fiscal_year_end": "2025-06-30",
+      "fiscal_quarter": "Q1",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "TEAM",
+      "fiscal_year_end": "2024-06-30",
+      "fiscal_quarter": "Q2",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "TEAM",
+      "fiscal_year_end": "2025-06-30",
+      "fiscal_quarter": "Q2",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "TEAM",
+      "fiscal_year_end": "2025-06-30",
+      "fiscal_quarter": "Q3",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "FOX",
+      "fiscal_year_end": "2025-06-30",
+      "fiscal_quarter": "Q2",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "FOX",
+      "fiscal_year_end": "2025-06-30",
+      "fiscal_quarter": "Q3",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "RKLB",
+      "fiscal_year_end": "2025-12-31",
+      "fiscal_quarter": "Q2",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "TEAM",
+      "fiscal_year_end": "2024-06-30",
+      "fiscal_quarter": "Q3",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "RKLB",
+      "fiscal_year_end": "2023-12-31",
+      "fiscal_quarter": "Q3",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "EXC",
+      "fiscal_year_end": "2025-12-31",
+      "fiscal_quarter": "Q1",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "RKLB",
+      "fiscal_year_end": "2025-12-31",
+      "fiscal_quarter": "Q3",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "RKLB",
+      "fiscal_year_end": "2023-12-31",
+      "fiscal_quarter": "Q2",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "RKLB",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q2",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "FOX",
+      "fiscal_year_end": "2024-06-30",
+      "fiscal_quarter": "Q1",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "FOX",
+      "fiscal_year_end": "2026-06-30",
+      "fiscal_quarter": "Q3",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "FOX",
+      "fiscal_year_end": "2026-06-30",
+      "fiscal_quarter": "Q1",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "RKLB",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q3",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "RKLB",
+      "fiscal_year_end": "2023-12-31",
+      "fiscal_quarter": "Q1",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "RKLB",
+      "fiscal_year_end": "2025-12-31",
+      "fiscal_quarter": "Q1",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "FOX",
+      "fiscal_year_end": "2026-06-30",
+      "fiscal_quarter": "Q2",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "RKLB",
+      "fiscal_year_end": "2022-12-31",
+      "fiscal_quarter": "Q1",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "RKLB",
+      "fiscal_year_end": "2022-12-31",
+      "fiscal_quarter": "Q2",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "RKLB",
+      "fiscal_year_end": "2022-12-31",
+      "fiscal_quarter": "Q3",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "TEAM",
+      "fiscal_year_end": "2024-06-30",
+      "fiscal_quarter": "Q1",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "FOX",
+      "fiscal_year_end": "2023-06-30",
+      "fiscal_quarter": "Q3",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "FOX",
+      "fiscal_year_end": "2024-06-30",
+      "fiscal_quarter": "Q3",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "RKLB",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q1",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "TEAM",
+      "fiscal_year_end": "2025-06-30",
+      "fiscal_quarter": "Q1",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    },
+    {
+      "ticker": "EXC",
+      "fiscal_year_end": "2024-12-31",
+      "fiscal_quarter": "Q1",
+      "error": "multiple ancestry-classified current-debt candidates \u2014 cannot choose unambiguously"
+    }
+  ],
+  "total_elapsed_seconds": 4103.434394200001
+}

@@ -366,3 +366,41 @@ user's call, not mine, to finalize:
 My recommendation: ratify both as-is (same reasoning D-P1/D-P2 used) —
 flagging here rather than treating as silently approved, per this
 project's rule that policy sign-off is yours.
+
+---
+
+## D-P7 — Ratify two new accounting policy choices in the quarterly balance-sheet engine (D-077)
+
+Building the quarterly ROIC chain (`docs/DECISIONS_LOG.md` D-077)
+required two genuinely new policy decisions — not mechanical ports of an
+existing annual formula, since the annual metric was never designed for
+sub-annual periods:
+
+1. **NOPAT is trailing-twelve-month (TTM)**, summing
+   `pretax_income`/`income_tax_expense`/`operating_income` across the
+   current quarter and the 3 before it, rather than using just the
+   current quarter's own figures. Reasoning: a single quarter's NOPAT
+   divided by an averaged invested-capital base would inject the same
+   seasonality this project already avoided for growth factors (D-065's
+   YoY rule) — a retailer's Q4 NOPAT is not comparable to its Q1 NOPAT
+   the way a full year is comparable to another full year.
+2. **`average_invested_capital` averages the current quarter against the
+   SAME quarter 4 periods earlier (YoY)**, not the immediately preceding
+   quarter. Reasoning: this is the direct analogue of the annual
+   metric's "average of fiscal-year start and fiscal-year end," which is
+   itself a 12-months-apart average, not a sequential one.
+
+Both are, in my judgement, the only defensible choices given the
+project's own already-stated seasonality-avoidance principle (not an
+arbitrary pick) — but they are still new policy, invented for this
+project rather than approved by the user beforehand, the same category
+as D-P1/D-P2 in this document. Result impact is now moot for the
+composite itself (D-078 found no signal either way), but these formulas
+remain in the codebase and in production data (`roic`,
+`average_invested_capital`, `nopat`, `effective_tax_rate` for 1,363
+company-quarters) for any future quarterly-cadence work to build on, so
+they still need your sign-off as accounting policy, not just as code
+that happened to run without error.
+
+**Your call**: ratify as-is, or specify a different TTM/averaging
+convention.

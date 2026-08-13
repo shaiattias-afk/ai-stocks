@@ -1,6 +1,55 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-12 (**D-076: correction — quarterly balance-sheet
+**Last updated:** 2026-08-13 (**D-077/D-078: quarterly engine extended to
+balance-sheet metrics and loaded for the full ~99-ticker universe, then
+the composite re-tested with both of its known bottlenecks fixed — and
+still shows no robust signal. This closes out the quarterly composite line
+of work; a different approach is needed, not more data.**)
+
+**What happened.** D-076 found the quarterly engine's 6-metric limit was
+an engine gap, not a data gap. D-077 built the fix: a new module
+(`extraction/quarterly_balance_sheet.py`) that reuses the annual engine's
+own `compute_company_year` directly on each quarter's own filing —
+proven byte-identical to frozen annual data at every Q4 (9/9 test cases,
+0 mismatches) — and loaded it for the whole universe: 1,363 of 1,393
+company-quarters processed (30 hit a pre-existing, already-documented
+engine defect, not a new one), 16,356 new rows, 67.8% clean-resolution
+rate. Two new policy choices (TTM NOPAT instead of single-quarter, YoY
+`average_invested_capital` instead of sequential) are flagged for the
+user's ratification in `docs/CLEANUP_DECISIONS_PENDING.md`, not silently
+assumed approved.
+
+**D-078 then re-ran D-073's exact robustness test** (lookback × horizon
+grid, leave-one-ticker-out), now on a ~99-ticker universe with the full
+8-factor set instead of 9 tickers and 5 factors. Both of D-067/D-073's
+stated bottlenecks — small universe, missing balance-sheet factors — are
+now fixed, and the result is unambiguous: the 5-factor composite is
+barely significant at its best cell and 58% leave-one-out-fragile even
+at 10x the ticker count (confirming D-073's finding was never just a
+small-sample artifact); the 8-factor version is NOT significant at that
+same cell (100% leave-one-out-fragile — nothing to even flip). Adding
+the balance-sheet factors made the composite worse, not better. Neither
+of this project's two working hypotheses for D-067's original failure
+("too few tickers," "missing factors") explains it — the composite
+approach itself doesn't show a signal. `CLAUDE.md`'s "Open next step" no
+longer points at this model; three untried alternative directions are
+listed there instead, none picked without discussing with the user first.
+
+Full detail: `docs/DECISIONS_LOG.md` D-077, D-078.
+
+An overnight engineering note, unrelated to the finding above but worth
+recording: the first attempt at the production load (`scripts/214`) was
+killed silently (machine sleep / session end) after ~50 minutes with
+zero rows written and zero visible progress, because it built one giant
+in-memory cache before writing anything, and stdout was fully buffered
+when piped. Redesigned to process one company-quarter at a time —
+compute, write, flush progress immediately — so an interruption loses at
+most one quarter in flight and a re-run resumes exactly where it left
+off. A second, real bug (a required `accession_number` database column
+was left `NULL`) was caught by this same redesign's first real run and
+fixed before any further production writes.
+
+**Previous update, same day:** D-076: correction — quarterly balance-sheet
 data IS present in the 10-Qs (confirmed by direct warehouse query on 4
 tickers); the 6-metric quarterly scope is a fixed list in the extraction
 engine, not a data-availability limit. A prior session's claim to the
