@@ -1,6 +1,29 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-13 (**D-090: closes the loop on D-089 — the
+**Last updated:** 2026-08-13 (**D-091 — the most important result of the
+session: the growth+pullback entry-timing signal's ENTIRE excess-return
+edge over QQQ is carried by semiconductor/AI names. Excluding the same
+10 tickers D-084 flagged (SIC-3674 semiconductor + RKLB/MU/STX/APP) from
+the 32-ticker Group A universe does not just erase significance — the
+mean excess return point estimate flips NEGATIVE at 12 months (+49.8% →
+-7.3%) and 24 months (+108.9% → -6.7%); only 6 months stays flat-
+positive (+23.4% → +0.6%). Neither of this project's two headline
+quarterly-cadence findings has been shown to work as a sector-neutral
+edge — both are substantially or, for the entry-timing signal, entirely
+explained by AI/semiconductor exposure during the 2023-2025 rally, on
+top of the already-open 3-5-year-horizon gap (D-088).**)
+
+**What happened.** Direct continuation of the user's request to keep
+looking for genuinely solid findings: D-084 tested whether the plain
+growth-rate correlation survives excluding semiconductor/AI names (it
+weakens but stays positive); D-088 separately corrected the entry-timing
+signal to excess return vs QQQ (real and significant at 6/12/24 months).
+The two had never been combined. Re-ran D-088's exact bootstrap on the
+same 136 Group A episodes with the 10 SIC-3674/named tickers excluded
+(`scripts/231`) — the answer is a clean, decisive negative: no excess-
+return edge survives. Full detail: `docs/DECISIONS_LOG.md` D-091.
+
+**Previous update, same day:** D-090: closes the loop on D-089 — the
 real, bootstrap-confirmed "trough tends to have elevated volume" pattern
 does NOT translate into a usable real-time entry improvement. A genuine
 no-look-ahead test (wait for volume to cross 1.5x/2.0x trailing-20-day
