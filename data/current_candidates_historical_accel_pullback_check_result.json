@@ -1,0 +1,1854 @@
+{
+  "tickers": [
+    "ALNY",
+    "AMD",
+    "APP",
+    "AXON",
+    "DASH",
+    "FOX",
+    "MCHP",
+    "META",
+    "MPWR",
+    "MU",
+    "RKLB",
+    "SNPS",
+    "STX",
+    "TEAM"
+  ],
+  "lookback_quarters": 12,
+  "cutoff_date": "2023-08-14",
+  "growth_threshold": 0.2,
+  "pullback_threshold": 0.15,
+  "n_episodes": 33,
+  "summary": {
+    "by_horizon": {
+      "6mo": {
+        "n_determinable": 29,
+        "n_recovered": 20,
+        "rate": 0.6896551724137931
+      },
+      "12mo": {
+        "n_determinable": 24,
+        "n_recovered": 23,
+        "rate": 0.9583333333333334
+      },
+      "24mo": {
+        "n_determinable": 24,
+        "n_recovered": 24,
+        "rate": 1.0
+      }
+    }
+  },
+  "per_ticker": {
+    "ALNY": [
+      {
+        "ticker": "ALNY",
+        "entry_date": "2025-02-18",
+        "pullback": 0.16819161485972067,
+        "growth_as_of_entry": 0.3489691120217957,
+        "trend_as_of_entry": 0.6815487557402347,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2025-05-30",
+            "days_to_recovery": 71,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2025-05-30",
+            "days_to_recovery": 71,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2025-05-30",
+            "days_to_recovery": 71,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "ALNY",
+        "entry_date": "2025-04-04",
+        "pullback": 0.21563794687108248,
+        "growth_as_of_entry": 0.3489691120217957,
+        "trend_as_of_entry": 0.6815487557402347,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2025-05-30",
+            "days_to_recovery": 38,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2025-05-30",
+            "days_to_recovery": 38,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2025-05-30",
+            "days_to_recovery": 38,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "ALNY",
+        "entry_date": "2025-12-09",
+        "pullback": 0.154737204463859,
+        "growth_as_of_entry": 1.4934690039707017,
+        "trend_as_of_entry": 1.3209020354563228,
+        "recovery": {
+          "6mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          },
+          "24mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          }
+        }
+      }
+    ],
+    "AMD": [
+      {
+        "ticker": "AMD",
+        "entry_date": "2025-02-05",
+        "pullback": 0.4701012416083159,
+        "growth_as_of_entry": 0.24156939040207526,
+        "trend_as_of_entry": 0.0658797352296614,
+        "recovery": {
+          "6mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2025-10-07",
+            "days_to_recovery": 168,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2025-10-07",
+            "days_to_recovery": 168,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "AMD",
+        "entry_date": "2025-11-19",
+        "pullback": 0.1542767963988032,
+        "growth_as_of_entry": 0.355917289925209,
+        "trend_as_of_entry": 0.038865019145431834,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2026-04-16",
+            "days_to_recovery": 100,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2026-04-16",
+            "days_to_recovery": 100,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2026-04-16",
+            "days_to_recovery": 100,
+            "censored": false
+          }
+        }
+      }
+    ],
+    "APP": [
+      {
+        "ticker": "APP",
+        "entry_date": "2025-02-27",
+        "pullback": 0.3717484030213078,
+        "growth_as_of_entry": 0.44008723738829136,
+        "trend_as_of_entry": 0.053651968208789036,
+        "recovery": {
+          "6mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2025-09-08",
+            "days_to_recovery": 132,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2025-09-08",
+            "days_to_recovery": 132,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2025-10-06",
+        "pullback": 0.18306563594202416,
+        "growth_as_of_entry": 0.44008723738829136,
+        "trend_as_of_entry": 0.053651968208789036,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2025-12-09",
+            "days_to_recovery": 45,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2025-12-09",
+            "days_to_recovery": 45,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2025-12-09",
+            "days_to_recovery": 45,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "APP",
+        "entry_date": "2026-01-02",
+        "pullback": 0.15714281910879682,
+        "growth_as_of_entry": 0.44008723738829136,
+        "trend_as_of_entry": 0.053651968208789036,
+        "recovery": {
+          "6mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          },
+          "24mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          }
+        }
+      }
+    ],
+    "AXON": [],
+    "DASH": [],
+    "FOX": [
+      {
+        "ticker": "FOX",
+        "entry_date": "2026-08-06",
+        "pullback": 0.18285128119441005,
+        "growth_as_of_entry": 0.2814116215393976,
+        "trend_as_of_entry": 0.3676619075151468,
+        "recovery": {
+          "6mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          },
+          "12mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          },
+          "24mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          }
+        }
+      }
+    ],
+    "MCHP": [
+      {
+        "ticker": "MCHP",
+        "entry_date": "2026-07-02",
+        "pullback": 0.17761367182780044,
+        "growth_as_of_entry": 0.35105615662029876,
+        "trend_as_of_entry": 0.19511073751698493,
+        "recovery": {
+          "6mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          },
+          "12mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          },
+          "24mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          }
+        }
+      }
+    ],
+    "META": [
+      {
+        "ticker": "META",
+        "entry_date": "2025-03-07",
+        "pullback": 0.15069164258205386,
+        "growth_as_of_entry": 0.20627757971628724,
+        "trend_as_of_entry": 0.01758783567598976,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2025-06-30",
+            "days_to_recovery": 78,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2025-06-30",
+            "days_to_recovery": 78,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2025-06-30",
+            "days_to_recovery": 78,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "META",
+        "entry_date": "2025-10-30",
+        "pullback": 0.15636712569224684,
+        "growth_as_of_entry": 0.2624602724876197,
+        "trend_as_of_entry": 0.04631530563240749,
+        "recovery": {
+          "6mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          },
+          "24mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          }
+        }
+      }
+    ],
+    "MPWR": [
+      {
+        "ticker": "MPWR",
+        "entry_date": "2024-11-06",
+        "pullback": 0.17090037555090712,
+        "growth_as_of_entry": 0.3058793304230447,
+        "trend_as_of_entry": 0.1555760170990208,
+        "recovery": {
+          "6mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2025-10-06",
+            "days_to_recovery": 227,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2025-10-06",
+            "days_to_recovery": 227,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "MPWR",
+        "entry_date": "2026-03-06",
+        "pullback": 0.16947926969657756,
+        "growth_as_of_entry": 0.20829546459910087,
+        "trend_as_of_entry": 0.01953008247083199,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2026-04-08",
+            "days_to_recovery": 22,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2026-04-08",
+            "days_to_recovery": 22,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2026-04-08",
+            "days_to_recovery": 22,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "MPWR",
+        "entry_date": "2026-06-23",
+        "pullback": 0.15748362471872338,
+        "growth_as_of_entry": 0.20829546459910087,
+        "trend_as_of_entry": 0.01953008247083199,
+        "recovery": {
+          "6mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          },
+          "12mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          },
+          "24mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          }
+        }
+      }
+    ],
+    "MU": [
+      {
+        "ticker": "MU",
+        "entry_date": "2024-08-14",
+        "pullback": 0.3456500119972169,
+        "growth_as_of_entry": 0.8152985074626866,
+        "trend_as_of_entry": 0.23826086868662388,
+        "recovery": {
+          "6mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2025-09-12",
+            "days_to_recovery": 270,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2025-11-20",
+        "pullback": 0.20501384646236756,
+        "growth_as_of_entry": 0.45999999999999996,
+        "trend_as_of_entry": 0.09441491704595495,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2025-12-10",
+            "days_to_recovery": 13,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2025-12-10",
+            "days_to_recovery": 13,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2025-12-10",
+            "days_to_recovery": 13,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-03-06",
+        "pullback": 0.15417999516235728,
+        "growth_as_of_entry": 0.45999999999999996,
+        "trend_as_of_entry": 0.09441491704595495,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2026-03-16",
+            "days_to_recovery": 6,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2026-03-16",
+            "days_to_recovery": 6,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2026-03-16",
+            "days_to_recovery": 6,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-03-25",
+        "pullback": 0.17248178102678202,
+        "growth_as_of_entry": 0.45999999999999996,
+        "trend_as_of_entry": 0.09441491704595495,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2026-04-14",
+            "days_to_recovery": 13,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2026-04-14",
+            "days_to_recovery": 13,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2026-04-14",
+            "days_to_recovery": 13,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-05-18",
+        "pullback": 0.1519231812073421,
+        "growth_as_of_entry": 0.45999999999999996,
+        "trend_as_of_entry": 0.09441491704595495,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2026-05-26",
+            "days_to_recovery": 5,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2026-05-26",
+            "days_to_recovery": 5,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2026-05-26",
+            "days_to_recovery": 5,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-06-05",
+        "pullback": 0.1996720428022362,
+        "growth_as_of_entry": 0.45999999999999996,
+        "trend_as_of_entry": 0.09441491704595495,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2026-06-15",
+            "days_to_recovery": 6,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2026-06-15",
+            "days_to_recovery": 6,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2026-06-15",
+            "days_to_recovery": 6,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "MU",
+        "entry_date": "2026-07-02",
+        "pullback": 0.19611724969833477,
+        "growth_as_of_entry": 0.45999999999999996,
+        "trend_as_of_entry": 0.09441491704595495,
+        "recovery": {
+          "6mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          },
+          "12mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          },
+          "24mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          }
+        }
+      }
+    ],
+    "RKLB": [
+      {
+        "ticker": "RKLB",
+        "entry_date": "2024-08-14",
+        "pullback": 0.20673818347539502,
+        "growth_as_of_entry": 0.7124828753324199,
+        "trend_as_of_entry": 0.022583977436436697,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2024-08-16",
+            "days_to_recovery": 2,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2024-08-16",
+            "days_to_recovery": 2,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2024-08-16",
+            "days_to_recovery": 2,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2024-08-28",
+        "pullback": 0.152990249774464,
+        "growth_as_of_entry": 0.7124828753324199,
+        "trend_as_of_entry": 0.022583977436436697,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2024-09-13",
+            "days_to_recovery": 11,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2024-09-13",
+            "days_to_recovery": 11,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2024-09-13",
+            "days_to_recovery": 11,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-02-27",
+        "pullback": 0.3718720267533893,
+        "growth_as_of_entry": 1.2067976863196148,
+        "trend_as_of_entry": 0.6577812662253213,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2025-06-23",
+            "days_to_recovery": 79,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2025-06-23",
+            "days_to_recovery": 79,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2025-06-23",
+            "days_to_recovery": 79,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-08-12",
+        "pullback": 0.15489393226332768,
+        "growth_as_of_entry": 0.3599683767682187,
+        "trend_as_of_entry": 0.0387118954763801,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2025-09-12",
+            "days_to_recovery": 22,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2025-09-12",
+            "days_to_recovery": 22,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2025-09-12",
+            "days_to_recovery": 22,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-09-03",
+        "pullback": 0.15294805806000483,
+        "growth_as_of_entry": 0.3599683767682187,
+        "trend_as_of_entry": 0.0387118954763801,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2025-09-12",
+            "days_to_recovery": 7,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2025-09-12",
+            "days_to_recovery": 7,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2025-09-12",
+            "days_to_recovery": 7,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2025-11-04",
+        "pullback": 0.18334051629427062,
+        "growth_as_of_entry": 0.3599683767682187,
+        "trend_as_of_entry": 0.0387118954763801,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2025-12-19",
+            "days_to_recovery": 32,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2025-12-19",
+            "days_to_recovery": 32,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2025-12-19",
+            "days_to_recovery": 32,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "RKLB",
+        "entry_date": "2026-01-26",
+        "pullback": 0.16427828861356872,
+        "growth_as_of_entry": 0.47965804137088774,
+        "trend_as_of_entry": 0.11968966460266905,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2026-05-08",
+            "days_to_recovery": 72,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2026-05-08",
+            "days_to_recovery": 72,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2026-05-08",
+            "days_to_recovery": 72,
+            "censored": false
+          }
+        }
+      }
+    ],
+    "SNPS": [
+      {
+        "ticker": "SNPS",
+        "entry_date": "2025-12-22",
+        "pullback": 0.2542961053071411,
+        "growth_as_of_entry": 0.37828807825983835,
+        "trend_as_of_entry": 0.23803696225058646,
+        "recovery": {
+          "6mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          },
+          "24mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          }
+        }
+      }
+    ],
+    "STX": [
+      {
+        "ticker": "STX",
+        "entry_date": "2024-12-16",
+        "pullback": 0.15145594505535442,
+        "growth_as_of_entry": 0.4910591471801926,
+        "trend_as_of_entry": 0.31315652545734607,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2025-05-23",
+            "days_to_recovery": 108,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2025-05-23",
+            "days_to_recovery": 108,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2025-05-23",
+            "days_to_recovery": 108,
+            "censored": false
+          }
+        }
+      },
+      {
+        "ticker": "STX",
+        "entry_date": "2025-02-03",
+        "pullback": 0.17009939751895664,
+        "growth_as_of_entry": 0.495176848874598,
+        "trend_as_of_entry": 0.004117701694405396,
+        "recovery": {
+          "6mo": {
+            "recovered": true,
+            "recovered_on": "2025-05-23",
+            "days_to_recovery": 77,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": true,
+            "recovered_on": "2025-05-23",
+            "days_to_recovery": 77,
+            "censored": false
+          },
+          "24mo": {
+            "recovered": true,
+            "recovered_on": "2025-05-23",
+            "days_to_recovery": 77,
+            "censored": false
+          }
+        }
+      }
+    ],
+    "TEAM": [
+      {
+        "ticker": "TEAM",
+        "entry_date": "2025-08-15",
+        "pullback": 0.4828760799607034,
+        "growth_as_of_entry": 0.22336181832642565,
+        "trend_as_of_entry": 0.08242829392871576,
+        "recovery": {
+          "6mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": false
+          },
+          "12mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          },
+          "24mo": {
+            "recovered": false,
+            "recovered_on": null,
+            "days_to_recovery": null,
+            "censored": true
+          }
+        }
+      }
+    ]
+  },
+  "all_episodes": [
+    {
+      "ticker": "ALNY",
+      "entry_date": "2025-02-18",
+      "pullback": 0.16819161485972067,
+      "growth_as_of_entry": 0.3489691120217957,
+      "trend_as_of_entry": 0.6815487557402347,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2025-05-30",
+          "days_to_recovery": 71,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2025-05-30",
+          "days_to_recovery": 71,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2025-05-30",
+          "days_to_recovery": 71,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "ALNY",
+      "entry_date": "2025-04-04",
+      "pullback": 0.21563794687108248,
+      "growth_as_of_entry": 0.3489691120217957,
+      "trend_as_of_entry": 0.6815487557402347,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2025-05-30",
+          "days_to_recovery": 38,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2025-05-30",
+          "days_to_recovery": 38,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2025-05-30",
+          "days_to_recovery": 38,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "ALNY",
+      "entry_date": "2025-12-09",
+      "pullback": 0.154737204463859,
+      "growth_as_of_entry": 1.4934690039707017,
+      "trend_as_of_entry": 1.3209020354563228,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      }
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2025-02-05",
+      "pullback": 0.4701012416083159,
+      "growth_as_of_entry": 0.24156939040207526,
+      "trend_as_of_entry": 0.0658797352296614,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2025-10-07",
+          "days_to_recovery": 168,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2025-10-07",
+          "days_to_recovery": 168,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "AMD",
+      "entry_date": "2025-11-19",
+      "pullback": 0.1542767963988032,
+      "growth_as_of_entry": 0.355917289925209,
+      "trend_as_of_entry": 0.038865019145431834,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2026-04-16",
+          "days_to_recovery": 100,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2026-04-16",
+          "days_to_recovery": 100,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2026-04-16",
+          "days_to_recovery": 100,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2025-02-27",
+      "pullback": 0.3717484030213078,
+      "growth_as_of_entry": 0.44008723738829136,
+      "trend_as_of_entry": 0.053651968208789036,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2025-09-08",
+          "days_to_recovery": 132,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2025-09-08",
+          "days_to_recovery": 132,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2025-10-06",
+      "pullback": 0.18306563594202416,
+      "growth_as_of_entry": 0.44008723738829136,
+      "trend_as_of_entry": 0.053651968208789036,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2025-12-09",
+          "days_to_recovery": 45,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2025-12-09",
+          "days_to_recovery": 45,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2025-12-09",
+          "days_to_recovery": 45,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "APP",
+      "entry_date": "2026-01-02",
+      "pullback": 0.15714281910879682,
+      "growth_as_of_entry": 0.44008723738829136,
+      "trend_as_of_entry": 0.053651968208789036,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      }
+    },
+    {
+      "ticker": "FOX",
+      "entry_date": "2026-08-06",
+      "pullback": 0.18285128119441005,
+      "growth_as_of_entry": 0.2814116215393976,
+      "trend_as_of_entry": 0.3676619075151468,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "12mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      }
+    },
+    {
+      "ticker": "MCHP",
+      "entry_date": "2026-07-02",
+      "pullback": 0.17761367182780044,
+      "growth_as_of_entry": 0.35105615662029876,
+      "trend_as_of_entry": 0.19511073751698493,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "12mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      }
+    },
+    {
+      "ticker": "META",
+      "entry_date": "2025-03-07",
+      "pullback": 0.15069164258205386,
+      "growth_as_of_entry": 0.20627757971628724,
+      "trend_as_of_entry": 0.01758783567598976,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2025-06-30",
+          "days_to_recovery": 78,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2025-06-30",
+          "days_to_recovery": 78,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2025-06-30",
+          "days_to_recovery": 78,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "META",
+      "entry_date": "2025-10-30",
+      "pullback": 0.15636712569224684,
+      "growth_as_of_entry": 0.2624602724876197,
+      "trend_as_of_entry": 0.04631530563240749,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      }
+    },
+    {
+      "ticker": "MPWR",
+      "entry_date": "2024-11-06",
+      "pullback": 0.17090037555090712,
+      "growth_as_of_entry": 0.3058793304230447,
+      "trend_as_of_entry": 0.1555760170990208,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2025-10-06",
+          "days_to_recovery": 227,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2025-10-06",
+          "days_to_recovery": 227,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "MPWR",
+      "entry_date": "2026-03-06",
+      "pullback": 0.16947926969657756,
+      "growth_as_of_entry": 0.20829546459910087,
+      "trend_as_of_entry": 0.01953008247083199,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2026-04-08",
+          "days_to_recovery": 22,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2026-04-08",
+          "days_to_recovery": 22,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2026-04-08",
+          "days_to_recovery": 22,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "MPWR",
+      "entry_date": "2026-06-23",
+      "pullback": 0.15748362471872338,
+      "growth_as_of_entry": 0.20829546459910087,
+      "trend_as_of_entry": 0.01953008247083199,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "12mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      }
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2024-08-14",
+      "pullback": 0.3456500119972169,
+      "growth_as_of_entry": 0.8152985074626866,
+      "trend_as_of_entry": 0.23826086868662388,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2025-09-12",
+          "days_to_recovery": 270,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2025-11-20",
+      "pullback": 0.20501384646236756,
+      "growth_as_of_entry": 0.45999999999999996,
+      "trend_as_of_entry": 0.09441491704595495,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2025-12-10",
+          "days_to_recovery": 13,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2025-12-10",
+          "days_to_recovery": 13,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2025-12-10",
+          "days_to_recovery": 13,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-03-06",
+      "pullback": 0.15417999516235728,
+      "growth_as_of_entry": 0.45999999999999996,
+      "trend_as_of_entry": 0.09441491704595495,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2026-03-16",
+          "days_to_recovery": 6,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2026-03-16",
+          "days_to_recovery": 6,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2026-03-16",
+          "days_to_recovery": 6,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-03-25",
+      "pullback": 0.17248178102678202,
+      "growth_as_of_entry": 0.45999999999999996,
+      "trend_as_of_entry": 0.09441491704595495,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2026-04-14",
+          "days_to_recovery": 13,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2026-04-14",
+          "days_to_recovery": 13,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2026-04-14",
+          "days_to_recovery": 13,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-05-18",
+      "pullback": 0.1519231812073421,
+      "growth_as_of_entry": 0.45999999999999996,
+      "trend_as_of_entry": 0.09441491704595495,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2026-05-26",
+          "days_to_recovery": 5,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2026-05-26",
+          "days_to_recovery": 5,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2026-05-26",
+          "days_to_recovery": 5,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-06-05",
+      "pullback": 0.1996720428022362,
+      "growth_as_of_entry": 0.45999999999999996,
+      "trend_as_of_entry": 0.09441491704595495,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2026-06-15",
+          "days_to_recovery": 6,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2026-06-15",
+          "days_to_recovery": 6,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2026-06-15",
+          "days_to_recovery": 6,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "MU",
+      "entry_date": "2026-07-02",
+      "pullback": 0.19611724969833477,
+      "growth_as_of_entry": 0.45999999999999996,
+      "trend_as_of_entry": 0.09441491704595495,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "12mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2024-08-14",
+      "pullback": 0.20673818347539502,
+      "growth_as_of_entry": 0.7124828753324199,
+      "trend_as_of_entry": 0.022583977436436697,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2024-08-16",
+          "days_to_recovery": 2,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2024-08-16",
+          "days_to_recovery": 2,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2024-08-16",
+          "days_to_recovery": 2,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2024-08-28",
+      "pullback": 0.152990249774464,
+      "growth_as_of_entry": 0.7124828753324199,
+      "trend_as_of_entry": 0.022583977436436697,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2024-09-13",
+          "days_to_recovery": 11,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2024-09-13",
+          "days_to_recovery": 11,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2024-09-13",
+          "days_to_recovery": 11,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-02-27",
+      "pullback": 0.3718720267533893,
+      "growth_as_of_entry": 1.2067976863196148,
+      "trend_as_of_entry": 0.6577812662253213,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2025-06-23",
+          "days_to_recovery": 79,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2025-06-23",
+          "days_to_recovery": 79,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2025-06-23",
+          "days_to_recovery": 79,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-08-12",
+      "pullback": 0.15489393226332768,
+      "growth_as_of_entry": 0.3599683767682187,
+      "trend_as_of_entry": 0.0387118954763801,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2025-09-12",
+          "days_to_recovery": 22,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2025-09-12",
+          "days_to_recovery": 22,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2025-09-12",
+          "days_to_recovery": 22,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-09-03",
+      "pullback": 0.15294805806000483,
+      "growth_as_of_entry": 0.3599683767682187,
+      "trend_as_of_entry": 0.0387118954763801,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2025-09-12",
+          "days_to_recovery": 7,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2025-09-12",
+          "days_to_recovery": 7,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2025-09-12",
+          "days_to_recovery": 7,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2025-11-04",
+      "pullback": 0.18334051629427062,
+      "growth_as_of_entry": 0.3599683767682187,
+      "trend_as_of_entry": 0.0387118954763801,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2025-12-19",
+          "days_to_recovery": 32,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2025-12-19",
+          "days_to_recovery": 32,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2025-12-19",
+          "days_to_recovery": 32,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "RKLB",
+      "entry_date": "2026-01-26",
+      "pullback": 0.16427828861356872,
+      "growth_as_of_entry": 0.47965804137088774,
+      "trend_as_of_entry": 0.11968966460266905,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2026-05-08",
+          "days_to_recovery": 72,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2026-05-08",
+          "days_to_recovery": 72,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2026-05-08",
+          "days_to_recovery": 72,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "SNPS",
+      "entry_date": "2025-12-22",
+      "pullback": 0.2542961053071411,
+      "growth_as_of_entry": 0.37828807825983835,
+      "trend_as_of_entry": 0.23803696225058646,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      }
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2024-12-16",
+      "pullback": 0.15145594505535442,
+      "growth_as_of_entry": 0.4910591471801926,
+      "trend_as_of_entry": 0.31315652545734607,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2025-05-23",
+          "days_to_recovery": 108,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2025-05-23",
+          "days_to_recovery": 108,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2025-05-23",
+          "days_to_recovery": 108,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "STX",
+      "entry_date": "2025-02-03",
+      "pullback": 0.17009939751895664,
+      "growth_as_of_entry": 0.495176848874598,
+      "trend_as_of_entry": 0.004117701694405396,
+      "recovery": {
+        "6mo": {
+          "recovered": true,
+          "recovered_on": "2025-05-23",
+          "days_to_recovery": 77,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": true,
+          "recovered_on": "2025-05-23",
+          "days_to_recovery": 77,
+          "censored": false
+        },
+        "24mo": {
+          "recovered": true,
+          "recovered_on": "2025-05-23",
+          "days_to_recovery": 77,
+          "censored": false
+        }
+      }
+    },
+    {
+      "ticker": "TEAM",
+      "entry_date": "2025-08-15",
+      "pullback": 0.4828760799607034,
+      "growth_as_of_entry": 0.22336181832642565,
+      "trend_as_of_entry": 0.08242829392871576,
+      "recovery": {
+        "6mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": false
+        },
+        "12mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        },
+        "24mo": {
+          "recovered": false,
+          "recovered_on": null,
+          "days_to_recovery": null,
+          "censored": true
+        }
+      }
+    }
+  ]
+}

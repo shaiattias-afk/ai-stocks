@@ -1,6 +1,172 @@
 # AI Stock Agent — Current State
 
-**Last updated:** 2026-08-13 (**D-081/D-082: a new entry-timing signal —
+**Last updated:** 2026-08-13 (**D-087: entry YEAR, not growth rate or
+even acceleration, is what most sharply separates 12-month recoveries
+from failures in the full Group A pullback pool — 90% recovery for
+entries from 2023 onward (94/104) vs. only 30% for 2021-2022 entries
+(3/10). Growth rate and pullback depth barely differ between recovered
+and failed episodes at the median; acceleration shows a real but modest
+gap (54% vs 29%). This is the strongest evidence yet that the
+growth+pullback rule's headline recovery rates describe "how this
+performed in a strong market," not a regime-independent property.**)
+
+**What happened.** Direct user follow-up — characterize what
+distinguishes episodes that recovered within 12 months from those that
+didn't, across the full 136-episode Group A pool (growth>20% AND
+pullback>=15%, every trend type), not just the 14 current candidates or
+the accelerating subset. No new script — split the 114 determinable
+(non-censored) episodes by their already-computed 12-month outcome: 97
+recovered, 17 did not. Growth and pullback depth turned out to barely
+separate the groups (recovered median growth +32.6% vs failed +29.5%;
+pullback 16.6% vs 15.9%). What separated them sharply was entry year:
+all but one of the 2021-2022 failures were not even accelerating — that
+period did poorly regardless of the acceleration refinement — while the
+10 post-2023 failures split between a few genuinely deep crashes (`ENPH`
+50%, `LCID` 66%, `FTNT` 28% pullback) and ordinary near-threshold misses.
+Full detail: `docs/DECISIONS_LOG.md` D-087.
+
+**Previous update, same day:** D-086: across the FULL ~92-company
+universe, accelerating-growth+pullback failures are rare — only 1 of 72
+episodes (`META`, entered 2021-10-12) failed to reclaim its high within
+24 months. Directly useful for the still-open regime caveat: only 3 of
+these 72 episodes predate 2023 at all (2 `NVDA`, both recovered, plus
+this one `META` failure) — the thinnest available evidence on how the
+rule performs outside the 2023-2025 AI-rally window, and the one data
+point available is a miss, not a clean pass.
+
+**What happened.** Direct user follow-up to D-085 — are there other
+companies, beyond the 14 current candidates, whose own history showed
+accelerating growth>20% with a pullback>=15% that did NOT recover? No
+new script needed — re-queried D-081's already-computed full-universe
+result (`data/pullback_recovery_full_universe_result.json`), which
+(unlike D-079/D-080/D-085) already used each ticker's full available
+history, not a 12-quarter cutoff. Filtered to the accelerating subset of
+Group A: 72 episodes, 53 recovered within 24 months, 18 still too recent
+to know, and exactly 1 real failure (`META`). Full detail:
+`docs/DECISIONS_LOG.md` D-086.
+
+**Previous update, same day:** D-085: the 14 companies currently
+showing an active growth+pullback entry signal recovered to a new high
+96% of the time at 12 months (23/24) and 100% at 24 months (24/24) in
+their own last-12-quarters history — a within-sample sanity check, not
+new/independent evidence, and it overlaps heavily with D-084's just-
+confirmed sector concentration (most of the 14 are the same
+semiconductor/AI names D-084 flagged).
+
+**What happened.** Direct follow-up to D-084: for each of the 14
+tickers currently showing an active entry signal (`scripts/224`), their
+own history over the project's binding 12-quarter lookback was checked
+for episodes combining an ACCELERATING growth trend (not just
+growth>20% — the stricter D-081 cut) with a pullback>=15%, and whether
+those episodes reached a new high (`scripts/226`). 12 of the 14 tickers
+had at least one such episode (AXON and DASH had none — consistent with
+their already-flagged FY2023 data gap). 33 episodes total; recovery
+rates were 69% at 6 months (20/29), 96% at 12 months (23/24), 100% at 24
+months (24/24) — higher at every horizon than D-081's own full-universe
+numbers. **Read with caution, not as new proof**: this reuses the same
+already-mined 2023-2026 window, the 14 tickers were selected because
+they currently pass the same screen being tested (selection circularity),
+and most of them (MU, AMD, MCHP, MPWR, STX, RKLB, APP) are exactly the
+concentrated names D-084 just showed carry most of the aggregate
+statistical signal — this result is consistent with D-084, not
+independent of it. Full detail: `docs/DECISIONS_LOG.md` D-085.
+
+**Previous update, same day:** D-084: the growth>20% signal's
+statistical significance is substantially explained by semiconductor/
+AI-name concentration, not a sector-neutral effect. D-083's top-priority
+follow-up (exclude semiconductor/AI names, see if the signal survives)
+came back leaning negative: excluding either SEC-classified
+semiconductor names (14 tickers) or the four names D-080 itself flagged
+(RKLB/MU/STX/APP) roughly cuts the correlation by a third and flips the
+95% CI from excluding zero to crossing it; excluding both together
+nearly erases the correlation (+0.234 → +0.044). Also ran a practical
+"which companies pass the screen right now" readout at the user's
+request — 19 companies currently pass growth>20%, 14 also show an active
+pullback>=15% entry signal today, but at least 10 of the 19 fall inside
+the exact sector concentration this result says weakens the signal.
+
+**What happened.** Following D-083's council review, the user first
+asked for a practical readout: which companies in the current universe
+pass the growth>20% screen using each ticker's latest available quarter,
+and whether today's price already meets the pullback>=15%-from-252-day-
+high entry condition (`scripts/224`). Result: 19 companies qualify on
+growth, 14 of those also show an active entry signal today. Two of the
+raw growth>20% matches (AXON, DASH) turned out to have quarterly
+extraction that stops at FY2023 — a real data-coverage gap, flagged and
+excluded from the "current" reading rather than presented as live data.
+
+The user then asked to proceed with D-083's own top-priority open item:
+does the growth>20% finding survive with AI/semiconductor names
+excluded — the sector-concentration confound the accountant/valuation
+advisor flagged in council and D-083 left untested. **Result leans
+negative.** Two exclusion cuts, both grounded (not arbitrary): (1) an
+official SIC-code cut, pulling each ticker's real SIC classification
+from SEC's own submissions record and excluding SIC 3674 "Semiconductors
+& Related Devices" (14 tickers: ADI, AMAT, AMD, AVGO, ENPH, INTC, MCHP,
+MPWR, MRVL, MU, NVDA, NXPI, ON, SWKS); (2) excluding the four names
+D-080's own quintile breakdown flagged (RKLB, MU, STX, APP). Both cuts
+independently flip the 95% CI from excluding zero to crossing it;
+combined, the correlation drops to +0.044 (CI [-0.140, +0.214]) — by
+this project's own established standard (the same CI-crosses-zero test
+that killed the quarterly composite in D-073/D-078), the signal is **not
+robust** to sector concentration. This does not fully kill the finding
+the way the composite was killed (point estimates stay positive in every
+cut; this is concentration evidence, not a sign flip), and does not
+resolve the still-separate, still-unresolved regime caveat (all data is
+2023-2025) or the post-hoc threshold-selection concern — both remain
+open. Full detail: `docs/DECISIONS_LOG.md` D-084.
+
+**Previous update, same day:** D-083: council review of the project's
+core unmet goal (a reliable entry-timing tool), followed by a placebo/
+permutation test that clears the growth-rate finding of being pure
+statistical noise (0 of 200 random shuffles matched its strength), and
+a research pass on analyst-estimate-revision data as a new, uncorrelated
+signal source — found impractical for now (no affordable point-in-time
+source exists).
+
+**What happened.** The user invoked the project's council process,
+stating the core frustration plainly: despite extensive search, no
+reliable entry-timing tool exists yet — only the growth-rate/pullback
+signal, itself unconfirmed against a different market regime. Five
+independent advisors (XBRL data architect, valuation analyst, systems
+engineer, backtesting/model-risk expert, product lead) each gave a
+full, non-overlapping answer; full detail in `docs/DECISIONS_LOG.md`
+D-083. Two points worth surfacing here: the accountant/valuation
+advisor flagged that the growth>20% signal may partly be re-expressing
+concentrated exposure to 2023-2025's AI/semiconductor rally rather than
+a sector-neutral fundamental edge (untested); the backtesting advisor
+noted that ~20-30 hypotheses have been tested across this project's
+history with no multiple-testing correction, which is exactly the
+condition under which one "significant-looking" survivor is expected by
+chance alone.
+
+**Chair's decision**: pursue two things in parallel rather than picking
+one — a placebo/permutation test (cheapest, most direct check on
+whether the discovery process is fooling itself), and an investigation
+into analyst-estimate-revision data as a genuinely independent data
+source (everything tested so far derives from the same SEC filings).
+
+**Placebo test result (`scripts/223`)**: reassuring. The real growth-
+rate correlation (+0.234) was compared against 200 random permutations
+of the same data (real tickers, real returns, growth values shuffled to
+destroy any true relationship) — 0 of 200 permutations produced a
+correlation as strong as the real one (strongest noise result: 0.129,
+barely half the real value). This means the correlation itself is very
+unlikely to be pure noise. It does NOT resolve the two other open
+concerns (the regime caveat, and the post-hoc threshold selection /
+sector-concentration risks named above) — those remain open.
+
+**Analyst-estimate-revision data**: investigated, not pursued. Every
+institutional-grade source (I/B/E/S, FactSet, Visible Alpha, full
+Zacks) is enterprise-only with no accessible retail pricing. Cheaper
+retail APIs either don't clearly offer this data or don't confirm true
+point-in-time historical snapshots (only current-state data), which
+would risk exactly the look-ahead-bias problem this project has
+otherwise been careful to avoid. Not pursued for now.
+
+Full detail: `docs/DECISIONS_LOG.md` D-083.
+
+**Previous update, same day:** D-081/D-082: a new entry-timing signal —
 growth>20% combined with a 15%+ pullback from the 52-week high predicts
 recovery to that high, clearly beating a pullback-only control (15-18
 point gap at every horizon, full 92-company universe). Operating margin

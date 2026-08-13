@@ -1,0 +1,295 @@
+{
+  "universe_size": 92,
+  "growth_threshold": 0.2,
+  "pullback_threshold": 0.15,
+  "trailing_high_window_days": 252,
+  "qualifying_companies": [
+    {
+      "ticker": "AVGO",
+      "company_name": "Broadcom Inc.",
+      "latest_quarter": "2025-11-02 Q4",
+      "growth_as_of": "2025-12-18",
+      "current_yoy_growth": 0.9381387842926305,
+      "accelerating": true,
+      "pullback_now": {
+        "price_date": "2026-08-10",
+        "latest_close": 425.8699951171875,
+        "trailing_252d_high": 481.57000732421875,
+        "pullback": 0.11566337471164606
+      },
+      "entry_signal_now": false
+    },
+    {
+      "ticker": "ALNY",
+      "company_name": "ALNYLAM PHARMACEUTICALS, INC.",
+      "latest_quarter": "2025-12-31 Q4",
+      "growth_as_of": "2026-02-12",
+      "current_yoy_growth": 0.8494536099506715,
+      "accelerating": false,
+      "pullback_now": {
+        "price_date": "2026-08-07",
+        "latest_close": 219.1999969482422,
+        "trailing_252d_high": 491.2200012207031,
+        "pullback": 0.553764104874556
+      },
+      "entry_signal_now": true
+    },
+    {
+      "ticker": "NVDA",
+      "company_name": "NVIDIA CORP",
+      "latest_quarter": "2025-01-26 Q4",
+      "growth_as_of": "2025-02-26",
+      "current_yoy_growth": 0.7794417047459621,
+      "accelerating": false,
+      "pullback_now": {
+        "price_date": "2026-08-07",
+        "latest_close": 223.9600067138672,
+        "trailing_252d_high": 235.74000549316406,
+        "pullback": 0.04997029992704598
+      },
+      "entry_signal_now": false
+    },
+    {
+      "ticker": "MU",
+      "company_name": "MICRON TECHNOLOGY INC",
+      "latest_quarter": "2025-08-28 Q4",
+      "growth_as_of": "2025-10-03",
+      "current_yoy_growth": 0.45999999999999996,
+      "accelerating": true,
+      "pullback_now": {
+        "price_date": "2026-08-07",
+        "latest_close": 877.5700073242188,
+        "trailing_252d_high": 1213.56005859375,
+        "pullback": 0.27686314236385634
+      },
+      "entry_signal_now": true
+    },
+    {
+      "ticker": "APP",
+      "company_name": "AppLovin Corp",
+      "latest_quarter": "2024-12-31 Q4",
+      "growth_as_of": "2025-02-27",
+      "current_yoy_growth": 0.44008723738829136,
+      "accelerating": true,
+      "pullback_now": {
+        "price_date": "2026-08-07",
+        "latest_close": 346.79998779296875,
+        "trailing_252d_high": 733.5999755859375,
+        "pullback": 0.5272628144296566
+      },
+      "entry_signal_now": true
+    },
+    {
+      "ticker": "SNPS",
+      "company_name": "SYNOPSYS INC",
+      "latest_quarter": "2025-10-31 Q4",
+      "growth_as_of": "2025-12-22",
+      "current_yoy_growth": 0.37828807825983835,
+      "accelerating": true,
+      "pullback_now": {
+        "price_date": "2026-08-10",
+        "latest_close": 417.5350036621094,
+        "trailing_252d_high": 625.7999877929688,
+        "pullback": 0.33279799966975865
+      },
+      "entry_signal_now": true
+    },
+    {
+      "ticker": "RKLB",
+      "company_name": "Rocket Lab Corp",
+      "latest_quarter": "2025-12-31 Q4",
+      "growth_as_of": "2026-02-26",
+      "current_yoy_growth": 0.35701120947517895,
+      "accelerating": false,
+      "pullback_now": {
+        "price_date": "2026-08-10",
+        "latest_close": 82.29000091552734,
+        "trailing_252d_high": 150.22999572753906,
+        "pullback": 0.4522398771496301
+      },
+      "entry_signal_now": true
+    },
+    {
+      "ticker": "MCHP",
+      "company_name": "MICROCHIP TECHNOLOGY INC",
+      "latest_quarter": "2026-03-31 Q4",
+      "growth_as_of": "2026-05-21",
+      "current_yoy_growth": 0.35105615662029876,
+      "accelerating": true,
+      "pullback_now": {
+        "price_date": "2026-08-10",
+        "latest_close": 82.1500015258789,
+        "trailing_252d_high": 102.91999816894531,
+        "pullback": 0.20180719988910245
+      },
+      "entry_signal_now": true
+    },
+    {
+      "ticker": "AMD",
+      "company_name": "ADVANCED MICRO DEVICES INC",
+      "latest_quarter": "2025-12-27 Q4",
+      "growth_as_of": "2026-02-04",
+      "current_yoy_growth": 0.3410812222512405,
+      "accelerating": false,
+      "pullback_now": {
+        "price_date": "2026-08-07",
+        "latest_close": 483.3599853515625,
+        "trailing_252d_high": 580.9099731445312,
+        "pullback": 0.16792617152864436
+      },
+      "entry_signal_now": true
+    },
+    {
+      "ticker": "STX",
+      "company_name": "Seagate Technology Holdings plc",
+      "latest_quarter": "2025-06-27 Q4",
+      "growth_as_of": "2025-08-01",
+      "current_yoy_growth": 0.2951775304716482,
+      "accelerating": false,
+      "pullback_now": {
+        "price_date": "2026-08-10",
+        "latest_close": 809.8049926757812,
+        "trailing_252d_high": 1094.0400390625,
+        "pullback": 0.25980314818302647
+      },
+      "entry_signal_now": true
+    },
+    {
+      "ticker": "DDOG",
+      "company_name": "Datadog, Inc.",
+      "latest_quarter": "2025-12-31 Q4",
+      "growth_as_of": "2026-02-18",
+      "current_yoy_growth": 0.2920687462977498,
+      "accelerating": true,
+      "pullback_now": {
+        "price_date": "2026-08-10",
+        "latest_close": 248.86000061035156,
+        "trailing_252d_high": 288.1499938964844,
+        "pullback": 0.1363525737232791
+      },
+      "entry_signal_now": false
+    },
+    {
+      "ticker": "AXON",
+      "company_name": "AXON ENTERPRISE, INC.",
+      "latest_quarter": "2023-12-31 Q4",
+      "growth_as_of": "2024-02-27",
+      "current_yoy_growth": 0.2855935884239398,
+      "accelerating": false,
+      "pullback_now": {
+        "price_date": "2026-08-10",
+        "latest_close": 591.7150268554688,
+        "trailing_252d_high": 870.969970703125,
+        "pullback": 0.32062522617423495
+      },
+      "entry_signal_now": true
+    },
+    {
+      "ticker": "FOX",
+      "company_name": "Fox Corp",
+      "latest_quarter": "2026-06-30 Q4",
+      "growth_as_of": "2026-08-06",
+      "current_yoy_growth": 0.2814116215393976,
+      "accelerating": true,
+      "pullback_now": {
+        "price_date": "2026-08-10",
+        "latest_close": 56.279998779296875,
+        "trailing_252d_high": 67.76000213623047,
+        "pullback": 0.16942153180357372
+      },
+      "entry_signal_now": true
+    },
+    {
+      "ticker": "MDB",
+      "company_name": "MongoDB, Inc.",
+      "latest_quarter": "2026-01-31 Q4",
+      "growth_as_of": "2026-03-11",
+      "current_yoy_growth": 0.2674590352262407,
+      "accelerating": true,
+      "pullback_now": {
+        "price_date": "2026-08-10",
+        "latest_close": 413.8699951171875,
+        "trailing_252d_high": 440.6000061035156,
+        "pullback": 0.060667295996469216
+      },
+      "entry_signal_now": false
+    },
+    {
+      "ticker": "DASH",
+      "company_name": "DoorDash, Inc.",
+      "latest_quarter": "2023-12-31 Q4",
+      "growth_as_of": "2024-02-20",
+      "current_yoy_growth": 0.2667766776677667,
+      "accelerating": false,
+      "pullback_now": {
+        "price_date": "2026-08-10",
+        "latest_close": 212.16000366210938,
+        "trailing_252d_high": 281.739990234375,
+        "pullback": 0.2469652480444226
+      },
+      "entry_signal_now": true
+    },
+    {
+      "ticker": "META",
+      "company_name": "Meta Platforms, Inc.",
+      "latest_quarter": "2025-12-31 Q4",
+      "growth_as_of": "2026-01-29",
+      "current_yoy_growth": 0.23784230649994842,
+      "accelerating": false,
+      "pullback_now": {
+        "price_date": "2026-08-07",
+        "latest_close": 592.0999755859375,
+        "trailing_252d_high": 790.0,
+        "pullback": 0.25050636001780063
+      },
+      "entry_signal_now": true
+    },
+    {
+      "ticker": "CRWD",
+      "company_name": "CrowdStrike Holdings, Inc.",
+      "latest_quarter": "2026-01-31 Q4",
+      "growth_as_of": "2026-03-05",
+      "current_yoy_growth": 0.23318671601775276,
+      "accelerating": true,
+      "pullback_now": {
+        "price_date": "2026-08-07",
+        "latest_close": 214.4199981689453,
+        "trailing_252d_high": 211.22000122070312,
+        "pullback": -0.015150065949003194
+      },
+      "entry_signal_now": false
+    },
+    {
+      "ticker": "TEAM",
+      "company_name": "Atlassian Corp",
+      "latest_quarter": "2025-06-30 Q4",
+      "growth_as_of": "2025-08-15",
+      "current_yoy_growth": 0.22336181832642565,
+      "accelerating": true,
+      "pullback_now": {
+        "price_date": "2026-08-10",
+        "latest_close": 147.82000732421875,
+        "trailing_252d_high": 182.36000061035156,
+        "pullback": 0.18940553394674736
+      },
+      "entry_signal_now": true
+    },
+    {
+      "ticker": "MPWR",
+      "company_name": "MONOLITHIC POWER SYSTEMS, INC.",
+      "latest_quarter": "2025-12-31 Q4",
+      "growth_as_of": "2026-02-27",
+      "current_yoy_growth": 0.20829546459910087,
+      "accelerating": true,
+      "pullback_now": {
+        "price_date": "2026-08-10",
+        "latest_close": 1388.905029296875,
+        "trailing_252d_high": 1689.8900146484375,
+        "pullback": 0.17810921583211972
+      },
+      "entry_signal_now": true
+    }
+  ],
+  "n_qualifying": 19,
+  "n_entry_signal_now": 14
+}

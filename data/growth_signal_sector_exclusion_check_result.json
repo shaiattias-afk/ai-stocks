@@ -1,0 +1,427 @@
+{
+  "sic_by_ticker": {
+    "AAPL": {
+      "sic": "3571",
+      "sic_description": "Electronic Computers"
+    },
+    "ABNB": {
+      "sic": "7340",
+      "sic_description": "Services-To Dwellings & Other Buildings"
+    },
+    "ADBE": {
+      "sic": "7372",
+      "sic_description": "Services-Prepackaged Software"
+    },
+    "ADI": {
+      "sic": "3674",
+      "sic_description": "Semiconductors & Related Devices"
+    },
+    "ADSK": {
+      "sic": "7372",
+      "sic_description": "Services-Prepackaged Software"
+    },
+    "ALGN": {
+      "sic": "3842",
+      "sic_description": "Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+    },
+    "ALNY": {
+      "sic": "2834",
+      "sic_description": "Pharmaceutical Preparations"
+    },
+    "AMAT": {
+      "sic": "3674",
+      "sic_description": "Semiconductors & Related Devices"
+    },
+    "AMD": {
+      "sic": "3674",
+      "sic_description": "Semiconductors & Related Devices"
+    },
+    "AMGN": {
+      "sic": "2836",
+      "sic_description": "Biological Products, (No Diagnostic Substances)"
+    },
+    "AMZN": {
+      "sic": "5961",
+      "sic_description": "Retail-Catalog & Mail-Order Houses"
+    },
+    "APP": {
+      "sic": "7370",
+      "sic_description": "Services-Computer Programming, Data Processing, Etc."
+    },
+    "AVGO": {
+      "sic": "3674",
+      "sic_description": "Semiconductors & Related Devices"
+    },
+    "AXON": {
+      "sic": "3480",
+      "sic_description": "Ordnance & Accessories, (No Vehicles/Guided Missiles)"
+    },
+    "BIIB": {
+      "sic": "2836",
+      "sic_description": "Biological Products, (No Diagnostic Substances)"
+    },
+    "BKNG": {
+      "sic": "4700",
+      "sic_description": "Transportation Services"
+    },
+    "CDNS": {
+      "sic": "7372",
+      "sic_description": "Services-Prepackaged Software"
+    },
+    "CDW": {
+      "sic": "5961",
+      "sic_description": "Retail-Catalog & Mail-Order Houses"
+    },
+    "CHTR": {
+      "sic": "4841",
+      "sic_description": "Cable & Other Pay Television Services"
+    },
+    "CMCSA": {
+      "sic": "4841",
+      "sic_description": "Cable & Other Pay Television Services"
+    },
+    "CRWD": {
+      "sic": "7372",
+      "sic_description": "Services-Prepackaged Software"
+    },
+    "CSCO": {
+      "sic": "3576",
+      "sic_description": "Computer Communications Equipment"
+    },
+    "CSGP": {
+      "sic": "7389",
+      "sic_description": "Services-Business Services, NEC"
+    },
+    "CSX": {
+      "sic": "4011",
+      "sic_description": "Railroads, Line-Haul Operating"
+    },
+    "CTAS": {
+      "sic": "2320",
+      "sic_description": "Men's & Boys' Furnishgs, Work Clothg, & Allied Garments"
+    },
+    "CTSH": {
+      "sic": "7371",
+      "sic_description": "Services-Computer Programming Services"
+    },
+    "DASH": {
+      "sic": "7389",
+      "sic_description": "Services-Business Services, NEC"
+    },
+    "DDOG": {
+      "sic": "7372",
+      "sic_description": "Services-Prepackaged Software"
+    },
+    "DOCU": {
+      "sic": "7372",
+      "sic_description": "Services-Prepackaged Software"
+    },
+    "DXCM": {
+      "sic": "3841",
+      "sic_description": "Surgical & Medical Instruments & Apparatus"
+    },
+    "EA": {
+      "sic": "7372",
+      "sic_description": "Services-Prepackaged Software"
+    },
+    "EBAY": {
+      "sic": "7389",
+      "sic_description": "Services-Business Services, NEC"
+    },
+    "ENPH": {
+      "sic": "3674",
+      "sic_description": "Semiconductors & Related Devices"
+    },
+    "FAST": {
+      "sic": "5200",
+      "sic_description": "Retail-Building Materials, Hardware, Garden Supply"
+    },
+    "FOX": {
+      "sic": "4833",
+      "sic_description": "Television Broadcasting Stations"
+    },
+    "FTNT": {
+      "sic": "3577",
+      "sic_description": "Computer Peripheral Equipment, NEC"
+    },
+    "GEHC": {
+      "sic": "3844",
+      "sic_description": "X-Ray Apparatus & Tubes & Related Irradiation Apparatus"
+    },
+    "GILD": {
+      "sic": "2836",
+      "sic_description": "Biological Products, (No Diagnostic Substances)"
+    },
+    "GOOGL": {
+      "sic": "7370",
+      "sic_description": "Services-Computer Programming, Data Processing, Etc."
+    },
+    "HON": {
+      "sic": "3724",
+      "sic_description": "Aircraft Engines & Engine Parts"
+    },
+    "IDXX": {
+      "sic": "2835",
+      "sic_description": "In Vitro & In Vivo Diagnostic Substances"
+    },
+    "ILMN": {
+      "sic": "3826",
+      "sic_description": "Laboratory Analytical Instruments"
+    },
+    "INCY": {
+      "sic": "8731",
+      "sic_description": "Services-Commercial Physical & Biological Research"
+    },
+    "INTC": {
+      "sic": "3674",
+      "sic_description": "Semiconductors & Related Devices"
+    },
+    "ISRG": {
+      "sic": "3842",
+      "sic_description": "Orthopedic, Prosthetic & Surgical Appliances & Supplies"
+    },
+    "KDP": {
+      "sic": "2080",
+      "sic_description": "Beverages"
+    },
+    "KHC": {
+      "sic": "2030",
+      "sic_description": "Canned, Frozen & Preservd Fruit, Veg & Food Specialties"
+    },
+    "KLAC": {
+      "sic": "3827",
+      "sic_description": "Optical Instruments & Lenses"
+    },
+    "LCID": {
+      "sic": "3711",
+      "sic_description": "Motor Vehicles & Passenger Car Bodies"
+    },
+    "LITE": {
+      "sic": "3669",
+      "sic_description": "Communications Equipment, NEC"
+    },
+    "LRCX": {
+      "sic": "3559",
+      "sic_description": "Special Industry Machinery, NEC"
+    },
+    "LULU": {
+      "sic": "2300",
+      "sic_description": "Apparel & Other Finishd Prods of  Fabrics & Similar Matl"
+    },
+    "MAR": {
+      "sic": "7011",
+      "sic_description": "Hotels & Motels"
+    },
+    "MCHP": {
+      "sic": "3674",
+      "sic_description": "Semiconductors & Related Devices"
+    },
+    "MDB": {
+      "sic": "7372",
+      "sic_description": "Services-Prepackaged Software"
+    },
+    "META": {
+      "sic": "7370",
+      "sic_description": "Services-Computer Programming, Data Processing, Etc."
+    },
+    "MPWR": {
+      "sic": "3674",
+      "sic_description": "Semiconductors & Related Devices"
+    },
+    "MRNA": {
+      "sic": "2836",
+      "sic_description": "Biological Products, (No Diagnostic Substances)"
+    },
+    "MRVL": {
+      "sic": "3674",
+      "sic_description": "Semiconductors & Related Devices"
+    },
+    "MSFT": {
+      "sic": "7372",
+      "sic_description": "Services-Prepackaged Software"
+    },
+    "MSTR": {
+      "sic": "6199",
+      "sic_description": "Finance Services"
+    },
+    "MTCH": {
+      "sic": "7370",
+      "sic_description": "Services-Computer Programming, Data Processing, Etc."
+    },
+    "MU": {
+      "sic": "3674",
+      "sic_description": "Semiconductors & Related Devices"
+    },
+    "NFLX": {
+      "sic": "7841",
+      "sic_description": "Services-Video Tape Rental"
+    },
+    "NVDA": {
+      "sic": "3674",
+      "sic_description": "Semiconductors & Related Devices"
+    },
+    "NXPI": {
+      "sic": "3674",
+      "sic_description": "Semiconductors & Related Devices"
+    },
+    "OKTA": {
+      "sic": "7372",
+      "sic_description": "Services-Prepackaged Software"
+    },
+    "ON": {
+      "sic": "3674",
+      "sic_description": "Semiconductors & Related Devices"
+    },
+    "ORCL": {
+      "sic": "7372",
+      "sic_description": "Services-Prepackaged Software"
+    },
+    "PANW": {
+      "sic": "3577",
+      "sic_description": "Computer Peripheral Equipment, NEC"
+    },
+    "PCAR": {
+      "sic": "3711",
+      "sic_description": "Motor Vehicles & Passenger Car Bodies"
+    },
+    "PTON": {
+      "sic": "3949",
+      "sic_description": "Sporting & Athletic Goods, NEC"
+    },
+    "PYPL": {
+      "sic": "7389",
+      "sic_description": "Services-Business Services, NEC"
+    },
+    "QCOM": {
+      "sic": "3663",
+      "sic_description": "Radio & Tv Broadcasting & Communications Equipment"
+    },
+    "RIVN": {
+      "sic": "3711",
+      "sic_description": "Motor Vehicles & Passenger Car Bodies"
+    },
+    "RKLB": {
+      "sic": "3760",
+      "sic_description": "Guided Missiles & Space Vehicles & Parts"
+    },
+    "SIRI": {
+      "sic": "4832",
+      "sic_description": "Radio Broadcasting Stations"
+    },
+    "SNPS": {
+      "sic": "7372",
+      "sic_description": "Services-Prepackaged Software"
+    },
+    "STX": {
+      "sic": "3572",
+      "sic_description": "Computer Storage Devices"
+    },
+    "SWKS": {
+      "sic": "3674",
+      "sic_description": "Semiconductors & Related Devices"
+    },
+    "TEAM": {
+      "sic": "7372",
+      "sic_description": "Services-Prepackaged Software"
+    },
+    "TSLA": {
+      "sic": "3711",
+      "sic_description": "Motor Vehicles & Passenger Car Bodies"
+    },
+    "TTD": {
+      "sic": "7370",
+      "sic_description": "Services-Computer Programming, Data Processing, Etc."
+    },
+    "TTWO": {
+      "sic": "7372",
+      "sic_description": "Services-Prepackaged Software"
+    },
+    "WBD": {
+      "sic": "4841",
+      "sic_description": "Cable & Other Pay Television Services"
+    },
+    "ZM": {
+      "sic": "7370",
+      "sic_description": "Services-Computer Programming, Data Processing, Etc."
+    }
+  },
+  "semiconductor_sic_code": "3674",
+  "semiconductor_tickers_found": [
+    "ADI",
+    "AMAT",
+    "AMD",
+    "AVGO",
+    "ENPH",
+    "INTC",
+    "MCHP",
+    "MPWR",
+    "MRVL",
+    "MU",
+    "NVDA",
+    "NXPI",
+    "ON",
+    "SWKS"
+  ],
+  "named_flagged_tickers": [
+    "APP",
+    "MU",
+    "RKLB",
+    "STX"
+  ],
+  "baseline": {
+    "n": 464,
+    "n_groups": 86,
+    "bootstrap": {
+      "observed_correlation": 0.23378592004074603,
+      "n_groups": 86,
+      "n_rows": 464,
+      "n_resamples_used": 5000,
+      "bootstrap_mean": 0.23002097446887879,
+      "ci_95_low": 0.05839382377055725,
+      "ci_95_high": 0.3823719962086851,
+      "ci_95_crosses_zero": false
+    }
+  },
+  "excl_sic_semiconductors": {
+    "n": 390,
+    "n_groups": 72,
+    "bootstrap": {
+      "observed_correlation": 0.1524710373355006,
+      "n_groups": 72,
+      "n_rows": 390,
+      "n_resamples_used": 5000,
+      "bootstrap_mean": 0.1495670875055144,
+      "ci_95_low": -0.04368216349052624,
+      "ci_95_high": 0.3340896712558644,
+      "ci_95_crosses_zero": true
+    }
+  },
+  "excl_named": {
+    "n": 435,
+    "n_groups": 82,
+    "bootstrap": {
+      "observed_correlation": 0.14211990313979272,
+      "n_groups": 82,
+      "n_rows": 435,
+      "n_resamples_used": 5000,
+      "bootstrap_mean": 0.13818241601220743,
+      "ci_95_low": -0.028814570702639236,
+      "ci_95_high": 0.2995685936261774,
+      "ci_95_crosses_zero": true
+    }
+  },
+  "excl_sic_and_named": {
+    "n": 369,
+    "n_groups": 69,
+    "bootstrap": {
+      "observed_correlation": 0.0442673850945325,
+      "n_groups": 69,
+      "n_rows": 369,
+      "n_resamples_used": 5000,
+      "bootstrap_mean": 0.04175805539572122,
+      "ci_95_low": -0.13994056392719367,
+      "ci_95_high": 0.2144978518103831,
+      "ci_95_crosses_zero": true
+    }
+  }
+}
